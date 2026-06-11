@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:yandex="http://news.yandex.ru">
+    <channel>
+        <title>AI Агенты Смита</title>
+        <link>https://agentsmits.ru</link>
+        <description>Новости и аналитика искусственного интеллекта</description>
+        <language>ru</language>
+        
+        <item>
+            <title>Introducing Gemini Omni</title>
+            <link>https://deepmind.google/blog/</link>
+            <description><![CDATA[Google DeepMind представляет Gemini Omni — новейшую мультимодальную модель.]]></description>
+            <pubDate>Thu, 01 Jan 2026 00:00:00 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>Fluid, natural voice translation with Gemini 3.5 Live Translate</title>
+            <link>https://deepmind.google/blog/</link>
+            <description><![CDATA[Gemini 3.5 Live Translate — новый режим голосового перевода с естественным звучанием.]]></description>
+            <pubDate>Thu, 01 Jan 2026 00:00:00 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>Measuring the impact of learning with AI in Sierra Leone and beyond</title>
+            <link>https://deepmind.google/blog/</link>
+            <description><![CDATA[DeepMind изучает влияние AI на образование в Сьерра-Леоне и других странах.]]></description>
+            <pubDate>Thu, 01 Jan 2026 00:00:00 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>Путин: Россия имеет преимущества в борьбе за искусственный интеллект</title>
+            <link>https://www.rbc.ru/politics/28/05/2026/6a185ff79a7947d5d4934f2c</link>
+            <description><![CDATA[Президент Путин заявил, что у России есть необходимые кадры для развития ИИ и технологии атомной энергетики, а также возможности концентрировать финансовые ресурсы на эти цели. Страна обладает конкурентными преимуществами в борьбе за лидерство в сфере искусственного интеллекта.]]></description>
+            <pubDate>Thu, 28 May 2026 00:00:00 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>Россия в рейтинге внедрения ИИ оказалась ниже Кении</title>
+            <link>https://www.rbc.ru/technology_and_media/20/01/2026/696f3d8d9a794776030bf2d1</link>
+            <description><![CDATA[Институт экономики ИИ Microsoft поместил Россию на 119-е место по уровню внедрения ИИ — между Кенией и Камеруном. При этом за 2025 год показатель вырос с 7,6% до 8%. Лидеры — ОАЭ (64%), Сингапур (60,9%), Норвегия (46,4%). DeepSeek используют 43% российских пользователей нейросетей. К 2030 году развитие ИИ может приносить России до 12,8 трлн руб. в год (5,5% ВВП).]]></description>
+            <pubDate>Tue, 20 Jan 2026 00:00:00 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>Бизнес попросил доработать законопроект об ИИ в России</title>
+            <link>https://www.rbc.ru/technology_and_media/17/04/2026/69e0ebb19a794706fad926c7</link>
+            <description><![CDATA[Российский бизнес направил поправки к законопроекту Минцифры о регулировании ИИ. Основные замечания касаются: 1) чрезмерно широкого определения ИИ, охватывающего простые алгоритмы; 2) неясности в критериях «критически значимого» ИИ; 3) риска регуляторного давления на инновации. Законопроект вводит понятия суверенной, национальной и доверенной моделей ИИ и должен вступить в силу с 1 сентября 2027 года.]]></description>
+            <pubDate>Fri, 17 Apr 2026 00:00:00 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+    </channel>
+</rss>
