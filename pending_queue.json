@@ -42,15 +42,6 @@
       "date": "2026-06-11"
     },
     {
-      "id": "openai-prc-linked-influence-operations-ai-debates",
-      "source": "OpenAI",
-      "title": "PRC-linked influence operations are targeting AI debates in the US",
-      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-10"
-    },
-    {
       "id": "openai-lseg",
       "source": "OpenAI",
       "title": "From data to decisions: how LSEG is scaling trusted AI",
@@ -58,15 +49,6 @@
       "summary": "",
       "importance": 4,
       "date": "2026-06-10"
-    },
-    {
-      "id": "openai-notion",
-      "source": "OpenAI",
-      "title": "What Codex unlocks for Notion",
-      "url": "https://openai.com/index/notion",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-09"
     },
     {
       "id": "deepmind-youtube-enhancing-the-user-experience",
@@ -115,6 +97,22 @@
     }
   ],
   "published": [
+    {
+      "id": "openai-prc-linked-influence-operations-ai-debates",
+      "source": "OpenAI",
+      "title": "PRC-linked influence operations are targeting AI debates in the US",
+      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
+      "published_at": "2026-06-12T14:05:13.497769Z",
+      "message_id": 109
+    },
+    {
+      "id": "openai-notion",
+      "source": "OpenAI",
+      "title": "What Codex unlocks for Notion",
+      "url": "https://openai.com/index/notion",
+      "published_at": "2026-06-12T14:05:10.125532Z",
+      "message_id": 108
+    },
     {
       "id": "openai-industrial-policy-for-the-intelligence-age",
       "source": "OpenAI",
@@ -374,7 +372,7 @@
   ],
   "agi_counter": {
     "base_days": 1460,
-    "current_days": 16.5,
+    "current_days": 15.5,
     "last_update": "2026-06-12"
   }
 }
