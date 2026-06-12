@@ -535,7 +535,8 @@ def load_json(filename):
     paths_to_try = [
         BLOG_DIR / filename,
         BLOG_DIR.parent / 'telegram-ai-channel' / filename,
-        Path(os.environ.get('DATA_DIR', BLOG_DIR.parent)) / filename,
+        BLOG_DIR.parent.parent / 'workspace' / 'projects' / 'telegram-ai-channel' / filename,
+        Path(os.environ.get('DATA_DIR', BLOG_DIR.parent.parent / 'workspace' / 'projects')) / filename,
     ]
     for path in paths_to_try:
         if path.exists():
