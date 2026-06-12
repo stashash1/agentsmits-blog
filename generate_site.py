@@ -532,11 +532,11 @@ TEMPLATE_ARTICLES = """<section class="hero">
 {agi_bar}"""
 
 def load_json(filename):
+    # Local repo first (for CI), then workspace hierarchy
     paths_to_try = [
         BLOG_DIR / filename,
         BLOG_DIR.parent / 'telegram-ai-channel' / filename,
         BLOG_DIR.parent.parent / 'workspace' / 'projects' / 'telegram-ai-channel' / filename,
-        Path(os.environ.get('DATA_DIR', BLOG_DIR.parent.parent / 'workspace' / 'projects')) / filename,
     ]
     for path in paths_to_try:
         if path.exists():
