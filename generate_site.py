@@ -552,7 +552,7 @@ def format_date(date_str):
         return date_str
 
 def get_agi_info():
-    queue = load_json('../telegram-ai-channel/pending_queue.json')
+    queue = load_json('pending_queue.json')
     if queue and 'agi_counter' in queue:
         counter = queue['agi_counter']
         days = counter.get('current_days', 0)
@@ -613,7 +613,7 @@ def card_regular(post, size='md'):
         </article>'''
 
 def generate_lenta():
-    queue = load_json('../telegram-ai-channel/pending_queue.json')
+    queue = load_json('pending_queue.json')
     posts = queue.get('pending', []) if queue else []
 
     if not posts:
@@ -644,7 +644,7 @@ def generate_lenta():
     print(f"✅ Lenta: {len(posts) if posts else 0} постов")
 
 def generate_articles():
-    selection = load_json('../telegram-ai-channel/selection_queue.json')
+    selection = load_json('selection_queue.json')
     articles = selection.get('articles', []) if selection else []
     published = [a for a in articles if a.get('status') == 'published']
 
@@ -676,8 +676,8 @@ def generate_articles():
     print(f"✅ Articles: {len(published)} статей")
 
 def generate_rss():
-    queue = load_json('../telegram-ai-channel/pending_queue.json')
-    selection = load_json('../telegram-ai-channel/selection_queue.json')
+    queue = load_json('pending_queue.json')
+    selection = load_json('selection_queue.json')
 
     items = []
     if queue:
