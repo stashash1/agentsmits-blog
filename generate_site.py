@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """
 Генератор блога AI Агенты Смита
-- Lenta: краткие посты из pending_queue
-- Articles: развёрнутые статьи из selection_queue
-- RSS для Яндекс Дзен
+- Читает из storage: data/current.json (актуальные посты) + data/archive.json (архив)
+- Генерирует: public/index.html (лента + архив), public/articles.html, public/rss.xml
 """
 
 import json
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 
 BLOG_DIR = Path(__file__).parent
 OUTPUT_DIR = BLOG_DIR / "public"
-POSTS_DIR = BLOG_DIR / "posts"
+BOT_DIR = Path("/home/stas/dev/project/agentsmits-bot")
+DATA_DIR = BOT_DIR / "data"
+STORAGE_CURRENT = DATA_DIR / "current.json"
+STORAGE_ARCHIVE = DATA_DIR / "archive.json"
 
 TEMPLATE_INDEX = """<!DOCTYPE html>
 <html lang="ru">
@@ -138,26 +141,27 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             padding: 0 24px;
         }}
 
-        /* ── Hero ── */
-        .hero {{
-            padding: 56px 0 48px;
+        /* ── Section ── */
+        .section {{
+            padding: 48px 0;
             border-bottom: 1px solid var(--border);
-            margin-bottom: 48px;
         }}
 
-        .hero-label {{
+        .section:last-child {{ border-bottom: none; }}
+
+        .section-label {{
             font-family: var(--font-mono);
             font-size: 0.72rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
             color: var(--accent);
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
             gap: 10px;
         }}
 
-        .hero-label::before {{
+        .section-label::before {{
             content: '';
             display: block;
             width: 32px;
@@ -165,104 +169,6 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             background: var(--accent);
         }}
 
-        .hero-grid {{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-        }}
-
-        .hero-main {{ grid-column: 1 / -1; }}
-
-        .hero-card {{
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-        }}
-
-        .hero-card:hover {{
-            border-color: var(--border-light);
-            transform: translateY(-3px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-        }}
-
-        .hero-card-featured {{
-            flex-direction: row;
-            min-height: 280px;
-        }}
-
-        .hero-card-featured .card-body {{
-            padding: 36px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }}
-
-        .card-body {{
-            padding: 28px;
-            flex: 1;
-        }}
-
-        .card-meta {{
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 14px;
-            flex-wrap: wrap;
-        }}
-
-        .card-source {{
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--accent);
-            background: rgba(232,160,68,0.1);
-            padding: 3px 10px;
-            border-radius: 4px;
-            border: 1px solid rgba(232,160,68,0.2);
-        }}
-
-        .card-date {{
-            font-size: 0.78rem;
-            color: var(--text-muted);
-        }}
-
-        .card-title {{
-            font-family: var(--font-serif);
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.3;
-            margin-bottom: 14px;
-        }}
-
-        .hero-card-featured .card-title {{ font-size: 1.9rem; }}
-        .card-title-lg {{ font-size: 1.5rem; }}
-        .card-title-md {{ font-size: 1.2rem; }}
-
-        .card-summary {{
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }}
-
-        .card-link {{
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--accent-blue);
-            transition: gap 0.2s;
-        }}
-
-        .card-link:hover {{ gap: 10px; color: var(--accent-blue); }}
-
-        /* ── Section header ── */
         .section-header {{
             display: flex;
             align-items: center;
@@ -288,75 +194,120 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             border: 1px solid var(--border);
         }}
 
-        /* ── Cards grid ── */
-        .cards-grid {{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 64px;
-        }}
-
-        .cards-grid-2col {{
-            grid-template-columns: repeat(2, 1fr);
-        }}
-
-        /* ── Card (regular) ── */
-        .card {{
+        /* ── Hero card ── */
+        .hero-card {{
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 24px;
+            border-radius: 16px;
+            padding: 32px;
             display: flex;
             flex-direction: column;
-            transition: all 0.25s;
+            gap: 16px;
+            transition: all 0.3s;
         }}
 
-        .card:hover {{
+        .hero-card:hover {{
             border-color: var(--border-light);
-            background: var(--bg-card-hover);
             transform: translateY(-2px);
         }}
 
-        .card-top {{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 14px;
-        }}
+        .hero-card + .hero-card {{ margin-top: 16px; }}
 
-        .card-title-sm {{
-            font-family: var(--font-serif);
-            font-size: 1.05rem;
-            font-weight: 600;
-            line-height: 1.35;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-        }}
-
-        .card-summary-sm {{
-            font-size: 0.86rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-            flex: 1;
-        }}
-
-        .card-tags {{
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            margin-top: 14px;
-        }}
-
-        .tag {{
+        .card-source {{
             font-family: var(--font-mono);
-            font-size: 0.65rem;
-            letter-spacing: 0.08em;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            padding: 2px 8px;
+            color: var(--accent);
+            background: rgba(232,160,68,0.1);
+            padding: 3px 10px;
             border-radius: 4px;
-            background: var(--border);
+            border: 1px solid rgba(232,160,68,0.2);
+            display: inline-block;
+        }}
+
+        .card-title {{
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }}
+
+        .card-date {{
+            font-size: 0.78rem;
             color: var(--text-muted);
         }}
+
+        /* ── Formatted content (from Telegram template) ── */
+        .post-content {{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }}
+
+        .post-content pre {{
+            font-family: var(--font-sans);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            white-space: pre-wrap;
+            word-break: break-word;
+        }}
+
+        .post-section {{
+            padding: 12px 16px;
+            background: var(--bg-card-hover);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+        }}
+
+        .post-section-label {{
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }}
+
+        .post-section-content {{
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }}
+
+        .post-total {{
+            background: rgba(232,160,68,0.08);
+            border: 1px solid rgba(232,160,68,0.2);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }}
+
+        .post-footer {{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }}
+
+        .card-link {{
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent-blue);
+            transition: gap 0.2s;
+        }}
+
+        .card-link:hover {{ gap: 10px; color: var(--accent-blue); }}
 
         /* ── AGI Bar ── */
         .agi-bar {{
@@ -367,7 +318,7 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             display: flex;
             align-items: center;
             gap: 16px;
-            margin-bottom: 64px;
+            margin: 48px 0;
         }}
 
         .agi-icon {{ font-size: 1.2rem; }}
@@ -393,7 +344,6 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             height: 100%;
             background: linear-gradient(90deg, var(--accent-green), #6dcea0);
             border-radius: 3px;
-            transition: width 1s ease;
         }}
 
         .agi-pct {{
@@ -401,6 +351,42 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--accent-green);
+        }}
+
+        /* ── Archive section ── */
+        .archive-grid {{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }}
+
+        .archive-card {{
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.25s;
+        }}
+
+        .archive-card:hover {{
+            border-color: var(--border-light);
+            background: var(--bg-card-hover);
+        }}
+
+        .archive-card-title {{
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }}
+
+        .archive-card-meta {{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
         }}
 
         /* ── Footer ── */
@@ -434,18 +420,15 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
         /* ── Empty state ── */
         .empty-state {{
             text-align: center;
-            padding: 80px 0;
+            padding: 60px 0;
             color: var(--text-muted);
         }}
 
-        .empty-state-icon {{ font-size: 3rem; margin-bottom: 16px; opacity: 0.3; }}
-        .empty-state p {{ font-size: 1rem; }}
+        .empty-state-icon {{ font-size: 2.5rem; margin-bottom: 12px; opacity: 0.3; }}
 
         /* ── Responsive ── */
         @media (max-width: 900px) {{
-            .hero-grid {{ grid-template-columns: 1fr; }}
-            .hero-card-featured {{ flex-direction: column; min-height: auto; }}
-            .cards-grid {{ grid-template-columns: 1fr 1fr; }}
+            .archive-grid {{ grid-template-columns: 1fr; }}
         }}
 
         @media (max-width: 600px) {{
@@ -453,9 +436,7 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             .logo-sub {{ display: none; }}
             .main-nav {{ gap: 0; }}
             .nav-link {{ padding: 6px 12px; font-size: 0.82rem; }}
-            .cards-grid {{ grid-template-columns: 1fr; }}
-            .hero {{ padding: 32px 0 32px; }}
-            .hero-card-featured .card-title {{ font-size: 1.4rem; }}
+            .card-title {{ font-size: 1.2rem; }}
         }}
     </style>
 </head>
@@ -493,56 +474,45 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
 </body>
 </html>"""
 
-TEMPLATE_LENTA = """<section class="hero">
-    <div class="hero-label">Последние новости</div>
-    <div class="hero-grid">
-        {hero}
-    </div>
-</section>
-
-<section>
+TEMPLATE_SECTION_CURRENT = """
+<section class="section">
+    <div class="section-label">Эта неделя</div>
     <div class="section-header">
-        <h2 class="section-title">Все посты</h2>
-        <span class="section-count">{total} публикаций</span>
+        <h2 class="section-title">Актуальные новости</h2>
+        <span class="section-count">{count} публикаций</span>
     </div>
-    <div class="cards-grid">
+    {posts}
+</section>"""
+
+TEMPLATE_SECTION_ARCHIVE = """
+<section class="section">
+    <div class="section-label">Архив</div>
+    <div class="section-header">
+        <h2 class="section-title">Статьи прошлых недель</h2>
+        <span class="section-count">{count} статей</span>
+    </div>
+    <div class="archive-grid">
         {cards}
     </div>
-</section>
+</section>"""
 
-{agi_bar}"""
-
-TEMPLATE_ARTICLES = """<section class="hero">
-    <div class="hero-label">Глубокий анализ</div>
-    <div class="hero-grid">
-        {hero}
+TEMPLATE_ARCHIVE_CARD = """
+<article class="archive-card">
+    <div class="archive-card-title">{title}</div>
+    <div class="archive-card-meta">
+        <span class="card-source">{source}</span>
+        <span class="card-date">{date}</span>
     </div>
-</section>
+    <a href="{url}" class="card-link" target="_blank" rel="noopener" style="margin-top:10px; display:inline-flex;">Читать →</a>
+</article>"""
 
-<section>
-    <div class="section-header">
-        <h2 class="section-title">Архив статей</h2>
-        <span class="section-count">{total} статей</span>
-    </div>
-    <div class="cards-grid cards-grid-2col">
-        {cards}
-    </div>
-</section>
 
-{agi_bar}"""
-
-def load_json(filename):
-    # Local repo first (for CI), then workspace hierarchy
-    paths_to_try = [
-        BLOG_DIR / filename,
-        BLOG_DIR.parent / 'telegram-ai-channel' / filename,
-        BLOG_DIR.parent.parent / 'workspace' / 'projects' / 'telegram-ai-channel' / filename,
-    ]
-    for path in paths_to_try:
-        if path.exists():
-            with open(path, 'r', encoding='utf-8') as f:
-                return json.load(f)
+def load_json(path):
+    if path.exists():
+        with open(path, 'r', encoding='utf-8') as f:
+            return json.load(f)
     return None
+
 
 def format_date(date_str):
     try:
@@ -551,20 +521,119 @@ def format_date(date_str):
     except:
         return date_str
 
+
+def parse_formatted_content(content):
+    """
+    Парсит отформатированный контент поста (текст из Telegram-шаблона)
+    и возвращает HTML-секции.
+    """
+    if not content:
+        return ""
+
+    # Экранируем HTML
+    def esc(s):
+        return str(s).replace('&', '&').replace('<', '<').replace('>', '>')
+
+    lines = content.split('\n')
+    html_parts = []
+    current_section = None
+    section_buffer = []
+
+    def flush_section():
+        nonlocal current_section, section_buffer
+        if current_section and section_buffer:
+            label = current_section.replace('📊', '').replace('💼', '').replace('🖥', '').strip()
+            content_text = ' '.join(section_buffer).strip()
+            if content_text:
+                html_parts.append(
+                    f'<div class="post-section">'
+                    f'<div class="post-section-label">{esc(label)}</div>'
+                    f'<div class="post-section-content">{esc(content_text)}</div>'
+                    f'</div>'
+                )
+        current_section = None
+        section_buffer = []
+
+    for line in lines:
+        line = line.rstrip()
+        if not line:
+            continue
+
+        # Секции начинаются с эмодзи + текст
+        section_match = re.match(r'^([📊💼🖥📔✅⏰🚀👉🔗📰]+)\s*(.+)', line)
+        if section_match and any(c in line for c in ['📊', '💼', '🖥', '📔', '✅']):
+            flush_section()
+            current_section = section_match.group(1).strip() + ' ' + section_match.group(2).strip()
+            continue
+
+        if current_section:
+            section_buffer.append(line)
+        else:
+            # Свободный текст — итого, вводная часть
+            if any(kw in line for kw in ['Итого', 'Итого:', 'Полетели', '🚀']):
+                html_parts.append(f'<div class="post-total">{esc(line)}</div>')
+            elif line.startswith('🤖') or line.startswith('📰') or line.startswith('🔗'):
+                continue  # пропускаем шапку
+            else:
+                html_parts.append(f'<pre>{esc(line)}</pre>')
+
+    flush_section()
+    return '\n'.join(html_parts)
+
+
+def format_post_card(post):
+    """Формирует HTML-карточку поста с отформатированным контентом"""
+    title = post.get('title', 'Без названия')
+    source = post.get('source', 'Unknown')
+    url = post.get('url', '#')
+    date = format_date(post.get('published_at', post.get('added_at', '')))
+    content = post.get('content', post.get('summary', ''))
+
+    content_html = parse_formatted_content(content)
+
+    return f'''
+    <article class="hero-card">
+        <div>
+            <span class="card-source">{source}</span>
+            <span class="card-date" style="margin-left:10px">{date}</span>
+        </div>
+        <h2 class="card-title">{title}</h2>
+        <div class="post-content">
+            {content_html}
+        </div>
+        <div class="post-footer">
+            <a href="{url}" class="card-link" target="_blank" rel="noopener">Источник →</a>
+        </div>
+    </article>'''
+
+
+def format_archive_card(post):
+    """Карточка архива — компактная"""
+    title = post.get('title', 'Без названия')
+    source = post.get('source', 'Unknown')
+    url = post.get('url', '#')
+    date = format_date(post.get('published_at', ''))
+    return TEMPLATE_ARCHIVE_CARD.format(
+        title=title, source=source, url=url, date=date
+    )
+
+
 def get_agi_info():
-    queue = load_json('pending_queue.json')
+    """Читает AGI-счётчик из pending_queue.json"""
+    queue_path = Path('/home/stas/.openclaw/workspace/projects/telegram-ai-channel/pending_queue.json')
+    queue = load_json(queue_path)
     if queue and 'agi_counter' in queue:
         counter = queue['agi_counter']
         days = counter.get('current_days', 0)
         base = counter.get('base_days', 1460)
-        pct = int((1 - days/base) * 100) if base > 0 else 0
+        pct = int((1 - days / base) * 100) if base > 0 else 0
         return days, pct
     return 0, 0
+
 
 def generate_agi_bar():
     days, pct = get_agi_info()
     return f'''
-<section>
     <div class="agi-bar">
         <div class="agi-icon">⏰</div>
         <div class="agi-info">
@@ -572,67 +641,45 @@ def generate_agi_bar():
             <div class="agi-track"><div class="agi-fill" style="width: {pct}%"></div></div>
         </div>
         <div class="agi-pct">{pct}%</div>
-    </div>
-</section>'''
+    </div>'''
 
-def card_hero(post):
-    title = post.get('title', 'Без названия')
-    source = post.get('source', 'Unknown')
-    date = format_date(post.get('date', post.get('added_at', '')))
-    url = post.get('url', '#')
-    summary = post.get('summary', '')
-    return f'''
-        <article class="hero-card hero-card-featured">
-            <div class="card-body">
-                <div class="card-meta">
-                    <span class="card-source">{source}</span>
-                    <span class="card-date">{date}</span>
-                </div>
-                <h2 class="card-title">{title}</h2>
-                <p class="card-summary">{summary}</p>
-                <a href="{url}" class="card-link" target="_blank" rel="noopener">Читать полностью →</a>
-            </div>
-        </article>'''
-
-def card_regular(post, size='md'):
-    title = post.get('title', 'Без названия')
-    source = post.get('source', 'Unknown')
-    date = format_date(post.get('date', post.get('added_at', '')))
-    url = post.get('url', '#')
-    summary = post.get('summary', '')
-    title_class = 'card-title-sm'
-    return f'''
-        <article class="card">
-            <div class="card-top">
-                <span class="card-source">{source}</span>
-                <span class="card-date">{date}</span>
-            </div>
-            <h3 class="{title_class}">{title}</h3>
-            <p class="card-summary-sm">{summary}</p>
-            <a href="{url}" class="card-link" target="_blank" rel="noopener">Подробнее →</a>
-        </article>'''
 
 def generate_lenta():
-    queue = load_json('pending_queue.json')
-    posts = queue.get('pending', []) if queue else []
+    """Генерирует главную страницу с актуальными постами и архивом"""
+    current_data = load_json(STORAGE_CURRENT)
+    archive_data = load_json(STORAGE_ARCHIVE)
 
-    if not posts:
-        content = '''
-        <section>
+    current_posts = current_data.get('posts', []) if current_data else []
+    archive_posts = archive_data.get('archive', []) if archive_data else []
+
+    # Актуальные посты
+    if current_posts:
+        posts_html = '\n'.join(format_post_card(p) for p in current_posts)
+        current_section = TEMPLATE_SECTION_CURRENT.format(
+            count=len(current_posts),
+            posts=posts_html
+        )
+    else:
+        current_section = '''
+        <section class="section">
+            <div class="section-label">Эта неделя</div>
             <div class="empty-state">
                 <div class="empty-state-icon">📭</div>
-                <p>Постов пока нет</p>
+                <p>Постов этой недели пока нет</p>
             </div>
         </section>'''
-    else:
-        hero = card_hero(posts[0])
-        cards = '\n'.join(card_regular(p, 'md') for p in posts[1:7])
-        content = TEMPLATE_LENTA.format(
-            hero=hero,
-            cards=cards,
-            total=len(posts),
-            agi_bar=generate_agi_bar()
+
+    # Архив
+    if archive_posts:
+        cards_html = '\n'.join(format_archive_card(p) for p in archive_posts)
+        archive_section = TEMPLATE_SECTION_ARCHIVE.format(
+            count=len(archive_posts),
+            cards=cards_html
         )
+    else:
+        archive_section = ''
+
+    content = current_section + archive_section + generate_agi_bar()
 
     html = TEMPLATE_INDEX.format(
         content=content,
@@ -641,30 +688,28 @@ def generate_lenta():
     )
     with open(OUTPUT_DIR / 'index.html', 'w', encoding='utf-8') as f:
         f.write(html)
-    print(f"✅ Lenta: {len(posts) if posts else 0} постов")
+    print(f"✅ Lenta: {len(current_posts)} актуальных, {len(archive_posts)} в архиве")
+
 
 def generate_articles():
-    selection = load_json('selection_queue.json')
-    articles = selection.get('articles', []) if selection else []
-    published = [a for a in articles if a.get('status') == 'published']
+    """Генерирует страницу статей (только актуальные, без архива)"""
+    current_data = load_json(STORAGE_CURRENT)
+    posts = current_data.get('posts', []) if current_data else []
 
-    if not published:
+    if posts:
+        posts_html = '\n'.join(format_post_card(p) for p in posts)
+        content = TEMPLATE_SECTION_CURRENT.format(
+            count=len(posts),
+            posts=posts_html
+        ) + generate_agi_bar()
+    else:
         content = '''
-        <section>
+        <section class="section">
             <div class="empty-state">
                 <div class="empty-state-icon">📝</div>
                 <p>Статей пока нет</p>
             </div>
         </section>'''
-    else:
-        hero = card_hero(published[0])
-        cards = '\n'.join(card_regular(a, 'md') for a in published[1:])
-        content = TEMPLATE_ARTICLES.format(
-            hero=hero,
-            cards=cards,
-            total=len(published),
-            agi_bar=generate_agi_bar()
-        )
 
     html = TEMPLATE_INDEX.format(
         content=content,
@@ -673,47 +718,29 @@ def generate_articles():
     )
     with open(OUTPUT_DIR / 'articles.html', 'w', encoding='utf-8') as f:
         f.write(html)
-    print(f"✅ Articles: {len(published)} статей")
+    print(f"✅ Articles: {len(posts)} статей")
+
 
 def generate_rss():
-    queue = load_json('pending_queue.json')
-    selection = load_json('selection_queue.json')
-
-    items = []
-    if queue:
-        for post in queue.get('pending', [])[:20]:
-            items.append({
-                'title': post.get('title', 'Без названия'),
-                'link': post.get('url', '#'),
-                'description': post.get('summary', ''),
-                'pubDate': post.get('date', ''),
-                'source': post.get('source', 'AI Агенты Смита')
-            })
-    if selection:
-        for article in selection.get('articles', []):
-            if article.get('status') == 'published':
-                items.append({
-                    'title': article.get('title', 'Без названия'),
-                    'link': article.get('url', '#'),
-                    'description': article.get('summary', ''),
-                    'pubDate': article.get('date', ''),
-                    'source': article.get('source', 'AI Агенты Смита')
-                })
+    """Генерирует RSS из current.json"""
+    current_data = load_json(STORAGE_CURRENT)
+    posts = current_data.get('posts', []) if current_data else []
 
     items_xml = []
-    for item in items:
+    for post in posts[:20]:
         pub_date = ''
-        if item['pubDate']:
+        if post.get('published_at'):
             try:
-                dt = datetime.fromisoformat(item['pubDate'].replace('Z', '+00:00'))
+                dt = datetime.fromisoformat(post['published_at'].replace('Z', '+00:00'))
                 pub_date = dt.strftime('%a, %d %b %Y %H:%M:%S +0300')
             except:
                 pub_date = 'Thu, 01 Jan 2026 00:00:00 +0300'
+
         items_xml.append(f'''
         <item>
-            <title>{item['title']}</title>
-            <link>{item['link']}</link>
-            <description><![CDATA[{item['description']}]]></description>
+            <title>{post.get('title', 'Без названия')}</title>
+            <link>{post.get('url', '#')}</link>
+            <description><![CDATA[{post.get('content', post.get('summary', ''))}]]></description>
             <pubDate>{pub_date}</pubDate>
             <author>AI Агенты Смита</author>
         </item>''')
@@ -730,7 +757,8 @@ def generate_rss():
 </rss>'''
     with open(OUTPUT_DIR / 'rss.xml', 'w', encoding='utf-8') as f:
         f.write(rss)
-    print(f"✅ RSS: {len(items)} записей")
+    print(f"✅ RSS: {len(items_xml)} записей")
+
 
 def main():
     OUTPUT_DIR.mkdir(exist_ok=True)
