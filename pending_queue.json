@@ -3,36 +3,166 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-12T11:04:09.483157Z",
+      "last_checked": "2026-06-12T12:43:57.986305Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-12T11:04:09.483157Z",
+      "last_checked": "2026-06-12T12:43:57.986305Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-12T11:04:09.483157Z",
+      "last_checked": "2026-06-12T12:43:57.986305Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-12T11:04:09.483157Z",
+      "last_checked": "2026-06-12T12:43:57.986305Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-12T11:04:09.483157Z",
+      "last_checked": "2026-06-12T12:43:57.986305Z",
       "last_published_id": null
     }
   ],
-  "pending": [],
+  "pending": [
+    {
+      "id": "openai-supporting-eu-trustworthy-ai-ecosystem",
+      "source": "OpenAI",
+      "title": "Supporting Europe’s work in ensuring a trustworthy AI ecosystem",
+      "url": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-11"
+    },
+    {
+      "id": "openai-prc-linked-influence-operations-ai-debates",
+      "source": "OpenAI",
+      "title": "PRC-linked influence operations are targeting AI debates in the US",
+      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-10"
+    },
+    {
+      "id": "openai-lseg",
+      "source": "OpenAI",
+      "title": "From data to decisions: how LSEG is scaling trusted AI",
+      "url": "https://openai.com/index/lseg",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-10"
+    },
+    {
+      "id": "openai-notion",
+      "source": "OpenAI",
+      "title": "What Codex unlocks for Notion",
+      "url": "https://openai.com/index/notion",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-09"
+    },
+    {
+      "id": "deepmind-youtube-enhancing-the-user-experience",
+      "source": "DeepMind",
+      "title": "YouTube: Enhancing the user experience — Google DeepMind",
+      "url": "https://deepmind.google/blog/youtube-enhancing-the-user-experience/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-12"
+    },
+    {
+      "id": "deepmind-working-with-the-nhs-to-build-lifesaving-technology",
+      "source": "DeepMind",
+      "title": "Working with the NHS to build lifesaving technology — Google DeepMind",
+      "url": "https://deepmind.google/blog/working-with-the-nhs-to-build-lifesaving-technology/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-12"
+    },
+    {
+      "id": "deepmind-why-we-launched-deepmind-ethics-society",
+      "source": "DeepMind",
+      "title": "Why we launched DeepMind Ethics & Society — Google DeepMind",
+      "url": "https://deepmind.google/blog/why-we-launched-deepmind-ethics-society/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-12"
+    },
+    {
+      "id": "deepmind-why-doesnt-streams-use-ai",
+      "source": "DeepMind",
+      "title": "Why doesn't Streams use AI? — Google DeepMind",
+      "url": "https://deepmind.google/blog/why-doesnt-streams-use-ai/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-12"
+    },
+    {
+      "id": "deepmind-when-a-passion-for-bass-and-brass-help-build-better-tools",
+      "source": "DeepMind",
+      "title": "When a passion for bass and brass help build better tools — Google DeepMind",
+      "url": "https://deepmind.google/blog/when-a-passion-for-bass-and-brass-help-build-better-tools/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-12"
+    }
+  ],
   "published": [
+    {
+      "id": "openai-industrial-policy-for-the-intelligence-age",
+      "source": "OpenAI",
+      "title": "Industrial policy for the Intelligence Age",
+      "url": "https://openai.com/index/industrial-policy-for-the-intelligence-age",
+      "published_at": "2026-06-12T13:10:11.738606Z",
+      "message_id": 106
+    },
+    {
+      "id": "openai-nextdoor",
+      "source": "OpenAI",
+      "title": "How engineers at Nextdoor use Codex to build without limits",
+      "url": "https://openai.com/index/nextdoor",
+      "published_at": "2026-06-12T13:07:32.195690Z",
+      "message_id": 102
+    },
+    {
+      "id": "openai-built-to-benefit-everyone-our-plan",
+      "source": "OpenAI",
+      "title": "Built to benefit everyone: our plan",
+      "url": "https://openai.com/index/built-to-benefit-everyone-our-plan",
+      "published_at": "2026-06-12T13:07:28.631315Z",
+      "message_id": 101
+    },
+    {
+      "id": "openai-preply",
+      "source": "OpenAI",
+      "title": "How Preply combines AI and human tutors to personalize learning",
+      "url": "https://openai.com/index/preply",
+      "published_at": "2026-06-12T12:14:31.884075Z",
+      "message_id": 100
+    },
+    {
+      "id": "openai-bbva",
+      "source": "OpenAI",
+      "title": "BBVA puts AI at the core of banking with OpenAI",
+      "url": "https://openai.com/index/bbva",
+      "published_at": "2026-06-12T12:14:11.288745Z",
+      "message_id": 99
+    },
+    {
+      "id": "anthropic-announcing-our-updated-responsible-scaling-policy",
+      "source": "Anthropic",
+      "title": "Anthropic announces updated responsible scaling policy",
+      "url": "https://www.anthropic.com/news/responsible-scaling-policy",
+      "published_at": "2026-06-12T12:10:28.707290Z",
+      "message_id": 97
+    },
     {
       "id": "test-post-template-check",
       "source": "Test",
@@ -244,7 +374,7 @@
   ],
   "agi_counter": {
     "base_days": 1460,
-    "current_days": 21.5,
+    "current_days": 16.5,
     "last_update": "2026-06-12"
   }
 }

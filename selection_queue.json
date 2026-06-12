@@ -10,6 +10,28 @@
       "importance": 5,
       "date": "2026-06-08",
       "added_at": "2026-06-12T08:47:00Z"
+    },
+    {
+      "id": "openai-openai-submits-confidential-s-1",
+      "source": "OpenAI",
+      "title": "Confidential submission of draft S-1 to the SEC",
+      "url": "https://openai.com/index/openai-submits-confidential-s-1",
+      "summary": "",
+      "importance": 5,
+      "date": "2026-06-08",
+      "added_at": "2026-06-12T12:09:10.743182Z",
+      "status": "new"
+    },
+    {
+      "id": "openai-vijaye-raji-to-become-cto-of-applications-with-acquisition-o",
+      "source": "OpenAI",
+      "title": "Vijaye Raji to become CTO of Applications with acquisition of Statsig",
+      "url": "https://openai.com/index/vijaye-raji-to-become-cto-of-applications-with-acquisition-of-statsig",
+      "summary": "",
+      "importance": 5,
+      "date": "2025-09-02",
+      "added_at": "2026-06-12T12:09:10.743199Z",
+      "status": "new"
     }
   ]
 }
