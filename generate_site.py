@@ -188,6 +188,50 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             background: var(--accent);
         }}
 
+        /* ── Subscribe banner ── */
+        .subscribe-banner {{
+            background: linear-gradient(135deg, #229ED9 0%, #1B8AB9 100%);
+            border-radius: 16px;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 32px 0 48px;
+            flex-wrap: wrap;
+        }}
+        .subscribe-banner-text {{
+            color: #fff;
+        }}
+        .subscribe-banner-title {{
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }}
+        .subscribe-banner-sub {{
+            font-size: 0.88rem;
+            opacity: 0.85;
+        }}
+        .subscribe-banner-btn {{
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: #229ED9;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }}
+        .subscribe-banner-btn:hover {{
+            background: #f0f8ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }}
+
         .section-header {{
             display: flex;
             align-items: center;
@@ -507,6 +551,18 @@ TEMPLATE_SECTION_CURRENT = """
     {posts}
 </section>"""
 
+SUBSCRIBE_BANNER = """
+<div class="subscribe-banner">
+    <div class="subscribe-banner-text">
+        <div class="subscribe-banner-title">📢 Подпишись на канал Агенты Смита</div>
+        <div class="subscribe-banner-sub">Ежедневные новости и аналитика AI в Telegram</div>
+    </div>
+    <a href="https://t.me/agentsSmits" class="subscribe-banner-btn" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        @agentsSmits
+    </a>
+</div>"""
+
 TEMPLATE_SECTION_ARCHIVE = """
 <section class="section">
     <div class="section-label">Архив</div>
@@ -702,7 +758,7 @@ def generate_lenta():
     else:
         archive_section = ''
 
-    content = current_section + archive_section + generate_agi_bar()
+    content = SUBSCRIBE_BANNER + current_section + archive_section + generate_agi_bar()
 
     html = TEMPLATE_INDEX.format(
         content=content,
