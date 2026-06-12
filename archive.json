@@ -1,0 +1,22 @@
+{
+  "archive": [
+    {
+      "id": "anthropic-claude-corps",
+      "source": "Anthropic News",
+      "title": "Anthropic запустила Claude Corps — $150 млн на AI-феллоушип",
+      "url": "https://www.anthropic.com/news/claude-corps",
+      "published_at": "2026-06-04T12:00:00Z",
+      "added_to_site_at": "2026-06-04T12:05:00Z",
+      "content": "📊 Влияние на разработку агентов:\n$150 млн на феллоушип — это signal к рынку: AI-таланты стоят дорого. Claude Corps станет центром притяжения лучших умов.\n\n💼 Влияние на бизнес:\nИнвестиции в людей, а не в инфраструктуру. Новый паттерн для AI-компаний.\n\nИтого:\nAnthropic делает ставку на человеческий капитал. Это меняет правила игры."
+    },
+    {
+      "id": "anthropic-policy-ai-exponential",
+      "source": "Anthropic Policy",
+      "title": "Policy-фреймворк для frontier AI",
+      "url": "https://www.anthropic.com/policy-on-the-ai-exponential",
+      "published_at": "2026-06-03T15:00:00Z",
+      "added_to_site_at": "2026-06-03T15:05:00Z",
+      "content": "📊 Влияние на разработку агентов:\nPolicy-фреймворк задаёт границы для frontier-моделей. Разработчики получают чёткие правила.\n\n💼 Влияние на бизнес:\nРегуляторная определённость снижает риски для инвестиций в AI.\n\nИтого:\nБезопасность и развитие могут сосуществовать. Anthropic доказывает это."
+    }
+  ]
+}
