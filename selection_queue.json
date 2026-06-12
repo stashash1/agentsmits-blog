@@ -2,15 +2,14 @@
   "description": "Топ-статьи для выбора перед публикацией. importance=5 = супертоп, публикуется только после одобрения.",
   "articles": [
     {
-      "id": "rbc-ai-law-draft-business-17042026",
-      "source": "РБК",
-      "title": "Бизнес попросил доработать законопроект об ИИ в России",
-      "url": "https://www.rbc.ru/technology_and_media/17/04/2026/69e0ebb19a794706fad926c7",
-      "summary": "Российский бизнес направил поправки к законопроекту Минцифры о регулировании ИИ. Основные замечания касаются: 1) чрезмерно широкого определения ИИ; 2) неясности в критериях «критически значимого» ИИ; 3) риска регуляторного давления на инновации.",
+      "id": "openai-submits-confidential-s-1",
+      "source": "OpenAI",
+      "title": "Confidential submission of draft S-1 to the SEC",
+      "url": "https://openai.com/index/openai-submits-confidential-s-1/",
+      "summary": "OpenAI подала конфиденциальную заявку S-1 в SEC — формальный шаг перед возможным IPO. Это первый случай подачи S-1 среди крупнейших AI-компаний.",
       "importance": 5,
-      "date": "2026-04-17",
-      "added_at": "2026-06-11T18:40:00Z",
-      "status": "published"
+      "date": "2026-06-08",
+      "added_at": "2026-06-12T08:47:00Z"
     }
   ]
 }
