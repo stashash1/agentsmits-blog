@@ -3,36 +3,300 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-13T11:13:03.907426Z",
+      "last_checked": "2026-06-13T13:04:28.021519Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-13T11:13:03.907426Z",
+      "last_checked": "2026-06-13T13:04:28.021519Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-13T11:13:03.907426Z",
+      "last_checked": "2026-06-13T13:04:28.021519Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-13T11:13:03.907426Z",
+      "last_checked": "2026-06-13T13:04:28.021519Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-13T11:13:03.907426Z",
+      "last_checked": "2026-06-13T13:04:28.021519Z",
       "last_published_id": null
     }
   ],
-  "pending": [],
+  "pending": [
+    {
+      "id": "huggingface-olmo-eval",
+      "source": "HuggingFace",
+      "title": "olmo-eval: An evaluation workbench for the model development loop",
+      "url": "https://huggingface.co/blog/allenai/olmo-eval",
+      "summary": null,
+      "importance": 4,
+      "date": "2026-06-12",
+      "analysis": {
+        "agent_impact": "olmo-eval предоставляет стандартизированный фреймворк для оценки AI-агентов и моделей в процессе разработки, позволяя итеративно тестировать их возможности.",
+        "business_impact": "Инструмент сокращает цикл разработки AI-продуктов за счёт систематизированной оценки моделей, что снижает затраты на R&D и ускоряет выход на рынок.",
+        "it_impact": "olmo-eval интегрируется с экосистемой Hugging Face, предоставляя инфраструктуру для бенчмаркинга и валидации моделей в рамках CI/CD процессов.",
+        "summary": "Allen AI представил olmo-eval — инструмент для оценки AI-моделей в цикле разработки. Платформа позволяет систематически тестировать модели на различных бенчмарках и задачах, интегрируясь в процесс обучения и дообучения.",
+        "tags": [
+          "evaluation",
+          "model-development",
+          "benchmarking"
+        ]
+      },
+      "analyzed_at": "2026-06-13T12:49:47.253365Z"
+    },
+    {
+      "id": "huggingface-torch-mlp-fusion",
+      "source": "HuggingFace",
+      "title": "Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP",
+      "url": "https://huggingface.co/blog/torch-mlp-fusion",
+      "summary": null,
+      "importance": 4,
+      "date": "2026-06-11",
+      "analysis": {
+        "agent_impact": "Оптимизация MLP-слоёв через fusion напрямую влияет на производительность AI-агентов, использующих нейросетевые компоненты, позволяя снизить latency и вычислительные затраты на инференс.",
+        "business_impact": "Грамотная оптимизация PyTorch-кода сокращает расходы на инфраструктуру и ускоряет time-to-market AI-продуктов, что критично для конкурентоспособности на рынке.",
+        "it_impact": "Статья предоставляет практические методики профилирования и оптимизации слоёв в PyTorch, влияя на стандарты написания высокопроизводительного ML-кода в индустрии.",
+        "summary": "Вторая часть серии статей о профилировании в PyTorch, посвящённая сравнению стандартного nn.Linear с фьюжн-реализацией MLP. Авторы анализируют узкие места производительности и демонстрируют технику слияния слоёв для снижения накладных расходов и ускорения вычислений.",
+        "tags": [
+          "pytorch-optimization",
+          "profiling",
+          "neural-network-fusion"
+        ]
+      },
+      "analyzed_at": "2026-06-13T12:50:09.607194Z"
+    },
+    {
+      "id": "huggingface-introducing-north-mini-code",
+      "source": "HuggingFace",
+      "title": "Introducing North Mini Code: Cohere’s First Model For Developers",
+      "url": "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code",
+      "summary": null,
+      "importance": 4,
+      "date": "2026-06-09",
+      "analysis": {
+        "agent_impact": "North Mini Code от Cohere предоставляет разработчикам специализированную модель для создания AI-агентов с улучшенными возможностями генерации кода, что упрощает интеграцию ИИ в рабочие процессы разработки.",
+        "business_impact": "Cohere усиливает конкуренцию на рынке AI-моделей для разработчиков, предлагая более доступное решение (mini-версия), что может привлечь стартапы и малый бизнес к использованию их экосистемы.",
+        "it_impact": "Появление North Mini Code расширяет выбор LLM для code generation в open-source пространстве Hugging Face, влияя на архитектуру CI/CD и инструменты автоматизации разработки.",
+        "summary": "Компания Cohere представила North Mini Code — свою первую модель, ориентированную специально на разработчиков. Модель размещена на платформе Hugging Face и позиционируется как повышенная эффективность при работе с кодом.",
+        "tags": [
+          "cohere",
+          "code-generation",
+          "developer-tools"
+        ]
+      },
+      "analyzed_at": "2026-06-13T12:50:32.242916Z"
+    },
+    {
+      "id": "huggingface-spaces-agents-md",
+      "source": "HuggingFace",
+      "title": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
+      "url": "https://huggingface.co/blog/mishig/spaces-agents-md",
+      "summary": null,
+      "importance": 4,
+      "date": "2026-06-09",
+      "analysis": {
+        "agent_impact": "Статья демонстрирует, как AI-агенты могут объединять несколько сервисов через chaining для создания сложных продуктов (3D-контент), что стимулирует разработку агентов с модульной архитектурой.",
+        "business_impact": "Показывает практическое применение AI-агентов в креативной индустрии для генерации 3D-контента, открывая возможности для бизнеса в области автоматизированного создания визуальных материалов.",
+        "it_impact": "Демонстрирует возможности инфраструктуры Hugging Face по интеграции Spaces и межсервисному взаимодействию, влияя на проектирование микросервисных AI-систем.",
+        "summary": "В статье описан процесс создания AI-агента, который объединяет два Hugging Face Spaces для генерации интерактивной 3D-галереи Парижа. Агент использует техники chaining для связи различных AI-сервисов, что позволяет создавать сложный мультимедийный контент из простых запросов.",
+        "tags": [
+          "ai-agents",
+          "hugging-face",
+          "3d-generation",
+          "agent-chaining",
+          "multimodal-ai"
+        ]
+      },
+      "analyzed_at": "2026-06-13T12:50:47.919999Z"
+    },
+    {
+      "id": "huggingface-github-ci-hf-jobs",
+      "source": "HuggingFace",
+      "title": "Migrating Your GitHub CI to Hugging Face Jobs",
+      "url": "https://huggingface.co/blog/github-ci-hf-jobs",
+      "summary": null,
+      "importance": 4,
+      "date": "2026-06-09",
+      "analysis": {
+        "agent_impact": "Миграция CI-пайплайнов на Hugging Face Jobs упрощает тестирование и развёртывание AI-агентов, позволяя использовать инфраструктуру Hugging Face напрямую в процессе разработки.",
+        "business_impact": "Организации могут сократить расходы на CI/CD, консолидировав инструменты вокруг экосистемы Hugging Face, что усиливает позиции платформы в конкуренции с GitHub.",
+        "it_impact": "Переход с GitHub Actions на Hugging Face Jobs标志着ML-проекты всё активнее используют специализированные платформы вместо традиционных CI-систем для управления пайплайнами.",
+        "summary": "Статья описывает технический процесс миграции CI/CD-пайплайнов с GitHub Actions на систему задач Hugging Face Jobs. Автор рассматривает изменения в конфигурации, преимущества перехода и практические аспекты адаптации ML-разработки к новой инфраструктуре.",
+        "tags": [
+          "ci-cd",
+          "huggingface",
+          "mlops"
+        ]
+      },
+      "analyzed_at": "2026-06-13T12:51:10.205752Z"
+    }
+  ],
   "published": [
+    {
+      "id": "huggingface-openenv-agentic-rl",
+      "source": "HuggingFace",
+      "title": "The Open Source Community is backing OpenEnv for Agentic RL",
+      "url": "https://huggingface.co/blog/openenv-agentic-rl",
+      "published_at": "2026-06-13T13:05:29.265345Z",
+      "message_id": 157,
+      "analysis": {
+        "agent_impact": "OpenEnv предоставляет открытую платформу для обучения AI-агентов методами reinforcement learning, что упрощает создание автономных систем с адаптивным поведением и сокращает цикл разработки agentic AI.",
+        "business_impact": "Открытая модель OpenEnv демократизирует доступ к технологиям agentic RL, снижая барьеры входа для стартапов и создавая конкуренцию с проприетарными решениями в сфере обучения AI-агентов.",
+        "it_impact": "Массовое внедрение open source фреймворка для agentic RL стандартизирует практики разработки автономных систем и стимулирует развитие инфраструктуры для распределённого обучения AI.",
+        "summary": "Open source сообщество активно поддерживает проект OpenEnv — открытую платформу для Agentic Reinforcement Learning. Проект позволяет разработчикам создавать и обучать AI-агенты с использованием методов RL в доступной среде. Публикация на Hugging Face подчёркивает роль платформы как хаба для инструментов agentic AI.",
+        "tags": [
+          "agentic-ai",
+          "reinforcement-learning",
+          "open-source"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-hf-cli-for-agents",
+      "source": "HuggingFace",
+      "title": "Designing the hf CLI as an agent-optimized way to work with the Hub",
+      "url": "https://huggingface.co/blog/hf-cli-for-agents",
+      "published_at": "2026-06-13T13:05:25.759585Z",
+      "message_id": 156,
+      "analysis": {
+        "agent_impact": "Hugging Face создаёт CLI-инструмент hf, специально оптимизированный для AI-агентов, позволяя им автономно взаимодействовать с моделями, датасетами и Spaces на Hub без человеческого участия.",
+        "business_impact": "Платформа усиливает свою позицию в экосистеме AI-агентов, предоставляя стандартизированный интерфейс для автоматизации, что привлечёт больше разработчиков агентов и инвестиций в платформу.",
+        "it_impact": "CLI hf станет стандартным способом интеграции Hugging Face в пайплайны и CI/CD системы, упрощая автоматизацию работы с ML-артефактами в корпоративной инфраструктуре.",
+        "summary": "Hugging Face анонсирует разработку нового CLI-инструмента hf, специально спроектированного для работы AI-агентов с платформой Hub. Инструмент учитывает особенности автономных систем: идемпотентность, понятный вывод и программный доступ к ресурсам платформы.",
+        "tags": [
+          "huggingface",
+          "cli-tools",
+          "ai-agents",
+          "ml-infrastructure",
+          "autonomous-systems"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-nemotron-3-5-content-safety",
+      "source": "HuggingFace",
+      "title": "Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety",
+      "published_at": "2026-06-13T12:55:25.865673Z",
+      "message_id": 154,
+      "analysis": {
+        "agent_impact": "Система безопасности Nemotron 3.5 предоставляет AI-агентам встроенные механизмы модерации контента с поддержкой мультимодальности, позволяя разработчикам создавать более надёжных агентов с настраиваемыми правилами фильтрации.",
+        "business_impact": "Enterprise-компании получают готовое решение для обеспечения соответствия AI-систем политикам безопасности, что снижает юридические риски и расширяет возможности развёртывания AI на глобальных рынках.",
+        "it_impact": "IT-команды получают API и инструменты для интеграции проверок безопасности в AI-пайплайны, влияя на архитектуру развёртывания и мониторинга AI-систем в production-среде.",
+        "summary": "NVIDIA представила систему Nemotron 3.5 Content Safety — настраиваемое решение для безопасности мультимодального контента в enterprise AI. Система позволяет фильтровать текст и изображения согласно корпоративным политикам, адаптируясь под различные регуляторные требования глобальных рынков.",
+        "tags": [
+          "nvidia",
+          "content-safety",
+          "enterprise-ai",
+          "multimodal",
+          "nemotron"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-adding-mcp-tools-to-reachy-mini",
+      "source": "HuggingFace",
+      "title": "Adding MCP Tools to Reachy Mini",
+      "url": "https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini",
+      "published_at": "2026-06-13T12:55:04.446897Z",
+      "message_id": 152,
+      "analysis": {
+        "agent_impact": "Интеграция MCP Tools в Reachy Mini позволяет AI-агентам взаимодействовать с физическим роботом через стандартизированный протокол, расширяя возможности автономных систем в робототехнике.",
+        "business_impact": "Развитие инструментов для робототехники на базе Hugging Face создаёт новые ниши для B2B-решений и привлекает разработчиков к экосистеме, усиливая позиции платформы на рынке AI-инфраструктуры.",
+        "it_impact": "MCP (Model Context Protocol) становится стандартом интеграции AI-моделей с внешними устройствами, что требует от IT-специалистов освоения новых подходов к разработке инструментов для роботов и IoT-систем.",
+        "summary": "Статья посвящена добавлению MCP Tools (инструментов Model Context Protocol) к миниатюрному роботу Reachy Mini. Автор демонстрирует практическую реализацию подключения AI-моделей к робототехнической платформе через стандартизированный протокол, что упрощает разработку приложений для роботов.",
+        "tags": [
+          "mcp",
+          "robotics",
+          "reachy-mini"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-direct-preference-optimization-beyond-chatbots",
+      "source": "HuggingFace",
+      "title": "Direct Preference Optimization Beyond Chatbots",
+      "url": "https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots",
+      "published_at": "2026-06-13T12:55:01.118606Z",
+      "message_id": 151,
+      "analysis": {
+        "agent_impact": "Расширение DPO за пределы чат-ботов позволит обучать AI-агентов более эффективному следованию предпочтениям пользователя в сложных многошаговых задачах и автономных сценариях.",
+        "business_impact": "Компании смогут создавать более качественные AI-продукты в различных доменах (кодогенерация, творчество, аналитика) за счёт универсализации методов выравнивания моделей.",
+        "it_impact": "Появление новых подходов к fine-tuning моделей потребует пересмотра ML-пайплайнов и инструментов обучения с учителем в направлении preference-based методов.",
+        "summary": "Статья исследует применение метода Direct Preference Optimization (DPO) не только к текстовым диалоговым системам, но и к широкому спектру AI-задач. Авторы демонстрируют, как техника, основанная на человеческих предпочтениях, может улучшить качество моделей в доменах генерации кода, музыки и автономного принятия решений.",
+        "tags": [
+          "direct-preference-optimization",
+          "model-alignment",
+          "fine-tuning"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-holo31",
+      "source": "HuggingFace",
+      "title": "Holo3.1: Fast &amp; Local Computer Use Agents",
+      "url": "https://huggingface.co/blog/Hcompany/holo31",
+      "published_at": "2026-06-13T12:54:39.895131Z",
+      "message_id": 149,
+      "analysis": {
+        "agent_impact": "Holo3.1 позволяет AI-агентам локально взаимодействовать с интерфейсом компьютера, что ускоряет развитие автономных агентов для настольных задач без зависимости от облачных API.",
+        "business_impact": "Локальное развёртывание агентов снижает затраты на API и повышает привлекательность решений для бизнеса, требующего обработки данных без отправки в облако.",
+        "it_impact": "Проект продвигает on-device inference и оптимизацию моделей для локального запуска, стимулируя развитие инфраструктуры для edge AI.",
+        "summary": "Holo3.1 — решение от Hugging Face для быстрого локального управления компьютером AI-агентами. Агенты могут напрямую взаимодействовать с интерфейсом устройства, выполнять действия и автоматизировать задачи на пользовательском оборудовании.",
+        "tags": [
+          "computer-use-agents",
+          "local-ai",
+          "on-device-inference"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-agent-logic-and-scalable-ai-adoption",
+      "source": "HuggingFace",
+      "title": "Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic",
+      "url": "https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption",
+      "published_at": "2026-06-13T12:54:18.366530Z",
+      "message_id": 147,
+      "analysis": {
+        "agent_impact": "Статья подчёркивает, что чистые LLM недостаточны для enterprise AI — будущее за AI-агентами с многошаговой логикой, оркестрацией и способностью выполнять сложныеworkflows, что требует переосмысления архитектуры агентов.",
+        "business_impact": "Компаниям придётся инвестировать в agent-based системы вместо простых LLM API, создавая новые конкурентные преимущества и изменяя рынок AI-решений в сторону масштабируемых agent-платформ.",
+        "it_impact": "IT-командам нужны новые инструменты оркестрации агентов, мониторингаworkflows и инфраструктуры для развёртывания распределённых agent-систем, что меняет подходы к построению AI-инфраструктуры.",
+        "summary": "Статья IBM Research на Hugging Face утверждает, что масштабируемое внедрение AI в enterprise-секторе невозможно на основе одних лишь LLM. Для реального масштабирования требуется развитая agent logic — способность AI-систем выстраивать многошаговые цепочки действий, принимать решения и интегрироваться с бизнес-процессами. Авторы показывают, почему переход к agent-centric архитектуре критически важен для enterprise-адаптации.",
+        "tags": [
+          "ai-agents",
+          "enterprise-ai",
+          "agent-logic"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-mellum2-launch",
+      "source": "HuggingFace",
+      "title": "Introducing Mellum2: A 12B Mixture-of-Experts Model by JetBrains",
+      "url": "https://huggingface.co/blog/JetBrains/mellum2-launch",
+      "published_at": "2026-06-13T12:54:14.857810Z",
+      "message_id": 146,
+      "analysis": {
+        "agent_impact": "Mellum2 с архитектурой MoE может стать основой для создания более эффективных AI-агентов благодаря селективной активации экспертов, что снижает вычислительные затраты при сохранении качества ответов.",
+        "business_impact": "Выход JetBrains на рынок AI-моделей усиливает конкуренцию среди разработчиков LLM и создаёт новые возможности для интеграции AI-решений в продукты компании, ориентированные на разработчиков.",
+        "it_impact": "Архитектура Mixture-of-Experts с 12 миллиардами параметров демонстрирует тренд на оптимизацию моделей через селективную активацию, что влияет на подходы к разработке и развёртыванию AI-систем.",
+        "summary": "JetBrains представила Mellum2 — языковую модель с 12 миллиардами параметров, построенную на архитектуре Mixture-of-Experts. MoE-подход позволяет активировать только часть экспертов при обработке запросов, что повышает вычислительную эффективность.",
+        "tags": [
+          "mixture-of-experts",
+          "llm",
+          "jetbrains"
+        ]
+      }
+    },
     {
       "id": "openai-biodefense-in-the-intelligence-age",
       "source": "OpenAI",
