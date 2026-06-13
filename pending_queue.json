@@ -3,55 +3,98 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-12T19:51:30.128955Z",
+      "last_checked": "2026-06-13T07:06:33.956250Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-12T19:51:30.128955Z",
+      "last_checked": "2026-06-13T07:06:33.956250Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-12T19:51:30.128955Z",
+      "last_checked": "2026-06-13T07:06:33.956250Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-12T19:51:30.128955Z",
+      "last_checked": "2026-06-13T07:06:33.956250Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-12T19:51:30.128955Z",
+      "last_checked": "2026-06-13T07:06:33.956250Z",
       "last_published_id": null
     }
   ],
-  "pending": [
+  "pending": [],
+  "published": [
     {
-      "id": "deepmind-why-doesnt-streams-use-ai",
+      "id": "anthropic-responsible-scaling-republish",
+      "source": "Anthropic",
+      "title": "Anthropic announces updated responsible scaling policy",
+      "url": "https://www.anthropic.com/news/responsible-scaling-policy",
+      "published_at": "2026-06-13T07:11:26.111006Z",
+      "message_id": 126,
+      "analysis": {
+        "agent_impact": "Политика обязывает оценивать риски потенциально опасных возможностей моделей перед каждым крупным релизом, что напрямую влияет на стандарты разработки AI-агентов и автономных систем. Это формирует обязательные процедуры проверки способностей агентов перед их развёртыванием.",
+        "business_impact": "Anthropic усиливает позиционирование как ответственного лидера рынка, что привлекает корпоративных клиентов и партнёров, заботящихся о безопасности AI. Обновлённая политика может стать конкурентным преимуществом при госрегулировании AI-сектора.",
+        "it_impact": "Документ задаёт новый стандарт процедур тестирования и оценки рисков AI-моделей, что потребует от IT-компаний инвестиций в инфраструктуру безопасной разработки. Индустрия будет вынуждена адаптировать CI/CD-процессы под обязательные проверки перед релизом.",
+        "summary": "Anthropic обновила Responsible Scaling Policy, добавив обязательства по систематической оценке рисков опасных возможностей AI-моделей перед каждым крупным релизом. Политика formalizes подход к безопасному масштабированию AI-систем через предустановленные проверки. Документ укрепляет приверженность компании ответственному развитию AI-технологий.",
+        "tags": [
+          "responsible-ai",
+          "ai-safety",
+          "policy"
+        ]
+      }
+    },
+    {
+      "id": "deepmind-why-doesnt-streams-use-ai-republish",
       "source": "DeepMind",
       "title": "Why doesn't Streams use AI? — Google DeepMind",
       "url": "https://deepmind.google/blog/why-doesnt-streams-use-ai/",
-      "summary": "One of the questions I’m most often asked about Streams, our secure mobile healthcare app, is “why is DeepMind making something that doesn’t use artificial intelligence?”",
-      "importance": 4,
-      "date": "2026-06-12"
+      "published_at": "2026-06-13T07:08:02.138590Z",
+      "message_id": 125,
+      "analysis": {
+        "agent_impact": "Статья демонстрирует, что в критически важных для безопасности областях (здравоохранение) AI-агенты уступают_rule-based системам из-за требований к прозрачности и предсказуемости решений, что заставляет разработчиков AI-агентов искать гибридные подходы.",
+        "business_impact": "В медицинской индустрии сохраняется доверие к детерминированным системам над AI-решениями, что задерживает внедрение автономных AI-агентов в клиническую практику и стимулирует развитие регуляторных требований.",
+        "it_impact": "Для IT-индустрии статья подтверждает необходимость создания методологий валидации AI-систем в safety-critical доменах и использования explainable AI там, где полный отказ от AI невозможен.",
+        "summary": "DeepMind объясняет, почему их приложение Streams для мониторинга заболеваний почек использует rule-based системы вместо AI. Команда обосновывает это требованиями полной прозрачности, предсказуемости и возможности аудита медицинских решений, где ошибка AI может стоить жизни пациента.",
+        "tags": [
+          "healthcare-ai",
+          "rule-based-systems",
+          "ai-safety"
+        ]
+      }
+    },
+    {
+      "id": "microsoft-ire-identifies-another-lotuslite-specimen",
+      "source": "Microsoft AI",
+      "title": "Ire identifies another LOTUSLITE specimen",
+      "url": "https://www.microsoft.com/en-us/research/blog/ire-identifies-another-lotuslite-specimen/",
+      "published_at": "2026-06-13T07:05:06.136350Z",
+      "message_id": 124
     },
     {
       "id": "deepmind-when-a-passion-for-bass-and-brass-help-build-better-tools",
       "source": "DeepMind",
       "title": "When a passion for bass and brass help build better tools — Google DeepMind",
       "url": "https://deepmind.google/blog/when-a-passion-for-bass-and-brass-help-build-better-tools/",
-      "summary": "We caught up with Kevin Millikin, a software engineer on the DevTools team. He’s in Salt Lake City this week to present at PyCon US, the largest annual gathering for those using and developing the op…",
-      "importance": 4,
-      "date": "2026-06-12"
-    }
-  ],
-  "published": [
+      "published_at": "2026-06-13T06:29:26.385570Z",
+      "message_id": 122
+    },
+    {
+      "id": "deepmind-why-doesnt-streams-use-ai",
+      "source": "DeepMind",
+      "title": "Why doesn't Streams use AI? — Google DeepMind",
+      "url": "https://deepmind.google/blog/why-doesnt-streams-use-ai/",
+      "published_at": "2026-06-13T06:29:05.185392Z",
+      "message_id": 120
+    },
     {
       "id": "deepmind-why-we-launched-deepmind-ethics-society",
       "source": "DeepMind",
@@ -87,7 +130,7 @@
     {
       "id": "openai-supporting-eu-trustworthy-ai-ecosystem",
       "source": "OpenAI",
-      "title": "Supporting Europe’s work in ensuring a trustworthy AI ecosystem",
+      "title": "Supporting Europe's work in ensuring a trustworthy AI ecosystem",
       "url": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem",
       "published_at": "2026-06-12T19:34:28.253850Z",
       "message_id": 112
@@ -181,14 +224,6 @@
       "message_id": 94
     },
     {
-      "id": "openai-built-to-benefit-everyone-plan",
-      "source": "OpenAI",
-      "title": "OpenAI built to benefit everyone plan",
-      "url": "https://openai.com/index/openai-built-to-benefit-everyone-plan/",
-      "published_at": "2026-06-12T10:14:00Z",
-      "message_id": 93
-    },
-    {
       "id": "openai-submits-confidential-s-1",
       "source": "OpenAI",
       "title": "OpenAI submits confidential S-1 draft to SEC",
@@ -205,18 +240,10 @@
       "message_id": 89
     },
     {
-      "id": "deepmind-ai-learning-sierra-leone",
-      "source": "Google DeepMind",
-      "title": "Measuring the impact of learning with AI in Sierra Leone and beyond",
-      "url": "https://deepmind.google/blog/",
-      "published_at": "2026-06-12T08:45:00Z",
-      "message_id": 85
-    },
-    {
       "id": "deepmind-gemini-35-live-translate",
       "source": "Google DeepMind",
       "title": "Fluid, natural voice translation with Gemini 3.5 Live Translate",
-      "url": "https://deepmind.google/blog/",
+      "url": "https://deepmind.google/blog/fluid-natural-voice-translation-gemini-35-live-translate/",
       "published_at": "2026-06-12T08:35:00Z",
       "message_id": 82
     },
@@ -253,36 +280,12 @@
       "message_id": 44
     },
     {
-      "id": "deepmind-multimodal-safety",
-      "source": "Google DeepMind",
-      "title": "Инвестиции в мультиагентный AI safety",
-      "url": "https://deepmind.google/blog/",
-      "published_at": "2026-06-11T16:50:00Z",
-      "message_id": 45
-    },
-    {
       "id": "deepmind-diffusion-gemma",
       "source": "Google DeepMind",
       "title": "DiffusionGemma — генерация текста в 4 раза быстрее",
-      "url": "https://deepmind.google/blog/",
+      "url": "https://deepmind.google/blog/diffusion-gemma/",
       "published_at": "2026-06-11T16:51:00Z",
       "message_id": 47
-    },
-    {
-      "id": "deepmind-gemma-4-12b",
-      "source": "Google DeepMind",
-      "title": "Gemma 4 12B — унифицированная мультимодальная модель",
-      "url": "https://deepmind.google/blog/",
-      "published_at": "2026-06-11T16:52:00Z",
-      "message_id": 48
-    },
-    {
-      "id": "deepmind-robotics-europe",
-      "source": "Google DeepMind",
-      "title": "DeepMind развивает робототехнику в Европе",
-      "url": "https://deepmind.google/blog/",
-      "published_at": "2026-06-11T16:53:00Z",
-      "message_id": 49
     },
     {
       "id": "anthropic-claude-fable-5",
@@ -317,7 +320,7 @@
       "message_id": 61
     },
     {
-      "id": "anthropic-chris-olah-pope-encyclical",
+      "id": "anthropic-chris-olah-pope-leo-encyclical",
       "source": "Anthropic News",
       "title": "Chris Olah (Anthropic) — remarks на энциклику Папы Лео XIV «Magnifica humanitas»",
       "url": "https://www.anthropic.com/news/chris-olah-pope-leo-encyclical",
@@ -375,7 +378,8 @@
   ],
   "agi_counter": {
     "base_days": 1460,
-    "current_days": 12.5,
-    "last_update": "2026-06-12"
+    "current_days": 730,
+    "start_date": "2026-01-01",
+    "last_update": "2026-06-13"
   }
 }
