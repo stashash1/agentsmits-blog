@@ -75,50 +75,6 @@
       "analyzed_at": "2026-06-13T12:50:09.607194Z"
     },
     {
-      "id": "huggingface-introducing-north-mini-code",
-      "source": "HuggingFace",
-      "title": "Introducing North Mini Code: Cohere’s First Model For Developers",
-      "url": "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code",
-      "summary": null,
-      "importance": 4,
-      "date": "2026-06-09",
-      "analysis": {
-        "agent_impact": "North Mini Code от Cohere предоставляет разработчикам специализированную модель для создания AI-агентов с улучшенными возможностями генерации кода, что упрощает интеграцию ИИ в рабочие процессы разработки.",
-        "business_impact": "Cohere усиливает конкуренцию на рынке AI-моделей для разработчиков, предлагая более доступное решение (mini-версия), что может привлечь стартапы и малый бизнес к использованию их экосистемы.",
-        "it_impact": "Появление North Mini Code расширяет выбор LLM для code generation в open-source пространстве Hugging Face, влияя на архитектуру CI/CD и инструменты автоматизации разработки.",
-        "summary": "Компания Cohere представила North Mini Code — свою первую модель, ориентированную специально на разработчиков. Модель размещена на платформе Hugging Face и позиционируется как повышенная эффективность при работе с кодом.",
-        "tags": [
-          "cohere",
-          "code-generation",
-          "developer-tools"
-        ]
-      },
-      "analyzed_at": "2026-06-13T12:50:32.242916Z"
-    },
-    {
-      "id": "huggingface-spaces-agents-md",
-      "source": "HuggingFace",
-      "title": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
-      "url": "https://huggingface.co/blog/mishig/spaces-agents-md",
-      "summary": null,
-      "importance": 4,
-      "date": "2026-06-09",
-      "analysis": {
-        "agent_impact": "Статья демонстрирует, как AI-агенты могут объединять несколько сервисов через chaining для создания сложных продуктов (3D-контент), что стимулирует разработку агентов с модульной архитектурой.",
-        "business_impact": "Показывает практическое применение AI-агентов в креативной индустрии для генерации 3D-контента, открывая возможности для бизнеса в области автоматизированного создания визуальных материалов.",
-        "it_impact": "Демонстрирует возможности инфраструктуры Hugging Face по интеграции Spaces и межсервисному взаимодействию, влияя на проектирование микросервисных AI-систем.",
-        "summary": "В статье описан процесс создания AI-агента, который объединяет два Hugging Face Spaces для генерации интерактивной 3D-галереи Парижа. Агент использует техники chaining для связи различных AI-сервисов, что позволяет создавать сложный мультимедийный контент из простых запросов.",
-        "tags": [
-          "ai-agents",
-          "hugging-face",
-          "3d-generation",
-          "agent-chaining",
-          "multimodal-ai"
-        ]
-      },
-      "analyzed_at": "2026-06-13T12:50:47.919999Z"
-    },
-    {
       "id": "huggingface-github-ci-hf-jobs",
       "source": "HuggingFace",
       "title": "Migrating Your GitHub CI to Hugging Face Jobs",
@@ -141,6 +97,46 @@
     }
   ],
   "published": [
+    {
+      "id": "huggingface-spaces-agents-md",
+      "source": "HuggingFace",
+      "title": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
+      "url": "https://huggingface.co/blog/mishig/spaces-agents-md",
+      "published_at": "2026-06-13T14:05:53.426523Z",
+      "message_id": 161,
+      "analysis": {
+        "agent_impact": "Статья демонстрирует, как AI-агенты могут объединять несколько сервисов через chaining для создания сложных продуктов (3D-контент), что стимулирует разработку агентов с модульной архитектурой.",
+        "business_impact": "Показывает практическое применение AI-агентов в креативной индустрии для генерации 3D-контента, открывая возможности для бизнеса в области автоматизированного создания визуальных материалов.",
+        "it_impact": "Демонстрирует возможности инфраструктуры Hugging Face по интеграции Spaces и межсервисному взаимодействию, влияя на проектирование микросервисных AI-систем.",
+        "summary": "В статье описан процесс создания AI-агента, который объединяет два Hugging Face Spaces для генерации интерактивной 3D-галереи Парижа. Агент использует техники chaining для связи различных AI-сервисов, что позволяет создавать сложный мультимедийный контент из простых запросов.",
+        "tags": [
+          "ai-agents",
+          "hugging-face",
+          "3d-generation",
+          "agent-chaining",
+          "multimodal-ai"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-introducing-north-mini-code",
+      "source": "HuggingFace",
+      "title": "Introducing North Mini Code: Cohere’s First Model For Developers",
+      "url": "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code",
+      "published_at": "2026-06-13T14:05:32.466483Z",
+      "message_id": 159,
+      "analysis": {
+        "agent_impact": "North Mini Code от Cohere предоставляет разработчикам специализированную модель для создания AI-агентов с улучшенными возможностями генерации кода, что упрощает интеграцию ИИ в рабочие процессы разработки.",
+        "business_impact": "Cohere усиливает конкуренцию на рынке AI-моделей для разработчиков, предлагая более доступное решение (mini-версия), что может привлечь стартапы и малый бизнес к использованию их экосистемы.",
+        "it_impact": "Появление North Mini Code расширяет выбор LLM для code generation в open-source пространстве Hugging Face, влияя на архитектуру CI/CD и инструменты автоматизации разработки.",
+        "summary": "Компания Cohere представила North Mini Code — свою первую модель, ориентированную специально на разработчиков. Модель размещена на платформе Hugging Face и позиционируется как повышенная эффективность при работе с кодом.",
+        "tags": [
+          "cohere",
+          "code-generation",
+          "developer-tools"
+        ]
+      }
+    },
     {
       "id": "huggingface-openenv-agentic-rl",
       "source": "HuggingFace",
