@@ -3,31 +3,31 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-13T13:04:28.021519Z",
+      "last_checked": "2026-06-13T15:04:27.307470Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-13T13:04:28.021519Z",
+      "last_checked": "2026-06-13T15:04:27.307470Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-13T13:04:28.021519Z",
+      "last_checked": "2026-06-13T15:04:27.307470Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-13T13:04:28.021519Z",
+      "last_checked": "2026-06-13T15:04:27.307470Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-13T13:04:28.021519Z",
+      "last_checked": "2026-06-13T15:04:27.307470Z",
       "last_published_id": null
     }
   ],
@@ -52,15 +52,16 @@
         ]
       },
       "analyzed_at": "2026-06-13T12:49:47.253365Z"
-    },
+    }
+  ],
+  "published": [
     {
       "id": "huggingface-torch-mlp-fusion",
       "source": "HuggingFace",
       "title": "Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP",
       "url": "https://huggingface.co/blog/torch-mlp-fusion",
-      "summary": null,
-      "importance": 4,
-      "date": "2026-06-11",
+      "published_at": "2026-06-13T15:05:10.939855Z",
+      "message_id": 163,
       "analysis": {
         "agent_impact": "Оптимизация MLP-слоёв через fusion напрямую влияет на производительность AI-агентов, использующих нейросетевые компоненты, позволяя снизить latency и вычислительные затраты на инференс.",
         "business_impact": "Грамотная оптимизация PyTorch-кода сокращает расходы на инфраструктуру и ускоряет time-to-market AI-продуктов, что критично для конкурентоспособности на рынке.",
@@ -71,17 +72,15 @@
           "profiling",
           "neural-network-fusion"
         ]
-      },
-      "analyzed_at": "2026-06-13T12:50:09.607194Z"
+      }
     },
     {
       "id": "huggingface-github-ci-hf-jobs",
       "source": "HuggingFace",
       "title": "Migrating Your GitHub CI to Hugging Face Jobs",
       "url": "https://huggingface.co/blog/github-ci-hf-jobs",
-      "summary": null,
-      "importance": 4,
-      "date": "2026-06-09",
+      "published_at": "2026-06-13T15:05:07.720234Z",
+      "message_id": 162,
       "analysis": {
         "agent_impact": "Миграция CI-пайплайнов на Hugging Face Jobs упрощает тестирование и развёртывание AI-агентов, позволяя использовать инфраструктуру Hugging Face напрямую в процессе разработки.",
         "business_impact": "Организации могут сократить расходы на CI/CD, консолидировав инструменты вокруг экосистемы Hugging Face, что усиливает позиции платформы в конкуренции с GitHub.",
@@ -92,11 +91,8 @@
           "huggingface",
           "mlops"
         ]
-      },
-      "analyzed_at": "2026-06-13T12:51:10.205752Z"
-    }
-  ],
-  "published": [
+      }
+    },
     {
       "id": "huggingface-spaces-agents-md",
       "source": "HuggingFace",
