@@ -642,8 +642,8 @@ def parse_formatted_content(content):
             continue
 
         # Секции начинаются с эмодзи + текст
-        section_match = re.match(r'^([📊💼🖥📔✅⏰🚀👉🔗📰]+)\s*(.+)', line)
-        if section_match and any(c in line for c in ['📊', '💼', '🖥', '📔', '✅']):
+        section_match = re.match(r'^([📊💼🖥📔📈💻✅⏰🚀👉🔗📰]+)\s*(.+)', line)
+        if section_match and any(c in line for c in ['📊', '💼', '🖥', '📔', '📈', '💻', '✅']):
             flush_section()
             current_section = section_match.group(1).strip() + ' ' + section_match.group(2).strip()
             continue
@@ -681,15 +681,15 @@ def format_post_card(post):
         agent_impact = analysis.get('agent_impact', '')
         if agent_impact:
             parts.append(f'\n📊 Влияние на разработку агентов:')
-            parts.append(agent_impact)
+            parts.append(agent_impact.replace('\n', ' '))
         business_impact = analysis.get('business_impact', '')
         if business_impact:
             parts.append(f'\n📈 Влияние на бизнес:')
-            parts.append(business_impact)
+            parts.append(business_impact.replace('\n', ' '))
         it_impact = analysis.get('it_impact', '')
         if it_impact:
             parts.append(f'\n💻 Влияние на IT-индустрию:')
-            parts.append(it_impact)
+            parts.append(it_impact.replace('\n', ' '))
         content = '\n'.join(parts)
     else:
         content = post.get('content', post.get('summary', ''))
