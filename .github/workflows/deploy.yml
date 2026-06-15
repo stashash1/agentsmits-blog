@@ -32,8 +32,12 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout gh-pages || git checkout --orphan gh-pages
-          rm -rf .
+          # Fetch gh-pages branch
+          git fetch origin gh-pages:gh-pages
+          git checkout gh-pages
+          # Remove all tracked files
+          git ls-files -z | xargs -0 git rm -f
+          # Copy generated site
           cp -r public/* .
           git add -A
           git commit -m "Auto-deploy: $(date -u +%Y-%m-%d\ %H:%M) UTC"
