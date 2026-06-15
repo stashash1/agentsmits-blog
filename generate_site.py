@@ -22,6 +22,9 @@ if not STORAGE_CURRENT.exists():
     STORAGE_CURRENT = BLOG_DIR / "current.json"
     STORAGE_ARCHIVE = BLOG_DIR / "archive.json"
 
+# Read from pending_queue.json (contains all published articles)
+PENDING_QUEUE = BLOG_DIR / "pending_queue.json"
+
 TEMPLATE_INDEX = """<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -725,11 +728,14 @@ def generate_agi_bar():
 
 def generate_lenta():
     """Генерирует главную страницу с актуальными постами и архивом"""
-    current_data = load_json(STORAGE_CURRENT)
-    archive_data = load_json(STORAGE_ARCHIVE)
+    # Read from pending_queue.json (source of truth for published articles)
+    pending_data = load_json(PENDING_QUEUE)
+    published = pending_data.get('published', []) if pending_data else []
 
-    current_posts = current_data.get('posts', []) if current_data else []
-    archive_posts = archive_data.get('archive', []) if archive_data else []
+
+    # Split into current (last 30) and archive (older)
+    current_posts = published[:30]
+    archive_posts = published[30:]
 
     # Актуальные посты
     if current_posts:
@@ -772,8 +778,8 @@ def generate_lenta():
 
 def generate_articles():
     """Генерирует страницу статей (только актуальные, без архива)"""
-    current_data = load_json(STORAGE_CURRENT)
-    posts = current_data.get('posts', []) if current_data else []
+    pending_data = load_json(PENDING_QUEUE)
+    posts = (pending_data.get('published', []) if pending_data else [])[:30]
 
     if posts:
         posts_html = '\n'.join(format_post_card(p) for p in posts)
@@ -801,9 +807,9 @@ def generate_articles():
 
 
 def generate_rss():
-    """Генерирует RSS из current.json"""
-    current_data = load_json(STORAGE_CURRENT)
-    posts = current_data.get('posts', []) if current_data else []
+    """Генерирует RSS из pending_queue.json"""
+    pending_data = load_json(PENDING_QUEUE)
+    posts = (pending_data.get('published', []) if pending_data else [])[:20]
 
     items_xml = []
     for post in posts[:20]:
