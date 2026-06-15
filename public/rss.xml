@@ -7,275 +7,143 @@
         <language>ru</language>
         
         <item>
-            <title>Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI</title>
-            <link>https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety</link>
-            <description><![CDATA[📝 NVIDIA представила систему Nemotron 3.5 Content Safety — настраиваемое решение для безопасности мультимодального контента в enterprise AI. Система позволяет фильтровать текст и изображения согласно корпоративным политикам, адаптируясь под различные регуляторные требования глобальных рынков.
-📊 Влияние на разработку агентов:
-Система безопасности Nemotron 3.5 предоставляет AI-агентам встроенные механизмы модерации контента с поддержкой мультимодальности, позволяя разработчикам создавать более надёжных агентов с настраиваемыми правилами фильтрации.
-💼 Влияние на бизнес:
-Enterprise-компании получают готовое решение для обеспечения соответствия AI-систем политикам безопасности, что снижает юридические риски и расширяет возможности развёртывания AI на глобальных рынках.
-🖥 Влияние на IT-индустрию:
-IT-команды получают API и инструменты для интеграции проверок безопасности в AI-пайплайны, влияя на архитектуру развёртывания и мониторинга AI-систем в production-среде.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 12:55:25 +0300</pubDate>
+            <title>Just AI Agent Platform включена в реестр отечественного ПО</title>
+            <link>https://just-ai.com/blog/just-ai-agent-platform-vklyuchena-v-reestr-otechestvennogo-po</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:56:23 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Adding MCP Tools to Reachy Mini</title>
-            <link>https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini</link>
-            <description><![CDATA[📝 Статья посвящена добавлению MCP Tools (инструментов Model Context Protocol) к миниатюрному роботу Reachy Mini. Автор демонстрирует практическую реализацию подключения AI-моделей к робототехнической платформе через стандартизированный протокол, что упрощает разработку приложений для роботов.
-📊 Влияние на разработку агентов:
-Интеграция MCP Tools в Reachy Mini позволяет AI-агентам взаимодействовать с физическим роботом через стандартизированный протокол, расширяя возможности автономных систем в робототехнике.
-💼 Влияние на бизнес:
-Развитие инструментов для робототехники на базе Hugging Face создаёт новые ниши для B2B-решений и привлекает разработчиков к экосистеме, усиливая позиции платформы на рынке AI-инфраструктуры.
-🖥 Влияние на IT-индустрию:
-MCP (Model Context Protocol) становится стандартом интеграции AI-моделей с внешними устройствами, что требует от IT-специалистов освоения новых подходов к разработке инструментов для роботов и IoT-систем.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 12:55:04 +0300</pubDate>
+            <title>Летняя Conversations 2026: что ждет участников?</title>
+            <link>https://just-ai.com/blog/letnyaya-conversations-2026-chto-zhdet-uchastnikov</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:56:19 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Direct Preference Optimization Beyond Chatbots</title>
-            <link>https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots</link>
-            <description><![CDATA[📝 Статья исследует применение метода Direct Preference Optimization (DPO) не только к текстовым диалоговым системам, но и к широкому спектру AI-задач. Авторы демонстрируют, как техника, основанная на человеческих предпочтениях, может улучшить качество моделей в доменах генерации кода, музыки и автономного принятия решений.
-📊 Влияние на разработку агентов:
-Расширение DPO за пределы чат-ботов позволит обучать AI-агентов более эффективному следованию предпочтениям пользователя в сложных многошаговых задачах и автономных сценариях.
-💼 Влияние на бизнес:
-Компании смогут создавать более качественные AI-продукты в различных доменах (кодогенерация, творчество, аналитика) за счёт универсализации методов выравнивания моделей.
-🖥 Влияние на IT-индустрию:
-Появление новых подходов к fine-tuning моделей потребует пересмотра ML-пайплайнов и инструментов обучения с учителем в направлении preference-based методов.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 12:55:01 +0300</pubDate>
+            <title>Второй сезон премии Generation AI Awards</title>
+            <link>https://just-ai.com/blog/vtoroj-sezon-premii-generation-ai-awards</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:53:08 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Holo3.1: Fast &amp; Local Computer Use Agents</title>
-            <link>https://huggingface.co/blog/Hcompany/holo31</link>
-            <description><![CDATA[📝 Holo3.1 — решение от Hugging Face для быстрого локального управления компьютером AI-агентами. Агенты могут напрямую взаимодействовать с интерфейсом устройства, выполнять действия и автоматизировать задачи на пользовательском оборудовании.
-📊 Влияние на разработку агентов:
-Holo3.1 позволяет AI-агентам локально взаимодействовать с интерфейсом компьютера, что ускоряет развитие автономных агентов для настольных задач без зависимости от облачных API.
-💼 Влияние на бизнес:
-Локальное развёртывание агентов снижает затраты на API и повышает привлекательность решений для бизнеса, требующего обработки данных без отправки в облако.
-🖥 Влияние на IT-индустрию:
-Проект продвигает on-device inference и оптимизацию моделей для локального запуска, стимулируя развитие инфраструктуры для edge AI.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 12:54:39 +0300</pubDate>
+            <title>Just AI запускает Agent Platform Cloud: создавайте AI-агентов и автоматизируйте процессы в облаке</title>
+            <link>https://just-ai.com/blog/just-ai-zapuskaet-agent-platform-cloud-sozdavajte-ai-agentov-i-avtomatizirujte-protsessy-v-oblake</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:53:04 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic</title>
-            <link>https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption</link>
-            <description><![CDATA[📝 Статья IBM Research на Hugging Face утверждает, что масштабируемое внедрение AI в enterprise-секторе невозможно на основе одних лишь LLM. Для реального масштабирования требуется развитая agent logic — способность AI-систем выстраивать многошаговые цепочки действий, принимать решения и интегрироваться с бизнес-процессами. Авторы показывают, почему переход к agent-centric архитектуре критически важен для enterprise-адаптации.
-📊 Влияние на разработку агентов:
-Статья подчёркивает, что чистые LLM недостаточны для enterprise AI — будущее за AI-агентами с многошаговой логикой, оркестрацией и способностью выполнять сложныеworkflows, что требует переосмысления архитектуры агентов.
-💼 Влияние на бизнес:
-Компаниям придётся инвестировать в agent-based системы вместо простых LLM API, создавая новые конкурентные преимущества и изменяя рынок AI-решений в сторону масштабируемых agent-платформ.
-🖥 Влияние на IT-индустрию:
-IT-командам нужны новые инструменты оркестрации агентов, мониторингаworkflows и инфраструктуры для развёртывания распределённых agent-систем, что меняет подходы к построению AI-инфраструктуры.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 12:54:18 +0300</pubDate>
+            <title>Открытый дистрибутив Just AI Agent Platform: платформа для создания ИИ-агентов в вашем периметре</title>
+            <link>https://just-ai.com/blog/distribution-just-ai-agent-platform</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:52:42 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Introducing Mellum2: A 12B Mixture-of-Experts Model by JetBrains</title>
-            <link>https://huggingface.co/blog/JetBrains/mellum2-launch</link>
-            <description><![CDATA[📝 JetBrains представила Mellum2 — языковую модель с 12 миллиардами параметров, построенную на архитектуре Mixture-of-Experts. MoE-подход позволяет активировать только часть экспертов при обработке запросов, что повышает вычислительную эффективность.
-📊 Влияние на разработку агентов:
-Mellum2 с архитектурой MoE может стать основой для создания более эффективных AI-агентов благодаря селективной активации экспертов, что снижает вычислительные затраты при сохранении качества ответов.
-💼 Влияние на бизнес:
-Выход JetBrains на рынок AI-моделей усиливает конкуренцию среди разработчиков LLM и создаёт новые возможности для интеграции AI-решений в продукты компании, ориентированные на разработчиков.
-🖥 Влияние на IT-индустрию:
-Архитектура Mixture-of-Experts с 12 миллиардами параметров демонстрирует тренд на оптимизацию моделей через селективную активацию, что влияет на подходы к разработке и развёртыванию AI-систем.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 12:54:14 +0300</pubDate>
+            <title>Just AI запускает открытый дистрибутив Just AI Agent Platform и снимает барьеры для внедрения AI в enterprise</title>
+            <link>https://just-ai.com/blog/just-ai-zapuskaet-otkrytyj-distributiv-just-ai-agent-platform-i-snimaet-barery-dlya-vnedreniya-ai-v-enterprise</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:49:49 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Biodefense in the Intelligence Age</title>
-            <link>https://openai.com/index/biodefense-in-the-intelligence-age</link>
-            <description><![CDATA[📝 OpenAI представила план действий по использованию AI для обеспечения биологической устойчивости в эпоху продвинутого интеллекта. Документ описывает, как технологии искусственного интеллекта могут помочь в выявлении и противодействии биологическим угрозам, включая разработку систем раннего предупреждения и поддержки принятия решений.
-📊 Влияние на разработку агентов:
-Статья подталкивает к созданию AI-агентов для автоматического мониторинга патогенов и раннего обнаружения биологических угроз, расширяя сферу автономных систем на критическую инфраструктуру здравоохранения.
-💼 Влияние на бизнес:
-Открывает рыночную нишу для AI-решений в биобезопасности, стимулируя партнёрства между технологическими компаниями и государственными органами здравоохранения.
-🖥 Влияние на IT-индустрию:
-Требует разработки защищённой инфраструктуры для обработки биологических данных и создания отказоустойчивых систем с многоуровневой верификацией результатов.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:19:23 +0300</pubDate>
+            <title>Премия Generation AI Awards опубликовала список финалистов</title>
+            <link>https://just-ai.com/blog/premiya-generation-ai-awards-opublikovala-spisok-finalistov</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:49:46 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Dreaming: Better memory for a more helpful ChatGPT</title>
-            <link>https://openai.com/index/chatgpt-memory-dreaming</link>
-            <description><![CDATA[📝 OpenAI представила новую систему памяти для ChatGPT под названием Dreaming, которая позволяет ассистенту запоминать предпочтения и контекст пользователя между разными разговорами. Это делает взаимодействие с ChatGPT более персонализированным и эффективным, избавляя от необходимости каждый раз объяснять свои привычки и требования заново.
-📊 Влияние на разработку агентов:
-Постоянная память позволяет AI-агентам сохранять контекст и предпочтения пользователей между сессиями, делая их работу более персонализированной и эффективной без необходимости повторного ввода информации.
-💼 Влияние на бизнес:
-Улучшенная память ChatGPT повышает удовлетворённость пользователей и их удержание, создавая конкурентное преимущество для OpenAI на рынке AI-ассистентов и стимулируя инвестиции в развитие персонализации.
-🖥 Влияние на IT-индустрию:
-Внедрение систем памяти в LLM требует новых подходов к хранению данных, управлению контекстом и обеспечению приватности, влияя на архитектуру AI-систем и инфраструктурные решения.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:19:20 +0300</pubDate>
+            <title>Экспертиза</title>
+            <link>https://just-ai.com/blog/ekspertiza</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:49:24 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>How Endava is redesigning software delivery around AI agents</title>
-            <link>https://openai.com/index/endava-frontiers</link>
-            <description><![CDATA[📝 Компания Endava трансформирует процессы доставки ПО, внедряя AI-агентов (ChatGPT Enterprise, Codex) для ускорения разработки и автоматизации рабочих процессов. Ключевой акцент сделан на построении AI-native культуры, где агенты встраиваются в ежедневные операции. Этот кейс показывает зрелый пример масштабного развёртывания агентов в enterprise-секторе.
-📊 Влияние на разработку агентов:
-Статья демонстрирует практическое применение AI-агентов (ChatGPT Enterprise, Codex) для автоматизации процессов разработки ПО, что формирует новый стандарт использования агентов в enterprise-среде.
-💼 Влияние на бизнес:
-Endava показывает, как интеграция AI-агентов в SDLC сокращает time-to-market и снижает затраты на разработку, создавая конкурентное преимущество перед компаниями, не внедрившими агенты.
-🖥 Влияние на IT-индустрию:
-Культура «AI-native» означает пересмотр ролей разработчиков, внедрение агентов в CI/CD-пайплайны и изменение подхода к тестированию и код-ревью через автоматизацию.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:19:16 +0300</pubDate>
+            <title>The AI layoff wave is becoming a powder keg</title>
+            <link>https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:49:21 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>A blueprint for democratic governance of frontier AI</title>
-            <link>https://openai.com/index/frontier-safety-blueprint</link>
-            <description><![CDATA[📝 OpenAI представила предложения по федеральному регулированию frontier AI в США, включающие создание специализированного агентства, обязательную оценку рисков и международную координацию стандартов безопасности.
-📊 Влияние на разработку агентов:
-Предлагаемые требования к безопасности и устойчивости AI-систем напрямую повлияют на архитектуру автономных агентов, потребуют встроенных механизмов соответствия стандартам и ограничений на автономность действий.
-💼 Влияние на бизнес:
-Новый федеральный регуляторный каркас создаст compliance-обязательства для компаний, что изменит стоимость разработки frontier AI и перераспределит конкурентные преимущества в пользу крупных игроков с ресурсами для адаптации.
-🖥 Влияние на IT-индустрию:
-Федеральные стандарты потребуют перестройки процессов разработки и развертывания AI-систем, создания новой инфраструктуры аудита и верификации безопасности.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:19:13 +0300</pubDate>
+            <title>Meta reportedly moves to unwind $2B Manus deal after Beijing&#8217;s demand</title>
+            <link>https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:48:59 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>OpenAI public policy agenda</title>
-            <link>https://openai.com/index/public-policy-agenda</link>
-            <description><![CDATA[📝 OpenAI представила свою публичную политическую программу, охватывающую безопасность AI, защиту несовершеннолетних, поддержку работников в эпоху автоматизации и продвижение глобальных стандартов. Компания позиционирует себя как ответственного участника, готового к диалогу с регуляторами.
-📊 Влияние на разработку агентов:
-Повестка безопасности OpenAI задаст стандарты для архитектуры AI-агентов, включая требования к интерпретируемости и отказобезопасности, а защита молодёжи может ограничить применение агентов в определённых сценариях.
-💼 Влияние на бизнес:
-Глобальные стандарты от OpenAI создадут регуляторный фундамент для всей AI-индустрии, влияя на инвестиционные решения и конкурентные стратегии компаний-разработчиков.
-🖥 Влияние на IT-индустрию:
-IT-индустрия столкнётся с новыми техническими требованиями по безопасности и прозрачности AI-систем, что повлияет на жизненный цикл разработки и архитектурные решения.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:19:10 +0300</pubDate>
+            <title>As Anthropic suspends access to new models, India debates its AI future</title>
+            <link>https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:48:33 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>How Wasmer used Codex to build a Node.js runtime for the edge</title>
-            <link>https://openai.com/index/wasmer</link>
-            <description><![CDATA[📝 Wasmer использовал Codex от OpenAI с GPT-5.5 для создания Node.js runtime, оптимизированного для edge-вычислений. Разработка ускорилась в 10-20 раз, а время выпуска сократилось с месяцев до недель. Проект демонстрирует практическое применение AI в создании сложного системного ПО.
-📊 Влияние на разработку агентов:
-Codex выступает как AI-агент-разработчик, выполняющий сложные задачи по написанию кода, что демонстрирует потенциал AI-агентов заменять целые команды программистов в узких задачах.
-💼 Влияние на бизнес:
-Компании могут сократить время вывода продуктов на рынок в 10-20 раз, что радикально меняет конкурентные преимущества и позволяет небольшим командам создавать сложные продукты.
-🖥 Влияние на IT-индустрию:
-AI-кодинг ассистенты становятся production-ready инструментами для создания сложных системных продуктов, таких как runtime-среды, что меняет подход к разработке инфраструктурного ПО.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:19:06 +0300</pubDate>
+            <title>As AI companies race to go public, who else is along for the ride?</title>
+            <link>https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:48:29 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Introducing new capabilities to GPT-Rosalind</title>
-            <link>https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind</link>
-            <description><![CDATA[📝 OpenAI представила GPT-Rosalind — специализированную модель для life sciences с улучшенными возможностями биологического рассуждения, medicinal chemistry и геномного анализа. Модель способна автономно работать с экспериментальными рабочими процессами, что ускоряет научные исследования в фармацевтике.
-📊 Влияние на разработку агентов:
-Специализированные AI-агенты для научных исследований становятся более функциональными: Rosalind демонстрирует, что domain-specific агенты с глубокой экспертизой в медицинской химии и геномике способны автономно вести экспериментальные рабочие процессы.
-💼 Влияние на бизнес:
-Фармацевтические компании и исследовательские организации получат конкурентное преимущество за счёт ускорения R&D циклов и сокращения затрат на доклинические исследования.
-🖥 Влияние на IT-индустрию:
-Тренд на создание fine-tuned специализированных моделей для конкретных индустрий укрепляется: IT-компании должны адаптировать MLOps-практики под разработку и деплой доменно-ориентированных AI-агентов.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:18:41 +0300</pubDate>
+            <title>Anthropic&#8217;s safety warnings may have just backfired — the government has pulled the plug on its most powerful AI</title>
+            <link>https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:48:07 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Codex is becoming a productivity tool for everyone</title>
-            <link>https://openai.com/index/codex-for-knowledge-work</link>
-            <description><![CDATA[📝 OpenAI опубликовала отчёт о том, как Codex трансформирует продуктивность в знаниевой работе, демонстрируя возможности AI в проведении исследований, анализе данных, автоматизации рабочих процессов и генерации контента. Инструмент расширяет применение от программирования к универсальной помощи специалистам.
-📊 Влияние на разработку агентов:
-Codex развивается в универсального AI-агента для автоматизации рабочих процессов, выходя за рамки написания кода и охватывая исследования, анализ данных и создание контента, что формирует новый стандарт для интеллектуальных помощников.
-💼 Влияние на бизнес:
-Инструмент открывает компаниям возможность автоматизировать рутинные операции в knowledge work, потенциально снижая затраты на обработку информации и аналитику, при этом усиливая конкуренцию среди AI-продуктов для корпоративного сектора.
-🖥 Влияние на IT-индустрию:
-Развитие Codex как мультифункционального агента стимулирует спрос на интеграции с enterprise-системами и создание новых API, продвигая тренд на AI-first подход в разработке и инфраструктуре.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:18:19 +0300</pubDate>
+            <title>Andrew Yang thinks the next big startup opportunity is lowering the cost of living</title>
+            <link>https://techcrunch.com/2026/06/12/andrew-yang-thinks-the-next-big-startup-opportunity-is-lowering-the-cost-of-living/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:47:45 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Advancing youth safety and opportunity through global leadership</title>
-            <link>https://openai.com/index/advancing-youth-safety-and-opportunity-through-global-leadership</link>
-            <description><![CDATA[📝 OpenAI призывает к глобальным действиям по защите молодежи в эпоху AI, предлагая создать международный институт для выработки единых стандартов безопасности, норм и возможностей для молодых пользователей искусственного интеллекта.
-📊 Влияние на разработку агентов:
-Статья фокусируется на создании стандартов безопасности для молодежи при использовании AI-систем, что потребует от разработчиков агентов внедрения возрастных ограничений и контент-фильтров в свои продукты.
-💼 Влияние на бизнес:
-Инициатива может привести к формированию новых регуляторных требований и стандартов, создавая дополнительные издержки для компаний, но同时 открывая рынок решений для детской безопасности в AI.
-🖥 Влияние на IT-индустрию:
-IT-индустрии потребуется разрабатывать новые механизмы верификации возраста, системы родительского контроля и age-appropriate дизайна интерфейсов для AI-приложений.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:18:16 +0300</pubDate>
+            <title>OpenAI faces investigation from state attorneys general</title>
+            <link>https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:47:42 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Codex for every role, tool, and workflow</title>
-            <link>https://openai.com/index/codex-for-every-role-tool-workflow</link>
-            <description><![CDATA[📝 OpenAI представила обновления платформы Codex с новыми плагинами, сайтами и аннотациями. Инструменты ориентированы на специалистов разных профессий - аналитиков, маркетологов, дизайнеров и инвесторов. Платформа расширяет возможности AI для выполнения профессиональных задач в различных бизнес-функциях.
-📊 Влияние на разработку агентов:
-Codex расширяет возможности AI-агентов через специализированные плагины для разных профессиональных ролей, позволяя агентам выполнять узкоспециализированные задачи в аналитике, маркетинге и дизайне.
-💼 Влияние на бизнес:
-OpenAI делает AI доступным для различных бизнес-функций через готовые решения, что может изменить конкурентный ландшафт и ускорить внедрение AI в корпоративный сектор.
-🖥 Влияние на IT-индустрию:
-Расширение экосистемы Codex через плагины и аннотации требует новых подходов к интеграции AI в рабочие процессы и создаёт стандарты взаимодействия AI-систем с различными сервисами.
-🚀 Полетели.]]></description>
-            <pubDate>Sat, 13 Jun 2026 11:17:55 +0300</pubDate>
+            <title>Amazon CEO reportedly raised Anthropic model concerns before government crackdown</title>
+            <link>https://techcrunch.com/2026/06/13/amazon-ceo-reportedly-raised-anthropic-model-concerns-before-government-crackdown/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:47:38 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Fluid, natural voice translation with Gemini 3.5 Live Translate</title>
-            <link>https://deepmind.google/blog/</link>
-            <description><![CDATA[📊 Влияние на разработку агентов:
-Gemini 3.5 Live Translate демонстрирует прорыв в голосовом ИИ. Теперь агенты смогут понимать контекст и интонацию при переводе.
-
-💼 Влияние на бизнес:
-Компании смогут проводить международные переговоры без задержек на переводчика. Экономия до 40% времени на коммуникацию.
-
-🖥 Влияние на IT-индустрию:
-Встраиваемые модели перевода станут стандартом для всех голосовых ассистентов. Ожидаем волну обновлений в product-led компаниях.
-
-Итого:
-Голосовой перевод с естественным звучанием — ещё один шаг к seamless-коммуникации. Индустрия voice AI получила новый стандарт.]]></description>
-            <pubDate>Fri, 12 Jun 2026 08:00:00 +0300</pubDate>
+            <title>KPMG pulls report on AI usage due to apparent hallucinations</title>
+            <link>https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:47:30 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Measuring the impact of learning with AI in Sierra Leone and beyond</title>
-            <link>https://deepmind.google/blog/</link>
-            <description><![CDATA[📊 Влияние на разработку агентов:
-Исследование показывает, как AI-инструменты для обучения работают в условиях ограниченных ресурсов. Это важный data point для построения глобальных агентов.
-
-💼 Влияние на бизнес:
-EdTech-компании получают доказательства эффективности AI в развивающихся рынках. Новый audience для продуктов.
-
-Итого:
-AI в образовании — не только для топовых университетов. Данные из Сьерра-Леоне доказывают универсальность подхода.]]></description>
-            <pubDate>Thu, 11 Jun 2026 14:00:00 +0300</pubDate>
+            <title>Jeff Bezos&#8217;s Prometheus raises $12B to build an &#8216;artificial general engineer&#8217; for the physical world</title>
+            <link>https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:47:27 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
         <item>
-            <title>Россия в рейтинге внедрения ИИ оказалась ниже Кении</title>
-            <link>https://www.rbc.ru/technology_and_media/20/01/2026/696f3d8d9a794776030bf2d1</link>
-            <description><![CDATA[📊 Влияние на разработку агентов:
-Низкий уровень внедрения ИИ тормозит развитие AI-экосистемы. Меньше данных, меньше экспериментов, меньше кадров.
-
-💼 Влияние на бизнес:
-Российские компании теряют конкурентные преимущества. По данным Microsoft, мы между Кенией и Камеруном — это диагноз.
-
-🖥 Влияние на IT-индустрию:
-Отток кадров ускорится. Разработчики едут туда, где есть инфраструктура и спрос.
-
-Итого:
-119 место из 130+ — не повод для паники, но сигнал к действию. Без системных мер ситуация не изменится.]]></description>
-            <pubDate>Wed, 10 Jun 2026 10:00:00 +0300</pubDate>
+            <title>Theker just raised $85M to build the factory robot that doesn&#8217;t specialize in anything</title>
+            <link>https://techcrunch.com/2026/06/11/theker-just-raised-85m-to-build-the-factory-robot-that-doesnt-specialize-in-anything/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:47:23 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>Cheaper, faster, and culturally aware, Avataar&#8217;s video AI is built for India&#8217;s scale</title>
+            <link>https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Mon, 15 Jun 2026 08:47:19 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
     </channel>

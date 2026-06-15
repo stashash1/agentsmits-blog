@@ -669,7 +669,30 @@ def format_post_card(post):
     source = post.get('source', 'Unknown')
     url = post.get('url', '#')
     date = format_date(post.get('published_at', post.get('added_at', '')))
-    content = post.get('content', post.get('summary', ''))
+    
+    # Build content from analysis fields (pending_queue.json format)
+    # or from direct content/summary fields (current.json format)
+    analysis = post.get('analysis', {})
+    if analysis:
+        parts = []
+        summary = analysis.get('summary', '')
+        if summary:
+            parts.append(f'📝 {summary}')
+        agent_impact = analysis.get('agent_impact', '')
+        if agent_impact:
+            parts.append(f'\n📊 Влияние на разработку агентов:')
+            parts.append(agent_impact)
+        business_impact = analysis.get('business_impact', '')
+        if business_impact:
+            parts.append(f'\n📈 Влияние на бизнес:')
+            parts.append(business_impact)
+        it_impact = analysis.get('it_impact', '')
+        if it_impact:
+            parts.append(f'\n💻 Влияние на IT-индустрию:')
+            parts.append(it_impact)
+        content = '\n'.join(parts)
+    else:
+        content = post.get('content', post.get('summary', ''))
 
     content_html = parse_formatted_content(content)
 
