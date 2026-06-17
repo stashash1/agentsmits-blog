@@ -3,36 +3,533 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-15T11:04:34.572003Z",
+      "last_checked": "2026-06-17T08:36:57.322503Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-15T11:04:34.572003Z",
+      "last_checked": "2026-06-17T08:36:57.322503Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-15T11:04:34.572003Z",
+      "last_checked": "2026-06-17T08:36:57.322503Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-15T11:04:34.572003Z",
+      "last_checked": "2026-06-17T08:36:57.322503Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-15T11:04:34.572003Z",
+      "last_checked": "2026-06-17T08:36:57.322503Z",
       "last_published_id": null
     }
   ],
   "pending": [],
   "published": [
+    {
+      "id": "techcrunch-spacex-valuation-balloons-to-2-6t-briefly-passes-ff6d444e10ee",
+      "source": "TechCrunch AI",
+      "title": "SpaceX valuation balloons to $2.6T, briefly passes Amazon",
+      "url": "https://techcrunch.com/2026/06/16/spacex-valuation-balloons-to-2-6t-briefly-passes-amazon/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-17T08:05:27.712970Z",
+      "message_id": 252,
+      "analysis": {
+        "translated_title": "Оценка SpaceX взлетает до $2,6 трлн, ненадолго превысив Amazon",
+        "agent_impact": "Рост стоимости SpaceX свидетельствует о масштабных инвестициях в автономные системы на основе AI — от автопилота ракет до спутниковых сетей Starlink, которые могут стать инфраструктурой для AI-агентов.",
+        "business_impact": "SpaceX стала одной из самых ценных компаний мира, обойдя Amazon, что усиливает конкуренцию в космической отрасли и привлекает дополнительные инвестиции в high-tech сектор.",
+        "it_impact": "Starlink как глобальная спутниковая сеть создаёт новую инфраструктуру для облачных вычислений и edge AI, влияя на архитектуру распределённых систем.",
+        "summary": "SpaceX получила оценку в $2,6 триллиона долларов, временно превысив Amazon по рыночной стоимости. Рост произошёл благодаря успехам в коммерческих запусках, развитию спутниковой сети Starlink и программе Starship. Компания укрепляет позиции как лидер космической индустрии с мультимиллиардными контрактами.",
+        "tags": [
+          "spacex",
+          "space-industry",
+          "ai-infrastructure"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-anthropics-latest-feud-with-the-trump-admin-may--e9ed648d3b34",
+      "source": "TechCrunch AI",
+      "title": "Anthropic&#8217;s latest feud with the Trump admin may actually help it, sales data suggests",
+      "url": "https://techcrunch.com/2026/06/16/anthropics-latest-feud-with-the-trump-admin-may-actually-help-it-sales-data-suggests/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-17T07:05:29.848138Z",
+      "message_id": 250,
+      "analysis": {
+        "translated_title": "Последний конфликт Anthropic с администрацией Трампа может ей помочь, данные о продажах показывают",
+        "agent_impact": "Конфликт Anthropic с политическим руководством демонстрирует, что этическая позиция AI-компаний может становиться конкурентным преимуществом при продвижении AI-агентов корпоративным клиентам, заботящимся о репутации.",
+        "business_impact": "Данные о продажах указывают на парадоксальный эффект: конфронтация с администрацией усиливает позиции Anthropic на рынке B2B, повышая привлекательность компании для клиентов, негативно относящихся к текущей политике.",
+        "it_impact": "Ситуация подчёркивает растущее влияние политических решений на IT-индустрию и формирует прецедент, при котором компаниям приходится выбирать сторону в идеологических конфликтах, что меняет стратегии корпоративных закупок ПО.",
+        "summary": "Компания Anthropic оказалась в центре очередного конфликта с администрацией Трампа, однако данные о продажах свидетельствуют, что это противостояние может положительно сказаться на бизнесе. Клиенты, не согласные с политикой правительства, демонстрируют готовность поддерживать AI-компании, занимающие принципиальную позицию.",
+        "tags": [
+          "anthropic",
+          "ai-business",
+          "government-policy"
+        ]
+      }
+    },
+    {
+      "id": "openai-deployment-simulation",
+      "source": "OpenAI",
+      "title": "Predicting model behavior before release by simulating deployment",
+      "url": "https://openai.com/index/deployment-simulation",
+      "date": "2026-06-16",
+      "published_at": "2026-06-17T07:05:08.602165Z",
+      "message_id": 248,
+      "analysis": {
+        "translated_title": "Предсказание поведения модели перед релизом путём симуляции развёртывания",
+        "agent_impact": "Метод позволяет тестировать AI-агентов на основе реальных разговорных данных до фактического развёртывания, что снижает риски непредсказуемого поведения и повышает надёжность агентов на этапе разработки.",
+        "business_impact": "Компании смогут сократить расходы на устранение последствий сбоев AI и минимизировать репутационные риски благодаря раннему выявлению проблем с моделями.",
+        "it_impact": "Симуляция развёртывания устанавливает новый стандарт валидации AI-моделей, влияя на методологию тестирования и оценки в индустрии.",
+        "summary": "OpenAI представила метод Deployment Simulation, который позволяет предсказывать поведение AI-моделей перед их релизом. Технология использует реальные данные разговоров для симуляции работы модели в боевых условиях. Это улучшает точность оценки безопасности и помогает выявлять потенциальные проблемы на ранних этапах.",
+        "tags": [
+          "deployment-simulation",
+          "ai-safety",
+          "model-evaluation"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-chatgpts-market-share-slips-below-50-for-first-t-752ebc9394a9",
+      "source": "TechCrunch AI",
+      "title": "ChatGPT&#8217;s market share slips below 50% for first time",
+      "url": "https://techcrunch.com/2026/06/16/chatgpts-market-share-slips-below-50-for-first-time/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-17T06:53:13.577107Z",
+      "message_id": 247,
+      "analysis": {
+        "translated_title": "Доля рынка ChatGPT впервые упала ниже 50%",
+        "agent_impact": "Снижение доли ChatGPT свидетельствует о переходе пользователей к специализированным AI-агентам и ассистентам, что стимулирует разработку нишевых решений вместо универсальных чат-ботов.",
+        "business_impact": "OpenAI теряет монопольное положение, открывая возможности для конкурентов и инвесторов; рынок AI становится более фрагментированным и конкурентным.",
+        "it_impact": "Фрагментация рынка AI-продуктов требует от IT-компаний диверсификации портфелей и создания специализированных решений для удержания пользователей.",
+        "summary": "ChatGPT впервые потерял доминирующее положение на рынке AI-технологий, его доля упала ниже 50%. Это отражает рост конкуренции со стороны других AI-провайдеров и усиление диверсификации рынка искусственного интеллекта в 2026 году.",
+        "tags": [
+          "chatgpt",
+          "market-share",
+          "ai-competition"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-android-17-launches-with-new-multitasking-tools--4a500f4a83d6",
+      "source": "TechCrunch AI",
+      "title": "Android 17 launches with new multitasking tools as Google expands Gemini features",
+      "url": "https://techcrunch.com/2026/06/16/android-17-launches-with-new-multitasking-tools-as-google-expands-gemini-features/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-17T06:52:52.065372Z",
+      "message_id": 245,
+      "analysis": {
+        "translated_title": "Android 17 запускается с новыми инструментами многозадачности, пока Google расширяет возможности Gemini",
+        "agent_impact": "Расширение Gemini на Android 17 создаёт новые возможности для AI-агентов, работающих на мобильных устройствах, включая улучшенную интеграцию с системными функциями и многозадачностью.",
+        "business_impact": "Обновление Android с продвинутыми AI-функциями усиливает конкуренцию между экосистемами и стимулирует рынок мобильных AI-сервисов и приложений.",
+        "it_impact": "Разработчики получают новые API и инструменты для создания AI-приложений, интегрированных глубже в операционную систему Android.",
+        "summary": "Google представил Android 17 с улучшенными инструментами многозадачности и расширил возможности своего AI-помощника Gemini на платформе. Новые функции обеспечивают более тесную интеграцию AI в мобильный опыт пользователей.",
+        "tags": [
+          "android",
+          "gemini",
+          "mobile-ai"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-plaud-says-its-software-business-topped-100m-in--feb65f9e80a7",
+      "source": "TechCrunch AI",
+      "title": "Plaud says its software business topped $100M in ARR after shipping over 2M AI notetakers",
+      "url": "https://techcrunch.com/2026/06/16/plaud-says-its-software-business-topped-100m-in-arr-after-shipping-over-2m-ai-notetakers/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T19:05:30.860076Z",
+      "message_id": 241,
+      "analysis": {
+        "translated_title": "Plaud заявляет, что её софтверный бизнес превысил $100M ARR после поставки более 2 млн AI-ноуттейкеров",
+        "agent_impact": "Успех Plaud демонстрирует жизнеспособную бизнес-модель для AI-агентов в потребительском сегменте, подтверждая, что AI-ассистенты для личной продуктивности могут масштабироваться до значительной выручки.",
+        "business_impact": "Компания установила ориентир для B2C AI-стартапов, показав, что AI-продукты с четкой потребительской ценностью способны генерировать $100M+ ARR менее чем за несколько лет, что усилит конкуренцию в сегменте AI-продуктивности.",
+        "it_impact": "Рост спроса на AI-ноуттейкеры стимулирует развитие мобильных и edge-решений для локальной обработки данных, а также продвигает интеграцию AI-агентов в повседневные рабочие процессы пользователей.",
+        "summary": "Стартап Plaud достиг рубежа в $100M годового регулярного дохода (ARR) от своего софтверного бизнеса, продав более 2 миллионов AI-ноуттейкеров — устройств и приложений для автоматической записи и структурирования информации. Это один из самых быстрых примеров масштабирования AI-компании в потребительском сегменте, свидетельствующий о высоком спросе на AI-инструменты для личной продуктивности.",
+        "tags": [
+          "ai-agents",
+          "productivity",
+          "saas"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-doj-claims-xais-unpermitted-gas-turbines-are-a-m-2b4c89d3385f",
+      "source": "TechCrunch AI",
+      "title": "DOJ claims xAI’s unpermitted gas turbines are a matter of ‘national, economic, and energy security’",
+      "url": "https://techcrunch.com/2026/06/16/doj-claims-xais-unpermitted-gas-turbines-are-a-matter-of-national-economic-and-energy-security/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T19:05:27.537709Z",
+      "message_id": 240,
+      "analysis": {
+        "translated_title": "Минюст США заявляет, что неразрешённые газовые турбины xAI — вопрос национальной, экономической и энергетической безопасности",
+        "agent_impact": "Судебное преследование xAI подчёркивает критическую зависимость AI-агентов от энергетической инфраструктуры и необходимость соответствия регуляторным требованиям при масштабировании вычислительных мощностей.",
+        "business_impact": "Регуляторное давление на xAI создаёт прецедент для всех AI-компаний, использующих нестандартные энергорешения, и повышает риски для инвесторов в энергоёмкие AI-стартапы.",
+        "it_impact": "IT-компании теперь обязаны учитывать юридические аспекты энергоснабжения дата-центров наравне с техническими требованиями к инфраструктуре.",
+        "summary": "Министерство юстиции США выдвинуло претензии к компании xAI Илона Маска из-за эксплуатации газовых турбин без необходимых разрешений. Ведомство квалифицировало использование турбин для питания AI-дата-центров как вопрос национальной безопасности. Инцидент поднимает вопросы регулирования энергопотребления AI-индустрии и может установить прецедент для будущих судебных разбирательств с технологическими компаниями.",
+        "tags": [
+          "xai",
+          "energy-regulation",
+          "ai-infrastructure"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-spacex-is-public-everything-you-need-to-know-pos-d516edde44df",
+      "source": "TechCrunch AI",
+      "title": "SpaceX is public: Everything you need to know post-IPO",
+      "url": "https://techcrunch.com/2026/06/16/spacex-is-public-everything-you-need-to-know-post-ipo/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T18:10:02.773534Z",
+      "message_id": 238,
+      "analysis": {
+        "agent_impact": "SpaceX's IPO unlikely to directly affect AI agent development, though the company's investments in autonomous systems for rockets and satellites could contribute to broader AI/ML advancement with potential applications in autonomous agents.",
+        "business_impact": "SpaceX's transition to a public company marks a major milestone in aerospace industry, potentially attracting new capital flows to space technology sector and reshaping competitive dynamics among launch providers.",
+        "it_impact": "As a tech-heavy aerospace company, SpaceX's public status will increase transparency around its software infrastructure investments and could influence IT talent acquisition strategies across the industry.",
+        "summary": "SpaceX has completed its IPO and is now publicly traded. The article examines what this transition means for investors and stakeholders, covering key aspects of the company's new public market position and implications for future operations.",
+        "tags": [
+          "spacex",
+          "ipo",
+          "aerospace"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-sixty-percent-of-u-s-consumers-say-ai-in-brand-m-78fc4b6ad1a2",
+      "source": "TechCrunch AI",
+      "title": "Sixty percent of U.S. consumers say &#8216;AI&#8217; in brand messaging is a turnoff, survey finds",
+      "url": "https://techcrunch.com/2026/06/16/sixty-percent-of-u-s-consumers-say-ai-in-brand-messaging-is-a-turnoff-survey-finds/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T18:09:41.544760Z",
+      "message_id": 236,
+      "analysis": {
+        "agent_impact": "AI-агентам потребуется более тонкая интеграция в пользовательские интерфейсы без акцентирования на AI-брендинге, чтобы избежать отторжения пользователей.",
+        "business_impact": "Компаниям придётся пересмотреть маркетинговые стратегии, скрывая AI-элементы в продуктах и фокусируясь на реальной ценности для потребителя, а не на хайпе.",
+        "it_impact": "IT-компаниям необходимо разрабатывать интуитивные интерфейсы, где AI-функциональность органично встроена, а не вынесена в качестве маркетингового преимущества.",
+        "summary": "Согласно новому исследованию, 60% американских потребителей негативно реагируют на упоминание AI в маркетинговых сообщениях брендов. Это свидетельствует о том, что стратегия 'AI-washing' становится контрпродуктивной и вызывает обратную реакцию у аудитории.",
+        "tags": [
+          "consumer-behavior",
+          "ai-marketing",
+          "brand-strategy"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-probably-raises-9m-to-build-a-more-reliable-kind-43eaf8173183",
+      "source": "TechCrunch AI",
+      "title": "Probably raises $9M to build a more reliable kind of AI",
+      "url": "https://techcrunch.com/2026/06/16/probably-raises-9m-to-build-a-more-reliable-kind-of-ai/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T17:05:09.996614Z",
+      "message_id": 235,
+      "analysis": {
+        "agent_impact": "Фокус на надёжности AI напрямую влияет на разработку агентов, которые должны стабильно выполнять задачи без сбоев и галлюцинаций. Повышение надёжности делает AI-агентов пригодными для критически важных бизнес-задач.",
+        "business_impact": "Инвестиции в размере $9M в компанию, ориентированную на надёжность AI, сигнализируют о готовности рынка платить за предсказуемые AI-решения. Это усиливает конкуренцию среди стартапов, работающих над повышением доверия к AI-системам.",
+        "it_impact": "Стремление к более надёжному AI требует новых подходов к тестированию, мониторингу и архитектуре моделей. IT-индустрия получит инструменты и методологии для создания устойчивых AI-систем в продакшене.",
+        "summary": "Стартап Probably привлёк $9 миллионов финансирования на разработку более надёжного типа искусственного интеллекта. Компания фокусируется на решении проблемы непредсказуемости и ошибок современных AI-систем, что критически важно для их широкого внедрения в бизнес.",
+        "tags": [
+          "ai-reliability",
+          "funding",
+          "ai-agents"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-spacex-passes-amazon-as-valuation-balloons-to-2--43cfcfad9b94",
+      "source": "TechCrunch AI",
+      "title": "SpaceX passes Amazon as valuation balloons to $2.7T",
+      "url": "https://techcrunch.com/2026/06/16/spacex-passes-amazon-as-valuation-balloons-to-2-7t/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T16:05:15.177950Z",
+      "message_id": 234,
+      "analysis": {
+        "agent_impact": "Статья indirectly relates to AI agents through SpaceX's use of autonomous systems in rockets and satellites, suggesting increased investment in self-managing spacecraft that could influence development of autonomous AI systems.",
+        "business_impact": "SpaceX overtakes Amazon with $2.7T valuation, demonstrating space industry growth and shifting tech investment priorities toward aerospace and infrastructure companies.",
+        "it_impact": "SpaceX's valuation growth may drive increased R&D in autonomous systems, satellite networks (Starlink), and related infrastructure technologies.",
+        "summary": "SpaceX достигла рыночной оценки в $2.7 триллиона, превзойдя Amazon и заняв лидирующую позицию среди технологических компаний. Это отражает рост интереса инвесторов к космической отрасли и демонстрирует перераспределение капитала от традиционных tech-гигантов к aerospace-сектору.",
+        "tags": [
+          "spacex",
+          "valuation",
+          "aerospace",
+          "tech-companies",
+          "investment"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-robinhoods-note-on-10-layoffs-shows-blaming-ai-i-f9c4e0583697",
+      "source": "TechCrunch AI",
+      "title": "Robinhood&#8217;s note on 10% layoffs shows blaming AI isn&#8217;t cutting it",
+      "url": "https://techcrunch.com/2026/06/16/robinhoods-note-on-10-layoffs-shows-blaming-ai-isnt-cutting-it/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T16:05:11.731781Z",
+      "message_id": 233,
+      "analysis": {
+        "agent_impact": "Статья демонстрирует, что ссылка на AI как причину массовых увольнений вызывает скептицизм и критику, что заставляет компании быть осторожнее в заявлениях о замене сотрудников AI-агентами.",
+        "business_impact": "Robinhood демонстрирует типичную для финтех-компаний стратегию сокращения расходов под видом AI-трансформации, что подрывает доверие инвесторов к подобным заявлениям.",
+        "it_impact": "В IT-индустрии формируется тренд на разоблачение AI-нарратива как инструмента манипуляции акциями и оправдания увольнений, что повышает требования к прозрачности.",
+        "summary": "Robinhood объявил о 10% увольнениях, пытаясь объяснить это влиянием AI на бизнес. Однако автор статьи указывает, что использование AI как предлога для сокращений уже не воспринимается всерьёз, и реальные причины скорее связаны с экономическими трудностями и падением стоимости акций.",
+        "tags": [
+          "layoffs",
+          "ai-hype",
+          "robinhood",
+          "fintech",
+          "tech-industry"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-spacex-to-acquire-cursor-for-60b-in-stock-days-a-6f60b1912e1f",
+      "source": "TechCrunch AI",
+      "title": "SpaceX to acquire Cursor for $60B in stock, days after blockbuster IPO",
+      "url": "https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T14:05:11.428676Z",
+      "message_id": 232,
+      "analysis": {
+        "agent_impact": "SpaceX получит доступ к передовому AI-редактору кода Cursor, что позволит интегрировать автономных AI-агентов для написания кода в разработку космических технологий, создавая прецедент использования AI-агентов в критических системах.",
+        "business_impact": "Сделка на $60B устанавливает новый бенчмарк для оценки AI-инструментов разработки и демонстрирует готовность крупных tech-компаний платить десятки миллиардов за лидерство в AI-кодинге, усиливая консолидацию рынка.",
+        "it_impact": "Приобретение Cursor SpaceX ускорит переход к AI-native подходу в enterprise-разработке и стимулирует конкуренцию между облачными платформами за оснащение IDE встроенными AI-агентами для автономного написания кода.",
+        "summary": "SpaceX объявила о приобретении AI-редактора кода Cursor за $60B акциями через несколько дней после его успешного IPO. Сделка объединяет космическую индустрию с лидером AI-инструментов для разработчиков, что позволит SpaceX автоматизировать создание ПО для ракет и спутников.",
+        "tags": [
+          "cursor",
+          "spacex",
+          "ai-coding"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-malaysias-respond-io-raises-62-5m-eyes-acquisiti-a399e347cca7",
+      "source": "TechCrunch AI",
+      "title": "Malaysia&#8217;s AI agent-powered messaging app Respond.io raises $62.5M, eyes acquisitions",
+      "url": "https://techcrunch.com/2026/06/15/malaysias-respond-io-raises-62-5m-eyes-acquisitions-in-north-america-and-europe/",
+      "date": "2026-06-16",
+      "published_at": "2026-06-16T08:05:16.758078Z",
+      "message_id": 231,
+      "analysis": {
+        "agent_impact": "Раунд финансирования демонстрирует коммерческий потенциал AI-агентов в сфере автоматизации коммуникаций, стимулируя разработку подобных решений для бизнес-мессенджеров.",
+        "business_impact": "Крупные инвестиции в Respond.io усиливают конкуренцию на рынке SaaS-платформ для автоматизации клиентских коммуникаций и сигнализируют о росте интереса инвесторов к AI-стартапам из Юго-Восточной Азии.",
+        "it_impact": "Сделка подчёркивает важность интеграции AI-агентов в enterprise-продукты и необходимость развития инфраструктуры для управления мультиканальными коммуникациями.",
+        "summary": "Малайзийский стартап Respond.io, разрабатывающий мессенджер-платформу с AI-агентами для автоматизации клиентских коммуникаций, привлёк $62.5 млн раунда финансирования. Компания планирует использовать средства для экспансии на рынки Северной Америки и Европы через стратегические поглощения. Этот раунд стал одним из крупнейших для AI-стартапов в Юго-Восточной Азии.",
+        "tags": [
+          "ai-agents",
+          "funding",
+          "saas-platform"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-the-us-governments-anthropic-models-ban-was-neve-71ed2eea4532",
+      "source": "TechCrunch AI",
+      "title": "The US government&#8217;s Anthropic models ban was never about an AI jailbreak",
+      "url": "https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-16T07:05:52.774102Z",
+      "message_id": 230,
+      "analysis": {
+        "agent_impact": "Запрет правительства США на модели Anthropic ограничивает доступ AI-агентов к определённым языковым моделям, что может заставить разработчиков переключаться на альтернативные решения и адаптировать архитектуру агентов.",
+        "business_impact": "Регуляторные ограничения создают неопределённость для инвестиций в AI-стартапы, работающие с затронутыми моделями, и перераспределяют конкурентные преимущества между различными AI-компаниями.",
+        "it_impact": "IT-компаниям приходится пересматривать стеки технологий и условия лицензирования AI-моделей, а также усиливать compliance-процедуры из-за политических решений в сфере AI.",
+        "summary": "Статья раскрывает истинные причины запрета правительством США моделей Anthropic — он не связан с проблемой AI jailbreak, как это официально декларируется, а имеет более глубокие геополитические и экономические мотивы.",
+        "tags": [
+          "ai-regulation",
+          "anthropic",
+          "us-government"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-sundar-pichai-faces-boos-walkout-at-stanford-gra-ea8ad6c2bdaa",
+      "source": "TechCrunch AI",
+      "title": "Sundar Pichai faces boos, walkout at Stanford graduation ceremony over Google&#8217;s Israel, ICE ties",
+      "url": "https://techcrunch.com/2026/06/15/sundar-pichai-faces-boos-walkout-at-stanford-graduation-ceremony-over-googles-israel-ice-ties/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-16T07:05:31.451191Z",
+      "message_id": 228,
+      "analysis": {
+        "agent_impact": "Протесты против связей Google с Израилем и ICE поднимают вопросы этики AI-агентов, разрабатываемых корпорациями, и могут повлиять на доверие к автономным системам, создаваемым компанией.",
+        "business_impact": "Скандал может негативно повлиять на репутацию Google/Alphabet среди инвесторов и клиентов, а также привести к пересмотру корпоративной политики в отношении государственных контрактов.",
+        "it_impact": "Случай демонстрирует растущее давление на IT-компании со стороны общества, что может изменить подход к разработке и развёртыванию AI-систем, а также усилить требования к прозрачности.",
+        "summary": "Генеральный директор Google Sundar Pichai столкнулся с протестами и бойкотом во время церемонии выпуска в Стэнфорде из-за связей компании с Израилем и ICE. Студенты и выпускники выразили несогласие с участием Google в контрактах, связанных с иммиграционной и оборонной политикой США.",
+        "tags": [
+          "google",
+          "ai-ethics",
+          "protest"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-spacex-is-public-everything-you-need-to-know-pos-d69d5c32ea58",
+      "source": "TechCrunch AI",
+      "title": "SpaceX is public: Everything you need to know post-IPO",
+      "url": "https://techcrunch.com/2026/06/15/spacex-is-public-everything-you-need-to-know-post-ipo/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-16T05:40:39.761405Z",
+      "message_id": 224,
+      "analysis": {
+        "agent_impact": "SpaceX не является AI-агентом, но её технологии автономных ракет и космических аппаратов косвенно стимулируют развитие автономных систем, которые могут использоваться в будущих AI-агентах для космических миссий.",
+        "business_impact": "IPO SpaceX привлекает миллиарды долларов инвестиций, усиливая конкуренцию в космической индустрии и делая компанию Илона Маска крупнейшим публичным игроком на рынке спутникового интернета (Starlink).",
+        "it_impact": "Публичный статус SpaceX ускоряет инвестиции в satellite internet-инфраструктуру и коммуникационные технологии, влияя на развитие edge computing и глобальных сетей связи.",
+        "summary": "Статья освещает выход SpaceX на IPO, объясняя, как это изменяет положение компании на рынке, доступ к капиталу и перспективы для инвесторов после перехода от частной к публичной структуре.",
+        "tags": [
+          "spacex",
+          "ipo",
+          "satellite-internet",
+          "aerospace",
+          "investment"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-metas-new-ai-mode-on-facebook-pulls-from-public--a3f67405a753",
+      "source": "TechCrunch AI",
+      "title": "Meta&#8217;s new ‘AI Mode’ on Facebook pulls from public info across its platforms",
+      "url": "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-16T05:40:18.158184Z",
+      "message_id": 222,
+      "analysis": {
+        "agent_impact": "Интеграция AI-режима в Facebook демонстрирует тренд на встраивание AI-агентов непосредственно в пользовательские интерфейсы социальных платформ, что формирует новый паттерн взаимодействия человека с AI.",
+        "business_impact": "Meta усиливает конкуренцию на рынке AI-продуктов для потребителей, объединяя данные своих платформ для создания более персонализированного опыта и удержания аудитории.",
+        "it_impact": "Реализация AI Mode требует развития инфраструктуры для обработки запросов в реальном времени и безопасной работы с данными пользователей across multiple platforms.",
+        "summary": "Meta анонсировала запуск AI Mode в Facebook — нового AI-режима, который использует публичную информацию с различных платформ компании для ответов на запросы пользователей. Функция расширяет присутствие AI в социальной сети и позволяет взаимодействовать с контентом через диалоговый интерфейс.",
+        "tags": [
+          "ai-integration",
+          "social-platforms",
+          "meta-ai"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-cybersecurity-vets-protest-dangerous-us-governme-0a59211a2c97",
+      "source": "TechCrunch AI",
+      "title": "Cybersecurity vets protest &#8216;dangerous&#8217; US government ban on Anthropic&#8217;s most powerful models",
+      "url": "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-15T18:05:08.842964Z",
+      "message_id": 218,
+      "analysis": {
+        "agent_impact": "Запрет на мощные модели Anthropic ограничивает возможности создания продвинутых AI-агентов, требующих доступ к высокопроизводительным языковым моделям для автономного принятия решений и многошаговых задач.",
+        "business_impact": "Регуляторные ограничения ставят американские AI-компании в невыгодное положение в глобальной конкуренции и могут привести к оттоку разработчиков в юрисдикции с менее строгим регулированием.",
+        "it_impact": "Подобные запреты создают прецедент государственного контроля над доступом к AI-инфраструктуре, что может повлиять на архитектуру и развёртывание облачных AI-сервисов.",
+        "summary": "Группа экспертов по кибербезопасности выступила против решения правительства США запретить использование самых мощных моделей Anthropic, утверждая, что такой запрет создаёт больше рисков, чем решает. По их мнению, ограничение доступа к передовым AI-инструментам подрывает обороноспособность страны и вынуждает разработчиков обращаться к менее надёжным альтернативам.",
+        "tags": [
+          "cybersecurity",
+          "regulation",
+          "anthropic",
+          "us-government",
+          "ai-models"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-sarvam-becomes-indias-newest-ai-unicorn-with-234-bfeca2ee1bfe",
+      "source": "TechCrunch AI",
+      "title": "Sarvam becomes India&#8217;s newest AI unicorn with $234 million funding round led by HCLTech",
+      "url": "https://techcrunch.com/2026/06/15/sarvam-becomes-indias-newest-ai-unicorn-with-234-million-funding-round-led-by-hcltech/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-15T17:05:07.889778Z",
+      "message_id": 217,
+      "analysis": {
+        "agent_impact": "Крупные инвестиции в индийские AI-стартапы, такие как Sarvam, ускоряют разработку многоязычных AI-агентов для рынков развивающихся стран, включая поддержку индийских языков и специализированных решений для бизнеса.",
+        "business_impact": "Привлечение $234 млн компанией Sarvam демонстрирует рост интереса корпоративных инвесторов (HCLTech) к AI-стартапам, формируя новый центр AI-инноваций в Азии и усиливая конкуренцию между глобальными и региональными игроками.",
+        "it_impact": "Появление нового AI-unicorn в Индии стимулирует развитие локальной AI-инфраструктуры, кадрового рынка и создание экосистемы поставщиков облачных и корпоративных AI-решений в азиатском регионе.",
+        "summary": "Индийский AI-стартап Sarvam привлёк $234 млн в раунде финансирования под руководством HCLTech, достигнув статуса unicorn. Компания специализируется на разработке AI-решений с фокусом на индийский рынок и многоязычные модели, что отражает растущий интерес корпораций к локальным AI-технологиям.",
+        "tags": [
+          "ai-unicorn",
+          "india-ai",
+          "funding-round"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-salesforce-acquires-ai-customer-service-platform-f85f662961de",
+      "source": "TechCrunch AI",
+      "title": "Salesforce acquires AI customer service platform Fin for $3.6 billion",
+      "url": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-15T16:05:12.272874Z",
+      "message_id": 216,
+      "analysis": {
+        "agent_impact": "Крупная сделка ускоряет интеграцию автономных AI-агентов в enterprise-сегмент, демонстрируя практическую ценность AI-агентов для масштабной автоматизации бизнес-процессов.",
+        "business_impact": "Сделка на $3.6B задаёт новый стандарт оценки AI-стартапов в B2B-секторе и усиливает конкуренцию между Salesforce, Microsoft и другими игроками за лидерство в AI-решениях для клиентского сервиса.",
+        "it_impact": "Приобретение стимулирует консолидацию рынка AI-платформ и подталкивает IT-компании к срочному внедрению автономных AI-возможностей в свои продукты.",
+        "summary": "Salesforce объявил о приобретении AI-платформы клиентского сервиса Fin за $3.6 миллиарда. Сделка направлена на интеграцию автономных AI-агентов Fin в экосистему Salesforce для усиления автоматизации поддержки клиентов. Это одна из крупнейших AI-сделок в enterprise-секторе.",
+        "tags": [
+          "ai-agents",
+          "enterprise-ai",
+          "acquisition"
+        ]
+      }
+    },
+    {
+      "id": "google-alabama-investment-june-2026",
+      "source": "Google AI",
+      "title": "We’re strengthening our presence in Alabama through new investments and community support.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-15T16:05:08.957961Z",
+      "message_id": 215,
+      "analysis": {
+        "agent_impact": "Расширение дата-центров Google увеличивает вычислительные мощности для обучения и развёртывания AI-агентов в облаке, потенциально улучшая их производительность и масштабируемость.",
+        "business_impact": "Инвестиции в инфраструктуру укрепляют позиции Google Cloud на конкурентном рынке облачных сервисов, создавая дополнительные преимущества для клиентов, использующих AI-решения.",
+        "it_impact": "Строительство новых дата-центров расширяет глобальную облачную инфраструктуру, влияя на развитие сетевых технологий, энергопотребления и периферийных вычислений в IT-индустрии.",
+        "summary": "Google объявил о расширении своего кампуса дата-центров в Алабаме и выделении средств на поддержку местных сообществ. Инвестиции направлены на укрепление облачной инфраструктуры компании в регионе. Это часть глобальной стратегии Google по развитию вычислительных мощностей для своих сервисов и клиентов.",
+        "tags": [
+          "data-center",
+          "cloud-infrastructure",
+          "google-cloud"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-a-satellite-just-learned-to-find-things-on-its-o-e3d090f143fc",
+      "source": "TechCrunch AI",
+      "title": "A satellite just learned to find things on its own — here&#8217;s what that means",
+      "url": "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-15T14:05:14.512096Z",
+      "message_id": 214,
+      "analysis": {
+        "agent_impact": "Спутник стал автономным AI-агентом, способным самостоятельно обнаруживать и идентифицировать объекты на Земле без участия оператора, что демонстрирует переход от командного управления к распределённому принятию решений в космосе.",
+        "business_impact": "Технология открывает рынку спутниковых данных новые источники дохода — от мониторинга цепочек поставок до автоматизированного наблюдения, сокращая время от снимка до осмысленного бизнес-решения.",
+        "it_impact": "Развёртывание нейросетей на спутниковом железе требует решений для edge computing в условиях ограниченных ресурсов, энергии и радиации, что стимулирует разработку специализированных встраиваемых AI-систем.",
+        "summary": "Инженеры оснастили спутник моделью машинного обучения, которая позволяет ему автономно искать и находить заданные объекты — корабли, конструкции, изменения ландшафта — прямо на орбите, а не передавать сырые данные на Землю для обработки.",
+        "tags": [
+          "satellite",
+          "autonomous-ai",
+          "edge-computing",
+          "earth-observation",
+          "space-tech"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-ai-agents-are-becoming-employees-newcore-emerges-da4b5edf73d1",
+      "source": "TechCrunch AI",
+      "title": "As AI agents become employees, NewCore emerges with $66M to give them identities",
+      "url": "https://techcrunch.com/2026/06/15/ai-agents-are-becoming-employees-newcore-emerges-with-66m-to-give-them-identities/",
+      "date": "2026-06-15",
+      "published_at": "2026-06-15T14:05:11.166735Z",
+      "message_id": 213,
+      "analysis": {
+        "agent_impact": "Стартап NewCore предоставляет систему идентификации AI-агентов, что позволит им легитимно выполнять рабочие задачи наравне с сотрудниками-людьми, требуя учёта, аутентификации и разграничения полномочий.",
+        "business_impact": "Финансирование в $66M демонстрирует готовность рынка инвестировать в инфраструктуру для AI-агентов-сотрудников, формируя новый сегмент Enterprise AI с решениями для управления цифровыми работниками.",
+        "it_impact": "Появление систем идентификации AI-агентов потребует разработки новых протоколов аутентификации, систем аудита и методов управления правами доступа для нечеловеческих участников корпоративных систем.",
+        "summary": "Компания NewCore привлекла $66M на создание системы идентификации AI-агентов, которые всё чаще принимаются на работу в качестве сотрудников. Решение позволяет присваивать агентам цифровые удостоверения, отслеживать их действия и управлять их правами в корпоративной среде.",
+        "tags": [
+          "ai-agents",
+          "identity-management",
+          "enterprise-ai"
+        ]
+      }
+    },
     {
       "id": "justai-just-ai-agent-platform-vklyuchena-v-reestr-otechestvennogo-p",
       "source": "JustAI",
@@ -1637,6 +2134,6 @@
     "base_days": 1460,
     "current_days": 730,
     "start_date": "2026-01-01",
-    "last_update": "2026-06-15"
+    "last_update": "2026-06-17"
   }
 }
