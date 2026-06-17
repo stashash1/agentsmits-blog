@@ -31,15 +31,16 @@
       "last_published_id": null
     }
   ],
-  "pending": [
+  "pending": [],
+  "published": [
     {
       "id": "techcrunch-world-model-maker-odyssey-nabs-1-45b-valuation-b-d84f6e5d3df2",
       "source": "TechCrunch AI",
       "title": "World model maker Odyssey nabs $1.45B valuation backed by Amazon and other big names",
       "url": "https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/",
-      "summary": "",
-      "importance": 4,
       "date": "2026-06-17",
+      "published_at": "2026-06-17T19:08:40.425594Z",
+      "message_id": 288,
       "analysis": {
         "translated_title": "Создатель мировых моделей Odyssey получает оценку в $1,45 млрд при поддержке Amazon и других крупных игроков",
         "agent_impact": "Финансирование Odyssey подчёркивает критическую роль world models (мировых моделей) в развитии AI-агентов — они обеспечивают способность агентов понимать, симулировать и предсказывать поведение окружающей среды, что необходимо для автономного принятия решений.",
@@ -53,11 +54,8 @@
           "funding",
           "amazon"
         ]
-      },
-      "analyzed_at": "2026-06-17T19:07:19.080036Z"
-    }
-  ],
-  "published": [
+      }
+    },
     {
       "id": "techcrunch-social-medias-next-evolution-user-controlled-alg-a459b814ba8d",
       "source": "TechCrunch AI",
