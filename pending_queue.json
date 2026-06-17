@@ -3,36 +3,57 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-17T17:04:23.024553Z",
+      "last_checked": "2026-06-17T17:08:32.459019Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-17T17:04:23.024553Z",
+      "last_checked": "2026-06-17T17:08:32.459019Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-17T17:04:23.024553Z",
+      "last_checked": "2026-06-17T17:08:32.459019Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-17T17:04:23.024553Z",
+      "last_checked": "2026-06-17T17:08:32.459019Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-17T17:04:23.024553Z",
+      "last_checked": "2026-06-17T17:08:32.459019Z",
       "last_published_id": null
     }
   ],
   "pending": [],
   "published": [
+    {
+      "id": "anthropic-announcing-our-updated-responsible-scaling-policy",
+      "source": "Anthropic",
+      "title": "Responsible Scaling Policy",
+      "url": "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T17:10:14.637747Z",
+      "message_id": 282,
+      "analysis": {
+        "translated_title": "Объявление обновлённой Политики ответственного масштабирования",
+        "agent_impact": "Политика устанавливает обязательные уровни безопасности и пороговые значения, которым должны соответствовать AI-агенты перед развёртыванием на определённых уровнях возможностей.",
+        "business_impact": "Компании-разработчики AI-систем должны внедрять формализованные процедуры оценки рисков, что влияет на стратегии инвестиций и сроки вывода продуктов на рынок.",
+        "it_impact": "Политика задаёт технические стандарты и протоколы безопасности, которым должна следовать IT-индустрия при разработке передовых AI-систем.",
+        "summary": "Anthropic опубликовала обновлённую Политику ответственного масштабирования (RSP) — фреймворк управления рисками для снижения катастрофических угроз от передовых AI-систем. Обновление делает политику более гибкой и детализированной в оценке потенциальных рисков. Компания подчёркивает необходимость ответственного подхода к масштабированию AI-моделей.",
+        "tags": [
+          "responsible-ai",
+          "ai-safety",
+          "ai-governance"
+        ]
+      }
+    },
     {
       "id": "techcrunch-google-bets-on-gemini-to-reinvent-the-smart-home-d9843e598aa8",
       "source": "TechCrunch AI",
@@ -2081,15 +2102,6 @@
       "date": "2026-06-13"
     },
     {
-      "id": "deepmind-why-doesnt-streams-use-ai",
-      "source": "DeepMind",
-      "title": "Why doesn't Streams use AI? — Google DeepMind",
-      "url": "https://deepmind.google/blog/why-doesnt-streams-use-ai/",
-      "published_at": "2026-06-13T06:29:05.185392Z",
-      "message_id": 120,
-      "date": "2026-06-13"
-    },
-    {
       "id": "deepmind-why-we-launched-deepmind-ethics-society",
       "source": "DeepMind",
       "title": "Why we launched DeepMind Ethics & Society — Google DeepMind",
@@ -2207,15 +2219,6 @@
       "date": "2026-06-12"
     },
     {
-      "id": "anthropic-announcing-our-updated-responsible-scaling-policy",
-      "source": "Anthropic",
-      "title": "Anthropic announces updated responsible scaling policy",
-      "url": "https://www.anthropic.com/news/responsible-scaling-policy",
-      "published_at": "2026-06-12T12:10:28.707290Z",
-      "message_id": 97,
-      "date": "2026-06-12"
-    },
-    {
       "id": "test-post-template-check",
       "source": "Test",
       "title": "Тестовая публикация — шаблон",
@@ -2270,12 +2273,12 @@
       "date": "2026-06-11"
     },
     {
-      "id": "anthropic-policy-ai-exponential",
+      "id": "anthropic-policy-ai-exponential-2",
       "source": "Anthropic Policy",
-      "title": "Policy-фреймворк для frontier AI",
+      "title": "Policy на AI Exponential — как адаптировать институты к экспоненциальному развитию AI",
       "url": "https://www.anthropic.com/policy-on-the-ai-exponential",
-      "published_at": "2026-06-11T16:21:00Z",
-      "message_id": 42,
+      "published_at": "2026-06-11T18:04:00Z",
+      "message_id": 60,
       "date": "2026-06-11"
     },
     {
@@ -2321,15 +2324,6 @@
       "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
       "published_at": "2026-06-11T17:55:00Z",
       "message_id": 57,
-      "date": "2026-06-11"
-    },
-    {
-      "id": "anthropic-policy-ai-exponential-2",
-      "source": "Anthropic Policy",
-      "title": "Policy на AI Exponential — как адаптировать институты к экспоненциальному развитию AI",
-      "url": "https://www.anthropic.com/policy-on-the-ai-exponential",
-      "published_at": "2026-06-11T18:04:00Z",
-      "message_id": 60,
       "date": "2026-06-11"
     },
     {

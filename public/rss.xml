@@ -7,6 +7,13 @@
         <language>ru</language>
         
         <item>
+            <title>Responsible Scaling Policy</title>
+            <link>https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Wed, 17 Jun 2026 17:10:14 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
             <title>Google bets on Gemini to reinvent the smart home speaker</title>
             <link>https://techcrunch.com/2026/06/17/google-bets-on-gemini-to-reinvent-the-smart-home-speaker/</link>
             <description><![CDATA[]]></description>
@@ -137,13 +144,6 @@
             <link>https://techcrunch.com/2026/06/16/plaud-says-its-software-business-topped-100m-in-arr-after-shipping-over-2m-ai-notetakers/</link>
             <description><![CDATA[]]></description>
             <pubDate>Tue, 16 Jun 2026 19:05:30 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>DOJ claims xAI’s unpermitted gas turbines are a matter of ‘national, economic, and energy security’</title>
-            <link>https://techcrunch.com/2026/06/16/doj-claims-xais-unpermitted-gas-turbines-are-a-matter-of-national-economic-and-energy-security/</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Tue, 16 Jun 2026 19:05:27 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
     </channel>
