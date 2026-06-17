@@ -31,15 +31,16 @@
       "last_published_id": null
     }
   ],
-  "pending": [
+  "pending": [],
+  "published": [
     {
       "id": "techcrunch-pinterest-launches-an-experimental-ai-shopping-a-ca1ffebd7c89",
       "source": "TechCrunch AI",
       "title": "Pinterest launches an experimental AI shopping app called &#8216;Ask Pinterest&#8217;",
       "url": "https://techcrunch.com/2026/06/17/pinterest-launches-an-experimental-ai-shopping-app-called-ask-pinterest/",
-      "summary": "",
-      "importance": 4,
       "date": "2026-06-17",
+      "published_at": "2026-06-17T13:42:04.365496Z",
+      "message_id": 267,
       "analysis": {
         "translated_title": "Pinterest запускает экспериментальное AI-приложение для покупок под названием 'Ask Pinterest'",
         "agent_impact": "Запуск AI-агента для покупок демонстрирует практическое применение разговорного ИИ в e-commerce, где агенты выполняют задачи поиска и подбора товаров на основе естественного языка пользователя.",
@@ -51,11 +52,8 @@
           "e-commerce",
           "conversational-ai"
         ]
-      },
-      "analyzed_at": "2026-06-17T13:16:19.500530Z"
-    }
-  ],
-  "published": [
+      }
+    },
     {
       "id": "techcrunch-deepl-acquires-mixhalo-for-live-event-audio-stre-3ee1e2948f78",
       "source": "TechCrunch AI",
