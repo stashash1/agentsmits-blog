@@ -33,50 +33,6 @@
   ],
   "pending": [
     {
-      "id": "techcrunch-anthropic-becomes-first-ai-startup-to-join-the-f-1d907aaa2f0e",
-      "source": "TechCrunch AI",
-      "title": "Anthropic becomes first AI startup to join the Frontier carbon removal coalition",
-      "url": "https://techcrunch.com/2026/06/17/anthropic-becomes-first-ai-startup-to-join-the-frontier-carbon-removal-coalition/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-17",
-      "analysis": {
-        "translated_title": "Anthropic стала первой AI-компанией, присоединившейся к коалиции Frontier по удалению углерода",
-        "agent_impact": "Присоединение Anthropic к экологическим инициативам демонстрирует тренд на интеграцию AI-агентов в решения для климата, что может стимулировать разработку агентов для мониторинга и оптимизации процессов улавливания углерода.",
-        "business_impact": "Anthropic усиливает позиции бренда через приверженность устойчивому развитию, дифференцируясь от конкурентов и открывая доступ к партнёрствам с крупными корпорациями в коалиции Frontier.",
-        "it_impact": "Участие AI-стартапа в климатических коалициях формирует новый стандарт ответственности для технологических компаний и может повлиять на инфраструктурные решения в дата-центрах и энергопотреблении.",
-        "summary": "Компания Anthropic стала первым AI-стартапом, присоединившимся к коалиции Frontier по удалению углерода из атмосферы. Frontier — это инициатива, объединяющая корпорации для финансирования и масштабирования технологий захвата CO2. Шаг Anthropic подчёркивает растущую роль AI-индустрии в экологической повестке.",
-        "tags": [
-          "anthropic",
-          "carbon-removal",
-          "climate-tech"
-        ]
-      },
-      "analyzed_at": "2026-06-17T19:06:26.592103Z"
-    },
-    {
-      "id": "techcrunch-social-medias-next-evolution-user-controlled-alg-a459b814ba8d",
-      "source": "TechCrunch AI",
-      "title": "Social media’s next evolution: User-controlled algorithms",
-      "url": "https://techcrunch.com/2026/06/17/social-medias-next-evolution-user-controlled-algorithms/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-17",
-      "analysis": {
-        "translated_title": "Следующая эволюция социальных сетей: алгоритмы под контролем пользователей",
-        "agent_impact": "Развитие user-controlled алгоритмов требует от AI-агентов адаптации к персонализированным пользовательским настройкам вместо единых платформенных моделей, что усложняет прогнозирование поведения агентов в социальных сетях.",
-        "business_impact": "Переход к пользовательскому контролю алгоритмов может фрагментировать рекламные аудитории и снизить эффективность таргетинга, что заставит социальные платформы пересмотреть модели монетизации.",
-        "it_impact": "IT-командам необходимо разрабатывать новые архитектуры рекомендательных систем с поддержкой множественных пользовательских профилей и настроек прозрачности алгоритмов.",
-        "summary": "Статья рассматривает тренд на передачу пользователям контроля над алгоритмами формирования ленты в социальных сетях. Платформы начинают экспериментировать с инструментами, позволяющими людям выбирать критерии ранжирования контента. Это противоречит традиционной модели, где алгоритмы полностью контролируются платформой в интересах вовлечённости и рекламных доходов.",
-        "tags": [
-          "user-controlled-algorithms",
-          "social-media",
-          "recommendation-systems"
-        ]
-      },
-      "analyzed_at": "2026-06-17T19:06:48.805165Z"
-    },
-    {
       "id": "techcrunch-world-model-maker-odyssey-nabs-1-45b-valuation-b-d84f6e5d3df2",
       "source": "TechCrunch AI",
       "title": "World model maker Odyssey nabs $1.45B valuation backed by Amazon and other big names",
@@ -102,6 +58,48 @@
     }
   ],
   "published": [
+    {
+      "id": "techcrunch-social-medias-next-evolution-user-controlled-alg-a459b814ba8d",
+      "source": "TechCrunch AI",
+      "title": "Social media’s next evolution: User-controlled algorithms",
+      "url": "https://techcrunch.com/2026/06/17/social-medias-next-evolution-user-controlled-algorithms/",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T19:08:06.797837Z",
+      "message_id": 287,
+      "analysis": {
+        "translated_title": "Следующая эволюция социальных сетей: алгоритмы под контролем пользователей",
+        "agent_impact": "Развитие user-controlled алгоритмов требует от AI-агентов адаптации к персонализированным пользовательским настройкам вместо единых платформенных моделей, что усложняет прогнозирование поведения агентов в социальных сетях.",
+        "business_impact": "Переход к пользовательскому контролю алгоритмов может фрагментировать рекламные аудитории и снизить эффективность таргетинга, что заставит социальные платформы пересмотреть модели монетизации.",
+        "it_impact": "IT-командам необходимо разрабатывать новые архитектуры рекомендательных систем с поддержкой множественных пользовательских профилей и настроек прозрачности алгоритмов.",
+        "summary": "Статья рассматривает тренд на передачу пользователям контроля над алгоритмами формирования ленты в социальных сетях. Платформы начинают экспериментировать с инструментами, позволяющими людям выбирать критерии ранжирования контента. Это противоречит традиционной модели, где алгоритмы полностью контролируются платформой в интересах вовлечённости и рекламных доходов.",
+        "tags": [
+          "user-controlled-algorithms",
+          "social-media",
+          "recommendation-systems"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-anthropic-becomes-first-ai-startup-to-join-the-f-1d907aaa2f0e",
+      "source": "TechCrunch AI",
+      "title": "Anthropic becomes first AI startup to join the Frontier carbon removal coalition",
+      "url": "https://techcrunch.com/2026/06/17/anthropic-becomes-first-ai-startup-to-join-the-frontier-carbon-removal-coalition/",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T19:08:03.352757Z",
+      "message_id": 286,
+      "analysis": {
+        "translated_title": "Anthropic стала первой AI-компанией, присоединившейся к коалиции Frontier по удалению углерода",
+        "agent_impact": "Присоединение Anthropic к экологическим инициативам демонстрирует тренд на интеграцию AI-агентов в решения для климата, что может стимулировать разработку агентов для мониторинга и оптимизации процессов улавливания углерода.",
+        "business_impact": "Anthropic усиливает позиции бренда через приверженность устойчивому развитию, дифференцируясь от конкурентов и открывая доступ к партнёрствам с крупными корпорациями в коалиции Frontier.",
+        "it_impact": "Участие AI-стартапа в климатических коалициях формирует новый стандарт ответственности для технологических компаний и может повлиять на инфраструктурные решения в дата-центрах и энергопотреблении.",
+        "summary": "Компания Anthropic стала первым AI-стартапом, присоединившимся к коалиции Frontier по удалению углерода из атмосферы. Frontier — это инициатива, объединяющая корпорации для финансирования и масштабирования технологий захвата CO2. Шаг Anthropic подчёркивает растущую роль AI-индустрии в экологической повестке.",
+        "tags": [
+          "anthropic",
+          "carbon-removal",
+          "climate-tech"
+        ]
+      }
+    },
     {
       "id": "techcrunch-world-leaders-want-american-ai-they-just-dont-wa-9ef08ab1d787",
       "source": "TechCrunch AI",
