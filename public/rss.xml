@@ -7,6 +7,20 @@
         <language>ru</language>
         
         <item>
+            <title>Agentic Resource Discovery: Let agents search</title>
+            <link>https://huggingface.co/blog/agentic-resource-discovery-launch</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Wed, 17 Jun 2026 16:30:04 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>MolmoMotion: Language-guided 3D motion forecasting</title>
+            <link>https://huggingface.co/blog/allenai/molmomotion</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Wed, 17 Jun 2026 16:29:42 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
             <title>Pramaana Labs raises $27M seed round from Khosla Ventures to bring formal verification to AI</title>
             <link>https://techcrunch.com/2026/06/17/pramaana-labs-raises-27-million-seed-round-from-khosla-ventures-to-bring-formal-verification-to-ai/</link>
             <description><![CDATA[]]></description>
@@ -130,20 +144,6 @@
             <link>https://techcrunch.com/2026/06/16/spacex-passes-amazon-as-valuation-balloons-to-2-7t/</link>
             <description><![CDATA[]]></description>
             <pubDate>Tue, 16 Jun 2026 16:05:15 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>Robinhood&#8217;s note on 10% layoffs shows blaming AI isn&#8217;t cutting it</title>
-            <link>https://techcrunch.com/2026/06/16/robinhoods-note-on-10-layoffs-shows-blaming-ai-isnt-cutting-it/</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Tue, 16 Jun 2026 16:05:11 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>SpaceX to acquire Cursor for $60B in stock, days after blockbuster IPO</title>
-            <link>https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Tue, 16 Jun 2026 14:05:11 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
     </channel>

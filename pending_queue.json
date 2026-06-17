@@ -3,36 +3,123 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-17T15:04:40.482936Z",
+      "last_checked": "2026-06-17T16:27:50.724883Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-17T15:04:40.482936Z",
+      "last_checked": "2026-06-17T16:27:50.724883Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-17T15:04:40.482936Z",
+      "last_checked": "2026-06-17T16:27:50.724883Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-17T15:04:40.482936Z",
+      "last_checked": "2026-06-17T16:27:50.724883Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-17T15:04:40.482936Z",
+      "last_checked": "2026-06-17T16:27:50.724883Z",
       "last_published_id": null
     }
   ],
-  "pending": [],
+  "pending": [
+    {
+      "id": "google-amie-for-disease-management-in-nature",
+      "source": "Google AI",
+      "title": "New research shows how AMIE, our medical AI, could help manage health conditions.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-17",
+      "analysis": {
+        "translated_title": "Новое исследование показывает, как AMIE — наш медицинский ИИ — может помочь в управлении заболеваниями",
+        "agent_impact": "AMIE демонстрирует переход медицинских ИИ-агентов от диагностики к активному ведению пациентов, что расширяет функциональность автономных медицинских систем.",
+        "business_impact": "Google усиливает позиции в сегменте медицинского ИИ, что может привести к перераспределению рынка цифрового здравоохранения и создать новые бизнес-модели на стыке ИИ и клинической практики.",
+        "it_impact": "Развитие AMIE требует создания новых стандартов интеграции ИИ в клинические информационные системы и формирования инфраструктуры для поддержки принятия решений в реальном времени.",
+        "summary": "Google представил новые исследования системы AMIE (Articulate Medical Intelligence Explorer), демонстрирующие способность медицинского ИИ не только ставить диагнозы, но и участвовать в ведении пациентов с хроническими заболеваниями. Публикация в Nature подтверждает научную строгость подхода и потенциал для практического внедрения в клиническую практику.",
+        "tags": [
+          "medical-ai",
+          "healthcare-agents",
+          "google-deepmind"
+        ]
+      },
+      "analyzed_at": "2026-06-17T16:29:03.920127Z"
+    },
+    {
+      "id": "techcrunch-the-slowtech-revolution-is-here-to-kill-your-pho-014d2e39f9c2",
+      "source": "TechCrunch AI",
+      "title": "The slowtech revolution is here to kill your phone addiction and rescue your attention span",
+      "url": "https://techcrunch.com/2026/06/17/the-slowtech-revolution-is-here-to-kill-your-phone-addiction-and-rescue-your-attention-span/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-17",
+      "analysis": {
+        "translated_title": "Революция медленных технологий пришла, чтобы избавить вас от зависимости телефона и вернуть концентрацию внимания",
+        "agent_impact": "AI-агенты и персональные ассистенты должны будут адаптироваться к парадигме медленных технологий, предлагая менее навязчивые взаимодействия и уважая границы внимания пользователя.",
+        "business_impact": "Компании, зарабатывающие на привлечении внимания и рекламе, столкнутся с необходимостью пересмотра бизнес-моделей, а рынок цифрового благополучия получит новые возможности для роста.",
+        "it_impact": "IT-индустрия переориентируется на разработку продуктов с акцентом на цифровое благополучие: менее отвлекающие интерфейсы, встроенные ограничения на использование и инструменты контроля экранного времени.",
+        "summary": "Статья описывает движение slowtech — контркультурный ответ на эпидемию телефонной зависимости и снижение способности людей к концентрации. Авторы и компании-пионеры этой тенденции разрабатывают технологии, которые сознательно ограничивают свою собственную захватывающую способность ради здоровья пользователей.",
+        "tags": [
+          "slowtech",
+          "digital-wellness",
+          "phone-addiction"
+        ]
+      },
+      "analyzed_at": "2026-06-17T16:29:21.327191Z"
+    }
+  ],
   "published": [
+    {
+      "id": "huggingface-agentic-resource-discovery-launch",
+      "source": "HuggingFace",
+      "title": "Agentic Resource Discovery: Let agents search",
+      "url": "https://huggingface.co/blog/agentic-resource-discovery-launch",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T16:30:04.470045Z",
+      "message_id": 274,
+      "analysis": {
+        "translated_title": "Agentic Resource Discovery: Позвольте агентам искать",
+        "agent_impact": "Новая функция позволяет AI-агентам автономно находить модели, датасеты, инструменты, навыки и других агентов на платформе Hugging Face без участия человека.",
+        "business_impact": "Открывает возможности для создания экосистем агент-to-agent взаимодействия и новых моделей монетизации AI-агентов через автоматизированный поиск и подключение компонентов.",
+        "it_impact": "Меняет архитектуру AI-агентных систем в сторону более модульной и динамической структуры, где агенты могут самостоятельно собирать нужный функционал из доступных ресурсов.",
+        "summary": "Hugging Face представил функцию Agentic Resource Discovery, которая позволяет AI-агентам автоматически искать и использовать доступные ресурсы платформы — модели, датасеты, Spaces, инструменты, навыки и других агентов. Это делает взаимодействие между агентами и ресурсами экосистемы более автономным и динамичным.",
+        "tags": [
+          "agentic-ai",
+          "hugging-face",
+          "resource-discovery"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-molmomotion",
+      "source": "HuggingFace",
+      "title": "MolmoMotion: Language-guided 3D motion forecasting",
+      "url": "https://huggingface.co/blog/allenai/molmomotion",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T16:29:42.891856Z",
+      "message_id": 272,
+      "analysis": {
+        "translated_title": "MolmoMotion: Прогнозирование 3D-движения с языковым управлением",
+        "agent_impact": "MolmoMotion позволяет AI-агентам предсказывать траектории движения объектов в трехмерном пространстве на основе текстовых команд, что критично для навигации роботов и взаимодействия с физическим миром.",
+        "business_impact": "Технология применима в логистике, складской автоматизации и сервисной робототехнике, где точное предсказание движения повышает эффективность и безопасность автономных систем.",
+        "it_impact": "Модель распространяется через Hugging Face как open-source, что стимулирует развитие мультимодальных архитектур, объединяющих зрение, язык и пространственное понимание.",
+        "summary": "AllenAI представила MolmoMotion — модель машинного обучения для прогнозирования трехмерного движения объектов по текстовым инструкциям. Модель принимает визуальный ввод и языковые команды, затем генерирует возможные траектории движения. Публикация на Hugging Face делает технологию доступной для исследователей и разработчиков.",
+        "tags": [
+          "motion-forecasting",
+          "3d-vision",
+          "language-guided"
+        ]
+      }
+    },
     {
       "id": "techcrunch-pramaana-labs-raises-27-million-seed-round-from--eb0664d82863",
       "source": "TechCrunch AI",
