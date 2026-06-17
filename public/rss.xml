@@ -7,6 +7,13 @@
         <language>ru</language>
         
         <item>
+            <title>GLM-5.2: Built for Long-Horizon Tasks</title>
+            <link>https://huggingface.co/blog/zai-org/glm-52-blog</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Wed, 17 Jun 2026 09:15:44 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
             <title>SpaceX valuation balloons to $2.6T, briefly passes Amazon</title>
             <link>https://techcrunch.com/2026/06/16/spacex-valuation-balloons-to-2-6t-briefly-passes-amazon/</link>
             <description><![CDATA[]]></description>
@@ -137,13 +144,6 @@
             <link>https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/</link>
             <description><![CDATA[]]></description>
             <pubDate>Mon, 15 Jun 2026 18:05:08 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>Sarvam becomes India&#8217;s newest AI unicorn with $234 million funding round led by HCLTech</title>
-            <link>https://techcrunch.com/2026/06/15/sarvam-becomes-indias-newest-ai-unicorn-with-234-million-funding-round-led-by-hcltech/</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Mon, 15 Jun 2026 17:05:07 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
     </channel>

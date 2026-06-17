@@ -3,36 +3,57 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-17T08:36:57.322503Z",
+      "last_checked": "2026-06-17T09:14:35.328751Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-17T08:36:57.322503Z",
+      "last_checked": "2026-06-17T09:14:35.328751Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-17T08:36:57.322503Z",
+      "last_checked": "2026-06-17T09:14:35.328751Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-17T08:36:57.322503Z",
+      "last_checked": "2026-06-17T09:14:35.328751Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-17T08:36:57.322503Z",
+      "last_checked": "2026-06-17T09:14:35.328751Z",
       "last_published_id": null
     }
   ],
   "pending": [],
   "published": [
+    {
+      "id": "huggingface-glm-52-blog",
+      "source": "HuggingFace",
+      "title": "GLM-5.2: Built for Long-Horizon Tasks",
+      "url": "https://huggingface.co/blog/zai-org/glm-52-blog",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T09:15:44.880535Z",
+      "message_id": 253,
+      "analysis": {
+        "translated_title": "GLM-5.2: Создан для задач с длительным горизонтом планирования",
+        "agent_impact": "GLM-5.2 с улучшенной способностью к длинным цепочкам рассуждений делает агентов более эффективными в автономном выполнении многоэтапных задач, требующих долгосрочного планирования и запоминания контекста.",
+        "business_impact": "Z.AI предлагает конкурентоспособную альтернативу существующим LLM на рынке, что усиливает конкуренцию в сегменте enterprise-решений для автоматизации бизнес-процессов.",
+        "it_impact": "Новая архитектура модели для extended-horizon задач задаёт новый стандарт требований к вычислительным ресурсам и оптимизации inference-пайплайнов в IT-инфраструктуре.",
+        "summary": "Команда Z.AI представила GLM-5.2 — новую версию модели семейства GLM, оптимизированную для задач с длительным горизонтом планирования. Модель демонстрирует улучшенную способность поддерживать контекст и выполнять сложные многошаговые сценарии без потери когерентности. Релиз доступен на платформе Hugging Face.",
+        "tags": [
+          "glm-5.2",
+          "long-horizon-tasks",
+          "autonomous-agents"
+        ]
+      }
+    },
     {
       "id": "techcrunch-spacex-valuation-balloons-to-2-6t-briefly-passes-ff6d444e10ee",
       "source": "TechCrunch AI",
