@@ -31,37 +31,16 @@
       "last_published_id": null
     }
   ],
-  "pending": [
-    {
-      "id": "google-amie-for-disease-management-in-nature",
-      "source": "Google AI",
-      "title": "New research shows how AMIE, our medical AI, could help manage health conditions.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-17",
-      "analysis": {
-        "translated_title": "Новое исследование показывает, как AMIE — наш медицинский ИИ — может помочь в управлении заболеваниями",
-        "agent_impact": "AMIE демонстрирует переход медицинских ИИ-агентов от диагностики к активному ведению пациентов, что расширяет функциональность автономных медицинских систем.",
-        "business_impact": "Google усиливает позиции в сегменте медицинского ИИ, что может привести к перераспределению рынка цифрового здравоохранения и создать новые бизнес-модели на стыке ИИ и клинической практики.",
-        "it_impact": "Развитие AMIE требует создания новых стандартов интеграции ИИ в клинические информационные системы и формирования инфраструктуры для поддержки принятия решений в реальном времени.",
-        "summary": "Google представил новые исследования системы AMIE (Articulate Medical Intelligence Explorer), демонстрирующие способность медицинского ИИ не только ставить диагнозы, но и участвовать в ведении пациентов с хроническими заболеваниями. Публикация в Nature подтверждает научную строгость подхода и потенциал для практического внедрения в клиническую практику.",
-        "tags": [
-          "medical-ai",
-          "healthcare-agents",
-          "google-deepmind"
-        ]
-      },
-      "analyzed_at": "2026-06-17T16:29:03.920127Z"
-    },
+  "pending": [],
+  "published": [
     {
       "id": "techcrunch-the-slowtech-revolution-is-here-to-kill-your-pho-014d2e39f9c2",
       "source": "TechCrunch AI",
       "title": "The slowtech revolution is here to kill your phone addiction and rescue your attention span",
       "url": "https://techcrunch.com/2026/06/17/the-slowtech-revolution-is-here-to-kill-your-phone-addiction-and-rescue-your-attention-span/",
-      "summary": "",
-      "importance": 4,
       "date": "2026-06-17",
+      "published_at": "2026-06-17T16:45:40.141877Z",
+      "message_id": 277,
       "analysis": {
         "translated_title": "Революция медленных технологий пришла, чтобы избавить вас от зависимости телефона и вернуть концентрацию внимания",
         "agent_impact": "AI-агенты и персональные ассистенты должны будут адаптироваться к парадигме медленных технологий, предлагая менее навязчивые взаимодействия и уважая границы внимания пользователя.",
@@ -73,11 +52,29 @@
           "digital-wellness",
           "phone-addiction"
         ]
-      },
-      "analyzed_at": "2026-06-17T16:29:21.327191Z"
-    }
-  ],
-  "published": [
+      }
+    },
+    {
+      "id": "google-amie-for-disease-management-in-nature",
+      "source": "Google AI",
+      "title": "New research shows how AMIE, our medical AI, could help manage health conditions.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T16:45:36.581360Z",
+      "message_id": 276,
+      "analysis": {
+        "translated_title": "Новое исследование показывает, как AMIE — наш медицинский ИИ — может помочь в управлении заболеваниями",
+        "agent_impact": "AMIE демонстрирует переход медицинских ИИ-агентов от диагностики к активному ведению пациентов, что расширяет функциональность автономных медицинских систем.",
+        "business_impact": "Google усиливает позиции в сегменте медицинского ИИ, что может привести к перераспределению рынка цифрового здравоохранения и создать новые бизнес-модели на стыке ИИ и клинической практики.",
+        "it_impact": "Развитие AMIE требует создания новых стандартов интеграции ИИ в клинические информационные системы и формирования инфраструктуры для поддержки принятия решений в реальном времени.",
+        "summary": "Google представил новые исследования системы AMIE (Articulate Medical Intelligence Explorer), демонстрирующие способность медицинского ИИ не только ставить диагнозы, но и участвовать в ведении пациентов с хроническими заболеваниями. Публикация в Nature подтверждает научную строгость подхода и потенциал для практического внедрения в клиническую практику.",
+        "tags": [
+          "medical-ai",
+          "healthcare-agents",
+          "google-deepmind"
+        ]
+      }
+    },
     {
       "id": "huggingface-agentic-resource-discovery-launch",
       "source": "HuggingFace",
