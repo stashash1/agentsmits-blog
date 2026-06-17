@@ -24,6 +24,7 @@ if not STORAGE_CURRENT.exists():
 
 # Read from pending_queue.json (contains all published articles)
 PENDING_QUEUE = BLOG_DIR / "pending_queue.json"
+PENDING_ARTICLES = BLOG_DIR / "articles_queue.json"
 
 TEMPLATE_INDEX = """<!DOCTYPE html>
 <html lang="ru">
@@ -749,6 +750,31 @@ def generate_agi_bar():
     </div>'''
 
 
+def format_article_card(article):
+    """Формирует HTML-карточку статьи/дайджеста"""
+    title = article.get('title', 'Без названия')
+    source = article.get('source', 'AI Агенты Смита')
+    date = format_date(article.get('published_at', article.get('date', '')))
+    content = article.get('content', '')
+    article_type = article.get('type', 'article')
+    emoji = '📊' if article_type == 'weekly_digest' else '📖'
+
+    # Простой текстовый контент -> pre
+    content_html = f'<pre style="white-space:pre-wrap;line-height:1.8">{content}</pre>' if content else ''
+
+    return f'''
+    <article class="hero-card">
+        <div>
+            <span class="card-source">{emoji} {source}</span>
+            <span class="card-date" style="margin-left:10px">{date}</span>
+        </div>
+        <h2 class="card-title">{title}</h2>
+        <div class="post-content">
+            {content_html}
+        </div>
+    </article>'''
+
+
 def generate_lenta():
     """Генерирует главную страницу с актуальными постами и архивом"""
     # Read from pending_queue.json (source of truth for published articles)
@@ -800,22 +826,25 @@ def generate_lenta():
 
 
 def generate_articles():
-    """Генерирует страницу статей (только актуальные, без архива)"""
-    pending_data = load_json(PENDING_QUEUE)
-    posts = (pending_data.get('published', []) if pending_data else [])[:30]
+    """Генерирует страницу статей из articles_queue.json (дайджесты, анализы)"""
+    articles_data = load_json(PENDING_ARTICLES)
+    articles = (articles_data.get('articles', []) if articles_data else [])
 
-    if posts:
-        posts_html = '\n'.join(format_post_card(p) for p in posts)
+    # Только опубликованные
+    published_articles = [a for a in articles if a.get('status') == 'published']
+
+    if published_articles:
+        posts_html = '\n'.join(format_article_card(a) for a in published_articles)
         content = TEMPLATE_SECTION_CURRENT.format(
-            count=len(posts),
+            count=len(published_articles),
             posts=posts_html
         ) + generate_agi_bar()
     else:
         content = '''
         <section class="section">
             <div class="empty-state">
-                <div class="empty-state-icon">📝</div>
-                <p>Статей пока нет</p>
+                <div class="empty-state-icon">📖</div>
+                <p>Статей пока нет. Они появятся после первой публикации дайджеста.</p>
             </div>
         </section>'''
 
@@ -826,7 +855,7 @@ def generate_articles():
     )
     with open(OUTPUT_DIR / 'articles.html', 'w', encoding='utf-8') as f:
         f.write(html)
-    print(f"✅ Articles: {len(posts)} статей")
+    print(f"✅ Articles: {len(published_articles)} опубликовано")
 
 
 def generate_rss():
