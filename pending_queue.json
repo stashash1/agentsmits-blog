@@ -33,34 +33,73 @@
   ],
   "pending": [
     {
-      "id": "techcrunch-canadian-pension-giant-joins-race-to-fund-indias-23dab7c5dbcf",
-      "source": "TechCrunch AI",
-      "title": "Canadian pension giant joins race to fund India&#8217;s AI-fueled data center boom",
-      "url": "https://techcrunch.com/2026/06/17/canadian-pension-giant-joins-race-to-fund-indias-ai-fueled-data-center-boom/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-17"
-    },
-    {
-      "id": "techcrunch-deepl-acquires-mixhalo-for-live-event-audio-stre-3ee1e2948f78",
-      "source": "TechCrunch AI",
-      "title": "DeepL acquires Mixhalo for live-event audio streaming and translation",
-      "url": "https://techcrunch.com/2026/06/17/deepl-acquires-mixhalo-for-live-event-audio-streaming-and-translation/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-17"
-    },
-    {
       "id": "techcrunch-pinterest-launches-an-experimental-ai-shopping-a-ca1ffebd7c89",
       "source": "TechCrunch AI",
       "title": "Pinterest launches an experimental AI shopping app called &#8216;Ask Pinterest&#8217;",
       "url": "https://techcrunch.com/2026/06/17/pinterest-launches-an-experimental-ai-shopping-app-called-ask-pinterest/",
       "summary": "",
       "importance": 4,
-      "date": "2026-06-17"
+      "date": "2026-06-17",
+      "analysis": {
+        "translated_title": "Pinterest запускает экспериментальное AI-приложение для покупок под названием 'Ask Pinterest'",
+        "agent_impact": "Запуск AI-агента для покупок демонстрирует практическое применение разговорного ИИ в e-commerce, где агенты выполняют задачи поиска и подбора товаров на основе естественного языка пользователя.",
+        "business_impact": "Pinterest выходит на рынок AI-commerce, усиливая конкуренцию между социальными платформами и специализированными маркетплейсами в сфере персонализированных покупок с помощью ИИ.",
+        "it_impact": "Эксперимент Pinterest с AI-шоппингом стимулирует развитие интеграции разговорных моделей в платформы электронной коммерции и создание новых архитектур для AI-агентов в ритейле.",
+        "summary": "Pinterest представил экспериментальное приложение 'Ask Pinterest' с AI-функциями для совершения покупок. Приложение позволяет пользователям искать и подбирать товары с помощью разговорного ИИ, интегрируя возможности AI-агентов в привычный пользовательский опыт Pinterest.",
+        "tags": [
+          "ai-shopping",
+          "e-commerce",
+          "conversational-ai"
+        ]
+      },
+      "analyzed_at": "2026-06-17T13:16:19.500530Z"
     }
   ],
   "published": [
+    {
+      "id": "techcrunch-deepl-acquires-mixhalo-for-live-event-audio-stre-3ee1e2948f78",
+      "source": "TechCrunch AI",
+      "title": "DeepL acquires Mixhalo for live-event audio streaming and translation",
+      "url": "https://techcrunch.com/2026/06/17/deepl-acquires-mixhalo-for-live-event-audio-streaming-and-translation/",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T13:41:28.453714Z",
+      "message_id": 266,
+      "analysis": {
+        "translated_title": "DeepL приобретает Mixhalo для аудио-стриминга и перевода в реальном времени на живых мероприятиях",
+        "agent_impact": "Приобретение расширяет возможности AI-агентов DeepL в области синхронного перевода, интегрируя технологии низколатентного аудио-стриминга Mixhalo для работы в реальном времени на живых событиях.",
+        "business_impact": "DeepL диверсифицирует бизнес за пределы текстового перевода, усиливая конкуренцию с Google Translate и открывая новый рынок B2B-решений для организаторов мероприятий.",
+        "it_impact": "Сделка стимулирует развитие edge-вычислений и инфраструктуры для low-latency аудиообработки с AI-переводом, требуя новых подходов к синхронизации и многоканальному стримингу.",
+        "summary": "Немецкий AI-переводчик DeepL приобрёл стартап Mixhalo, специализирующийся на аудио-стриминге и переводе в реальном времени для концертов и конференций. Технологии Mixhalo обеспечивают низкую задержку и многоканальную доставку звука, что позволит DeepL выйти на рынок синхронного перевода на живых мероприятиях.",
+        "tags": [
+          "real-time-translation",
+          "deepl",
+          "live-events",
+          "audio-streaming",
+          "ai-acquisition"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-canadian-pension-giant-joins-race-to-fund-indias-23dab7c5dbcf",
+      "source": "TechCrunch AI",
+      "title": "Canadian pension giant joins race to fund India&#8217;s AI-fueled data center boom",
+      "url": "https://techcrunch.com/2026/06/17/canadian-pension-giant-joins-race-to-fund-indias-ai-fueled-data-center-boom/",
+      "date": "2026-06-17",
+      "published_at": "2026-06-17T13:41:06.775103Z",
+      "message_id": 264,
+      "analysis": {
+        "translated_title": "Канадский пенсионный гигант присоединяется к гонке за финансирование бума центров обработки данных в Индии на базе AI",
+        "agent_impact": "Масштабные инвестиции в индийские дата-центры создадут вычислительную базу для обучения и развёртывания AI-агентов, расширяя доступные мощности для автономных систем.",
+        "business_impact": "Приток капитала от пенсионного фонда усиливает конкуренцию между глобальными инвесторами за долю на быстрорастущем рынке AI-инфраструктуры Индии.",
+        "it_impact": "Активное строительство дата-центров в Индии стимулирует развитие облачной инфраструктуры, энергетики и сетевых технологий в регионе.",
+        "summary": "Канадский пенсионный гигант стал участником гонки за инвестиции в индийский сектор центров обработки данных, переживающий бурный рост благодаря спросу на AI-технологии. Это отражает растущий интерес международных инвесторов к индийской AI-инфраструктуре как перспективному направлению для вложений.",
+        "tags": [
+          "data-centers",
+          "ai-infrastructure",
+          "india"
+        ]
+      }
+    },
     {
       "id": "huggingface-strands-lerobot-hub-to-hardware",
       "source": "HuggingFace",
