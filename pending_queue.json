@@ -33,54 +33,6 @@
   ],
   "pending": [
     {
-      "id": "techcrunch-almost-half-of-u-s-singles-feel-negatively-about-0a368702d056",
-      "source": "TechCrunch AI",
-      "title": "Almost half of U.S. singles feel negatively about AI in dating, Match says",
-      "url": "https://techcrunch.com/2026/06/18/almost-half-of-u-s-singles-feel-negatively-about-ai-in-dating-match-says/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-18",
-      "analysis": {
-        "translated_title": "Почти половина одиноких людей в США негативно относятся к ИИ в дейтинге, говорит Match",
-        "agent_impact": "Разработка AI-агентов для дейтинга (матчмейкинг-боты, AI-ассистенты) может замедлиться из-за негативного восприятия пользователями, что требует пересмотра подхода к интеграции агентов в личные отношения.",
-        "business_impact": "Dating-индустрия, особенно Match Group, сталкивается с риском оттока пользователей и снижения вовлечённости, если не решит проблему доверия к AI-технологиям в чувствительной сфере знакомств.",
-        "it_impact": "Высокий уровень скептицизма пользователей подчёркивает необходимость повышения прозрачности AI-систем, улучшения explainability и внедрения строгих стандартов конфиденциальности в потребительских приложениях.",
-        "summary": "Согласно исследованию Match Group, почти 50% одиноких людей в США выражают негативное отношение к использованию искусственного интеллекта в приложениях для знакомств. Основные опасения связаны с приватностью, манипуляциями и недоверием к автоматизированным системам подбора партнёров. Результаты ставят под вопрос дальнейшее активное внедрение AI в дейтинговые платформы.",
-        "tags": [
-          "ai-dating",
-          "user-trust",
-          "match-group",
-          "consumer-ai",
-          "dating-apps"
-        ]
-      },
-      "analyzed_at": "2026-06-18T19:21:42.518355Z"
-    },
-    {
-      "id": "techcrunch-amazon-hopes-to-challenge-nvidia-more-directly-b-5748f9c6e6a8",
-      "source": "TechCrunch AI",
-      "title": "Amazon hopes to challenge Nvidia more directly by selling its AI chips",
-      "url": "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-18",
-      "analysis": {
-        "translated_title": "Amazon надеется бросить вызов Nvidia напрямую, продавая свои AI-чипы",
-        "agent_impact": "Доступность чипов Amazon (Trainium, Inferentia) напрямую расширит выбор hardware для AI-агентов, потенциально снижая затраты на inference и training для разработчиков автономных систем.",
-        "business_impact": "Прямые продажи чипов создадут новую конкуренцию Nvidia на рынке AI hardware, что может привести к снижению цен и изменению стратегий закупок у облачных провайдеров и корпораций.",
-        "it_impact": "Стратегический сдвиг Amazon в дистрибуции чипов потребует от IT-компаний переоценки инфраструктурных решений и стимулирует дальнейшее развитие альтернативных AI-ускорителей.",
-        "summary": "Amazon объявила о планах продавать свои AI-чипы Trainium и Inferentia напрямую клиентам, а не только через AWS. Это изменение в дистрибуционной стратегии направлено на усиление конкуренции с доминирующей Nvidia на рынке AI hardware. Компания стремится расширить присутствие в сегменте AI-ускорителей и предложить альтернативу американскому гиганту.",
-        "tags": [
-          "ai-chips",
-          "amazon-trainium",
-          "nvidia-competition",
-          "cloud-infrastructure",
-          "hardware-market"
-        ]
-      },
-      "analyzed_at": "2026-06-18T19:22:01.588577Z"
-    },
-    {
       "id": "techcrunch-ai-data-centers-just-got-a-government-mandated-f-f9dbd01a64e0",
       "source": "TechCrunch AI",
       "title": "AI data centers just got a government-mandated fast lane to the grid",
@@ -126,6 +78,52 @@
     }
   ],
   "published": [
+    {
+      "id": "techcrunch-amazon-hopes-to-challenge-nvidia-more-directly-b-5748f9c6e6a8",
+      "source": "TechCrunch AI",
+      "title": "Amazon hopes to challenge Nvidia more directly by selling its AI chips",
+      "url": "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/",
+      "date": "2026-06-18",
+      "published_at": "2026-06-18T19:50:51.139572Z",
+      "message_id": 322,
+      "analysis": {
+        "translated_title": "Amazon надеется бросить вызов Nvidia напрямую, продавая свои AI-чипы",
+        "agent_impact": "Доступность чипов Amazon (Trainium, Inferentia) напрямую расширит выбор hardware для AI-агентов, потенциально снижая затраты на inference и training для разработчиков автономных систем.",
+        "business_impact": "Прямые продажи чипов создадут новую конкуренцию Nvidia на рынке AI hardware, что может привести к снижению цен и изменению стратегий закупок у облачных провайдеров и корпораций.",
+        "it_impact": "Стратегический сдвиг Amazon в дистрибуции чипов потребует от IT-компаний переоценки инфраструктурных решений и стимулирует дальнейшее развитие альтернативных AI-ускорителей.",
+        "summary": "Amazon объявила о планах продавать свои AI-чипы Trainium и Inferentia напрямую клиентам, а не только через AWS. Это изменение в дистрибуционной стратегии направлено на усиление конкуренции с доминирующей Nvidia на рынке AI hardware. Компания стремится расширить присутствие в сегменте AI-ускорителей и предложить альтернативу американскому гиганту.",
+        "tags": [
+          "ai-chips",
+          "amazon-trainium",
+          "nvidia-competition",
+          "cloud-infrastructure",
+          "hardware-market"
+        ]
+      }
+    },
+    {
+      "id": "techcrunch-almost-half-of-u-s-singles-feel-negatively-about-0a368702d056",
+      "source": "TechCrunch AI",
+      "title": "Almost half of U.S. singles feel negatively about AI in dating, Match says",
+      "url": "https://techcrunch.com/2026/06/18/almost-half-of-u-s-singles-feel-negatively-about-ai-in-dating-match-says/",
+      "date": "2026-06-18",
+      "published_at": "2026-06-18T19:50:29.562627Z",
+      "message_id": 320,
+      "analysis": {
+        "translated_title": "Почти половина одиноких людей в США негативно относятся к ИИ в дейтинге, говорит Match",
+        "agent_impact": "Разработка AI-агентов для дейтинга (матчмейкинг-боты, AI-ассистенты) может замедлиться из-за негативного восприятия пользователями, что требует пересмотра подхода к интеграции агентов в личные отношения.",
+        "business_impact": "Dating-индустрия, особенно Match Group, сталкивается с риском оттока пользователей и снижения вовлечённости, если не решит проблему доверия к AI-технологиям в чувствительной сфере знакомств.",
+        "it_impact": "Высокий уровень скептицизма пользователей подчёркивает необходимость повышения прозрачности AI-систем, улучшения explainability и внедрения строгих стандартов конфиденциальности в потребительских приложениях.",
+        "summary": "Согласно исследованию Match Group, почти 50% одиноких людей в США выражают негативное отношение к использованию искусственного интеллекта в приложениях для знакомств. Основные опасения связаны с приватностью, манипуляциями и недоверием к автоматизированным системам подбора партнёров. Результаты ставят под вопрос дальнейшее активное внедрение AI в дейтинговые платформы.",
+        "tags": [
+          "ai-dating",
+          "user-trust",
+          "match-group",
+          "consumer-ai",
+          "dating-apps"
+        ]
+      }
+    },
     {
       "id": "huggingface-mosaicleaks",
       "source": "HuggingFace",
