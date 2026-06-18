@@ -3,35 +3,168 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-17T19:04:34.131778Z",
+      "last_checked": "2026-06-18T05:28:55.427463Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-17T19:04:34.131778Z",
+      "last_checked": "2026-06-18T05:28:55.427463Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-17T19:04:34.131778Z",
+      "last_checked": "2026-06-18T05:28:55.427463Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-17T19:04:34.131778Z",
+      "last_checked": "2026-06-18T05:28:55.427463Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-17T19:04:34.131778Z",
+      "last_checked": "2026-06-18T05:28:55.427463Z",
       "last_published_id": null
     }
   ],
-  "pending": [],
+  "pending": [
+    {
+      "id": "openai-introducing-life-sci-bench",
+      "source": "OpenAI",
+      "title": "Introducing LifeSciBench",
+      "url": "https://openai.com/index/introducing-life-sci-bench",
+      "summary": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
+      "importance": 4,
+      "date": "2026-06-17",
+      "analysis": {
+        "translated_title": "Представляем LifeSciBench",
+        "agent_impact": "LifeSciBench предоставляет стандартизированную оценку способностей AI-агентов в решении реальных задач биологии и медицины, что позволяет разработчикам точнее измерять прогресс и выявлять слабые места в научном мышлении агентов.",
+        "business_impact": "Фармацевтические и биотехнологические компании получают объективный инструмент для сравнения AI-решений, что усилит конкуренцию и ускорит внедрение ИИ в R&D процессы.",
+        "it_impact": "Бенчмарк устанавливает новый стандарт для оценки AI-систем в наукоёмких доменах, стимулируя развитие специализированных фреймворков тестирования.",
+        "summary": "OpenAI представила LifeSciBench — экспертный бенчмарк для оценки AI-систем в решении практических задач биологических и медицинских исследований. Набор данных создан и проверен профильными специалистами, что обеспечивает валидность для реальных научных сценариев.",
+        "tags": [
+          "lifescibench",
+          "ai-benchmark",
+          "scientific-ai"
+        ]
+      },
+      "analyzed_at": "2026-06-18T05:45:23.098974Z"
+    },
+    {
+      "id": "techcrunch-how-to-turn-off-ai-in-your-google-docs",
+      "source": "TechCrunch AI",
+      "title": "How to turn off AI in your Google Docs",
+      "url": "https://techcrunch.com/2026/06/17/how-to-turn-off-ai-in-your-google-docs/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-18",
+      "analysis": {
+        "translated_title": "Как отключить ИИ в Google Docs",
+        "agent_impact": "Статья подчёркивает важность контроля над AI-функциями в потребительских продуктах, что влияет на проектирование AI-агентов, которые должны учитывать опциональность интеграции.",
+        "business_impact": "Для бизнеса важна возможность отключения ИИ в корпоративных инструментах из-за требований конфиденциальности данных, compliance и контроля затрат на AI-сервисы.",
+        "it_impact": "IT-специалистам необходимо знать механизмы управления AI-функциями в Google Workspace для настройки политик на уровне организации.",
+        "summary": "Статья представляет практическое руководство по отключению AI-функций в Google Docs. Рассматриваются настройки конфиденциальности и опции контроля ИИ на уровне документа и аккаунта. Материал актуален для пользователей, обеспокоенных использованием их данных в AI-моделях Google.",
+        "tags": [
+          "google-docs",
+          "ai-settings",
+          "productivity-tools"
+        ]
+      },
+      "analyzed_at": "2026-06-18T05:45:42.612238Z"
+    },
+    {
+      "id": "techcrunch-roelof-botha-joins-spacexs-board-of-directors",
+      "source": "TechCrunch AI",
+      "title": "Roelof Botha joins SpaceX&#8217;s board of directors",
+      "url": "https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-17",
+      "analysis": {
+        "translated_title": "Рулеф Ботха присоединяется к совету директоров SpaceX",
+        "agent_impact": "Рулеф Ботха через Sequoia Capital инвестировал в множество AI-стартапов; его роль в совете SpaceX может ускорить интеграцию космических технологий с AI-агентами для сбора и обработки данных из космоса.",
+        "business_impact": "Приход влиятельного венчурного капиталиста в SpaceX укрепляет связь между Кремниевой долиной и космической индустрией, открывая новые инвестиционные горизонты для портфельных компаний Sequoia.",
+        "it_impact": "Сделка демонстрирует сближение IT-гигантов с аэрокосмическим сектором, что стимулирует развитие инфраструктуры для облачных вычислений и спутниковой связи.",
+        "summary": "Рулеф Ботха, партнёр Sequoia Capital и бывший исполнительный директор PayPal, известный своими инвестициями в YouTube, Instagram, Stripe и Airbnb, вошёл в совет директоров SpaceX. Это назначение объединяет одного из самых влиятельных венчурных капиталистов Кремниевой долины с ведущей частной космической компанией, что может способствовать укреплению позиций SpaceX на пересечении космических и технологических рынков.",
+        "tags": [
+          "spacex",
+          "venture-capital",
+          "sequoia-capital"
+        ]
+      },
+      "analyzed_at": "2026-06-18T05:46:07.756650Z"
+    },
+    {
+      "id": "techcrunch-after-unveiling-ridiculously-expensive-ar-glasse-358e207ac3c7",
+      "source": "TechCrunch AI",
+      "title": "After unveiling ridiculously expensive AR glasses, Snap&#8217;s stock takes a dive",
+      "url": "https://techcrunch.com/2026/06/17/after-unveiling-ridiculously-expensive-ar-glasses-snaps-stock-takes-a-dive/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-17",
+      "analysis": {
+        "translated_title": "После презентации невероятно дорогих AR-очков акции Snap падают",
+        "agent_impact": "AR-очки Snap представляют собой попытку создать аппаратную платформу для AI-агентов в дополненной реальности, однако высокая цена ограничивает массовое внедрение и тестирование агентов в реальных условиях.",
+        "business_impact": "Реакция рынка показывает, что инвесторы скептически оценивают стратегию Snap в области hardware, а запредельная стоимость устройства может подорвать доверие к компании как к участнику рынка AR.",
+        "it_impact": "Неудачный запуск дорогих AR-очков создаёт прецедент для IT-индустрии, демонстрируя риски вывода на рынок hardware-решений без чёткой ценовой стратегии и массового спроса.",
+        "summary": "Компания Snap представила новые AR-очки по чрезвычайно высокой цене, что вызвало резкое падение стоимости её акций. Инвесторы и аналитики восприняли продукт как оторванный от рыночных реалий, а презентация усилила сомнения в способности Snap конкурировать в сегменте дополненной реальности.",
+        "tags": [
+          "snap",
+          "ar-glasses",
+          "stock-market"
+        ]
+      },
+      "analyzed_at": "2026-06-18T05:46:35.828618Z"
+    },
+    {
+      "id": "techcrunch-neas-tiffany-luck-says-enterprises-are-still-fig-3d1666c95475",
+      "source": "TechCrunch AI",
+      "title": "NEA’s Tiffany Luck says enterprises are still figuring out their AI ROI",
+      "url": "https://techcrunch.com/video/neas-tiffany-luck-says-enterprises-are-still-figuring-out-their-ai-roi/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-17",
+      "analysis": {
+        "translated_title": "Tiffany Luck из NEA говорит, что компании всё ещё определяют свой ROI от AI",
+        "agent_impact": "Отсутствие чётких метрик ROI замедляет внедрение AI-агентов в корпоративном секторе, так как инвесторы и руководители требуют доказательств эффективности перед масштабированием автономных систем",
+        "business_impact": "Венчурные инвесторы, включая NEA, ожидают от компаний чётких financial metrics для AI-проектов, что вынуждает бизнес пересмотреть подходы к измерению эффективности искусственного интеллекта",
+        "it_impact": "IT-департаменты сталкиваются с необходимостью создания новых фреймворков оценки эффективности AI-решений и систем мониторинга производительности агентов",
+        "summary": "Tiffany Luck, партнёр венчурной компании NEA, заявила, что большинство предприятий до сих пор не понимают, как корректно измерить возврат инвестиций от внедрения AI. По её словам, компании продолжают экспериментировать с технологиями, но не могут точно определить финансовую отдачу. Это создаёт неопределённость для инвесторов и замедляет принятие решений о масштабных инвестициях в AI.",
+        "tags": [
+          "enterprise ai",
+          "roi measurement",
+          "venture capital"
+        ]
+      },
+      "analyzed_at": "2026-06-18T05:46:53.243063Z"
+    },
+    {
+      "id": "techcrunch-neas-tiffany-luck-on-ai-ipos-personal-agents-and-69f241dbd025",
+      "source": "TechCrunch AI",
+      "title": "NEA&#8217;s Tiffany Luck on AI IPOs, personal agents, and the ROI reckoning",
+      "url": "https://techcrunch.com/podcast/neas-tiffany-luck-on-ai-ipos-personal-agents-and-the-roi-reckoning/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-17",
+      "analysis": {
+        "translated_title": "Тiffany Luck из NEA об IPO в сфере AI, персональных агентах и оценке ROI",
+        "agent_impact": "Обсуждение персональных AI-агентов подчёркивает тренд на создание индивидуальных ассистентов, которые требуют новых подходов к архитектуре и безопасности автономных систем.",
+        "business_impact": "Аналитик NEA указывает на необходимость переоценки ROI AI-проектов и готовности рынка к IPO AI-компаний, что повлияет на стратегии привлечения инвестиций и оценку стартапов.",
+        "it_impact": "Статья затрагивает вопросы масштабируемости AI-инфраструктуры и требований к вычислениям, необходимым для работы персональных агентов в производственной среде.",
+        "summary": "Партнёр венчурной компании NEA Tiffany Luck обсуждает текущее состояние рынка AI-инвестиций, отмечая необходимость пересмотра метрик возврата инвестиций. Особое внимание уделяется персональным AI-агентам как новому направлению развития, а также готовности AI-компаний к выходу на IPO.",
+        "tags": [
+          "ai-agents",
+          "venture-capital",
+          "ipo"
+        ]
+      },
+      "analyzed_at": "2026-06-18T05:47:20.169653Z"
+    }
+  ],
   "published": [
     {
       "id": "techcrunch-world-model-maker-odyssey-nabs-1-45b-valuation-b-d84f6e5d3df2",
