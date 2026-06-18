@@ -31,39 +31,16 @@
       "last_published_id": null
     }
   ],
-  "pending": [
-    {
-      "id": "techcrunch-general-intuition-in-talks-to-raise-300m-at-arou-173a807b4674",
-      "source": "TechCrunch AI",
-      "title": "General Intuition in talks to raise $300M at around $2B valuation",
-      "url": "https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-18",
-      "analysis": {
-        "translated_title": "General Intuition ведёт переговоры о привлечении $300 млн при оценке около $2 млрд",
-        "agent_impact": "Успешное привлечение средств позволит компании ускорить разработку автономных AI-агентов и расширить их возможности, что усилит конкуренцию в сегменте интеллектуальных ассистентов и автономных систем.",
-        "business_impact": "Оценка в $2 млрд свидетельствует о готовности инвесторов вкладывать сотни миллионов в AI-стартапы нового поколения, формируя новый виток гонки за лидерство в области генеративного и агентного AI.",
-        "it_impact": "Крупные инвестиции в General Intuition стимулируют развитие инфраструктуры для AI-агентов, включая фреймворки оркестрации, инструменты автономного принятия решений и безопасного выполнения задач.",
-        "summary": "Стартап General Intuition, специализирующийся на AI-агентах и автономных системах, находится на финальной стадии переговоров о раунде финансирования на сумму $300 млн, что оценивает компанию примерно в $2 млрд. Раунд отражает продолжающийся высокий интерес венчурных инвесторов к проектам в области искусственного интеллекта, несмотря на общую коррекцию рынка.",
-        "tags": [
-          "ai-agents",
-          "funding-round",
-          "venture-capital",
-          "autonomous-ai",
-          "startup"
-        ]
-      },
-      "analyzed_at": "2026-06-18T17:21:07.030663Z"
-    },
+  "pending": [],
+  "published": [
     {
       "id": "techcrunch-a-tech-worker-backed-pac-is-bringing-a-5m-knife--b63806a8cf1a",
       "source": "TechCrunch AI",
       "title": "A tech worker-backed PAC is bringing a $5M knife to Big Tech’s $100M gunfight",
       "url": "https://techcrunch.com/2026/06/18/a-tech-worker-backed-pac-is-bringing-a-5m-knife-to-big-techs-100m-gunfight/",
-      "summary": "",
-      "importance": 4,
       "date": "2026-06-18",
+      "published_at": "2026-06-18T17:50:40.500052Z",
+      "message_id": 315,
       "analysis": {
         "translated_title": "PAC при поддержке IT-работников приносит $5M нож в $100M перестрелку Big Tech",
         "agent_impact": "Формирование PAC работниками технологической отрасли может привести к усилению регуляторного давления на AI-агентов, включая вопросы ответственности, прозрачности и ограничений автономных систем.",
@@ -77,11 +54,31 @@
           "tech-workers",
           "ai-regulation"
         ]
-      },
-      "analyzed_at": "2026-06-18T17:21:38.346613Z"
-    }
-  ],
-  "published": [
+      }
+    },
+    {
+      "id": "techcrunch-general-intuition-in-talks-to-raise-300m-at-arou-173a807b4674",
+      "source": "TechCrunch AI",
+      "title": "General Intuition in talks to raise $300M at around $2B valuation",
+      "url": "https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/",
+      "date": "2026-06-18",
+      "published_at": "2026-06-18T17:50:36.841376Z",
+      "message_id": 314,
+      "analysis": {
+        "translated_title": "General Intuition ведёт переговоры о привлечении $300 млн при оценке около $2 млрд",
+        "agent_impact": "Успешное привлечение средств позволит компании ускорить разработку автономных AI-агентов и расширить их возможности, что усилит конкуренцию в сегменте интеллектуальных ассистентов и автономных систем.",
+        "business_impact": "Оценка в $2 млрд свидетельствует о готовности инвесторов вкладывать сотни миллионов в AI-стартапы нового поколения, формируя новый виток гонки за лидерство в области генеративного и агентного AI.",
+        "it_impact": "Крупные инвестиции в General Intuition стимулируют развитие инфраструктуры для AI-агентов, включая фреймворки оркестрации, инструменты автономного принятия решений и безопасного выполнения задач.",
+        "summary": "Стартап General Intuition, специализирующийся на AI-агентах и автономных системах, находится на финальной стадии переговоров о раунде финансирования на сумму $300 млн, что оценивает компанию примерно в $2 млрд. Раунд отражает продолжающийся высокий интерес венчурных инвесторов к проектам в области искусственного интеллекта, несмотря на общую коррекцию рынка.",
+        "tags": [
+          "ai-agents",
+          "funding-round",
+          "venture-capital",
+          "autonomous-ai",
+          "startup"
+        ]
+      }
+    },
     {
       "id": "techcrunch-queer-eyes-life-coach-karamo-brown-launches-ke-a-4dc1580b6ce7",
       "source": "TechCrunch AI",
