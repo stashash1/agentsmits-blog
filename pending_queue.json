@@ -3,35 +3,90 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-18T17:04:30.170434Z",
+      "last_checked": "2026-06-18T19:04:40.931340Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-18T17:04:30.170434Z",
+      "last_checked": "2026-06-18T19:04:40.931340Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-18T17:04:30.170434Z",
+      "last_checked": "2026-06-18T19:04:40.931340Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-18T17:04:30.170434Z",
+      "last_checked": "2026-06-18T19:04:40.931340Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-18T17:04:30.170434Z",
+      "last_checked": "2026-06-18T19:04:40.931340Z",
       "last_published_id": null
     }
   ],
-  "pending": [],
+  "pending": [
+    {
+      "id": "openai-improving-health-intelligence-in-chatgpt",
+      "source": "OpenAI",
+      "title": "Improving health intelligence in ChatGPT",
+      "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
+      "summary": "Learn how GPT-5.5 Instant improves ChatGPT’s health and wellness responses with stronger reasoning, better context, clearer communication, and physician-informed evaluations.",
+      "importance": 4,
+      "date": "2026-06-18"
+    },
+    {
+      "id": "huggingface-mosaicleaks",
+      "source": "HuggingFace",
+      "title": "MosaicLeaks: Can your research agent keep a secret?",
+      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "summary": null,
+      "importance": 4,
+      "date": "2026-06-18"
+    },
+    {
+      "id": "techcrunch-almost-half-of-u-s-singles-feel-negatively-about-0a368702d056",
+      "source": "TechCrunch AI",
+      "title": "Almost half of U.S. singles feel negatively about AI in dating, Match says",
+      "url": "https://techcrunch.com/2026/06/18/almost-half-of-u-s-singles-feel-negatively-about-ai-in-dating-match-says/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-18"
+    },
+    {
+      "id": "techcrunch-amazon-hopes-to-challenge-nvidia-more-directly-b-5748f9c6e6a8",
+      "source": "TechCrunch AI",
+      "title": "Amazon hopes to challenge Nvidia more directly by selling its AI chips",
+      "url": "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-18"
+    },
+    {
+      "id": "techcrunch-ai-data-centers-just-got-a-government-mandated-f-f9dbd01a64e0",
+      "source": "TechCrunch AI",
+      "title": "AI data centers just got a government-mandated fast lane to the grid",
+      "url": "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-18"
+    },
+    {
+      "id": "techcrunch-the-smartphone-era-created-an-attention-crisis-s-66eed0f78485",
+      "source": "TechCrunch AI",
+      "title": "The smartphone era created an attention crisis. Slowtech is fixing it",
+      "url": "https://techcrunch.com/2026/06/18/the-smartphone-era-created-an-attention-crisis-slowtech-is-fixing-it/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-18"
+    }
+  ],
   "published": [
     {
       "id": "techcrunch-a-tech-worker-backed-pac-is-bringing-a-5m-knife--b63806a8cf1a",
