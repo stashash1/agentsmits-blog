@@ -55,35 +55,37 @@
       "analyzed_at": "2026-06-18T05:45:42.612238Z"
     },
     {
-      "id": "techcrunch-neas-tiffany-luck-says-enterprises-are-still-fig-3d1666c95475",
-      "source": "TechCrunch AI",
-      "title": "NEA’s Tiffany Luck says enterprises are still figuring out their AI ROI",
-      "url": "https://techcrunch.com/video/neas-tiffany-luck-says-enterprises-are-still-figuring-out-their-ai-roi/",
-      "summary": "",
+      "id": "openai-introducing-life-sci-bench",
+      "source": "OpenAI",
+      "title": "Introducing LifeSciBench",
+      "url": "https://openai.com/index/introducing-life-sci-bench",
+      "summary": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
       "importance": 4,
       "date": "2026-06-17",
       "analysis": {
-        "translated_title": "Tiffany Luck из NEA говорит, что компании всё ещё определяют свой ROI от AI",
-        "agent_impact": "Отсутствие чётких метрик ROI замедляет внедрение AI-агентов в корпоративном секторе, так как инвесторы и руководители требуют доказательств эффективности перед масштабированием автономных систем",
-        "business_impact": "Венчурные инвесторы, включая NEA, ожидают от компаний чётких financial metrics для AI-проектов, что вынуждает бизнес пересмотреть подходы к измерению эффективности искусственного интеллекта",
-        "it_impact": "IT-департаменты сталкиваются с необходимостью создания новых фреймворков оценки эффективности AI-решений и систем мониторинга производительности агентов",
-        "summary": "Tiffany Luck, партнёр венчурной компании NEA, заявила, что большинство предприятий до сих пор не понимают, как корректно измерить возврат инвестиций от внедрения AI. По её словам, компании продолжают экспериментировать с технологиями, но не могут точно определить финансовую отдачу. Это создаёт неопределённость для инвесторов и замедляет принятие решений о масштабных инвестициях в AI.",
+        "translated_title": "Представляем LifeSciBench — бенчмарк для оценки AI в науках о жизни",
+        "agent_impact": "Новый бенчмарк позволит разработчикам AI-агентов объективно оценивать их способность решать задачи в биомедицинской и исследовательской областях, стимулируя создание более специализированных агентов для научных исследований.",
+        "business_impact": "Фармацевтические компании, биотех-стартапы и исследовательские институты смогут использовать LifeSciBench для оценки AI-решений перед внедрением, что усилит конкуренцию в сегменте AI для здравоохранения.",
+        "it_impact": "Бенчмарк устанавливает новый стандарт оценки AI-систем в специализированных предметных областях, что повлияет на методологию тестирования и развитие инструментов валидации AI.",
+        "summary": "OpenAI представила LifeSciBench — экспертный бенчмарк для оценки AI-систем в задачах наук о жизни. Набор данных создан и проверен профильными специалистами, охватывая реальные сценарии принятия решений в биологических и медицинских исследованиях. Инициатива направлена на улучшение надёжности AI в критически важных научных приложениях.",
         "tags": [
-          "enterprise ai",
-          "roi measurement",
-          "venture capital"
+          "lifescibench",
+          "ai-benchmark",
+          "biomedical-ai"
         ]
       },
-      "analyzed_at": "2026-06-18T05:46:53.243063Z"
-    },
+      "analyzed_at": "2026-06-18T07:15:34.445816Z"
+    }
+  ],
+  "published": [
     {
       "id": "techcrunch-neas-tiffany-luck-on-ai-ipos-personal-agents-and-69f241dbd025",
       "source": "TechCrunch AI",
       "title": "NEA&#8217;s Tiffany Luck on AI IPOs, personal agents, and the ROI reckoning",
       "url": "https://techcrunch.com/podcast/neas-tiffany-luck-on-ai-ipos-personal-agents-and-the-roi-reckoning/",
-      "summary": "",
-      "importance": 4,
       "date": "2026-06-17",
+      "published_at": "2026-06-18T08:05:32.530139Z",
+      "message_id": 300,
       "analysis": {
         "translated_title": "Тiffany Luck из NEA об IPO в сфере AI, персональных агентах и оценке ROI",
         "agent_impact": "Обсуждение персональных AI-агентов подчёркивает тренд на создание индивидуальных ассистентов, которые требуют новых подходов к архитектуре и безопасности автономных систем.",
@@ -95,20 +97,29 @@
           "venture-capital",
           "ipo"
         ]
-      },
-      "analyzed_at": "2026-06-18T05:47:20.169653Z"
+      }
     },
     {
-      "id": "openai-introducing-life-sci-bench",
-      "source": "OpenAI",
-      "title": "Introducing LifeSciBench",
-      "url": "https://openai.com/index/introducing-life-sci-bench",
-      "summary": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
-      "importance": 4,
-      "date": "2026-06-17"
-    }
-  ],
-  "published": [
+      "id": "techcrunch-neas-tiffany-luck-says-enterprises-are-still-fig-3d1666c95475",
+      "source": "TechCrunch AI",
+      "title": "NEA’s Tiffany Luck says enterprises are still figuring out their AI ROI",
+      "url": "https://techcrunch.com/video/neas-tiffany-luck-says-enterprises-are-still-figuring-out-their-ai-roi/",
+      "date": "2026-06-17",
+      "published_at": "2026-06-18T08:05:11.033245Z",
+      "message_id": 298,
+      "analysis": {
+        "translated_title": "Tiffany Luck из NEA говорит, что компании всё ещё определяют свой ROI от AI",
+        "agent_impact": "Отсутствие чётких метрик ROI замедляет внедрение AI-агентов в корпоративном секторе, так как инвесторы и руководители требуют доказательств эффективности перед масштабированием автономных систем",
+        "business_impact": "Венчурные инвесторы, включая NEA, ожидают от компаний чётких financial metrics для AI-проектов, что вынуждает бизнес пересмотреть подходы к измерению эффективности искусственного интеллекта",
+        "it_impact": "IT-департаменты сталкиваются с необходимостью создания новых фреймворков оценки эффективности AI-решений и систем мониторинга производительности агентов",
+        "summary": "Tiffany Luck, партнёр венчурной компании NEA, заявила, что большинство предприятий до сих пор не понимают, как корректно измерить возврат инвестиций от внедрения AI. По её словам, компании продолжают экспериментировать с технологиями, но не могут точно определить финансовую отдачу. Это создаёт неопределённость для инвесторов и замедляет принятие решений о масштабных инвестициях в AI.",
+        "tags": [
+          "enterprise ai",
+          "roi measurement",
+          "venture capital"
+        ]
+      }
+    },
     {
       "id": "techcrunch-after-unveiling-ridiculously-expensive-ar-glasse-358e207ac3c7",
       "source": "TechCrunch AI",
