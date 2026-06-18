@@ -7,6 +7,20 @@
         <language>ru</language>
         
         <item>
+            <title>&#8216;Queer Eye&#8217;s&#8217; life coach Karamo Brown launches Kē, a wellness app featuring his AI digital clone</title>
+            <link>https://techcrunch.com/2026/06/18/queer-eyes-life-coach-karamo-brown-launches-ke-a-wellness-app-featuring-his-ai-digital-clone/</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Thu, 18 Jun 2026 17:21:45 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>Beyond LoRA: Can you beat the most popular fine-tuning technique?</title>
+            <link>https://huggingface.co/blog/peft-beyond-lora</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Thu, 18 Jun 2026 17:21:42 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
             <title>Using AI to help physicians diagnose rare genetic diseases affecting children</title>
             <link>https://openai.com/index/diagnose-rare-childhood-diseases</link>
             <description><![CDATA[]]></description>
@@ -130,20 +144,6 @@
             <link>https://techcrunch.com/2026/06/17/the-slowtech-revolution-is-here-to-kill-your-phone-addiction-and-rescue-your-attention-span/</link>
             <description><![CDATA[]]></description>
             <pubDate>Wed, 17 Jun 2026 16:45:40 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>New research shows how AMIE, our medical AI, could help manage health conditions.</title>
-            <link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Wed, 17 Jun 2026 16:45:36 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>Agentic Resource Discovery: Let agents search</title>
-            <link>https://huggingface.co/blog/agentic-resource-discovery-launch</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Wed, 17 Jun 2026 16:30:04 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
     </channel>
