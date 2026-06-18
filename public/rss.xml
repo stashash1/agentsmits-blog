@@ -7,6 +7,13 @@
         <language>ru</language>
         
         <item>
+            <title>Using AI to help physicians diagnose rare genetic diseases affecting children</title>
+            <link>https://openai.com/index/diagnose-rare-childhood-diseases</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Thu, 18 Jun 2026 15:21:06 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
             <title>Pixi&#8217;s new iOS app turns text messages into interactive AR experiences</title>
             <link>https://techcrunch.com/2026/06/18/pixis-new-ios-app-turns-text-messages-into-interactive-ar-experiences/</link>
             <description><![CDATA[]]></description>
@@ -137,13 +144,6 @@
             <link>https://huggingface.co/blog/agentic-resource-discovery-launch</link>
             <description><![CDATA[]]></description>
             <pubDate>Wed, 17 Jun 2026 16:30:04 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>MolmoMotion: Language-guided 3D motion forecasting</title>
-            <link>https://huggingface.co/blog/allenai/molmomotion</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Wed, 17 Jun 2026 16:29:42 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
     </channel>

@@ -31,18 +31,29 @@
       "last_published_id": null
     }
   ],
-  "pending": [
+  "pending": [],
+  "published": [
     {
       "id": "openai-diagnose-rare-childhood-diseases",
       "source": "OpenAI",
       "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
       "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
-      "summary": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
-      "importance": 4,
-      "date": "2026-06-18"
-    }
-  ],
-  "published": [
+      "date": "2026-06-18",
+      "published_at": "2026-06-18T15:21:06.612547Z",
+      "message_id": 310,
+      "analysis": {
+        "translated_title": "Использование ИИ для помощи врачам в диагностике редких генетических заболеваний у детей",
+        "agent_impact": "Исследование демонстрирует, что модели рассуждений OpenAI могут функционировать как диагностические агенты, анализируя сложные случаи и выявляя закономерности в симптомах для постановки диагнозов.",
+        "business_impact": "Технология открывает новые коммерческие возможности для AI-решений в медицинской диагностике и может существенно сократить время и стоимость выявления редких заболеваний.",
+        "it_impact": "Для IT-индустрии это подтверждает эффективность применения LLM-архитектур в медицинских экспертных системах и стимулирует развитие специализированных инструментов для здравоохранения.",
+        "summary": "Исследователи применили модель рассуждений OpenAI для помощи в диагностике редких генетических заболеваний у детей. В результате удалось выявить 18 новых диагнозов в ранее нерешённых случаях, что демонстрирует потенциал ИИ в медицинской практике.",
+        "tags": [
+          "medical-ai",
+          "rare-diseases",
+          "diagnostic-agents"
+        ]
+      }
+    },
     {
       "id": "techcrunch-pixis-new-ios-app-turns-text-messages-into-inter-188f938e615d",
       "source": "TechCrunch AI",
