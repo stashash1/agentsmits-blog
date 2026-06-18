@@ -33,28 +33,6 @@
   ],
   "pending": [
     {
-      "id": "openai-introducing-life-sci-bench",
-      "source": "OpenAI",
-      "title": "Introducing LifeSciBench",
-      "url": "https://openai.com/index/introducing-life-sci-bench",
-      "summary": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
-      "importance": 4,
-      "date": "2026-06-17",
-      "analysis": {
-        "translated_title": "Представляем LifeSciBench",
-        "agent_impact": "LifeSciBench предоставляет стандартизированную оценку способностей AI-агентов в решении реальных задач биологии и медицины, что позволяет разработчикам точнее измерять прогресс и выявлять слабые места в научном мышлении агентов.",
-        "business_impact": "Фармацевтические и биотехнологические компании получают объективный инструмент для сравнения AI-решений, что усилит конкуренцию и ускорит внедрение ИИ в R&D процессы.",
-        "it_impact": "Бенчмарк устанавливает новый стандарт для оценки AI-систем в наукоёмких доменах, стимулируя развитие специализированных фреймворков тестирования.",
-        "summary": "OpenAI представила LifeSciBench — экспертный бенчмарк для оценки AI-систем в решении практических задач биологических и медицинских исследований. Набор данных создан и проверен профильными специалистами, что обеспечивает валидность для реальных научных сценариев.",
-        "tags": [
-          "lifescibench",
-          "ai-benchmark",
-          "scientific-ai"
-        ]
-      },
-      "analyzed_at": "2026-06-18T05:45:23.098974Z"
-    },
-    {
       "id": "techcrunch-how-to-turn-off-ai-in-your-google-docs",
       "source": "TechCrunch AI",
       "title": "How to turn off AI in your Google Docs",

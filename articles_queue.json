@@ -1,4 +1,20 @@
 {
-  "articles": [],
+  "articles": [
+    {
+      "id": "openai-introducing-life-sci-bench",
+      "source": "OpenAI",
+      "title": "Представляем LifeSciBench",
+      "url": "https://openai.com/index/introducing-life-sci-bench",
+      "date": "17 июня 2026",
+      "content": "📝 OpenAI представила LifeSciBench — экспертный бенчмарк для оценки AI-систем в решении практических задач биологических и медицинских исследований. Набор данных создан и проверен профильными специалистами, что обеспечивает валидность для реальных научных сценариев.\n\n🤖 <b>Agent Impact:</b> LifeSciBench предоставляет стандартизированную оценку способностей AI-агентов в решении реальных задач биологии и медицины, что позволяет разработчикам точнее измерять прогресс и выявлять слабые места...\n\n💼 <b>Business Impact:</b> Фармацевтические и биотехнологические компании получают объективный инструмент для сравнения AI-решений, что усилит конкуренцию и ускорит внедрение ИИ в R&D процессы....\n\n💻 <b>IT Impact:</b> Бенчмарк устанавливает новый стандарт для оценки AI-систем в наукоёмких доменах, стимулируя развитие специализированных фреймворков тестирования....\n\n📎 Источник: OpenAI",
+      "type": "article",
+      "status": "published",
+      "importance": 4,
+      "added_at": "2026-06-18T06:15:57.598496+00:00",
+      "original_summary": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
+      "published_at": "2026-06-18T06:16:07.223454+00:00",
+      "message_id": 293
+    }
+  ],
   "version": 1
 }
