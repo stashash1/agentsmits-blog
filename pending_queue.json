@@ -33,31 +33,28 @@
   ],
   "pending": [
     {
-      "id": "openai-improving-health-intelligence-in-chatgpt",
-      "source": "OpenAI",
-      "title": "Improving health intelligence in ChatGPT",
-      "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
-      "summary": "Learn how GPT-5.5 Instant improves ChatGPT’s health and wellness responses with stronger reasoning, better context, clearer communication, and physician-informed evaluations.",
-      "importance": 4,
-      "date": "2026-06-18"
-    },
-    {
-      "id": "huggingface-mosaicleaks",
-      "source": "HuggingFace",
-      "title": "MosaicLeaks: Can your research agent keep a secret?",
-      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
-      "summary": null,
-      "importance": 4,
-      "date": "2026-06-18"
-    },
-    {
       "id": "techcrunch-almost-half-of-u-s-singles-feel-negatively-about-0a368702d056",
       "source": "TechCrunch AI",
       "title": "Almost half of U.S. singles feel negatively about AI in dating, Match says",
       "url": "https://techcrunch.com/2026/06/18/almost-half-of-u-s-singles-feel-negatively-about-ai-in-dating-match-says/",
       "summary": "",
       "importance": 4,
-      "date": "2026-06-18"
+      "date": "2026-06-18",
+      "analysis": {
+        "translated_title": "Почти половина одиноких людей в США негативно относятся к ИИ в дейтинге, говорит Match",
+        "agent_impact": "Разработка AI-агентов для дейтинга (матчмейкинг-боты, AI-ассистенты) может замедлиться из-за негативного восприятия пользователями, что требует пересмотра подхода к интеграции агентов в личные отношения.",
+        "business_impact": "Dating-индустрия, особенно Match Group, сталкивается с риском оттока пользователей и снижения вовлечённости, если не решит проблему доверия к AI-технологиям в чувствительной сфере знакомств.",
+        "it_impact": "Высокий уровень скептицизма пользователей подчёркивает необходимость повышения прозрачности AI-систем, улучшения explainability и внедрения строгих стандартов конфиденциальности в потребительских приложениях.",
+        "summary": "Согласно исследованию Match Group, почти 50% одиноких людей в США выражают негативное отношение к использованию искусственного интеллекта в приложениях для знакомств. Основные опасения связаны с приватностью, манипуляциями и недоверием к автоматизированным системам подбора партнёров. Результаты ставят под вопрос дальнейшее активное внедрение AI в дейтинговые платформы.",
+        "tags": [
+          "ai-dating",
+          "user-trust",
+          "match-group",
+          "consumer-ai",
+          "dating-apps"
+        ]
+      },
+      "analyzed_at": "2026-06-18T19:21:42.518355Z"
     },
     {
       "id": "techcrunch-amazon-hopes-to-challenge-nvidia-more-directly-b-5748f9c6e6a8",
@@ -66,7 +63,22 @@
       "url": "https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips/",
       "summary": "",
       "importance": 4,
-      "date": "2026-06-18"
+      "date": "2026-06-18",
+      "analysis": {
+        "translated_title": "Amazon надеется бросить вызов Nvidia напрямую, продавая свои AI-чипы",
+        "agent_impact": "Доступность чипов Amazon (Trainium, Inferentia) напрямую расширит выбор hardware для AI-агентов, потенциально снижая затраты на inference и training для разработчиков автономных систем.",
+        "business_impact": "Прямые продажи чипов создадут новую конкуренцию Nvidia на рынке AI hardware, что может привести к снижению цен и изменению стратегий закупок у облачных провайдеров и корпораций.",
+        "it_impact": "Стратегический сдвиг Amazon в дистрибуции чипов потребует от IT-компаний переоценки инфраструктурных решений и стимулирует дальнейшее развитие альтернативных AI-ускорителей.",
+        "summary": "Amazon объявила о планах продавать свои AI-чипы Trainium и Inferentia напрямую клиентам, а не только через AWS. Это изменение в дистрибуционной стратегии направлено на усиление конкуренции с доминирующей Nvidia на рынке AI hardware. Компания стремится расширить присутствие в сегменте AI-ускорителей и предложить альтернативу американскому гиганту.",
+        "tags": [
+          "ai-chips",
+          "amazon-trainium",
+          "nvidia-competition",
+          "cloud-infrastructure",
+          "hardware-market"
+        ]
+      },
+      "analyzed_at": "2026-06-18T19:22:01.588577Z"
     },
     {
       "id": "techcrunch-ai-data-centers-just-got-a-government-mandated-f-f9dbd01a64e0",
@@ -75,7 +87,20 @@
       "url": "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/",
       "summary": "",
       "importance": 4,
-      "date": "2026-06-18"
+      "date": "2026-06-18",
+      "analysis": {
+        "translated_title": "Центры обработки данных AI получили от государства ускоренный доступ к энергосетям",
+        "agent_impact": "Упрощённый доступ к электроэнергии устраняет ключевое ограничение для обучения и развёртывания AI-агентов, позволяя запускать более ресурсоёмкие модели без задержек в инфраструктуре.",
+        "business_impact": "Регуляторное преимущество снижает барьеры входа для AI-компаний и ускоряет масштабирование дата-центров, создавая конкурентное преимущество для крупных игроков с государственной поддержкой.",
+        "it_impact": "Государственное регулирование энергетической инфраструктуры формирует новый стандарт для IT-строительства, где AI-проекты получают приоритет перед традиционными центрами обработки данных.",
+        "summary": "Статья описывает новые государственные нормативы, предоставляющие AI-дата-центрам приоритетный доступ к подключению к электрической сети. Регулирование направлено на решение проблемы растущего энергопотребления AI-систем и устранение инфраструктурных ограничений для технологических компаний.",
+        "tags": [
+          "ai-infrastructure",
+          "data-centers",
+          "energy-regulation"
+        ]
+      },
+      "analyzed_at": "2026-06-18T19:22:29.781956Z"
     },
     {
       "id": "techcrunch-the-smartphone-era-created-an-attention-crisis-s-66eed0f78485",
@@ -84,10 +109,65 @@
       "url": "https://techcrunch.com/2026/06/18/the-smartphone-era-created-an-attention-crisis-slowtech-is-fixing-it/",
       "summary": "",
       "importance": 4,
-      "date": "2026-06-18"
+      "date": "2026-06-18",
+      "analysis": {
+        "translated_title": "Эра смартфонов создала кризис внимания. Slowtech это исправляет",
+        "agent_impact": "AI-агенты должны адаптироваться к новым интерфейсам slowtech, фокусируясь на минималистичных, целенаправленных взаимодействиях вместо вовлечения по максимуму, что требует переосмысления дизайна коммуникации с пользователем.",
+        "business_impact": "Рынок смещается в сторону осознанных технологий, открывая нишу для стартапов и продуктов, которые намеренно ограничивают непрерывное использование, создавая новую бизнес-модель на контрасте с attention economy.",
+        "it_impact": "IT-индустрия переходит от паттернов максимального вовлечения к принципам intentional design, что влияет на разработку UI/UX, уведомлений и фоновых процессов в приложениях и операционных системах.",
+        "summary": "Статья исследует феномен slowtech — движения против чрезмерного использования смартфонов и социальных сетей, которые манипулируют вниманием пользователей. Авторы утверждают, что эра приложений, построенных на перехвате внимания, подходит к концу. Вместо этого формируется спрос на технологии, которые осознанно ограничивают взаимодействие и возвращают контроль над временем пользователя.",
+        "tags": [
+          "slowtech",
+          "attention-crisis",
+          "intentional-design"
+        ]
+      },
+      "analyzed_at": "2026-06-18T19:22:47.725378Z"
     }
   ],
   "published": [
+    {
+      "id": "huggingface-mosaicleaks",
+      "source": "HuggingFace",
+      "title": "MosaicLeaks: Can your research agent keep a secret?",
+      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "date": "2026-06-18",
+      "published_at": "2026-06-18T19:22:55.316150Z",
+      "message_id": 318,
+      "analysis": {
+        "translated_title": "MosaicLeaks: Может ли ваш исследовательский агент хранить секреты?",
+        "agent_impact": "Статья выявляет уязвимости в системах AI-агентов, связанные с утечкой конфиденциальных данных при использовании исследовательских агентов, что требует пересмотра архитектуры безопасности и протоколов изоляции данных в агентных системах.",
+        "business_impact": "Обнаруженные уязвимости могут повлиять на принятие AI-агентов в корпоративном секторе, требуя от компаний дополнительных инвестиций в безопасность и аудит агентных систем перед их развёртыванием.",
+        "it_impact": "Исследование подчёркивает необходимость разработки новых стандартов безопасности для AI-агентов, включая изоляцию контекста, контроль доступа к данным и механизмы предотвращения утечек через промежуточные результаты обработки.",
+        "summary": "Исследование MosaicLeaks от команды ServiceNow на платформе Hugging Face выявляет критические уязвимости безопасности в исследовательских AI-агентах, которые могут непреднамеренно раскрывать конфиденциальную информацию в процессе работы. Статья демонстрирует, как современные агентные системы могут становиться источником утечек данных через недостаточно защищённые каналы взаимодействия.",
+        "tags": [
+          "ai-agents",
+          "security-vulnerabilities",
+          "privacy"
+        ]
+      }
+    },
+    {
+      "id": "openai-improving-health-intelligence-in-chatgpt",
+      "source": "OpenAI",
+      "title": "Improving health intelligence in ChatGPT",
+      "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
+      "date": "2026-06-18",
+      "published_at": "2026-06-18T19:22:51.671367Z",
+      "message_id": 317,
+      "analysis": {
+        "translated_title": "Улучшение медицинского интеллекта в ChatGPT",
+        "agent_impact": "Выпуск GPT-5.5 Instant демонстрирует интеграцию специализированных медицинских знаний в AI-агентов через улучшенный reasoning, контекст и коммуникацию, а также использование экспертных оценок врачей для повышения качества ответов в сфере здоровья.",
+        "business_impact": "Улучшенные медицинские возможности ChatGPT открывают новые рынки в telemedicine и health-tech, усиливая конкуренцию между AI-компаниями в сегменте здравоохранения и потенциально привлекая инвестиции в health-focused AI-решения.",
+        "it_impact": "Статья подтверждает тренд на fine-tuning моделей под конкретные домены с использованием экспертной разметки, что требует от IT-индустрии развития инструментов для интеграции domain-specific knowledge в LLM.",
+        "summary": "OpenAI представила улучшения ChatGPT в области здоровья через модель GPT-5.5 Instant. Ключевые улучшения включают усиленный reasoning для медицинских рассуждений, лучшее понимание контекста, более четкую коммуникацию и оценки, основанные на обратной связи от практикующих врачей.",
+        "tags": [
+          "health-ai",
+          "chatgpt",
+          "medical-llm"
+        ]
+      }
+    },
     {
       "id": "techcrunch-a-tech-worker-backed-pac-is-bringing-a-5m-knife--b63806a8cf1a",
       "source": "TechCrunch AI",

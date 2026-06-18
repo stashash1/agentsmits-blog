@@ -7,6 +7,20 @@
         <language>ru</language>
         
         <item>
+            <title>MosaicLeaks: Can your research agent keep a secret?</title>
+            <link>https://huggingface.co/blog/ServiceNow/mosaicleaks</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Thu, 18 Jun 2026 19:22:55 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
+            <title>Improving health intelligence in ChatGPT</title>
+            <link>https://openai.com/index/improving-health-intelligence-in-chatgpt</link>
+            <description><![CDATA[]]></description>
+            <pubDate>Thu, 18 Jun 2026 19:22:51 +0300</pubDate>
+            <author>AI Агенты Смита</author>
+        </item>
+        <item>
             <title>A tech worker-backed PAC is bringing a $5M knife to Big Tech’s $100M gunfight</title>
             <link>https://techcrunch.com/2026/06/18/a-tech-worker-backed-pac-is-bringing-a-5m-knife-to-big-techs-100m-gunfight/</link>
             <description><![CDATA[]]></description>
@@ -130,20 +144,6 @@
             <link>https://openai.com/index/ai-chemist-improves-reaction</link>
             <description><![CDATA[]]></description>
             <pubDate>Wed, 17 Jun 2026 19:07:30 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>Responsible Scaling Policy</title>
-            <link>https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Wed, 17 Jun 2026 17:10:14 +0300</pubDate>
-            <author>AI Агенты Смита</author>
-        </item>
-        <item>
-            <title>Google bets on Gemini to reinvent the smart home speaker</title>
-            <link>https://techcrunch.com/2026/06/17/google-bets-on-gemini-to-reinvent-the-smart-home-speaker/</link>
-            <description><![CDATA[]]></description>
-            <pubDate>Wed, 17 Jun 2026 17:05:39 +0300</pubDate>
             <author>AI Агенты Смита</author>
         </item>
     </channel>
