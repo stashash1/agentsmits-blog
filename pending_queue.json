@@ -53,37 +53,17 @@
         ]
       },
       "analyzed_at": "2026-06-19T07:05:16.191452Z"
-    },
-    {
-      "id": "techcrunch-snap-spins-off-ai-video-team-into-new-company-do-8fd795d8c6da",
-      "source": "TechCrunch AI",
-      "title": "Snap spins off AI video team into new company, Dotmo, due to costs",
-      "url": "https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-18",
-      "analysis": {
-        "translated_title": "Snap выделяет команду AI-видео в отдельную компанию Dotmo из-за высоких затрат",
-        "agent_impact": "Создание отдельной компании Dotmo показывает тренд на специализацию AI-агентов в области генерации видео, что может ускорить разработку автономных видео-агентов за пределами крупных корпораций.",
-        "business_impact": "Spinoff AI-команд из крупных технологических компаний создаёт новых конкурентов на рынке AI-видеогенерации и стимулирует инвестиции в нишевые AI-стартапы, специализирующиеся на конкретных задачах.",
-        "it_impact": "Выделение AI-команд в отдельные компании формирует новый паттерн в IT-индустрии — корпорации оптимизируют затраты через создание независимых AI-юнитов, что меняет структуру разработки и финансирования AI-проектов.",
-        "summary": "Компания Snap приняла решение выделить свою команду, занимающуюся AI-генерацией видео, в отдельную компанию под названием Dotmo. Основной причиной разделения стала высокая стоимость содержания и развития AI-направления. Новый стартап сможет привлекать независимые инвестиции и сосредоточиться исключительно на развитии видео-AI технологий.",
-        "tags": [
-          "ai-video",
-          "startup-spinout",
-          "generative-ai"
-        ]
-      },
-      "analyzed_at": "2026-06-19T07:05:51.795799Z"
-    },
+    }
+  ],
+  "published": [
     {
       "id": "techcrunch-openai-is-bringing-on-some-big-guns-in-the-lead--2446e599d34e",
       "source": "TechCrunch AI",
       "title": "OpenAI is bringing on some big guns in the lead-up to its IPO",
       "url": "https://techcrunch.com/2026/06/18/openai-is-bringing-on-some-big-guns-in-the-lead-up-to-its-ipo/",
-      "summary": "",
-      "importance": 4,
       "date": "2026-06-18",
+      "published_at": "2026-06-19T07:50:53.025141Z",
+      "message_id": 331,
       "analysis": {
         "translated_title": "OpenAI набирает крупные имена в преддверии IPO",
         "agent_impact": "Привлечение опытных кадров может ускорить коммерциализацию AI-агентов OpenAI и повысить их конкурентоспособность на рынке автономных систем.",
@@ -95,11 +75,29 @@
           "ipo",
           "hiring"
         ]
-      },
-      "analyzed_at": "2026-06-19T07:06:15.896996Z"
-    }
-  ],
-  "published": [
+      }
+    },
+    {
+      "id": "techcrunch-snap-spins-off-ai-video-team-into-new-company-do-8fd795d8c6da",
+      "source": "TechCrunch AI",
+      "title": "Snap spins off AI video team into new company, Dotmo, due to costs",
+      "url": "https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/",
+      "date": "2026-06-18",
+      "published_at": "2026-06-19T07:50:31.385220Z",
+      "message_id": 329,
+      "analysis": {
+        "translated_title": "Snap выделяет команду AI-видео в отдельную компанию Dotmo из-за высоких затрат",
+        "agent_impact": "Создание отдельной компании Dotmo показывает тренд на специализацию AI-агентов в области генерации видео, что может ускорить разработку автономных видео-агентов за пределами крупных корпораций.",
+        "business_impact": "Spinoff AI-команд из крупных технологических компаний создаёт новых конкурентов на рынке AI-видеогенерации и стимулирует инвестиции в нишевые AI-стартапы, специализирующиеся на конкретных задачах.",
+        "it_impact": "Выделение AI-команд в отдельные компании формирует новый паттерн в IT-индустрии — корпорации оптимизируют затраты через создание независимых AI-юнитов, что меняет структуру разработки и финансирования AI-проектов.",
+        "summary": "Компания Snap приняла решение выделить свою команду, занимающуюся AI-генерацией видео, в отдельную компанию под названием Dotmo. Основной причиной разделения стала высокая стоимость содержания и развития AI-направления. Новый стартап сможет привлекать независимые инвестиции и сосредоточиться исключительно на развитии видео-AI технологий.",
+        "tags": [
+          "ai-video",
+          "startup-spinout",
+          "generative-ai"
+        ]
+      }
+    },
     {
       "id": "techcrunch-ai-inference-startup-baseten-reportedly-raising--c7f03eb380cc",
       "source": "TechCrunch AI",
