@@ -33,28 +33,6 @@
   ],
   "pending": [
     {
-      "id": "openai-chatgpt-enterprise-spend-controls",
-      "source": "OpenAI",
-      "title": "New usage analytics and updated spend controls for enterprises",
-      "url": "https://openai.com/index/chatgpt-enterprise-spend-controls",
-      "summary": "OpenAI introduces new spend controls and usage analytics for ChatGPT Enterprise, helping organizations manage costs and scale AI with confidence.",
-      "importance": 4,
-      "date": "2026-06-18",
-      "analysis": {
-        "translated_title": "Новые аналитические данные об использовании и обновлённые контроли расходов для корпоративных клиентов",
-        "agent_impact": "Улучшенные инструменты контроля расходов позволяют компаниям масштабировать развёртывание AI-агентов на базе ChatGPT Enterprise более предсказуемо и без превышения бюджетов.",
-        "business_impact": "Корпоративные клиенты получают прозрачность затрат на AI, что снижает финансовые риски и упрощает обоснование инвестиций в AI-решения для бизнеса.",
-        "it_impact": "IT-отделы получают инструменты детальной аналитики использования AI, что упрощает планирование инфраструктуры и управление лицензиями.",
-        "summary": "OpenAI представила новые функции аналитики использования и контроля расходов для ChatGPT Enterprise. Инструменты позволяют организациям отслеживать расходы на AI с детализацией по командам и проектам, устанавливать лимиты бюджета и получать прогнозы затрат.",
-        "tags": [
-          "enterprise",
-          "cost-control",
-          "analytics"
-        ]
-      },
-      "analyzed_at": "2026-06-19T07:04:55.676053Z"
-    },
-    {
       "id": "techcrunch-source-elastic-agrees-to-buy-crv-backed-deductiv-f7db370cf36f",
       "source": "TechCrunch AI",
       "title": "Source: Elastic agrees to buy CRV-backed DeductiveAI for up to $85M",
@@ -75,28 +53,6 @@
         ]
       },
       "analyzed_at": "2026-06-19T07:05:16.191452Z"
-    },
-    {
-      "id": "techcrunch-ai-inference-startup-baseten-reportedly-raising--c7f03eb380cc",
-      "source": "TechCrunch AI",
-      "title": "AI inference startup Baseten reportedly raising $1.5B months after its last mega-round",
-      "url": "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/",
-      "summary": "",
-      "importance": 4,
-      "date": "2026-06-18",
-      "analysis": {
-        "translated_title": "Стартап по AI-инференсу Baseten, по сообщениям, привлекает $1,5 млрд через несколько месяцев после последнего мега-раунда",
-        "agent_impact": "Массивные инвестиции в инфраструктуру инференса напрямую улучшают возможности AI-агентов: быстрый и дешёвый инференс позволяет агентам работать эффективнее и автономнее.",
-        "business_impact": "Привлечение $1,5 млрд стартапом без IPO демонстрирует готовность инвесторов вкладывать огромные суммы в AI-инфраструктуру, что усиливает конкуренцию между провайдерами облачных AI-сервисов.",
-        "it_impact": "Рост финансирования в сегмент AI-инференса стимулирует развитие оптимизации моделей, снижение задержек и создание специализированного железа для обслуживания AI-агентов.",
-        "summary": "Стартап Baseten, специализирующийся на AI-инференсе, готовится привлечь $1,5 млрд всего через несколько месяцев после предыдущего мега-раунда. Компания предоставляет инфраструктуру для развёртывания и обслуживания AI-моделей, включая поддержку LLM и Stable Diffusion. Это финансирование отражает резко возросший спрос на вычислительные мощности для AI-инференса.",
-        "tags": [
-          "ai-inference",
-          "funding",
-          "baseten"
-        ]
-      },
-      "analyzed_at": "2026-06-19T07:05:35.681953Z"
     },
     {
       "id": "techcrunch-snap-spins-off-ai-video-team-into-new-company-do-8fd795d8c6da",
@@ -144,6 +100,48 @@
     }
   ],
   "published": [
+    {
+      "id": "techcrunch-ai-inference-startup-baseten-reportedly-raising--c7f03eb380cc",
+      "source": "TechCrunch AI",
+      "title": "AI inference startup Baseten reportedly raising $1.5B months after its last mega-round",
+      "url": "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/",
+      "date": "2026-06-18",
+      "published_at": "2026-06-19T07:20:20.359544Z",
+      "message_id": 327,
+      "analysis": {
+        "translated_title": "Стартап по AI-инференсу Baseten, по сообщениям, привлекает $1,5 млрд через несколько месяцев после последнего мега-раунда",
+        "agent_impact": "Массивные инвестиции в инфраструктуру инференса напрямую улучшают возможности AI-агентов: быстрый и дешёвый инференс позволяет агентам работать эффективнее и автономнее.",
+        "business_impact": "Привлечение $1,5 млрд стартапом без IPO демонстрирует готовность инвесторов вкладывать огромные суммы в AI-инфраструктуру, что усиливает конкуренцию между провайдерами облачных AI-сервисов.",
+        "it_impact": "Рост финансирования в сегмент AI-инференса стимулирует развитие оптимизации моделей, снижение задержек и создание специализированного железа для обслуживания AI-агентов.",
+        "summary": "Стартап Baseten, специализирующийся на AI-инференсе, готовится привлечь $1,5 млрд всего через несколько месяцев после предыдущего мега-раунда. Компания предоставляет инфраструктуру для развёртывания и обслуживания AI-моделей, включая поддержку LLM и Stable Diffusion. Это финансирование отражает резко возросший спрос на вычислительные мощности для AI-инференса.",
+        "tags": [
+          "ai-inference",
+          "funding",
+          "baseten"
+        ]
+      }
+    },
+    {
+      "id": "openai-chatgpt-enterprise-spend-controls",
+      "source": "OpenAI",
+      "title": "New usage analytics and updated spend controls for enterprises",
+      "url": "https://openai.com/index/chatgpt-enterprise-spend-controls",
+      "date": "2026-06-18",
+      "published_at": "2026-06-19T07:20:16.805300Z",
+      "message_id": 326,
+      "analysis": {
+        "translated_title": "Новые аналитические данные об использовании и обновлённые контроли расходов для корпоративных клиентов",
+        "agent_impact": "Улучшенные инструменты контроля расходов позволяют компаниям масштабировать развёртывание AI-агентов на базе ChatGPT Enterprise более предсказуемо и без превышения бюджетов.",
+        "business_impact": "Корпоративные клиенты получают прозрачность затрат на AI, что снижает финансовые риски и упрощает обоснование инвестиций в AI-решения для бизнеса.",
+        "it_impact": "IT-отделы получают инструменты детальной аналитики использования AI, что упрощает планирование инфраструктуры и управление лицензиями.",
+        "summary": "OpenAI представила новые функции аналитики использования и контроля расходов для ChatGPT Enterprise. Инструменты позволяют организациям отслеживать расходы на AI с детализацией по командам и проектам, устанавливать лимиты бюджета и получать прогнозы затрат.",
+        "tags": [
+          "enterprise",
+          "cost-control",
+          "analytics"
+        ]
+      }
+    },
     {
       "id": "techcrunch-the-smartphone-era-created-an-attention-crisis-s-66eed0f78485",
       "source": "TechCrunch AI",
