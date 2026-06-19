@@ -3,65 +3,155 @@
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/news",
-      "last_checked": "2026-06-18T19:04:40.931340Z",
+      "last_checked": "2026-06-19T06:59:40.936300Z",
       "last_published_id": "anthropic-chris-olah-pope-leo-encyclical"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/",
-      "last_checked": "2026-06-18T19:04:40.931340Z",
+      "last_checked": "2026-06-19T06:59:40.936300Z",
       "last_published_id": "openai-submits-confidential-s-1"
     },
     {
       "name": "Google DeepMind Blog",
       "url": "https://deepmind.google/blog/",
-      "last_checked": "2026-06-18T19:04:40.931340Z",
+      "last_checked": "2026-06-19T06:59:40.936300Z",
       "last_published_id": "deepmind-gemini-35-live-translate"
     },
     {
       "name": "РБК Тренды (ИИ)",
       "url": "https://trends.rbc.ru/trends/industry/69e87e5f9a7947ca488a8d90",
-      "last_checked": "2026-06-18T19:04:40.931340Z",
+      "last_checked": "2026-06-19T06:59:40.936300Z",
       "last_published_id": null
     },
     {
       "name": "VC.ru AI",
       "url": "https://vc.ru/search?q=AI+%D0%B8%D0%BB%D0%B8+%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%8B",
-      "last_checked": "2026-06-18T19:04:40.931340Z",
+      "last_checked": "2026-06-19T06:59:40.936300Z",
       "last_published_id": null
     }
   ],
   "pending": [
     {
-      "id": "techcrunch-ai-data-centers-just-got-a-government-mandated-f-f9dbd01a64e0",
+      "id": "openai-chatgpt-enterprise-spend-controls",
+      "source": "OpenAI",
+      "title": "New usage analytics and updated spend controls for enterprises",
+      "url": "https://openai.com/index/chatgpt-enterprise-spend-controls",
+      "summary": "OpenAI introduces new spend controls and usage analytics for ChatGPT Enterprise, helping organizations manage costs and scale AI with confidence.",
+      "importance": 4,
+      "date": "2026-06-18",
+      "analysis": {
+        "translated_title": "Новые аналитические данные об использовании и обновлённые контроли расходов для корпоративных клиентов",
+        "agent_impact": "Улучшенные инструменты контроля расходов позволяют компаниям масштабировать развёртывание AI-агентов на базе ChatGPT Enterprise более предсказуемо и без превышения бюджетов.",
+        "business_impact": "Корпоративные клиенты получают прозрачность затрат на AI, что снижает финансовые риски и упрощает обоснование инвестиций в AI-решения для бизнеса.",
+        "it_impact": "IT-отделы получают инструменты детальной аналитики использования AI, что упрощает планирование инфраструктуры и управление лицензиями.",
+        "summary": "OpenAI представила новые функции аналитики использования и контроля расходов для ChatGPT Enterprise. Инструменты позволяют организациям отслеживать расходы на AI с детализацией по командам и проектам, устанавливать лимиты бюджета и получать прогнозы затрат.",
+        "tags": [
+          "enterprise",
+          "cost-control",
+          "analytics"
+        ]
+      },
+      "analyzed_at": "2026-06-19T07:04:55.676053Z"
+    },
+    {
+      "id": "techcrunch-source-elastic-agrees-to-buy-crv-backed-deductiv-f7db370cf36f",
       "source": "TechCrunch AI",
-      "title": "AI data centers just got a government-mandated fast lane to the grid",
-      "url": "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/",
+      "title": "Source: Elastic agrees to buy CRV-backed DeductiveAI for up to $85M",
+      "url": "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-19",
+      "analysis": {
+        "translated_title": "Источник: Elastic соглашается купить поддержанную CRV компанию DeductiveAI за сумму до $85 млн",
+        "agent_impact": "Приобретение DeductiveAI компанией Elastic укрепляет позиции в области AI-агентов с фокусом на дедуктивные рассуждения, что позволит интегрировать автономные AI-системы в платформу поиска и аналитики.",
+        "business_impact": "Сделка на $85 млн демонстрирует готовность крупных технологических компаний инвестировать в специализированные AI-стартапы для усиления конкурентоспособности на рынке enterprise-решений.",
+        "it_impact": "Интеграция технологий DeductiveAI в экосистему Elastic изменит ландшафт инструментов для разработки AI-приложений, объединив поисковые возможности с дедуктивным AI.",
+        "summary": "Компания Elastic, известная своими решениями для поиска и аналитики данных, объявила о намерении приобрести стартап DeductiveAI, который получил финансирование от венчурной фирмы CRV. Сумма сделки может достичь $85 млн. Это приобретение направлено на усиление AI-возможностей Elastic путём интеграции технологий дедуктивного рассуждения в существующие продукты.",
+        "tags": [
+          "ai-acquisition",
+          "enterprise-ai",
+          "search-analytics"
+        ]
+      },
+      "analyzed_at": "2026-06-19T07:05:16.191452Z"
+    },
+    {
+      "id": "techcrunch-ai-inference-startup-baseten-reportedly-raising--c7f03eb380cc",
+      "source": "TechCrunch AI",
+      "title": "AI inference startup Baseten reportedly raising $1.5B months after its last mega-round",
+      "url": "https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/",
       "summary": "",
       "importance": 4,
       "date": "2026-06-18",
       "analysis": {
-        "translated_title": "Центры обработки данных AI получили от государства ускоренный доступ к энергосетям",
-        "agent_impact": "Упрощённый доступ к электроэнергии устраняет ключевое ограничение для обучения и развёртывания AI-агентов, позволяя запускать более ресурсоёмкие модели без задержек в инфраструктуре.",
-        "business_impact": "Регуляторное преимущество снижает барьеры входа для AI-компаний и ускоряет масштабирование дата-центров, создавая конкурентное преимущество для крупных игроков с государственной поддержкой.",
-        "it_impact": "Государственное регулирование энергетической инфраструктуры формирует новый стандарт для IT-строительства, где AI-проекты получают приоритет перед традиционными центрами обработки данных.",
-        "summary": "Статья описывает новые государственные нормативы, предоставляющие AI-дата-центрам приоритетный доступ к подключению к электрической сети. Регулирование направлено на решение проблемы растущего энергопотребления AI-систем и устранение инфраструктурных ограничений для технологических компаний.",
+        "translated_title": "Стартап по AI-инференсу Baseten, по сообщениям, привлекает $1,5 млрд через несколько месяцев после последнего мега-раунда",
+        "agent_impact": "Массивные инвестиции в инфраструктуру инференса напрямую улучшают возможности AI-агентов: быстрый и дешёвый инференс позволяет агентам работать эффективнее и автономнее.",
+        "business_impact": "Привлечение $1,5 млрд стартапом без IPO демонстрирует готовность инвесторов вкладывать огромные суммы в AI-инфраструктуру, что усиливает конкуренцию между провайдерами облачных AI-сервисов.",
+        "it_impact": "Рост финансирования в сегмент AI-инференса стимулирует развитие оптимизации моделей, снижение задержек и создание специализированного железа для обслуживания AI-агентов.",
+        "summary": "Стартап Baseten, специализирующийся на AI-инференсе, готовится привлечь $1,5 млрд всего через несколько месяцев после предыдущего мега-раунда. Компания предоставляет инфраструктуру для развёртывания и обслуживания AI-моделей, включая поддержку LLM и Stable Diffusion. Это финансирование отражает резко возросший спрос на вычислительные мощности для AI-инференса.",
         "tags": [
-          "ai-infrastructure",
-          "data-centers",
-          "energy-regulation"
+          "ai-inference",
+          "funding",
+          "baseten"
         ]
       },
-      "analyzed_at": "2026-06-18T19:22:29.781956Z"
+      "analyzed_at": "2026-06-19T07:05:35.681953Z"
     },
+    {
+      "id": "techcrunch-snap-spins-off-ai-video-team-into-new-company-do-8fd795d8c6da",
+      "source": "TechCrunch AI",
+      "title": "Snap spins off AI video team into new company, Dotmo, due to costs",
+      "url": "https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-18",
+      "analysis": {
+        "translated_title": "Snap выделяет команду AI-видео в отдельную компанию Dotmo из-за высоких затрат",
+        "agent_impact": "Создание отдельной компании Dotmo показывает тренд на специализацию AI-агентов в области генерации видео, что может ускорить разработку автономных видео-агентов за пределами крупных корпораций.",
+        "business_impact": "Spinoff AI-команд из крупных технологических компаний создаёт новых конкурентов на рынке AI-видеогенерации и стимулирует инвестиции в нишевые AI-стартапы, специализирующиеся на конкретных задачах.",
+        "it_impact": "Выделение AI-команд в отдельные компании формирует новый паттерн в IT-индустрии — корпорации оптимизируют затраты через создание независимых AI-юнитов, что меняет структуру разработки и финансирования AI-проектов.",
+        "summary": "Компания Snap приняла решение выделить свою команду, занимающуюся AI-генерацией видео, в отдельную компанию под названием Dotmo. Основной причиной разделения стала высокая стоимость содержания и развития AI-направления. Новый стартап сможет привлекать независимые инвестиции и сосредоточиться исключительно на развитии видео-AI технологий.",
+        "tags": [
+          "ai-video",
+          "startup-spinout",
+          "generative-ai"
+        ]
+      },
+      "analyzed_at": "2026-06-19T07:05:51.795799Z"
+    },
+    {
+      "id": "techcrunch-openai-is-bringing-on-some-big-guns-in-the-lead--2446e599d34e",
+      "source": "TechCrunch AI",
+      "title": "OpenAI is bringing on some big guns in the lead-up to its IPO",
+      "url": "https://techcrunch.com/2026/06/18/openai-is-bringing-on-some-big-guns-in-the-lead-up-to-its-ipo/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-06-18",
+      "analysis": {
+        "translated_title": "OpenAI набирает крупные имена в преддверии IPO",
+        "agent_impact": "Привлечение опытных кадров может ускорить коммерциализацию AI-агентов OpenAI и повысить их конкурентоспособность на рынке автономных систем.",
+        "business_impact": "Подготовка к IPO сигнализирует о готовности OpenAI к публичному размещению, что привлечёт значительные инвестиции и повысит оценку всей экосистемы AI-агентов.",
+        "it_impact": "Рекрутинг топ-менеджеров с опытом работы в публичных компаниях устанавливает новые стандарты корпоративного управления для AI-стартапов.",
+        "summary": "OpenAI активно нанимает высокопоставленных специалистов и руководителей в преддверии запланированного IPO. Компания переходит от исследовательской модели к коммерческой структуре, привлекая профессионалов с опытом работы в публичных технологических компаниях для успешного выхода на биржу.",
+        "tags": [
+          "openai",
+          "ipo",
+          "hiring"
+        ]
+      },
+      "analyzed_at": "2026-06-19T07:06:15.896996Z"
+    }
+  ],
+  "published": [
     {
       "id": "techcrunch-the-smartphone-era-created-an-attention-crisis-s-66eed0f78485",
       "source": "TechCrunch AI",
       "title": "The smartphone era created an attention crisis. Slowtech is fixing it",
       "url": "https://techcrunch.com/2026/06/18/the-smartphone-era-created-an-attention-crisis-slowtech-is-fixing-it/",
-      "summary": "",
-      "importance": 4,
       "date": "2026-06-18",
+      "published_at": "2026-06-19T07:06:44.945883Z",
+      "message_id": 325,
       "analysis": {
         "translated_title": "Эра смартфонов создала кризис внимания. Slowtech это исправляет",
         "agent_impact": "AI-агенты должны адаптироваться к новым интерфейсам slowtech, фокусируясь на минималистичных, целенаправленных взаимодействиях вместо вовлечения по максимуму, что требует переосмысления дизайна коммуникации с пользователем.",
@@ -73,11 +163,29 @@
           "attention-crisis",
           "intentional-design"
         ]
-      },
-      "analyzed_at": "2026-06-18T19:22:47.725378Z"
-    }
-  ],
-  "published": [
+      }
+    },
+    {
+      "id": "techcrunch-ai-data-centers-just-got-a-government-mandated-f-f9dbd01a64e0",
+      "source": "TechCrunch AI",
+      "title": "AI data centers just got a government-mandated fast lane to the grid",
+      "url": "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/",
+      "date": "2026-06-18",
+      "published_at": "2026-06-19T07:06:41.369755Z",
+      "message_id": 324,
+      "analysis": {
+        "translated_title": "Центры обработки данных AI получили от государства ускоренный доступ к энергосетям",
+        "agent_impact": "Упрощённый доступ к электроэнергии устраняет ключевое ограничение для обучения и развёртывания AI-агентов, позволяя запускать более ресурсоёмкие модели без задержек в инфраструктуре.",
+        "business_impact": "Регуляторное преимущество снижает барьеры входа для AI-компаний и ускоряет масштабирование дата-центров, создавая конкурентное преимущество для крупных игроков с государственной поддержкой.",
+        "it_impact": "Государственное регулирование энергетической инфраструктуры формирует новый стандарт для IT-строительства, где AI-проекты получают приоритет перед традиционными центрами обработки данных.",
+        "summary": "Статья описывает новые государственные нормативы, предоставляющие AI-дата-центрам приоритетный доступ к подключению к электрической сети. Регулирование направлено на решение проблемы растущего энергопотребления AI-систем и устранение инфраструктурных ограничений для технологических компаний.",
+        "tags": [
+          "ai-infrastructure",
+          "data-centers",
+          "energy-regulation"
+        ]
+      }
+    },
     {
       "id": "techcrunch-amazon-hopes-to-challenge-nvidia-more-directly-b-5748f9c6e6a8",
       "source": "TechCrunch AI",
@@ -2920,6 +3028,6 @@
     "base_days": 1460,
     "current_days": 730,
     "start_date": "2026-01-01",
-    "last_update": "2026-06-18"
+    "last_update": "2026-06-19"
   }
 }
