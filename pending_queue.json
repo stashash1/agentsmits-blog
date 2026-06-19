@@ -31,15 +31,16 @@
       "last_published_id": null
     }
   ],
-  "pending": [
+  "pending": [],
+  "published": [
     {
       "id": "techcrunch-source-elastic-agrees-to-buy-crv-backed-deductiv-f7db370cf36f",
       "source": "TechCrunch AI",
       "title": "Source: Elastic agrees to buy CRV-backed DeductiveAI for up to $85M",
       "url": "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/",
-      "summary": "",
-      "importance": 4,
       "date": "2026-06-19",
+      "published_at": "2026-06-19T08:20:30.411673Z",
+      "message_id": 333,
       "analysis": {
         "translated_title": "Источник: Elastic соглашается купить поддержанную CRV компанию DeductiveAI за сумму до $85 млн",
         "agent_impact": "Приобретение DeductiveAI компанией Elastic укрепляет позиции в области AI-агентов с фокусом на дедуктивные рассуждения, что позволит интегрировать автономные AI-системы в платформу поиска и аналитики.",
@@ -51,11 +52,8 @@
           "enterprise-ai",
           "search-analytics"
         ]
-      },
-      "analyzed_at": "2026-06-19T07:05:16.191452Z"
-    }
-  ],
-  "published": [
+      }
+    },
     {
       "id": "techcrunch-openai-is-bringing-on-some-big-guns-in-the-lead--2446e599d34e",
       "source": "TechCrunch AI",
