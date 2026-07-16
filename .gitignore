@@ -1,3 +1,26 @@
+# Generated site is gitignored — only sources are tracked
+public/index.html
+public/articles.html
+public/rss.xml
+
+# Runtime logs and metrics — regenerated, no point in git
+data/events.log
+data/telegram_audit.log
+data/metrics.json
+data/sync_status.json
+data/daily_summaries.json
+
+# Editor + transient
 __pycache__/
 *.pyc
+*.pyo
 .DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Local env / sandbox
+.env
+.env.local
+config/local.env

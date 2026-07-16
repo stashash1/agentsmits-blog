@@ -3,6 +3,8 @@
 Публикатор статей/дайджестов в Telegram.
 Публикует статьи из articles_queue.json.
 """
+from _config import ARTICLES_QUEUE, telegram_send_cmd
+
 import json
 import os
 import sys
@@ -14,32 +16,24 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(__file__))
-from metrics import log_event, log_published
-
-TELEGRAM_QUEUE = Path(__file__).parent.parent / "articles_queue.json"
-BLOG_DIR = Path("/home/stas/.openclaw/workspace/projects/ai-blog")
+from metrics import log_event, log_published, log_blog_sync
 
 SCRIPT_NAME = "publish_article"
 
 
 def load_articles():
-    with open(TELEGRAM_QUEUE) as f:
+    with open(ARTICLES_QUEUE) as f:
         return json.load(f)
 
 
 def save_articles(d):
-    with open(TELEGRAM_QUEUE, "w") as f:
+    with open(ARTICLES_QUEUE, "w") as f:
         json.dump(d, f, indent=2, ensure_ascii=False)
 
 
 def send_telegram(text, retries=3, delay=5):
-    cmd = [
-        "openclaw", "message", "send",
-        "--channel", "telegram",
-        "--account", "agentsmits",
-        "--target", "@agentsSmits",
-        "--message", text
-    ]
+    """Send via openclaw CLI using config-derived command."""
+    cmd = telegram_send_cmd(text)
     for attempt in range(retries):
         try:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
@@ -63,22 +57,17 @@ def send_telegram(text, retries=3, delay=5):
 
 
 def sync_to_blog():
-    """Синхронизирует articles_queue.json в блог и запускает деплой."""
-    blog_dir = Path("/home/stas/.openclaw/workspace/projects/ai-blog")
-    tg_dir = Path(__file__).parent.parent
-
-    # Копируем queues
-    for fname in ["pending_queue.json", "selection_queue.json", "articles_queue.json"]:
-        src = tg_dir / fname
-        dst = blog_dir / fname
-        if src.exists():
-            shutil.copy2(src, dst)
-
+    """Regenerate static site from current data."""
+    t0 = time.monotonic()
     result = subprocess.run(
-        ["bash", str(blog_dir / "sync_and_deploy.sh")],
-        capture_output=True, text=True, timeout=300
+        ["python3", str(GENERATE_SITE_SCRIPT)],
+        cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=300,
     )
+    duration_ms = int((time.monotonic() - t0) * 1000)
+    log_blog_sync(result.returncode, duration_ms, article_id="(article-publish)",
+                  site="agentsmits-blog")
     return result.returncode, result.stdout, result.stderr
+
 
 
 def format_article(article, agi_days, agi_percent):
@@ -119,7 +108,7 @@ def main():
     run_ts = datetime.now(timezone.utc).isoformat()
     log_event(SCRIPT_NAME, "started", {"run_ts": run_ts})
 
-    lock_path = str(TELEGRAM_QUEUE) + ".lock"
+    lock_path = str(ARTICLES_QUEUE) + ".lock"
     lock_fd = None
     try:
         lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR)

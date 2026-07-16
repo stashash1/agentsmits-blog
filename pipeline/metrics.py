@@ -1,3 +1,4 @@
+from _config import EVENTS_LOG, METRICS, QUIET_HOURS_END, QUIET_HOURS_START, RECENTLY_SENT, TELEGRAM_AUDIT
 #!/usr/bin/env python3
 """
 Центральная система метрик и логирования для AI-канала.
@@ -11,10 +12,6 @@ import hashlib
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-METRICS_PATH = os.path.expanduser("~/.openclaw/workspace/projects/telegram-ai-channel/metrics.json")
-LOG_PATH = os.path.expanduser("~/.openclaw/workspace/projects/telegram-ai-channel/events.log")
-SENT_DEDUP_PATH = os.path.expanduser("~/.openclaw/workspace/projects/telegram-ai-channel/recently_sent.json")
-TELEGRAM_AUDIT_PATH = os.path.expanduser("~/.openclaw/workspace/projects/telegram-ai-channel/telegram_audit.log")
 
 # Quiet hours: don't publish new content to the channel during this window (Moscow time).
 # Configurable via env: QUITE_HOURS_START=23 QUITE_HOURS_END=8
@@ -41,7 +38,7 @@ def text_fingerprint(text):
 
 def _load_recent():
     try:
-        with open(SENT_DEDUP_PATH) as f:
+        with open(RECENTLY_SENT) as f:
             return json.load(f)
     except Exception:
         return {"items": []}
@@ -49,7 +46,7 @@ def _load_recent():
 
 def _save_recent(d):
     try:
-        with open(SENT_DEDUP_PATH, "w") as f:
+        with open(RECENTLY_SENT, "w") as f:
             json.dump(d, f, indent=2, ensure_ascii=False)
     except Exception as e:
         print(f"[DEDUP ERROR] save failed: {e}", file=sys.stderr)
@@ -86,7 +83,7 @@ def record_sent(text, msg_id):
 
 def _load_metrics():
     try:
-        with open(METRICS_PATH) as f:
+        with open(METRICS) as f:
             d = json.load(f)
         # Make sure new top-level keys exist (back-compat for old metrics.json)
         for k in ("article_funnel", "source_health", "blog_sync", "hourly_publish",
@@ -119,15 +116,16 @@ def _load_metrics():
 
 def _save_metrics(m):
     try:
-        with open(METRICS_PATH, 'w') as f:
+        with open(METRICS, 'w') as f:
             json.dump(m, f, indent=2, ensure_ascii=False)
     except Exception as e:
         print(f"[METRICS ERROR] Failed to save: {e}", file=sys.stderr)
 
 def _acquire_lock(lock_path, suffix=""):
     """Acquire file lock, return fd or None if already locked."""
+    lock_str = str(lock_path) + suffix + ".lock"
     try:
-        lock_fd = os.open(lock_path + suffix + ".lock", os.O_CREAT | os.O_RDWR)
+        lock_fd = os.open(lock_str, os.O_CREAT | os.O_RDWR)
         fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
         return lock_fd
     except BlockingIOError:
@@ -138,7 +136,7 @@ def _release_lock(lock_fd, lock_path, suffix=""):
         try:
             fcntl.flock(lock_fd, fcntl.LOCK_UN)
             os.close(lock_fd)
-            os.unlink(lock_path + suffix + ".lock")
+            os.unlink(str(lock_path) + suffix + ".lock")
         except:
             pass
 
@@ -159,13 +157,13 @@ def log_event(event_type, action, details=None):
     
     # 1. Write to events.log (append)
     try:
-        with open(LOG_PATH, "a") as f:
+        with open(EVENTS_LOG, "a") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
     except Exception as e:
         print(f"[METRICS ERROR] Cannot write to log: {e}", file=sys.stderr)
     
     # 2. Update metrics.json (bounded)
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return  # Couldn't get lock, skip metrics update
     try:
@@ -190,11 +188,11 @@ def log_event(event_type, action, details=None):
         
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
 
 def log_published(article_id, source, title, msg_id, importance):
     """Логирует успешную публикацию."""
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return
     try:
@@ -214,7 +212,7 @@ def log_published(article_id, source, title, msg_id, importance):
         m["daily_counts"][today] = m["daily_counts"].get(today, 0) + 1
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
 
 def log_error(script, error_msg, details=None):
     """Логирует ошибку."""
@@ -251,12 +249,12 @@ def log_telegram_send(article_id, source, title, msg_id, account, duration_ms,
     }
     # Append-only audit log (JSONL)
     try:
-        with open(TELEGRAM_AUDIT_PATH, "a") as f:
+        with open(TELEGRAM_AUDIT, "a") as f:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
     except Exception as e:
         print(f"[AUDIT ERROR] {e}", file=sys.stderr)
     # Rotate: keep last 200 entries in metrics
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return
     try:
@@ -265,7 +263,7 @@ def log_telegram_send(article_id, source, title, msg_id, account, duration_ms,
         m["telegram_audit"] = m["telegram_audit"][:200]
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
 
 
 def patch_audit_article(msg_id, article_id, source=None, title=None):
@@ -276,7 +274,7 @@ def patch_audit_article(msg_id, article_id, source=None, title=None):
     """
     if not msg_id:
         return
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return
     try:
@@ -291,10 +289,10 @@ def patch_audit_article(msg_id, article_id, source=None, title=None):
                 break
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
     # Same for telegram_audit.log
     try:
-        with open(TELEGRAM_AUDIT_PATH) as f:
+        with open(TELEGRAM_AUDIT) as f:
             lines = f.readlines()
         new_lines = []
         patched = False
@@ -314,7 +312,7 @@ def patch_audit_article(msg_id, article_id, source=None, title=None):
                 except Exception:
                     pass
             new_lines.append(line)
-        with open(TELEGRAM_AUDIT_PATH, "w") as f:
+        with open(TELEGRAM_AUDIT, "w") as f:
             f.writelines(new_lines)
     except Exception as ex:
         print(f"[AUDIT PATCH ERROR] {ex}", file=sys.stderr)
@@ -336,7 +334,7 @@ def funnel_set(article_id, stage, **details):
         }
     }
     """
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return
     try:
@@ -350,7 +348,7 @@ def funnel_set(article_id, stage, **details):
                 del funnel[old_key]
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
 
 
 # ============================================================================
@@ -366,7 +364,7 @@ def log_source_health(source, ok, fetch_ms=None, items_found=None, error=None):
         "openai":    {"last_ok_ts": "...", "fail_streak": 2, ...}
     }
     """
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return
     try:
@@ -387,7 +385,7 @@ def log_source_health(source, ok, fetch_ms=None, items_found=None, error=None):
             s["last_error"] = (error or "")[:200]
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
 
 
 # ============================================================================
@@ -396,7 +394,7 @@ def log_source_health(source, ok, fetch_ms=None, items_found=None, error=None):
 
 def log_blog_sync(article_ids, ok, duration_ms=None, error=None):
     """Track blog deploy outcome."""
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return
     try:
@@ -416,7 +414,7 @@ def log_blog_sync(article_ids, ok, duration_ms=None, error=None):
                 del bs[old]
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
 
 
 # ============================================================================
@@ -430,7 +428,7 @@ def log_run_event(run_id, script, action, details=None):
     script = scan | analyze | publish | blog_sync | telegram_send
     action = started | completed | failed | skipped | guard_hit | error
     """
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return
     try:
@@ -445,7 +443,7 @@ def log_run_event(run_id, script, action, details=None):
         })
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
 
 
 # ============================================================================
@@ -454,7 +452,7 @@ def log_run_event(run_id, script, action, details=None):
 
 def log_alert(alert_type, message, severity="warn", details=None):
     """Auto-alerts: source_unhealthy, dedup_spike, llm_overload, telegram_conflict."""
-    lock_fd = _acquire_lock(METRICS_PATH)
+    lock_fd = _acquire_lock(METRICS)
     if lock_fd is None:
         return
     try:
@@ -469,7 +467,7 @@ def log_alert(alert_type, message, severity="warn", details=None):
         m["alerts"] = m["alerts"][:100]
         _save_metrics(m)
     finally:
-        _release_lock(lock_fd, METRICS_PATH)
+        _release_lock(lock_fd, METRICS)
 
 
 # ============================================================================

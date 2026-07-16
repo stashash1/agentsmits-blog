@@ -1,3 +1,4 @@
+from _config import PENDING_QUEUE
 #!/usr/bin/env python3
 """
 Audit-скрипт: ищет аномалии в published[] за последние N дней.
@@ -26,12 +27,11 @@ from datetime import datetime, timezone, timedelta
 sys.path.insert(0, os.path.dirname(__file__))
 from metrics import log_event, log_alert
 
-PENDING_PATH = os.path.expanduser("~/.openclaw/workspace/projects/telegram-ai-channel/pending_queue.json")
 SCRIPT_NAME = "dedup_audit"
 
 
 def load_published():
-    with open(PENDING_PATH) as f:
+    with open(PENDING_QUEUE) as f:
         return json.load(f).get("published", [])
 
 
@@ -153,18 +153,18 @@ def fix_duplicates(days=30, dry_run=True):
         return len(to_remove)
 
     # Backup
-    backup = PENDING_PATH + f".bak-dedup-audit-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-    shutil.copy2(PENDING_PATH, backup)
+    backup = PENDING_QUEUE + f".bak-dedup-audit-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+    shutil.copy2(PENDING_QUEUE, backup)
     print(f"Backup: {backup}")
 
     # Apply: keep items NOT in to_remove
     new_published = [it for it in published if id(it) not in to_remove]
 
-    with open(PENDING_PATH) as f:
+    with open(PENDING_QUEUE) as f:
         queue = json.load(f)
     queue["published"] = new_published
 
-    with open(PENDING_PATH, "w") as f:
+    with open(PENDING_QUEUE, "w") as f:
         json.dump(queue, f, ensure_ascii=False, indent=2)
 
     removed = len(published) - len(new_published)

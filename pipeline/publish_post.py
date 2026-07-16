@@ -22,40 +22,31 @@ from metrics import (
     log_telegram_send, log_blog_sync, funnel_set,
     log_run_event, log_alert, patch_audit_article,
 )
+from _config import PENDING_QUEUE, TELEGRAM_ACCOUNT, PROJECT_ROOT, GENERATE_SITE_SCRIPT
 
-PENDING_PATH = os.path.expanduser("~/.openclaw/workspace/projects/telegram-ai-channel/pending_queue.json")
-TELEGRAM_ACCOUNT = "agentsmits"
 
 SCRIPT_NAME = "publish"
 
 def load_queue():
-    with open(PENDING_PATH) as f:
+    with open(PENDING_QUEUE) as f:
         return json.load(f)
 
 def save_queue(d):
-    with open(PENDING_PATH, 'w') as f:
+    with open(PENDING_QUEUE, 'w') as f:
         json.dump(d, f, indent=2, ensure_ascii=False)
 
 def sync_to_blog():
-    """Синхронизирует pending_queue.json в блог и запускает деплой."""
-    blog_dir = Path("/home/stas/.openclaw/workspace/projects/ai-blog")
-    tg_dir   = Path("/home/stas/.openclaw/workspace/projects/telegram-ai-channel")
-
-    # Copy queues
-    for fname in ["pending_queue.json", "selection_queue.json"]:
-        src = tg_dir / fname
-        dst = blog_dir / fname
-        if src.exists():
-            shutil.copy2(src, dst)
-
-    # Run blog generator + deploy
+    """Regenerate static site from current data/ contents."""
     t0 = time.monotonic()
     result = subprocess.run(
-        ["bash", str(blog_dir / "sync_and_deploy.sh")],
-        capture_output=True, text=True, timeout=300
+        ["python3", str(GENERATE_SITE_SCRIPT)],
+        cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=300,
     )
     duration_ms = int((time.monotonic() - t0) * 1000)
+    log_blog_sync(result.returncode, duration_ms, article_id="(publish)",
+                  site="agentsmits-blog")
     return result.returncode, result.stdout, result.stderr, duration_ms
+
 
 
 def send_telegram(text, retries=3, delay=8):
@@ -278,7 +269,7 @@ def main():
     log_run_event(run_id, "publish", "started", {"run_ts": run_ts})
     
     # Use file lock for atomic concurrency control
-    lock_path = PENDING_PATH + '.lock'
+    lock_path = str(PENDING_QUEUE) + '.lock'
     lock_fd = None
     try:
         lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR)

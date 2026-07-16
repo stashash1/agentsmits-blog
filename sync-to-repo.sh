@@ -1,31 +1,21 @@
 #!/bin/bash
-# Syncs JSON data files to git and pushes to trigger CI rebuild
-# Run via cron: 0 * * * * /home/stas/.openclaw/workspace-channel/agentsmits-blog/sync-to-repo.sh
+# Legacy hourly sync → kept for backward compat.
+# New setups should use `openclaw cron` or systemd timers calling pipeline/publish_post.py directly.
+# This wrapper still works for older deployments.
 
 set -e
 
-BLOG_DIR="/home/stas/.openclaw/workspace-channel/agentsmits-blog"
-DATA_DIR="/home/stas/.openclaw/workspace/projects/telegram-ai-channel"
-BOT_DIR="/home/stas/dev/project/agentsmits-bot"
-REMOTE="git@github.com:stashash1/agentsmits-blog.git"
-
+BLOG_DIR="${BLOG_DIR:-$(cd "$(dirname "$(readlink -f "$0")")" && pwd)}"
 cd "$BLOG_DIR"
 
-# Copy scanner queue files
-cp "$DATA_DIR/pending_queue.json" ./pending_queue.json
-cp "$DATA_DIR/selection_queue.json" ./selection_queue.json
+# Regenerate site (data/ is already in the right place)
+python3 generate_site.py
 
-# Copy bot storage (current + archive posts with full content)
-mkdir -p "$BOT_DIR/data"
-cp "$BOT_DIR/data/current.json" ./ 2>/dev/null || true
-cp "$BOT_DIR/data/archive.json" ./ 2>/dev/null || true
-
-# Check if anything changed
-if ! git diff --quiet pending_queue.json selection_queue.json current.json archive.json 2>/dev/null; then
-    git add pending_queue.json selection_queue.json current.json archive.json
-    git commit -m "Auto-sync: $(date '+%Y-%m-%d %H:%M')"
-    git push "$REMOTE" main
-    echo "[$(date)] Pushed updates to GitHub"
-else
-    echo "[$(date)] No changes in JSON files"
+if [ -d .git ]; then
+    git add public/ 2>/dev/null || true
+    if ! git diff --cached --quiet; then
+        git commit -m "Auto-sync: $(date '+%Y-%m-%d %H:%M')" || true
+        REMOTE="${REMOTE:-origin}"
+        git push "$REMOTE" main 2>/dev/null || echo "[$(date '+%H:%M:%S')] push failed"
+    fi
 fi

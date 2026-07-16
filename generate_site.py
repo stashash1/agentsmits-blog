@@ -13,14 +13,9 @@ from pathlib import Path
 
 BLOG_DIR = Path(__file__).parent
 OUTPUT_DIR = BLOG_DIR / "public"
-BOT_DIR = Path("/home/stas/dev/project/agentsmits-bot")
-DATA_DIR = BOT_DIR / "data"
-# CI: use local files in repo; local dev: use bot project storage
+DATA_DIR = BLOG_DIR / "data"
 STORAGE_CURRENT = DATA_DIR / "current.json"
 STORAGE_ARCHIVE = DATA_DIR / "archive.json"
-if not STORAGE_CURRENT.exists():
-    STORAGE_CURRENT = BLOG_DIR / "current.json"
-    STORAGE_ARCHIVE = BLOG_DIR / "archive.json"
 
 TEMPLATE_INDEX = """<!DOCTYPE html>
 <html lang="ru">

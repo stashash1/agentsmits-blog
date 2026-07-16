@@ -1,0 +1,126 @@
+{
+  "description": "Топ-статьи для выбора перед публикацией. importance=5 = супертоп, публикуется только после одобрения.",
+  "articles": [
+    {
+      "id": "openai-submits-confidential-s-1",
+      "source": "OpenAI",
+      "title": "Confidential submission of draft S-1 to the SEC",
+      "url": "https://openai.com/index/openai-submits-confidential-s-1/",
+      "summary": "OpenAI подала конфиденциальную заявку S-1 в SEC — формальный шаг перед возможным IPO. Это первый случай подачи S-1 среди крупнейших AI-компаний.",
+      "importance": 5,
+      "date": "2026-06-08",
+      "added_at": "2026-06-12T08:47:00Z",
+      "status": "published"
+    },
+    {
+      "id": "github-copilot-2026-07-09-openais-gpt-5-6-sol-terra-and-lun-bd97de8039f4",
+      "source": "OpenAI",
+      "title": "OpenAI&#8217;s GPT-5.6 Sol, Terra, and Luna are now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-07-09",
+      "added_at": "2026-07-13T16:57:49.834826Z",
+      "status": "new"
+    },
+    {
+      "id": "techcrunch-hermes-agent-maker-nous-research-in-talks-for-ne-102e5c971823",
+      "source": "OpenAI",
+      "title": "Hermes agent maker Nous Research in talks for new funding at $1.5B valuation",
+      "url": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-07-13",
+      "added_at": "2026-07-14T07:34:46.538979Z",
+      "status": "new"
+    },
+    {
+      "id": "arxiv-2607.11818",
+      "source": "OpenAI",
+      "title": "MM-ToolSandBox: A Unified Framework for Evaluating Visual Tool-Calling Agents",
+      "url": "https://arxiv.org/abs/2607.11818",
+      "summary": "We introduce MM-ToolSandBox, a benchmark and evaluation framework for visually grounded tool-calling agents. The framework provides a stateful execution environment spanning 500+ tools across 16 application domains, supporting multi-image, multi-turn tasks where agents must ground progressively arri",
+      "importance": 3,
+      "date": "2026-07-13",
+      "added_at": "2026-07-14T07:34:46.538988Z",
+      "status": "new"
+    },
+    {
+      "id": "arxiv-2607.13027",
+      "source": "OpenAI",
+      "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+      "url": "https://arxiv.org/abs/2607.13027",
+      "summary": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mobile devices are also",
+      "importance": 3,
+      "date": "2026-07-14",
+      "added_at": "2026-07-15T08:57:14.637803Z",
+      "status": "new"
+    },
+    {
+      "id": "openai-unlocking-self-improvement-gpt-red",
+      "source": "OpenAI",
+      "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+      "summary": "Explore GPT-Red, OpenAI’s automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
+      "importance": 4,
+      "date": "2026-07-15",
+      "added_at": "2026-07-15T19:05:02.544465Z",
+      "status": "new"
+    },
+    {
+      "id": "anthropic-finance-agents",
+      "source": "OpenAI",
+      "title": "Finance Agents",
+      "url": "https://www.anthropic.com/news/finance-agents",
+      "summary": "",
+      "importance": 4,
+      "date": "2026-07-15",
+      "added_at": "2026-07-15T23:04:46.280091Z",
+      "status": "new"
+    },
+    {
+      "id": "arxiv-2607.14004",
+      "source": "OpenAI",
+      "title": "Do Agent Optimizers Compound? A Continual-Learning Evaluation on Terminal-Bench 2.0",
+      "url": "https://arxiv.org/abs/2607.14004",
+      "summary": "Most reported gains from agent-optimization methods are one-shot: an agent is optimized against a fixed benchmark and the resulting improvement is reported as if it were a stable property of the method. This does not test the setting that matters for deployed agents, where optimization is applied re",
+      "importance": 3,
+      "date": "2026-07-15",
+      "added_at": "2026-07-16T03:04:52.613940Z",
+      "status": "new"
+    },
+    {
+      "id": "arxiv-2607.13940",
+      "source": "OpenAI",
+      "title": "A Self-Evolving Agent for Longitudinal Personal Health Management",
+      "url": "https://arxiv.org/abs/2607.13940",
+      "summary": "Personal health management unfolds over repeated encounters, yet most health AI systems treat each request in isolation. We developed HealthClaw, an open-source agent architecture that updates support as a person's routines, preferences, measurements and risks change. It separates shared safety rule",
+      "importance": 3,
+      "date": "2026-07-15",
+      "added_at": "2026-07-16T03:04:52.613949Z",
+      "status": "new"
+    },
+    {
+      "id": "openai-why-teens-deserve-access-safe-ai",
+      "source": "OpenAI",
+      "title": "Why teens deserve access to safe AI",
+      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
+      "summary": "Learn how OpenAI is making ChatGPT safer for teens with age-appropriate protections, learning tools, parental controls, and expert partnerships.",
+      "importance": 4,
+      "date": "2026-07-16",
+      "added_at": "2026-07-16T19:43:26.405704Z",
+      "status": "new"
+    },
+    {
+      "id": "openai-cars24",
+      "source": "OpenAI",
+      "title": "How Cars24 scales conversations and builds faster with OpenAI",
+      "url": "https://openai.com/index/cars24",
+      "summary": "Cars24 uses OpenAI-powered voice and chat agents to handle 1M+ monthly conversation minutes, recover 12% of lost leads, and bring agentic workflows to teams across the company.",
+      "importance": 4,
+      "date": "2026-07-16",
+      "added_at": "2026-07-16T19:43:26.405714Z",
+      "status": "new"
+    }
+  ]
+}

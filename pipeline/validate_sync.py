@@ -3,13 +3,12 @@
 Валидатор синхронизации Telegram-блог.
 Сверяет published-посты в Telegram pending_queue с blog pending_queue.
 """
+from _config import PENDING_QUEUE, SYNC_STATUS
+
 import json
 import sys
 from pathlib import Path
 
-TELEGRAM_Q = Path("/home/stas/.openclaw/workspace/projects/telegram-ai-channel/pending_queue.json")
-BLOG_Q     = Path("/home/stas/.openclaw/workspace/projects/ai-blog/pending_queue.json")
-STATUS_FILE= Path("/home/stas/.openclaw/workspace/projects/telegram-ai-channel/sync_status.json")
 
 
 def load_json(path):
@@ -18,8 +17,8 @@ def load_json(path):
 
 
 def main():
-    tg_q = load_json(TELEGRAM_Q)
-    bl_q = load_json(BLOG_Q)
+    tg_q = load_json(PENDING_QUEUE)
+    bl_q = load_json(PENDING_QUEUE)
 
     tg_pub = {p["id"] for p in tg_q.get("published", [])}
     bl_pub = {p["id"] for p in bl_q.get("published", [])}
@@ -40,7 +39,7 @@ def main():
     }
 
     # Save status
-    with open(STATUS_FILE, "w") as f:
+    with open(SYNC_STATUS, "w") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
     # Print report

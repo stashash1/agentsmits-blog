@@ -13,18 +13,19 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
 from metrics import (
-    get_status, print_status, _load_metrics, METRICS_PATH, LOG_PATH,
+    get_status, print_status, _load_metrics, METRICS, EVENTS_LOG,
 )
+from _config import EVENTS_LOG, METRICS
 import argparse
 from datetime import datetime, timezone, timedelta
 
 
 def show_tail(n):
     """Показать последние N событий из events.log."""
-    if not os.path.exists(LOG_PATH):
+    if not os.path.exists(EVENTS_LOG):
         print("events.log not found")
         return
-    with open(LOG_PATH) as f:
+    with open(EVENTS_LOG) as f:
         lines = f.readlines()
     print(f"=== Последние {n} событий из events.log ===")
     for line in lines[-n:]:
