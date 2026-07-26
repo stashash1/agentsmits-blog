@@ -153,7 +153,7 @@ def fix_duplicates(days=30, dry_run=True):
         return len(to_remove)
 
     # Backup
-    backup = PENDING_QUEUE + f".bak-dedup-audit-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+    backup = str(PENDING_QUEUE) + f".bak-dedup-audit-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
     shutil.copy2(PENDING_QUEUE, backup)
     print(f"Backup: {backup}")
 

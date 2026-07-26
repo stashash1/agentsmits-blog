@@ -55,7 +55,11 @@ QUIET_HOURS_END = int(os.environ.get("AGENTSBLOG_QUIET_HOURS_END", "8"))      # 
 TZ_OFFSET_HOURS = int(os.environ.get("AGENTSBLOG_TZ_OFFSET", "3"))  # MSK = UTC+3
 
 # Telegram publishing (openclaw CLI)
-TELEGRAM_ACCOUNT = os.environ.get("AGENTSBLOG_TELEGRAM_ACCOUNT", "agentsmits")
+# NOTE 2026-07-26: account "agentsmits" was lost (renamed/removed); the working
+# OpenClaw Telegram account is "default" (bot @AgentsSmits_bot, posting to
+# @agentsSmits). The pipeline was silently failing with
+# "Telegram bot token missing" since ~14-Jul because of this.
+TELEGRAM_ACCOUNT = os.environ.get("AGENTSBLOG_TELEGRAM_ACCOUNT", "default")
 TELEGRAM_CHANNEL = os.environ.get("AGENTSBLOG_TELEGRAM_CHANNEL", "telegram")
 TELEGRAM_TARGET = os.environ.get("AGENTSBLOG_TELEGRAM_TARGET", "@agentsSmits")
 

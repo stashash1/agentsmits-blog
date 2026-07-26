@@ -206,7 +206,7 @@ def main():
     log_event(SCRIPT_NAME, "started", {"run_ts": run_ts, "run_id": run_id})
     log_run_event(run_id, "analyze", "started", {"run_ts": run_ts})
     
-    lock_path = PENDING_QUEUE + '.lock'
+    lock_path = str(PENDING_QUEUE) + '.lock'
     lock_fd = None
     try:
         lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR)

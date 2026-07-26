@@ -160,7 +160,7 @@ def main():
     run_ts = datetime.now(timezone.utc).isoformat()
     log_event(SCRIPT_NAME, "started", {"run_ts": run_ts})
     
-    lock_path = PENDING_QUEUE + '.daily_lock'
+    lock_path = str(PENDING_QUEUE) + '.daily_lock'
     lock_fd = None
     try:
         lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR)

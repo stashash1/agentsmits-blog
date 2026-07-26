@@ -36,16 +36,40 @@ def save_queue(d):
         json.dump(d, f, indent=2, ensure_ascii=False)
 
 def sync_to_blog():
-    """Regenerate static site from current data/ contents."""
+    """Regenerate static site from current data/ contents.
+
+    Wrapped in try/except so a blog-sync failure doesn't crash the publish
+    cycle — Telegram publishing has already succeeded by this point and
+    must not be rolled back. Also uses the correct ``log_blog_sync``
+    signature (article_ids, ok, duration_ms, error).
+    """
     t0 = time.monotonic()
-    result = subprocess.run(
-        ["python3", str(GENERATE_SITE_SCRIPT)],
-        cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=300,
-    )
-    duration_ms = int((time.monotonic() - t0) * 1000)
-    log_blog_sync(result.returncode, duration_ms, article_id="(publish)",
-                  site="agentsmits-blog")
-    return result.returncode, result.stdout, result.stderr, duration_ms
+    try:
+        result = subprocess.run(
+            ["python3", str(GENERATE_SITE_SCRIPT)],
+            cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=300,
+        )
+        duration_ms = int((time.monotonic() - t0) * 1000)
+        log_blog_sync(
+            article_ids=["(publish)"],
+            ok=(result.returncode == 0),
+            duration_ms=duration_ms,
+            error=(result.stderr or "")[:300] if result.returncode != 0 else None,
+        )
+        return result.returncode, result.stdout, result.stderr, duration_ms
+    except Exception as e:
+        duration_ms = int((time.monotonic() - t0) * 1000)
+        print(f"sync_to_blog failed, but continuing: {e}", file=sys.stderr)
+        try:
+            log_blog_sync(
+                article_ids=["(publish)"],
+                ok=False,
+                duration_ms=duration_ms,
+                error=str(e)[:300],
+            )
+        except Exception:
+            pass
+        return 1, "", str(e), duration_ms
 
 
 
