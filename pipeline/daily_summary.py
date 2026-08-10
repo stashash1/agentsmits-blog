@@ -15,10 +15,11 @@ import re
 import fcntl
 import time
 from datetime import datetime, timezone
-from collections import Counter
+from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(__file__))
 from metrics import log_event, log_error, is_quiet_hours, was_recently_sent, record_sent
+from narrative_store import load_narratives  # Stage 2: группировка по narratives
 
 
 SCRIPT_NAME = "daily_summary"
@@ -30,15 +31,16 @@ SUMMARY_PROMPT_TEMPLATE = """Ты — главный редактор Telegram-�
 СТРУКТУРА ПОСТА:
 1. Заголовок-тезис (одно предложение — главный вывод дня)
 2. Цифры дня (сколько статей, от каких источников)
-3. Саммари ключевых событий (3-5 штук, каждое 1-2 предложения)
+3. ГЛАВНЫЕ НАРРАТИВЫ ДНЯ — структура (заголовок нарратива, что объединяет, ключевые факты). Это самая важная часть. Если есть нарратив с 3+ событиями — он заслуживает отдельного абзаца.
 4. Что это значит для нас (конкретно, не абстрактно)
 5. Риск или возможность (один конкретный)
 6. Одна мысль, которую стоит запомнить
 
 ПРАВИЛА:
 - Пиши на русском, живым языком
-- Будьdirect — говори что думаешь, а не "возможно, вероятно"
+- Будь direct — говори что думаешь, а не "возможно, вероятно"
 - Цифры важны — если 14 статей от OpenAI, напиши об этом
+- НАРРАТИВЫ важнее списка отдельных статей — если 5 событий одного сюжета, не делай 5 пунктов, делай один сюжет
 - Связывай с агент-темой: как это влияет на разработку, внедрение, рынок агентов
 - Не используй markdown-разметку (никаких *, #, >)
 - Тон: уверенный, аналитичный, с характером
@@ -48,7 +50,6 @@ SUMMARY_PROMPT_TEMPLATE = """Ты — главный редактор Telegram-�
 Статей опубликовано: {total}
 Источники: {sources}
 
-СТАТЬИ:
 {articles}
 
 Напиши пост."""
@@ -65,30 +66,95 @@ def get_today_articles(queue):
     return today_posts
 
 def build_articles_text(posts):
+    """Stage 2 (quality-news-analyst, 2026-08-10): группируем по narratives.
+    Сначала multi-item narratives (с заголовком), потом — singletons.
+    """
+    narr_data = load_narratives()
+    narratives_by_id = {n['id']: n for n in narr_data.get('narratives', [])}
+
+    # Группируем posts по narrative_id
+    grouped: dict[str | None, list[dict]] = defaultdict(list)
+    for p in posts:
+        nid = p.get('narrative_id')
+        grouped[nid].append(p)
+
     lines = []
-    for i, p in enumerate(posts, 1):
-        title = p.get('title', 'Без названия')
-        source = p.get('source', 'Unknown')
-        url = p.get('url', '')
-        analysis = p.get('analysis', {})
-        summary = analysis.get('summary', p.get('summary', ''))
-        agent_impact = analysis.get('agent_impact', '')
-        business_impact = analysis.get('business_impact', '')
-        it_impact = analysis.get('it_impact', '')
-        
-        lines.append(f"--- {i}. {source} ---")
-        lines.append(f"Заголовок: {title}")
-        if summary:
-            lines.append(f"Кратко: {summary}")
-        if agent_impact:
-            lines.append(f"Влияние на агентов: {agent_impact}")
-        if business_impact:
-            lines.append(f"Влияние на бизнес: {business_impact}")
-        if it_impact:
-            lines.append(f"Влияние на IT: {it_impact}")
-        lines.append(f"URL: {url}")
+    article_idx = 0
+
+    # Сначала — нарративы с size ≥ 2 (multi-item stories)
+    multi_narratives = sorted(
+        [n for n in narr_data.get('narratives', [])
+         if n['id'] in grouped and len(grouped[n['id']]) >= 2],
+        key=lambda n: -len(grouped[n['id']]),
+    )
+    for n in multi_narratives:
+        narr_posts = grouped[n['id']]
+        article_idx += 1
+        lines.append(f"=== НАРРАТИВ #{article_idx}: {n.get('title','')[:80]} ===")
+        lines.append(f"Связанные entities: {', '.join(n.get('entities', [])[:8])}")
+        lines.append(f"Событий: {len(narr_posts)}")
         lines.append("")
-    
+        for sub_i, p in enumerate(narr_posts, 1):
+            title = p.get('title', 'Без названия')
+            source = p.get('source', 'Unknown')
+            url = p.get('url', '')
+            analysis = p.get('analysis', {})
+            summary = analysis.get('summary', p.get('summary', ''))
+            lines.append(f"  {sub_i}. [{source}] {title}")
+            if summary:
+                lines.append(f"     {summary[:200]}")
+            lines.append(f"     {url}")
+        lines.append("")
+
+    # Потом — singletons
+    singletons = grouped.get(None, [])
+    if singletons:
+        lines.append("=== ОТДЕЛЬНЫЕ СОБЫТИЯ ===")
+        for p in singletons:
+            article_idx += 1
+            title = p.get('title', 'Без названия')
+            source = p.get('source', 'Unknown')
+            url = p.get('url', '')
+            analysis = p.get('analysis', {})
+            summary = analysis.get('summary', p.get('summary', ''))
+            agent_impact = analysis.get('agent_impact', '')
+            business_impact = analysis.get('business_impact', '')
+            lines.append(f"--- {article_idx}. {source} ---")
+            lines.append(f"Заголовок: {title}")
+            if summary:
+                lines.append(f"Кратко: {summary}")
+            if agent_impact:
+                lines.append(f"Влияние на агентов: {agent_impact}")
+            if business_impact:
+                lines.append(f"Влияние на бизнес: {business_impact}")
+            lines.append(f"URL: {url}")
+            lines.append("")
+
+    # Если narratives.json нет вообще — fallback на плоский список (старый код)
+    if not narr_data.get('narratives') and not singletons:
+        lines.append("(legacy: narratives.json не заполнен, плоский вывод)")
+        for i, p in enumerate(posts, 1):
+            title = p.get('title', 'Без названия')
+            source = p.get('source', 'Unknown')
+            url = p.get('url', '')
+            analysis = p.get('analysis', {})
+            summary = analysis.get('summary', p.get('summary', ''))
+            agent_impact = analysis.get('agent_impact', '')
+            business_impact = analysis.get('business_impact', '')
+            it_impact = analysis.get('it_impact', '')
+            lines.append(f"--- {i}. {source} ---")
+            lines.append(f"Заголовок: {title}")
+            if summary:
+                lines.append(f"Кратко: {summary}")
+            if agent_impact:
+                lines.append(f"Влияние на агентов: {agent_impact}")
+            if business_impact:
+                lines.append(f"Влияние на бизнес: {business_impact}")
+            if it_impact:
+                lines.append(f"Влияние на IT: {it_impact}")
+            lines.append(f"URL: {url}")
+            lines.append("")
+
     return "\n".join(lines)
 
 def call_llm(prompt, timeout=90):
