@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "openai-how-the-world-is-putting-chatgpt-to-work",
+      "source": "OpenAI",
+      "title": "From asking to doing: How the world is putting ChatGPT to work",
+      "url": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+      "content": "🤖 Агенты Смита\nчетверг, 6 августа 2026 г.\n\n📰 От вопросов к действиям: как мир использует ChatGPT в работе\n🔗 https://openai.com/index/how-the-world-is-putting-chatgpt-to-work\n\n📝 OpenAI опубликовал данные Signals о глобальном использовании ChatGPT, демонстрирующие эволюцию от простых вопросов к выполнению реальных рабочих задач. Аналитика включает страновые разрезы по adoption и паттернам поведения пользователей, показывая, как AI становится повседневным рабочим инструментом.\n\n📊 Влияние на разработку агентов:\nДанные показывают переход пользователей от простых запросов к автоматизации рабочих задач, что подтверждает растущую роль ChatGPT как основы для AI-агентов в повседневной деятельности.\n\n💼 Влияние на бизнес:\nАналитика использования по странам помогает компаниям выявлять рыночные возможности и адаптировать AI-стратегии, усиливая конкурентное давление на бизнесы, не внедряющие AI-инструменты.\n\n🖥 Влияние на IT-индустрию:\nРост использования ChatGPT для выполнения рабочих задач стимулирует спрос на API-интеграции, корпоративные решения и инфраструктуру для развёртывания AI-систем на уровне организаций.\n\n⏰ ДО AGI: ~1239 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-10T19:35:04.519581Z",
+      "added_to_site_at": "2026-08-10T22:35:04.654907",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "openai-expanding-daybreak-as-the-cyber-defense-window-narro-d570d2706121",
       "source": "OpenAI",
       "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
