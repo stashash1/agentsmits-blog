@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "google-google-ai-updates-july-2026",
+      "source": "Google AI",
+      "title": "The latest AI news we announced in July 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/",
+      "content": "🤖 Агенты Смита\nвторник, 4 августа 2026 г.\n\n📰 Последние новости об ИИ, объявленные Google в июле 2026 года\n🔗 https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/\n\n📝 Google подводит итоги июльских анонсов 2026 года, включающих обновления моделей Gemini от Google DeepMind, новые инструменты для разработчиков, улучшения инфраструктуры Google Cloud, а также новости в области квантовых вычислений и безопасности ИИ.\n\n📊 Влияние на разработку агентов:\nРасширение линейки Gemini и новых инструментов разработчика усиливает возможности для создания более автономных и контекстно-осведомлённых AI-агентов на инфраструктуре Google.\n\n💼 Влияние на бизнес:\nКомплексные обновления Gemini и сервисов Google Cloud усиливают конкурентное давление на рынке корпоративного ИИ и стимулируют инвестиции в экосистему Google AI.\n\n🖥 Влияние на IT-индустрию:\nНовые модели Gemini и обновления облачной инфраструктуры Google предоставляют разработчикам расширенные возможности для интеграции ИИ в приложения и сервисы.\n\n⏰ ДО AGI: ~1239 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-10T18:35:04.609948Z",
+      "added_to_site_at": "2026-08-10T21:35:04.744244",
+      "breakthrough_score": 2,
+      "breakthrough_reasons": [
+        "importance_boost:+2"
+      ]
+    },
+    {
       "id": "github-copilot-2026-08-10-copilot-on-web-expands-conversati-4ed21d600b20",
       "source": "GitHub Copilot",
       "title": "Copilot on web expands conversation controls",
