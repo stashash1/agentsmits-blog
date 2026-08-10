@@ -23,6 +23,7 @@ from metrics import (
     log_run_event, log_alert, patch_audit_article,
 )
 from _config import PENDING_QUEUE, TELEGRAM_ACCOUNT, PROJECT_ROOT, GENERATE_SITE_SCRIPT
+from decay import apply_decay_to_pending  # QW2: tier-based decay annotation
 
 
 SCRIPT_NAME = "publish"
@@ -198,9 +199,15 @@ def send_telegram(text, retries=3, delay=8):
             # is blocked by dedup. Without this, the CLI RC=1 path can
             # produce a real duplicate in @agentsSmits because the retry
             # also reaches Telegram successfully.
+            #
+            # 2026-08-06 fix: also return 0 here, NOT just record. The
+            # retry loop otherwise fires attempt+1 after 8s and produces
+            # a real second message. Returning 0 (msg_id unknown) lets
+            # the caller mark the article as published without re-sending.
             if not sent_recorded:
                 record_sent(text, 0)
                 sent_recorded = True
+            return 0
         except subprocess.TimeoutExpired:
             duration_ms = int((time.monotonic() - t0) * 1000)
             # The CLI may have actually delivered the message before the
@@ -310,6 +317,11 @@ def main():
         published_ids = {p['id'] for p in published}
         published_msg_ids = {p.get('message_id') for p in published if p.get('message_id')}
 
+        # QW2 (quality-news-analyst, 2026-08-10): annotate pending with decay.
+        # Decay — soft signal для sort. Старые новости получают более низкий
+        # decayed_importance, но не скипаются. QW2 делает "свежее важнее".
+        apply_decay_to_pending(pending)
+
         # Guard 1: clean up duplicate IDs in pending[] (defensive — keeps queue
         # tidy in case some other writer added the same article twice).
         seen_in_pending = set()
@@ -386,9 +398,51 @@ def main():
                           {"published": 0, "reason": "nothing_to_publish"})
             return
 
-        # Sort: importance desc, then date desc
-        to_publish.sort(key=lambda x: (-x.get('importance', 4), x.get('date', '')))
-        to_publish = to_publish[:2]
+        # Sort: decayed_importance desc (QW2 soft signal), then importance desc,
+        # then date desc. QW2 учитывает age × tier-half-life: свежее важнее.
+        to_publish.sort(key=lambda x: (
+            -x.get('decayed_importance', x.get('importance', 0)),
+            -x.get('importance', 4),
+            x.get('date', ''),
+        ))
+        # Pre-filter: only items that actually have analysis. Without this,
+        # the [:5] slice can include items whose analysis is still missing,
+        # and we waste publish slots on `no_analysis` skips instead of
+        # advancing the queue. 2026-08-06 fix.
+        to_publish = [p for p in to_publish
+                      if isinstance(p.get('analysis'), dict)
+                      and p['analysis'].get('agent_impact')]
+        # QW4 (quality-news-analyst, 2026-08-10): skip importance < 3.
+        # importance=2 — это 91/163 items в pending (56%), по сути шум.
+        # Tier-1 source base=4 + bonuses всегда даёт importance >= 3,
+        # так что tier-1 breaking news не отсекается. Backlog discipline:
+        # 163 → ~69 items в pending после фильтра.
+        pre_qw4_count = len(to_publish)
+        to_publish = [p for p in to_publish if (p.get('importance') or 0) >= 3]
+        qw4_skipped = pre_qw4_count - len(to_publish)
+        if qw4_skipped:
+            log_event(SCRIPT_NAME, "qw4_importance_filter", {
+                "skipped_count": qw4_skipped,
+                "kept_count": len(to_publish),
+                "run_id": run_id,
+            })
+        if not to_publish:
+            print(f"QW4: nothing to publish (skipped {qw4_skipped} importance<3).")
+            log_event(SCRIPT_NAME, "completed", {
+                "run_ts": run_ts,
+                "run_id": run_id,
+                "published": 0,
+                "reason": "qw4_all_below_threshold",
+                "skipped_low_importance": qw4_skipped,
+            })
+            log_run_event(run_id, "publish", "completed",
+                          {"published": 0, "reason": "qw4_all_below_threshold",
+                           "skipped_low_importance": qw4_skipped})
+            return
+        # Batch size: publish more per run so we can actually drain the backlog
+        # and reach fresh items. 2026-08-06: bumped from 2 to 5 per Stas's request.
+        # Cron runs every 30 min, so 5/run = ~10/hour, ~80/day.
+        to_publish = to_publish[:5]
         
         agi = queue.get('agi_counter', {})
         base_days = agi.get('base_days', 1460)
