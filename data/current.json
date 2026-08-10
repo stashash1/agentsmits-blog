@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "openai-expanding-daybreak-as-the-cyber-defense-window-narro-d570d2706121",
+      "source": "OpenAI",
+      "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
+      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+      "content": "🤖 Агенты Смита\nпонедельник, 10 августа 2026 г.\n\n📰 Расширение Daybreak по мере сужения окна киберзащиты\n🔗 https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows\n\n📝 OpenAI выпускает специализированную модель GPT-5.6-Cyber через платформу Daybreak Red для авторизованных исследователей безопасности. Модель предназначена для поиска уязвимостей, валидации эксплойтов и проведения тестов безопасности. Расширение Daybreak происходит на фоне сокращающегося окна времени для реагирования на киберугрозы.\n\n📊 Влияние на разработку агентов:\nПредставляет специализированную модель GPT-5.6-Cyber, расширяющую возможности AI-агентов в автономном анализе уязвимостей, валидации эксплойтов и тестировании безопасности в рамках платформы Daybreak Red.\n\n💼 Влияние на бизнес:\nУсиливает позиции OpenAI на рынке корпоративной кибербезопасности, создавая новый сегмент AI-инструментов для авторизованных исследователей и потенциально меняя баланс сил между защитниками и атакующими в индустрии безопасности.\n\n🖥 Влияние на IT-индустрию:\nУскоряет автоматизацию процессов vulnerability research и penetration testing в IT-инфраструктуре, снижая порог входа в профессиональный анализ безопасности и требуя новых стандартов контроля доступа к AI-инструментам такого класса.\n\n⏰ ДО AGI: ~1239 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-10T19:05:04.421615Z",
+      "added_to_site_at": "2026-08-10T22:05:04.558979",
+      "breakthrough_score": 2,
+      "breakthrough_reasons": [
+        "importance_boost:+2"
+      ]
+    },
+    {
       "id": "google-google-ai-updates-july-2026",
       "source": "Google AI",
       "title": "The latest AI news we announced in July 2026",
