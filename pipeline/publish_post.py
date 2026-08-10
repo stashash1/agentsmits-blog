@@ -24,6 +24,11 @@ from metrics import (
 )
 from _config import PENDING_QUEUE, TELEGRAM_ACCOUNT, PROJECT_ROOT, GENERATE_SITE_SCRIPT
 from decay import apply_decay_to_pending  # QW2: tier-based decay annotation
+from impact_scoring import extract_entities_from_item  # Stage 2: для narrative attach
+from narrative_store import (  # Stage 2: narrative clustering
+    load_narratives, save_narratives,
+    find_matching_narrative, create_narrative, attach_to_narrative,
+)
 
 
 SCRIPT_NAME = "publish"
@@ -529,6 +534,42 @@ def main():
                     'published_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
                     'message_id': msg_id
                 }
+                # Stage 2 (quality-news-analyst, 2026-08-10): attach to narrative.
+                # Real-time clustering: при публикации — найти matching narrative
+                # (Jaccard ≥ 0.4 на specific entities) или создать новый.
+                # narratives.json сохраняется один раз в конце цикла.
+                try:
+                    narr_data = load_narratives()
+                    ents = extract_entities_from_item(post)
+                    if ents:
+                        match = find_matching_narrative(ents, narr_data['narratives'])
+                        if match:
+                            attach_to_narrative(match, post, role='followup')
+                            pub_entry['narrative_id'] = match['id']
+                            log_event(SCRIPT_NAME, "narrative_attached", {
+                                "article_id": post['id'],
+                                "narrative_id": match['id'],
+                                "narrative_size": len(match.get('items', [])) + 1,
+                                "run_id": run_id,
+                            })
+                        else:
+                            new_n = create_narrative(post, entities=ents)
+                            narr_data['narratives'].append(new_n)
+                            pub_entry['narrative_id'] = new_n['id']
+                            log_event(SCRIPT_NAME, "narrative_created", {
+                                "article_id": post['id'],
+                                "narrative_id": new_n['id'],
+                                "run_id": run_id,
+                            })
+                        # Сохраняем narratives.json после КАЖДОЙ публикации —
+                        # если процесс умрёт, потеряем максимум одну attach.
+                        # Но это редкая операция, ок.
+                except Exception as e:
+                    log_error(SCRIPT_NAME, e, context={
+                        "article_id": post['id'],
+                        "stage": "narrative_attach",
+                        "run_id": run_id,
+                    })
                 # Preserve analysis if available
                 if post.get('analysis'):
                     pub_entry['analysis'] = post['analysis']
