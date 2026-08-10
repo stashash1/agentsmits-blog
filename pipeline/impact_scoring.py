@@ -10,6 +10,10 @@ AI Impact Scoring — keyword-based + source-tier scoring для новосте�
 - RELEASE_VERSION_BONUS (по упоминанию модели/версии)
 - PENALTIES (за нерелевантный контент)
 - ФИНАЛЬНЫЙ clamp в [1, 5]
+
+QW1 (quality-news-analyst, 2026-08-10): добавлен KNOWN_ENTITIES (~80 keywords:
+компании, модели, исследователи, продукты) и хелперы extract_entities.
+Это улучшает детекцию "важных" новостей без явных "release/launch" слов.
 """
 
 from __future__ import annotations
@@ -47,6 +51,80 @@ TIER_WEIGHTS = {
     2: 3,  # base 3
     3: 2,  # base 2
 }
+
+# === Known entities (QW1, quality-news-analyst 2026-08-10) ===
+# Используется и для scoring (+1 если ≥3 entities в тексте), и для narrative
+# clustering в narrative_store.py. Все keywords — lowercase.
+KNOWN_ENTITIES = {
+    # Companies
+    "anthropic", "openai", "google", "deepmind", "microsoft", "meta",
+    "deepseek", "xai", "x.ai", "mistral", "cohere", "perplexity",
+    "huggingface", "hugging face", "nvidia", "apple", "amazon",
+    "alibaba", "bytedance", "baidu", "ibm", "salesforce", "oracle",
+    "tencent", "samsung", "tesla", "stability", "inflection",
+    "01-ai", "moonshot", "zhipu", "kimi", "reka", "ai21",
+    "character ai", "elevenlabs", "suno", "udio", "runway",
+    # Products / models
+    "gpt-5", "gpt-4", "gpt-3", "chatgpt", "claude", "sonnet", "opus",
+    "haiku", "gemini", "llama", "grok", "mistral-large", "mixtral",
+    "deepseek-r1", "deepseek-v3", "qwen", "phi", "copilot", "cursor",
+    "claude code", "dall-e", "sora", "veo", "whisper", "embedding",
+    # Researchers / people
+    "altman", "amodei", "sutskever", "hinton", "lecun", "fei-fei li",
+    "karpathy", "ilya", "musk", "andrej karpathy", "yann lecun",
+    "geoffrey hinton", "sam altman", "dario amodei", "elon musk",
+    # Tech concepts
+    "agent", "agents", "agentic", "rag", "fine-tuning", "rlhf", "rlaif",
+    "embedding", "transformer", "diffusion", "reasoning",
+    "multimodal", "vision", "speech", "context window", "open source",
+    "open-source", "open weights", "sota", "benchmark",
+    "robot", "robotics", "embodied", "autonomous", "agi", "asi",
+    "superintelligence", "alignment", "safety", "regulation", "policy",
+    "chain-of-thought", "function calling", "tool use",
+    # Business events
+    "ipo", "acquisition", "funding", "valuation", "investment",
+    "merger", "partnership", "revenue",
+}
+
+
+def normalize_entity(s: str) -> str:
+    s = (s or "").lower().strip()
+    s = re.sub(r"[^\w\s\-\.]", "", s)
+    s = re.sub(r"\s+", " ", s)
+    return s.strip()
+
+
+def extract_entities(text: str) -> list[str]:
+    """Извлекает entities из текста (title + summary + analysis).
+    Возвращает отсортированный список уникальных сущностей.
+    """
+    if not text:
+        return []
+    text_l = text.lower()
+    found = set()
+    for kw in KNOWN_ENTITIES:
+        if kw in text_l:
+            found.add(kw)
+    return sorted(found)
+
+
+def extract_entities_from_item(item: dict) -> list[str]:
+    """Извлекает entities из item (title + analysis.translated_title +
+    analysis.summary + analysis.tags)."""
+    parts = [
+        item.get("title") or "",
+        item.get("summary") or "",
+    ]
+    analysis = item.get("analysis") or {}
+    parts.extend([
+        analysis.get("translated_title") or "",
+        analysis.get("summary") or "",
+    ])
+    tags = analysis.get("tags") or []
+    parts.extend(tags)
+    text = " ".join(parts)
+    return extract_entities(text)
+
 
 # === AI Impact keywords (каждый матч +N к importance) ===
 HIGH_IMPACT_KEYWORDS = [
