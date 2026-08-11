@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "google-amie-video-consultations",
+      "source": "Google AI",
+      "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
+      "content": "🤖 Агенты Смита\nвторник, 11 августа 2026 г.\n\n📰 AMIE, наша исследовательская медицинская AI-система, демонстрирует возможности клинических видеоконсультаций в реальном времени в первом в своём роде исследовании\n🔗 https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/\n\n📝 Google представил результаты исследования AMIE (Articulate Medical Intelligence Explorer) — AI-системы, способной проводить клинические видеоконсультации в реальном времени. В исследовании AMIE выступала в роли автономного диагностического агента, общаясь с пациентами через видеосвязь, демонстрируя навыки клинического обследования и рассуждения. Это первый случай, когда медицинская AI-система такого уровня показала работу в формате живого видеоприёма.\n\n📊 Влияние на разработку агентов:\nAMIE представляет собой специализированного AI-агента для медицинских консультаций, способного вести диалог в реальном времени и анализировать визуальную информацию, расширяя класс автономных агентов в здравоохранении.\n\n💼 Влияние на бизнес:\nРазвитие медицинских AI-агентов создаёт конкурентное давление на рынке телемедицины и цифрового здравоохранения, открывая возможности для автоматизации первичного приёма и снижения затрат на врачебные консультации.\n\n🖥 Влияние на IT-индустрию:\nСистема стимулирует развитие мультимодальных AI-моделей, объединяющих обработку видео, аудио и медицинских данных в реальном времени, а также инфраструктуры для безопасной интеграции AI в клинические процессы.\n\n⏰ ДО AGI: ~1238 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-11T17:35:04.622957Z",
+      "added_to_site_at": "2026-08-11T20:35:04.771321",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "openai-testing-ads-in-chatgpt",
       "source": "OpenAI",
       "title": "Testing ads in ChatGPT",
