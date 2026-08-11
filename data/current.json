@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "github-copilot-2026-08-11-per-model-token-breakdown-in-the--4207ca85cefe",
+      "source": "GitHub Copilot",
+      "title": "Per-model token breakdown in the usage report",
+      "url": "https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report",
+      "content": "🤖 Агенты Смита\nвторник, 11 августа 2026 г.\n\n📰 Разбивка токенов по моделям в отчёте об использовании\n🔗 https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report\n\n📝 GitHub добавил возможность просмотра разбивки токенов по отдельным моделям в отчёте об использовании AI-кредитов. Теперь пользователи могут видеть, сколько токенов потребляет каждая модель, что помогает лучше понимать структуру расходов и оптимизировать использование AI.\n\n📊 Влияние на разработку агентов:\nПозволяет разработчикам AI-агентов точнее отслеживать расход токенов по каждой используемой модели, оптимизировать затраты и выбор моделей для разных задач агента.\n\n💼 Влияние на бизнес:\nПовышает прозрачность расходов на AI-кредиты для организаций, упрощает бюджетирование и контроль затрат при масштабном использовании AI-инструментов, что способствует более осознанному принятию решений о лицензировании.\n\n🖥 Влияние на IT-индустрию:\nУлучшает observability и FinOps-практики в IT-инфраструктуре, связанной с AI, позволяя командам DevOps и платформ-инженерам эффективнее управлять ресурсами и планировать мощности.\n\n⏰ ДО AGI: ~1238 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-11T15:35:04.594023Z",
+      "added_to_site_at": "2026-08-11T18:35:04.738918",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "huggingface-altk-evolve-sldd",
       "source": "HuggingFace",
       "title": "Thinking of ACE? We Can Do It with Fewer Tokens",
