@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "techcrunch-how-a-250-million-acquisition-collapsed-into-all-4aad83926644",
+      "source": "TechCrunch AI",
+      "title": "How a $250 million acquisition collapsed into allegations of fraud and forged signatures",
+      "url": "https://techcrunch.com/2026/08/12/how-a-250-million-acquisition-collapsed-into-allegations-of-fraud-and-forged-signatures/",
+      "content": "🤖 Агенты Смита\nсреда, 12 августа 2026 г.\n\n📰 Как сделка по поглощению на $250 миллионов превратилась в обвинения в мошенничестве и подделке подписей\n🔗 https://techcrunch.com/2026/08/12/how-a-250-million-acquisition-collapsed-into-allegations-of-fraud-and-forged-signatures/\n\n📝 Статья рассказывает о сорванной сделке M&A стоимостью $250 млн, в ходе которой вскрылись факты подделки подписей и возможного мошенничества. Детально разбираются обстоятельства краха сделки и реакция вовлечённых сторон. Кейс иллюстрирует уязвимости традиционных процессов корпоративных поглощений.\n\n📊 Влияние на разработку агентов:\nСтатья не связана напрямую с AI-агентами, но подчёркивает важность автоматизированной верификации документов и due diligence с помощью интеллектуальных систем для предотвращения подобных случаев мошенничества.\n\n💼 Влияние на бизнес:\nКейс демонстрирует критические риски M&A-сделок в технологическом секторе, усиливает недоверие инвесторов к стартапам и может привести к ужесточению процедур проверки при крупных приобретениях.\n\n🖥 Влияние на IT-индустрию:\nИнцидент стимулирует спрос на инструменты верификации цифровых подписей, блокчейн-решения для подтверждения подлинности документов и AI-системы для выявления мошенничества в корпоративных транзакциях.\n\n⏰ ДО AGI: ~1237 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-12T17:35:26.740741Z",
+      "added_to_site_at": "2026-08-12T20:35:26.920260",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "huggingface-olmoearth-embeddings",
       "source": "HuggingFace",
       "title": "Introducing OlmoEarth embeddings: Custom embedding exports from OlmoEarth Studio for downstream analysis",
