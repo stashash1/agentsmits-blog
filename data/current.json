@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "huggingface-olmoearth-embeddings",
+      "source": "HuggingFace",
+      "title": "Introducing OlmoEarth embeddings: Custom embedding exports from OlmoEarth Studio for downstream analysis",
+      "url": "https://huggingface.co/blog/allenai/olmoearth-embeddings",
+      "content": "🤖 Агенты Смита\nсреда, 12 августа 2026 г.\n\n📰 Представляем эмбеддинги OlmoEarth: пользовательские экспорты эмбеддингов из OlmoEarth Studio для дальнейшего анализа\n🔗 https://huggingface.co/blog/allenai/olmoearth-embeddings\n\n📝 AllenAI выпустила OlmoEarth embeddings — функцию экспорта пользовательских эмбеддингов из OlmoEarth Studio, предназначенную для дальнейшего анализа геопространственных данных. Инструмент позволяет исследователям и разработчикам получать векторные представления спутниковых снимков и использовать их в собственных задачах машинного обучения. Решение интегрировано с экосистемой Hugging Face и ориентировано на упрощение работы с моделями Earth Observation.\n\n📊 Влияние на разработку агентов:\nПредоставляет разработчикам AI-агентов готовые геопространственные эмбеддинги от AllenAI, которые можно интегрировать в пайплайны агентов для задач мониторинга окружающей среды, сельского хозяйства и анализа спутниковых снимков без необходимости обучения собственных моделей.\n\n💼 Влияние на бизнес:\nСнижает порог входа для компаний в сфере геоаналитики и Earth Observation, позволяя быстрее создавать продукты на основе спутниковых данных и сокращать затраты на вычислительные ресурсы при обработке больших геопространственных массивов.\n\n🖥 Влияние на IT-индустрию:\nРасширяет экосистему открытых моделей Hugging Face в нише геопространственного ИИ, упрощает интеграцию предобученных эмбеддингов в ML-пайплайны через стандартный экспорт и стимулирует развитие инструментов для downstream-анализа.\n\n⏰ ДО AGI: ~1237 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-12T17:05:06.239782Z",
+      "added_to_site_at": "2026-08-12T20:05:06.416014",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "techcrunch-lovable-confirms-new-13-3b-valuation-raises-anot-a8dd77df5184",
       "source": "TechCrunch AI",
       "title": "Lovable confirms new $13.3B valuation, raises another $400M",
