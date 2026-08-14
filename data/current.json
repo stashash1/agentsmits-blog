@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "meta-metas-compliance-with-australias-social-media-ban",
+      "source": "Meta AI",
+      "title": "Meta&#8217;s Compliance with Australia&#8217;s Social Media Ban",
+      "url": "https://about.fb.com/news/2026/08/metas-compliance-with-australias-social-media-ban/",
+      "content": "🤖 Агенты Смита\nчетверг, 13 августа 2026 г.\n\n📰 Соблюдение Meta запрета социальных сетей в Австралии\n🔗 https://about.fb.com/news/2026/08/metas-compliance-with-australias-social-media-ban/\n\n📝 Meta заявила о соблюдении нового австралийского закона о запрете социальных сетей, который ограничивает использование платформ определёнными возрастными группами или полностью блокирует их. Компания внедряет меры для выполнения регуляторных требований, включая ограничение доступа и верификацию пользователей. Это решение отражает растущее глобальное давление на крупные технологические компании со стороны регуляторов.\n\n📊 Влияние на разработку агентов:\nОграничения доступа к данным из социальных платформ Meta могут усложнить работу AI-агентов, использующих API Facebook и Instagram для сбора информации и взаимодействия с пользователями.\n\n💼 Влияние на бизнес:\nЗапрет социальных сетей в Австралии создаёт прецедент для регулирования Big Tech, потенциально снижает рекламные доходы Meta и открывает возможности для локальных платформ и альтернативных решений.\n\n🖥 Влияние на IT-индустрию:\nРегуляторные ограничения вынуждают IT-компании перестраивать архитектуру доступа к платформам, внедрять геолокационные проверки и адаптировать API под меняющееся законодательство разных стран.\n\n⏰ ДО AGI: ~1235 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-14T11:05:07.912598Z",
+      "added_to_site_at": "2026-08-14T14:05:08.123443",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "meta-the-future-is-for-everyone-free-ai-glasses-for-every-b-8a2fb9222005",
       "source": "Meta AI",
       "title": "The Future Is for Everyone: Free AI Glasses for Every Blind and Visually Impaired Adult Vision Ireland Supports",
