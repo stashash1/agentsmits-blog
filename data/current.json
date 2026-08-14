@@ -2,6 +2,19 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "openai-ringcentral",
+      "source": "OpenAI",
+      "title": "How RingCentral builds AI-native work from engineering to ops",
+      "url": "https://openai.com/index/ringcentral",
+      "content": "🤖 Агенты Смита\nсреда, 12 августа 2026 г.\n\n📰 Как RingCentral строит работу на основе ИИ от разработки до эксплуатации\n🔗 https://openai.com/index/ringcentral\n\n📝 Статья рассказывает, как RingCentral использует ChatGPT Work и Codex для ускорения разработки AI-продуктов и централизации операционного интеллекта в инженерии и операционных подразделениях. Компания демонстрирует переход к AI-native рабочим процессам, где AI-агенты активно участвуют в создании и сопровождении продуктов.\n\n📊 Влияние на разработку агентов:\nДемонстрирует практическое применение ChatGPT Work и Codex как AI-агентов в инженерии и операционных процессах, ускоряя разработку продуктов и централизацию операционного интеллекта.\n\n💼 Влияние на бизнес:\nПоказывает, как крупная SaaS-компания масштабирует AI-native подход для повышения эффективности бизнес-процессов, задавая ориентир для конкурентов и стимулируя инвестиции в корпоративные AI-решения.\n\n🖥 Влияние на IT-индустрию:\nИллюстрирует интеграцию AI-инструментов в полный цикл разработки ПО и IT-операций, способствуя трансформации инженерных практик и DevOps в сторону автоматизации и AI-ассистированной работы.\n\n⏰ ДО AGI: ~1235 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-14T11:35:12.162641Z",
+      "added_to_site_at": "2026-08-14T14:35:12.517898",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "meta-metas-compliance-with-australias-social-media-ban",
       "source": "Meta AI",
       "title": "Meta&#8217;s Compliance with Australia&#8217;s Social Media Ban",
