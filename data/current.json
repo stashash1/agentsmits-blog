@@ -2,6 +2,32 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "meta-the-future-is-for-everyone-free-ai-glasses-for-every-b-8a2fb9222005",
+      "source": "Meta AI",
+      "title": "The Future Is for Everyone: Free AI Glasses for Every Blind and Visually Impaired Adult Vision Ireland Supports",
+      "url": "https://about.fb.com/news/2026/08/the-future-is-for-everyone-free-ai-glasses-for-every-blind-and-visually-impaired-adult-vision-ireland-supports/",
+      "content": "🤖 Агенты Смита\nчетверг, 13 августа 2026 г.\n\n📰 Будущее принадлежит всем: бесплатные AI-очки для каждого слепого и слабовидящего взрослого — поддержка Vision Ireland\n🔗 https://about.fb.com/news/2026/08/the-future-is-for-everyone-free-ai-glasses-for-every-blind-and-visually-impaired-adult-vision-ireland-supports/\n\n📝 Meta совместно с Vision Ireland запускает программу бесплатного предоставления AI-очков всем слепым и слабовидящим взрослым в Ирландии. Устройства используют встроенного AI-агента для распознавания окружения, чтения текста и навигации, помогая пользователям в повседневной жизни. Инициатива подчёркивает стратегию компании по демократизации AI-технологий и расширению социальной роли носимых AI-устройств.\n\n📊 Влияние на разработку агентов:\nДемонстрирует практическое применение AI-агентов на edge-устройствах в форм-факторе носимой электроники для ассистивных сценариев, расширяя область применения мультимодальных агентных систем на людей с ограниченными возможностями.\n\n💼 Влияние на бизнес:\nMeta инвестирует в масштабный социальный проект с потенциальным выходом на рынок ассистивных технологий и реабилитационных устройств, что может изменить конкурентный ландшафт в сегменте wearable AI и укрепить позиции компании в ответственных AI-инициативах.\n\n🖥 Влияние на IT-индустрию:\nСтимулирует развитие инфраструктуры для real-time мультимодального восприятия (зрение, голос) на устройствах с ограниченными ресурсами, а также интеграции AI-агентов с пользовательскими сценариями повышенной социальной значимости.\n\n⏰ ДО AGI: ~1235 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-14T10:35:11.761153Z",
+      "added_to_site_at": "2026-08-14T13:35:11.965627",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
+      "id": "google-sheets-canvas-for-google-sheets-spreadsheets",
+      "source": "Google AI",
+      "title": "Bring your spreadsheet data to life with Sheets canvas",
+      "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
+      "content": "🤖 Агенты Смита\nчетверг, 13 августа 2026 г.\n\n📰 Оживите данные своих таблиц с помощью Sheets canvas\n🔗 https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/\n\n📝 Google представила Sheets canvas — новую функцию Google Sheets, позволяющую с помощью Gemini превращать табличные данные в интерактивные мини-приложения. Пользователи могут создавать визуальные интерфейсы и инструменты прямо внутри таблиц без программирования, используя AI для генерации кода и логики.\n\n📊 Влияние на разработку агентов:\nSheets canvas с интеграцией Gemini позволяет создавать мини-приложения внутри Google Sheets, расширяя возможности AI-агентов по автоматизации работы с табличными данными и построению интерактивных интерфейсов без кода.\n\n💼 Влияние на бизнес:\nИнструмент снижает порог входа для компаний к созданию кастомных приложений на базе данных электронных таблиц, ускоряя цифровизацию бизнес-процессов и усиливая конкурентное преимущество Google Workspace на корпоративном рынке.\n\n🖥 Влияние на IT-индустрию:\nПоявление no-code среды для создания мини-приложений в Google Sheets меняет подход к прототипированию и внутренним инструментам, потенциально сокращая нагрузку на IT-отделы по разработке простых утилит.\n\n⏰ ДО AGI: ~1235 дней [░░░░░░░░░░] ~15%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-14T10:35:06.437097Z",
+      "added_to_site_at": "2026-08-14T13:35:06.642432",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "openai-dali-rajic-chief-revenue-officer",
       "source": "OpenAI",
       "title": "OpenAI appoints Dali Rajic as Chief Revenue Officer",
