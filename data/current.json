@@ -2,6 +2,60 @@
   "week_start": "2026-08-10",
   "posts": [
     {
+      "id": "claude-code-claude-code-2.1.229",
+      "source": "Claude Code",
+      "title": "Claude Code 2.1.229",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21229",
+      "content": "🤖 Агенты Смита\nпятница, 14 августа 2026 г.\n\n📰 Claude Code 2.1.229\n🔗 https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21229\n\n📝 Статья представляет запись из changelog Claude Code версии 2.1.229, в которой задокументирована команда `claude remote-control --continue` для возобновления последней сессии удалённого управления. Это обновление направлено на улучшение пользовательского опыта при работе с функцией Remote Control.\n\n📊 Влияние на разработку агентов:\nДокументирование команды `claude remote-control --continue` упрощает разработчикам возобновление сессий удалённого управления, что повышает удобство непрерывной работы с AI-агентом Claude Code.\n\n💼 Влияние на бизнес:\nУлучшение пользовательского опыта Claude Code способствует укреплению позиций Anthropic на рынке AI-ассистентов для разработчиков и может стимулировать корпоративное внедрение.\n\n🖥 Влияние на IT-индустрию:\nДобавление команды возобновления сессий улучшает workflow разработчиков, использующих Claude Code в гибридных сценариях локальной и удалённой работы.\n\n⏰ ДО AGI: ~1233 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-16T18:41:12.351285Z",
+      "added_to_site_at": "2026-08-16T21:41:12.597137",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "claude-code-claude-code-2.1.231",
+      "source": "Claude Code",
+      "title": "Claude Code 2.1.231",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21231",
+      "content": "🤖 Агенты Смита\nпятница, 14 августа 2026 г.\n\n📰 Claude Code 2.1.231\n🔗 https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21231\n\n📝 CHANGELOG версии Claude Code 2.1.231 от Anthropic фиксирует очередной релиз инструмента для AI-ассистированной разработки. Документ содержит информацию об изменениях, исправлениях и улучшениях. Это часть постоянного цикла обновлений продукта для разработчиков.\n\n📊 Влияние на разработку агентов:\nОбновление инструментария Claude Code напрямую влияет на AI-агентов для разработки, расширяя их возможности по написанию, отладке и рефакторингу кода в IDE и терминале.\n\n💼 Влияние на бизнес:\nРегулярные обновления Claude Code усиливают конкурентные позиции Anthropic на рынке AI-инструментов для разработчиков и могут стимулировать рост подписок на платные тарифы.\n\n🖥 Влияние на IT-индустрию:\nИзменения в Claude Code затрагивают DevOps-процессы и workflow разработки, требуя от команд адаптации к новым версиям CLI-инструмента для продуктивной интеграции в CI/CD.\n\n⏰ ДО AGI: ~1233 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-16T18:41:06.294106Z",
+      "added_to_site_at": "2026-08-16T21:41:06.568638",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "github-copilot-2026-08-12-agent-plugins-1-0-in-vs-code-copi-9630bd9471e4",
+      "source": "GitHub Copilot",
+      "title": "Agent Plugins 1.0 in VS Code, Copilot CLI, and the Copilot app",
+      "url": "https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app",
+      "content": "🤖 Агенты Смита\nсреда, 12 августа 2026 г.\n\n📰 Agent Plugins 1.0 в VS Code, Copilot CLI и приложении Copilot\n🔗 https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app\n\n📝 GitHub выпустила Agent Plugins 1.0 для VS Code, Copilot CLI и приложения Copilot. Релиз стандартизирует создание, перенос и управление плагинами, позволяя расширять функциональность AI-агентов в разных инструментах экосистемы GitHub.\n\n📊 Влияние на разработку агентов:\nСтабильная версия Agent Plugins 1.0 унифицирует расширение AI-агентов в VS Code, Copilot CLI и приложении Copilot. Разработчики получают стандартизированный способ создавать и переносить плагины, расширяя возможности агентов с помощью повторно используемых компонентов и управляемых настроек.\n\n💼 Влияние на бизнес:\nЕдиная экосистема плагинов снижает затраты на интеграцию и ускоряет выпуск корпоративных AI-инструментов. GitHub укрепляет позиции Copilot как общей платформы для автономной разработки и усиливает конкуренцию среди поставщиков AI-ассистентов.\n\n🖥 Влияние на IT-индустрию:\nВерсия 1.0 упрощает миграцию и развёртывание плагинов в нескольких средах GitHub Copilot, а настройки предоставляют механизм централизованного управления ими. Это сокращает фрагментацию tooling и ускоряет развитие агентной разработки и сопутствующей инфраструктуры.\n\n⏰ ДО AGI: ~1233 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-16T18:40:39.002585Z",
+      "added_to_site_at": "2026-08-16T21:40:39.311932",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
+      "id": "arxiv-2608.11204",
+      "source": "arXiv cs.AI",
+      "title": "Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning",
+      "url": "https://arxiv.org/abs/2608.11204",
+      "content": "🤖 Агенты Смита\nвторник, 11 августа 2026 г.\n\n🔥 ВАЖНАЯ СТАТЬЯ • ПРОРЫВ\n\n📰 Surgical WAM: World-Action Model для обучения хирургических роботов с эффективным использованием данных\n🔗 https://arxiv.org/abs/2608.11204\n\n📝 Статья представляет Surgical WAM — модель мира и действий для хирургических роботов, решающую проблему нехватки размеченных демонстраций через самоконтролируемое предобучение на видео и точную интеграцию с телеоперационными траекториями dVRK. Метод показывает высокую эффективность по данным при long-horizon задачах с точным контактом, превосходя baselines на симуляторах и реальном железе.\n\n🧬 Что нового (прорыв):\n• world model\n\n📊 Влияние на разработку агентов:\nПредлагает гибридную модель «мир-действие», которая снижает зависимость от размеченных демонстраций, позволяя AI-агентам для хирургии учиться на обширных видеоданных и ограниченных телеоперационных примерах — критически важно для автономных роботов-ассистентов в операционной.\n\n💼 Влияние на бизнес:\nУскоряет коммерциализацию автономных хирургических систем за счёт снижения затрат на сбор данных, открывая возможности для medtech-стартапов и крупных игроков вроде Intuitive Surgical расширить рынок автоматизированных операций.\n\n🖥 Влияние на IT-индустрию:\nВносит вклад в развитие архитектур world models для робототехники, демонстрируя новый подход к латентной динамике и имитационному обучению, применимый за пределами хирургии — в манипуляции, навигации и других доменах с дефицитом данных.\n\n⏰ ДО AGI: ~1233 дней [░░░░░░░░░░] ~16%\n\n⚡ Это меняет правила игры.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-16T18:40:32.670312Z",
+      "added_to_site_at": "2026-08-16T21:40:32.930066",
+      "is_breakthrough": true,
+      "breakthrough_score": 5,
+      "breakthrough_reasons": [
+        "new_architecture_or_technique:1",
+        "importance_boost:+2"
+      ]
+    },
+    {
       "id": "techcrunch-spacex-officially-closes-its-cursor-acquisition",
       "source": "TechCrunch AI",
       "title": "SpaceX officially closes its Cursor acquisition",
