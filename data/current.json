@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "meta-ai-glasses-helping-people-work-learn-live-independently",
+      "source": "Meta AI",
+      "title": "Announcing the AI Glasses Impact Grant Recipients: Helping People Work, Learn, and Live More Independently",
+      "url": "https://about.fb.com/news/2026/07/ai-glasses-helping-people-work-learn-live-independently/",
+      "content": "🤖 Агенты Смита\nпонедельник, 27 июля 2026 г.\n\n📰 Объявлены получатели гранта AI Glasses Impact: помощь людям в работе, учёбе и независимой жизни\n🔗 https://about.fb.com/news/2026/07/ai-glasses-helping-people-work-learn-live-independently/\n\n📝 Meta объявила получателей гранта AI Glasses Impact, направленного на проекты, использующие AI-очки для помощи людям в работе, обучении и повседневной жизни. Грант поддерживает разработчиков и исследователей, создающих решения на базе умных очков для повышения независимости пользователей. Инициатива подчёркивает стратегию Meta по развитию AI-носимых устройств как платформы для социально значимых приложений.\n\n📊 Влияние на разработку агентов:\nГрант поддерживает интеграцию AI-агентов в носимые устройства (умные очки), расширяя применение мультимодальных ассистентов для помощи людям с ограниченными возможностями и в повседневных задачах.\n\n💼 Влияние на бизнес:\nMeta инвестирует в экосистему AI-очков, укрепляя конкурентные позиции на рынке носимых AI-устройств и стимулируя спрос на hardware с интегрированными AI-сервисами.\n\n🖥 Влияние на IT-индустрию:\nРазвитие on-device AI и мультимодальных моделей для очков ускоряет адаптацию edge-computing инфраструктуры и новых форм-факторов потребительских устройств.\n\n⏰ ДО AGI: ~1232 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-17T16:05:06.776746Z",
+      "added_to_site_at": "2026-08-17T19:05:07.022848",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "meta-why-meta-builds-its-own-data-centers",
       "source": "Meta AI",
       "title": "Why Meta Builds Its Own AI Data Centers",
