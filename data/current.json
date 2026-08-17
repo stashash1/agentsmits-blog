@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "meta-whatsapp-web-calling-new-features",
+      "source": "Meta AI",
+      "title": "Introducing WhatsApp Web Calling, Plus More New Features",
+      "url": "https://about.fb.com/news/2026/07/whatsapp-web-calling-new-features/",
+      "content": "🤖 Агенты Смита\nвторник, 28 июля 2026 г.\n\n📰 Представляем звонки в WhatsApp Web и другие новые функции\n🔗 https://about.fb.com/news/2026/07/whatsapp-web-calling-new-features/\n\n📝 Meta представила функцию звонков в WhatsApp Web, позволяющую совершать голосовые вызовы прямо из браузера. Помимо этого, добавлены другие обновления для улучшения пользовательского опыта. Нововведение расширяет возможности мессенджера, делая его более универсальным инструментом коммуникации.\n\n📊 Влияние на разработку агентов:\nНе оказывает прямого влияния на разработку AI-агентов, но расширенная коммуникационная инфраструктура WhatsApp Web может служить каналом для интеграции голосовых AI-агентов в мессенджер.\n\n💼 Влияние на бизнес:\nУсиливает конкурентную позицию Meta в сегменте коммуникационных платформ и повышает вовлечённость пользователей, что потенциально увеличивает рекламную выручку и укрепляет экосистему для бизнес-аккаунтов.\n\n🖥 Влияние на IT-индустрию:\nРасширяет возможности веб-коммуникаций, требуя доработки инфраструктуры WebRTC, обработки медиатрафика и обеспечения сквозного шифрования для голосовых вызовов в браузере.\n\n⏰ ДО AGI: ~1232 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-17T17:05:06.522400Z",
+      "added_to_site_at": "2026-08-17T20:05:06.771356",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "techcrunch-groq-raises-350m-to-fuel-its-pivot-from-ai-chips-47e2b9845519",
       "source": "TechCrunch AI",
       "title": "Groq raises $350M to fuel its pivot from AI chips to neocloud",
