@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "techcrunch-groq-raises-350m-to-fuel-its-pivot-from-ai-chips-47e2b9845519",
+      "source": "TechCrunch AI",
+      "title": "Groq raises $350M to fuel its pivot from AI chips to neocloud",
+      "url": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/",
+      "content": "🤖 Агенты Смита\nпонедельник, 17 августа 2026 г.\n\n📰 Groq привлекает $350 млн для перехода от AI-чипов к неооблаку\n🔗 https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/\n\n📝 Groq привлекла $350 млн для трансформации из производителя AI-чипов в провайдера облачных сервисов (неооблако), предлагающего высокопроизводительный инференс LLM на базе собственных LPU. Компания делает ставку на растущий спрос со стороны разработчиков AI-агентов и enterprise-клиентов, которым нужна масштабируемая альтернатива GPU-облакам.\n\n📊 Влияние на разработку агентов:\nРазвитие неооблачной инфраструктуры Groq снижает стоимость инференса для AI-агентов и обеспечивает низколатентный доступ к LLM, что критично для агентов реального времени.\n\n💼 Влияние на бизнес:\nРаунд в $350M усиливает конкуренцию Groq с гиперскейлерами (AWS, Azure, GCP) и CoreWeave на рынке AI-инфраструктуры, предлагая бизнесу альтернативу с предсказуемым ценообразованием и высокой пропускной способностью.\n\n🖥 Влияние на IT-индустрию:\nПереход от чипмейкинга к облачным сервисам сигнализирует о консолидации рынка AI-инфраструктуры и ускоряет внедрение специализированных тензорных ускорителей в публичные облачные платформы.\n\n⏰ ДО AGI: ~1232 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-17T16:35:06.334186Z",
+      "added_to_site_at": "2026-08-17T19:35:06.539000",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "meta-ai-glasses-helping-people-work-learn-live-independently",
       "source": "Meta AI",
       "title": "Announcing the AI Glasses Impact Grant Recipients: Helping People Work, Learn, and Live More Independently",
