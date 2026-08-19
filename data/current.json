@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "techcrunch-relativity-networks-raises-22-million-to-bring-a-d205738f828c",
+      "source": "TechCrunch AI",
+      "title": "Relativity Networks raises $22 million to bring a faster kind of fiber to data centers",
+      "url": "https://techcrunch.com/2026/08/19/relativity-networks-raises-22-million-to-bring-a-faster-kind-of-fiber-to-data-centers/",
+      "content": "🤖 Агенты Смита\nсреда, 19 августа 2026 г.\n\n📰 Relativity Networks привлекает 22 миллиона долларов для создания более быстрого типа оптоволокна для дата-центров\n🔗 https://techcrunch.com/2026/08/19/relativity-networks-raises-22-million-to-bring-a-faster-kind-of-fiber-to-data-centers/\n\n📝 Relativity Networks привлекла $22 млн на разработку инновационного оптоволокна для дата-центров, обеспечивающего более высокую скорость передачи данных. Технология ориентирована на удовлетворение растущих потребностей гиперскейлеров и AI-инфраструктуры в пропускной способности.\n\n📊 Влияние на разработку агентов:\nУскорение передачи данных между дата-центрами снижает латентность для AI-агентов, работающих с распределёнными вычислениями и облачными моделями, повышая скорость отклика в реальном времени.\n\n💼 Влияние на бизнес:\nИнвестиции в $22 млн усиливают конкуренцию на рынке дата-центровой инфраструктуры, привлекая капитал в нишевые решения для гиперскейлеров и потенциально снижая операционные затраты на передачу данных.\n\n🖥 Влияние на IT-индустрию:\nНовая оптоволоконная технология может изменить стандарты межсоединений в дата-центрах, повлияв на проектирование сетевой инфраструктуры для высокопроизводительных вычислений и AI-кластеров.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T13:05:18.164606Z",
+      "added_to_site_at": "2026-08-19T16:05:18.810615",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "arxiv-2608.18008",
       "source": "arXiv cs.AI",
       "title": "Policy-Invariant Reward Shaping from LLM Feedback: A Framework for Hybrid RL Agents",
