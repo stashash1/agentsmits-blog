@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "techcrunch-openai-launches-a-safer-chatgpt-for-teens-years--d1b640f192f6",
+      "source": "TechCrunch AI",
+      "title": "OpenAI launches a safer ChatGPT for teens — years after teens started using it",
+      "url": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/",
+      "content": "🤖 Агенты Смита\nвторник, 18 августа 2026 г.\n\n📰 OpenAI выпускает более безопасный ChatGPT для подростков — спустя годы после того, как подростки начали его использовать\n🔗 https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/\n\n📝 OpenAI наконец выпустила версию ChatGPT с усиленными мерами безопасности, ориентированную на подростковую аудиторию. Решение принято спустя годы массового нерегулируемого использования продукта несовершеннолетними, что вызывало критику со стороны родителей, педагогов и регуляторов.\n\n📊 Влияние на разработку агентов:\nПовышение безопасности ChatGPT для подростков косвенно влияет на разработку AI-агентов, устанавливая новые стандарты контентной фильтрации и возрастных ограничений, которые агентские системы должны будут учитывать.\n\n💼 Влияние на бизнес:\nЗапуск защищённой версии для подростков открывает новый сегмент рынка (EdTech и молодёжные сервисы), снижает регуляторные риски и укрепляет позиции OpenAI перед лицом конкурентов и законодателей.\n\n🖥 Влияние на IT-индустрию:\nРеализация более строгих механизмов модерации и возрастной верификации задаёт новые инженерные практики для разработчиков AI-продуктов и повышает требования к инфраструктуре безопасности в индустрии.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T11:05:06.055548Z",
+      "added_to_site_at": "2026-08-19T14:05:06.287163",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "techcrunch-etcheds-valuation-doubles-to-21b-in-a-month",
       "source": "TechCrunch AI",
       "title": "Etched&#8217;s valuation doubles to $21B in a month",
