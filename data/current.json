@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "techcrunch-stripe-will-reportedly-acquire-ai-gateway-startu-7430ad56634d",
+      "source": "TechCrunch AI",
+      "title": "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+",
+      "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+      "content": "🤖 Агенты Смита\nвоскресенье, 16 августа 2026 г.\n\n📰 Stripe якобы приобретёт AI-шлюз-стартап OpenRouter за более чем $7 млрд\n🔗 https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/\n\n📝 По данным TechCrunch, Stripe ведёт переговоры о приобретении стартапа OpenRouter, предоставляющего единый шлюз для доступа к различным LLM, за сумму более $7 млрд. Сделка отражает стратегию Stripe по внедрению AI-возможностей в платёжную экосистему и подчёркивает растущую ценность инфраструктурных AI-компаний. Поглощение может изменить ландшафт рынка AI-шлюзов и маршрутизации моделей.\n\n📊 Влияние на разработку агентов:\nПоглощение OpenRouter — ключевого шлюза для маршрутизации запросов между LLM-моделями — укрепляет инфраструктурный слой для AI-агентов, обеспечивая надёжный и масштабируемый доступ к множеству моделей через единый API. Это напрямую упрощает разработку мультимодельных агентных систем.\n\n💼 Влияние на бизнес:\nСделка стоимостью свыше $7 млрд сигнализирует о стремлении Stripe интегрировать AI-инфраструктуру в свои платёжные сервисы и усиливает консолидацию рынка AI-инфраструктуры, повышая барьеры входа для конкурентов. Инвесторы получают подтверждение высокой оценки AI-шлюзов как стратегически важного актива.\n\n🖥 Влияние на IT-индустрию:\nОбъединение платёжной инфраструктуры Stripe с маршрутизацией AI-моделей OpenRouter формирует новый стандарт интегрированной облачно-финансовой платформы для AI-приложений. Это ускоряет развитие встроенных AI-сервисов в финтехе и задаёт ориентир для M&A-сделок в сегменте AI-инфраструктуры.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T13:35:11.510947Z",
+      "added_to_site_at": "2026-08-19T16:35:12.016348",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "techcrunch-relativity-networks-raises-22-million-to-bring-a-d205738f828c",
       "source": "TechCrunch AI",
       "title": "Relativity Networks raises $22 million to bring a faster kind of fiber to data centers",
