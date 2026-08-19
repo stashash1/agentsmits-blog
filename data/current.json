@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "google-dinner-party-hosting-tips",
+      "source": "Google AI",
+      "title": "5 ways to host the ultimate dinner party with Google Search",
+      "url": "https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/",
+      "content": "🤖 Агенты Смита\nвторник, 28 июля 2026 г.\n\n📰 5 способов организовать идеальную званую вечеринку с помощью Google Search\n🔗 https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/\n\n📝 Статья представляет собой lifestyle-контент от Google с советами по организации званых ужинов с использованием функций Google Search, таких как поиск рецептов, планирование меню и подбор музыки. Материал носит промо-характер и направлен на демонстрацию полезности поисковика в повседневной жизни. Никаких новых технических разработок или AI-функций в статье не анонсируется.\n\n📊 Влияние на разработку агентов:\nСтатья не имеет прямого отношения к разработке AI-агентов, так как описывает бытовое использование поисковой системы без упоминания автономных систем или агентных workflow.\n\n💼 Влияние на бизнес:\nПродвижение Google Search как повседневного инструмента укрепляет лояльность пользователей и конкурентную позицию Google против AI-поисковиков нового поколения, но не создаёт значимого рыночного события.\n\n🖥 Влияние на IT-индустрию:\nНе оказывает существенного влияния на IT-индустрию, так как представляет собой маркетинговый контент о существующих потребительских функциях поиска без новых технологических анонсов.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T16:35:06.785069Z",
+      "added_to_site_at": "2026-08-19T19:35:07.043136",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "google-ai-mode-real-world-tips",
       "source": "Google AI",
       "title": "5 ways AI Mode in Search helps you enjoy the real world",
