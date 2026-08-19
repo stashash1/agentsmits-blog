@@ -2,6 +2,32 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "github-copilot-2026-08-18-enterprise-managed-settings-in-gi-a541d02e0c9f",
+      "source": "GitHub Copilot",
+      "title": "Enterprise managed settings in GitHub Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains",
+      "content": "🤖 Агенты Смита\nвторник, 18 августа 2026 г.\n\n📰 Корпоративные управляемые настройки в GitHub Copilot для JetBrains\n🔗 https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains\n\n📝 GitHub добавил в Copilot для JetBrains функции корпоративного управления: allowlist MCP-серверов, управляемую телеметрию через OpenTelemetry и governance плагина. Эти изменения позволяют организациям централизованно контролировать поведение AI-агента, ограничивать доступные внешние сервисы и отслеживать активность сотрудников.\n\n📊 Влияние на разработку агентов:\nПоявление управляемых настроек и allowlist MCP-серверов позволяет организациям контролировать, какие внешние инструменты и ресурсы доступны AI-агенту Copilot, повышая безопасность и предсказуемость его работы в корпоративной среде.\n\n💼 Влияние на бизнес:\nКорпоративные клиенты получают инструменты для централизованного управления AI-ассистентом, что снижает риски утечки данных и упрощает соответствие политикам безопасности, ускоряя внедрение Copilot в крупных компаниях с JetBrains-стеком.\n\n🖥 Влияние на IT-индустрию:\nВнедрение OpenTelemetry и governance-плагинов расширяет возможности observability и аудита AI-инструментов, позволяя IT-командам отслеживать использование Copilot и интегрировать его в существующие системы мониторинга.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T10:05:11.557339Z",
+      "added_to_site_at": "2026-08-19T13:05:11.797764",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "cursor-origin-code-hosting",
+      "source": "Cursor",
+      "title": "Origin Code Hosting",
+      "url": "https://cursor.com/changelog/origin-code-hosting",
+      "content": "🤖 Агенты Смита\nсреда, 19 августа 2026 г.\n\n📰 Origin: хостинг кода от Cursor\n🔗 https://cursor.com/changelog/origin-code-hosting\n\n📝 Cursor представил Origin — собственный сервис хостинга кода, доступный в ранней бета-версии для всех платных планов. Сервис интегрирован в экосистему Cursor и предназначен для бесшовной работы с AI-агентами и облачными функциями платформы. Это стратегический шаг, расширяющий продукт за пределы AI-редактора к полноценной платформе разработки.\n\n📊 Влияние на разработку агентов:\nЗапуск собственного хостинга кода от Cursor снижает зависимость AI-агентов от внешних Git-провайдеров и упрощает интеграцию облачных агентных сценариев Cursor в единой экосистеме.\n\n💼 Влияние на бизнес:\nCursor выходит на рынок DevOps-инфраструктуры, усиливая конкуренцию с GitHub и GitLab, и создаёт новый вектор монетизации за счёт привязки хостинга к своим AI-подпискам.\n\n🖥 Влияние на IT-индустрию:\nПоявление нативного хостинга упрощает CI/CD и совместную разработку внутри Cursor, но потенциально усиливает вендорный локин и фрагментацию хостинг-провайдеров для AI-нагруженных проектов.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T10:05:06.140215Z",
+      "added_to_site_at": "2026-08-19T13:05:06.387490",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "claude-code-claude-code-2.1.235",
       "source": "Claude Code",
       "title": "Claude Code 2.1.235",
