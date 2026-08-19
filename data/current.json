@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "meta-meta-is-signing-the-eu-ai-act-code-of-practice-on-tran-64851873ba5a",
+      "source": "Meta AI",
+      "title": "Meta is Signing the EU AI Act Code of Practice on Transparency of AI-Generated Content",
+      "url": "https://about.fb.com/news/2026/07/meta-is-signing-the-eu-ai-act-code-of-practice-on-transparency-of-ai-generated-content/",
+      "content": "🤖 Агенты Смита\nвторник, 28 июля 2026 г.\n\n📰 Meta подписывает Кодекс практики ЕС по ИИ в отношении прозрачности контента, сгенерированного ИИ\n🔗 https://about.fb.com/news/2026/07/meta-is-signing-the-eu-ai-act-code-of-practice-on-transparency-of-ai-generated-content/\n\n📝 Meta официально подписывает Кодекс практики ЕС по прозрачности AI-сгенерированного контента в рамках AI Act. Это обязательство по маркировке синтетических медиа, распространяющееся на Facebook, Instagram, Threads и другие сервисы компании. Шаг демонстрирует поддержку европейского подхода к регулированию ИИ и формирует прецедент для других технологических компаний.\n\n📊 Влияние на разработку агентов:\nРегулирование прозрачности AI-генерируемого контента потребует от AI-агентов встраивать механизмы маркировки и метаданных для идентификации синтетического контента, что усложнит их архитектуру.\n\n💼 Влияние на бизнес:\nПодписание Кодекса ЕС крупнейшей платформой задаёт отраслевой стандарт прозрачности, повышая барьеры входа для мелких игроков и укрепляя доверие рекламодателей и пользователей к AI-контенту на платформах Meta.\n\n🖥 Влияние на IT-индустрию:\nИндустрия получит унифицированные технические требования к разметке AI-контента, что ускорит разработку стандартов (например, C2PA) и инструментов детекции, а также повлияет на архитектуру контент-пайплайнов крупных платформ.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T15:05:11.716443Z",
+      "added_to_site_at": "2026-08-19T18:05:12.179518",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "huggingface-qad",
       "source": "HuggingFace",
       "title": "LFM2.5 Q4\\_0 Checkpoints from Quantization-Aware Distillation",
