@@ -2,6 +2,32 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "techcrunch-etcheds-valuation-doubles-to-21b-in-a-month",
+      "source": "TechCrunch AI",
+      "title": "Etched&#8217;s valuation doubles to $21B in a month",
+      "url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+      "content": "🤖 Агенты Смита\nвторник, 18 августа 2026 г.\n\n📰 Оценка Etched удвоилась до $21 млрд за месяц\n🔗 https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/\n\n📝 Стартап Etched, разрабатывающий специализированные чипы для AI-inference, удвоил свою оценку до $21 млрд всего за месяц, что отражает высокий интерес инвесторов к аппаратному обеспечению для AI. Столь быстрый рост оценки подчёркивает продолжающийся бум инвестиций в AI-инфраструктуру, несмотря на более широкие сомнения в пузыре. Компания позиционирует себя как прямого конкурента NVIDIA в сегменте inference-ускорителей.\n\n📊 Влияние на разработку агентов:\nРост оценки Etched может ускорить разработку специализированных чипов для AI-агентов, так как компания фокусируется на inference-оборудовании, оптимизированном под LLM и автономные системы, снижая стоимость запуска агентов.\n\n💼 Влияние на бизнес:\nУдвоение оценки Etched до $21 млрд за месяц демонстрирует ажиотажный спрос инвесторов на AI-инфраструктуру и усиливает конкуренцию на рынке специализированных чипов против NVIDIA, привлекая новые раунды финансирования в сегмент.\n\n🖥 Влияние на IT-индустрию:\nПоявление нового крупного игрока в сегменте AI-чипов может изменить цепочки поставок в IT-индустрии, предложив альтернативу GPU-доминированию NVIDIA и стимулируя развитие кастомного кремния для AI-нагрузок.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T10:35:41.793386Z",
+      "added_to_site_at": "2026-08-19T13:35:42.071246",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "techcrunch-cursor-capitalizes-on-github-frustration-launche-38269b8f7f4f",
+      "source": "TechCrunch AI",
+      "title": "Cursor capitalizes on GitHub frustration, launches rival hosting platform",
+      "url": "https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/",
+      "content": "🤖 Агенты Смита\nвторник, 18 августа 2026 г.\n\n📰 Cursor использует недовольство GitHub и запускает конкурирующую хостинг-платформу\n🔗 https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/\n\n📝 Cursor, известный своей AI-интегрированной средой разработки, запустил собственную хостинг-платформу для кода, конкурирующую с GitHub. Платформа использует накопленное недовольство разработчиков GitHub и предлагает более тесную интеграцию с AI-инструментами. Это стратегический шаг, направленный на создание полной экосистемы для AI-assisted разработки.\n\n📊 Влияние на разработку агентов:\nЗапуск собственной хостинг-платформы Cursor расширяет возможности AI-агентов для автономного управления кодом, устраняя зависимость от GitHub и обеспечивая прямую интеграцию с AI-инструментами разработки.\n\n💼 Влияние на бизнес:\nПоявление прямого конкурента GitHub усиливает конкуренцию на рынке хостинга кода и может привлечь инвестиции в нишевые платформы, ориентированные на AI-driven разработку.\n\n🖥 Влияние на IT-индустрию:\nНовая платформа стимулирует развитие альтернативной инфраструктуры для код-хостинга с нативной поддержкой AI-инструментов, что может привести к фрагментации экосистемы разработки.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T10:35:35.764472Z",
+      "added_to_site_at": "2026-08-19T13:35:36.049012",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "github-copilot-2026-08-18-enterprise-managed-settings-in-gi-a541d02e0c9f",
       "source": "GitHub Copilot",
       "title": "Enterprise managed settings in GitHub Copilot for JetBrains",
