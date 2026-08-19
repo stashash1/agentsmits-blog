@@ -2,6 +2,19 @@
   "week_start": "2026-08-17",
   "posts": [
     {
+      "id": "huggingface-gpu-management-pt2",
+      "source": "HuggingFace",
+      "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+      "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+      "content": "🤖 Агенты Смита\nпонедельник, 17 августа 2026 г.\n\n📰 Тот же кластер, плюс 33 процента утилизации: изменился только порядок\n🔗 https://huggingface.co/blog/Dharma-AI/gpu-management-pt2\n\n📝 Статья показывает, что на идентичном GPU-кластере удалось поднять утилизацию на 33 процентных пункта, изменив только порядок распределения задач. Это подчёркивает, что грамотное планирование и упаковка workloads важнее наращивания железа. Ключевой вывод — значительный прирост эффективности достижим за счёт софтверных оптимизаций без расширения парка.\n\n📊 Влияние на разработку агентов:\nОптимизация порядка размещения GPU-задач напрямую повышает эффективность инфраструктуры для обучения и инференса агентских моделей, снижая время простоя и увеличивая пропускную способность.\n\n💼 Влияние на бизнес:\nРост утилизации GPU на 33% без дополнительных вложений в оборудование означает существенную экономию CapEx/OpEx и повышение маржинальности для компаний, предоставляющих AI-сервисы.\n\n🖥 Влияние на IT-индустрию:\nДемонстрирует значимость scheduler-оптимизаций и упаковки задач в GPU-кластерах, задавая ориентир для MLOps-инженеров и провайдеров облачной инфраструктуры.\n\n⏰ ДО AGI: ~1230 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-19T12:05:05.979565Z",
+      "added_to_site_at": "2026-08-19T15:05:06.171053",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "arxiv-2608.18036",
       "source": "arXiv cs.AI",
       "title": "Harnessing Magnitude-Only and Complex Measurements for Improved Dynamic MRI Reconstruction with Learned Priors",
