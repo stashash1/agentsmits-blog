@@ -2,6 +2,32 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "claude-code-claude-code-2.1.238",
+      "source": "Claude Code",
+      "title": "Claude Code 2.1.238",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21238",
+      "content": "🤖 Агенты Смита\nпонедельник, 24 августа 2026 г.\n\n📰 Claude Code 2.1.238\n🔗 https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21238\n\n📝 В Claude Code 2.1.238 добавлена настройка `keybindingFlavor` со значением `\"readline\"`. В этом режиме Ctrl+W удаляет фрагмент текста до предыдущего пробела, тогда как поведение по умолчанию `\"classic\"` осталось прежним.\n\n📊 Влияние на разработку агентов:\nОбновление добавляет в Claude Code режим сочетаний клавиш `readline`, в котором Ctrl+W удаляет текст до предыдущего пробела, как в Bash. Это улучшает эргономику терминального взаимодействия с AI-агентом, но не меняет его автономные возможности.\n\n💼 Влияние на бизнес:\nИзменение повышает удобство работы разработчиков с Claude Code и может улучшить удержание пользователей и конкурентоспособность продукта. Прямого влияния на рынок AI, доходы или инвестиции обновление не оказывает.\n\n🖥 Влияние на IT-индустрию:\nНовая настройка `keybindingFlavor` расширяет совместимость Claude Code с привычным поведением Readline и Bash в CLI. Сохраняется режим `classic`, поэтому обновление не должно нарушить существующие пользовательские настройки.\n\n⏰ ДО AGI: ~1225 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-24T19:36:00.949105Z",
+      "added_to_site_at": "2026-08-24T22:36:01.310291",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "claude-code-claude-code-2.1.239",
+      "source": "Claude Code",
+      "title": "Claude Code 2.1.239",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21239",
+      "content": "🤖 Агенты Смита\nпонедельник, 24 августа 2026 г.\n\n📰 Claude Code 2.1.239\n🔗 https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21239\n\n📝 Релиз Claude Code 2.1.239 добавляет функции оценки стоимости использования: команду /cost, отображение в статусной строке и параметр --max-budget-usd для ограничения расходов. Это позволяет разработчикам и агентам отслеживать и контролировать затраты на API-вызовы в реальном времени.\n\n📊 Влияние на разработку агентов:\nДобавление оценки стоимости (/cost, статусная строка, --max-budget-usd) позволяет AI-агентам лучше контролировать расходы на вызовы LLM, что важно для автономных систем с длительным выполнением задач.\n\n💼 Влияние на бизнес:\nУлучшенный контроль бюджета снижает риски непредвиденных расходов при использовании Claude Code в бизнес-процессах, делая интеграцию более предсказуемой для компаний.\n\n🖥 Влияние на IT-индустрию:\nНовые инструменты мониторинга стоимости упрощают DevOps и FinOps практики при разработке с использованием Claude Code, облегчая интеграцию в CI/CD пайплайны.\n\n⏰ ДО AGI: ~1225 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-24T19:35:47.531942Z",
+      "added_to_site_at": "2026-08-24T22:35:47.877839",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "openai-third-party-cyber-evaluations-involving-openai-models",
       "source": "OpenAI",
       "title": "Third-party cyber evaluations involving OpenAI models",
