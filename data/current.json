@@ -2,6 +2,19 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "huggingface-quantization-aware-healing",
+      "source": "HuggingFace",
+      "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+      "content": "🤖 Агенты Смита\nвторник, 25 августа 2026 г.\n\n📰 Исцеление с учётом квантизации: сжатая 4-битная модель, превосходящая свой полноточный оригинал\n🔗 https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing\n\n📝 Статья описывает метод Quantization-Aware Healing, который восстанавливает и даже улучшает качество LLM после агрессивной 4-битной квантизации. Подход сочетает квантизацию с последующей калибровкой весов, позволяя сжатой модели превзойти оригинал в полной точности. Это снижает вычислительные требования и стоимость инференса без ущерба для производительности.\n\n📊 Влияние на разработку агентов:\nМетод позволяет запускать более компактные LLM на ограниченных ресурсах без потери качества, что расширяет возможности развёртывания AI-агентов на edge-устройствах и снижает затраты на инференс агентных систем.\n\n💼 Влияние на бизнес:\nСнижение требований к GPU-инфраструктуре и стоимости эксплуатации моделей даёт бизнесу возможность масштабировать AI-решения экономически эффективнее, усиливая конкуренцию со стороны малых компаний против облачных гигантов.\n\n🖥 Влияние на IT-индустрию:\nТехника 4-битной квантизации с восстановлением качества меняет подход к оптимизации ML-моделей в продакшене, уменьшая нагрузку на инференс-инфраструктуру и энергопотребление дата-центров.\n\n⏰ ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T12:35:13.152288Z",
+      "added_to_site_at": "2026-08-25T15:35:13.789443",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "huggingface-pwc-search",
       "source": "HuggingFace",
       "title": "How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code",
