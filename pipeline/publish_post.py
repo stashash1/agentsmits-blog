@@ -25,9 +25,13 @@ from metrics import (
 from _config import PENDING_QUEUE, TELEGRAM_ACCOUNT, PROJECT_ROOT, GENERATE_SITE_SCRIPT
 from decay import apply_decay_to_pending  # QW2: tier-based decay annotation
 from impact_scoring import extract_entities_from_item  # Stage 2: для narrative attach
+from breakthrough_detector import detect_breakthrough  # BT: прорывные статьи
 from narrative_store import (  # Stage 2: narrative clustering
     load_narratives, save_narratives,
     find_matching_narrative, create_narrative, attach_to_narrative,
+)
+from release_grouper import (  # QW-3 (2026-08-25): release digest
+    group_releases, make_digest_post, is_release_item,
 )
 
 
@@ -247,7 +251,7 @@ def send_telegram(text, retries=3, delay=8):
 
     return None
 
-def format_post(post, agi_days, agi_percent):
+def format_post(post, agi_days, agi_percent, breakthrough=None):
     # Russian date formatting — use article's source date if available
     months_ru = ['', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
     days_ru = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
@@ -276,6 +280,38 @@ def format_post(post, agi_days, agi_percent):
     it_impact = analysis.get('it_impact', '')
     extra_summary = analysis.get('summary', '')
     
+    # === BREAKTHROUGH FORMAT ===
+    # Если детектор пометил статью как прорыв — отдельный формат с баннером.
+    if breakthrough and breakthrough.is_breakthrough:
+        reason_line = _format_breakthrough_reason(breakthrough)
+        return f"""🤖 Агенты Смита
+{date}
+
+🔥 ВАЖНАЯ СТАТЬЯ • ПРОРЫВ
+
+📰 {title}
+🔗 {post['url']}
+
+📝 {extra_summary}
+
+🧬 Что нового (прорыв):
+{reason_line}
+
+📊 Влияние на разработку агентов:
+{agent_impact}
+
+💼 Влияние на бизнес:
+{business_impact}
+
+🖥 Влияние на IT-индустрию:
+{it_impact}
+
+⏰ ДО AGI: ~{agi_days} дней [░░░░░░░░░░] ~{agi_percent}%
+
+⚡ Это меняет правила игры.
+→ https://stashash1.github.io/agentsmits-blog"""
+
+    # === STANDARD FORMAT ===
     return f"""🤖 Агенты Смита
 {date}
 
@@ -297,6 +333,131 @@ def format_post(post, agi_days, agi_percent):
 
 🚀 Полетели.
 → https://stashash1.github.io/agentsmits-blog"""
+
+def format_release_digest(digest, agi_days, agi_percent, breakthrough=None):
+    """QW-3 (2026-08-25): формат для release-дайджеста (несколько релизов одного источника).
+
+    Вместо N отдельных постов про Claude Code 2.1.237, 2.1.240, 2.1.241 —
+    один пост-дайджест, где перечислены все релизы периода.
+    """
+    months_ru = ['', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
+    days_ru = ['понедельник', 'вторник', 'среда', 'четверг',
+               'пятница', 'суббота', 'воскресенье']
+    now = datetime.now(timezone.utc)
+    date = f"{days_ru[now.weekday()]}, {now.day} {months_ru[now.month]} {now.year} г."
+
+    analysis = digest.get('analysis') or {}
+    title = analysis.get('translated_title') or digest.get('title', 'Дайджест релизов')
+    summary = analysis.get('summary', '')
+    agent_impact = analysis.get('agent_impact', '')
+    business_impact = analysis.get('business_impact', '')
+    it_impact = analysis.get('it_impact', '')
+
+    # URL — берём первый из underlying items
+    items = digest.get('_digest_items', [])
+    source_name = digest.get('source', '')
+
+    header = "📦 ДАЙДЖЕСТ РЕЛИЗОВ"
+    bt_marker = ""
+    if breakthrough and breakthrough.is_breakthrough:
+        header = "📦 ДАЙДЖЕСТ РЕЛИЗОВ • ПРОРЫВ"
+        bt_marker = "\n🔥 В составе — прорывная техника"
+
+    digest_urls_line = ""
+    if items:
+        urls = []
+        for it in items[:5]:  # max 5 URLs в посте
+            u = it.get('url', '')
+            label = it.get('title', '')[:50]
+            if u:
+                urls.append(f"• {label} — {u}")
+        if urls:
+            digest_urls_line = "\n\nРелизы в дайджесте:\n" + "\n".join(urls)
+        if len(items) > 5:
+            digest_urls_line += f"\n...и ещё {len(items) - 5}"
+
+    return f"""🤖 Агенты Смита
+{date}
+
+{header}
+
+📰 {title}{bt_marker}
+🔗 {digest.get('url', '')}
+
+{summary}{digest_urls_line}
+
+📊 Влияние на разработку агентов:
+{agent_impact}
+
+💼 Влияние на бизнес:
+{business_impact}
+
+🖥 Влияние на IT-индустрию:
+{it_impact}
+
+⏰ ДО AGI: ~{agi_days} дней [░░░░░░░░░░] ~{agi_percent}%
+
+🚀 Несколько релизов одним постом — держим канал плотным.
+→ https://stashash1.github.io/agentsmits-blog"""
+
+
+# Подписи для matched regex'ов — чтобы «Что нового» был человекочитаемым
+_BREAKTHROUGH_LABEL = {
+    r"\bMamba\b": "Mamba (альтернатива трансформеру)",
+    r"\bSSM\b": "State Space Model",
+    r"\bstate\s+space\s+model": "State Space Model",
+    r"\bRWKV\b": "RWKV",
+    r"\bRetNet\b": "RetNet",
+    r"\blinear\s+attention": "линейное внимание",
+    r"\bmixture\s+of\s+experts\b": "Mixture-of-Experts",
+    r"\bMoE\b": "MoE",
+    r"\bdiffusion\s+transformer\b": "Diffusion Transformer",
+    r"\bJEPA\b": "JEPA (world model от Meta)",
+    r"\bV[- ]?JEPA\b": "V-JEPA",
+    r"\bworld\s+model": "world model",
+    r"\bhybrid\s+(?:model|architecture|intelligence|approach)\b": "гибридная архитектура",
+    r"\btest[- ]time\s+compute\b": "test-time compute",
+    r"\binference[- ]time\s+scaling\b": "inference-time scaling",
+    r"\bprocess\s+reward\s+model\b": "process reward model",
+    r"\bconstitutional\s+AI\b": "Constitutional AI",
+    r"\bRLAIF\b": "RLAIF",
+    r"\bDPO\b": "DPO",
+    r"\bmechanistic\s+interpretability\b": "mechanistic interpretability",
+    r"\bchain[- ]of[- ]thought\b": "Chain-of-Thought",
+    r"\btree[- ]of[- ]thoughts?\b": "Tree-of-Thoughts",
+    r"\bchain[- ]of[- ]agents?\b": "Chain-of-Agents",
+    r"\bagentic\s+(?:framework|workflow|reasoning|loop|system)\b": "агентский фреймворк",
+    r"\bagentic\s+AI\b": "Agentic AI",
+    r"\bmultimodal\s+(?:model|architecture|foundation)\b": "мультимодальная архитектура",
+    r"\b(?:new|open|novel)\s+(?:framework|library|toolkit|method|approach|technique|protocol)\b": "новая техника / фреймворк",
+    r"\bvision[- ]language[- ]action\b": "Vision-Language-Action",
+    r"\bVLA\b": "VLA",
+    r"\bembodied\s+(?:AI|agent|intelligence)\b": "embodied AI",
+    r"\bhumanoid\b": "humanoid-робот",
+    r"\bscientific\s+(?:computing|discovery|AI)\b": "scientific computing frontier",
+}
+
+
+def _format_breakthrough_reason(breakthrough) -> str:
+    """Человекочитаемое объяснение, почему статья помечена как прорыв."""
+    lines = []
+    used_labels = set()
+    for pat in breakthrough.matched_architectures[:3]:
+        label = _BREAKTHROUGH_LABEL.get(pat)
+        if label and label not in used_labels:
+            used_labels.add(label)
+            lines.append(f"• {label}")
+    if breakthrough.matched_sota:
+        sota = ", ".join(p.replace(r"\b", "").replace("[- ]?", "").replace("\\", "")[:40]
+                        for p in breakthrough.matched_sota[:2])
+        lines.append(f"• SOTA / milestone: {sota}")
+    if breakthrough.matched_open_source:
+        lines.append("• Open-source достигает frontier-уровня")
+    if not lines:
+        lines.append("• Новый технологический вектор (определено по importance + ключевым сигналам)")
+    return "\n".join(lines)
+
 
 def main():
     run_ts = datetime.now(timezone.utc).isoformat()
@@ -403,13 +564,59 @@ def main():
                           {"published": 0, "reason": "nothing_to_publish"})
             return
 
-        # Sort: decayed_importance desc (QW2 soft signal), then importance desc,
-        # then date desc. QW2 учитывает age × tier-half-life: свежее важнее.
-        to_publish.sort(key=lambda x: (
-            -x.get('decayed_importance', x.get('importance', 0)),
-            -x.get('importance', 4),
-            x.get('date', ''),
-        ))
+        # === QW-3 (quality-news, 2026-08-25): RELEASE GROUPING ===
+        # Несколько релизов одного источника (Claude Code 2.1.237/240/241,
+        # GitHub Copilot changelog, Cursor) — объединяем в один пост-дайджест.
+        # Иначе канал заспамливается версионными changelog-ами.
+        release_groups, non_release_items = group_releases(to_publish, min_group_size=2)
+        if release_groups:
+            log_event(SCRIPT_NAME, "qw3_release_grouping", {
+                "groups_count": len(release_groups),
+                "items_in_groups": sum(g.count for g in release_groups),
+                "groups": [
+                    {"source": g.source, "count": g.count,
+                     "max_importance": g.max_importance,
+                     "span": f"{g.earliest_date}..{g.latest_date}"}
+                    for g in release_groups
+                ],
+                "run_id": run_id,
+            })
+            # Replace release items in to_publish with synthetic digest posts.
+            # Mark underlying item IDs so we can remove them from queue['pending']
+            # after the digest is published.
+            absorbed_ids = set()
+            for grp in release_groups:
+                absorbed_ids.update(it['id'] for it in grp.items if it.get('id'))
+                digest = make_digest_post(grp)
+                non_release_items.append(digest)
+            to_publish = non_release_items
+            # Считаем дайджесты для лога. Конкретные source_ids живут
+            # в самом digest['_digest_source_ids'] — при публикации они
+            # будут прочитаны через post.get('_digest_source_ids').
+            digest_count = sum(1 for d in to_publish if d.get('_is_digest'))
+            log_event(SCRIPT_NAME, "qw3_digests_built", {
+                "absorbed_count": len(absorbed_ids),
+                "digest_count": digest_count,
+                "run_id": run_id,
+            })
+
+        # Sort:
+        # 1) BT: breakthrough (is_breakthrough=True) идут ПЕРВЫМИ — прорыв не должен ждать
+        # 2) decayed_importance desc (QW2 soft signal)
+        # 3) importance desc
+        # 4) date desc (свежее важнее)
+        def _sort_key(x):
+            try:
+                bt_first = 0 if detect_breakthrough(x).is_breakthrough else 1
+            except Exception:
+                bt_first = 1
+            return (
+                bt_first,
+                -x.get('decayed_importance', x.get('importance', 0)),
+                -x.get('importance', 4),
+                x.get('date', ''),
+            )
+        to_publish.sort(key=_sort_key)
         # Pre-filter: only items that actually have analysis. Without this,
         # the [:5] slice can include items whose analysis is still missing,
         # and we waste publish slots on `no_analysis` skips instead of
@@ -423,6 +630,16 @@ def main():
         # так что tier-1 breaking news не отсекается. Backlog discipline:
         # 163 → ~69 items в pending после фильтра.
         pre_qw4_count = len(to_publish)
+        # BT: breakthrough-статьи получают минимальный importance=3, даже если
+        # scoring понизил (например datacenter в TechCrunch = imp=1). Прорыв
+        # по определению важнее обычной новости.
+        for p in to_publish:
+            try:
+                if detect_breakthrough(p).is_breakthrough and (p.get('importance') or 0) < 3:
+                    p['importance'] = 3
+                    p['bt_importance_boost'] = True
+            except Exception:
+                pass
         to_publish = [p for p in to_publish if (p.get('importance') or 0) >= 3]
         qw4_skipped = pre_qw4_count - len(to_publish)
         if qw4_skipped:
@@ -472,7 +689,20 @@ def main():
         quiet_pending = []
         
         for post in to_publish:
-            text = format_post(post, agi_days, agi_percent)
+            # BT: детектируем прорыв (новая архитектура / техника / SOTA)
+            breakthrough = detect_breakthrough(post)
+            if breakthrough.is_breakthrough:
+                log_event(SCRIPT_NAME, 'breakthrough_detected', {
+                    'article_id': post['id'],
+                    'score': breakthrough.score,
+                    'reasons': list(breakthrough.reasons),
+                    'run_id': run_id,
+                })
+            # QW-3: release-дайджест идёт через отдельный формат
+            if post.get('_is_digest'):
+                text = format_release_digest(post, agi_days, agi_percent, breakthrough=breakthrough)
+            else:
+                text = format_post(post, agi_days, agi_percent, breakthrough=breakthrough)
             if text is None:
                 # No analysis — skip this post, leave it in pending for later
                 print(f"Skipping (no analysis): {post['id']}")
@@ -532,7 +762,11 @@ def main():
                     'url': post['url'],
                     'date': post.get('date'),
                     'published_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
-                    'message_id': msg_id
+                    'message_id': msg_id,
+                    # BT: пометка прорыва для сайта / analytics
+                    'is_breakthrough': breakthrough.is_breakthrough,
+                    'breakthrough_score': breakthrough.score,
+                    'breakthrough_reasons': list(breakthrough.reasons),
                 }
                 # Stage 2 (quality-news-analyst, 2026-08-10): attach to narrative.
                 # Real-time clustering: при публикации — найти matching narrative
@@ -578,6 +812,40 @@ def main():
                 # Remove from pending
                 queue['pending'] = [p for p in queue['pending'] if p['id'] != post['id']]
 
+                # QW-3: если это release-дайджест — пометить все underlying
+                # items как published (в queue['published']) и убрать из pending.
+                if post.get('_is_digest'):
+                    source_ids = post.get('_digest_source_ids', [])
+                    if source_ids:
+                        underlying_titles = []
+                        for src_id in source_ids:
+                            for it in post.get('_digest_items', []):
+                                if it.get('id') == src_id:
+                                    # Добавим «теневой» pub_entry для каждого underlying item
+                                    underlying_pub = {
+                                        'id': src_id,
+                                        'source': it.get('source', post.get('source', '')),
+                                        'title': it.get('title', ''),
+                                        'url': it.get('url', ''),
+                                        'date': it.get('date'),
+                                        'published_at': pub_entry['published_at'],
+                                        'message_id': None,  # не свой message_id
+                                        'is_digest_member': True,
+                                        'digest_id': post['id'],
+                                        'importance': it.get('importance'),
+                                    }
+                                    queue['published'].append(underlying_pub)
+                                    underlying_titles.append(it.get('title', '')[:60])
+                                    break
+                            # Удаляем из pending
+                            queue['pending'] = [p for p in queue['pending'] if p.get('id') != src_id]
+                        log_event(SCRIPT_NAME, "qw3_digest_published", {
+                            "digest_id": post['id'],
+                            "absorbed_count": len(source_ids),
+                            "underlying_titles": underlying_titles,
+                            "run_id": run_id,
+                        })
+
                 # Update last_update timestamp only (AGI is time-based, not decremented)
                 queue['agi_counter']['last_update'] = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
@@ -602,6 +870,37 @@ def main():
                 # save is cheap (a few KB) and replaces the old "save twice"
                 # pattern that lost publishes on crash.
                 save_queue(queue)
+
+                # BT: сохранить в current.json для сайта (бейдж 🔥 ПРОРЫВ)
+                try:
+                    storage_payload = {
+                        'id': pub_entry['id'],
+                        'source': pub_entry.get('source', ''),
+                        'title': pub_entry.get('title', ''),
+                        'url': pub_entry.get('url', ''),
+                        'content': text,
+                        'published_at': pub_entry.get('published_at'),
+                        'is_breakthrough': bool(pub_entry.get('is_breakthrough')),
+                        'breakthrough_score': pub_entry.get('breakthrough_score'),
+                        'breakthrough_reasons': pub_entry.get('breakthrough_reasons'),
+                    }
+                    storage_script = str(PROJECT_ROOT / 'scripts' / 'storage_manager.py')
+                    res = subprocess.run(
+                        ['python3', storage_script, 'add', json.dumps(storage_payload, ensure_ascii=False)],
+                        capture_output=True, text=True, timeout=30,
+                    )
+                    if res.returncode != 0:
+                        log_event(SCRIPT_NAME, 'storage_add_failed', {
+                            'article_id': pub_entry['id'],
+                            'stderr': (res.stderr or '')[:300],
+                            'run_id': run_id,
+                        })
+                except Exception as e:
+                    log_event(SCRIPT_NAME, 'storage_add_exception', {
+                        'article_id': pub_entry['id'],
+                        'error': str(e)[:300],
+                        'run_id': run_id,
+                    })
             else:
                 failed += 1
                 log_error(SCRIPT_NAME, f"send_telegram failed for {post['id']}")
