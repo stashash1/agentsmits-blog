@@ -2,6 +2,86 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "huggingface-multi-vector-encoder",
+      "source": "HuggingFace",
+      "title": "Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers",
+      "url": "https://huggingface.co/blog/multi-vector-encoder",
+      "content": "🤖 Агенты Смита\nвторник, 18 августа 2026 г.\n\n🔥 ВАЖНАЯ СТАТЬЯ • ПРОРЫВ\n\n📰 Мульти-векторные модели эмбеддингов (с поздним взаимодействием) с использованием Sentence Transformers\n🔗 https://huggingface.co/blog/multi-vector-encoder\n\n📝 Статья описывает использование мульти-векторных моделей эмбеддингов с механизмом позднего взаимодействия (late interaction) в библиотеке Sentence Transformers. Такие модели, как ColBERT и его варианты, позволяют достигать более высокого качества поиска и retrieval-задач по сравнению с классическими одно-векторными эмбеддингами, сохраняя баланс между точностью и эффективностью.\n\n🧬 Что нового (прорыв):\n• Новый технологический вектор (определено по importance + ключевым сигналам)\n\n📊 Влияние на разработку агентов:\nПозволяет AI-агентам выполнять более точный семантический поиск и извлечение информации из больших баз знаний за счёт механизма позднего взаимодействия, улучшая качество RAG-систем и инструментов памяти агентов.\n\n💼 Влияние на бизнес:\nСнижает порог внедрения продвинутых поисковых систем для бизнеса, позволяя компаниям улучшить качество поиска по документам и снизить затраты на поддержку клиентов.\n\n🖥 Влияние на IT-индустрию:\nПредоставляет разработчикам удобный API в библиотеке Sentence Transformers для использования моделей типа ColBERT, упрощая интеграцию мульти-векторного поиска в существующие IT-системы.\n\n⏰ ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n⚡ Это меняет правила игры.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T07:20:26.517421Z",
+      "added_to_site_at": "2026-08-25T10:20:27.055023",
+      "is_breakthrough": true,
+      "breakthrough_score": 3,
+      "breakthrough_reasons": [
+        "new_architecture_or_technique:1"
+      ]
+    },
+    {
+      "id": "openai-stampli",
+      "source": "OpenAI",
+      "title": "Stampli cuts launch hours by 68% using ChatGPT Work",
+      "url": "https://openai.com/index/stampli",
+      "content": "🤖 Агенты Смита\nчетверг, 20 августа 2026 г.\n\n📰 Stampli сократила время запуска на 68% с помощью ChatGPT Work\n🔗 https://openai.com/index/stampli\n\n📝 Stampli столкнулась с жёстким дедлайном запуска при ограниченных ресурсах разработки. Используя Codex и ChatGPT Work, компания сжала недели производственной работы до нескольких дней, достигнув 68% сокращения времени запуска. Кейс иллюстрирует эффективность AI-агентов как инструмента ускорения разработки.\n\n📊 Влияние на разработку агентов:\nДемонстрирует практическое применение AI-агентов (Codex и ChatGPT Work) для автономного выполнения задач разработки, сокращая недели работы до дней без расширения команды.\n\n💼 Влияние на бизнес:\nПоказывает, как компании могут ускорять вывод продуктов на рынок и экономить ресурсы, используя AI-агентов вместо найма дополнительных специалистов, что повышает конкурентоспособность при фиксированных дедлайнах.\n\n🖥 Влияние на IT-индустрию:\nПодтверждает, что AI-инструменты вроде Codex способны заменять рутинные этапы разработки, меняя подход к планированию ресурсов и снижая зависимость от выделенных команд разработчиков.\n\n⏰ ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T07:19:21.200138Z",
+      "added_to_site_at": "2026-08-25T10:19:21.766019",
+      "breakthrough_score": 2,
+      "breakthrough_reasons": [
+        "importance_boost:+2"
+      ]
+    },
+    {
+      "id": "digest-claude-code-2026-08-24",
+      "source": "Claude Code",
+      "title": "Дайджест релизов Claude Code: версии 2.1.241 → 2.1.218 — 5 шт (период 2026-07-26 — 2026-08-24)",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21241",
+      "content": "🤖 Агенты Смита\nвторник, 25 августа 2026 г.\n\n📦 ДАЙДЖЕСТ РЕЛИЗОВ\n\n📰 Дайджест релизов Claude Code: версии 2.1.241 → 2.1.218 — 5 шт (период 2026-07-26 — 2026-08-24)\n🔗 https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21241\n\n• Claude Code 2.1.241 (2026-08-24) — Вышел релиз Claude Code версии 2.1.241 — обновлённой версии CLI-инструмента Anthropic для AI-ассистированной разработки.\n• Claude Code 2.1.240 (2026-08-24) — Вышла версия Claude Code 2.1.240 — обновлённый AI-агент для разработчиков от Anthropic.\n• Claude Code 2.1.237 (2026-08-24) — Вышел патч-релиз Claude Code 2.1.237 с исправлением ошибки кэширования промптов при использовании LLM-шлюзов или кастомных базовых URL.\n• Claude Code 2.1.222 (2026-08-10) — В релизе Claude Code 2.1.222 исправлена ошибка, из-за которой worktree-изолированные сессии и их субагенты могли выполнять разрушительные git-команды против основного чекаута.\n• Claude Code 2.1.218: фоновый субагент для /code-review (2026-07-26) — В релизе Claude Code 2.1.218 команда /code-review переведена в режим фонового субагента.\n\nРелизы в дайджесте:\n• Claude Code 2.1.241 — https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21241\n• Claude Code 2.1.240 — https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21240\n• Claude Code 2.1.237 — https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21237\n• Claude Code 2.1.222 — https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21222\n• Claude Code 2.1.218 — https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21218\n\n📊 Влияние на разработку агентов:\nОбновление Claude Code расширяет функциональность CLI-инструмента для автономной разработки с AI-агентом, улучшая его возможности по написанию и редактированию кода. Изменения в обработке контекста и инструментов повышают эффективность агентного взаимодействия с кодовой базой.\n\n💼 Влияние на бизнес:\nРегулярные обновления Claude Code укрепляют позиции Anthropic на рынке AI-инструментов для разработчиков, конкурируя с Cursor, GitHub Copilot и другими решениями. Стабильный релизный цикл повышает доверие корпоративных клиентов и стимулирует подписочную модель.\n\n🖥 Влияние на IT-индустрию:\nНовые функции и исправления ошибок в Claude Code влияют на повседневный workflow разработчиков, использующих AI для кодинга. Обновления затрагивают интеграции с IDE, терминальный опыт и обработку больших кодовых баз.\n\n� ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n🚀 Несколько релизов одним постом — держим канал плотным.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T07:19:20.107655Z",
+      "added_to_site_at": "2026-08-25T10:19:21.016392",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "digest-cursor-2026-08-10",
+      "source": "Cursor",
+      "title": "Дайджест релизов Cursor — 2 шт (2026-08-10)",
+      "url": "https://cursor.com/changelog/google-workspace-plugins",
+      "content": "🤖 Агенты Смита\nвторник, 25 августа 2026 г.\n\n📦 ДАЙДЖЕСТ РЕЛИЗОВ\n\n📰 Дайджест релизов Cursor — 2 шт (2026-08-10)\n🔗 https://cursor.com/changelog/google-workspace-plugins\n\n• Плагины Google Workspace для Cursor (2026-08-10) — Cursor добавил плагины Google Workspace, позволяющие AI-агентам для кодирования читать, записывать и выполнять действия в сервисах Google.\n• Cursor Start: новый тарифный план для разработчиков в Индии (2026-08-10) — Cursor анонсировал тарифный план Start стоимостью 649 рупий в месяц, ориентированный на разработчиков в Индии.\n\nРелизы в дайджесте:\n• Google Workspace Plugins — https://cursor.com/changelog/google-workspace-plugins\n• Cursor Start — https://cursor.com/changelog/cursor-start\n\n📊 Влияние на разработку агентов:\nПлагины предоставляют агентам кодирования Cursor прямой доступ к чтению, записи и действиям в Google Workspace, расширяя их возможности за пределы кодовой базы и позволяя автоматизировать рабочие процессы, связанные с документами, таблицами и почтой.\n\n💼 Влияние на бизнес:\nИнтеграция с Google Workspace усиливает конкурентное преимущество Cursor на рынке AI-инструментов для разработки, привлекая корпоративных клиентов, использующих экосистему Google, и потенциально ускоряя переход к AI-first рабочим процессам в компаниях.\n\n🖥 Влияние на IT-индустрию:\nПоявление плагинов стимулирует развитие архитектуры AI-агентов с подключаемыми модулями для интеграции с SaaS-платформами, задавая новый стандарт для IDE и формируя спрос на стандартизированные протоколы взаимодействия агентов с внешними сервисами.\n\n� ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n🚀 Несколько релизов одним постом — держим канал плотным.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T07:19:19.272404Z",
+      "added_to_site_at": "2026-08-25T10:19:19.918584",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "digest-github-copilot-2026-08-21",
+      "source": "GitHub Copilot",
+      "title": "Дайджест релизов GitHub Copilot — 11 шт (период 2026-08-04 — 2026-08-21)",
+      "url": "https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams",
+      "content": "🤖 Агенты Смита\nвторник, 25 августа 2026 г.\n\n📦 ДАЙДЖЕСТ РЕЛИЗОВ\n\n📰 Дайджест релизов GitHub Copilot — 11 шт (период 2026-08-04 — 2026-08-21)\n🔗 https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams\n\n• Новый интерфейс GitHub Copilot в Slack (2026-08-21) — GitHub представил обновлённый интерфейс Copilot прямо в Slack: пользователи могут упоминать @GitHub для работы с кодом, задачами и взаимодействия с AI-агентом в многопользовательском режиме.\n• Совместная агентная работа с GitHub Copilot в Microsoft Teams (2026-08-21) — GitHub представил функцию совместной агентной работы Copilot в Microsoft Teams, позволяющую превращать решения встреч в готовые задачи и продолжать работу между различными поверхностями Copilot.\n• Еженедельные релизы GitHub Copilot — 3 августа (2026-08-07) — GitHub выпустил очередной еженедельный апдейт Copilot, включающий обновления приложения Copilot, CLI-инструмента и расширения для VS Code 1.132.\n• Дашборд эффективности Copilot получил раздел о возврате инвестиций (2026-08-07) — GitHub добавил в Copilot Impact Dashboard раздел «Потенциальный возврат инвестиций» (ROI).\n• Уровни усилий проверки кода Copilot стали общедоступными (2026-08-07) — GitHub сделал общедоступной функцию настройки уровней усилий для Copilot code review с вариантами Lite и Balanced вместо прежних Low и Medium.\n• API метрик использования Copilot добавляет данные об активности агент-приложений (2026-08-07) — GitHub добавил в API метрик использования Copilot данные об активности агент-приложений.\n• GitHub Code Quality больше не добавляет Copilot в качестве ревьюера (2026-08-07) — GitHub объявил об отключении автоматического добавления Copilot в качестве ревьюера в функционале Code Quality.\n• Списки разрешённых MCP в корпоративных управляемых настройках (2026-08-07) — GitHub добавил возможность управлять списками разрешённых MCP-серверов в корпоративных настройках.\n\nРелизы в дайджесте:\n• The new GitHub Copilot experience in Slack — https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack\n• Shared agentic work with GitHub Copilot in Microso — https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams\n• GitHub Copilot weekly releases — August 3 — https://github.blog/changelog/2026-08-07-github-copilot-weekly-releases-august-3\n• Copilot impact dashboard adds a return on investme — https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section\n• Copilot code review effort levels are generally av — https://github.blog/changelog/2026-08-07-copilot-code-review-effort-levels-are-generally-available\n...и ещё 6\n\n📊 Влияние на разработку агентов:\nGitHub Copilot получает агентские возможности для превращения решений встреч в готовые задачи и продолжения работы между поверхностями, расширяя роль AI-агента от помощника кодера до координатора командной работы.\n\n💼 Влияние на бизнес:\nИнтеграция GitHub Copilot в Teams усиливает позиции Microsoft на рынке корпоративной продуктивности, создавая конкурентное преимущество через единую среду совместной работы с AI и потенциально ускоряя внедрение AI-агентов в enterprise-сегменте.\n\n🖥 Влияние на IT-индустрию:\nПоявление кросс-поверхностных агентских workflows стимулирует разработку инфраструктуры для оркестрации AI-агентов между коммуникационными и dev-платформами, задавая стандарт интеграции AI в корпоративные инструменты.\n\n� ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n🚀 Несколько релизов одним постом — держим канал плотным.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T07:19:18.466616Z",
+      "added_to_site_at": "2026-08-25T10:19:19.125548",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
+      "id": "techcrunch-valor-point72-back-general-intuition-at-6b-valua-0565e9e7b154",
+      "source": "TechCrunch AI",
+      "title": "Valor, Point72 back General Intuition at $6B valuation as AI startup pushes into robotics",
+      "url": "https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/",
+      "content": "🤖 Агенты Смита\nпонедельник, 24 августа 2026 г.\n\n🔥 ВАЖНАЯ СТАТЬЯ • ПРОРЫВ\n\n📰 Valor и Point72 поддерживают General Intuition с оценкой в $6 млрд, поскольку AI-стартап выходит в робототехнику\n🔗 https://techcrunch.com/2026/08/24/valor-point72-back-general-intuition-at-6b-valuation-as-ai-startup-pushes-into-robotics/\n\n📝 General Intuition привлёк инвестиции от Valor и Point72 при оценке в $6 млрд и расширяет свою деятельность в область робототехники. Стартап развивает модели восприятия и пространственного мышления, первоначально созданные для игровых сценариев, и адаптирует их для автономных физических систем. Высокая оценка подчёркивает растущую уверенность инвесторов в потенциале embodied AI.\n\n🧬 Что нового (прорыв):\n• embodied AI\n\n📊 Влияние на разработку агентов:\nФинансирование укрепляет позиции стартапа, развивающего модели восприятия окружающей среды для автономных систем, что ускоряет создание агентов, способных действовать в физическом мире и взаимодействовать с роботами.\n\n💼 Влияние на бизнес:\nРаунд с оценкой $6 млрд отражает высокий институциональный интерес к AI-стартапам, выходящим за рамки чисто цифровых продуктов в сторону робототехники, что может стимулировать новую волну венчурных инвестиций в embodied AI.\n\n🖥 Влияние на IT-индустрию:\nРазвитие моделей пространственного мышления и восприятия расширяет инфраструктурный стек для интеграции AI с робототехническими платформами, создавая спрос на новые инструменты симуляции, обучения с подкреплением и edge-вычислений.\n\n⏰ ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n⚡ Это меняет правила игры.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T07:18:58.931715Z",
+      "added_to_site_at": "2026-08-25T10:18:59.715541",
+      "is_breakthrough": true,
+      "breakthrough_score": 3,
+      "breakthrough_reasons": [
+        "new_architecture_or_technique:1"
+      ]
+    },
+    {
       "id": "claude-code-claude-code-2.1.238",
       "source": "Claude Code",
       "title": "Claude Code 2.1.238",
