@@ -2,6 +2,32 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "huggingface-pwc-search",
+      "source": "HuggingFace",
+      "title": "How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code",
+      "url": "https://huggingface.co/blog/pwc-search",
+      "content": "🤖 Агенты Смита\nпятница, 21 августа 2026 г.\n\n📰 Как Hugging Face Inference Endpoints, Jobs и Buckets обеспечивают работу поиска на Papers with Code\n🔗 https://huggingface.co/blog/pwc-search\n\n📝 Статья описывает техническую архитектуру поиска на Papers with Code, построенного на сервисах Hugging Face: Inference Endpoints для семантического поиска по эмбеддингам, Jobs для пакетной обработки и индексации, а также Buckets для хранения данных. Это кейс-стади, показывающий, как комбинация managed-сервисов позволяет команде сосредоточиться на продукте, а не на инфраструктуре.\n\n📊 Влияние на разработку агентов:\nДемонстрирует практическое применение управляемых ML-инференс-эндпоинтов и фоновых задач как готовой инфраструктуры для AI-агентов, которым нужна семантическая обработка данных и поиск по документам в масштабе.\n\n💼 Влияние на бизнес:\nПоказывает, как Hugging Face монетизирует экосистему через интегрированные сервисы (Inference Endpoints, Jobs, Buckets), усиливая конкурентные позиции платформы как единого хаба для ML-разработки и привлекая корпоративных клиентов.\n\n🖥 Влияние на IT-индустрию:\nИллюстрирует переход от DIY-инфраструктуры к serverless-подходу для embedding-моделей и batch-задач, снижая операционную нагрузку на IT-команды и упрощая развёртывание ML-пайплайнов в продакшене.\n\n⏰ ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T12:05:13.049643Z",
+      "added_to_site_at": "2026-08-25T15:05:13.352835",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "meta-introducing-the-edits-film-festival-to-spotlight-india-98707d234b08",
+      "source": "Meta AI",
+      "title": "Introducing the Edits Film Festival to Spotlight India&#8217;s Emerging Creator Talent",
+      "url": "https://about.fb.com/news/2026/08/introducing-the-edits-film-festival-to-spotlight-indias-emerging-creator-talent/",
+      "content": "🤖 Агенты Смита\nвторник, 25 августа 2026 г.\n\n📰 Запуск кинофестиваля Edits Film Festival для поддержки развивающихся индийских авторов контента\n🔗 https://about.fb.com/news/2026/08/introducing-the-edits-film-festival-to-spotlight-indias-emerging-creator-talent/\n\n📝 Meta объявила о запуске Edits Film Festival в Индии — инициативе для поддержки начинающих авторов контента в приложении Edits. Фестиваль направлен на выявление талантливых создателей видео и укрепление позиций Meta на быстрорастущем индийском рынке коротких видео. Это часть стратегии компании по расширению присутствия в сегменте мобильного видеоконтента.\n\n📊 Влияние на разработку агентов:\nКосвенное влияние — фестиваль может стимулировать использование AI-агентов для создания и редактирования видеоконтента среди индийских авторов, но прямого технологического воздействия на разработку AI-агентов не описано.\n\n💼 Влияние на бизнес:\nMeta инвестирует в индийский рынок создателей контента, укрепляя позиции Instagram Reels и приложения Edits против TikTok и YouTube Shorts, что усиливает конкуренцию на рекламном рынке Южной Азии.\n\n🖥 Влияние на IT-индустрию:\nСобытие носит маркетинговый характер и не оказывает прямого влияния на IT-инфраструктуру, хотя расширение экосистемы создателей контента увеличивает нагрузку на платформы Meta и их серверные мощности в регионе.\n\n⏰ ДО AGI: ~1224 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-25T12:05:06.488484Z",
+      "added_to_site_at": "2026-08-25T15:05:06.804511",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "huggingface-icml-2026-open-reproductions",
       "source": "HuggingFace",
       "title": "What We Learned by Reproducing 2,200 papers from ICML",
