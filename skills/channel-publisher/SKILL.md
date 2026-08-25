@@ -46,6 +46,112 @@ description: "Читает pending_queue.json, готовит пост по ша
 - Текст-заготовка меняется по смыслу статьи
 - Публикуется ТОЛЬКО после разрешения пользователя
 
+## Breakthrough-формат (прорывные статьи)
+
+Статьи, которые детектирует `pipeline/breakthrough_detector.py` как прорыв (новая архитектура / SOTA / agentic AI / VLA / TTT / MoE / JEPA / hybrid / open-source frontier), публикуются в **отдельном формате** с пометкой. Логика:
+
+1. Детектор скорит `item` по паттернам архитектур и SOTA, плюс importance boost (+2 для importance=5, +1 для importance=4), минус анти-паттерны (pricing, case study, energy crisis)
+2. `is_breakthrough = score >= 3 AND есть позитивный сигнал (architecture/sota/open-source)`
+3. Breakthrough идут ПЕРВЫМИ в сортировке (даже с importance=1-2 получают auto-boost до 3 для прохождения QW4-фильтра)
+4. На сайте получают бейдж «🔥 ПРОРЫВ» в hero-card (оранжевый border + акцентный заголовок)
+5. В `pending_queue.json.published[]` сохраняются `is_breakthrough`, `breakthrough_score`, `breakthrough_reasons`, `bt_importance_boost`
+6. В `current.json` (для сайта) — те же поля, чтобы бейдж отрендерился через `generate_site.py`
+
+**Шаблон breakthrough-поста (вместо стандартного):**
+
+```
+🤖 Агенты Смита
+[Дата]
+
+🔥 ВАЖНАЯ СТАТЬЯ • ПРОРЫВ
+
+📰 [Название]
+🔗 [URL]
+
+📝 [Summary]
+
+🧬 Что нового (прорыв):
+• [Архитектура/техника: <человекочитаемая метка>]
+• SOTA / milestone: [если есть]
+• Open-source достигает frontier-уровня [если есть]
+
+📊 Влияние на разработку агентов:
+[Agent impact]
+
+💼 Влияние на бизнес:
+[Business impact]
+
+� Влияние на IT-индустрию:
+[IT impact]
+
+⏰ ДО AGI: ~XXXX дней [░░░░░░░░░░] ~X%
+
+� Это меняет правила игры.
+→ https://stashash1.github.io/agentsmits-blog
+```
+
+**Когда НЕ помечать как breakthrough:**
+- Продуктовый релиз без техники (новый pricing, новый тариф, case study, customer story)
+- Маркетинговый анонс без тех.деталей
+- Статьи с `importance` 1-2 И без architecture/sota/open-source сигналов (даже с importance_boost не пройдут)
+
+## Release digest (QW-3, 2026-08-25)
+
+Несколько релизов одного источника объединяются в один пост-дайджест:
+
+- **Claude Code 2.1.218, 2.1.222, 2.1.237, 2.1.240, 2.1.241** → один пост «Дайджест релизов Claude Code: версии 2.1.241 → 2.1.218 — 5 шт (период ...)»
+- **GitHub Copilot changelog** (несколько записей в неделю) → один пост-дайджест с перечислением всех записей
+- **Cursor changelog** → один пост-дайджест
+
+Детект релиз-паттерна по 3 сигналам (любой один триггерит):
+1. Title содержит версию (`v?N.N(.N)?`) + ключевые слова (release/update/changelog)
+2. URL содержит `/changelog/`, `/release`, `/releases/`, `CHANGELOG`
+3. Source ∈ {Claude Code, GitHub Copilot, Cursor}
+
+Группировка по source. Минимум 2 элемента для объединения.
+
+**После успешной публикации дайджеста:**
+- Все underlying items помечаются в `published[]` с флагом `is_digest_member: True` и `digest_id: <id дайджеста>`
+- Удаляются из `pending[]`
+- Повторная публикация underlying невозможна
+
+Реализация: `pipeline/release_grouper.py` (group_releases + make_digest_post), интеграция в `pipeline/publish_post.py:main()`.
+
+**Шаблон release-дайджеста:**
+
+```
+🤖 Агенты Смита
+[Дата]
+
+📦 ДАЙДЖЕСТ РЕЛИЗОВ
+
+📰 [Название: «Дайджест релизов X: версии A → B — N шт (период ...)»]
+🔗 [URL главного релиза]
+
+• [Перевод релиза 1] (date) — [1-предложение саммари]
+• [Перевод релиза 2] (date) — [1-предложение саммари]
+...
+
+Релизы в дайджесте:
+• [Title релиза] — [URL]
+• [Title релиза] — [URL]
+... [max 5 URL в посте]
+
+📊 Влияние на разработку агентов:
+[agent_impact из наиболее важного underlying]
+
+💼 Влияние на бизнес:
+[business_impact]
+
+� Влияние на IT-индустрию:
+[it_impact]
+
+⏰ ДО AGI: ~XXXX дней [░░░░░░░░░░] ~X%
+
+🚀 Несколько релизов одним постом — держим канал плотным.
+→ https://stashash1.github.io/agentsmits-blog
+```
+
 ## Шаблон поста
 
 ```
