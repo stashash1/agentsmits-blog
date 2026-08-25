@@ -32,6 +32,8 @@ from narrative_store import (  # Stage 2: narrative clustering
 )
 from release_grouper import (  # QW-3 (2026-08-25): release digest
     group_releases, make_digest_post, is_release_item,
+    group_industry_news, make_industry_digest_post,  # QW-3.1: industry digest
+    cleanup_stale_items,  # QW-3.1: stale cleanup
 )
 
 
@@ -402,6 +404,52 @@ def format_release_digest(digest, agi_days, agi_percent, breakthrough=None):
 → https://stashash1.github.io/agentsmits-blog"""
 
 
+def format_industry_digest(digest, agi_days, agi_percent, breakthrough=None):
+    """QW-3.1 (2026-08-25): формат для industry-news дайджеста.
+
+    Объединяет несколько tier-3 items (TechCrunch, arXiv, JustAI) в один
+    пост с перечислением. Используется вместо отдельных постов про каждую
+    новость — иначе канал заспамливается.
+    """
+    months_ru = ['', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
+    days_ru = ['понедельник', 'вторник', 'среда', 'четверг',
+               'пятница', 'суббота', 'воскресенье']
+    now = datetime.now(timezone.utc)
+    date = f"{days_ru[now.weekday()]}, {now.day} {months_ru[now.month]} {now.year} г."
+
+    analysis = digest.get('analysis') or {}
+    title = analysis.get('translated_title') or digest.get('title', 'Дайджест индустрии')
+    summary = analysis.get('summary', '')
+    agent_impact = analysis.get('agent_impact', '')
+    business_impact = analysis.get('business_impact', '')
+    it_impact = analysis.get('it_impact', '')
+
+    return f"""🤖 Агенты Смита
+{date}
+
+📰 ДАЙДЖЕСТ ИНДУСТРИИ
+
+📰 {title}
+🔗 {digest.get('url', '')}
+
+{summary}
+
+📊 Влияние на разработку агентов:
+{agent_impact}
+
+💼 Влияние на бизнес:
+{business_impact}
+
+🖥 Влияние на IT-индустрию:
+{it_impact}
+
+⏰ ДО AGI: ~{agi_days} дней [░░░░░░░░░░] ~{agi_percent}%
+
+📚 Несколько событий одним постом — все главные новости недели в одном дайджесте.
+→ https://stashash1.github.io/agentsmits-blog"""
+
+
 # Подписи для matched regex'ов — чтобы «Что нового» был человекочитаемым
 _BREAKTHROUGH_LABEL = {
     r"\bMamba\b": "Mamba (альтернатива трансформеру)",
@@ -552,6 +600,30 @@ def main():
                 pass
         to_publish = [p for p in pending if p['id'] not in published_ids and p['id'] not in published_ids_recent]
 
+        # === QW-3.1 (quality-news, 2026-08-25): STALE CLEANUP ===
+        # Удаляет items с importance < 3, которые старше TTL (завит от tier).
+        # Эти items никогда не пройдут QW4, только место занимают.
+        to_publish, removed_stale = cleanup_stale_items(to_publish)
+        if removed_stale:
+            # Удаляем из queue['pending'] и сохраняем
+            removed_ids = {r['id'] for r in removed_stale if r.get('id')}
+            queue['pending'] = [p for p in queue['pending'] if p.get('id') not in removed_ids]
+            log_event(SCRIPT_NAME, "qw31_stale_cleanup", {
+                "removed_count": len(removed_stale),
+                "removed_by_tier": {
+                    str(t): sum(1 for r in removed_stale if r['tier'] == t)
+                    for t in set(r['tier'] for r in removed_stale)
+                },
+                "sample_removed": [
+                    {"id": r["id"], "source": r["source"], "title": r["title"][:60],
+                     "age_days": r["age_days"], "importance": r["importance"]}
+                    for r in removed_stale[:5]
+                ],
+                "run_id": run_id,
+            })
+            save_queue(queue)
+            print(f"QW-3.1: removed {len(removed_stale)} stale items (imp<3 + age>TTL)")
+
         if not to_publish:
             print("Nothing to publish.")
             log_event(SCRIPT_NAME, "completed", {
@@ -599,6 +671,36 @@ def main():
                 "digest_count": digest_count,
                 "run_id": run_id,
             })
+
+        # === QW-3.1 (quality-news, 2026-08-25): INDUSTRY NEWS GROUPING ===
+        # Tier-3 items (TechCrunch, arXiv, JustAI) с importance >= 3 батчатся
+        # в «Дайджест индустрии» по source. Без этого 26+ шумных новостей
+        # уходят отдельными постами в канал.
+        ind_digests, non_industry_items = group_industry_news(
+            to_publish, min_importance=3, min_group_size=2, max_items_per_digest=8
+        )
+        if ind_digests:
+            absorbed_ind_ids = set()
+            for d in ind_digests:
+                for it in d['items']:
+                    if it.get('id'):
+                        absorbed_ind_ids.add(it['id'])
+                digest = make_industry_digest_post(d)
+                # Сохраняем в digest id источника для последующей публикации
+                digest['_source_digest'] = d
+                non_industry_items.append(digest)
+            to_publish = non_industry_items
+            log_event(SCRIPT_NAME, "qw31_industry_grouping", {
+                "digests_count": len(ind_digests),
+                "items_absorbed": len(absorbed_ind_ids),
+                "digests": [
+                    {"source": d["source"], "count": d["count"],
+                     "max_importance": d["max_importance"]}
+                    for d in ind_digests
+                ],
+                "run_id": run_id,
+            })
+            print(f"QW-3.1: built {len(ind_digests)} industry digests from {len(absorbed_ind_ids)} items")
 
         # Sort:
         # 1) BT: breakthrough (is_breakthrough=True) идут ПЕРВЫМИ — прорыв не должен ждать
@@ -698,8 +800,10 @@ def main():
                     'reasons': list(breakthrough.reasons),
                     'run_id': run_id,
                 })
-            # QW-3: release-дайджест идёт через отдельный формат
-            if post.get('_is_digest'):
+            # QW-3 / QW-3.1: digest-посты (release / industry) идут через отдельный формат
+            if post.get('_is_industry_digest'):
+                text = format_industry_digest(post, agi_days, agi_percent, breakthrough=breakthrough)
+            elif post.get('_is_digest'):
                 text = format_release_digest(post, agi_days, agi_percent, breakthrough=breakthrough)
             else:
                 text = format_post(post, agi_days, agi_percent, breakthrough=breakthrough)
