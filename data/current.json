@@ -2,6 +2,19 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "github-copilot-2026-08-25-github-copilot-app-customize-tab--6d30534776a0",
+      "source": "GitHub Copilot",
+      "title": "GitHub Copilot app Customize tab is generally available",
+      "url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+      "content": "🤖 Агенты Смита\nвторник, 25 августа 2026 г.\n\n📰 Вкладка Customize в приложении GitHub Copilot стала общедоступной\n🔗 https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available\n\n📝 GitHub объявил о выходе из беты вкладки Customize в приложении GitHub Copilot. Пользователи теперь могут подключать используемые командой инструменты и исследовать все типы кастомизаций через единый интерфейс. Это упрощает адаптацию Copilot под специфические потребности команд.\n\n📊 Влияние на разработку агентов:\nРасширение возможностей кастомизации GitHub Copilot позволяет командам точнее адаптировать AI-ассистента под свои рабочие процессы, что повышает эффективность автономной помощи при разработке.\n\n💼 Влияние на бизнес:\nОбщедоступность вкладки Customize усиливает конкурентное преимущество GitHub Copilot на рынке AI-инструментов для разработчиков и стимулирует компании стандартизировать использование Copilot внутри команд.\n\n🖥 Влияние на IT-индустрию:\nКоманды разработки получают централизованный интерфейс для подключения внутренних инструментов и настройки поведения Copilot, что упрощает интеграцию AI в существующие пайплайны.\n\n⏰ ДО AGI: ~1223 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-26T16:35:08.035016Z",
+      "added_to_site_at": "2026-08-26T19:35:08.464406",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "techcrunch-radar-makes-podcasts-searchable-and-usable-by-ai-cbe393ca0644",
       "source": "TechCrunch AI",
       "title": "Radar makes podcasts searchable — and usable by AI agents",
