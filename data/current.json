@@ -2,6 +2,34 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "anthropic-anthropic-partners-with-google-cloud",
+      "source": "Anthropic",
+      "title": "Anthropic Partners With Google Cloud",
+      "url": "https://www.anthropic.com/news/anthropic-partners-with-google-cloud",
+      "content": "🤖 Агенты Смита\nсреда, 26 августа 2026 г.\n\n📰 Anthropic заключает партнёрство с Google Cloud\n🔗 https://www.anthropic.com/news/anthropic-partners-with-google-cloud\n\n📝 Anthropic выбрала Google Cloud в качестве основного облачного провайдера. Компании будут совместно разрабатывать AI-вычислительные системы, используя GPU и TPU кластеры Google для обучения и масштабирования моделей Claude. Партнёрство направлено на ускорение разработки безопасных и надёжных AI-систем.\n\n📊 Влияние на разработку агентов:\nПартнёрство открывает Anthropic доступ к масштабируемым GPU и TPU кластерам Google Cloud для обучения и развёртывания AI-агентов, ускоряя их развитие и повышая вычислительные возможности.\n\n💼 Влияние на бизнес:\nСотрудничество усиливает конкуренцию Anthropic против OpenAI и укрепляет позиции Google Cloud на рынке AI-инфраструктуры, привлекая корпоративных клиентов, заинтересованных в безопасных AI-решениях.\n\n🖥 Влияние на IT-индустрию:\nИнтеграция Claude с облачной экосистемой Google расширяет доступ разработчиков к передовым AI-моделям через уже знакомую инфраструктуру и API, стимулируя создание новых облачных AI-сервисов.\n\n⏰ ДО AGI: ~1223 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-26T18:35:26.954529Z",
+      "added_to_site_at": "2026-08-26T21:35:28.021346",
+      "breakthrough_score": 2,
+      "breakthrough_reasons": [
+        "importance_boost:+2"
+      ]
+    },
+    {
+      "id": "anthropic-zoom-partnership-and-investment",
+      "source": "Anthropic",
+      "title": "Zoom Partnership And Investment",
+      "url": "https://www.anthropic.com/news/zoom-partnership-and-investment",
+      "content": "🤖 Агенты Смита\nсреда, 26 августа 2026 г.\n\n🔥 ВАЖНАЯ СТАТЬЯ • ПРОРЫВ\n\n📰 Партнёрство и инвестиции Zoom\n🔗 https://www.anthropic.com/news/zoom-partnership-and-investment\n\n📝 Anthropic объявила о партнёрстве с Zoom, в рамках которого Zoom будет использовать Claude для создания клиентских AI-продуктов, ориентированных на надёжность, продуктивность и безопасность. Zoom также инвестирует в Anthropic, что укрепляет стратегическое сотрудничество двух компаний в сфере enterprise AI-коммуникаций.\n\n🧬 Что нового (прорыв):\n• Constitutional AI\n\n📊 Влияние на разработку агентов:\nИнтеграция Claude в продукты Zoom расширяет применение AI-агентов в корпоративных коммуникациях, позволяя создавать интеллектуальных ассистентов для автоматизации взаимодействий и повышения продуктивности пользователей.\n\n💼 Влияние на бизнес:\nИнвестиции Zoom в Anthropic укрепляют позиции обеих компаний на рынке enterprise AI, усиливают конкуренцию с Microsoft Teams и Google Workspace, и сигнализируют о росте инвестиций в специализированные AI-ассистенты для бизнеса.\n\n🖥 Влияние на IT-индустрию:\nПартнёрство демонстрирует тренд глубокой интеграции LLM в коммуникационные платформы, стимулирует развитие API для AI-агентов и формирует новые стандарты встраивания Constitutional AI в корпоративные SaaS-решения.\n\n⏰ ДО AGI: ~1223 дней [░░░░░░░░░░] ~16%\n\n⚡ Это меняет правила игры.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-26T18:35:14.596466Z",
+      "added_to_site_at": "2026-08-26T21:35:15.413317",
+      "is_breakthrough": true,
+      "breakthrough_score": 5,
+      "breakthrough_reasons": [
+        "new_architecture_or_technique:1",
+        "importance_boost:+2"
+      ]
+    },
+    {
       "id": "openai-learning-never-stops",
       "source": "OpenAI",
       "title": "Learning never stops: How AI makes learning continuous",
