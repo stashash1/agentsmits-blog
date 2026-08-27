@@ -2,6 +2,32 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "openai-introducing-intelligence-age",
+      "source": "OpenAI",
+      "title": "Introducing Intelligence Age",
+      "url": "https://openai.com/index/introducing-intelligence-age",
+      "content": "🤖 Агенты Смита\nчетверг, 20 августа 2026 г.\n\n📰 Представляем Эпоху Интеллекта\n🔗 https://openai.com/index/introducing-intelligence-age\n\n📝 OpenAI запускает новый блог Intelligence Age, посвящённый тому, как трансформативный AI изменяет власть, управление, экономику и индивидуальную свободу. Блог позиционируется как площадка для обсуждения долгосрочного влияния AI на общество. Это часть стратегии OpenAI по формированию общественного дискурса вокруг AI-агентов.\n\n📊 Влияние на разработку агентов:\nОпределяет стратегическое видение OpenAI для развития AI-агентов в контексте трансформации власти, экономики и индивидуальной свободы, задавая рамку для будущих продуктов.\n\n💼 Влияние на бизнес:\nСигнализирует о новом позиционировании OpenAI как платформы, влияющей на политику и экономику, что усиливает конкурентные преимущества и привлекает инвестиции в экосистему AI-агентов.\n\n🖥 Влияние на IT-индустрию:\nЗадаёт направление для разработки инфраструктуры и продуктов, ориентированных на автономные системы, способные влиять на управление и бизнес-процессы.\n\n⏰ ДО AGI: ~1222 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-27T14:05:37.261134Z",
+      "added_to_site_at": "2026-08-27T17:05:38.185315",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
+      "id": "digest-github-copilot-2026-08-27",
+      "source": "GitHub Copilot",
+      "title": "Дайджест релизов GitHub Copilot — 2 шт (период 2026-08-26 — 2026-08-27)",
+      "url": "https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces",
+      "content": "🤖 Агенты Смита\nчетверг, 27 августа 2026 г.\n\n📦 ДАЙДЖЕСТ РЕЛИЗОВ\n\n📰 Дайджест релизов GitHub Copilot — 2 шт (период 2026-08-26 — 2026-08-27)\n🔗 https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces\n\n• Корпоративные управляемые настройки теперь поддерживают autoUpdate для маркетплейсов плагинов (2026-08-27) — GitHub добавил поддержку автоматического обновления (autoUpdate) для индивидуальных маркетплейсов плагинов в рамках корпоративных управляемых настроек.\n• Глобальная политика моделей стала общедоступной (2026-08-26) — GitHub объявил о выходе в общедоступный релиз функции глобальной политики моделей, анонсированной в июле.\n\nРелизы в дайджесте:\n• Enterprise-managed settings now support autoUpdate — https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces\n• Global model policy generally available — https://github.blog/changelog/2026-08-26-global-model-policy-generally-available\n\n📊 Влияние на разработку агентов:\nАвтоматическое обновление плагинов в корпоративных средах упрощает управление AI-агентами и расширениями, снижая необходимость ручного обслуживания и обеспечивая актуальность инструментов агентов без простоя.\n\n💼 Влияние на бизнес:\nПредприятия получают более предсказуемое и безопасное управление плагинами в масштабе, что снижает операционные затраты и риски устаревших компонентов в AI-инфраструктуре, укрепляя позиции GitHub как корпоративной платформы.\n\n🖥 Влияние на IT-индустрию:\nНовая функция улучшает DevOps-практики за счёт автоматизации патч-менеджмента для плагинов, уменьшая поверхность атак и упрощая CI/CD-процессы в организациях с большим количеством разработчиков.\n\n⏰ ДО AGI: ~1222 дней [░░░░░░░░░░] ~16%\n\n🚀 Несколько релизов одним постом — держим канал плотным.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-27T14:05:20.952227Z",
+      "added_to_site_at": "2026-08-27T17:05:22.028623",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "anthropic-anthropic-economic-index-insights-from-claude-son-fb81aeaf8e1a",
       "source": "Anthropic",
       "title": "Anthropic Economic Index Insights From Claude Sonnet 3 7",
