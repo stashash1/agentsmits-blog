@@ -2,6 +2,19 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "anthropic-lawrence-livermore-national-laboratory-expands-cl-4c5715f86b3e",
+      "source": "Anthropic",
+      "title": "Lawrence Livermore National Laboratory Expands Claude For Enterprise To Empower Scientists And",
+      "url": "https://www.anthropic.com/news/lawrence-livermore-national-laboratory-expands-claude-for-enterprise-to-empower-scientists-and",
+      "content": "🤖 Агенты Смита\nсреда, 26 августа 2026 г.\n\n📰 Национальная лаборатория Лоуренса Ливермора расширяет использование Claude for Enterprise для поддержки учёных и исследователей\n🔗 https://www.anthropic.com/news/lawrence-livermore-national-laboratory-expands-claude-for-enterprise-to-empower-scientists-and\n\n📝 Национальная лаборатория Лоуренса Ливермора расширяет использование Claude for Enterprise на всю организацию, предоставляя учёным доступ к передовым AI-инструментам для исследований. Это решение охватывает широкий спектр научных задач и укрепляет партнёрство между Anthropic и ведущими исследовательскими учреждениями США. Расширение подчёркивает растущую роль AI-агентов в фундаментальной и прикладной науке.\n\n📊 Влияние на разработку агентов:\nРасширение доступа к Claude for Enterprise в LLNL стимулирует разработку и внедрение AI-агентов для научных исследований, ускоряя автоматизацию анализа данных, генерации гипотез и обработки научных публикаций в масштабах крупной исследовательской организации.\n\n💼 Влияние на бизнес:\nСотрудничество Anthropic с LLNL укрепляет позиции компании на рынке корпоративных AI-решений, открывает новый сегмент государственных и научных учреждений и усиливает конкуренцию с OpenAI и Google за крупные enterprise-контракты.\n\n🖥 Влияние на IT-индустрию:\nРазвёртывание Claude for Enterprise в крупной национальной лаборатории демонстрирует готовность инфраструктуры Anthropic к масштабируемым нагрузкам и задаёт стандарты интеграции LLM в высокопроизводительные вычислительные среды и защищённые исследовательские среды.\n\n⏰ ДО AGI: ~1222 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-27T08:35:15.633238Z",
+      "added_to_site_at": "2026-08-27T11:35:16.529778",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "anthropic-usage-policy-update",
       "source": "Anthropic",
       "title": "Usage Policy Update",
