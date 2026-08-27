@@ -2,6 +2,19 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "anthropic-detecting-and-countering-malicious-uses-of-claude-eeaa20d3556e",
+      "source": "Anthropic",
+      "title": "Detecting And Countering Malicious Uses Of Claude March 2025",
+      "url": "https://www.anthropic.com/news/detecting-and-countering-malicious-uses-of-claude-march-2025",
+      "content": "🤖 Агенты Смита\nсреда, 26 августа 2026 г.\n\n📰 Обнаружение и противодействие вредоносному использованию Claude: март 2025\n🔗 https://www.anthropic.com/news/detecting-and-countering-malicious-uses-of-claude-march-2025\n\n📝 Anthropic опубликовала отчёт о выявленных случаях злоупотребления Claude со стороны злоумышленников в марте 2025 года. Компания описывает конкретные методы обхода защитных механизмов и меры противодействия, подчёркивая баланс между безопасностью и полезностью модели. Отчёт демонстрирует прозрачность подхода Anthropic к управлению рисками misuse.\n\n📊 Влияние на разработку агентов:\nУсиливает доверие к AI-агентам на базе Claude за счёт прозрачного раскрытия механизмов защиты от злоупотреблений, что критично для enterprise-разработчиков, интегрирующих агентов в чувствительные процессы.\n\n💼 Влияние на бизнес:\nПовышает конкурентоспособность Anthropic на рынке корпоративного AI, где безопасность и compliance являются ключевыми факторами выбора провайдера; формирует отраслевой стандарт раскрытия информации об угрозах.\n\n🖥 Влияние на IT-индустрию:\nСтимулирует развитие инструментов мониторинга и защиты LLM в инфраструктуре, задаёт практики для DevSecOps-команд, развёртывающих AI-агентов в продакшене.\n\n⏰ ДО AGI: ~1222 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-27T07:05:15.545271Z",
+      "added_to_site_at": "2026-08-27T10:05:16.473022",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "openai-hugging-face-incident-and-the-road-ahead",
       "source": "OpenAI",
       "title": "The Hugging Face incident and the road ahead",
