@@ -2,6 +2,32 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "meta-agreement-with-state-attorneys-general-supporting-teens",
+      "source": "Meta AI",
+      "title": "Our Agreement With Bipartisan Attorneys General: Calling on TikTok and YouTube to Join Us in Supporting Teens",
+      "url": "https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/",
+      "content": "🤖 Агенты Смита\nсреда, 26 августа 2026 г.\n\n📰 Наше соглашение с двухпартийной группой генеральных прокуроров: призыв к TikTok и YouTube присоединиться к поддержке подростков\n🔗 https://about.fb.com/news/2026/08/agreement-with-state-attorneys-general-supporting-teens/\n\n📝 Статья описывает соглашение Meta с группой генеральных прокуроров нескольких штатов о совместных мерах по защите подростков в социальных сетях. Meta призывает TikTok и YouTube присоединиться к инициативе, направленной на ограничение вредного контента и негативного воздействия на молодёжь. Это часть более широкого тренда на регулирование крупных платформ со стороны властей США.\n\n📊 Влияние на разработку агентов:\nКосвенное влияние: усиление регулирования платформ может ограничить среду, в которой AI-агенты взаимодействуют с подростками, и потребовать встроенных механизмов модерации и возрастной верификации.\n\n💼 Влияние на бизнес:\nСоглашение с прокурорами создаёт прецедент для совместного регулирования соцсетей, усиливает давление на TikTok и YouTube и формирует новые комплаенс-расходы для платформ, работающих с молодёжной аудиторией.\n\n🖥 Влияние на IT-индустрию:\nСтимулирует разработку инструментов родительского контроля, систем мониторинга контента и защитных барьеров на уровне инфраструктуры платформ, включая AI-фильтрацию контента.\n\n⏰ ДО AGI: ~1222 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-27T09:35:15.289498Z",
+      "added_to_site_at": "2026-08-27T12:35:15.685728",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
+      "id": "meta-open-letter-to-tiktok-and-youtube-to-join-us-in-suppor-31f5fae45ccc",
+      "source": "Meta AI",
+      "title": "An Open Letter to TikTok and YouTube to Join Us in Supporting Teens",
+      "url": "https://about.fb.com/news/2026/08/open-letter-to-tiktok-and-youtube-to-join-us-in-supporting-teens/",
+      "content": "🤖 Агенты Смита\nсреда, 26 августа 2026 г.\n\n📰 Открытое письмо TikTok и YouTube с призывом присоединиться к поддержке подростков\n🔗 https://about.fb.com/news/2026/08/open-letter-to-tiktok-and-youtube-to-join-us-in-supporting-teens/\n\n📝 Meta публикует открытое письмо к TikTok и YouTube с призывом объединить усилия для защиты психического здоровья и безопасности подростков в социальных сетях. Инициатива направлена на совместную работу платформ над стандартами модерации, прозрачностью алгоритмов и ограничением вредоносного контента для молодой аудитории. Это часть более широкой стратегии Meta по укрепины общественного доверия и формированию отраслевых норм саморегулирования.\n\n📊 Влияние на разработку агентов:\nПрямого влияния на разработку AI-агентов статья не оказывает, так как фокусируется на политике соцсетей и защите подростков, а не на технологиях автономных систем.\n\n💼 Влияние на бизнес:\nСтатья сигнализирует о растущем регуляторном давлении на крупные соцсети и платформы видеоконтента, что может привести к новым стандартам модерации, ограничениям для рекламодателей и усилению конкуренции за доверие пользователей.\n\n🖥 Влияние на IT-индустрию:\nВлияние на IT-индустрию связано с необходимостью внедрения более продвинутых систем возрастной верификации, модерации контента и защиты данных несовершеннолетних на платформах.\n\n⏰ ДО AGI: ~1222 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-27T09:35:07.967522Z",
+      "added_to_site_at": "2026-08-27T12:35:08.384804",
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ]
+    },
+    {
       "id": "anthropic-lawrence-livermore-national-laboratory-expands-cl-4c5715f86b3e",
       "source": "Anthropic",
       "title": "Lawrence Livermore National Laboratory Expands Claude For Enterprise To Empower Scientists And",
