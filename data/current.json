@@ -2,6 +2,19 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "cursor-start-from-scratch",
+      "source": "Cursor",
+      "title": "Start from scratch, without a repo",
+      "url": "https://cursor.com/changelog/start-from-scratch",
+      "content": "🤖 Агенты Смита\nпятница, 28 августа 2026 г.\n\n📰 Начать с нуля, без репозитория\n🔗 https://cursor.com/changelog/start-from-scratch\n\n📝 Cursor обновил Cloud Agents, убрав требование подключения к GitHub или другим системам контроля версий. Теперь агенты могут начинать работу с нуля без существующего репозитория. Это упрощает использование инструмента для новых проектов и экспериментов.\n\n📊 Влияние на разработку агентов:\nCursor Cloud Agents теперь могут работать без подключения к GitHub или другому SCM-провайдеру, что упрощает создание автономных агентов для новых проектов и прототипирования без настройки инфраструктуры.\n\n💼 Влияние на бизнес:\nСнижение порога входа для компаний, желающих использовать AI-агентов Cursor — больше не нужно предварительно настраивать репозиторий, что ускоряет старт пилотных проектов и расширяет клиентскую базу.\n\n🖥 Влияние на IT-индустрию:\nУпрощает workflow разработки, позволяя запускать облачных агентов для генерации кода с чистого листа, что сокращает время на инициализацию проектов и снижает зависимость от SCM-инструментов на ранних этапах.\n\n⏰ ДО AGI: ~1221 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-28T10:35:28.265989Z",
+      "added_to_site_at": "2026-08-28T13:35:28.665946",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "openai-what-students-gain-from-chatgpt-critical-thinking-tr-5250e71c3d45",
       "source": "OpenAI",
       "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
