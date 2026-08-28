@@ -2,6 +2,19 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "digest-github-copilot-2026-08-28",
+      "source": "GitHub Copilot",
+      "title": "Дайджест релизов GitHub Copilot — 2 шт (период 2026-08-27 — 2026-08-28)",
+      "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing",
+      "content": "🤖 Агенты Смита\nпятница, 28 августа 2026 г.\n\n📦 ДАЙДЖЕСТ РЕЛИЗОВ\n\n📰 Дайджест релизов GitHub Copilot — 2 шт (период 2026-08-27 — 2026-08-28)\n🔗 https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing\n\n• Предстоящие изменения в политике и биллинге GitHub Copilot (2026-08-28) — GitHub объявил об изменениях в политиках и биллинге Copilot, включая повторное открытие регистрации на планы Business и Enterprise с обновлёнными тарифами.\n• Copilot code review: причины разрешения и расширенные возможности (2026-08-27) — GitHub обновил Copilot code review, добавив расширенные возможности и механизм причин разрешения комментариев.\n\nРелизы в дайджесте:\n• Upcoming changes to GitHub Copilot policies and bi — https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing\n• Copilot code review: Resolution reasons and expand — https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities\n\n📊 Влияние на разработку агентов:\nИзменения в политиках GitHub Copilot могут затронуть доступ к AI-агентам для разработки кода, включая условия использования агентских функций в бизнес-аккаунтах. Обновления биллинга могут повлиять на стоимость интеграции AI-агентов в рабочие процессы команд.\n\n💼 Влияние на бизнес:\nОбновление биллинга Copilot Business и Enterprise напрямую влияет на расходы компаний, использующих AI-инструменты разработки, что может изменить экономику команд и стратегии лицензирования.\n\n🖥 Влияние на IT-индустрию:\nИзменения в политиках потребуют от IT-команд пересмотра управления доступом, распределения лицензий и интеграции Copilot в существующие DevOps-процессы и CI/CD-конвейеры.\n\n⏰ ДО AGI: ~1221 дней [░░░░░░░░░░] ~16%\n\n🚀 Несколько релизов одним постом — держим канал плотным.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-28T13:05:21.470613Z",
+      "added_to_site_at": "2026-08-28T16:05:22.997243",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "cursor-start-from-scratch",
       "source": "Cursor",
       "title": "Start from scratch, without a repo",
