@@ -2,6 +2,32 @@
   "week_start": "2026-08-24",
   "posts": [
     {
+      "id": "techcrunch-open-weight-ai-companies-are-the-valleys-hottest-f019f50bce19",
+      "source": "TechCrunch AI",
+      "title": "Open-weight AI companies are the Valley&#8217;s hottest acquisition targets",
+      "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
+      "content": "🤖 Агенты Смита\nпятница, 28 августа 2026 г.\n\n📰 Компании с открытыми весами AI стали самыми привлекательными целями для поглощений в Кремниевой долине\n🔗 https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/\n\n📝 Статья анализирует растущий тренд поглощений компаний, разрабатывающих AI-модели с открытыми весами, крупными технологическими игроками. Рассматриваются причины повышенного интереса корпораций к таким активам, включая стратегические преимущества open-source подхода в гонке за лидерство в AI и возможности для интеграции открытых моделей в продуктовые линейки.\n\n📊 Влияние на разработку агентов:\nРост интереса к open-weight моделям стимулирует создание агентов на базе открытых LLM, снижая зависимость от проприетарных API и расширяя возможности кастомизации автономных систем.\n\n💼 Влияние на бизнес:\nУсиление M&A-активности в сегменте open-weight AI ведёт к консолидации рынка, росту конкуренции за таланты и технологии, а также к увеличению инвестиций в компании с открытыми моделями.\n\n🖥 Влияние на IT-индустрию:\nРазвитие open-weight экосистемы ускоряет переход к гибридным архитектурам, где локальные модели интегрируются с облачными сервисами, повышая спрос на инференс-инфраструктуру и MLOps-решения.\n\n⏰ ДО AGI: ~1221 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-28T19:05:24.857715Z",
+      "added_to_site_at": "2026-08-28T22:05:25.747473",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
+      "id": "claude-code-claude-code-2.1.251",
+      "source": "Claude Code",
+      "title": "Claude Code 2.1.251",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21251",
+      "content": "🤖 Агенты Смита\nпятница, 28 августа 2026 г.\n\n📰 Claude Code 2.1.251\n🔗 https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21251\n\n📝 Релиз Claude Code 2.1.251 представляет два новых hook-события: PreModelSwitch и PostModelSwitch, которые позволяют перехватывать и контролировать процесс смены модели. Также улучшены SessionStart resume hooks — теперь они возвращают данные об устаревании сессии и оценке стоимости перекэширования.\n\n📊 Влияние на разработку агентов:\nДобавлены хуки PreModelSwitch и PostModelSwitch, позволяющие агентам блокировать, подтверждать или аннотировать переключение моделей, что повышает контроль и безопасность мультимодельных AI-агентов. Хуки SessionStart теперь получают информацию об устаревании сессии и стоимости перекэширования, улучшая управление состоянием долгоживущих агентов.\n\n💼 Влияние на бизнес:\nРасширенные возможности контроля переключения моделей дают бизнесу более гибкие инструменты для оптимизации затрат и обеспечения compliance при использовании Claude Code. Улучшенное управление сессиями снижает непредвиденные расходы на повторное кэширование, что важно для масштабных корпоративных развёртываний.\n\n🖥 Влияние на IT-индустрию:\nНовые хуки интегрируются в систему автоматизации разработки и CI/CD пайплайны, позволяя точнее управлять жизненным циклом AI-сессий. Это упрощает построение сложных agent-систем с многоуровневой логикой переключения моделей в IDE-среде.\n\n⏰ ДО AGI: ~1221 дней [░░░░░░░░░░] ~16%\n\n🚀 Полетели.\n→ https://stashash1.github.io/agentsmits-blog",
+      "published_at": "2026-08-28T19:05:13.739193Z",
+      "added_to_site_at": "2026-08-28T22:05:14.165774",
+      "breakthrough_score": 0,
+      "breakthrough_reasons": [
+        "no_breakthrough_signals"
+      ]
+    },
+    {
       "id": "meta-closed-loop-cooling-explained-the-plumbing-behind-meta-88482f6e281e",
       "source": "Meta AI",
       "title": "Closed-Loop Cooling Explained: The Plumbing Behind Meta&#8217;s AI",
