@@ -1,0 +1,44 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import post_card, archive_card, subscribe_banner %}
+
+{% block content %}
+  {% if active is not defined %}{% set active = 'feed' %}{% endif %}
+
+  {{ subscribe_banner() }}
+
+  <section class="section">
+    <div class="section-label">Эта неделя</div>
+    <div class="section-header">
+      <h2 class="section-title">Актуальные новости</h2>
+      <span class="section-count">{{ feed|length }} публикаций</span>
+    </div>
+
+    {% if feed %}
+      <div class="feed-grid">
+        {% for post in feed %}
+          {{ post_card(post) }}
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <div class="empty-state-icon">&#128236;</div>
+        <p>Постов этой недели пока нет</p>
+      </div>
+    {% endif %}
+  </section>
+
+  {% if archive %}
+  <section class="section">
+    <div class="section-label">Архив</div>
+    <div class="section-header">
+      <h2 class="section-title">Статьи прошлых недель</h2>
+      <span class="section-count">{{ archive|length }} статей</span>
+    </div>
+    <div class="archive-grid">
+      {% for post in archive %}
+        {{ archive_card(post) }}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% endblock %}

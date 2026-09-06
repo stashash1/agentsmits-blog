@@ -1,0 +1,46 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import post_card %}
+
+{% block content %}
+  {# Articles page intentionally has a DIFFERENT structure than feed #}
+  {# - intro section explaining what articles are #}
+  {# - group by category (tags) for thematic browsing #}
+  {# - no archive, no subscribe banner — focused reading #}
+
+  <section class="section section-intro">
+    <div class="section-label">Статьи и аналитика</div>
+    <div class="section-header">
+      <h2 class="section-title">Глубокий разбор последних новостей</h2>
+      <span class="section-count">{{ articles|length }} материалов</span>
+    </div>
+    <p class="intro-text">
+      Здесь — публикации с развернутым анализом влияния на агентов,
+      бизнес и IT-индустрию. Сгруппировано по темам для удобной навигации.
+    </p>
+  </section>
+
+  {% if not articles %}
+    <section class="section">
+      <div class="empty-state">
+        <div class="empty-state-icon">&#128221;</div>
+        <p>Статей с глубоким анализом пока нет. Запустите
+           <code>agentsblog publish</code> чтобы материалы появились.</p>
+      </div>
+    </section>
+  {% else %}
+    {% for category, items in by_category.items() %}
+      <section class="section">
+        <div class="section-label">#{{ category }}</div>
+        <div class="section-header">
+          <h2 class="section-title">{{ category }}</h2>
+          <span class="section-count">{{ items|length }} материалов</span>
+        </div>
+        <div class="feed-grid">
+          {% for post in items %}
+            {{ post_card(post, dense=true) }}
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

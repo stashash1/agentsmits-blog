@@ -1,0 +1,66 @@
+{% macro post_card(post, dense=False) %}
+  {% set bt = post.is_breakthrough %}
+  <article class="hero-card{% if bt %} hero-card-bt{% endif %}{% if dense %} hero-card-dense{% endif %}">
+    <header class="card-header">
+      <span class="card-source">{{ post.source_id }}</span>
+      <span class="card-date">{{ post.date }}</span>
+      {% if bt %}<span class="bt-badge">&#128293; ПРОРЫВ</span>{% endif %}
+    </header>
+    <h2 class="card-title">
+      <a href="{{ post.url }}" target="_blank" rel="noopener">
+        {{ post.translated_title or post.title }}
+      </a>
+    </h2>
+    {% if post.summary %}
+      <p class="card-summary">{{ post.summary }}</p>
+    {% endif %}
+    {% if post.agent_impact %}
+      <div class="card-impact">
+        <div class="impact-label">Влияние на агентов</div>
+        <div class="impact-text">{{ post.agent_impact }}</div>
+      </div>
+    {% endif %}
+    {% if post.business_impact %}
+      <div class="card-impact">
+        <div class="impact-label">Влияние на бизнес</div>
+        <div class="impact-text">{{ post.business_impact }}</div>
+      </div>
+    {% endif %}
+    {% if post.it_impact %}
+      <div class="card-impact">
+        <div class="impact-label">Влияние на IT-индустрию</div>
+        <div class="impact-text">{{ post.it_impact }}</div>
+      </div>
+    {% endif %}
+    <footer class="card-footer">
+      {% if post.tags %}
+        <div class="card-tags">
+          {% for t in post.tags[:4] %}<span class="tag">{{ t }}</span>{% endfor %}
+        </div>
+      {% endif %}
+      <a href="{{ post.url }}" class="card-link" target="_blank" rel="noopener">Источник &rarr;</a>
+    </footer>
+  </article>
+{% endmacro %}
+
+{% macro archive_card(post) %}
+  <a href="{{ post.url }}" class="archive-card" target="_blank" rel="noopener">
+    <div class="archive-card-title">{{ post.translated_title or post.title }}</div>
+    <div class="archive-card-meta">
+      <span class="card-source">{{ post.source_id }}</span>
+      <span class="card-date">{{ post.date }}</span>
+    </div>
+  </a>
+{% endmacro %}
+
+{% macro subscribe_banner() %}
+  <div class="subscribe-banner">
+    <div class="subscribe-banner-text">
+      <div class="subscribe-banner-title">&#128227; Подпишись на канал Агенты Смита</div>
+      <div class="subscribe-banner-sub">Ежедневные новости и аналитика AI в Telegram</div>
+    </div>
+    <a href="https://t.me/agentsSmits" class="subscribe-banner-btn" target="_blank" rel="noopener">
+      @agentsSmits
+    </a>
+  </div>
+{% endmacro %}

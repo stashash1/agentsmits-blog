@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — {{ site_title }}</title>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <div class="logo-icon">&#129302;</div>
+        <div>
+          <div class="logo-text">{{ site_title }}</div>
+          <div class="logo-sub">AGI Countdown</div>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link {% if active == 'feed' %}active{% endif %}">&#128240; Лента</a>
+        <a href="articles.html" class="nav-link {% if active == 'articles' %}active{% endif %}">&#128214; Статьи</a>
+        <a href="rss.xml" class="nav-link">&#128225; RSS</a>
+        <a href="https://t.me/agentsSmits" class="telegram-btn" target="_blank" rel="noopener">
+          Telegram
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    {% block content %}{% endblock %}
+
+    <aside class="agi-bar">
+      <div class="agi-icon">&#9200;</div>
+      <div class="agi-info">
+        <div class="agi-label">ДО AGI: <strong>~{{ agi_days }} дней</strong></div>
+        <div class="agi-track"><div class="agi-fill" style="width: {{ agi_percent }}%"></div></div>
+      </div>
+      <div class="agi-pct">{{ agi_percent }}%</div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">&#129302; {{ site_title }}</div>
+      <div class="footer-meta">
+        Новости и аналитика искусственного интеллекта · Обновлено {{ updated }}<br>
+        <a href="https://t.me/agentsSmits" target="_blank">@agentsSmits</a> ·
+        <a href="rss.xml">RSS</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

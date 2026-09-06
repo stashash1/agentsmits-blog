@@ -1,8 +1,4 @@
-"""Pipeline command stubs — implemented in stages 2-4.
-
-These are placeholders that route to the actual implementations once those
-modules land. For now they print a friendly 'coming soon' so the CLI works.
-"""
+"""Pipeline CLI commands — scan, publish, publish-article, add-manual."""
 from __future__ import annotations
 
 import argparse
@@ -11,18 +7,53 @@ from agentsblog.config import Settings
 
 
 def scan_cmd(args: argparse.Namespace, settings: Settings) -> int:
-    print("scan: implementation lands in stage 2 (sources/)", file=__import__("sys").stderr)
-    return 1
+    """Scan all (or filtered) sources, dedup against DB, upsert new items."""
+    from agentsblog.scanner import print_scan_summary, run_scan
+
+    summary = run_scan(
+        settings,
+        limit_sources=args.source or None,
+        dry_run=args.dry_run,
+        max_items_per_source=args.limit,
+    )
+    print_scan_summary(summary)
+    return 0
 
 
 def publish_cmd(args: argparse.Namespace, settings: Settings) -> int:
-    print("publish: implementation lands in stage 4 (publishing/)", file=__import__("sys").stderr)
-    return 1
+    """Publish pending items to Telegram."""
+    from agentsblog.publishing.publisher import print_summary, run_publish
+    summary = run_publish(
+        settings,
+        limit=args.limit,
+        allow_during_quiet=args.allow_during_quiet,
+        dry_run=args.dry_run,
+    )
+    print_summary(summary)
+    return 0
 
 
 def publish_article_cmd(args: argparse.Namespace, settings: Settings) -> int:
-    print("publish-article: implementation lands in stage 4", file=__import__("sys").stderr)
-    return 1
+    """Publish a specific draft article by id."""
+    from agentsblog.db import connect, get_article, init_schema, mark_published
+    from agentsblog.publishing.formatter import compute_agi
+    from agentsblog.publishing.publisher import publish_one
+
+    conn = connect(settings.db_path)
+    init_schema(conn)
+    art = get_article(conn, args.id)
+    if art is None:
+        print(f"Article not found: {args.id}", file=__import__("sys").stderr)
+        return 2
+    agi_days, agi_percent = compute_agi(settings)
+    if args.dry_run:
+        print(f"[dry-run] would publish article {art.id}")
+        return 0
+    result = publish_one(art, settings, agi_days=agi_days, agi_percent=agi_percent)
+    if result["ok"] and result["reason"] != "dedup":
+        mark_published(conn, art.id, result.get("msg_id") or 0)
+    print(f"publish-article {art.id}: {result}")
+    return 0 if result["ok"] else 1
 
 
 def add_manual_cmd(args: argparse.Namespace, settings: Settings) -> int:
@@ -36,7 +67,6 @@ def add_manual_cmd(args: argparse.Namespace, settings: Settings) -> int:
     conn = connect(settings.db_path)
     init_schema(conn)
 
-    # Auto-register source if missing (manual = tier 3 by default)
     existing = conn.execute("SELECT id FROM sources WHERE id = ?", (args.source,)).fetchone()
     if not existing:
         upsert_source(
@@ -48,7 +78,6 @@ def add_manual_cmd(args: argparse.Namespace, settings: Settings) -> int:
             ),
         )
 
-    # Stable id from source + url hash
     import hashlib
     aid = f"{args.source}-{hashlib.md5(args.url.encode()).hexdigest()[:12]}"
     tags = [t.strip() for t in (args.tags or "").split(",") if t.strip()]
@@ -58,7 +87,7 @@ def add_manual_cmd(args: argparse.Namespace, settings: Settings) -> int:
         source_id=args.source,
         title=args.title,
         url=args.url,
-        date="",  # unknown
+        date="",
         summary=args.summary,
         importance=args.importance,
         agent_impact=args.agent_impact,
