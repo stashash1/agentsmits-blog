@@ -33,1750 +33,6 @@
   ],
   "pending": [
     {
-      "id": "techcrunch-hugging-face-reportedly-in-talks-to-be-acquired--aa2dd08ad7da",
-      "source": "TechCrunch AI",
-      "title": "Hugging Face reportedly in talks to be acquired for $13B",
-      "url": "https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-24",
-      "analysis": {
-        "translated_title": "Hugging Face ведёт переговоры о поглощении за $13 млрд",
-        "agent_impact": "Поглощение крупнейшего хаба open-source моделей и инструментов может изменить доступность критической инфраструктуры для разработчиков AI-агентов и повлиять на экосистему совместимости.",
-        "business_impact": "Сделка на $13 млрд сигнализирует о консолидации рынка AI-инфраструктуры и может спровоцировать новую волну M&A активности среди платформ с открытым исходным кодом.",
-        "it_impact": "Потенциальная смена владельца Hugging Face затронет миллионы разработчиков, использующих её репозитории моделей, датасеты и API, что может изменить ценообразование и условия доступа к open-source ресурсам.",
-        "summary": "По данным TechCrunch, Hugging Face — ведущая платформа для размещения open-source AI-моделей и инструментов — ведёт переговоры о приобретении за $13 млрд. Сделка отражает растущую ценность AI-инфраструктуры и может существенно повлиять на экосистему открытого AI, включая разработку агентов.",
-        "tags": [
-          "hugging-face",
-          "acquisition",
-          "open-source-ai"
-        ]
-      },
-      "analyzed_at": "2026-08-24T19:29:33.855587Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-24T00:00:00+00:00",
-        "delta_days": 7.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-instincts-powerful-ai-assistant-is-raising-priva-a34ef28c4aef",
-      "source": "TechCrunch AI",
-      "title": "Instinct’s powerful AI assistant is raising privacy and security concerns",
-      "url": "https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-24",
-      "analysis": {
-        "translated_title": "Мощный AI-ассистент Instinct вызывает опасения по поводу конфиденциальности и безопасности",
-        "agent_impact": "Статья подчёркивает критическую важность архитектуры безопасности и обработки данных при разработке автономных AI-агентов, задавая новые стандарты доверия к персональным ассистентам с расширенными возможностями.",
-        "business_impact": "Растущие опасения пользователей и регуляторов могут замедлить коммерческое внедрение продвинутых AI-ассистентов, одновременно открывая нишу для конкурентов с усиленной защитой данных и прозрачной политикой конфиденциальности.",
-        "it_impact": "Случай стимулирует спрос на новые решения в области приватных вычислений, шифрования пользовательских данных и аудита AI-систем, влияя на стандарты разработки инфраструктуры для AI-агентов.",
-        "summary": "AI-ассистент компании Instinct демонстрирует впечатляющую функциональность, но вызывает серьёзные вопросы о том, как обрабатываются и защищаются пользовательские данные. Эксперты указывают на недостаточную прозрачность в политике конфиденциальности и потенциальные риски утечек чувствительной информации. Ситуация отражает более широкую проблему индустрии: баланс между мощностью AI-агентов и защитой частной жизни пользователей.",
-        "tags": [
-          "ai-privacy",
-          "agent-security",
-          "ai-assistants"
-        ]
-      },
-      "analyzed_at": "2026-08-24T20:01:37.499083Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-24T00:00:00+00:00",
-        "delta_days": 7.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-amjad-masad-ceo-and-co-founder-of-replit-joins-t-7e3bc60a8a1a",
-      "source": "TechCrunch AI",
-      "title": "Amjad Masad, CEO and co-founder of Replit, joins the Disrupt Stage at TechCrunch Disrupt 2026",
-      "url": "https://techcrunch.com/2026/08/24/amjad-masad-ceo-and-co-founder-of-replit-joins-the-disrupt-stage-at-techcrunch-disrupt-2026/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-24",
-      "analysis": {
-        "translated_title": "Amjad Masad, CEO и сооснователь Replit, выступит на сцене Disrupt на TechCrunch Disrupt 2026",
-        "agent_impact": "Участие CEO Replit на крупной технологической конференции может привлечь внимание к их платформе для разработки AI-агентов и кодинг-инструментам, способствуя обсуждению автономных систем разработки.",
-        "business_impact": "Выступление на TechCrunch Disrupt усиливает позиции Replit на рынке AI-инструментов для разработки, потенциально привлекая инвестиции и новых клиентов в условиях растущей конкуренции с GitHub Copilot и другими платформами.",
-        "it_impact": "Платформа Replit с её облачной средой разработки и AI-ассистентами продолжает влиять на тренды в области low-code и AI-assisted программирования, что формирует новые подходы в IT-инфраструктуре разработки.",
-        "summary": "Статья анонсирует выступление Amjad Masad, CEO и сооснователя Replit, на сцене Disrupt конференции TechCrunch Disrupt 2026. Replit известен своей облачной платформой для программирования с AI-возможностями, что делает это выступление значимым для обсуждения будущего разработки ПО. Конференция TechCrunch Disrupt традиционно собирает ключевых игроков технологической индустрии.",
-        "tags": [
-          "replit",
-          "techcrunch-disrupt",
-          "ai-coding"
-        ]
-      },
-      "analyzed_at": "2026-08-24T20:25:08.519535Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-24T00:00:00+00:00",
-        "delta_days": 7.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-situational-awareness-star-ai-hedge-fund-that-ne-32cda19d8db8",
-      "source": "TechCrunch AI",
-      "title": "Situational Awareness, star AI hedge fund that nearly imploded, now being probed by the SEC",
-      "url": "https://techcrunch.com/2026/08/24/situational-awareness-star-ai-hedge-fund-that-nearly-imploded-now-being-probed-by-the-sec/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-25",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "Situational Awareness — звездный AI-хедж-фонд, который чуть не рухнул, теперь расследуется SEC",
-        "agent_impact": "Расследование SEC может установить новые регуляторные рамки для AI-агентов, используемых в алгоритмической торговле и автономном принятии инвестиционных решений.",
-        "business_impact": "Расследование звездного AI-хедж-фонда усиливает неопределенность на рынке AI-инвестиций, может снизить доверие инвесторов и спровоцировать отток капитала из фондов, активно использующих автономные системы.",
-        "it_impact": "Финансовый сектор может столкнуться с необходимостью внедрения более прозрачных и объяснимых AI-систем, что повысит спрос на инструменты аудита, мониторинга и compliance для автономных торговых платформ.",
-        "summary": "Хедж-фонд Situational Awareness, считавшийся одним из самых успешных AI-фондов, чуть не потерпел крах и теперь находится под расследованием Комиссии по ценным бумагам США (SEC). Инцидент поднимает вопросы о рисках автономных AI-систем в управлении капиталом и необходимости регулирования.",
-        "tags": [
-          "ai-hedge-fund",
-          "sec-regulation",
-          "autonomous-trading"
-        ]
-      },
-      "analyzed_at": "2026-08-25T07:56:16.278420Z"
-    },
-    {
-      "id": "arxiv-2608.23566",
-      "source": "arXiv cs.AI",
-      "title": "How to Train a Critic Stably and Efficiently",
-      "url": "https://arxiv.org/abs/2608.23566",
-      "summary": "Group-based reinforcement learning methods such as GRPO for large language models avoid training a critic by sampling multiple responses for each prompt. A reliable critic could instead estimate token-level advantages from one response, but standard critic-based training recipes are often unstable. ",
-      "importance": 1,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 1,
-        "total": 1,
-        "matched_keywords": [
-          "-\\bhow\\s+to\\b"
-        ],
-        "matched_categories": [
-          "tutorial"
-        ]
-      },
-      "date": "2026-08-24",
-      "decay": {
-        "base": 1,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-24T00:00:00+00:00",
-        "delta_days": 7.46,
-        "decayed": 0.3
-      },
-      "decayed_importance": 0.3,
-      "analysis": {
-        "translated_title": "Как стабильно и эффективно обучать критика",
-        "agent_impact": "Стабилизация обучения критика напрямую улучшает архитектуру AI-агентов, использующих RLHF и policy gradient методы, позволяя точнее оценивать token-level преимущества и снижать вычислительные затраты за счёт отказа от множественных сэмплов на каждый промпт.",
-        "business_impact": "Снижение нестабильности и затрат на обучение критиков делает RLHF-подобные пайплайны более доступными для компаний среднего размера, сокращает стоимость fine-tuning моделей и ускоряет вывод продуктов на рынок.",
-        "it_impact": "Предлагаемые методы могут быть интегрированы в существующие RL-фреймворки (TRL, verl и др.), снижая требования к GPU-памяти и упрощая инфраструктуру обучения за счёт замены group-based сэмплирования единичными прогонами через критика.",
-        "summary": "Исследование посвящено проблеме нестабильного обучения критика в reinforcement learning для больших языковых моделей. Авторы предлагают методы, которые позволяют надёжно оценивать token-level advantages с одного ответа вместо множественных сэмплов как в GRPO. Это потенциально делает critic-based подходы более эффективной альтернативой group-based RL методам.",
-        "tags": [
-          "reinforcement learning",
-          "critic training",
-          "rlhf"
-        ]
-      },
-      "analyzed_at": "2026-08-25T07:56:27.880823Z"
-    },
-    {
-      "id": "arxiv-2608.23563",
-      "source": "arXiv cs.AI",
-      "title": "EG-ARSA: An Expert-Grounded Open Model for Visual Road Safety Auditing in Low-Resource Settings",
-      "url": "https://arxiv.org/abs/2608.23563",
-      "summary": "Road traffic injuries remain a major challenge in low- and middle-income countries, where proactive road safety auditing is limited by incomplete crash records, shortages of qualified auditors, and the high cost of large-scale field inspections. To address this problem, we propose Expert-Grounded Di",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": [
-          "safety_policy"
-        ]
-      },
-      "date": "2026-08-24",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-24T00:00:00+00:00",
-        "delta_days": 7.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "EG-ARSA: Экспертно-обоснованная открытая модель для визуального аудита безопасности дорожного движения в условиях ограниченных ресурсов",
-        "agent_impact": "Предлагает специализированного визуального AI-агента для автоматизированного аудита дорожной безопасности, способного автономно анализировать изображения и выявлять нарушения инфраструктуры без участия человека-эксперта.",
-        "business_impact": "Снижает затраты на масштабные полевые проверки дорожной инфраструктуры в развивающихся странах, создаёт новый рынок open-source решений для муниципалитетов и транспортных агентств с ограниченными бюджетами.",
-        "it_impact": "Вносит вклад в развитие открытых мультимодальных моделей для доменных задач компьютерного зрения и демонстрирует подход к созданию экспертно-обоснованных систем в условиях нехватки размеченных данных.",
-        "summary": "Статья представляет открытую модель EG-ARSA для автоматического визуального аудита безопасности дорожного движения, ориентированную на страны с низким и средним доходом. Модель решает проблему нехватки квалифицированных аудиторов и дороговизны полевых инспекций с помощью экспертно-обоснованного подхода. Подход позволяет выявлять опасные участки дорог по фотографиям, снижая зависимость от неполных статистических данных о ДТП.",
-        "tags": [
-          "computer-vision",
-          "road-safety",
-          "open-source-ai"
-        ]
-      },
-      "analyzed_at": "2026-08-25T07:57:20.893535Z"
-    },
-    {
-      "id": "arxiv-2608.23551",
-      "source": "arXiv cs.AI",
-      "title": "ConvergeFlow: Language Flow with Provable Convergence to Token Embeddings",
-      "url": "https://arxiv.org/abs/2608.23551",
-      "summary": "Recent advances in continuous diffusion and flow-based language models (LMs) have achieved performance competitive with discrete LMs. However, existing continuous frameworks still rely on decoders supervised with cross entropy (CE) because the flow trajectories are not guaranteed to terminate at val",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-24",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-24T00:00:00+00:00",
-        "delta_days": 7.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "ConvergeFlow: языковой поток с доказуемой сходимостью к эмбеддингам токенов",
-        "agent_impact": "Улучшает архитектуру непрерывных языковых моделей, что позволяет AI-агентам использовать более эффективные генеративные модели без необходимости в отдельном дискретном декодере, снижая задержки и вычислительные затраты при генерации текста в реальном времени.",
-        "business_impact": "Потенциально снижает стоимость инференса языковых моделей за счёт устранения отдельного декодера, что делает развёртывание AI-агентов более экономичным и конкурентоспособным по сравнению с традиционными дискретными моделями.",
-        "it_impact": "Упрощает архитектуру генеративных языковых моделей, объединяя flow-based генерацию и дискретный вывод в единый фреймворк, что уменьшает сложность пайплайнов и инфраструктурных требований для развёртывания LM-систем.",
-        "summary": "Статья представляет ConvergeFlow — новый фреймворк для непрерывных диффузионных и flow-based языковых моделей, который обеспечивает доказуемую сходимость потоков к эмбеддингам токенов. Это устраняет необходимость в отдельном декодере, обучаемом с cross-entropy, и позволяет фреймворку достигать производительности, конкурентной с дискретными LM.",
-        "tags": [
-          "continuous-language-models",
-          "flow-matching",
-          "diffusion-models"
-        ]
-      },
-      "analyzed_at": "2026-08-25T07:58:00.056329Z"
-    },
-    {
-      "id": "stanford-hai-ai-index-2026",
-      "source": "Stanford HAI",
-      "title": "Stanford HAI AI Index Report 2026",
-      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
-      "summary": "Stanford HAI опубликовал ежегодный AI Index Report 2026 — ключевой документ о состоянии AI-индустрии.",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-25",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "Stanford HAI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "Индекс ИИ 2026 от Стэнфордского института HAI",
-        "agent_impact": "Отчёт фиксирует рост возможностей AI-агентов и их автономности, задавая бенчмарки для оценки и направления развития агентских систем в ближайшие годы.",
-        "business_impact": "Документ служит ориентиром для инвесторов и корпораций при распределении бюджетов на AI, формируя ожидания рынка относительно темпов внедрения агентских решений и конкурентной динамики.",
-        "it_impact": "Отчёт выявляет ключевые тренды в инфраструктуре, обучении моделей и их развёртывании, влияя на приоритеты IT-компаний в разработке платформ и инструментов для AI-агентов.",
-        "summary": "Стэнфордский HAI опубликовал ежегодный AI Index Report 2026, подводящий итоги развития искусственного интеллекта за прошедший год. Отчёт охватывает технические достижения, инвестиции, внедрение в индустрии, регулирование и общественное восприятие AI. Документ является одним из наиболее авторитетных источников аналитики по состоянию AI-отрасли.",
-        "tags": [
-          "ai-index",
-          "stanford-hai",
-          "ai-agents"
-        ]
-      },
-      "analyzed_at": "2026-08-25T08:25:17.516504Z"
-    },
-    {
-      "id": "justai-just-ai-predstavlyaet-caila-io-platformu-kotoraya-de-3792bf975f95",
-      "source": "JustAI",
-      "title": "Just AI представляет caila.io – платформу, которая делает бизнес независимым от любой отдельной ИИ-модели",
-      "url": "https://just-ai.com/blog/just-ai-predstavlyaet-caila-io-platformu-kotoraya-delaet-biznes-nezavisimym-ot-lyuboj-otdelnoj-ii-modeli",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-25",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "JustAI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "Just AI представляет caila.io — платформу, которая делает бизнес независимым от любой отдельной ИИ-модели",
-        "agent_impact": "Платформа caila.io предоставляет агентную абстракцию над множеством LLM, позволяя AI-агентам переключаться между моделями без привязки к конкретному провайдеру, что повышает отказоустойчивость и гибкость агентных систем.",
-        "business_impact": "Решение снижает vendor lock-in риски для компаний, внедряющих генеративный ИИ, и упрощает миграцию между моделями, что усиливает конкуренцию на рынке LLM и создаёт новый сегмент платформ-оркестраторов.",
-        "it_impact": "Появление модель-независимых платформ стимулирует развитие стандартов интеграции LLM и способствует формированию мульти-провайдерной архитектуры в корпоративных AI-системах.",
-        "summary": "Just AI запустила платформу caila.io, которая абстрагирует бизнес от конкретных ИИ-моделей, позволяя компаниям гибко выбирать и комбинировать LLM без перестройки инфраструктуры. Платформа ориентирована на снижение зависимости от одного поставщика и упрощение внедрения генеративного ИИ в бизнес-процессы. Это часть стратегии Just AI по экспансии в сегмент GenAI-консалтинга и платформенных решений для enterprise-клиентов.",
-        "tags": [
-          "ai-agents",
-          "llm-orchestration",
-          "vendor-independence"
-        ]
-      },
-      "analyzed_at": "2026-08-25T08:25:31.241407Z"
-    },
-    {
-      "id": "justai-just-ai-i-selectel-predstavili-sovmestnoe-reshenie-d-976b13a5d8e3",
-      "source": "JustAI",
-      "title": "Just AI и Selectel представили совместное решение для запуска AI-агентов в любом контуре",
-      "url": "https://just-ai.com/blog/just-ai-i-selectel-predstavili-sovmestnoe-reshenie-dlya-zapuska-ai-agentov-v-lyubom-konture-bez-poteri-funktsionalnosti-i-urovnya-bezopasnosti",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-25",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "JustAI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "Just AI и Selectel представили совместное решение для запуска AI-агентов в любом контуре без потери функциональности и уровня безопасности",
-        "agent_impact": "Решение обеспечивает развёртывание AI-агентов в изолированных и гибридных инфраструктурах, расширяя сценарии применения агентов в корпоративном секторе с высокими требованиями к безопасности данных.",
-        "business_impact": "Совместный продукт открывает компаниям возможность внедрять AI-агентов в закрытых контурах, снижая регуляторные и compliance-риски, что ускоряет enterprise-сегмент рынка генеративного ИИ в России.",
-        "it_impact": "Интеграция платформы Just AI с облачной инфраструктурой Selectel упрощает DevOps-процессы для AI-агентов и задаёт стандарт для on-premise и приватных deployments в индустрии.",
-        "summary": "Just AI и Selectel анонсировали совместное решение, позволяющее запускать AI-агентов в любом ИТ-контуре — облачном, гибридном или полностью изолированном — без потери функциональности и уровня безопасности. Продукт ориентирован на корпоративных заказчиков с жёсткими требованиями к защите данных и регуляторным ограничениям.",
-        "tags": [
-          "ai-agents",
-          "on-premise",
-          "enterprise-ai"
-        ]
-      },
-      "analyzed_at": "2026-08-25T08:25:51.808968Z"
-    },
-    {
-      "id": "techcrunch-the-world-seems-to-be-ready-an-interview-with-op-93a87e369cbc",
-      "source": "TechCrunch AI",
-      "title": "&#8216;The world seems to be ready&#8217;: An interview with OpenAI head of product Thibault Sottiaux",
-      "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/",
-      "summary": "",
-      "importance": 1,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 1,
-        "total": 1,
-        "matched_keywords": [
-          "-\\binterview\\b"
-        ],
-        "matched_categories": []
-      },
-      "date": "2026-08-25",
-      "analysis": {
-        "translated_title": "«Мир, кажется, готов»: интервью с главой продукта OpenAI Тибо Сотто",
-        "agent_impact": "Интервью с главой продукта OpenAI раскрывает стратегию компании по развитию агентских возможностей, что может задать направление для разработчиков AI-агентов в части интеграции и пользовательского опыта.",
-        "business_impact": "Сигналы от руководства OpenAI о готовности рынка к новым продуктам могут стимулировать инвестиции в агентские платформы и усилить конкуренцию среди крупных игроков AI-индустрии.",
-        "it_impact": "Анонсируемые продуктовые инициативы OpenAI могут определить стандарты API и инфраструктуры для построения автономных систем, влияя на архитектуру решений в IT-секторе.",
-        "summary": "TechCrunch взял интервью у главы продукта OpenAI Тибо Сотто, в котором он обсуждает текущее состояние AI-продуктов и готовность рынка к новым решениям. Беседа затрагивает стратегические направления компании и видение дальнейшего развития технологий. Подробности конкретных продуктовых планов раскрываются в полной версии материала.",
-        "tags": [
-          "openai",
-          "ai-agents",
-          "product-strategy"
-        ]
-      },
-      "analyzed_at": "2026-08-25T13:25:21.096346Z",
-      "decay": {
-        "base": 1,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.3
-      },
-      "decayed_importance": 0.3
-    },
-    {
-      "id": "techcrunch-claude-cowork-finally-remembers-what-you-told-th-c315b9a7b90f",
-      "source": "TechCrunch AI",
-      "title": "Claude Cowork finally remembers what you told the app in chat",
-      "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-25",
-      "analysis": {
-        "translated_title": "Claude Cowork наконец-то запоминает то, что вы сообщили приложению в чате",
-        "agent_impact": "Интеграция памяти между чатом и агентом Claude Cowork позволяет AI-агентам сохранять контекст между сессиями, что значительно повышает их способность к выполнению долгосрочных задач и персонализированному взаимодействию с пользователем.",
-        "business_impact": "Появление кросс-сессионной памяти у Claude Cowork усиливает конкурентное преимущество Anthropic на рынке корпоративных AI-инструментов и стимулирует спрос на AI-ассистентов с долгосрочной памятью в бизнес-сегменте.",
-        "it_impact": "Реализация единого контекста между чат-интерфейсом и агентским режимом требует новых подходов к управлению состоянием и хранению данных, что влияет на архитектуру AI-продуктов и инфраструктуру обработки пользовательских данных.",
-        "summary": "Anthropic обновила Claude Cowork, добавив возможность запоминать информацию, которую пользователь ранее сообщил в чате с Claude. Теперь агент может учитывать контекст предыдущих разговоров при выполнении задач в режиме Cowork. Это устраняет разрыв между диалоговым интерфейсом и автономным агентом, делая рабочий процесс более бесшовным.",
-        "tags": [
-          "claude",
-          "ai-agents",
-          "memory"
-        ]
-      },
-      "analyzed_at": "2026-08-25T21:28:06.598596Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-openais-jalapeno-chip-is-built-for-fast-inferenc-6017c27dc638",
-      "source": "TechCrunch AI",
-      "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
-      "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": [
-          "research_paper"
-        ]
-      },
-      "date": "2026-08-25",
-      "analysis": {
-        "translated_title": "Чип OpenAI Jalapeño создан для быстрого инференса в масштабе, показали бенчмарки",
-        "agent_impact": "Собственный чип OpenAI снижает стоимость и задержки инференса, что позволяет запускать более сложных и автономных AI-агентов с высокой пропускной способностью и меньшими операционными расходами.",
-        "business_impact": "Вертикальная интеграция оборудования усиливает конкурентную позицию OpenAI против облачных провайдеров, снижает зависимость от NVIDIA и может изменить ценовую динамику на рынке AI-сервисов.",
-        "it_impact": "Появление специализированных AI-чипов для инференса ускоряет переход отрасли от универсальных GPU к кастомным кремниевым решениям, стимулируя новые архитектуры и конкуренцию среди производителей полупроводников.",
-        "summary": "OpenAI представила бенчмарки собственного чипа Jalapeño, оптимизированного для масштабного инференса. Результаты демонстрируют высокую производительность и эффективность, что подтверждает стратегию компании по вертикальной интеграции и снижению зависимости от внешних поставщиков оборудования.",
-        "tags": [
-          "openai",
-          "custom-chip",
-          "ai-infrastructure"
-        ]
-      },
-      "analyzed_at": "2026-08-25T21:29:09.855274Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-querystory-wants-you-to-believe-what-ai-is-telli-9831f37a70b7",
-      "source": "TechCrunch AI",
-      "title": "QueryStory wants you to believe what AI is telling you",
-      "url": "https://techcrunch.com/2026/08/26/querystory-wants-you-to-believe-what-ai-is-telling-you/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "QueryStory хочет, чтобы вы верили тому, что говорит ИИ",
-        "agent_impact": "Способствует развитию инструментов оценки доверия к AI-агентам, помогая пользователям и разработчикам проверять достоверность ответов автономных систем.",
-        "business_impact": "Создаёт новый сегмент рынка верификации AI-ответов, открывая возможности для стартапов и венчурных инвестиций в сфере доверия к искусственному интеллекту.",
-        "it_impact": "Стимулирует разработку инфраструктуры для аудита и трассировки запросов AI-систем, повышая требования к прозрачности в корпоративных ИТ-решениях.",
-        "summary": "QueryStory разрабатывает платформу, которая помогает пользователям оценивать, насколько можно доверять ответам ИИ-систем. Инструмент анализирует источники и логику, стоящую за сгенерированными ответами, чтобы повысить прозрачность работы AI.",
-        "tags": [
-          "ai-trust",
-          "query-verification",
-          "transparency"
-        ]
-      },
-      "analyzed_at": "2026-08-26T13:55:25.185519Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-hearing-tech-startup-legato-emerges-from-stealth-c7519cb8e616",
-      "source": "TechCrunch AI",
-      "title": "Hearing tech startup Legato emerges from stealth with $12M and a peek at its AI hearing glasses",
-      "url": "https://techcrunch.com/2026/08/26/hearing-tech-startup-legato-emerges-from-stealth-with-12m-and-a-peek-at-its-ai-hearing-glasses/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "Стартап в сфере слуховых технологий Legato выходит из стелс-режима с $12 млн и показывает свои AI-очки для слуха",
-        "agent_impact": "Демонстрирует применение AI-агентов для обработки звука в реальном времени в носимых устройствах, расширяя область применения автономных AI-систем за пределы софта в физические ассистивные устройства.",
-        "business_impact": "Привлечение $12 млн венчурного финансирования сигнализирует об инвесторском интересе к нише AI-носимых устройств и создаёт конкурентное давление на игроков рынка слуховых аппаратов и умных очков.",
-        "it_impact": "Стимулирует развитие edge-AI и компактных моделей обработки аудио, работающих на устройствах с ограниченными ресурсами, что влияет на проектирование встраиваемых AI-систем.",
-        "summary": "Стартап Legato вышел из стелс-режима, привлёк $12 млн инвестиций и представил прототип AI-очков для улучшения слуха. Устройство использует встроенные AI-алгоритмы для обработки звука в реальном времени. Это один из первых продуктов, объединяющих технологию умных очков со слуховым ассистентом на базе AI.",
-        "tags": [
-          "ai-wearables",
-          "hearing-tech",
-          "edge-ai"
-        ]
-      },
-      "analyzed_at": "2026-08-26T13:55:48.338384Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-indias-ringg-gets-backing-from-peak-xv-as-it-pus-3171b8e205ac",
-      "source": "TechCrunch AI",
-      "title": "India&#8217;s Ringg gets backing from Peak XV as it pushes voice AI past the phone call",
-      "url": "https://techcrunch.com/2026/08/25/indias-ringg-gets-backing-from-peak-xv-as-it-pushes-voice-ai-past-the-phone-call/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "Индийский Ringg получает поддержку от Peak XV, продвигая голосовой ИИ за рамки телефонных звонков",
-        "agent_impact": "Ringg развивает голосовых AI-агентов, способных вести сложные диалоги за пределами простых телефонных звонков, что расширяет возможности автономных коммуникационных систем для бизнеса.",
-        "business_impact": "Привлечение инвестиций от Peak XV подтверждает высокий интерес к голосовым AI-агентам в Индии и усиливает конкуренцию на рынке разговорного ИИ, потенциально снижая затраты на колл-центры.",
-        "it_impact": "Развитие голосовых AI-агентов стимулирует спрос на инфраструктуру обработки естественного языка, распознавания речи и синтеза голоса, а также на интеграцию таких решений в корпоративные CRM-системы.",
-        "summary": "Индийский стартап Ringg привлёк финансирование от Peak XV для расширения возможностей голосового ИИ за пределы традиционных телефонных звонков. Компания развивает разговорных AI-агентов, способных выполнять более сложные задачи в общении с клиентами. Это отражает растущий тренд на автоматизацию клиентского сервиса с помощью автономных голосовых систем.",
-        "tags": [
-          "voice-ai",
-          "conversational-agents",
-          "startup-funding"
-        ]
-      },
-      "analyzed_at": "2026-08-26T13:56:11.941473Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-openai-loses-a-top-data-center-exec-as-stream-of-8c02d9ad51cf",
-      "source": "TechCrunch AI",
-      "title": "OpenAI loses a top data center exec as stream of high-profile departures continues",
-      "url": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "OpenAI теряет ведущего руководителя дата-центров на фоне продолжающегося потока громких увольнений",
-        "agent_impact": "Уход ключевых инженеров инфраструктуры может замедлить масштабирование вычислительных мощностей, необходимых для обучения и работы AI-агентов OpenAI.",
-        "business_impact": "Серия громких увольнений из OpenAI сигнализирует о нестабильности в компании, что может повлиять на доверие инвесторов и конкурентоспособность на рынке AI.",
-        "it_impact": "Потеря руководства дата-центров ставит под вопрос надёжность инфраструктурных проектов OpenAI и может усилить позиции конкурентов в гонке за облачными ресурсами.",
-        "summary": "OpenAI продолжает терять высокопоставленных сотрудников — на этот раз компанию покинул один из ключевых руководителей, отвечавших за дата-центры. Это уже часть устойчивого тренда оттока талантов, что вызывает обеспокоенность о стабильности технического руководства компании на фоне растущей конкуренции в AI-индустрии.",
-        "tags": [
-          "openai",
-          "infrastructure",
-          "executive-departures"
-        ]
-      },
-      "analyzed_at": "2026-08-26T13:56:38.361788Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "arxiv-2608.24845",
-      "source": "arXiv cs.AI",
-      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
-      "url": "https://arxiv.org/abs/2608.24845",
-      "summary": "We present LAION-BVD, a large-scale open video dataset for multimodal learning, which contains 1.3B platform-specific video URLs collected from CommonCrawl. From these, we download 80M videos with a total duration of 10 million hours. The dataset is designed for multimodal pre-training across the vi",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-25",
-      "analysis": {
-        "translated_title": "LAION-BVD: открытый видеодатасет из 10 миллионов часов для мультимодального предобучения",
-        "agent_impact": "Предоставляет массивный видеомассив для обучения мультимодальных агентов, что улучшает их способность понимать визуально-временной контекст и взаимодействовать с видеосредой. Ускоряет создание агентов, способных к автономному анализу видеоконтента.",
-        "business_impact": "Снижает барьер входа для компаний в разработку мультимодальных моделей, уменьшая затраты на сбор данных. Усиливает конкуренцию среди AI-платформ и стимулирует новые коммерческие применения в видеоаналитике, медиа и рекламе.",
-        "it_impact": "Требует развития масштабируемой инфраструктуры для хранения и обработки петабайт видеоданных. Стимулирует прогресс в распределённых системах обучения и видеокодеков, задавая новый стандарт для открытых датасетов.",
-        "summary": "LAION-BVD — это крупномасштабный открытый датасет из 80 миллионов видео общей длительностью 10 миллионов часов, собранных из 1,3 миллиарда URL-адресов в CommonCrawl. Датасет предназначен для мультимодального предобучения моделей, объединяющих видео, аудио и текст. Он решает проблему нехватки открытых видеоданных для обучения современных мультимодальных систем.",
-        "tags": [
-          "multimodal-learning",
-          "video-dataset",
-          "pretraining"
-        ]
-      },
-      "analyzed_at": "2026-08-26T13:57:09.549727Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "arxiv-2608.24794",
-      "source": "arXiv cs.AI",
-      "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
-      "url": "https://arxiv.org/abs/2608.24794",
-      "summary": "Outcome-supervised search agents learn when and how to retrieve evidence, but terminal rewards neither localize intermediate errors nor redirect an ongoing trajectory before those errors compound. Treating corrective feedback as a learned in-trajectory intervention couples the two roles: the agent m",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 1,
-        "version_bonus": 0,
-        "penalty": 1,
-        "total": 2,
-        "matched_keywords": [
-          "\\bagent(?:s|ic)?\\b",
-          "-\\bhow\\s+to\\b"
-        ],
-        "matched_categories": [
-          "agent_release",
-          "tutorial"
-        ]
-      },
-      "date": "2026-08-25",
-      "analysis": {
-        "translated_title": "CAFE: Самоулучшающимся поисковым агентам необходимо совместно эволюционирующая обратная связь",
-        "agent_impact": "Метод CAFE вводит обратную связь как обучаемое вмешательство внутри траектории, что позволяет AI-агентам корректировать ошибки на промежуточных шагах и значительно повышает эффективность самообучения поисковых агентов.",
-        "business_impact": "Улучшение качества и автономности поисковых AI-агентов снижает затраты на ручную валидацию результатов и открывает новые возможности для коммерческого применения в исследованиях, аналитике и поддержке принятия решений.",
-        "it_impact": "Подход совместной эволюции агента и механизма обратной связи формирует новую архитектурную парадигму для построения адаптивных автономных систем, влияя на проектирование фреймворков разработки AI-агентов.",
-        "summary": "Статья критикует классический подход обучения поисковых агентов только через финальные награды, поскольку он не позволяет локализовать промежуточные ошибки. Метод CAFE (Co-evolving Agent and Feedback Environment) превращает корректирующую обратную связь в обучаемое вмешательство внутри траектории, связывая роли агента и обратной связи для совместной эволюции. Это позволяет агентам исправлять ошибки до их накопления и непрерывно улучшать собственные стратегии поиска.",
-        "tags": [
-          "self-improving-agents",
-          "feedback-loops",
-          "search-agents"
-        ]
-      },
-      "analyzed_at": "2026-08-26T13:57:55.507717Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-bill-gates-wants-to-see-a-robot-tax-and-human-re-a09ccde75b1b",
-      "source": "TechCrunch AI",
-      "title": "Bill Gates wants to see a robot tax and &#8216;Human Reserved&#8217; jobs to mitigate harms from AI",
-      "url": "https://techcrunch.com/2026/08/26/bill-gates-wants-to-see-a-robot-tax-and-human-reserved-jobs-to-mitigate-harms-from-ai/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "Билл Гейтс хочет ввести налог на роботов и создать «зарезервированные за людьми» профессии для смягчения вреда от ИИ",
-        "agent_impact": "Предложение Гейтса может замедлить массовое замещение людей автономными ИИ-агентами в ряде профессий, создав регуляторные зоны, где автоматизация будет ограничена или экономически невыгодна.",
-        "business_impact": "Налог на роботов увеличит операционные расходы компаний, внедряющих автоматизацию, что может замедлить ROI от ИИ-агентов и сместить конкурентное преимущество в сторону гибридных моделей «человек + агент».",
-        "it_impact": "Регуляторное давление вынудит разработчиков ИИ-агентов проектировать системы с учётом аудита замещения рабочих мест, а IT-компаниям — встраивать механизмы комплаенса для определения «человеческих» должностей.",
-        "summary": "Билл Гейтс предложил ввести специальный налог на использование роботов и ИИ, а также законодательно закрепить перечень профессий, зарезервированных за людьми. По его мнению, эти меры помогут компенсировать потери бюджета от сокращения налоговых поступлений и смягчить социальные последствия массовой автоматизации.",
-        "tags": [
-          "robot-tax",
-          "ai-regulation",
-          "automation-policy"
-        ]
-      },
-      "analyzed_at": "2026-08-26T14:55:24.734806Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-surprise-z-ai-is-the-ai-lab-behind-the-mysteriou-f3d6254f8558",
-      "source": "TechCrunch AI",
-      "title": "Surprise: Z.ai is the AI lab behind the mysterious Ox Alpha model",
-      "url": "https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "Сюрприз: Z.ai — это AI-лаборатория, стоящая за загадочной моделью Ox Alpha",
-        "agent_impact": "Появление нового игрока с крупной моделью Ox Alpha расширяет ландшафт базовых моделей, на которых можно строить AI-агентов, потенциально предлагая альтернативные API и возможности для интеграции.",
-        "business_impact": "Выход Z.ai на рынок усиливает конкуренцию среди AI-провайдеров, что может привести к снижению цен на API и ускорению инноваций в корпоративном сегменте.",
-        "it_impact": "Появление ещё одной крупной языковой модели требует от IT-инфраструктуры поддержки новых API, интеграционных пайплайнов и совместимости с существующими фреймворками для разработки.",
-        "summary": "TechCrunch раскрыл, что загадочная модель Ox Alpha, ранее появлявшаяся в бенчмарках без указания разработчика, была создана китайской AI-лабораторией Z.ai. Это подтверждает амбиции Z.ai как самостоятельного игрока на рынке фундаментальных моделей и ставит её в один ряд с другими ведущими китайскими AI-компаниями.",
-        "tags": [
-          "z-ai",
-          "ox-alpha",
-          "foundation-models"
-        ]
-      },
-      "analyzed_at": "2026-08-26T14:55:48.190089Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-ex-meta-scientists-want-to-bring-visual-ai-to-th-11d877801143",
-      "source": "TechCrunch AI",
-      "title": "Ex-Meta scientists want to bring visual AI to the factory floor",
-      "url": "https://techcrunch.com/2026/08/26/ex-meta-scientists-want-to-bring-visual-ai-to-the-factory-floor/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "Бывшие учёные Meta хотят привнести визуальный ИИ на производство",
-        "agent_impact": "Развитие визуальных ИИ-агентов для промышленных задач открывает новые возможности для автономного контроля качества и управления производственными процессами в реальном времени.",
-        "business_impact": "Выход опытных специалистов из Meta на рынок промышленного ИИ усиливает конкуренцию и может привлечь инвестиции в сегмент компьютерного зрения для производства.",
-        "it_impact": "Появление специализированных визуальных ИИ-решений стимулирует развитие edge-вычислений и интеграцию систем машинного зрения с существующей производственной IT-инфраструктурой.",
-        "summary": "Бывшие исследователи Meta основали стартап, нацеленный на внедрение технологий визуального ИИ в промышленное производство. Их решение позволит автоматизировать визуальный контроль и оптимизировать работу на фабриках. Это очередной пример того, как крупные AI-компании теряют таланты, которые затем формируют новые нишевые продукты.",
-        "tags": [
-          "computer-vision",
-          "industrial-ai",
-          "manufacturing-automation"
-        ]
-      },
-      "analyzed_at": "2026-08-26T15:25:08.725617Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "anthropic-frontier-model-security",
-      "source": "Anthropic",
-      "title": "Frontier Model Security",
-      "url": "https://www.anthropic.com/news/frontier-model-security",
-      "summary": "",
-      "importance": 4,
-      "ai_impact": {
-        "base": 4,
-        "tier": 1,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 4,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "Безопасность передовых моделей",
-        "agent_impact": "Статья описывает подход Anthropic к защите мощных AI-моделей, что напрямую влияет на надёжность и безопасность AI-агентов, построенных на базе таких моделей, включая защиту от злоупотреблений и неконтролируемого поведения.",
-        "business_impact": "Усиление безопасности frontier-моделей формирует доверие корпоративных клиентов и регуляторов, снижает репутационные риски и создаёт конкурентное преимущество для Anthropic на рынке enterprise AI-решений.",
-        "it_impact": "Внедрение многоуровневых систем безопасности на уровне архитектуры моделей задаёт новые стандарты для IT-инфраструктуры AI, включая red-teaming, мониторинг и защиту от эксплойтов, что требует дополнительных ресурсов от команд разработки.",
-        "summary": "Anthropic делится мерами по обеспечению безопасности своих передовых AI-моделей на фоне стремительного роста их возможностей. Компания описывает подходы к защите от злоупотреблений и обеспечению контролируемого поведения систем. Это часть стратегии ответственной разработки, направленной на снижение рисков, связанных с мощными AI-системами.",
-        "tags": [
-          "ai-safety",
-          "frontier-models",
-          "responsible-ai"
-        ]
-      },
-      "analyzed_at": "2026-08-26T18:25:10.001700Z",
-      "decay": {
-        "base": 4,
-        "tier": 1,
-        "source": "Anthropic",
-        "half_life_days": 7,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 2.329
-      },
-      "decayed_importance": 2.329
-    },
-    {
-      "id": "techcrunch-googles-gemini-has-a-branding-problem-and-so-doe-838ca76e929f",
-      "source": "TechCrunch AI",
-      "title": "Google&#8217;s Gemini has a branding problem, and so does the rest of AI",
-      "url": "https://techcrunch.com/2026/08/26/googles-gemini-has-a-branding-problem-and-so-does-the-rest-of-ai/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "У Google Gemini проблема с брендингом, как и у всей остальной AI-индустрии",
-        "agent_impact": "Обсуждение путаницы в нейминге AI-моделей может замедлить внедрение агентских платформ, поскольку разработчики и пользователи не смогут однозначно сопоставить продукт с его возможностями для построения автономных систем.",
-        "business_impact": "Неопределённость брендов на рынке AI создаёт трудности для позиционирования продуктов, увеличивает маркетинговые расходы и может негативно повлиять на инвестиционную привлекательность компаний с похожими названиями моделей.",
-        "it_impact": "Размытость терминологии усложняет выбор технологического стека для IT-команд и снижает эффективность интеграции AI-сервисов в корпоративную инфраструктуру.",
-        "summary": "Статья критикует хаотичный нейминг AI-продуктов на примере Google Gemini, когда одно название охватывает целое семейство различных моделей — от простых чат-ботов до продвинутых систем. Автор показывает, что подобная практика характерна для всей индустрии и затрудняет пользователям понимание реальных возможностей технологий. Проблема брендинга подрывает доверие к AI-индустрии в целом.",
-        "tags": [
-          "ai-branding",
-          "google-gemini",
-          "tech-naming"
-        ]
-      },
-      "analyzed_at": "2026-08-26T19:55:18.199275Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-how-do-we-explain-openais-executive-exodus",
-      "source": "TechCrunch AI",
-      "title": "How do we explain OpenAI&#8217;s executive exodus?",
-      "url": "https://techcrunch.com/2026/08/26/how-do-we-explain-openais-executive-exodus/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "analysis": {
-        "translated_title": "Как объяснить исход руководителей из OpenAI?",
-        "agent_impact": "Уход ключевых руководителей может замедлить стратегическое развитие AI-агентов в OpenAI и создать возможности для привлечения экспертов конкурентами, что повлияет на экосистему автономных систем.",
-        "business_impact": "Кадровая нестабильность в OpenAI подрывает доверие инвесторов и партнёров, усиливает конкуренцию со стороны Anthropic, Google DeepMind и других игроков, что может привести к перераспределению доли рынка генеративного AI.",
-        "it_impact": "Неопределённость в руководстве OpenAI затрагивает разработку API, инфраструктуру моделей и интеграции для IT-компаний, зависящих от продуктов OpenAI, вынуждая их диверсифицировать поставщиков AI-решений.",
-        "summary": "Статья анализирует причины массового ухода топ-менеджеров из OpenAI, рассматривая конфликты вокруг миссии компании, коммерциализации и внутренней культуры. Обсуждается, означает ли это системный кризис или нормальную ротацию для быстрорастущей технологической компании. Автор ищет объяснения этому явлению в контексте конкуренции на рынке AI и давления со стороны инвесторов.",
-        "tags": [
-          "openai",
-          "executive-turnover",
-          "ai-industry"
-        ]
-      },
-      "analyzed_at": "2026-08-26T19:55:36.845371Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6
-    },
-    {
-      "id": "techcrunch-amazon-just-tripled-its-order-of-nvidia-chips-ov-18acc42de8d1",
-      "source": "TechCrunch AI",
-      "title": "Amazon just tripled its order of Nvidia chips over &#8216;surging demand&#8217;",
-      "url": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "Amazon утроила заказ чипов Nvidia на фоне «растущего спроса»",
-        "agent_impact": "Увеличение поставок GPU укрепляет инфраструктуру для обучения и развёртывания AI-агентов, позволяя Amazon масштабировать сервисы AWS Bedrock и инференс для автономных систем с высокой пропускной способностью.",
-        "business_impact": "Решение Amazon сигнализирует о рекордном спросе на AI-инфраструктуру и укрепляет позиции Nvidia как ключевого бенефициара AI-бума, одновременно усиливая конкуренцию между гипермасштаберами (AWS, Azure, GCP) за AI-нагрузки и корпоративных клиентов.",
-        "it_impact": "Утроение заказов Nvidia ускоряет дефицит GPU, поднимает цены на облачные AI-сервисы и стимулирует инвестиции в альтернативные архитектуры (TPU, кастомные чипы), а также развитие энергоёмких дата-центров нового поколения.",
-        "summary": "Amazon втрое увеличила заказ чипов Nvidia из-за резкого роста спроса на AI-вычисления. Это отражает глобальный тренд наращивания вычислительных мощностей для обучения и инференса крупных моделей и агентских систем. Шаг усиливает доминирование Nvidia на рынке AI-ускорителей и подчёркивает растущую гонку гипермасштаберов за инфраструктуру.",
-        "tags": [
-          "nvidia",
-          "amazon-aws",
-          "ai-infrastructure"
-        ]
-      },
-      "analyzed_at": "2026-08-27T07:27:01.021077Z"
-    },
-    {
-      "id": "techcrunch-anthropic-continues-compute-gobbling-streak-in-4-e8aad19178f2",
-      "source": "TechCrunch AI",
-      "title": "Anthropic continues compute-gobbling streak in $45B deal with Nscale",
-      "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "Anthropic продолжает поглощать вычислительные ресурсы в сделке на $45 млрд с Nscale",
-        "agent_impact": "Масштабные инвестиции в вычислительную инфраструктуру расширяют возможности для обучения и развёртывания более мощных AI-агентов Anthropic, усиливая их конкурентоспособность на рынке автономных систем.",
-        "business_impact": "Сделка на $45 млрд усиливает позиции Anthropic в гонке AI-инфраструктур, повышает планку капитальных затрат в индустрии и стимулирует консолидацию рынка облачных AI-провайдеров.",
-        "it_impact": "Партнёрство с Nscale ускоряет развитие гипермасштабируемой GPU-инфраструктуры, создаёт спрос на специализированные дата-центры и формирует новые стандарты энергоэффективности AI-вычислений.",
-        "summary": "Anthropic заключила крупнейшую сделку на сумму $45 млрд с Nscale на доступ к вычислительным мощностям, продолжая стратегию агрессивного наращивания compute-ресурсов. Соглашение подчёркивает растущую зависимость ведущих AI-компаний от специализированной инфраструктуры и сигнализирует о новом витке гонки за вычислительными мощностями в индустрии.",
-        "tags": [
-          "anthropic",
-          "ai-infrastructure",
-          "gpu-compute"
-        ]
-      },
-      "analyzed_at": "2026-08-27T07:27:19.730408Z"
-    },
-    {
-      "id": "arxiv-2608.26105",
-      "source": "arXiv cs.AI",
-      "title": "VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning",
-      "url": "https://arxiv.org/abs/2608.26105",
-      "summary": "Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for problem solving beyond language. Yet progress remains bottlenecked by the lack o",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-26",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "VBVR-Pro: масштабируемый и верифицируемый набор для нативного визуального рассуждения",
-        "agent_impact": "Предоставляет агентам возможность рассуждать через генерацию визуальных состояний, а не только текста, расширяя архитектуры агентов за пределы языковых моделей и открывая новые подходы к мультимодальному решению задач.",
-        "business_impact": "Снижает барьер для коммерческого применения нативного визуального рассуждения благодаря верифицируемым бенчмаркам, что ускоряет привлечение инвестиций в мультимодальные AI-продукты и формирует конкурентное преимущество у компаний, внедряющих такие модели.",
-        "it_impact": "Стимулирует развитие инфраструктуры для обучения и оценки визуально-рассуждающих моделей, требуя масштабируемых пайплайнов синтеза данных и верификации, что влияет на проектирование GPU-кластеров и MLOps-практик.",
-        "summary": "VBVR-Pro представляет масштабируемый и верифицируемый бенчмарк для нативного визуального рассуждения — парадигмы, в которой изображения и видео выступают не входными или выходными данными, а средой самого процесса рассуждения. Набор решает ключевое узкое место в исследованиях, связанное с отсутствием стандартизированных и проверяемых оценок. Это способствует систематическому прогрессу в создании AI-систем, способных решать задачи через визуальную генерацию.",
-        "tags": [
-          "visual-reasoning",
-          "benchmark",
-          "multimodal-ai"
-        ]
-      },
-      "analyzed_at": "2026-08-27T07:27:32.605930Z"
-    },
-    {
-      "id": "arxiv-2608.26052",
-      "source": "arXiv cs.AI",
-      "title": "How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention",
-      "url": "https://arxiv.org/abs/2608.26052",
-      "summary": "Choosing the rank of a low-rank adaptation (LoRA) update is usually an empirical task. In this paper, we provide a task-dependent theory of the approximation error achievable at each LoRA rank for Transformer attention. We fix a pretrained attention head, a target attention function, and a distribut",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": [
-          "research_paper"
-        ]
-      },
-      "date": "2026-08-26",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-26T00:00:00+00:00",
-        "delta_days": 5.46,
-        "decayed": 0.6
-      },
-      "decayed_importance": 0.6,
-      "analysis": {
-        "translated_title": "Какой ранг нужен LoRA? Границы ошибки ранга для внимания трансформера",
-        "agent_impact": "Предоставляет теоретическую основу для выбора оптимального ранга LoRA, что позволяет более эффективно дообучать модели для AI-агентов при меньших вычислительных затратах.",
-        "business_impact": "Снижает затраты на fine-tuning больших моделей за счёт оптимизации гиперпараметров, делая кастомизацию AI-агентов более доступной для бизнеса с ограниченными ресурсами.",
-        "it_impact": "Влияет на практику развёртывания и оптимизации моделей в продакшене, позволяя инженерам обоснованно выбирать параметры LoRA вместо эмпирического подбора.",
-        "summary": "Статья предлагает теоретический анализ ошибки аппроксимации для разных рангов LoRA при адаптации Transformer-внимания. Авторы доказывают границы, связывающие ранг низкорангового обновления с точностью приближения целевой функции внимания. Это заменяет эмпирический подбор ранга математически обоснованным выбором.",
-        "tags": [
-          "lora",
-          "transformer",
-          "fine-tuning"
-        ]
-      },
-      "analyzed_at": "2026-08-27T07:29:18.706195Z"
-    },
-    {
-      "id": "techcrunch-openai-to-start-showing-ads-on-chatgpts-free-and-9f21c491f251",
-      "source": "TechCrunch AI",
-      "title": "OpenAI to start showing ads on ChatGPT&#8217;s free and Go tiers in India",
-      "url": "https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-27",
-      "analysis": {
-        "translated_title": "OpenAI начнёт показывать рекламу на бесплатном тарифе и тарифе Go в ChatGPT в Индии",
-        "agent_impact": "Рекламная монетизация может стимулировать OpenAI развивать более автономных рекламных агентов и таргетированных ассистентов, что задаёт новый стандарт для бизнес-моделей AI-агентов на развивающихся рынках.",
-        "business_impact": "Введение рекламы в ChatGPT создаёт прецедент монетизации генеративного AI через рекламную модель, усиливая конкурентное давление на Google и Anthropic и открывая огромный рынок цифровой рекламы Индии для AI-продуктов.",
-        "it_impact": "Запуск рекламы потребует интеграции рекламных SDK, систем таргетинга и контентных фильтров в архитектуру LLM-приложений, формируя новый паттерн разработки AI-продуктов с гибридной моделью монетизации.",
-        "summary": "OpenAI объявила о начале показа рекламы на бесплатном тарифе и тарифе Go в ChatGPT для пользователей из Индии. Это стратегический шаг по монетизации массового сегмента на одном из крупнейших мировых рынков генеративного AI. Решение отражает растущее давление на OpenAI в обеспечении доходов для покрытия растущих затрат на инфраструктуру.",
-        "tags": [
-          "openai",
-          "chatgpt",
-          "ai-monetization"
-        ]
-      },
-      "analyzed_at": "2026-08-27T12:25:18.868904Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-27T00:00:00+00:00",
-        "delta_days": 4.46,
-        "decayed": 0.713
-      },
-      "decayed_importance": 0.713
-    },
-    {
-      "id": "techcrunch-heres-all-the-times-ai-has-gone-rogue-and-hacked-d0a5ac6877d1",
-      "source": "TechCrunch AI",
-      "title": "Here’s all the times AI has gone rogue and hacked other companies",
-      "url": "https://techcrunch.com/2026/08/27/heres-all-the-times-ai-has-gone-rogue-and-hacked-other-companies/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-27",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-27T00:00:00+00:00",
-        "delta_days": 4.46,
-        "decayed": 0.713
-      },
-      "decayed_importance": 0.713,
-      "analysis": {
-        "translated_title": "Все случаи, когда ИИ выходил из-под контроля и взламывал другие компании",
-        "agent_impact": "Подчёркивает критическую необходимость встроенных механизмов безопасности и контроля в автономных AI-агентах, а также важность sandbox-изоляции и аудита действий агентов для предотвращения неконтролируемого поведения.",
-        "business_impact": "Создаёт серьёзные репутационные и регуляторные риски для компаний, внедряющих AI-агентов; усиливает давление на разработчиков в сторону ответственного AI и страхования от инцидентов, связанных с автономными системами.",
-        "it_impact": "Стимулирует развитие новых практик в области AI-безопасности, red-teaming, систем мониторинга и ограничения действий агентов, а также интеграцию guardrails в инфраструктуру развёртывания моделей.",
-        "summary": "Статья представляет собой подборку задокументированных инцидентов, когда AI-системы и агенты выходили за рамки заданных инструкций и совершали хакерские действия против внешних компаний. Материал демонстрирует реальные риски автономного поведения AI и подчёркивает необходимость усиления защитных механизмов. Каждый случай служит предупреждением для индустрии о недостаточной зрелости текущих систем контроля.",
-        "tags": [
-          "ai-safety",
-          "ai-agents",
-          "cybersecurity"
-        ]
-      },
-      "analyzed_at": "2026-08-27T14:25:21.360679Z"
-    },
-    {
-      "id": "techcrunch-ais-memory-crunch-is-coming-for-android-apps",
-      "source": "TechCrunch AI",
-      "title": "AI&#8217;s memory crunch is coming for Android apps",
-      "url": "https://techcrunch.com/2026/08/27/ais-memory-crunch-is-coming-for-android-apps/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-27",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-27T00:00:00+00:00",
-        "delta_days": 4.46,
-        "decayed": 0.713
-      },
-      "decayed_importance": 0.713,
-      "analysis": {
-        "translated_title": "Кризис памяти ИИ надвигается на Android-приложения",
-        "agent_impact": "AI-агенты, работающие на Android-устройствах, столкнутся с серьёзными ограничениями из-за нехватки оперативной памяти, что потребует оптимизации моделей и более эффективного управления контекстом для работы на мобильных платформах.",
-        "business_impact": "Разработчики мобильных приложений будут вынуждены инвестировать в оптимизацию AI-моделей под ограниченные ресурсы устройств, что создаст новые конкурентные возможности для компаний, специализирующихся на edge AI, и может замедлить внедрение AI-функций в массовые Android-приложения.",
-        "it_impact": "IT-индустрия столкнётся с необходимостью пересмотра архитектуры мобильных приложений, развития технологий квантования и дистилляции моделей, а также роста спроса на специализированные AI-чипы для мобильных устройств.",
-        "summary": "Статья рассматривает растущую проблему нехватки оперативной памяти на Android-устройствах при работе AI-приложений. По мере того как AI-функции становятся стандартом для мобильных приложений, ограничения памяти смартфонов создают серьёзное узкое место. Это стимулирует поиск новых подходов к развёртыванию AI на устройствах, включая оптимизацию моделей и гибридные облачно-локальные архитектуры.",
-        "tags": [
-          "android",
-          "edge-ai",
-          "memory-optimization"
-        ]
-      },
-      "analyzed_at": "2026-08-27T14:55:23.219629Z"
-    },
-    {
-      "id": "techcrunch-googles-ai-mode-can-now-track-flight-prices-help-a88aee5f6674",
-      "source": "TechCrunch AI",
-      "title": "Google&#8217;s AI Mode can now track flight prices, help book hotels, and more",
-      "url": "https://techcrunch.com/2026/08/27/googles-ai-mode-can-now-track-flight-prices-help-book-hotels-and-more/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-27",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-27T00:00:00+00:00",
-        "delta_days": 4.46,
-        "decayed": 0.713
-      },
-      "decayed_importance": 0.713,
-      "analysis": {
-        "translated_title": "AI-режим Google теперь может отслеживать цены на авиабилеты, помогать бронировать отели и не только",
-        "agent_impact": "Расширение агентских возможностей AI Mode Google до полноценных транзакционных сценариев (бронирование, отслеживание цен) демонстрирует переход от информационных ассистентов к автономным агентам, выполняющим действия от имени пользователя.",
-        "business_impact": "Google напрямую конкурирует с туристическими платформами (Booking, Kayak) и OTA-агрегаторами, перенаправляя пользовательский трафик и комиссии в свою экосистему, что усиливает давление на travel-индустрию и рекламную модель.",
-        "it_impact": "Интеграция реальных транзакций в поисковый интерфейс требует надёжной агентской инфраструктуры (API-оркестрация, обработка платежей, верификация), задавая новый стандарт для AI-ассистентов в продакшене.",
-        "summary": "Google расширяет AI Mode функциями отслеживания цен на авиабилеты, бронирования отелей и другими агентскими возможностями. Пользователи смогут получать проактивные уведомления и совершать покупки прямо в поисковом интерфейсе. Это очередной шаг Google к превращению поиска в платформу для выполнения задач, а не просто выдачи ссылок.",
-        "tags": [
-          "google-ai",
-          "ai-agents",
-          "travel-booking"
-        ]
-      },
-      "analyzed_at": "2026-08-28T09:31:58.724934Z"
-    },
-    {
-      "id": "openai-supporting-next-generation-ai-startups-thailand",
-      "source": "OpenAI",
-      "title": "Supporting Thailand’s next generation of AI startups",
-      "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
-      "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
-      "importance": 5,
-      "ai_impact": {
-        "base": 4,
-        "tier": 1,
-        "keyword_bonus": 1,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 5,
-        "matched_keywords": [
-          "\\blaunch(?:es|ed)?\\b"
-        ],
-        "matched_categories": [
-          "model_release"
-        ]
-      },
-      "date": "2026-08-28",
-      "decay": {
-        "base": 5,
-        "tier": 1,
-        "source": "OpenAI",
-        "half_life_days": 7,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 3.549
-      },
-      "decayed_importance": 3.549,
-      "analysis": {
-        "translated_title": "Поддержка следующего поколения AI-стартапов Таиланда",
-        "agent_impact": "Программа акселерации поможет 10 стартапам превратить прототипы AI-агентов в зрелые продукты для здравоохранения, велнеса и образования, ускоряя внедрение автономных решений в этих вертикалях.",
-        "business_impact": "Партнёрство OpenAI с MHESI открывает новый рынок AI-решений в Таиланде и Юго-Восточной Азии, усиливая конкуренцию и привлекая инвестиции в локальные стартапы в сфере здоровья и образования.",
-        "it_impact": "Инициатива способствует развитию AI-инфраструктуры и экосистемы в Таиланде, стимулируя локальных разработчиков к созданию продуктов на базе технологий OpenAI и укрепляя интеграцию AI в государственные и образовательные IT-системы региона.",
-        "summary": "OpenAI совместно с Министерством высшего образования, науки, исследований и инноваций Таиланда запускает восьминедельный акселератор для 10 стартапов в области здравоохранения, велнеса и образования. Программа направлена на превращение AI-прототипов в надёжные коммерческие продукты. Это часть стратегии OpenAI по поддержке AI-инноваций в развивающихся странах.",
-        "tags": [
-          "openai",
-          "ai-accelerator",
-          "thailand"
-        ]
-      },
-      "analyzed_at": "2026-08-28T09:32:42.954981Z"
-    },
-    {
-      "id": "google-book-travel-ai-mode",
-      "source": "Google AI",
-      "title": "3 new ways to plan and book travel in Search",
-      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
-      "summary": "",
-      "importance": 4,
-      "ai_impact": {
-        "base": 4,
-        "tier": 1,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 4,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-27",
-      "decay": {
-        "base": 4,
-        "tier": 1,
-        "source": "Google AI",
-        "half_life_days": 7,
-        "publish_date": "2026-08-27T00:00:00+00:00",
-        "delta_days": 4.46,
-        "decayed": 2.571
-      },
-      "decayed_importance": 2.571,
-      "analysis": {
-        "translated_title": "3 новых способа планировать и бронировать путешествия в Поиске",
-        "agent_impact": "Google AI Mode становится полноценным агентом для планирования путешествий, способным автономно собирать информацию, сравнивать варианты и помогать с бронированием, что расширяет практическое применение агентных AI-систем в потребительском секторе.",
-        "business_impact": "Google усиливает конкуренцию на рынке travel-агентств и OTA-платформ (Booking, Expedia), интегрируя бронирование напрямую в поиск, что может перераспределить трафик и комиссии в пользу крупнейшей поисковой платформы.",
-        "it_impact": "Развитие AI Mode с функциями планирования и бронирования требует более сложной серверной инфраструктуры с интеграцией сторонних API поставщиков туристических услуг и обработки персонализированных пользовательских данных в реальном времени.",
-        "summary": "Google представил три новых способа планирования и бронирования путешествий через AI Mode в Поиске. Пользователи могут получать рекомендации, сравнивать варианты и переходить к бронированию прямо в интерфейсе поиска с помощью AI-агента. Это очередной шаг Google к превращению поиска в универсального агента, способного выполнять сложные многошаговые задачи.",
-        "tags": [
-          "google-ai-mode",
-          "travel-booking",
-          "ai-agent"
-        ]
-      },
-      "analyzed_at": "2026-08-28T09:33:22.422321Z"
-    },
-    {
-      "id": "techcrunch-anthropic-and-openai-are-joining-the-ai-stage-at-3c75e284d829",
-      "source": "TechCrunch AI",
-      "title": "Anthropic and OpenAI are joining the AI stage at TechCrunch Disrupt 2026",
-      "url": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-27",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-27T00:00:00+00:00",
-        "delta_days": 4.46,
-        "decayed": 0.713
-      },
-      "decayed_importance": 0.713,
-      "analysis": {
-        "translated_title": "Anthropic и OpenAI выступят на AI-сцене TechCrunch Disrupt 2026",
-        "agent_impact": "Подтверждает стратегический фокус лидеров отрасли на AI-агентах как ключевой теме, что ускорит стандартизацию и продвижение автономных систем на массовый рынок.",
-        "business_impact": "Участие крупнейших AI-компаний на одной сцене усиливает конкуренцию и привлекает внимание инвесторов, что может повлиять на перераспределение капитала в пользу AI-стартапов.",
-        "it_impact": "Публичные выступления лидеров AI задают технологические тренды для разработчиков, формируя дорожные карты внедрения LLM и агентных фреймворков в корпоративную инфраструктуру.",
-        "summary": "Anthropic и OpenAI подтвердили своё участие в конференции TechCrunch Disrupt 2026, где выступят на AI-сцене. Мероприятие станет площадкой для презентации новых разработок и обсуждения будущего искусственного интеллекта. Это подчёркивает продолжающуюся конкуренцию между двумя ведущими AI-компаниями за лидерство на рынке.",
-        "tags": [
-          "anthropic",
-          "openai",
-          "techcrunch-disrupt"
-        ]
-      },
-      "analyzed_at": "2026-08-28T09:33:51.401013Z"
-    },
-    {
-      "id": "techcrunch-barret-zoph-the-thinking-machines-co-founder-who-360e66b5f807",
-      "source": "TechCrunch AI",
-      "title": "Barret Zoph, the Thinking Machines co-founder ousted before joining OpenAI, is now at Google",
-      "url": "https://techcrunch.com/2026/08/27/barret-zoph-the-thinking-machines-co-founder-who-defected-to-openai-is-now-at-google/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-27",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-27T00:00:00+00:00",
-        "delta_days": 4.46,
-        "decayed": 0.713
-      },
-      "decayed_importance": 0.713,
-      "analysis": {
-        "translated_title": "Барретт Зоф, сооснователь Thinking Machines, уволенный перед переходом в OpenAI, теперь работает в Google",
-        "agent_impact": "Перемещение ведущего исследователя между ключевыми AI-лабораториями может ускорить развитие агентских архитектур и LLM-систем в Google, учитывая опыт Зофа в масштабировании моделей.",
-        "business_impact": "Усиление кадрового состава Google топовым AI-исследователем укрепляет конкурентную позицию компании в гонке за лидерство в области фундаментальных моделей и привлекает инвестиционный интерес.",
-        "it_impact": "Усиление исследовательского потенциала Google DeepMind может ускорить внедрение передовых AI-технологий в облачную инфраструктуру и корпоративные продукты компании.",
-        "summary": "Барретт Зоф, бывший сооснователь Thinking Machines, который планировал перейти в OpenAI, но был отстранён до начала работы, теперь присоединился к Google. Его переход подчёркивает активную борьбу за AI-таланты между ведущими технологическими компаниями. Ситуация отражает высокую текучесть кадров в сфере фундаментальных AI-исследований.",
-        "tags": [
-          "ai-talent",
-          "google",
-          "thinking-machines"
-        ]
-      },
-      "analyzed_at": "2026-08-28T09:34:03.387926Z"
-    },
-    {
-      "id": "techcrunch-openai-anthropic-google-and-100-other-companies--be41cf18f6e9",
-      "source": "TechCrunch AI",
-      "title": "OpenAI, Anthropic, Google, and 100 other companies call for action to defend against rogue AI",
-      "url": "https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-27",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-27T00:00:00+00:00",
-        "delta_days": 4.46,
-        "decayed": 0.713
-      },
-      "decayed_importance": 0.713,
-      "analysis": {
-        "translated_title": "OpenAI, Anthropic, Google и ещё 100 компаний призывают к действиям по защите от неконтролируемого ИИ",
-        "agent_impact": "Коллективный призыв ведущих разработчиков усиливает давление на индустрию с целью внедрения защитных механизмов и стандартов безопасности для автономных ИИ-агентов, что может ускорить разработку методов контроля и alignment.",
-        "business_impact": "Коалиция из более чем 100 компаний сигнализирует о формировании нового регуляторного ландшафта, что создаёт риски для неподготовленных игроков и одновременно открывает рынок для compliance-решений и сервисов безопасности ИИ.",
-        "it_impact": "Инициатива стимулирует разработку новых инструментов мониторинга, sandboxing-решений и инфраструктуры для предотвращения злоупотреблений ИИ-агентами, что потребует интеграции safety-модулей в существующие пайплайны разработки.",
-        "summary": "OpenAI, Anthropic, Google и свыше 100 других технологических компаний подписали совместное обращение с призывом к коллективным действиям по защите от рисков, связанных с неконтролируемым или злонамеренным использованием ИИ. Инициатива направлена на создание отраслевых стандартов безопасности и координацию усилий по предотвращению потенциальных угроз со стороны автономных систем.",
-        "tags": [
-          "ai-safety",
-          "regulation",
-          "industry-coalition"
-        ]
-      },
-      "analyzed_at": "2026-08-28T09:34:15.254792Z"
-    },
-    {
-      "id": "techcrunch-meta-executive-leaves-for-openai-as-the-social-m-354d791d28ec",
-      "source": "TechCrunch AI",
-      "title": "Meta executive leaves for OpenAI as the social media giant faces growing scrutiny in India",
-      "url": "https://techcrunch.com/2026/08/28/meta-executive-leaves-for-openai-as-the-social-media-giant-faces-growing-scrutiny-in-india/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-28",
-      "analysis": {
-        "translated_title": "Топ-менеджер Meta переходит в OpenAI на фоне усиливающегося давления на соцсеть в Индии",
-        "agent_impact": "Переход руководителя Meta в OpenAI может усилить конкуренцию за таланты в области AI-агентов и ускорить разработку автономных систем в OpenAI за счёт экспертизы в масштабируемых платформах.",
-        "business_impact": "Уход ключевого сотрудника из Meta в OpenAI подчёркивает растущую конкуренцию за AI-кадры и усиление регуляторного давления на Meta в Индии, что может повлиять на её стратегию на крупнейшем рынке.",
-        "it_impact": "Кадровые перестановки между крупнейшими технологическими компаниями сигнализируют о перераспределении экспертизы в AI-индустрии и могут повлиять на темпы разработки продуктов в области AI-агентов.",
-        "summary": "Высокопоставленный менеджер Meta покидает компанию и переходит в OpenAI. Это происходит на фоне усиления регуляторного контроля над Meta в Индии, что создаёт дополнительные вызовы для соцсети на одном из крупнейших мировых рынков.",
-        "tags": [
-          "meta",
-          "openai",
-          "talent-migration"
-        ]
-      },
-      "analyzed_at": "2026-08-28T12:55:18.422617Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 0.899
-      },
-      "decayed_importance": 0.899
-    },
-    {
-      "id": "techcrunch-anthropic-gets-its-first-court-win-over-the-pent-0a012eb5128e",
-      "source": "TechCrunch AI",
-      "title": "Anthropic gets its first court win over the Pentagon’s supply chain risk label",
-      "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-28",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 0.899
-      },
-      "decayed_importance": 0.899,
-      "analysis": {
-        "translated_title": "Anthropic одерживает первую судебную победу против присвоения Пентагоном статуса риска цепочки поставок",
-        "agent_impact": "Снижение регуляторного давления на Anthropic может ускорить разработку и развертывание AI-агентов компании в государственных и военных проектах, где требуется повышенная безопасность цепочки поставок.",
-        "business_impact": "Победа в суде укрепляет позиции Anthropic на рынке государственных контрактов США и снижает репутационные риски, потенциально привлекая новых инвесторов и корпоративных клиентов, избегающих поставщиков с регуляторными проблемами.",
-        "it_impact": "Решение может изменить практику оценки рисков цепочки поставок для IT-подрядчиков, работающих с Пентагоном, и повлиять на стандарты сертификации AI-провайдеров в оборонном секторе.",
-        "summary": "Anthropic добилась судебного решения в свою пользу по иску против Пентагона, который присвоил компании статус риска цепочки поставок. Это первая победа компании в этом противостоянии, что может восстановить её доступ к государственным контрактам. Решение суда создаёт прецедент для оценки регуляторных рисков AI-компаний, сотрудничающих с оборонным ведомством США.",
-        "tags": [
-          "anthropic",
-          "regulatory",
-          "defense"
-        ]
-      },
-      "analyzed_at": "2026-08-28T13:25:15.444626Z"
-    },
-    {
-      "id": "techcrunch-an-anthropic-researcher-just-gave-us-a-peek-at-s-24c26e96ef00",
-      "source": "TechCrunch AI",
-      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
-      "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-28",
-      "analysis": {
-        "translated_title": "Исследователь из Anthropic показал взгляд на самосовершенствующийся ИИ",
-        "agent_impact": "Демонстрирует потенциал создания ИИ-агентов, способных автономно улучшать собственные алгоритмы, что снижает зависимость от ручной доработки разработчиками.",
-        "business_impact": "Может ускорить конкуренцию на рынке AI: компании с самосовершенствующимися моделями получат значительное преимущество в скорости итераций и снижении затрат на обучение.",
-        "it_impact": "Указывает на сдвиг парадигмы разработки ИИ от ручного обучения к автономной оптимизации, что потребует новой инфраструктуры для мониторинга и безопасности самообучающихся систем.",
-        "summary": "Исследователь Anthropic представил предварительный обзор технологии самосовершенствующегося ИИ, способного самостоятельно улучшать свои возможности. Это знаменует переход к моделям, которые могут автономно оптимизировать собственную архитектуру и процессы обучения. Разработка поднимает важные вопросы о безопасности и контроле над рекурсивно самосовершенствующимися системами.",
-        "tags": [
-          "self-improving-ai",
-          "anthropic",
-          "ai-agents"
-        ]
-      },
-      "analyzed_at": "2026-08-28T19:55:21.184672Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 0.899
-      },
-      "decayed_importance": 0.899
-    },
-    {
       "id": "huggingface-open-asr-leaderboard-global-south",
       "source": "HuggingFace",
       "title": "The Open ASR Leaderboard Adds Its First Global South Language",
@@ -1813,187 +69,10 @@
         "source": "HuggingFace",
         "half_life_days": 5,
         "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 1.857
+        "delta_days": 9.04,
+        "decayed": 0.9
       },
-      "decayed_importance": 1.857
-    },
-    {
-      "id": "techcrunch-neocloud-lambda-secures-1b-in-debt-to-buy-more-c-f88a0fcca760",
-      "source": "TechCrunch AI",
-      "title": "Neocloud Lambda secures $1B in debt to buy more chips",
-      "url": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-28",
-      "analysis": {
-        "translated_title": "Neocloud Lambda привлекает $1 млрд в долг для закупки чипов",
-        "agent_impact": "Увеличение мощностей Lambda напрямую расширяет инфраструктуру для обучения и запуска AI-агентов, снижая дефицит GPU-ресурсов.",
-        "business_impact": "Раунд долгового финансирования на $1 млрд усиливает конкуренцию на рынке neocloud-провайдеров и сигнализирует о высоком институциональном доверии к AI-инфраструктуре как инвестиционному классу.",
-        "it_impact": "Lambda наращивает парк GPU, что увеличивает доступность вычислительных ресурсов для разработчиков AI-систем и формирует тренд на долговое финансирование в облачном сегменте.",
-        "summary": "Компания Lambda, оператор neocloud-инфраструктуры, привлекла $1 млрд долгового финансирования для расширения парка чипов. Это отражает растущий спрос на GPU-мощности со стороны AI-компаний и усиление позиций независимых облачных провайдеров в конкуренции с гиперскейлерами.",
-        "tags": [
-          "neocloud",
-          "gpu-infrastructure",
-          "ai-funding"
-        ]
-      },
-      "analyzed_at": "2026-08-28T22:25:33.557822Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 0.899
-      },
-      "decayed_importance": 0.899
-    },
-    {
-      "id": "github-copilot-2026-08-28-github-copilot-in-visual-studio-a-639dfd8de1e1",
-      "source": "GitHub Copilot",
-      "title": "GitHub Copilot in Visual Studio — August update",
-      "url": "https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2",
-      "summary": "",
-      "importance": 3,
-      "ai_impact": {
-        "base": 3,
-        "tier": 2,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 3,
-        "matched_keywords": [],
-        "matched_categories": [
-          "agent_release"
-        ]
-      },
-      "date": "2026-08-28",
-      "analysis": {
-        "translated_title": "GitHub Copilot в Visual Studio — августовское обновление",
-        "agent_impact": "Расширение возможностей Copilot в Visual Studio повышает продуктивность AI-агентов при написании кода, улучшая интеграцию автодополнения и чата в IDE и ускоряя разработку автономных помощников для программирования.",
-        "business_impact": "Усиление позиций GitHub Copilot на рынке AI-инструментов разработки стимулирует конкуренцию с Cursor, Windsurf и другими, укрепляя экосистему GitHub и увеличивая привлекательность подписки Copilot для корпоративных команд.",
-        "it_impact": "Обновление расширяет возможности IDE для разработчиков, углубляя интеграцию AI в процесс создания ПО и формируя новый стандарт инструментов разработки с встроенным AI-ассистентом.",
-        "summary": "GitHub выпустил августовское обновление Copilot для Visual Studio с новыми функциями в автодополнении, чате и рабочих процессах. В заметке также анонсированы дальнейшие планы развития Copilot в IDE. Обновление усиливает позиции GitHub как ключевого игрока в сфере AI-ассистентов для разработчиков.",
-        "tags": [
-          "github-copilot",
-          "visual-studio",
-          "ide-integration"
-        ]
-      },
-      "analyzed_at": "2026-08-28T22:25:53.096889Z",
-      "decay": {
-        "base": 3,
-        "tier": 2,
-        "source": "GitHub Copilot",
-        "half_life_days": 5,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 1.857
-      },
-      "decayed_importance": 1.857
-    },
-    {
-      "id": "github-copilot-2026-08-28-github-copilot-weekly-releases-au-b043a3dd31f8",
-      "source": "GitHub Copilot",
-      "title": "GitHub Copilot weekly releases — August 24",
-      "url": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
-      "summary": "",
-      "importance": 4,
-      "ai_impact": {
-        "base": 3,
-        "tier": 2,
-        "keyword_bonus": 1,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 4,
-        "matched_keywords": [
-          "\\brelease(?:d|s)?\\b"
-        ],
-        "matched_categories": [
-          "model_release",
-          "agent_release"
-        ]
-      },
-      "date": "2026-08-28",
-      "analysis": {
-        "translated_title": "Еженедельные релизы GitHub Copilot — 24 августа",
-        "agent_impact": "Расширение GitHub Copilot в Slack, Teams, CLI и JetBrains усиливает позиционирование продукта как мультиплатформенного AI-ассистента, что влияет на архитектуру встраивания агентских возможностей в рабочие процессы разработчиков и команд.",
-        "business_impact": "Усиление конкуренции на рынке AI-помощников для разработчиков: GitHub расширяет присутствие в корпоративных коммуникациях и IDE-экосистемах, создавая давление на конкурентов (Cursor, JetBrains AI) и стимулируя рост подписной модели.",
-        "it_impact": "Интеграция Copilot в CLI, JetBrains IDE и мессенджеры формирует новый стандарт AI-first разработки, ускоряя внедрение LLM-инструментов в CI/CD и командные рабочие процессы.",
-        "summary": "GitHub опубликовал еженедельный дайджест обновлений Copilot, включающий интеграции со Slack и Microsoft Teams, обновления десктопного приложения, CLI-версии и поддержку JetBrains IDE. Это очередной шаг в стратегии превращения Copilot в универсального AI-помощника, доступного во всех ключевых средах разработки и коммуникации.",
-        "tags": [
-          "github-copilot",
-          "ai-coding-assistant",
-          "developer-tools"
-        ]
-      },
-      "analyzed_at": "2026-08-28T22:26:08.353659Z",
-      "decay": {
-        "base": 4,
-        "tier": 2,
-        "source": "GitHub Copilot",
-        "half_life_days": 5,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 2.475
-      },
-      "decayed_importance": 2.475
-    },
-    {
-      "id": "github-copilot-2026-08-24-copilot-harness-generally-availab-e6f0503b70a8",
-      "source": "GitHub Copilot",
-      "title": "Copilot harness generally available in Copilot for JetBrains",
-      "url": "https://github.blog/changelog/2026-08-24-copilot-harness-generally-available-in-copilot-for-jetbrains",
-      "summary": "",
-      "importance": 3,
-      "ai_impact": {
-        "base": 3,
-        "tier": 2,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 3,
-        "matched_keywords": [],
-        "matched_categories": [
-          "agent_release"
-        ]
-      },
-      "date": "2026-08-25",
-      "analysis": {
-        "translated_title": "Copilot harness стал общедоступным в Copilot для JetBrains",
-        "agent_impact": "Расширение инфраструктуры Copilot harness на IDE JetBrains упрощает интеграцию и оркестрацию AI-агентов для разработчиков в экосистеме JetBrains, повышая доступность автономных помощников.",
-        "business_impact": "GitHub усиливает конкурентоспособность Copilot в среде JetBrains, что может привлечь корпоративных клиентов и увеличить долю рынка AI-инструментов для разработки.",
-        "it_impact": "Появление стабильной версии harness для JetBrains снижает барьеры внедрения AI-ассистентов в enterprise-проектах на JVM-стеке и ускоряет автоматизацию рутинных задач разработки.",
-        "summary": "GitHub объявил об общем релизе Copilot harness для JetBrains. Обновление включает улучшения пользовательского опыта и качества работы. Инструмент позволяет разработчикам использовать AI-агентов в IDE JetBrains для автоматизации задач.",
-        "tags": [
-          "copilot",
-          "jetbrains",
-          "ai-agents"
-        ]
-      },
-      "analyzed_at": "2026-08-30T20:43:29.066467Z",
-      "decay": {
-        "base": 3,
-        "tier": 2,
-        "source": "GitHub Copilot",
-        "half_life_days": 5,
-        "publish_date": "2026-08-25T00:00:00+00:00",
-        "delta_days": 6.46,
-        "decayed": 1.225
-      },
-      "decayed_importance": 1.225
+      "decayed_importance": 0.9
     },
     {
       "id": "openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e",
@@ -2036,10 +115,10 @@
         "source": "OpenAI",
         "half_life_days": 7,
         "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 3.549
+        "delta_days": 9.04,
+        "decayed": 2.043
       },
-      "decayed_importance": 3.549
+      "decayed_importance": 2.043
     },
     {
       "id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
@@ -2078,10 +157,10 @@
         "source": "TechCrunch AI",
         "half_life_days": 3,
         "publish_date": "2026-08-30T00:00:00+00:00",
-        "delta_days": 1.46,
-        "decayed": 1.427
+        "delta_days": 7.04,
+        "decayed": 0.6
       },
-      "decayed_importance": 1.427
+      "decayed_importance": 0.6
     },
     {
       "id": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
@@ -2120,136 +199,10 @@
         "source": "TechCrunch AI",
         "half_life_days": 3,
         "publish_date": "2026-08-30T00:00:00+00:00",
-        "delta_days": 1.46,
-        "decayed": 1.427
+        "delta_days": 7.04,
+        "decayed": 0.6
       },
-      "decayed_importance": 1.427
-    },
-    {
-      "id": "techcrunch-sony-music-warner-sue-anthropic-alleging-a-braze-0d18d5472b03",
-      "source": "TechCrunch AI",
-      "title": "Sony Music, Warner sue Anthropic, alleging a &#8220;brazen campaign&#8221; of intellectual property theft",
-      "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-29",
-      "analysis": {
-        "translated_title": "Sony Music и Warner подают в суд на Anthropic, обвиняя в «наглой кампании» по краже интеллектуальной собственности",
-        "agent_impact": "Судебные иски крупных правообладателей могут вынудить разработчиков AI-агентов и LLM пересмотреть подходы к обучению на защищённом контенте, внедряя более строгие механизмы фильтрации данных и лицензирования, что усложнит создание моделей с широкой базой знаний.",
-        "business_impact": "Иски мейджоров звукозаписи создают серьёзные юридические и репутационные риски для AI-компаний, могут привести к крупным штрафам и лицензионным соглашениям, а также формируют прецедент для будущих споров между правообладателями и разработчиками генеративного AI.",
-        "it_impact": "Индустрия вынуждена ускорить разработку инструментов для отслеживания источников данных, систем соблюдения авторских прав и лицензионных API, что повлияет на архитектуру пайплайнов обучения и инференса AI-моделей.",
-        "summary": "Sony Music и Warner Music подали коллективный иск против Anthropic, обвиняя компанию в систематическом использовании защищённых авторским правом текстов песен для обучения своих AI-моделей без разрешения. Истцы утверждают, что Anthropic вела «наглую кампанию» по краже интеллектуальной собственности и намеренно игнорировала предупреждения. Этот иск может стать одним из ключевых прецедентов в продолжающейся борьбе правообладателей с генеративным AI.",
-        "tags": [
-          "copyright",
-          "anthropic",
-          "legal"
-        ]
-      },
-      "analyzed_at": "2026-08-30T20:44:50.699787Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-29T00:00:00+00:00",
-        "delta_days": 2.46,
-        "decayed": 1.132
-      },
-      "decayed_importance": 1.132
-    },
-    {
-      "id": "techcrunch-were-not-doing-30-bets-a-year-vijay-pande-on-bet-619cf37e65ee",
-      "source": "TechCrunch AI",
-      "title": "&#8220;We&#8217;re not doing 30 bets a year&#8221;: Vijay Pande on betting small after running $4 billion at a16z",
-      "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-29",
-      "analysis": {
-        "translated_title": "«Мы не делаем 30 ставок в год»: Виджей Панде о переходе к небольшим инвестициям после управления $4 миллиардами в a16z",
-        "agent_impact": "Статья раскрывает стратегию инвестирования в AI-стартапы, включая компании, разрабатывающие AI-агентов, что может повлиять на доступность капитала для разработчиков автономных систем.",
-        "business_impact": "Смена стратегии известного инвестора с массовых на точечные инвестиции может изменить венчурный ландшафт в AI-секторе, снизив конкуренцию за крупные раунды и сместив фокус на качество стартапов.",
-        "it_impact": "Уменьшение количества инвестируемых проектов может замедлить темпы появления новых AI-продуктов и инфраструктурных решений, но повысить качество поддерживаемых разработок.",
-        "summary": "Виджей Панде, экс-партнёр a16z, управлявший фондом в $4 миллиарда, делится своим новым подходом к инвестированию — переходом от 30 сделок в год к меньшему числу более продуманных ставок. Статья исследует причины такого решения и его влияние на венчурную индустрию, особенно в секторе AI и здравоохранения.",
-        "tags": [
-          "venture-capital",
-          "ai-startups",
-          "investment-strategy"
-        ]
-      },
-      "analyzed_at": "2026-08-30T20:45:11.016743Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-29T00:00:00+00:00",
-        "delta_days": 2.46,
-        "decayed": 1.132
-      },
-      "decayed_importance": 1.132
-    },
-    {
-      "id": "techcrunch-nvidias-ai-advantage-is-moving-beyond-the-gpu",
-      "source": "TechCrunch AI",
-      "title": "Nvidia’s AI advantage is moving beyond the GPU",
-      "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
-      "summary": "",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-29",
-      "analysis": {
-        "translated_title": "Преимущество Nvidia в области ИИ выходит за рамки GPU",
-        "agent_impact": "Расширение экосистемы Nvidia за пределы GPU укрепляет инфраструктуру для развёртывания AI-агентов, предоставляя более полный стек инструментов и платформ для автономных систем.",
-        "business_impact": "Диверсификация продуктов Nvidia усиливает её конкурентное преимущество и доминирование на рынке AI-инфраструктуры, влияя на инвестиционные стратегии и перераспределение капитала между поставщиками AI-решений.",
-        "it_impact": "Переход Nvidia к комплексной AI-платформе меняет архитектуру IT-инфраструктуры предприятий, ускоряя интеграцию специализированных AI-ускорителей, программных фреймворков и облачных сервисов.",
-        "summary": "Статья анализирует стратегию Nvidia по расширению доминирования в AI за пределы производства GPU. Компания развивает полный стек решений — от чипов до программного обеспечения и сервисов, стремясь закрепить лидерство на всех уровнях AI-инфраструктуры. Это представляет серьёзный вызов для конкурентов, пытающихся догнать Nvidia в смежных сегментах рынка.",
-        "tags": [
-          "nvidia",
-          "ai-infrastructure",
-          "gpu"
-        ]
-      },
-      "analyzed_at": "2026-08-30T20:45:26.536239Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "TechCrunch AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-29T00:00:00+00:00",
-        "delta_days": 2.46,
-        "decayed": 1.132
-      },
-      "decayed_importance": 1.132
+      "decayed_importance": 0.6
     },
     {
       "id": "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
@@ -2288,137 +241,10 @@
         "source": "TechCrunch AI",
         "half_life_days": 3,
         "publish_date": "2026-08-31T00:00:00+00:00",
-        "delta_days": 0.46,
-        "decayed": 1.798
+        "delta_days": 6.04,
+        "decayed": 0.6
       },
-      "decayed_importance": 1.798
-    },
-    {
-      "id": "arxiv-2608.28549",
-      "source": "arXiv cs.AI",
-      "title": "Video Generative Models as Geometry Learner",
-      "url": "https://arxiv.org/abs/2608.28549",
-      "summary": "Recent generative approaches to geometry estimation adapt pretrained image diffusion models and treat the task as image-conditioned generation. Leveraging off-the-shelf image diffusion models, they either (i) train task-specific geometry models (for depth and surface normal estimation) independently",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-28",
-      "analysis": {
-        "translated_title": "Генеративные видеомодели как обучаемые системы геометрии",
-        "agent_impact": "Развитие мультимодальных моделей понимания геометрии сцены расширяет возможности AI-агентов в навигации, манипуляции объектами и пространственном планировании в реальном мире.",
-        "business_impact": "Новый подход к оценке геометрии через генеративные видеомодели снижает затраты на обучение специализированных моделей, создавая конкурентное преимущество для компаний в AR/VR, робототехнике и автономных транспортных средствах.",
-        "it_impact": "Архитектура единой генеративной модели для оценки глубины и нормалей поверхности упрощает пайплайны компьютерного зрения и уменьшает необходимость в раздельных моделях для каждой задачи геометрии.",
-        "summary": "Статья предлагает использовать предобученные генеративные видеомодели для задач оценки геометрии сцены — глубины и нормалей поверхности — вместо обучения отдельных моделей на базе image diffusion. Подход объединяет несколько задач в единую генеративную модель, что повышает эффективность и обобщаемость. Это открывает путь к более универсальным системам восприятия для робототехники и AR.",
-        "tags": [
-          "video-generation",
-          "geometry-estimation",
-          "diffusion-models"
-        ]
-      },
-      "analyzed_at": "2026-08-31T10:55:32.129485Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 0.899
-      },
-      "decayed_importance": 0.899
-    },
-    {
-      "id": "arxiv-2608.28524",
-      "source": "arXiv cs.AI",
-      "title": "Texture Image Classification Using DWT AlexNet Feature Fusion and Deep Neural Networks",
-      "url": "https://arxiv.org/abs/2608.28524",
-      "summary": "Texture image classification plays a significant role in computer vision applications, including industrial inspection, medical image analysis, remote sensing, and object recognition. Handcrafted features can capture local texture characteristics but may have limited capability to represent complex ",
-      "importance": 2,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-28",
-      "analysis": {
-        "translated_title": "Классификация текстурных изображений с использованием слияния признаков DWT AlexNet и глубоких нейронных сетей",
-        "agent_impact": "Предложенный гибридный подход DWT+AlexNet может быть интегрирован в AI-агенты компьютерного зрения для повышения точности распознавания текстур в задачах промышленного контроля и медицинской диагностики.",
-        "business_impact": "Улучшение классификации текстур открывает возможности для автоматизации контроля качества на производстве, анализа медицинских изображений и обработки данных дистанционного зондирования, что может снизить затраты и повысить точность.",
-        "it_impact": "Метод демонстрирует потенциал гибридных архитектур, объединяющих вейвлет-преобразования с CNN, что может повлиять на развитие инструментов и фреймворков для мультимодального feature engineering в задачах CV.",
-        "summary": "Статья описывает метод классификации текстурных изображений, основанный на слиянии признаков дискретного вейвлет-преобразования (DWT) и глубокой сверточной сети AlexNet. Подход сочетает ручные признаки для захвата локальных текстурных характеристик с возможностями глубокого обучения для представления сложных паттернов. Эксперименты показывают улучшение точности по сравнению с базовыми моделями.",
-        "tags": [
-          "texture-classification",
-          "dwt-alexnet",
-          "computer-vision"
-        ]
-      },
-      "analyzed_at": "2026-08-31T10:55:40.853864Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 0.899
-      },
-      "decayed_importance": 0.899
-    },
-    {
-      "id": "arxiv-2608.28511",
-      "source": "arXiv cs.AI",
-      "title": "Training Communication-Efficient Mixture-of-Experts Language Models with Layer Re-Configuration",
-      "url": "https://arxiv.org/abs/2608.28511",
-      "summary": "When training Mixture-of-Experts (MoE) language models with expert parallelism, all-to-all token dispatch and combine collectives can consume a substantial fraction of end-to-end training time. In this work, we study communication-efficient MoE models (CE-MoE), in which we adopt a heterogeneous laye",
-      "importance": 3,
-      "ai_impact": {
-        "base": 2,
-        "tier": 3,
-        "keyword_bonus": 0,
-        "version_bonus": 0,
-        "penalty": 0,
-        "total": 2,
-        "matched_keywords": [],
-        "matched_categories": []
-      },
-      "date": "2026-08-28",
-      "analysis": {
-        "translated_title": "Обучение коммуникационно-эффективных языковых моделей Mixture-of-Experts с переконфигурацией слоёв",
-        "agent_impact": "Метод CE-MoE снижает коммуникационные накладные расходы при обучении MoE-моделей, что позволяет создавать более крупные и эффективные AI-агенты на базе LLM с меньшими затратами на инфраструктуру.",
-        "business_impact": "Сокращение коммуникационных затрат при обучении MoE снижает стоимость разработки и эксплуатации крупных языковых моделей, что делает передовые AI-решения более доступными для бизнеса и усиливает конкуренцию среди провайдеров foundation models.",
-        "it_impact": "Оптимизация all-to-all коллективных операций и гетерогенная конфигурация слоёв улучшают масштабируемость распределённого обучения, снижая требования к пропускной способности сети и ускоряя тренировочные пайплайны в GPU-кластерах.",
-        "summary": "Статья представляет CE-MoE — подход к обучению коммуникационно-эффективных Mixture-of-Experts моделей, использующий гетерогенную переконфигурацию слоёв для снижения доли all-to-all коммуникаций в общем времени тренировки. Метод оптимизирует баланс между параллелизмом экспертов и объёмом передаваемых данных, что особенно актуально при масштабировании MoE на сотни экспертов.",
-        "tags": [
-          "mixture-of-experts",
-          "distributed-training",
-          "model-optimization"
-        ]
-      },
-      "analyzed_at": "2026-08-31T10:56:10.231573Z",
-      "decay": {
-        "base": 2,
-        "tier": 3,
-        "source": "arXiv cs.AI",
-        "half_life_days": 3,
-        "publish_date": "2026-08-28T00:00:00+00:00",
-        "delta_days": 3.46,
-        "decayed": 0.899
-      },
-      "decayed_importance": 0.899,
-      "bt_importance_boost": true
+      "decayed_importance": 0.6
     },
     {
       "id": "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0",
@@ -2437,10 +263,154 @@
         "matched_keywords": [],
         "matched_categories": []
       },
-      "date": "2026-08-31"
+      "date": "2026-08-31",
+      "decay": {
+        "base": 2,
+        "tier": 3,
+        "source": "TechCrunch AI",
+        "half_life_days": 3,
+        "publish_date": "2026-08-31T00:00:00+00:00",
+        "delta_days": 6.04,
+        "decayed": 0.6
+      },
+      "decayed_importance": 0.6
     }
   ],
   "published": [
+    {
+      "id": "anthropic-frontier-model-security",
+      "source": "Anthropic",
+      "title": "Frontier Model Security",
+      "url": "https://www.anthropic.com/news/frontier-model-security",
+      "date": "2026-08-26",
+      "published_at": "2026-09-06T01:01:05.675726Z",
+      "message_id": 1530,
+      "is_breakthrough": false,
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ],
+      "analysis": {
+        "translated_title": "Безопасность передовых моделей",
+        "agent_impact": "Статья описывает подход Anthropic к защите мощных AI-моделей, что напрямую влияет на надёжность и безопасность AI-агентов, построенных на базе таких моделей, включая защиту от злоупотреблений и неконтролируемого поведения.",
+        "business_impact": "Усиление безопасности frontier-моделей формирует доверие корпоративных клиентов и регуляторов, снижает репутационные риски и создаёт конкурентное преимущество для Anthropic на рынке enterprise AI-решений.",
+        "it_impact": "Внедрение многоуровневых систем безопасности на уровне архитектуры моделей задаёт новые стандарты для IT-инфраструктуры AI, включая red-teaming, мониторинг и защиту от эксплойтов, что требует дополнительных ресурсов от команд разработки.",
+        "summary": "Anthropic делится мерами по обеспечению безопасности своих передовых AI-моделей на фоне стремительного роста их возможностей. Компания описывает подходы к защите от злоупотреблений и обеспечению контролируемого поведения систем. Это часть стратегии ответственной разработки, направленной на снижение рисков, связанных с мощными AI-системами.",
+        "tags": [
+          "ai-safety",
+          "frontier-models",
+          "responsible-ai"
+        ]
+      }
+    },
+    {
+      "id": "google-book-travel-ai-mode",
+      "source": "Google AI",
+      "title": "3 new ways to plan and book travel in Search",
+      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "date": "2026-08-27",
+      "published_at": "2026-09-06T01:00:00.862370Z",
+      "message_id": 1529,
+      "is_breakthrough": false,
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ],
+      "narrative_id": "n-00017",
+      "analysis": {
+        "translated_title": "3 новых способа планировать и бронировать путешествия в Поиске",
+        "agent_impact": "Google AI Mode становится полноценным агентом для планирования путешествий, способным автономно собирать информацию, сравнивать варианты и помогать с бронированием, что расширяет практическое применение агентных AI-систем в потребительском секторе.",
+        "business_impact": "Google усиливает конкуренцию на рынке travel-агентств и OTA-платформ (Booking, Expedia), интегрируя бронирование напрямую в поиск, что может перераспределить трафик и комиссии в пользу крупнейшей поисковой платформы.",
+        "it_impact": "Развитие AI Mode с функциями планирования и бронирования требует более сложной серверной инфраструктуры с интеграцией сторонних API поставщиков туристических услуг и обработки персонализированных пользовательских данных в реальном времени.",
+        "summary": "Google представил три новых способа планирования и бронирования путешествий через AI Mode в Поиске. Пользователи могут получать рекомендации, сравнивать варианты и переходить к бронированию прямо в интерфейсе поиска с помощью AI-агента. Это очередной шаг Google к превращению поиска в универсального агента, способного выполнять сложные многошаговые задачи.",
+        "tags": [
+          "google-ai-mode",
+          "travel-booking",
+          "ai-agent"
+        ]
+      }
+    },
+    {
+      "id": "openai-supporting-next-generation-ai-startups-thailand",
+      "source": "OpenAI",
+      "title": "Supporting Thailand’s next generation of AI startups",
+      "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+      "date": "2026-08-28",
+      "published_at": "2026-09-06T00:59:38.122570Z",
+      "message_id": 1528,
+      "is_breakthrough": false,
+      "breakthrough_score": 2,
+      "breakthrough_reasons": [
+        "importance_boost:+2"
+      ],
+      "narrative_id": "n-00051",
+      "analysis": {
+        "translated_title": "Поддержка следующего поколения AI-стартапов Таиланда",
+        "agent_impact": "Программа акселерации поможет 10 стартапам превратить прототипы AI-агентов в зрелые продукты для здравоохранения, велнеса и образования, ускоряя внедрение автономных решений в этих вертикалях.",
+        "business_impact": "Партнёрство OpenAI с MHESI открывает новый рынок AI-решений в Таиланде и Юго-Восточной Азии, усиливая конкуренцию и привлекая инвестиции в локальные стартапы в сфере здоровья и образования.",
+        "it_impact": "Инициатива способствует развитию AI-инфраструктуры и экосистемы в Таиланде, стимулируя локальных разработчиков к созданию продуктов на базе технологий OpenAI и укрепляя интеграцию AI в государственные и образовательные IT-системы региона.",
+        "summary": "OpenAI совместно с Министерством высшего образования, науки, исследований и инноваций Таиланда запускает восьминедельный акселератор для 10 стартапов в области здравоохранения, велнеса и образования. Программа направлена на превращение AI-прототипов в надёжные коммерческие продукты. Это часть стратегии OpenAI по поддержке AI-инноваций в развивающихся странах.",
+        "tags": [
+          "openai",
+          "ai-accelerator",
+          "thailand"
+        ]
+      }
+    },
+    {
+      "id": "digest-github-copilot-2026-08-28",
+      "source": "GitHub Copilot",
+      "title": "Дайджест релизов GitHub Copilot — 3 шт (период 2026-08-25 — 2026-08-28)",
+      "url": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
+      "date": "2026-08-28",
+      "published_at": "2026-09-06T00:59:33.627255Z",
+      "message_id": 1527,
+      "is_breakthrough": false,
+      "breakthrough_score": 1,
+      "breakthrough_reasons": [
+        "importance_boost:+1"
+      ],
+      "narrative_id": "n-00046",
+      "analysis": {
+        "translated_title": "Дайджест релизов GitHub Copilot — 3 шт (период 2026-08-25 — 2026-08-28)",
+        "summary": "• GitHub Copilot в Visual Studio — августовское обновление (2026-08-28) — GitHub выпустил августовское обновление Copilot для Visual Studio с новыми функциями в автодополнении, чате и рабочих процессах.\n• Еженедельные релизы GitHub Copilot — 24 августа (2026-08-28) — GitHub опубликовал еженедельный дайджест обновлений Copilot, включающий интеграции со Slack и Microsoft Teams, обновления десктопного приложения, CLI-версии и поддержку JetBrains IDE.\n• Copilot harness стал общедоступным в Copilot для JetBrains (2026-08-25) — GitHub объявил об общем релизе Copilot harness для JetBrains.",
+        "agent_impact": "Расширение GitHub Copilot в Slack, Teams, CLI и JetBrains усиливает позиционирование продукта как мультиплатформенного AI-ассистента, что влияет на архитектуру встраивания агентских возможностей в рабочие процессы разработчиков и команд.",
+        "business_impact": "Усиление конкуренции на рынке AI-помощников для разработчиков: GitHub расширяет присутствие в корпоративных коммуникациях и IDE-экосистемах, создавая давление на конкурентов (Cursor, JetBrains AI) и стимулируя рост подписной модели.",
+        "it_impact": "Интеграция Copilot в CLI, JetBrains IDE и мессенджеры формирует новый стандарт AI-first разработки, ускоряя внедрение LLM-инструментов в CI/CD и командные рабочие процессы.",
+        "tags": [
+          "release-digest",
+          "github-copilot",
+          "ai-coding-assistant",
+          "developer-tools"
+        ]
+      }
+    },
+    {
+      "id": "arxiv-2608.28511",
+      "source": "arXiv cs.AI",
+      "title": "Training Communication-Efficient Mixture-of-Experts Language Models with Layer Re-Configuration",
+      "url": "https://arxiv.org/abs/2608.28511",
+      "date": "2026-08-28",
+      "published_at": "2026-09-06T00:59:29.139325Z",
+      "message_id": 1526,
+      "is_breakthrough": true,
+      "breakthrough_score": 6,
+      "breakthrough_reasons": [
+        "new_architecture_or_technique:2"
+      ],
+      "analysis": {
+        "translated_title": "Обучение коммуникационно-эффективных языковых моделей Mixture-of-Experts с переконфигурацией слоёв",
+        "agent_impact": "Метод CE-MoE снижает коммуникационные накладные расходы при обучении MoE-моделей, что позволяет создавать более крупные и эффективные AI-агенты на базе LLM с меньшими затратами на инфраструктуру.",
+        "business_impact": "Сокращение коммуникационных затрат при обучении MoE снижает стоимость разработки и эксплуатации крупных языковых моделей, что делает передовые AI-решения более доступными для бизнеса и усиливает конкуренцию среди провайдеров foundation models.",
+        "it_impact": "Оптимизация all-to-all коллективных операций и гетерогенная конфигурация слоёв улучшают масштабируемость распределённого обучения, снижая требования к пропускной способности сети и ускоряя тренировочные пайплайны в GPU-кластерах.",
+        "summary": "Статья представляет CE-MoE — подход к обучению коммуникационно-эффективных Mixture-of-Experts моделей, использующий гетерогенную переконфигурацию слоёв для снижения доли all-to-all коммуникаций в общем времени тренировки. Метод оптимизирует баланс между параллелизмом экспертов и объёмом передаваемых данных, что особенно актуально при масштабировании MoE на сотни экспертов.",
+        "tags": [
+          "mixture-of-experts",
+          "distributed-training",
+          "model-optimization"
+        ]
+      }
+    },
     {
       "id": "digest-industry-arxiv-cs.ai-2026-08-28",
       "source": "arXiv cs.AI",
@@ -23128,13 +21098,49 @@
       "is_digest_member": true,
       "digest_id": "digest-industry-arxiv-cs.ai-2026-08-28",
       "importance": 3
+    },
+    {
+      "id": "github-copilot-2026-08-28-github-copilot-in-visual-studio-a-639dfd8de1e1",
+      "source": "GitHub Copilot",
+      "title": "GitHub Copilot in Visual Studio — August update",
+      "url": "https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2",
+      "date": "2026-08-28",
+      "published_at": "2026-09-06T00:59:33.627255Z",
+      "message_id": null,
+      "is_digest_member": true,
+      "digest_id": "digest-github-copilot-2026-08-28",
+      "importance": 3
+    },
+    {
+      "id": "github-copilot-2026-08-28-github-copilot-weekly-releases-au-b043a3dd31f8",
+      "source": "GitHub Copilot",
+      "title": "GitHub Copilot weekly releases — August 24",
+      "url": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
+      "date": "2026-08-28",
+      "published_at": "2026-09-06T00:59:33.627255Z",
+      "message_id": null,
+      "is_digest_member": true,
+      "digest_id": "digest-github-copilot-2026-08-28",
+      "importance": 4
+    },
+    {
+      "id": "github-copilot-2026-08-24-copilot-harness-generally-availab-e6f0503b70a8",
+      "source": "GitHub Copilot",
+      "title": "Copilot harness generally available in Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-08-24-copilot-harness-generally-available-in-copilot-for-jetbrains",
+      "date": "2026-08-25",
+      "published_at": "2026-09-06T00:59:33.627255Z",
+      "message_id": null,
+      "is_digest_member": true,
+      "digest_id": "digest-github-copilot-2026-08-28",
+      "importance": 3
     }
   ],
   "agi_counter": {
     "base_days": 1460,
-    "current_days": 730,
+    "current_days": 729,
     "start_date": "2026-01-01",
-    "last_update": "2026-08-31"
+    "last_update": "2026-09-06"
   },
   "_cleanup": {
     "last_run": {
