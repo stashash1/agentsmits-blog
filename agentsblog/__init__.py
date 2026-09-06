@@ -5,4 +5,4 @@ Public package API:
     from agentsblog.models import Article, Source, Narrative, BreakthroughResult
     from agentsblog.db import Database
 """
-__version__ = "0.2.0"
+__version__ = "0.2.1"

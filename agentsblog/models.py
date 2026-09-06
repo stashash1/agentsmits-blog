@@ -69,6 +69,14 @@ class Article(BaseModel):
     summary: str = ""                # RSS description / first paragraph
     description: str = ""            # extended description if any
 
+    @field_validator("summary", "description", "agent_impact",
+                     "business_impact", "it_impact", "translated_title",
+                     mode="before")
+    @classmethod
+    def _str_from_none(cls, v):
+        """Legacy data has None for analysis fields — coerce to empty string."""
+        return v if v is not None else ""
+
     # Scoring
     importance: int = Field(default=3, ge=1, le=5)
     decayed_importance: float = 0.0  # soft signal; >= importance by default
