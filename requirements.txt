@@ -1,2 +1,0 @@
-# AI Blog - requirements.txt
-# No external dependencies needed - uses Python standard library only

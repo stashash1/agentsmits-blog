@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-05T22:24:48.009034+00:00",
+  "updated_at": "2026-09-06T08:34:12.587157+00:00",
   "narratives": [
     {
       "id": "n-00001",
@@ -195,9 +195,9 @@
     {
       "id": "n-00003",
       "title": "GitHub Copilot weekly releases — August 3",
-      "status": "cooling",
+      "status": "active",
       "first_seen": "2026-08-10T10:26:55.432975+00:00",
-      "last_seen": "2026-08-30T20:45:56.778518+00:00",
+      "last_seen": "2026-09-06T08:28:17.459476+00:00",
       "entities": [
         "agent",
         "agents",
@@ -469,6 +469,14 @@
           "title": "Copilot harness generally available in Copilot for JetBrains",
           "source": "GitHub Copilot",
           "importance": 3
+        },
+        {
+          "item_id": "github-copilot-2026-08-28-github-copilot-weekly-releases-au-b043a3dd31f8",
+          "role": "followup",
+          "attached_at": "2026-09-06T08:28:17.459476+00:00",
+          "title": "GitHub Copilot weekly releases — August 24",
+          "source": "GitHub Copilot",
+          "importance": 4
         }
       ],
       "source": "auto",
@@ -3530,9 +3538,9 @@
     {
       "id": "n-00046",
       "title": "Echoverse: Deep, evolving environments for computer-use agents",
-      "status": "cooling",
+      "status": "active",
       "first_seen": "2026-08-10T15:15:00.089623+00:00",
-      "last_seen": "2026-08-30T20:45:56.763262+00:00",
+      "last_seen": "2026-09-06T08:28:17.466510+00:00",
       "entities": [
         "agent",
         "agentic",
@@ -3540,7 +3548,8 @@
         "benchmark",
         "copilot",
         "microsoft",
-        "reasoning"
+        "reasoning",
+        "udio"
       ],
       "items": [
         {
@@ -3598,6 +3607,14 @@
           "title": "GitHub Copilot weekly releases — August 24",
           "source": "GitHub Copilot",
           "importance": 4
+        },
+        {
+          "item_id": "digest-github-copilot-2026-08-28",
+          "role": "followup",
+          "attached_at": "2026-09-06T08:28:17.466510+00:00",
+          "title": "Дайджест релизов GitHub Copilot — 3 шт (период 2026-08-25 — 2026-08-28)",
+          "source": "GitHub Copilot",
+          "importance": null
         }
       ],
       "source": "auto",
@@ -30132,6 +30149,142 @@
           "item_id": "arxiv-2608.28491",
           "role": "primary",
           "attached_at": "2026-09-05T22:24:48.008525+00:00",
+          "title": "AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction",
+          "source": "arXiv cs.AI",
+          "importance": null
+        }
+      ],
+      "source": "auto",
+      "importance_max": 0
+    },
+    {
+      "id": "n-01179",
+      "title": "Logos: An Agent Harness on a Cross-Process Bus",
+      "status": "active",
+      "first_seen": "2026-09-06T08:28:17.465462+00:00",
+      "last_seen": "2026-09-06T08:28:17.465462+00:00",
+      "entities": [
+        "agent"
+      ],
+      "items": [
+        {
+          "item_id": "arxiv-2608.28553",
+          "role": "primary",
+          "attached_at": "2026-09-06T08:28:17.465462+00:00",
+          "title": "Logos: An Agent Harness on a Cross-Process Bus",
+          "source": "arXiv cs.AI",
+          "importance": 3
+        }
+      ],
+      "source": "auto",
+      "importance_max": 3
+    },
+    {
+      "id": "n-01180",
+      "title": "LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment",
+      "status": "active",
+      "first_seen": "2026-09-06T08:28:17.465462+00:00",
+      "last_seen": "2026-09-06T08:28:17.465462+00:00",
+      "entities": [
+        "agent",
+        "agents"
+      ],
+      "items": [
+        {
+          "item_id": "arxiv-2608.28490",
+          "role": "primary",
+          "attached_at": "2026-09-06T08:28:17.465462+00:00",
+          "title": "LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment",
+          "source": "arXiv cs.AI",
+          "importance": 3
+        }
+      ],
+      "source": "auto",
+      "importance_max": 3
+    },
+    {
+      "id": "n-01181",
+      "title": "AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction",
+      "status": "active",
+      "first_seen": "2026-09-06T08:28:17.467228+00:00",
+      "last_seen": "2026-09-06T08:28:17.467228+00:00",
+      "entities": [
+        "robot",
+        "robotics"
+      ],
+      "items": [
+        {
+          "item_id": "arxiv-2608.28491",
+          "role": "primary",
+          "attached_at": "2026-09-06T08:28:17.467228+00:00",
+          "title": "AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction",
+          "source": "arXiv cs.AI",
+          "importance": null
+        }
+      ],
+      "source": "auto",
+      "importance_max": 0
+    },
+    {
+      "id": "n-01182",
+      "title": "Logos: An Agent Harness on a Cross-Process Bus",
+      "status": "active",
+      "first_seen": "2026-09-06T08:34:12.585133+00:00",
+      "last_seen": "2026-09-06T08:34:12.585133+00:00",
+      "entities": [
+        "agent"
+      ],
+      "items": [
+        {
+          "item_id": "arxiv-2608.28553",
+          "role": "primary",
+          "attached_at": "2026-09-06T08:34:12.585133+00:00",
+          "title": "Logos: An Agent Harness on a Cross-Process Bus",
+          "source": "arXiv cs.AI",
+          "importance": 3
+        }
+      ],
+      "source": "auto",
+      "importance_max": 3
+    },
+    {
+      "id": "n-01183",
+      "title": "LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment",
+      "status": "active",
+      "first_seen": "2026-09-06T08:34:12.585133+00:00",
+      "last_seen": "2026-09-06T08:34:12.585133+00:00",
+      "entities": [
+        "agent",
+        "agents"
+      ],
+      "items": [
+        {
+          "item_id": "arxiv-2608.28490",
+          "role": "primary",
+          "attached_at": "2026-09-06T08:34:12.585133+00:00",
+          "title": "LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment",
+          "source": "arXiv cs.AI",
+          "importance": 3
+        }
+      ],
+      "source": "auto",
+      "importance_max": 3
+    },
+    {
+      "id": "n-01184",
+      "title": "AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction",
+      "status": "active",
+      "first_seen": "2026-09-06T08:34:12.586223+00:00",
+      "last_seen": "2026-09-06T08:34:12.586223+00:00",
+      "entities": [
+        "robot",
+        "robotics"
+      ],
+      "items": [
+        {
+          "item_id": "arxiv-2608.28491",
+          "role": "primary",
+          "attached_at": "2026-09-06T08:34:12.586223+00:00",
           "title": "AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction",
           "source": "arXiv cs.AI",
           "importance": null
