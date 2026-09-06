@@ -15,7 +15,7 @@ ENV overrides (all optional):
     AGENTSBLOG_DATA_DIR     override the data/ directory
     AGENTSBLOG_PUBLIC_DIR   override the public/ directory
     AGENTSBLOG_ROOT         override project root entirely
-    AGENTSBLOG_TELEGRAM_ACCOUNT   Telegram account id (default: "agentsmits")
+    AGENTSBLOG_TELEGRAM_ACCOUNT   Telegram account id (default: "agentssmits_bot")
     AGENTSBLOG_TELEGRAM_TARGET   Telegram chat/target (default: "@agentsSmits")
     AGENTSBLOG_TELEGRAM_CHANNEL  "telegram" channel name (default: "telegram")
     AGENTSBLOG_QUIET_HOURS_START / _END   integer hour 0..23 (default 23 / 8 MSK)
@@ -59,7 +59,7 @@ TZ_OFFSET_HOURS = int(os.environ.get("AGENTSBLOG_TZ_OFFSET", "3"))  # MSK = UTC+
 # OpenClaw Telegram account is "default" (bot @AgentsSmits_bot, posting to
 # @agentsSmits). The pipeline was silently failing with
 # "Telegram bot token missing" since ~14-Jul because of this.
-TELEGRAM_ACCOUNT = os.environ.get("AGENTSBLOG_TELEGRAM_ACCOUNT", "default")
+TELEGRAM_ACCOUNT = os.environ.get("AGENTSBLOG_TELEGRAM_ACCOUNT", "agentssmits_bot")
 TELEGRAM_CHANNEL = os.environ.get("AGENTSBLOG_TELEGRAM_CHANNEL", "telegram")
 TELEGRAM_TARGET = os.environ.get("AGENTSBLOG_TELEGRAM_TARGET", "@agentsSmits")
 

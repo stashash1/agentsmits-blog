@@ -7,7 +7,8 @@ from _config import EVENTS_LOG, METRICS, QUIET_HOURS_END, QUIET_HOURS_START, REC
 import json
 import os
 import sys
-import fcntl
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _portable_lock import flock, LOCK_EX, LOCK_NB, LOCK_UN, LOCK_SH
 import hashlib
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -126,7 +127,7 @@ def _acquire_lock(lock_path, suffix=""):
     lock_str = str(lock_path) + suffix + ".lock"
     try:
         lock_fd = os.open(lock_str, os.O_CREAT | os.O_RDWR)
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        flock(lock_fd, LOCK_EX | LOCK_NB)
         return lock_fd
     except BlockingIOError:
         return None
@@ -134,7 +135,7 @@ def _acquire_lock(lock_path, suffix=""):
 def _release_lock(lock_fd, lock_path, suffix=""):
     if lock_fd is not None:
         try:
-            fcntl.flock(lock_fd, fcntl.LOCK_UN)
+            flock(lock_fd, LOCK_UN)
             os.close(lock_fd)
             os.unlink(str(lock_path) + suffix + ".lock")
         except:

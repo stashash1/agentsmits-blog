@@ -9,7 +9,8 @@ import os
 import sys
 import subprocess
 import re
-import fcntl
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _portable_lock import flock, LOCK_EX, LOCK_NB, LOCK_UN, LOCK_SH
 import shutil
 import time
 from datetime import datetime, timezone
@@ -58,7 +59,7 @@ def sync_to_blog():
     t0 = time.monotonic()
     try:
         result = subprocess.run(
-            ["python3", str(GENERATE_SITE_SCRIPT)],
+            [shutil.which("python") or sys.executable, str(GENERATE_SITE_SCRIPT)],
             cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=300,
         )
         duration_ms = int((time.monotonic() - t0) * 1000)
@@ -116,7 +117,7 @@ def send_telegram(text, retries=3, delay=8):
         return 0
 
     cmd = [
-        'openclaw', 'message', 'send',
+        shutil.which('openclaw') or 'openclaw', 'message', 'send',
         '--channel', 'telegram',
         '--account', TELEGRAM_ACCOUNT,
         '--target', '@agentsSmits',
@@ -518,7 +519,7 @@ def main():
     lock_fd = None
     try:
         lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR)
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        flock(lock_fd, LOCK_EX | LOCK_NB)
     except BlockingIOError:
         print("Already running, exiting.")
         log_event(SCRIPT_NAME, "skipped", {"reason": "already_running"})
@@ -1067,7 +1068,7 @@ def main():
     
     finally:
         if lock_fd is not None:
-            fcntl.flock(lock_fd, fcntl.LOCK_UN)
+            flock(lock_fd, LOCK_UN)
             os.close(lock_fd)
             try:
                 os.unlink(lock_path)

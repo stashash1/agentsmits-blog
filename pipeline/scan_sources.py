@@ -10,7 +10,8 @@ from datetime import datetime, timedelta, timezone
 from urllib.request import urlopen, Request
 from urllib.error import URLError
 import re
-import fcntl
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _portable_lock import flock, LOCK_EX, LOCK_NB, LOCK_UN, LOCK_SH
 import time
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -1277,7 +1278,7 @@ def main():
     lock_fd = None
     try:
         lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR)
-        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        flock(lock_fd, LOCK_EX | LOCK_NB)
     except BlockingIOError:
         print("Scan already running, exiting.")
         log_event(SCRIPT_NAME, "skipped", {"reason": "already_running", "run_ts": run_ts})
@@ -1437,7 +1438,7 @@ def main():
     
     finally:
         if lock_fd is not None:
-            fcntl.flock(lock_fd, fcntl.LOCK_UN)
+            flock(lock_fd, LOCK_UN)
             os.close(lock_fd)
             try:
                 os.unlink(lock_path)
