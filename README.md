@@ -157,6 +157,8 @@ agentsmits-blog/
 │   ├── daily_summary.py            # дневной итог в канал
 │   ├── generate_weekly_digest.py   # еженедельный digest
 │   ├── impact_scoring.py           # модуль importance
+│   ├── breakthrough_detector.py    # детектор прорывов (новая архитектура/SOTA)
+│   ├── narrative_store.py          # кластеринг новостей в narratives
 │   ├── metrics.py                  # централизованный логгер
 │   ├── status.py                   # отчёт о состоянии очередей
 │   ├── dedup_audit.py              # проверка дедупликации
@@ -168,7 +170,8 @@ agentsmits-blog/
 │   ├── articles.html               # статьи
 │   └── rss.xml                     # RSS (для Яндекс Дзен)
 │
-├── scripts/                        # deployment glue (сейчас пусто, для будущих утилит)
+├── scripts/                        # deployment glue
+│   └── storage_manager.py          # current.json ↔ archive.json ротация
 │
 ├── skills/                         # OpenClaw skills (опциональные, для LLM-агента)
 │   ├── channel-publisher/SKILL.md  # спека паблишера
@@ -211,6 +214,7 @@ sources = [
 - **Quiet hours защита.** Не публикуем 23:00–08:00 МСК (настраивается). В это время скрипт оставляет post для следующего тика.
 - **Anti-dupe стратегия тройная**: (1) URL в `published[]`, (2) URL fingerprint в `recently_sent.json` за 24ч, (3) `publishing: true` лок при отправке.
 - **AI Impact Scoring** — отдельный модуль (`impact_scoring.py`) пересчитывает importance по тиру источника + ключевым словам (`release`, `GPT-5`, `Claude 4`, etc.). Запускать после изменения ключевых слов: `python3 pipeline/recompute_importance.py`.
+- **Breakthrough detector** — `breakthrough_detector.py` детектит прорывные статьи (новая архитектура, SOTA, agentic AI, VLA, TTT, JEPA, MoE…). Прорывные статьи публикуются в отдельном формате (баннер «🔥 ВАЖНАЯ СТАТЬЯ • ПРОРЫВ», секция «🧬 Что нового»), идут первыми в очереди (даже если importance=1-2), на сайте получают бейдж «🔥 ПРОРЫВ» в hero-card. Логика: паттерны архитектур/SOTA + importance boost + анти-паттерны (pricing, case study, energy crisis).
 
 ## License
 

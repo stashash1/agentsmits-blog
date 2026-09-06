@@ -496,6 +496,29 @@ TEMPLATE_INDEX = """<!DOCTYPE html>
             .nav-link {{ padding: 6px 12px; font-size: 0.82rem; }}
             .card-title {{ font-size: 1.2rem; }}
         }}
+
+        /* ── Breakthrough badge ── */
+        .bt-badge {{
+            display: inline-block;
+            margin-left: 12px;
+            padding: 3px 10px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+            vertical-align: middle;
+        }}
+        .hero-card-bt {{
+            border-color: var(--accent) !important;
+            background: linear-gradient(180deg, var(--bg-card) 0%, rgba(232, 160, 68, 0.04) 100%) !important;
+        }}
+        .hero-card-bt .card-title {{
+            color: var(--accent) !important;
+        }}
+
     </style>
 </head>
 <body>
@@ -662,14 +685,20 @@ def format_post_card(post):
     url = post.get('url', '#')
     date = format_date(post.get('published_at', post.get('added_at', '')))
     content = post.get('content', post.get('summary', ''))
+    is_breakthrough = bool(post.get('is_breakthrough'))
 
     content_html = parse_formatted_content(content)
 
+    # BT: бейдж "🔥 ПРОРЫВ" + рамка в акцент-цвете
+    bt_badge = '<span class="bt-badge">🔥 ПРОРЫВ</span>' if is_breakthrough else ''
+    bt_class = ' hero-card-bt' if is_breakthrough else ''
+
     return f'''
-    <article class="hero-card">
+    <article class="hero-card{bt_class}">
         <div>
             <span class="card-source">{source}</span>
             <span class="card-date" style="margin-left:10px">{date}</span>
+            {bt_badge}
         </div>
         <h2 class="card-title">{title}</h2>
         <div class="post-content">
