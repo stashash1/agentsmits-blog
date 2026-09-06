@@ -1,0 +1,1 @@
+"""Scoring package — impact + breakthrough detectors (stage 3)."""

@@ -1,0 +1,1 @@
+"""Metrics — structured events, health, alerts."""

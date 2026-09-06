@@ -1,0 +1,1 @@
+"""Utilities package — pure helpers, no I/O side effects on import."""

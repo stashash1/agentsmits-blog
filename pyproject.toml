@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentsblog"
+version = "0.2.0"
+description = "AI news aggregator + Telegram publisher + static site generator"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Personal / non-commercial" }
+authors = [{ name = "Agent Smith Blog" }]
+
+# Minimal deps: keep stdlib-friendly, add only typed models, templates, tests, API.
+dependencies = [
+    "pydantic>=2.5",
+    "pydantic-settings>=2.1",
+    "Jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+api = [
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+]
+test = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+]
+
+[project.scripts]
+# After `pip install -e .`:
+agentsblog = "agentsblog.cli:main"
+
+[project.urls]
+"Homepage" = "https://stashash1.github.io/agentsmits-blog"
+"Telegram" = "https://t.me/agentsSmits"
+
+[tool.setuptools]
+packages = ["agentsblog", "agentsblog.sources", "agentsblog.scoring",
+            "agentsblog.clustering", "agentsblog.publishing",
+            "agentsblog.site", "agentsblog.api", "agentsblog.metrics",
+            "agentsblog.utils"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra -q --strict-markers"

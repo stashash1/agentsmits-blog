@@ -1,0 +1,1 @@
+"""HTTP API — FastAPI server (stage 4)."""

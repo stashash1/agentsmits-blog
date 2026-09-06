@@ -1,0 +1,1 @@
+"""Site builder — Jinja2 templates + RSS (stage 5)."""

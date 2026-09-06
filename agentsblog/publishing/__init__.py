@@ -1,0 +1,1 @@
+"""Publishing — Telegram, formatter, digest, publisher (stage 4)."""
