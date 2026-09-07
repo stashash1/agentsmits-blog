@@ -1,0 +1,39 @@
+Scan scan:20260907T123000 complete:
+  sources scanned: 22
+  sources failed:  0
+  new pending:     0
+  dups skipped:    54
+
+  anthropic            total=4   new=0   dup=4
+  openai               total=10  new=0   dup=10
+  deepmind             total=5   new=0   dup=5
+  huggingface          total=10  new=0   dup=10
+  claude_code          total=5   new=0   dup=5
+  github_copilot       total=10  new=0   dup=10
+  techcrunch           total=10  new=0   dup=10
+Scan scan:20260907T130000 complete:
+  sources scanned: 22
+  sources failed:  0
+  new pending:     0
+  dups skipped:    54
+
+  anthropic            total=4   new=0   dup=4
+  openai               total=10  new=0   dup=10
+  deepmind             total=5   new=0   dup=5
+  huggingface          total=10  new=0   dup=10
+  claude_code          total=5   new=0   dup=5
+  github_copilot       total=10  new=0   dup=10
+  techcrunch           total=10  new=0   dup=10
+Scan scan:20260907T133000 complete:
+  sources scanned: 22
+  sources failed:  0
+  new pending:     0
+  dups skipped:    54
+
+  anthropic            total=4   new=0   dup=4
+  openai               total=10  new=0   dup=10
+  deepmind             total=5   new=0   dup=5
+  huggingface          total=10  new=0   dup=10
+  claude_code          total=5   new=0   dup=5
+  github_copilot       total=10  new=0   dup=10
+  techcrunch           total=10  new=0   dup=10

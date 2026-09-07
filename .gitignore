@@ -24,6 +24,7 @@ __pycache__/
 .env
 .env.local
 config/local.env
+data/bot_token.txt
 
 # Regenerable dreaming + memory state (graph-memory plugin)
 memory/dreaming/

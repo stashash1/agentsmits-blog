@@ -203,6 +203,64 @@ def _categorize(text: str) -> tuple[str, ...]:
     return tuple(cats)
 
 
+# Major-version pattern: same as _VERSION_RE but captures the actual number
+# so we can distinguish "major" (whole-number bump) from patch (small bump).
+_VERSION_MAJOR_RE = re.compile(
+    r"\b(?:GPT|Claude|Gemini|Llama|Grok|Mistral|DeepSeek|Qwen|Phi|Sora)"
+    r"[\s\-]*(?P<major>\d+)(?:\.(?P<minor>\d+))?\b",
+    re.IGNORECASE,
+)
+
+# Speculation / soft-news markers — penalize hard.
+SPECULATION_PATTERNS = [
+    r"\brumor\b", r"\brumour\b", r"\breportedly\b",
+    r"\bmight\b", r"\bmay\b", r"\bcould\b",
+    r"\bleak\b", r"\bleaked\b", r"\bunconfirmed\b",
+    r"\bspeculation\b", r"\bspeculates?\b", r"\banticipat\w+\b",
+    r"\bpossibly\b", r"\bperhaps\b",
+]
+
+# Tier-1 source boost multipliers. Tier-1 (OpenAI, Anthropic, DeepMind,
+# Google AI, DeepSeek, xAI, Mistral) gets full weight; tier-2 gets 1.0;
+# tier-3 (aggregators, blogs) gets dampened.
+TIER_MULTIPLIER = {1: 1.2, 2: 1.0, 3: 0.85}
+
+# Boost for novelty language (vs incremental updates).
+NOVELTY_BOOST_PATTERNS = [
+    r"\bnew\b", r"\bintroduc\w+\b", r"\bdebut\b", r"\bunveil\w*\b",
+    r"\bannounc\w+\b", r"\blaunch\w*\b", r"\brelease[ds]?\b",
+    r"\bgroundbreaking\b", r"\brevolution\w*\b", r"\bparadigm\b",
+    r"\bbreakthrough\b", r"\bmilestone\b",
+]
+
+# Penalty for incremental chatter that isn't a release.
+INCREMENTAL_PATTERNS = [
+    r"\bupdate(?:s|d)?\b", r"\bpatch\b", r"\bbug[\s-]?fix\b",
+    r"\bhotfix\b", r"\bminor\s+(?:update|release|change)\b",
+    r"\bweekly\s+digest\b", r"\bchangelog\b",
+]
+
+
+def _is_release(text: str) -> bool:
+    """Heuristic: text looks like a versioned release / changelog."""
+    t = text.lower()
+    if _VERSION_RE.search(t):
+        return True
+    if re.search(r"\bchangelog\b", t):
+        return True
+    if re.search(r"\bv?\d+\.\d+(\.\d+)?\s*(?:release|update)\b", t):
+        return True
+    return False
+
+
+def _major_bump(text: str) -> bool:
+    """True if a version is mentioned and it's a whole-number major release."""
+    m = _VERSION_MAJOR_RE.search(text)
+    if not m:
+        return False
+    return m.group("minor") is None
+
+
 def compute_impact(
     title: str,
     summary: str = "",
@@ -211,26 +269,61 @@ def compute_impact(
     explicit_base: int | None = None,
     tier_override: int | None = None,
 ) -> ImpactResult:
-    """Compute AI impact score in [1, 5]."""
-    text = f"{title} {summary}".strip()
+    """Compute AI impact score in [1, 5] (refined v2).
 
+    Improvements over v1:
+      - Source tier multiplier (tier-1 sources weighted up)
+      - Speculation penalty (rumor/might/could → -1)
+      - Major-version bump bonus (+1 for GPT-6, Claude 4, etc.)
+      - Incremental chatter penalty (-1 for "patch", "weekly digest")
+      - Novelty boost (+1 for "new"/"introduces"/"unveils")
+    """
+    text = f"{title} {summary}".strip()
     tier = tier_override if tier_override is not None else get_source_tier(source)
     base = explicit_base if explicit_base is not None else TIER_WEIGHTS[tier]
 
     high_n, high_matches = _count_matches(text, HIGH_IMPACT_PATTERNS)
     med_n, _ = _count_matches(text, MEDIUM_IMPACT_PATTERNS)
     low_n, low_matches = _count_matches(text, LOW_IMPACT_PATTERNS)
+    spec_n, spec_matches = _count_matches(text, SPECULATION_PATTERNS)
+    incr_n, incr_matches = _count_matches(text, INCREMENTAL_PATTERNS)
+    nov_n, nov_matches = _count_matches(text, NOVELTY_BOOST_PATTERNS)
+
+    adjusted_base = base * TIER_MULTIPLIER.get(tier, 1.0)
 
     keyword_bonus = min(high_n, 3) + (1 if med_n >= 2 else 0)
-    penalty = min(low_n, 2)
     version_bonus = 1 if _VERSION_RE.search(text) else 0
+    major_bonus = 1 if _major_bump(text) else 0
+    novelty_bonus = 1 if nov_n >= 1 else 0
+    penalty = min(low_n, 2) + min(spec_n, 2) + min(incr_n, 2)
 
-    total = max(1, min(5, base + keyword_bonus + version_bonus - penalty))
+    # Floor (not round) so tier-1 base 4 with 1.2 multiplier doesn't
+    # immediately clamp to 5 — leaves room for legitimate bonuses.
+    floored_base = int(adjusted_base) if adjusted_base == int(adjusted_base) else int(adjusted_base)
 
-    matched_keywords = high_matches[:5] + tuple(f"-{p}" for p in low_matches[:3])
+    raw = floored_base + keyword_bonus + version_bonus + major_bonus + novelty_bonus - penalty
+
+    # Hard cap: pure how-to/tutorial/interview without release keywords => 1.
+    # Don't publish "How to use Claude Code" at importance 4.
+    is_pure_howto = (
+        low_n >= 1 and high_n == 0 and med_n == 0
+        and not _VERSION_RE.search(text)
+    )
+    if is_pure_howto:
+        raw = min(raw, 1)
+
+    total = max(1, min(5, int(round(raw))))
+
+    matched_keywords = (
+        high_matches[:5]
+        + tuple(f"+{p}" for p in nov_matches[:2])
+        + tuple(f"-{p}" for p in (low_matches + spec_matches + incr_matches)[:4])
+    )
+    if _is_release(text):
+        matched_keywords = matched_keywords + ("release:1",)
 
     return ImpactResult(
-        base=base,
+        base=int(round(adjusted_base)),
         tier=tier,
         keyword_bonus=keyword_bonus,
         version_bonus=version_bonus,
@@ -239,3 +332,12 @@ def compute_impact(
         matched_keywords=matched_keywords,
         matched_categories=_categorize(text),
     )
+
+
+def is_release_item(article) -> bool:
+    """True if article's title/summary look like a versioned release.
+
+    Used by publisher to group multiple releases from the same source.
+    """
+    text = f"{getattr(article, 'title', '')} {getattr(article, 'summary', '')}"
+    return _is_release(text)

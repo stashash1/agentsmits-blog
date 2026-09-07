@@ -45,6 +45,7 @@ from agentsblog.publishing.formatter import (
 )
 from agentsblog.publishing.telegram import send as tg_send
 from agentsblog.scoring.breakthrough import detect_breakthrough
+from agentsblog.scoring.impact import is_release_item
 
 
 log = logging.getLogger(__name__)
@@ -57,6 +58,31 @@ def _is_quiet_now(settings: Settings) -> bool:
         start_hour=settings.quiet_hours_start,
         end_hour=settings.quiet_hours_end,
     )
+
+
+def _group_releases_by_source(
+    items: list, window_days: int,
+) -> dict[str, list]:
+    """Group release-type items by source_id, only within the window.
+
+    Items that don't look like a release are skipped.
+    """
+    from datetime import timedelta
+    from agentsblog.utils.time import parse_iso_date
+
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=window_days)
+    groups: dict[str, list] = {}
+    for art in items:
+        if not is_release_item(art):
+            continue
+        # Skip items too old for the window
+        d = parse_iso_date(getattr(art, "date", "") or "")
+        if d and d < cutoff:
+            continue
+        sid = getattr(art, "source_id", "") or "unknown"
+        groups.setdefault(sid, []).append(art)
+    return groups
 
 
 def _trigger_site_rebuild(settings: Settings) -> tuple[int, str]:
@@ -119,9 +145,9 @@ def run_publish(settings: Settings, *,
 
     agi_days, agi_percent = compute_agi(settings)
 
-    # Pick candidates: pending, importance >= 3, ordered by bt / decayed / imp / date
-    max_importance = 3
-    candidates = list_pending(conn, min_importance=max_importance, limit=None)
+    # Pick candidates: pending, importance >= settings.min_publish_importance
+    min_imp = settings.min_publish_importance
+    candidates = list_pending(conn, min_importance=min_imp, limit=None)
     apply_decay_to_pending(candidates)
 
     # Drop anything we can already see in DB-published
@@ -158,6 +184,13 @@ def run_publish(settings: Settings, *,
     pending.sort(key=_sort_key)
     pending = pending[: (limit or settings.max_publish_per_run)]
 
+    # ---- Group release-type items by source into digest posts ----
+    release_groups = _group_releases_by_source(
+        pending, settings.release_group_window_days
+    )
+    # Track which items got absorbed into a digest (skip in standalone loop)
+    digested_ids: set[str] = set()
+
     summary = {
         "run_id": run_id,
         "published": 0, "failed": 0, "skipped": 0,
@@ -165,7 +198,53 @@ def run_publish(settings: Settings, *,
         "agi_days": agi_days, "agi_percent": agi_percent,
     }
 
+    # Emit digests first (one per source with 2+ releases)
+    for src_id, group in release_groups.items():
+        if len(group) < 2:
+            continue  # single release → publish as standalone below
+        text = format_release_digest(
+            group, source_name=src_id,
+            agi_days=agi_days, agi_percent=agi_percent,
+        )
+        if text is None:
+            continue
+        # Dedup against recently-sent
+        prev = was_recently_sent(text, settings)
+        if prev is not False:
+            for it in group:
+                digested_ids.add(it.id)
+            continue
+        if _is_quiet_now(settings) and not allow_during_quiet:
+            log.info("quiet hours: skipping release digest for %s", src_id)
+            for it in group:
+                digested_ids.add(it.id)
+            summary["skipped"] += 1
+            continue
+        result = tg_send(text, settings)
+        if result.ok:
+            for it in group:
+                digested_ids.add(it.id)
+                if not dry_run:
+                    mark_published(conn, it.id, result.msg_id)
+            summary["published"] += 1
+            log.info("release digest %s: %d items -> msg_id=%s", src_id, len(group), result.msg_id)
+            append_event(conn, run_id=run_id, script="publish", event="release_digest",
+                         details={"source_id": src_id, "items": [it.id for it in group],
+                                 "msg_id": result.msg_id})
+        else:
+            log.warning("release digest %s failed: %s", src_id, result.error)
+            summary["failed"] += 1
+
+    # ---- Standalone posts (cap per source) ----
+    per_source_count: dict[str, int] = {}
     for art in pending:
+        if art.id in digested_ids:
+            continue
+        sid = getattr(art, "source_id", "") or "unknown"
+        if per_source_count.get(sid, 0) >= settings.max_per_source_per_run:
+            log.info("per-source cap reached for %s, skipping %s", sid, art.id)
+            summary["skipped"] += 1
+            continue
         result = publish_one(art, settings, agi_days=agi_days, agi_percent=agi_percent)
         if result["reason"] == "quiet_hours":
             summary["skipped"] += 1

@@ -41,6 +41,12 @@ class Settings(BaseSettings):
     telegram_parse_mode: Literal["HTML", "MARKDOWN", "NONE"] | None = "HTML"
     telegram_max_len: int = 4096  # Telegram hard limit per sendMessage
 
+    # Direct Bot API path (bypass openclaw CLI when gateway path is broken).
+    # bot_token_file: path to a file with the bot token (one line, trimmed).
+    # telegram_chat_id: numeric chat_id to send to (skips getChat resolution).
+    bot_token_file: Path | None = None
+    telegram_chat_id: str | None = None
+
     # Quiet hours (TZ-aware window for not publishing)
     quiet_hours_start: int = 23  # inclusive
     quiet_hours_end: int = 8  # exclusive
@@ -49,6 +55,13 @@ class Settings(BaseSettings):
     # Publishing
     max_publish_per_run: int = 5
     duplicate_window_seconds: int = 86_400  # 24h fingerprint dedup
+    # Min importance (1-5) for an item to be sent as a standalone post.
+    # Items below this threshold are skipped (queued for digests or dropped).
+    min_publish_importance: int = 4
+    # Max standalone posts per source per run (diversity cap).
+    max_per_source_per_run: int = 2
+    # Group same-source releases within this window into one digest post.
+    release_group_window_days: int = 7
 
     # Site
     site_title: str = "AI Агенты Смита"

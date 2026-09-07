@@ -1,0 +1,24 @@
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 14 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Admin\dev\project\agentsmits-blog\agentsblog\__main__.py", line 5, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\Admin\dev\project\agentsmits-blog\agentsblog\cli.py", line 112, in main
+    return _dispatch(args, settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\dev\project\agentsmits-blog\agentsblog\cli.py", line 138, in _dispatch
+    return build_site_cmd(settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\dev\project\agentsmits-blog\agentsblog\cli_site.py", line 11, in build_site_cmd
+    summary = build_site(settings)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\dev\project\agentsmits-blog\agentsblog\site\builder.py", line 178, in build_site
+    shutil.copy2(src_css, assets_out / "styles.css")
+  File "shutil.py", line 460, in copy2
+PermissionError: [WinError 32] Процесс не может получить доступ к файлу, так как этот файл занят другим процессом

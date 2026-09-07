@@ -54,11 +54,29 @@ def _build_cmd(text: str, settings: Settings) -> list[str]:
 
 def send(text: str, settings: Settings, *,
          retries: int = 2, delay: float = 8.0) -> SendResult:
-    """Send a Telegram message via openclaw CLI.
+    """Send a Telegram message via openclaw CLI (or direct Bot API if configured).
 
     Returns SendResult. Caller is responsible for the message_id tracking
     and DB updates. The transport layer here only knows about the wire.
+
+    Auto-fallback path: if env AGENTSBLOG_BOT_TOKEN_FILE is set, use the
+    direct Bot API path (agentsblog.publishing.direct_api) instead of
+    the openclaw CLI. Use this when openclaw's accountId-derived target
+    is broken or sendRichMessage 404s.
     """
+    import os
+    token_file = settings.bot_token_file or os.environ.get("AGENTSBLOG_BOT_TOKEN_FILE")
+    if token_file:
+        from agentsblog.publishing.direct_api import send as direct_send, _read_token_file
+        token = _read_token_file(token_file)
+        if token:
+            target = settings.telegram_chat_id or os.environ.get("AGENTSBLOG_TELEGRAM_CHAT_ID") or settings.telegram_target
+            r = direct_send(text, chat_id=target, bot_token=token,
+                            parse_mode=settings.telegram_parse_mode)
+            return SendResult(ok=r.ok, msg_id=r.msg_id, reason=r.reason or "sent",
+                              duration_ms=r.duration_ms, error=r.error)
+        log.warning("send_telegram: bot_token_file=%s but token not readable, falling back to openclaw CLI", token_file)
+
     # Empty-text guard
     if not (text or "").strip():
         log.warning("send_telegram: empty text, refusing")

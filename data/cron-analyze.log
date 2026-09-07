@@ -1,0 +1,13 @@
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+  [1/1] imp=1 | Nscale ищет $3,5 млрд для пред-IPO-раунда
+[done] 1/1 items updated in 6.1s (6.1s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
