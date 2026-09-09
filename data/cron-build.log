@@ -22,3 +22,158 @@ Traceback (most recent call last):
     shutil.copy2(src_css, assets_out / "styles.css")
   File "shutil.py", line 460, in copy2
 PermissionError: [WinError 32] Процесс не может получить доступ к файлу, так как этот файл занят другим процессом
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 14 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 14 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 14 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 14 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 17 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 18 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 18 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 18 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 18 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 20 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 20 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 21 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 22 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 22 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 22 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 22 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 25 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 25 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 25 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 25 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 25 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 28 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 28 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 28 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 28 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 28 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 29 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 29 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 29 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 31 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+  feed:     50 posts
+  archive:  20 posts
+  articles: 100 posts in 32 categories
+  wrote:    index.html, articles.html, rss.xml, assets/styles.css

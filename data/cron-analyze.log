@@ -11,3 +11,327 @@
 [setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
 [run] 0 items to analyze
 [done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 10 items to analyze
+  [1/10] imp=1 | ������� AI, ������� ����� �����: �� �opaque recurrence� � ������
+[ollama] unbalanced JSON: {"translated_title": "Diff
+  [2/10] arxiv-2609.05404 -> FAILED, skip
+  [3/10] imp=4 | ���������������� ����� ������������ ����� �������� API ����: �������� � ����� ��
+  [4/10] imp=1 | ���������� ��� ����������? ������ ���������� LLM ����� ������������� ������
+  [5/10] imp=1 | ������������ ������ ����� ����� ������ � ������ ���������
+[ollama] unbalanced JSON: {"translated_title": "������������ D\xe9j\xe0 Vu: ����� �������������� �������� �� ������ ���� � ��������� �������� �������", "summary": "������� �������� ������ (LLM) �� ���� ����������� �� ������������ �
+  [6/10] arxiv-2609.05381 -> FAILED, skip
+[ollama] error: [WinError 10054] ��������� ���� ������������� �������� ������������ �����������
+  [7/10] arxiv-2609.05374 -> FAILED, skip
+  [8/10] imp=2 | ������-��������� � ��, ��� �����: ���������� ��� ������� ������������������ ��
+  [9/10] imp=4 | ������� �� ������ ������ ����� ���������� ������? �������������� ������������ ��
+  [10/10] imp=1 | ������ Vision Transformer ��� ����������� �������� �������� � �������� ���������
+[done] 7/10 items updated in 366.4s (52.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "Diffusion TV: ���� ������������ ������� ����� ���������� ��������������", "summary": "Diffusion TV � ������������� AI-�����������, ����������� ������� ������������ ������ ����� �
+  [1/3] arxiv-2609.05404 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "������������ D\xe9j\xe0 Vu: ����� �������������� �������� � ������� �������", "summary": "������� �������� ������ �� ���� ����������� �� ������������ ����������, �� �������� �� ������
+  [2/3] arxiv-2609.05381 -> FAILED, skip
+  [3/3] imp=2 | CUA-Universe: ����� ��� ��������� ������� GUI+CLI
+[done] 1/3 items updated in 128.4s (128.4s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 8 items to analyze
+  [1/8] imp=3 | ����������������� �������
+  [2/8] imp=4 | ��������������� ������������: ������ ������������ � ����������
+  [3/8] imp=2 | ����� ���������� � AI �� Google �� ������ 2026 ����
+  [4/8] imp=1 | ���������� Google Pics: ������� �������� � �������������� ����������� � Google W
+  [5/8] imp=1 | Just AI ��������� caila.io: ��������� ��� ������������� ������� �� ��-�������
+  [6/8] imp=1 | Just AI � Selectel ����������� ���������� ������� ��� ������� AI-������� � �����
+  [7/8] imp=2 | ������������ ��: ���� � ������������� �������� ����� ���������� ��������������
+  [8/8] imp=1 | ������������ D\xe9j\xe0 Vu: ����� �������������� �������� �� ������ ���� � ��������� �
+[done] 8/8 items updated in 263.2s (32.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+  [1/1] imp=1 | Just AI � Selectel ����������� ���������� ������� ��� ������� AI-������� � �����
+[done] 1/1 items updated in 17.5s (17.5s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+  [1/3] imp=4 | ����������� � �������������� ���� �� �����������
+  [2/3] imp=4 | ���������� �������� � AI
+  [3/3] imp=4 | ����������� � �������������� �������������� �������������: ������ 2025
+[done] 3/3 items updated in 22.0s (7.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+  [1/1] imp=4 | ������ ������ � �������� ������������
+[done] 1/1 items updated in 10.7s (10.7s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+  [1/3] imp=5 | OpenAI ��������� ��������� ������������ �� ������� � ���������
+  [2/3] imp=3 | ������������ ��� ����? ����� �� ������������ ����, � �� ����
+  [3/3] imp=2 | Mistral ������� �3 ���� ��� ��������� � �21 ����
+[done] 3/3 items updated in 18.3s (6.1s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 6 items to analyze
+  [1/6] imp=5 | ������������ ChatGPT Images 2.5
+  [2/6] imp=4 | �������� �����-������ � ������ ����������
+  [3/6] imp=5 | �������������� ������� ��� ������������ AI � ������������� ��������
+  [4/6] imp=1 | OpenAI ���������� � ��������� ������ �� ������� ������� �������������� ������
+  [5/6] imp=1 | Google Cloud ���������� � ������ �� AI-����� � Accenture
+  [6/6] imp=3 | ���� ������ ������� ���������� ������ 2 ������ ��-�� ������� �� �� ������������
+[done] 6/6 items updated in 47.6s (7.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+  [1/1] imp=5 | 1Password ������� ������������������ ��������� �� 21% � ������� Codex
+[done] 1/1 items updated in 11.5s (11.5s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+  [1/1] imp=4 | Meta ����������� AI-������ Muse. �������� �� ������������ � �������?
+[done] 1/1 items updated in 7.9s (7.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "��� GPT-5.6 Sol �������� ��������� ������������ �� ���������� ��
+  [1/1] openai-codex-quantum-computing-experiments -> FAILED, skip
+[done] 0/1 items updated in 10.0s (10.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 4 items to analyze
+  [1/4] imp=5 | Как GPT-5.6 Sol помогает проводить эксперименты по квантовому вычислению
+  [2/4] imp=1 | Claude Code 2.1.265
+  [3/4] imp=1 | Хакеры крадут токены Claude у подписчиков
+  [4/4] imp=2 | Cognition достиг 48 млрд долларов: инвесторы считают, что AI-программирование не
+[done] 4/4 items updated in 26.5s (6.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+  [1/1] imp=1 | Claude Code 2.1.265: обновление
+[done] 1/1 items updated in 6.8s (6.8s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 12 items to analyze
+  [1/12] imp=1 | Claude Code 2.1.266
+  [2/12] imp=1 | Сandbox для корпоративного управления в Copilot для JetBrains
+  [3/12] imp=1 | TANGO: Человекообразный робот в хаотичных помещениях с моделью визуально-языковы
+[ollama] unbalanced JSON: {"translated_title": "Процедурные графы: самовоспроизводящиеся структуры для агентов LLM", "summary": "Большие языковые модели всё чаще используются как агенты, планирующие на долгосрочную перспективу
+  [4/12] arxiv-2609.09153 -> FAILED, skip
+  [5/12] imp=1 | NOAH: Изучение полного пути пациента. Модель для прогнозирования
+[ollama] unbalanced JSON: {"translated_title": "Коэволюция системных промптов и моделей: On-Policy Correction помогает слабым моделям догонять, где имитация не справляется", "summary": "Системные промпты, инструменты, выполнен
+  [6/12] arxiv-2609.09134 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "ExecCritic: Учиться тестировать, тестировать — улучшать для агентов кодирования", "summary": "Обратная связь от выполнения может направлять агентов кодирования к правильным испра
+  [7/12] arxiv-2609.09133 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "Канонический цвет как ключ к пониманию декодируемости концепций в визуальных моделях", "summary": "Исследователи изучают, насколько представления, создаваемые визуальными кодерам
+  [8/12] arxiv-2609.09124 -> FAILED, skip
+  [9/12] imp=3 | DeCAL: к моделированию манипуляций с учетом физических взаимодействий
+[ollama] no JSON in response: 
+  [10/12] arxiv-2609.09115 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "SAEScientist-Bench: Могут ли агенты проводить автономные исследования интерпретируемости SAE?", "summary": "Исследования рекурсивного самоповышения (RSI) автоматизировали тренинг
+  [11/12] arxiv-2609.09113 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "GoDeep: Понимание 3D-сцен без аннотаций через поднятие в пространство языка", "summary": "Метод GoDeep использует поднятие признаков CLIP в 3D для анализа сцен без аннотаций. Алг
+  [12/12] arxiv-2609.09082 -> FAILED, skip
+[done] 5/12 items updated in 407.6s (81.5s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 8 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "Procedural
+  [1/8] arxiv-2609.09153 -> FAILED, skip
+  [2/8] imp=2 | Коэволюция инструментов и моделей: коррекция на-policy помогает слабым моделям д
+[ollama] unbalanced JSON: {"translated_title": "ExecCritic: Учиться тестировать, тестировать — улучшать для агентов кодирования", "summary": "Обратная связь от выполнения может направлять агентов кодирования к правильным испра
+  [3/8] arxiv-2609.09133 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "Канонический цвет как призма для понимания декодируемости концепций в визуальных кодировщиках и ВЛМ", "summary": "Визуальные кодировщики создают представление изображения для мод
+  [4/8] arxiv-2609.09124 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "MeClear: кооперативная теория атрибуции и очистка памяти с учетом рисков для агентов LLM с долгосрочными горизонтами", "summary": "Агенты LLM с долгосрочными горизонтами использу
+  [5/8] arxiv-2609.09115 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "SAEScientist-Bench: Могут ли агенты AI проводить автономные исследования интерпретируемости SAE?", "summary": "Исследования рекурсивного самоповышения (RSI) автоматизировали обуч
+  [6/8] arxiv-2609.09113 -> FAILED, skip
+  [7/8] imp=1 | GoDeep: Понимание 3D-сцен без аннотаций через поднятие в пространство языка
+  [8/8] imp=1 | Claude Code 2.1.266: обновление инструмента для разработки на основе Claude
+[done] 3/8 items updated in 267.3s (89.1s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 5 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "Процедурные графы: самоэволюционные структуры выполнения для агентов LLM", "summary": "Большие языковые модели всё чаще используются как агенты, планирующие на длительные горизон
+  [1/5] arxiv-2609.09153 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "ExecCritic: Учиться тестировать, тестировать — улучшать для агентов кодирования", "summary": "Обратная связь от выполнения может направлять агентов кодирования к правильным испра
+  [2/5] arxiv-2609.09133 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "Канонический цвет как призма для анализа понимания визуальных моделей", "summary": "Исследователи изучают, насколько представления, создаваемые визуальными кодерами, содержат инф
+  [3/5] arxiv-2609.09124 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Методы для долгосрочных LLM-агентов с учетом рисков и кооперативной теории игр", "summary": "Долгосрочные LLM-агенты зависят от внешней памяти для хранения пользовательс
+  [4/5] arxiv-2609.09115 -> FAILED, skip
+  [5/5] imp=3 | SAEScientist-Bench: Могут ли агенты проводить автономные исследования интерпрети
+[done] 1/5 items updated in 39.9s (39.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 4 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "Процедурные графы: самоэволюционные структуры выполнения для агентов LLM", "summary": "Большие языковые модели всё чаще используются как агенты, планирующие на долгосрочную персп
+  [1/4] arxiv-2609.09153 -> FAILED, skip
+  [2/4] imp=1 | ExecCritic: Учимся тестировать, чтобы улучшать кодовых агентов
+[ollama] unbalanced JSON: {"translated_title": "Канонический цвет как ключ к пониманию декодируемости концепций в визуальных моделях", "summary": "Исследователи изучают, насколько представления, создаваемые визуальными кодерам
+  [3/4] arxiv-2609.09124 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Использование теории кооперативных игр и рискового анализа для очистки памяти долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM зависят от внешних систем па
+  [4/4] arxiv-2609.09115 -> FAILED, skip
+[done] 1/4 items updated in 33.9s (33.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+  [1/3] imp=2 | Процедурные графы: самовоспроизводящиеся структуры для агентов LLM
+[ollama] unbalanced JSON: {"translated_title": "Канонический цвет как призма для понимания декодируемости концепций в визуальных кодировщиках и VLM", "summary": "Визуальные кодировщики создают представление изображений для мод
+  [2/3] arxiv-2609.09124 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Использование теории кооперативных игр и рискового анализа для очистки памяти в долгосрочных LLM-агентах", "summary": "Долгосрочные LLM-агенты зависят от внешних систем 
+  [3/3] arxiv-2609.09115 -> FAILED, skip
+[done] 1/3 items updated in 25.6s (25.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=1 | Канонический цвет как призма для анализа декодируемости концепций в визуальных к
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Совместная теория игр и риск-ориентированная очистка памяти для долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM зависят от внешних систем памяти для сохра
+  [2/2] arxiv-2609.09115 -> FAILED, skip
+[done] 1/2 items updated in 16.2s (16.2s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Использование теории кооперативных игр и рискового очищения памяти для долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM зависят от внешних систем памяти дл
+  [1/1] arxiv-2609.09115 -> FAILED, skip
+[done] 0/1 items updated in 29.2s (29.2s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Кооперативная теория игр и риск-ориентированная очистка памяти для долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM зависят от внешних систем памяти для со
+  [1/1] arxiv-2609.09115 -> FAILED, skip
+[done] 0/1 items updated in 19.9s (19.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "MeClear: кооперативная атрибуция и очистка памяти для агентов LLM с долгосрочными горизонтами", "summary": "Агенты LLM с долгосрочными горизонтами используют внешние системы памя
+  [1/1] arxiv-2609.09115 -> FAILED, skip
+[done] 0/1 items updated in 12.8s (12.8s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] error: timed out
+  [1/1] arxiv-2609.09115 -> FAILED, skip
+[done] 0/1 items updated in 120.0s (120.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] error: timed out
+  [1/1] arxiv-2609.09115 -> FAILED, skip
+[done] 0/1 items updated in 120.0s (120.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=3 | Suno заменила AI-модели на новую, обученную на лицензированной музыке
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Контекстуальная атрибуция и очистка памяти с учетом рисков для долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM зависят от внешних систем памяти для сохран
+  [2/2] arxiv-2609.09115 -> FAILED, skip
+[done] 1/2 items updated in 23.1s (23.1s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=3 | Besxar строит орбитальное производство полупроводников на ракетах SpaceX
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Совместная теория атрибуции и очистка памяти с учетом рисков для долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM зависят от внешних систем памяти для хран
+  [2/2] arxiv-2609.09115 -> FAILED, skip
+[done] 1/2 items updated in 15.6s (15.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+  [1/3] imp=3 | Instacart запустил AI-ассистента для покупок Clementine
+  [2/3] imp=3 | Sequoia увеличивает инвестиции в Cymphony из-за рисков AI-агентов для корпораций
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Использование теории кооперативных игр и осознанного очищения памяти для долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM зависят от внешних систем памяти 
+  [3/3] arxiv-2609.09115 -> FAILED, skip
+[done] 2/3 items updated in 85.0s (42.5s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Совместная теория атрибуции и очистка памяти с учетом рисков для долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM зависят от внешних систем памяти для хран
+  [1/1] arxiv-2609.09115 -> FAILED, skip
+[done] 0/1 items updated in 13.6s (13.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=1 | Расходы на AI на сотрудника падают в крупных компаниях — лето или тревога?
+[ollama] unbalanced JSON: {"translated_title": "MeClear: Контекстуальная атрибуция и очистка памяти с учетом рисков для долгосрочных агентов LLM", "summary": "Долгосрочные агенты LLM полагаются на внешние системы памяти для хр
+  [2/2] arxiv-2609.09115 -> FAILED, skip
+[done] 1/2 items updated in 13.3s (13.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=1 | Shipt запустил AI-ассистента для покупок в приложении доставки
+  [2/2] imp=4 | MeClear: Использование теории игр для очистки памяти LLM-агентов
+[done] 2/2 items updated in 12.3s (6.2s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 4 items to analyze
+  [1/4] imp=4 | Альберта: программа «Claude Cybersecurity» для защиты от киберугроз
+  [2/4] imp=4 | Рефлексия с Claude
+  [3/4] imp=3 | Instinct: AI-ассистент получил собственный адрес электронной почты
+  [4/4] imp=1 | Рискуем жизнью: Исследователь Anthropic уходит, предупреждает о самоулучшающейся
+[done] 4/4 items updated in 22.5s (5.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 4 items to analyze
+  [1/4] imp=5 | PwC расширило партнерство
+  [2/4] imp=4 | Anthropic и KPMG: сотрудничество в сфере ИИ
+[ollama] unbalanced JSON: {"translated_title": "IBM представила модель Granite Time Series PatchT
+  [3/4] huggingface-ibm-releases-sota-granite-time-series -> FAILED, skip
+  [4/4] imp=2 | Коннор Лихи из ControlAI: суперинтеллект — не оружие, а противник
+[done] 3/4 items updated in 23.3s (7.8s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 4 items to analyze
+  [1/4] imp=5 | IBM представила модель Granite Time Series PatchTST-FM-r2 с коммерчески дружелюб
+[ollama] unbalanced JSON: {"translated_title": "Сверхразум приближается. Должны ли мы его допустить?", "summary": "Компании в сфере ИИ обсуждают сверхразум как неизбежное развитие, но недавние инциденты безопасности, такие как
+  [2/4] techcrunch-superintelligence-is-coming-should-we-l -> FAILED, skip
+  [3/4] imp=2 | Подготовьтесь к сезону: новые функции футбола в поиске
+  [4/4] imp=1 | Воссоздание 70-летней любовной истории кадр за кадром
+[done] 3/4 items updated in 26.6s (8.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+  [1/1] imp=2 | Искусственный интеллект уровня суперинтеллекта приближается. Должны ли мы его до
+[done] 1/1 items updated in 6.9s (6.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)

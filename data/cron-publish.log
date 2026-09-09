@@ -13,3 +13,393 @@ Publish publish:20260907T133500 complete:
   failed:    0
   skipped:   0
   AGI: 1211 days (17%)
+Publish publish:20260907T194830 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1211 days (17%)
+2026-09-07 23:11:07,892 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.05404 (no analysis)
+2026-09-07 23:11:07,892 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.05381 (no analysis)
+2026-09-07 23:11:07,892 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.05374 (no analysis)
+Publish publish:20260907T201107 complete:
+  published: 0
+  failed:    0
+  skipped:   2
+  AGI: 1211 days (17%)
+2026-09-07 23:37:09,505 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.05404 (no analysis)
+2026-09-07 23:37:09,506 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.05381 (no analysis)
+Publish publish:20260907T203709 complete:
+  published: 0
+  failed:    0
+  skipped:   2
+  AGI: 1211 days (17%)
+Publish publish:20260907T210924 complete:
+  published: 0
+  failed:    0
+  skipped:   4
+  AGI: 1210 days (17%)
+Publish publish:20260907T213518 complete:
+  published: 0
+  failed:    0
+  skipped:   4
+  AGI: 1210 days (17%)
+Publish publish:20260907T220500 complete:
+  published: 0
+  failed:    0
+  skipped:   4
+  AGI: 1210 days (17%)
+Publish publish:20260907T230554 complete:
+  published: 0
+  failed:    0
+  skipped:   4
+  AGI: 1210 days (17%)
+2026-09-08 09:28:59,500 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:03,515 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:03,515 [WARNING] agentsblog.publishing.publisher: publish failed for google_ai-fairwind-program: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:03,541 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:07,556 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:07,556 [WARNING] agentsblog.publishing.publisher: publish failed for arxiv-2609.05395: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:07,569 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:11,589 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:11,589 [WARNING] agentsblog.publishing.publisher: publish failed for arxiv-2609.05339: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:11,621 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:15,651 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:29:15,651 [WARNING] agentsblog.publishing.publisher: publish failed for cursor-self-hosted-machines: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+Publish publish:20260908T062859 complete:
+  published: 0
+  failed:    4
+  skipped:   0
+  AGI: 1210 days (17%)
+2026-09-08 09:35:02,247 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:06,274 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:06,274 [WARNING] agentsblog.publishing.publisher: publish failed for google_ai-fairwind-program: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:06,290 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:10,304 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:10,304 [WARNING] agentsblog.publishing.publisher: publish failed for arxiv-2609.05395: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:10,335 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:14,369 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:14,369 [WARNING] agentsblog.publishing.publisher: publish failed for arxiv-2609.05339: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:14,384 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:18,410 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 09:35:18,410 [WARNING] agentsblog.publishing.publisher: publish failed for cursor-self-hosted-machines: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+Publish publish:20260908T063502 complete:
+  published: 0
+  failed:    4
+  skipped:   0
+  AGI: 1210 days (17%)
+2026-09-08 10:05:00,622 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:04,663 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:04,663 [WARNING] agentsblog.publishing.publisher: publish failed for google_ai-fairwind-program: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:04,695 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:08,715 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:08,715 [WARNING] agentsblog.publishing.publisher: publish failed for arxiv-2609.05395: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:08,747 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:12,764 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:12,764 [WARNING] agentsblog.publishing.publisher: publish failed for arxiv-2609.05339: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:12,781 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:16,797 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+2026-09-08 10:05:16,797 [WARNING] agentsblog.publishing.publisher: publish failed for cursor-self-hosted-machines: <urlopen error [WinError 10065] Сделана попытка выполнить операцию на сокете для недоступного хоста>
+Publish publish:20260908T070500 complete:
+  published: 0
+  failed:    4
+  skipped:   0
+  AGI: 1210 days (17%)
+2026-09-08 10:39:53,796 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>
+2026-09-08 10:40:01,826 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>
+2026-09-08 10:40:09,344 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>
+2026-09-08 10:40:09,344 [WARNING] agentsblog.publishing.publisher: publish failed for arxiv-2609.05339: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>
+Publish publish:20260908T073950 complete:
+  published: 3
+  failed:    1
+  skipped:   0
+  AGI: 1210 days (17%)
+2026-09-08 11:05:04,199 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>
+Publish publish:20260908T080500 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T083500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T090500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T100500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T103500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T110500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+2026-09-08 14:35:26,491 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>
+2026-09-08 14:35:34,022 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>
+2026-09-08 14:35:34,022 [WARNING] agentsblog.publishing.publisher: publish failed for anthropic-disrupting-AI-espionage: <urlopen error [WinError 10054] Удаленный хост принудительно разорвал существующее подключение>
+Publish publish:20260908T113522 complete:
+  published: 2
+  failed:    1
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T120500 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T123500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T130500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T133511 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T140500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T143518 complete:
+  published: 2
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T150500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T153500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T160500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T184629 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+2026-09-08 22:06:08,264 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error timed out>
+2026-09-08 22:06:32,293 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error timed out>
+2026-09-08 22:06:32,293 [WARNING] agentsblog.publishing.publisher: publish failed for openai-introducing-chatgpt-images-2-5: <urlopen error timed out>
+2026-09-08 22:06:52,321 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error timed out>
+2026-09-08 22:07:16,355 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error timed out>
+2026-09-08 22:07:16,355 [WARNING] agentsblog.publishing.publisher: publish failed for openai-teen-development-research-grants: <urlopen error timed out>
+2026-09-08 22:07:36,386 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error timed out>
+2026-09-08 22:08:00,412 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error timed out>
+2026-09-08 22:08:00,413 [WARNING] agentsblog.publishing.publisher: publish failed for openai-navier-stokes-solution: <urlopen error timed out>
+2026-09-08 22:08:20,437 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error timed out>
+2026-09-08 22:08:44,461 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error timed out>
+2026-09-08 22:08:44,461 [WARNING] agentsblog.publishing.publisher: publish failed for techcrunch-chrome-is-now-shipping-updates-every-95a190e6d2c5: <urlopen error timed out>
+Publish publish:20260908T190548 complete:
+  published: 0
+  failed:    4
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T193512 complete:
+  published: 5
+  failed:    0
+  skipped:   0
+  AGI: 1210 days (17%)
+Publish publish:20260908T200508 complete:
+  published: 0
+  failed:    0
+  skipped:   1
+  AGI: 1210 days (17%)
+2026-09-08 23:35:10,765 [INFO] agentsblog.publishing.publisher: skipping openai-codex-quantum-computing-experiments (no analysis)
+Publish publish:20260908T203510 complete:
+  published: 0
+  failed:    0
+  skipped:   1
+  AGI: 1210 days (17%)
+Publish publish:20260908T211407 complete:
+  published: 0
+  failed:    0
+  skipped:   2
+  AGI: 1209 days (17%)
+Publish publish:20260908T213507 complete:
+  published: 0
+  failed:    0
+  skipped:   2
+  AGI: 1209 days (17%)
+Publish publish:20260908T220500 complete:
+  published: 0
+  failed:    0
+  skipped:   2
+  AGI: 1209 days (17%)
+Publish publish:20260908T223500 complete:
+  published: 0
+  failed:    0
+  skipped:   2
+  AGI: 1209 days (17%)
+Publish publish:20260908T233008 complete:
+  published: 0
+  failed:    0
+  skipped:   2
+  AGI: 1209 days (17%)
+2026-09-09 10:32:10,677 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09153 (no analysis)
+2026-09-09 10:32:10,677 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09134 (no analysis)
+2026-09-09 10:32:10,677 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09133 (no analysis)
+2026-09-09 10:32:10,677 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09124 (no analysis)
+2026-09-09 10:32:10,677 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+2026-09-09 10:32:10,677 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09113 (no analysis)
+2026-09-09 10:32:10,677 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09082 (no analysis)
+2026-09-09 10:32:30,715 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error timed out>
+2026-09-09 10:32:54,743 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error timed out>
+2026-09-09 10:32:54,743 [WARNING] agentsblog.publishing.publisher: publish failed for arxiv-2609.09119: <urlopen error timed out>
+2026-09-09 10:33:14,772 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error timed out>
+2026-09-09 10:33:38,797 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error timed out>
+2026-09-09 10:33:38,797 [WARNING] agentsblog.publishing.publisher: publish failed for openai-codex-quantum-computing-experiments: <urlopen error timed out>
+2026-09-09 10:33:58,822 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 1 failed: <urlopen error timed out>
+2026-09-09 10:34:22,850 [WARNING] agentsblog.publishing.direct_api: direct_api: send attempt 2 failed: <urlopen error timed out>
+2026-09-09 10:34:22,850 [WARNING] agentsblog.publishing.publisher: publish failed for techcrunch-meta-debuts-its-muse-ai-agent-will-c-20d984cb02eb: <urlopen error timed out>
+Publish publish:20260909T073210 complete:
+  published: 0
+  failed:    3
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 11:05:40,538 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09153 (no analysis)
+2026-09-09 11:05:40,539 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09133 (no analysis)
+2026-09-09 11:05:40,539 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09124 (no analysis)
+2026-09-09 11:05:40,539 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T080540 complete:
+  published: 4
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 11:35:34,569 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09153 (no analysis)
+2026-09-09 11:35:34,569 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09124 (no analysis)
+2026-09-09 11:35:34,569 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T083534 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 12:05:26,221 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09124 (no analysis)
+2026-09-09 12:05:26,221 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T090526 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 12:35:16,802 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T093516 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 13:05:29,810 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T100529 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 13:35:20,506 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T103520 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 14:05:13,470 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T110513 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 14:37:00,676 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T113700 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 15:07:00,659 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T120700 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 15:35:23,778 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T123523 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 16:05:16,214 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T130516 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 16:36:27,025 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T133627 complete:
+  published: 2
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 17:05:14,214 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T140514 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 17:35:13,904 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.09115 (no analysis)
+Publish publish:20260909T143513 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+Publish publish:20260909T150512 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+Publish publish:20260909T153523 complete:
+  published: 3
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 19:05:23,862 [INFO] agentsblog.publishing.publisher: skipping huggingface-ibm-releases-sota-granite-time-series (no analysis)
+Publish publish:20260909T160523 complete:
+  published: 2
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-09 19:35:27,206 [INFO] agentsblog.publishing.publisher: skipping techcrunch-superintelligence-is-coming-should-we-let-it (no analysis)
+Publish publish:20260909T163527 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+Publish publish:20260909T170507 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+Publish publish:20260909T173500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)

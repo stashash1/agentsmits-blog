@@ -85,6 +85,8 @@ def build_parser() -> argparse.ArgumentParser:
     serve.add_argument("--port", type=int, default=None)
 
     # ── Sources management ──────────────────────────────────────
+    from agentsblog.cli_daily import add_subparser as _add_daily_subparser
+    _add_daily_subparser(sub)
     src = sub.add_parser("sources", help="List / manage sources")
     src.add_argument("action", choices=["list", "disable", "enable"], nargs="?", default="list")
     src.add_argument("source_id", nargs="?")
@@ -148,6 +150,9 @@ def _dispatch(args: argparse.Namespace, settings: Settings) -> int:
     if cmd == "sources":
         from agentsblog.cli_observe import sources_cmd
         return sources_cmd(args, settings)
+    if cmd == "daily-summary":
+        from agentsblog.cli_daily import daily_summary_cmd
+        return daily_summary_cmd(args, settings)
     return 1
 
 
