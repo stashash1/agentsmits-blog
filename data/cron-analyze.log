@@ -335,3 +335,211 @@
 [setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
 [run] 0 items to analyze
 [done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=5 | Пол Чристиано присоединился к совету OpenAI Foundation
+  [2/2] imp=1 | CEO Apple John Ternus: лучший AI-устройство — iPhone
+[done] 2/2 items updated in 9.3s (4.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=1 | Apple обновила приложение Health: теперь рассчитывает «возраст здоровья» и готов
+  [2/2] imp=3 | Apple представила новый способ проверить, что фото iPhone не от AI
+[done] 2/2 items updated in 10.9s (5.5s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=4 | Anthropic привлек 124 млн долларов для создания более надежных обобщенных систем
+  [2/2] imp=2 | Apple использовала ИИ для создания механизма складного телефона
+[done] 2/2 items updated in 10.9s (5.4s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 0 items to analyze
+[done] 0/0 items updated in 0.0s (0.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 5 items to analyze
+  [1/5] imp=4 | Фреймворк Sb53 для соблюдения норм
+  [2/5] imp=5 | Андроид Лабс: новое направление в разработке ИИ
+  [3/5] imp=4 | Anthropic назначил Ирину Гош директором по делам в Индии
+  [4/5] imp=4 | Mariano Florentino Долгосрочный фонд пособий
+  [5/5] imp=5 | GPT-6 Astra: следующее поколение интеллекта для работы
+[done] 5/5 items updated in 83.1s (16.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+  [1/1] imp=4 | Долгосрочный фонд выгоды Марьяно Флорентино
+[done] 1/1 items updated in 11.1s (11.1s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 17 items to analyze
+  [1/17] imp=1 | Claude Code 2.1.267: Добавлен параметр maxEffortLevel
+  [2/17] imp=2 | Listen Labs отменил раунд финансирования на 1,5 млрд долларов из-за переговоров 
+  [3/17] imp=4 | Время для политики в области ИИ открыто. Нужно действовать
+  [4/17] imp=2 | Управление разрешениями для агентов GitHub Copilot в корпоративной среде
+  [5/17] imp=1 | OpenAI назначил известного AI-пессимиста на совет директоров
+  [6/17] imp=2 | Массачусетс вводит новые правила по чистой энергии для дата-центров
+  [7/17] imp=1 | Новые AI-функции Apple Watch нормализуют идею, что технологии всегда слушают
+  [8/17] imp=2 | Apple представила фолдабельный iPhone Duo и другие новинки
+  [9/17] imp=3 | Show-Harness: Агент VLM может управлять роботами
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: кросс-устройные агенты GUI с динамической композицией задач", "summary": "Реальные задачи с GUI часто требуют работы с несколькими устройствами и платформами, включая 
+  [10/17] arxiv-2609.10451 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "ConvMem: конволюционная память для долгосрочного мышления", "summary": "Хотя большие языковые модели (LLMs) демонстрируют впечатляющие возможности, они сталкиваются с трудностями
+  [11/17] arxiv-2609.10441 -> FAILED, skip
+  [12/17] imp=1 | Забывание только важного: слоевое деобучение для устойчивых LLM
+  [13/17] imp=1 | MOONWALK: Синхронизация намерений, доказательств и действий в анимации/ВФХ
+[ollama] unbalanced JSON: {"translated_title": "PACE: Система маршрутизации и контроля заполнителей с учетом воспринимаемой задержки для обеспечения качества обслуживания в диалоговых системах с использованием ретриверов", "su
+  [14/17] arxiv-2609.10372 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: У
+  [15/17] arxiv-2609.10364 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "Поз за пределами универсального подхода: маршрутизация стратегий для сокращения визуальных токенов в MLLMs", "summary": "Мультимодальные большие языковые модели (MLLMs) обрабатыв
+  [16/17] arxiv-2609.10346 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "От символического восприятия к логическому выводу: фреймворк для геометрического мышления у моделей", "summary": "Плоская геометрия остаётся сложной задачей для ИИ, требующей объ
+  [17/17] arxiv-2609.10335 -> FAILED, skip
+[done] 11/17 items updated in 113.7s (10.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 6 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: Кросс-
+  [1/6] arxiv-2609.10451 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "ConvMem: конволовая память для работы с длинными контекстами", "summary": "Несмотря на впечатляющие возможности больших языковых моделей (LLM), они часто сталкиваются с трудностя
+  [2/6] arxiv-2609.10441 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "PACE: Управление заполнителями и маршрутизацией сервисов с учетом воспринимаемой задержки для обеспечения QoE в диалоговых службах с использованием поиска", "summary": "Исследова
+  [3/6] arxiv-2609.10372 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [4/6] arxiv-2609.10364 -> FAILED, skip
+  [5/6] imp=1 | Поз за один размер подходит всем: стратегия маршрутизации для сэмплирования визу
+[ollama] unbalanced JSON: {"translated
+  [6/6] arxiv-2609.10335 -> FAILED, skip
+[done] 1/6 items updated in 42.5s (42.5s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 5 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: кросс-устройные агенты GUI с динамической композицией задач", "summary": "Реальные сценарии использования GUI часто включают workflows, охватывающие несколько устройст
+  [1/5] arxiv-2609.10451 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "ConvMem: конволовая память для работы с длинными контекстами", "summary": "Несмотря на впечатляющие возможности больших языковых моделей (LLM), они часто сталкиваются с трудностя
+  [2/5] arxiv-2609.10441 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "PACE: Умный маршрутизатор и контроль заполнителей для эффективного диалогового обслуживания с учетом воспринимаемой задержки", "summary": "Исследователи представили PACE — фреймв
+  [3/5] arxiv-2609.10372 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "Оценка медицинских изображений и записей пациентов требует о
+  [4/5] arxiv-2609.10364 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "От символического восприятия к логическому выводу: фреймворк для направления языковых моделей в геометрическое мышление", "summary": "Плоская геометрия остаётся сложной задачей д
+  [5/5] arxiv-2609.10335 -> FAILED, skip
+[done] 0/5 items updated in 35.7s (35.7s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 7 items to analyze
+  [1/7] imp=5 | Представляем Claude
+  [2/7] imp=4 | Anthropic завершил раунд Series B для создания безопасной и надежной ИИ
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: Кросс-устройные агенты GUI с динамическим составлением задач", "summary": "Реальный мир использования GUI часто включает рабочие процессы, охватывающие несколько устро
+  [3/7] arxiv-2609.10451 -> FAILED, skip
+  [4/7] imp=2 | ConvMem: конволовая память для работы с длинными контекстами
+[ollama] unbalanced JSON: {"translated_title": "PACE: Система маршрутизации с учетом воспринимаемой задержки для оптимизации QoE в диалоговых системах", "summary": "Исследователи представили PACE — фреймворк для обслуживания д
+  [5/7] arxiv-2609.10372 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [6/7] arxiv-2609.10364 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "От символического восприятия к логическому дедуктивному мышлению: фреймворк для направления языковых моделей в геометрическое рассуждение", "summary": "Планиметрия остаётся значи
+  [7/7] arxiv-2609.10335 -> FAILED, skip
+[done] 3/7 items updated in 44.8s (14.9s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 4 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: к агентам интерфейсов межустройственного типа с динамическим составлением задач", "summary": "Реальное использование интерфейсов часто включает рабочие процессы, охват
+  [1/4] arxiv-2609.10451 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "PACE: Система маршрутизации с учетом воспринимаемой задержки для повышения QoE в диалоговых системах", "summary": "Исследователи представили PACE — фреймворк для обслуживания диа
+  [2/4] arxiv-2609.10372 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: Устойчивый мультимодальный фреймворк фидерированного обучения для клиничес
+  [3/4] arxiv-2609.10364 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "От символического восприятия к логическому выводу: фреймворк для гидирования языковых моделей в геометрическом рассуждении", "summary": "Планиметрия остаётся сложной задачей для 
+  [4/4] arxiv-2609.10335 -> FAILED, skip
+[done] 0/4 items updated in 28.6s (28.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 4 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: Кросс-устройные агенты GUI с динамическим составлением задач", "summary": "Реальное использование GUI часто включает рабочие процессы, охватывающие несколько устройств
+  [1/4] arxiv-2609.10451 -> FAILED, skip
+  [2/4] imp=2 | PACE: Система маршрутизации и контроля заполнителей для эффективного обеспечения
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая многомодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оценк
+  [3/4] arxiv-2609.10364 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "От символического восприятия к логическому выводу: фреймворк для направления языковых моделей в геометрическое мышление", "summary": "Плоская геометрия остаётся сложной задачей д
+  [4/4] arxiv-2609.10335 -> FAILED, skip
+[done] 1/4 items updated in 28.2s (28.2s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: Межустройственные агенты интерфейсов с динамическим составлением задач", "summary": "Реальные задачи с GUI часто требуют работы с несколькими устройствами и платформам
+  [1/3] arxiv-2609.10451 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивый мультимодальный фреймворк для федеративного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оценка
+  [2/3] arxiv-2609.10364 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "От символического восприятия к логическому выводу: фреймворк для геометрического мышления у моделей", "summary": "Планиметрия остаётся сложной задачей для ИИ, требующей сочетания
+  [3/3] arxiv-2609.10335 -> FAILED, skip
+[done] 0/3 items updated in 21.5s (21.5s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: кросс-устройные агенты GUI с динамическим составлением задач", "summary": "Реальное использование GUI часто включает потоки работы, охватывающие несколько устройств и 
+  [1/3] arxiv-2609.10451 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: Устойчивая многомодальная фреймворк федерированного обучения для клинической диагностики", "summary": "Параллельная оценка медицинских изображений и записей пациентов
+  [2/3] arxiv-2609.10364 -> FAILED, skip
+  [3/3] imp=2 | От символического восприятия к логическому выводу: фреймворк для геометрического
+[done] 1/3 items updated in 31.6s (31.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+  [1/3] imp=3 | Переосмысление AUTOMATIC1111 с использованием Gradio Workflow
+[ollama] unbalanced JSON: {"translated_title": "JarvisGUI: Межустройственные агенты GUI с динамическим составлением задач", "summary": "Реальные задачи с GUI часто требуют работы с несколькими устройствами и платформами, включ
+  [2/3] arxiv-2609.10451 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-
+  [3/3] arxiv-2609.10364 -> FAILED, skip
+[done] 1/3 items updated in 21.3s (21.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=2 | JarvisGUI: кросс-устройные агенты GUI с динамической композицией задач
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: Устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [2/2] arxiv-2609.10364 -> FAILED, skip
+[done] 1/2 items updated in 14.0s (14.0s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидередного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [1/1] arxiv-2609.10364 -> FAILED, skip
+[done] 0/1 items updated in 7.2s (7.2s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [1/1] arxiv-2609.10364 -> FAILED, skip
+[done] 0/1 items updated in 7.4s (7.4s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая многомодальная фреймворк для федерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оценк
+  [1/1] arxiv-2609.10364 -> FAILED, skip
+[done] 0/1 items updated in 7.3s (7.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для федерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [1/1] arxiv-2609.10364 -> FAILED, skip
+[done] 0/1 items updated in 7.3s (7.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=1 | Maven Robotics хочет украдить ваш контракт на развертывание роботов
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется совместный анализ 
+  [2/2] arxiv-2609.10364 -> FAILED, skip
+[done] 1/2 items updated in 12.7s (12.7s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 2 items to analyze
+  [1/2] imp=3 | AI-агенты переполняют общественные службы новыми запросами
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [2/2] arxiv-2609.10364 -> FAILED, skip
+[done] 1/2 items updated in 13.3s (13.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+  [1/3] imp=5 | Теперь каждый может превратить данные в ценность
+  [2/3] imp=4 | OpenAI расширяет доступ к ИИ и защиту от кибератак для федеральных и местных вла
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "Одновременная оценка медицинских изображений и записей пацие
+  [3/3] arxiv-2609.10364 -> FAILED, skip
+[done] 2/3 items updated in 19.3s (9.6s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [1/1] arxiv-2609.10364 -> FAILED, skip
+[done] 0/1 items updated in 7.3s (7.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 3 items to analyze
+  [1/3] imp=5 | Как исследователь использует Codex и ChatGPT для поиска новых антибиотиков
+  [2/3] imp=1 | 3 способа подготовиться к следующему забегу с помощью поиска
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оцен
+  [3/3] arxiv-2609.10364 -> FAILED, skip
+[done] 2/3 items updated in 18.9s (9.5s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] no JSON in response: 
+  [1/1] arxiv-2609.10364 -> FAILED, skip
+[done] 0/1 items updated in 7.4s (7.4s/item)

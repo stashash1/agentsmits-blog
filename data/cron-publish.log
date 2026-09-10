@@ -403,3 +403,184 @@ Publish publish:20260909T173500 complete:
   failed:    0
   skipped:   0
   AGI: 1209 days (17%)
+Publish publish:20260909T180509 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+Publish publish:20260909T183500 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+Publish publish:20260909T190511 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+Publish publish:20260909T193511 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+Publish publish:20260909T200805 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1209 days (17%)
+2026-09-10 10:03:40,470 [INFO] agentsblog.publishing.publisher: skipping anthropic-mariano-florentino-long-term-benefit-trust (no analysis)
+Publish publish:20260910T070340 complete:
+  published: 4
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+Publish publish:20260910T070511 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 10:36:54,367 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 10:36:54,367 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10441 (no analysis)
+2026-09-10 10:36:54,367 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10372 (no analysis)
+2026-09-10 10:36:54,367 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+2026-09-10 10:36:54,367 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10346 (no analysis)
+2026-09-10 10:36:54,367 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10335 (no analysis)
+Publish publish:20260910T073654 complete:
+  published: 2
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 11:05:43,190 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 11:05:43,190 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10441 (no analysis)
+2026-09-10 11:05:43,190 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10372 (no analysis)
+2026-09-10 11:05:43,190 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+2026-09-10 11:05:43,190 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10335 (no analysis)
+Publish publish:20260910T080543 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 11:35:36,377 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 11:35:36,377 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10441 (no analysis)
+2026-09-10 11:35:36,377 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10372 (no analysis)
+2026-09-10 11:35:36,377 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+2026-09-10 11:35:36,377 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10335 (no analysis)
+Publish publish:20260910T083536 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 12:05:45,437 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 12:05:45,437 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10372 (no analysis)
+2026-09-10 12:05:45,437 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+2026-09-10 12:05:45,437 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10335 (no analysis)
+Publish publish:20260910T090545 complete:
+  published: 2
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 12:35:29,246 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 12:35:29,246 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10372 (no analysis)
+2026-09-10 12:35:29,246 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+2026-09-10 12:35:29,246 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10335 (no analysis)
+Publish publish:20260910T093529 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 13:05:28,838 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 13:05:28,838 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+2026-09-10 13:05:28,838 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10335 (no analysis)
+Publish publish:20260910T100528 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 13:35:22,131 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 13:35:22,131 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+2026-09-10 13:35:22,131 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10335 (no analysis)
+Publish publish:20260910T103522 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 14:05:32,286 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 14:05:32,286 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T110532 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 14:35:21,950 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10451 (no analysis)
+2026-09-10 14:35:21,950 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T113521 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 15:05:14,648 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T120514 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 15:35:07,887 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T123507 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 16:05:07,979 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T130507 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 16:35:07,938 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T133507 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 17:05:08,069 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T140508 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 17:35:13,291 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T143513 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 18:05:15,000 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T150515 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 18:35:19,942 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T153519 complete:
+  published: 2
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 19:05:07,985 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T160507 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 19:35:19,554 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T163519 complete:
+  published: 1
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-10 20:05:08,004 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T170508 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
