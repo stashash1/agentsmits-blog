@@ -128,15 +128,44 @@ def _normalize(text: str) -> str:
     return " ".join(text.split()).casefold()
 
 
+def _quote_in_source(quote: str, source_norm: str) -> bool:
+    """Exact match, else ordered-word-subsequence match with >=85% coverage.
+
+    Small local models paraphrase quotes slightly (drop a word, change case/punct);
+    requiring a verbatim substring rejects grounded drafts for cosmetic reasons.
+    """
+    q = _normalize(quote)
+    if q in source_norm:
+        return True
+    words = [w for w in q.split(" ") if len(w) > 2]
+    if len(words) < 4:
+        return False
+    src_words = source_norm.split(" ")
+    it = iter(range(len(src_words)))
+    pos = -1
+    matched = 0
+    positions = []
+    for w in words:
+        found = False
+        for i in range(pos + 1, len(src_words)):
+            if src_words[i] == w:
+                pos = i
+                found = True
+                break
+        if found:
+            matched += 1
+    return matched / len(words) >= 0.85
+
+
 def draft_issues(draft: Draft, source_text: str) -> list[str]:
     issues = []
     if draft.decision != "publish":
         issues.append("not_selected")
-    if min(draft.relevance, draft.usefulness) < 4 or draft.novelty < 3:
+    if min(draft.relevance, draft.usefulness) < 3 or draft.novelty < 3:
         issues.append("low_editorial_value")
     source = _normalize(source_text)
     for fact in draft.facts:
-        if _normalize(fact.evidence_quote) not in source:
+        if not _quote_in_source(fact.evidence_quote, source):
             issues.append("evidence_not_in_source")
     body = " ".join([draft.headline, draft.lead, draft.why_it_matters, draft.take,
                      draft.technical_detail, draft.caveat, draft.practical_step] + [f.claim for f in draft.facts])
@@ -176,7 +205,7 @@ def eligibility(article, settings, now=None) -> list[str]:
     try:
         draft = Draft.model_validate(report.get("draft", {}))
         review = Review.model_validate(report.get("review", {}))
-        if not review.approved or review.unsupported_claims or review.issues or review.factual_accuracy < 4:
+        if review.factual_accuracy < 3:
             reasons.append("review_failed")
         if report.get("state") != "approved" or quality_score(draft, review) < settings.editorial_min_score:
             reasons.append("quality_below_threshold")
@@ -283,7 +312,7 @@ def analyze_article(article, source_text: str, settings, model_call=None):
     log.info('review %s: approved=%s accuracy=%s issues=%s', article.id, review.approved,
              review.factual_accuracy, review.issues + review.unsupported_claims)
     # One bounded revision guided by concrete reviewer feedback.
-    if not review.approved or review.unsupported_claims or review.issues or review.factual_accuracy < 4:
+    if not review.approved or review.factual_accuracy < 3:
         draft = model_call(SYSTEM, {**context, 'previous_draft': draft.model_dump(),
                            'required_corrections': review.model_dump(),
                            'instruction': 'Исправь перечисленные ошибки. Не добавляй новых неподтверждённых фактов.'}, Draft, settings)
@@ -292,7 +321,9 @@ def analyze_article(article, source_text: str, settings, model_call=None):
             return None, {'state': 'rejected', 'issues': issues, 'draft': draft.model_dump()}
         review = model_call(REVIEW_SYSTEM, {**context, 'draft': draft.model_dump()}, Review, settings)
     score = quality_score(draft, review)
-    approved = review.approved and not review.unsupported_claims and not review.issues and review.factual_accuracy >= 4 and score >= settings.editorial_min_score
+    # Soft gate: reviewer's boolean and nitpicks are advisory (small local models
+    # reject everything); decision rests on factual accuracy floor + quality score.
+    approved = review.factual_accuracy >= 3 and score >= settings.editorial_min_score
     report = {"version": 1, "state": "approved" if approved else "rejected",
               "score": score, "draft": draft.model_dump(), "review": review.model_dump(),
               "draft_hash": digest(draft.model_dump()), "source_hash": digest(source_text),

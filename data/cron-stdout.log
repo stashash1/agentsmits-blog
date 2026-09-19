@@ -4943,3 +4943,61 @@
 [2026-09-19 14:10:02] [build]   articles: 100 posts in 50 categories
 [2026-09-19 14:10:02] [build]   wrote:    index.html, articles.html, rss.xml, assets/styles.css
 [2026-09-19 14:10:02] [build] exit_code=0
+[2026-09-19 14:30:01] [scan] start: pid=21936 user=Admin cwd=C:\Users\Admin\dev\project\agentsmits-blog
+[2026-09-19 14:30:54] [scan] Scan scan:20260919T113002 complete:
+[2026-09-19 14:30:54] [scan]   sources scanned: 17
+[2026-09-19 14:30:54] [scan]   sources failed:  5
+[2026-09-19 14:30:54] [scan]   new pending:     0
+[2026-09-19 14:30:54] [scan]   dups skipped:    75
+[2026-09-19 14:30:54] [scan] 
+[2026-09-19 14:30:54] [scan]   anthropic            total=2   new=0   dup=2
+[2026-09-19 14:30:54] [scan]   openai               total=10  new=0   dup=10
+[2026-09-19 14:30:54] [scan]   deepmind             total=5   new=0   dup=5
+[2026-09-19 14:30:54] [scan]   huggingface          total=4   new=0   dup=4
+[2026-09-19 14:30:54] [scan]   claude_code          total=5   new=0   dup=5
+[2026-09-19 14:30:54] [scan]   github_copilot       total=10  new=0   dup=10
+[2026-09-19 14:30:54] [scan]   techcrunch           total=10  new=0   dup=10
+[2026-09-19 14:30:54] [scan]   justai               total=9   new=0   dup=9
+[2026-09-19 14:30:54] [scan]   google_ai            total=10  new=0   dup=10
+[2026-09-19 14:30:54] [scan]   arxiv                total=10  new=0   dup=10
+[2026-09-19 14:30:54] [scan] exit_code=0
+[2026-09-19 14:35:01] [publish] start: pid=16016 user=Admin editorial=settings cwd=C:\Users\Admin\dev\project\agentsmits-blog
+[2026-09-19 14:35:01] [publish] pre-step: LLM analyze (limit=4, editorial=settings)
+[2026-09-19 14:35:07] [publish] [analyze] 2026-09-19 14:35:07,437 [WARNING] agentsblog.editorial: editorial techcrunch-a-startup-that-builds-other-startups-43903881cded failed: ValueError
+[2026-09-19 14:35:12] [publish] [analyze] 2026-09-19 14:35:12,622 [WARNING] agentsblog.editorial: editorial techcrunch-anthropic-is-operating-a-lab-that-co-dcced75f93e2 failed: ValueError
+[2026-09-19 14:35:17] [publish] [analyze] 2026-09-19 14:35:17,759 [WARNING] agentsblog.editorial: editorial techcrunch-ai-hallucination-nearly-triggers-us--99bd6d4072b2 failed: ValueError
+[2026-09-19 14:35:18] [publish] [analyze] 2026-09-19 14:35:18,486 [WARNING] agentsblog.editorial: editorial openai-astra-for-law failed: HTTPError
+[2026-09-19 14:35:18] [publish] [analyze] {
+[2026-09-19 14:35:18] [publish] [analyze]   "approved": 0,
+[2026-09-19 14:35:18] [publish] [analyze]   "rejected": 0,
+[2026-09-19 14:35:18] [publish] [analyze]   "failed": 4,
+[2026-09-19 14:35:18] [publish] [analyze]   "busy": 0
+[2026-09-19 14:35:18] [publish] [analyze] }
+[2026-09-19 14:35:18] [publish] analyze exit_code=1
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping claude_code-CHANGELOG.md#21278 (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping techcrunch-india-forces-caller-id-apps-to-feed--2f121b448c20 (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping techcrunch-tilly-norwoods-press-tour-is-going-a-d8747de7e501 (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping anthropic-accenture-embedded-evaluation (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping github_copilot-2026-09-18-github-copilot-weekly-945dfcab4cef (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping github_copilot-2026-09-18-upcoming-deprecation--8b02c6e1fb28 (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping techcrunch-world-model-companies-are-keeping-a--1dbe8d7c6e86 (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping github_copilot-2026-09-18-copilot-code-review-a-e4a51cd7ce00 (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping techcrunch-anthropics-first-embedded-evaluator-is-accenture (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping techcrunch-a-startup-that-builds-other-startups-43903881cded (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping techcrunch-anthropic-is-operating-a-lab-that-co-dcced75f93e2 (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping techcrunch-ai-hallucination-nearly-triggers-us--99bd6d4072b2 (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping openai-australian-youth-safety-blueprint (no analysis)
+[2026-09-19 14:35:18] [publish] 2026-09-19 14:35:18,730 [INFO] agentsblog.publishing.publisher: skipping openai-hex-gpt-6-astra (no analysis)
+[2026-09-19 14:35:18] [publish] Publish publish:20260919T113518 complete:
+[2026-09-19 14:35:18] [publish]   published: 0
+[2026-09-19 14:35:18] [publish]   failed:    0
+[2026-09-19 14:35:18] [publish]   skipped:   0
+[2026-09-19 14:35:18] [publish]   editorial blocked: 37
+[2026-09-19 14:35:18] [publish] exit_code=0
+[2026-09-19 14:40:01] [build] start: pid=10676 user=Admin cwd=C:\Users\Admin\dev\project\agentsmits-blog
+[2026-09-19 14:40:02] [build] [OK] Site built in C:\Users\Admin\dev\project\agentsmits-blog\public
+[2026-09-19 14:40:02] [build]   feed:     50 posts
+[2026-09-19 14:40:02] [build]   archive:  20 posts
+[2026-09-19 14:40:02] [build]   articles: 100 posts in 50 categories
+[2026-09-19 14:40:02] [build]   wrote:    index.html, articles.html, rss.xml, assets/styles.css
+[2026-09-19 14:40:02] [build] exit_code=0

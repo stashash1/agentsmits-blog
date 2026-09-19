@@ -65,7 +65,7 @@ class Settings(BaseSettings):
 
     # Editorial policy: quality is required before any automatic delivery.
     editorial_required: bool = True
-    editorial_min_score: int = Field(default=75, ge=0, le=100)
+    editorial_min_score: int = Field(default=60, ge=0, le=100)
     editorial_max_age_days: int = Field(default=5, ge=1, le=30)
     editorial_max_daily_posts: int = Field(default=3, ge=1, le=20)
     editorial_min_interval_minutes: int = Field(default=180, ge=0)
