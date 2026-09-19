@@ -169,7 +169,8 @@ def test_publish_one_quiet_hours_returns_reason(tmp_settings):
         "quiet_hours_start": 0, "quiet_hours_end": 23,  # entire day is quiet
     })
     from agentsblog.publishing.publisher import publish_one
-    r = publish_one(a, s, agi_days=1000, agi_percent=50)
+    with patch("agentsblog.publishing.publisher._is_quiet_now", return_value=True):
+        r = publish_one(a, s, agi_days=1000, agi_percent=50)
     assert r["ok"] is False
     assert r["reason"] == "quiet_hours"
 
@@ -191,7 +192,8 @@ def test_publish_one_happy_path_calls_telegram(tmp_settings):
     )
     from agentsblog.publishing.publisher import publish_one
     from agentsblog.publishing.telegram import SendResult
-    with patch("agentsblog.publishing.publisher.tg_send") as mock_send:
+    with patch("agentsblog.publishing.publisher._is_quiet_now", return_value=False), \
+         patch("agentsblog.publishing.publisher.tg_send") as mock_send:
         mock_send.return_value = SendResult(ok=True, msg_id=7777,
                                            reason="sent", duration_ms=100)
         r = publish_one(a, tmp_settings, agi_days=1000, agi_percent=50)
@@ -215,7 +217,8 @@ def test_publish_one_dedup_skips_send(tmp_settings):
 
     from agentsblog.publishing.publisher import publish_one
     from agentsblog.publishing.telegram import SendResult
-    with patch("agentsblog.publishing.publisher.tg_send") as mock_send:
+    with patch("agentsblog.publishing.publisher._is_quiet_now", return_value=False), \
+         patch("agentsblog.publishing.publisher.tg_send") as mock_send:
         mock_send.return_value = SendResult(ok=True, msg_id=999,
                                            reason="sent", duration_ms=100)
         r = publish_one(a, tmp_settings, agi_days=1000, agi_percent=50)
@@ -241,7 +244,8 @@ def test_run_publish_quiet_hours_short_circuits(tmp_settings, db, make_article):
         "quiet_hours_start": 0, "quiet_hours_end": 23,
     })
     from agentsblog.publishing.publisher import run_publish
-    summary = run_publish(s, allow_during_quiet=False)
+    with patch("agentsblog.publishing.publisher._is_quiet_now", return_value=True):
+        summary = run_publish(s, allow_during_quiet=False)
     assert summary["published"] == 0
     assert summary["quiet_deferred"] >= 1
 
@@ -259,13 +263,29 @@ def test_run_publish_dry_run_does_not_mark_published(tmp_settings, db, make_arti
                                            reason="sent", duration_ms=50)
         from agentsblog.publishing.publisher import run_publish
         summary = run_publish(tmp_settings, dry_run=True, allow_during_quiet=True)
-        # We "published" 1 in the run log, but DB state is unchanged
-        assert summary["published"] >= 1
+        assert summary["published"] == 0
+        assert summary["would_publish"] >= 1
+        mock_send.assert_not_called()
         # Verify article is STILL pending (dry-run)
         from agentsblog.db import get_article
         row = get_article(db, "d-1")
         assert row.status is ArticleStatus.PENDING
         assert row.message_id is None
+
+
+def test_publish_one_override_quiet_hours(tmp_settings):
+    from agentsblog.publishing.publisher import publish_one
+    from agentsblog.publishing.telegram import SendResult
+    a = Article(id="quiet-override", source_id="openai", title="News",
+                url="https://e.com/quiet-override", date="2026-09-06",
+                agent_impact="Impact")
+    with patch("agentsblog.publishing.publisher._is_quiet_now", return_value=True), \
+         patch("agentsblog.publishing.publisher.tg_send", return_value=SendResult(
+             ok=True, msg_id=7, reason="sent")) as mock_send:
+        result = publish_one(a, tmp_settings, agi_days=100, agi_percent=50,
+                             allow_during_quiet=True)
+    assert result["ok"]
+    mock_send.assert_called_once()
 
 
 def test_run_publish_marks_published(tmp_settings, db, make_article):
@@ -286,3 +306,38 @@ def test_run_publish_marks_published(tmp_settings, db, make_article):
         row = get_article(db, "p-1")
         assert row.status is ArticleStatus.PUBLISHED
         assert row.message_id == 4242
+
+
+def test_successful_send_records_fingerprint(tmp_settings):
+    from agentsblog.publishing.publisher import publish_one
+    from agentsblog.publishing.telegram import SendResult
+    from agentsblog.publishing.formatter import format_standard
+    a = Article(id="fingerprint", source_id="openai", title="News",
+                url="https://e.com/fingerprint", date="2026-09-06",
+                agent_impact="Impact")
+    with patch("agentsblog.publishing.publisher.tg_send", return_value=SendResult(
+            ok=True, msg_id=42, reason="sent")):
+        result = publish_one(a, tmp_settings, agi_days=100, agi_percent=50,
+                             allow_during_quiet=True)
+    assert result["ok"]
+    text = format_standard(a, agi_days=100, agi_percent=50)
+    assert was_recently_sent(text, tmp_settings) == 42
+
+
+def test_direct_transport_resolves_token_from_root(tmp_settings, monkeypatch, tmp_path):
+    from pathlib import Path
+    from agentsblog.publishing.direct_api import DirectSendResult
+    from agentsblog.publishing.telegram import send
+
+    token_file = tmp_path / "data" / "token.txt"
+    token_file.parent.mkdir(exist_ok=True)
+    token_file.write_text("123456:" + "a" * 40, encoding="utf-8")
+    settings = tmp_settings.model_copy(update={
+        "bot_token_file": Path("data/token.txt"), "telegram_chat_id": "-100123",
+    })
+    monkeypatch.chdir(tmp_path.parent)
+    with patch("agentsblog.publishing.direct_api.send", return_value=DirectSendResult(
+            ok=True, msg_id=88, reason="sent")) as direct_send:
+        result = send("hello", settings)
+    assert result.ok and result.msg_id == 88
+    assert direct_send.call_args.kwargs["chat_id"] == "-100123"

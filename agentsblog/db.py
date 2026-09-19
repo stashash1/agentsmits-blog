@@ -29,7 +29,7 @@ from agentsblog.models import Article, ArticleStatus, SourceHealth
 
 # ── Schema migrations ──────────────────────────────────────────────
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 INIT_SCHEMA = """
 CREATE TABLE IF NOT EXISTS schema_version (
@@ -135,6 +135,27 @@ CREATE TABLE IF NOT EXISTS settings (
     key TEXT PRIMARY KEY,
     value TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS editorial_reviews (
+    article_id TEXT PRIMARY KEY REFERENCES articles(id),
+    state TEXT NOT NULL,
+    attempts INTEGER NOT NULL DEFAULT 0,
+    updated_at TEXT NOT NULL,
+    next_attempt_at TEXT,
+    source_text TEXT NOT NULL DEFAULT '',
+    report_json TEXT NOT NULL DEFAULT '{}',
+    error TEXT NOT NULL DEFAULT ''
+);
+
+CREATE TABLE IF NOT EXISTS deliveries (
+    delivery_key TEXT PRIMARY KEY,
+    article_id TEXT NOT NULL,
+    state TEXT NOT NULL,
+    started_at TEXT NOT NULL,
+    finished_at TEXT,
+    message_id INTEGER,
+    error TEXT NOT NULL DEFAULT ''
+);
 """
 
 
@@ -211,6 +232,7 @@ def upsert_article(conn: sqlite3.Connection, article: Article) -> bool:
     ).fetchone()
     if existing:
         _update_article_row(conn, article)
+        conn.execute("UPDATE editorial_reviews SET state='stale',attempts=0,source_text='' WHERE article_id=? AND state='approved'", (article.id,))
         return False
     _insert_article_row(conn, article)
     return True
@@ -371,7 +393,6 @@ def upsert_source(conn: sqlite3.Connection, source) -> bool:
             url = excluded.url,
             kind = excluded.kind,
             tier = excluded.tier,
-            enabled = excluded.enabled,
             notes = excluded.notes
         """,
         (

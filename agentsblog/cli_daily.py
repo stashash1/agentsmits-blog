@@ -164,6 +164,9 @@ def daily_summary_cmd(args: argparse.Namespace, settings: Settings) -> int:
       AGENTSBLOG_TELEGRAM_CHAT_ID=-100xxx (numeric chat_id)
     """
     from agentsblog.db import connect, init_schema
+    if settings.editorial_required and not args.dry_run:
+        print('Автоматический старый дайджест отключён редакционной политикой. Используйте publish для проверенных материалов.')
+        return 2
 
     target_date = args.date
     if not target_date:

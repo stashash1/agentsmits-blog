@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import pytest
+from unittest.mock import patch
 from fastapi.testclient import TestClient
 
 from agentsblog.api.server import create_app
@@ -180,7 +181,8 @@ def test_publish_by_id_quiet_hours(app_client):
     }, headers=_auth())
     aid = r.json()["id"]
     # Try to publish — should hit quiet hours
-    r2 = c2.post(f"/publish/{aid}", headers=_auth())
+    with patch("agentsblog.utils.time.is_quiet_hours", return_value=True):
+        r2 = c2.post(f"/publish/{aid}", headers=_auth())
     assert r2.status_code == 429
 
 

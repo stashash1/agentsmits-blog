@@ -14,7 +14,8 @@ from agentsblog.models import Article, ArticleStatus, Source
 @pytest.fixture
 def tmp_settings(tmp_path: Path) -> Settings:
     """Settings pointing at a fresh tmp dir — no real data touched."""
-    s = Settings(root=tmp_path, data_dir=tmp_path / "data", public_dir=tmp_path / "public")
+    s = Settings(_env_file=None, root=tmp_path, data_dir=tmp_path / "data", public_dir=tmp_path / "public",
+                 editorial_required=False, bot_token_file=None)
     return s
 
 

@@ -20,9 +20,10 @@ from agentsblog.models import ArticleStatus
 def test_init_schema_is_idempotent(tmp_settings):
     from agentsblog.db import connect
     conn = connect(tmp_settings.db_path)
-    assert init_schema(conn) == 1
+    from agentsblog.db import SCHEMA_VERSION
+    assert init_schema(conn) == SCHEMA_VERSION
     # Second call must not raise
-    assert init_schema(conn) == 1
+    assert init_schema(conn) == SCHEMA_VERSION
 
 
 def test_upsert_article_inserts_and_updates(db, make_article):

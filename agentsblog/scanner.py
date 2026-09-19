@@ -58,27 +58,29 @@ def run_scan(settings, *, limit_sources: list[str] | None = None,
     for source_id, meta, scanner_cls in all_scanners():
         if limit_sources and source_id not in limit_sources:
             continue
-        if not meta.enabled:
+        enabled = conn.execute(
+            "SELECT enabled FROM sources WHERE id = ?", (source_id,)
+        ).fetchone()
+        if not enabled or not enabled["enabled"]:
             continue
 
         scanner = scanner_cls(meta)
         try:
             articles = scanner.scan()
-            # Even if scan returns [], mark failed when there was a fetch error
-            # (e.g. Cloudflare 403). The scanner wrapper should set `ok` via
-            # inspecting its last fetch — but for now we accept empty results
-            # as "nothing to report" rather than failure.
-            ok = True
-            err = ""
+            last_fetch = getattr(scanner, "last_fetch", None)
+            err = getattr(last_fetch, "error", "")[:200] if last_fetch else ""
+            ok = not err
         except Exception as e:
             log.exception("scanner %s raised", source_id)
             articles = []
             ok = False
             err = str(e)[:200]
 
+        last_fetch = getattr(scanner, "last_fetch", None)
         record_source_check(
             conn, source_id,
             ok=ok, items_found=len(articles),
+            fetch_ms=last_fetch.fetch_ms if last_fetch else 0,
             error=err,
         )
         if not ok:

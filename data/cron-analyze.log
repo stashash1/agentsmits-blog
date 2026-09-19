@@ -543,3 +543,81 @@
 [ollama] no JSON in response: 
   [1/1] arxiv-2609.10364 -> FAILED, skip
 [done] 0/1 items updated in 7.4s (7.4s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 1 items to analyze
+[ollama] error: timed out
+  [1/1] arxiv-2609.10364 -> FAILED, skip
+[done] 0/1 items updated in 735.7s (735.7s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 10 items to analyze
+  [1/10] imp=4 | Anthropic: Как педагоги используют Claude в образовании
+  [2/10] imp=3 | Обновления пользовательских соглашений
+  [3/10] imp=5 | Anthropic завершил раунд F на 183 млрд долларов
+  [4/10] imp=4 | Обновление ограничений на продажу в не поддерживаемых регионах
+  [5/10] imp=5 | Представляем ChatGPT для финансовых услуг
+  [6/10] imp=4 | Создайте естественные голосовые интерфейсы с GPT‑Live‑1 в API
+  [7/10] imp=4 | Anthropic расширяет инициативы в сфере высшего образования
+  [8/10] imp=5 | Антропик представил Совет по национальной безопасности и госсектору
+  [9/10] imp=5 | Введение в API агентов
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая многоканальная фреймворк для распределённого обучения в клинической диагностике", "summary": "В клинической диагностике часто требуется одновременная оценк
+  [10/10] arxiv-2609.10364 -> FAILED, skip
+[done] 9/10 items updated in 93.1s (10.3s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 26 items to analyze
+[ollama] error: timed out
+  [1/26] openai-scaling-storage-one-billion-users-part-one -> FAILED, skip
+[ollama] error: timed out
+  [2/26] claude_code-CHANGELOG.md#21269 -> FAILED, skip
+  [3/26] imp=1 | Claude Code 2.1.268
+  [4/26] imp=2 | Добавлены агенты VS Code в метрики использования Copilot
+  [5/26] imp=1 | Обновления в автоматическом устранении и анализе в Copilot code review
+  [6/26] imp=3 | Cursor Projects: Обновление
+  [7/26] imp=1 | Гарри Тан из Y Combinator призвал США открыто распределять модели ИИ
+  [8/26] imp=1 | Ссора OpenAI с математиками усиливается
+  [9/26] imp=1 | Осталась неделя до регистрации на стенды TechCrunch Disrupt 2026
+  [10/26] imp=1 | Последний шанс участвовать в TechCrunch Disrupt 2026
+  [11/26] imp=1 | Moonshot AI ставит цель выручить 2 млрд долларов в год
+  [12/26] imp=2 | Ученый Anthropic предупредил о катастрофе в ключевой момент
+  [13/26] imp=2 | Nscale пригласила бывшего руководителя OpenAI Фиджи Симо в совет директоров пере
+  [14/26] imp=5 | GitHub Copilot: Новые выпуски за 7 сентября
+  [15/26] imp=2 | MAI-Code-1-Flash устарел
+  [16/26] imp=1 | Jensen Huang объяснил, почему NVIDIA вырастет на 70% в следующем году
+[ollama] unbalanced JSON: {"translated_title": "Марк Валлберг примет участие в TechCrunch Disrupt 2026: обсудит ваш бизнес, а не свой", "summary": "Марк Валлберг присоединится к Брюсу К. Ли на мероприятии Disrupt, чтобы обсуди
+  [17/26] techcrunch-mark-wahlberg-is-coming-to-techcrunc-96 -> FAILED, skip
+  [18/26] imp=1 | OpenAI приостановила подписки Pro из-за спроса на Astra
+[ollama] unbalanced JSON: {"translated_title": "Могут ли модели визуально-языкового восприятия на краю сети определить виды?", "summary": "Поскольку камеры-ловушки часто работают в полевых условиях с ограниченным или отсутству
+  [19/26] arxiv-2609.11916 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "Artificial Id: Драйв и устойчивое согласование в агентной ИИ", "summary": "Агентная ИИ переходит от выполнения ограниченных задач к системам, которые сохраняют значимое состояние
+  [20/26] arxiv-2609.11911 -> FAILED, skip
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 12 items to analyze
+  [1/12] imp=4 | OpenAI расширило облачное хранилище для 1 млрд пользователей ChatGPT
+  [2/12] imp=1 | Claude Code 2.1.269: Добавлен плагин для тестирования
+[ollama] unbalanced JSON: {"translated_title": "Марк Вальберг выступит на TechCrunch Disrupt 2026: обсудит ваш бизнес, а не свой", "summary": "Марк Вальберг примкнет к Брюсу К. Ли на мероприятии, обсудив инвестиции, стартапы, 
+  [3/12] techcrunch-mark-wahlberg-is-coming-to-techcrunc-96 -> FAILED, skip
+[ollama] unbalanced JSON: {"translated_title": "Могут ли модели визуально-языкового восприятия для работы на краю сети определить виды?", "summary": "Поскольку камеры-ловушки часто работают в полевых условиях с ограниченным ил
+  [4/12] arxiv-2609.11916 -> FAILED, skip
+  [5/12] imp=2 | Artificial Id: Драйв и устойчивое согласование в агентной ИИ
+[ollama] unbalanced JSON: {"translated_title": "MindTopo: Могут ли фундаментальные модели мыслить в топологическом пространстве?", "summary": "Пространственное мышление зависит не только от метрических свойств (расстояние, уго
+  [6/12] arxiv-2609.11900 -> FAILED, skip
+  [7/12] imp=1 | Обнаружение искажений в специализированных областях у больших языковых моделей
+  [8/12] imp=1 | RetroThinker: Внедрение проспективного мышления в речевые LLM
+  [9/12] imp=1 | От параметров к ответам: как ИИ-модели используют внутренние знания
+  [10/12] imp=1 | Генерация улучшается с помощью расписаний, учитывающих модель, через волокнистую
+[ollama] unbalanced JSON: {"translated_title": "OmniMed-FL: устойчивая мультимодальная фреймворк для фидерированного обучения в клинической диагностике", "summary": "Оценка медицинских изображений и записей пациентов требует с
+  [11/12] arxiv-2609.10364 -> FAILED, skip
+  [12/12] imp=1 | Клод Код 2.1.268
+[done] 8/12 items updated in 637.2s (79.7s/item)
+[setup] Ollama OK at http://127.0.0.1:11434, model=qwen3:8b
+[run] 5 items to analyze
+[ollama] error: timed out
+  [1/5] techcrunch-mecka-ai-nears-500m-valuation-in-seq-c9 -> FAILED, skip
+[ollama] error: timed out
+  [2/5] techcrunch-mark-wahlberg-is-coming-to-techcrunc-96 -> FAILED, skip
+[ollama] error: timed out
+  [3/5] arxiv-2609.11916 -> FAILED, skip
+[ollama] error: timed out
+  [4/5] arxiv-2609.11900 -> FAILED, skip
+[ollama] error: timed out
+  [5/5] arxiv-2609.10364 -> FAILED, skip
+[done] 0/5 items updated in 600.1s (600.1s/item)

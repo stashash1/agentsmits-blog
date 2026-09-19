@@ -31,7 +31,7 @@ ASSETS_DIR = Path(__file__).parent / "assets"
 def _jinja_env() -> Environment:
     return Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
-        autoescape=select_autoescape(["html"]),
+        autoescape=True,  # templates end in .j2, not .html
         trim_blocks=True,
         lstrip_blocks=True,
     )
@@ -43,10 +43,10 @@ def _query_feed(conn, *, limit: int = 50) -> list[dict]:
         """SELECT id, source_id, title, url, date, published_at, message_id,
                   is_breakthrough, breakthrough_score, breakthrough_reasons_json,
                   translated_title, summary, agent_impact, business_impact,
-                  it_impact, tags_json
+                  it_impact, tags_json, ai_impact_json
            FROM articles
            WHERE status = 'published'
-           ORDER BY is_breakthrough DESC, published_at DESC
+           ORDER BY published_at DESC
            LIMIT ?""",
         (limit,),
     ).fetchall()
@@ -59,11 +59,11 @@ def _query_articles(conn, *, limit: int = 100) -> list[dict]:
         """SELECT id, source_id, title, url, date, published_at,
                   is_breakthrough, breakthrough_score,
                   translated_title, summary, agent_impact, business_impact,
-                  it_impact, tags_json
+                  it_impact, tags_json, ai_impact_json
            FROM articles
            WHERE status = 'published'
              AND agent_impact != ''
-           ORDER BY is_breakthrough DESC, published_at DESC
+           ORDER BY published_at DESC
            LIMIT ?""",
         (limit,),
     ).fetchall()
@@ -86,6 +86,14 @@ def _query_archive(conn, *, limit: int = 20) -> list[dict]:
 def _row_to_dict(r) -> dict:
     import json
     d = dict(r)
+    from urllib.parse import urlsplit
+    if urlsplit(d.get('url', '')).scheme not in ('https', 'http'):
+        d['url'] = '#'
+    try:
+        report = json.loads(d.pop('ai_impact_json', None) or '{}').get('editorial', {})
+        d['editorial'] = report.get('draft') if report.get('state') == 'approved' else None
+    except (ValueError, AttributeError, TypeError):
+        d['editorial'] = None
     # Parse JSON columns: breakthrough_reasons_json, tags_json
     for src_key, dst_key in (
         ("breakthrough_reasons_json", "breakthrough_reasons"),

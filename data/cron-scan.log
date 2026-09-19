@@ -1393,3 +1393,79 @@ Scan scan:20260910T170000 complete:
   techcrunch           total=10  new=0   dup=10
   google_ai            total=7   new=0   dup=7
   arxiv                total=9   new=0   dup=9
+Scan scan:20260910T192927 complete:
+  sources scanned: 22
+  sources failed:  0
+  new pending:     6
+  dups skipped:    13
+
+  anthropic            total=5   new=4   dup=1
+  openai               total=10  new=2   dup=8
+  deepmind             total=4   new=0   dup=4
+Scan scan:20260911T215018 complete:
+  sources scanned: 22
+  sources failed:  0
+  new pending:     25
+  dups skipped:    57
+
+  anthropic            total=5   new=0   dup=5
+  openai               total=10  new=1   dup=9
+  deepmind             total=5   new=0   dup=5
+  huggingface          total=10  new=0   dup=10
+  claude_code          total=5   new=2   dup=3
+  github_copilot       total=10  new=4   dup=6
+  cursor               total=5   new=1   dup=4
+  techcrunch           total=10  new=10  dup=0
+  justai               total=9   new=0   dup=9
+  google_ai            total=6   new=0   dup=6
+  arxiv                total=7   new=7   dup=0
+Scan scan:20260911T220518 complete:
+  sources scanned: 22
+  sources failed:  0
+  new pending:     0
+  dups skipped:    82
+
+  anthropic            total=5   new=0   dup=5
+  openai               total=10  new=0   dup=10
+  deepmind             total=5   new=0   dup=5
+  huggingface          total=10  new=0   dup=10
+  claude_code          total=5   new=0   dup=5
+  github_copilot       total=10  new=0   dup=10
+  cursor               total=5   new=0   dup=5
+  techcrunch           total=10  new=0   dup=10
+  justai               total=9   new=0   dup=9
+  google_ai            total=6   new=0   dup=6
+  arxiv                total=7   new=0   dup=7
+Scan scan:20260911T223000 complete:
+  sources scanned: 22
+  sources failed:  0
+  new pending:     0
+  dups skipped:    77
+
+  anthropic            total=5   new=0   dup=5
+  openai               total=10  new=0   dup=10
+  deepmind             total=5   new=0   dup=5
+  huggingface          total=10  new=0   dup=10
+  claude_code          total=5   new=0   dup=5
+  github_copilot       total=10  new=0   dup=10
+  techcrunch           total=10  new=0   dup=10
+  justai               total=9   new=0   dup=9
+  google_ai            total=6   new=0   dup=6
+  arxiv                total=7   new=0   dup=7
+Scan scan:20260911T230000 complete:
+  sources scanned: 22
+  sources failed:  0
+  new pending:     1
+  dups skipped:    81
+
+  anthropic            total=5   new=0   dup=5
+  openai               total=10  new=0   dup=10
+  deepmind             total=5   new=0   dup=5
+  huggingface          total=10  new=0   dup=10
+  claude_code          total=5   new=0   dup=5
+  github_copilot       total=10  new=0   dup=10
+  cursor               total=5   new=0   dup=5
+  techcrunch           total=10  new=1   dup=9
+  justai               total=9   new=0   dup=9
+  google_ai            total=6   new=0   dup=6
+  arxiv                total=7   new=0   dup=7

@@ -23,10 +23,13 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt 2>/dev/null || true
+        run: python3 -m pip install -e .
+
+      - name: Import tracked article archive
+        run: python3 -m agentsblog migrate
 
       - name: Generate site
-        run: python3 generate_site.py
+        run: python3 -m agentsblog build-site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

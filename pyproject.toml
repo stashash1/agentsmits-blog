@@ -7,7 +7,7 @@ name = "agentsblog"
 version = "0.2.0"
 description = "AI news aggregator + Telegram publisher + static site generator"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = { text = "Personal / non-commercial" }
 authors = [{ name = "Agent Smith Blog" }]
 
@@ -16,6 +16,7 @@ dependencies = [
     "pydantic>=2.5",
     "pydantic-settings>=2.1",
     "Jinja2>=3.1",
+    "trafilatura>=2.0,<3",
 ]
 
 [project.optional-dependencies]
@@ -26,7 +27,11 @@ api = [
 test = [
     "pytest>=8.0",
     "pytest-cov>=4.1",
+    "httpx>=0.27",
 ]
+
+[tool.setuptools.package-data]
+"agentsblog.site" = ["templates/*.j2", "assets/*.css"]
 
 [project.scripts]
 # After `pip install -e .`:

@@ -2,12 +2,19 @@
 {% from "_macros.html.j2" import post_card, archive_card, subscribe_banner %}
 
 {% block content %}
+  <section class="editorial-intro">
+    <span class="eyebrow">Авторский взгляд на прикладной ИИ</span>
+    <h1>Что изменилось.<br><em>И что с этим делать.</em></h1>
+    <p>Разбираю модели, инструменты и агентные системы: как они устроены,
+    где полезны и какие ограничения скрываются за громким анонсом.</p>
+    <div class="intro-topics"><span>Агенты</span><span>Инженерия</span><span>Практика</span></div>
+  </section>
   {% if active is not defined %}{% set active = 'feed' %}{% endif %}
 
   {{ subscribe_banner() }}
 
   <section class="section">
-    <div class="section-label">Эта неделя</div>
+    <div class="section-label">Последние материалы</div>
     <div class="section-header">
       <h2 class="section-title">Актуальные новости</h2>
       <span class="section-count">{{ feed|length }} публикаций</span>

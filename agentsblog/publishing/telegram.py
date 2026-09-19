@@ -64,18 +64,17 @@ def send(text: str, settings: Settings, *,
     the openclaw CLI. Use this when openclaw's accountId-derived target
     is broken or sendRichMessage 404s.
     """
-    import os
-    token_file = settings.bot_token_file or os.environ.get("AGENTSBLOG_BOT_TOKEN_FILE")
+    token_file = settings.resolved_bot_token_file
     if token_file:
         from agentsblog.publishing.direct_api import send as direct_send, _read_token_file
         token = _read_token_file(token_file)
         if token:
-            target = settings.telegram_chat_id or os.environ.get("AGENTSBLOG_TELEGRAM_CHAT_ID") or settings.telegram_target
+            target = settings.telegram_chat_id or settings.telegram_target
             r = direct_send(text, chat_id=target, bot_token=token,
                             parse_mode=settings.telegram_parse_mode)
             return SendResult(ok=r.ok, msg_id=r.msg_id, reason=r.reason or "sent",
                               duration_ms=r.duration_ms, error=r.error)
-        log.warning("send_telegram: bot_token_file=%s but token not readable, falling back to openclaw CLI", token_file)
+        return SendResult(ok=False, reason="error", error="configured bot token file is unreadable")
 
     # Empty-text guard
     if not (text or "").strip():
@@ -83,7 +82,8 @@ def send(text: str, settings: Settings, *,
         return SendResult(ok=False, reason="error", error="empty_text")
 
     # Length guard
-    text = (text or "")[: settings.telegram_max_len]
+    if len(text.encode('utf-16-le')) // 2 > settings.telegram_max_len:
+        return SendResult(ok=False, reason="error", error="message_too_long")
 
     t0 = time.monotonic()
     last_err = ""
@@ -92,6 +92,7 @@ def send(text: str, settings: Settings, *,
             result = subprocess.run(
                 _build_cmd(text, settings),
                 capture_output=True, text=True, timeout=120,
+                creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0),
             )
             duration_ms = int((time.monotonic() - t0) * 1000)
             stderr = (result.stderr or "")
@@ -100,8 +101,8 @@ def send(text: str, settings: Settings, *,
             # Detect benign state-migration warning
             if result.returncode != 0 and "Legacy state migration warnings" in stderr:
                 log.info("state-migration warning; message likely delivered")
-                return SendResult(ok=True, msg_id=0,
-                                  reason="state_migration_warning",
+                return SendResult(ok=False, msg_id=0,
+                                  reason="unknown",
                                   duration_ms=duration_ms)
 
             # Success path
@@ -129,7 +130,7 @@ def send(text: str, settings: Settings, *,
         except subprocess.TimeoutExpired:
             duration_ms = int((time.monotonic() - t0) * 1000)
             # Likely sent — gateway timeout
-            return SendResult(ok=True, msg_id=0, reason="timeout",
+            return SendResult(ok=False, msg_id=0, reason="unknown",
                               duration_ms=duration_ms)
         except Exception as e:
             last_err = str(e)[:200]

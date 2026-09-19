@@ -19,6 +19,7 @@ class CursorSource:
 
     def scan(self):
         result = _b.fetch(self.page_url, timeout=15)
+        self.last_fetch = result
         if not result.body:
             return []
         pattern = re.compile(

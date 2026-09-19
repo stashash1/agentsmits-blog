@@ -120,7 +120,7 @@ def send(
         return DirectSendResult(ok=False, reason="error", error=f"cannot resolve chat_id from {chat_id!r}")
 
     url = f"{BOT_API_BASE}/bot{bot_token}/sendMessage"
-    payload: dict = {"chat_id": resolved, "text": text[:4096]}
+    payload: dict = {"chat_id": resolved, "text": text}
     if parse_mode and parse_mode.upper() in ("HTML", "MARKDOWN", "MARKDOWNV2"):
         payload["parse_mode"] = parse_mode
 
@@ -152,9 +152,11 @@ def send(
             log.warning("direct_api: HTTP %d (attempt %d): %s", e.code, attempt + 1, last_err)
             if e.code in (400, 403, 404):
                 break
+            if e.code >= 500:
+                return DirectSendResult(ok=False, reason="unknown", error=f"HTTP {e.code}")
         except Exception as e:
-            last_err = str(e)[:200]
-            log.warning("direct_api: send attempt %d failed: %s", attempt + 1, last_err)
+            return DirectSendResult(ok=False, reason="unknown", error=type(e).__name__,
+                                    duration_ms=int((time.monotonic()-t0)*1000))
         if attempt < retries - 1:
             time.sleep(delay)
 
@@ -172,7 +174,7 @@ def send_from_env(text: str, settings, *,
         AGENTSBLOG_BOT_TOKEN_FILE=path/to/file  (file contains the bot token, one line)
         AGENTSBLOG_TELEGRAM_CHAT_ID=-100xxx     (numeric chat_id, optional — falls back to settings.telegram_target)
     """
-    token_path = os.environ.get("AGENTSBLOG_BOT_TOKEN_FILE")
+    token_path = settings.resolved_bot_token_file
     if not token_path:
         return DirectSendResult(ok=False, reason="error", error="AGENTSBLOG_BOT_TOKEN_FILE not set")
 

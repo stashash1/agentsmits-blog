@@ -90,7 +90,7 @@ def test_articles_page_is_structurally_different_from_feed(tmp_settings, db, mak
     assert "Актуальные новости" in index_html
 
 
-def test_breakthrough_badge_in_html(tmp_settings, db, make_article):
+def test_keyword_breakthrough_does_not_become_editorial_claim(tmp_settings, db, make_article):
     art = make_article(
         db, id="bt-1", title="GPT-5 Mamba breakthrough",
         agent_impact="New architecture", importance=5,
@@ -102,8 +102,9 @@ def test_breakthrough_badge_in_html(tmp_settings, db, make_article):
 
     build_site(tmp_settings)
     html = (tmp_settings.resolved_public_dir / "index.html").read_text(encoding="utf-8")
-    assert "ПРОРЫВ" in html
-    assert "hero-card-bt" in html
+    assert "ПРОРЫВ" not in html
+    assert "AGI Countdown" not in html
+    assert "ДО AGI" not in html
 
 
 def test_rss_renders_xml(tmp_settings):

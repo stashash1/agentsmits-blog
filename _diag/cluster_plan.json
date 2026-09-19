@@ -1,0 +1,153 @@
+{
+  "generated_at_msk": "2026-09-17T21:21+03:00",
+  "cron_job": "agentsmits-blog-cluster",
+  "cycle_window": {
+    "start_msk": "2026-09-17T21:21:00+03:00",
+    "end_msk": "2026-09-18T03:21:00+03:00",
+    "quiet_hours_msk": "23:00–08:00 MSK",
+    "publishable_slots_msk": [
+      "21:30",
+      "22:15",
+      "22:45"
+    ],
+    "deferred_to_next_cycle_msk": [
+      "08:00",
+      "08:30",
+      "09:00"
+    ],
+    "total_pre_quiet_minutes": 99,
+    "note": "Quiet hours 23:00–08:00 MSK leave only ~99 minutes of publishable time inside this 6h cycle. 3 posts scheduled, 3 deferred to next cycle morning slots."
+  },
+  "agi_counter": {
+    "base_days": 1460,
+    "current_days": 729,
+    "start_date": "2026-01-01",
+    "last_update": "2026-09-06"
+  },
+  "cluster_counts": {
+    "C_global": 1,
+    "A_strategy": 2,
+    "B_industry": 2,
+    "D_productivity": 1
+  },
+  "items": [
+    {
+      "id": "huggingface-open-asr-leaderboard-global-south",
+      "source": "HuggingFace",
+      "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+      "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "date": "2026-08-28",
+      "importance": 3,
+      "decayed_importance": 0.9,
+      "tier_pre": 2,
+      "cluster": "C_global",
+      "final_tier": 2,
+      "slot_msk": "22:45",
+      "analyst_notes": [
+        "Global South inclusion angle. Mid-tier slot. Decay 0.9 — still publishable but don’t defer further."
+      ],
+      "defer": false,
+      "defer_reason": null
+    },
+    {
+      "id": "openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e",
+      "source": "OpenAI",
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "date": "2026-08-28",
+      "importance": 5,
+      "decayed_importance": 2.043,
+      "tier_pre": 1,
+      "cluster": "A_strategy",
+      "final_tier": 1,
+      "slot_msk": "21:30",
+      "analyst_notes": [
+        "Anchor post for the 6h cycle. Big strategic move (OpenAI ↔ Cursor ↔ SpaceX). Highest decayed_importance in queue.",
+        "Use breakthrough-style framing? No — M&A, not new architecture/SOTA. Standard Tier 1 template with clear “что это значит” framing.",
+        "Wait — Musk turbines is also in cluster A. Merge? No: turbines is environmental/infra angle, different story arc. Keep separate posts."
+      ],
+      "defer": false,
+      "defer_reason": null
+    },
+    {
+      "id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "source": "TechCrunch AI",
+      "title": "Musk&#8217;s faster path to more gas turbines comes with pollution problem",
+      "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+      "date": "2026-08-30",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tier_pre": 3,
+      "cluster": "A_strategy",
+      "final_tier": 2,
+      "slot_msk": "22:15",
+      "analyst_notes": [
+        "Pulled into Tier 2: AI-compute energy angle makes this more than just a Tesla/SpaceX environmental story.",
+        "Cluster A narrative connection: directly continues the Musk/SpaceX thread opened by the OpenAI↔Cursor post."
+      ],
+      "defer": false,
+      "defer_reason": null
+    },
+    {
+      "id": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+      "source": "TechCrunch AI",
+      "title": "Caterpillar is bringing to AI deployment what it learned from automating mining",
+      "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
+      "date": "2026-08-30",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tier_pre": 3,
+      "cluster": "B_industry",
+      "final_tier": 3,
+      "slot_msk": null,
+      "analyst_notes": [
+        "Industrial automation → edge AI → agent deployment in physical environments. Pairs thematically with US/China drones post.",
+        "Decay 3-day half-life: at 7 days old the news is aging. Schedule first in next cycle."
+      ],
+      "defer": true,
+      "defer_reason": "Quiet hours 23:00–08:00 MSK block publication inside the 6h cycle. Defer to next cycle prime slot (08:00 MSK)."
+    },
+    {
+      "id": "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+      "source": "TechCrunch AI",
+      "title": "The U.S. is building barriers around drones and robots, but China has scale to get around them",
+      "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
+      "date": "2026-08-31",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tier_pre": 3,
+      "cluster": "B_industry",
+      "final_tier": 3,
+      "slot_msk": null,
+      "analyst_notes": [
+        "Geopolitics + robotics framing. Pairs well with Caterpillar (industrial agent deployment in adversarial supply chains).",
+        "Decay 3-day half-life: still fresh enough to hold until morning slot."
+      ],
+      "defer": true,
+      "defer_reason": "Quiet hours 23:00–08:00 MSK block publication inside the 6h cycle. Defer to next cycle (08:30 MSK after Caterpillar)."
+    },
+    {
+      "id": "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0",
+      "source": "TechCrunch AI",
+      "title": "Meeting notetaker Circleback adds a free tier to attract more customers",
+      "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
+      "date": "2026-08-31",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tier_pre": 3,
+      "cluster": "D_productivity",
+      "final_tier": 3,
+      "slot_msk": null,
+      "analyst_notes": [
+        "Low strategic value (product pricing tier). Tier 3 even after analysis arrives.",
+        "BLOCKER: pending_queue item has analysis:null. publish_post.py will skip with \"no analysis\". Run pipeline/analyze first."
+      ],
+      "defer": true,
+      "defer_reason": "No analysis yet (LLM translation/summary missing). Defer until analyze pipeline fills it. Likely next-cycle slot 09:00 MSK."
+    }
+  ],
+  "operational_alerts": [
+    "Telegram channel currently blocked: `plugins.entries.telegram: plugin disabled (channel disabled in config) but config is present`. All scheduled slots will fail to deliver until config is fixed. See data/cron-publish.log.",
+    "Last successful publish in logs: 2026-09-12 (per data/cron-publish.log). Current run started 2026-09-17 21:21:30 with 0 published / 0 failed / 0 skipped at the point of planning."
+  ]
+}

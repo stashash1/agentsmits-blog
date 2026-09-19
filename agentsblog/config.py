@@ -23,7 +23,7 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(
         env_prefix="AGENTSBLOG_",
-        env_file=".env",
+        env_file=PROJECT_ROOT_DEFAULT / ".env",
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
@@ -62,6 +62,18 @@ class Settings(BaseSettings):
     max_per_source_per_run: int = 2
     # Group same-source releases within this window into one digest post.
     release_group_window_days: int = 7
+
+    # Editorial policy: quality is required before any automatic delivery.
+    editorial_required: bool = True
+    editorial_min_score: int = Field(default=75, ge=0, le=100)
+    editorial_max_age_days: int = Field(default=5, ge=1, le=30)
+    editorial_max_daily_posts: int = Field(default=3, ge=1, le=20)
+    editorial_min_interval_minutes: int = Field(default=180, ge=0)
+    editorial_analysis_batch: int = Field(default=4, ge=1, le=20)
+    editorial_model: str = "qwen3:14b"
+    editorial_review_model: str = "qwen3:14b"
+    editorial_ollama_url: str = "http://127.0.0.1:11434"
+    editorial_author_style: str = "Технический разбор: объясни механизм, ограничения и конкретный пример применения. Точно, глубоко, без хайпа."
 
     # Site
     site_title: str = "AI Агенты Смита"
@@ -103,6 +115,13 @@ class Settings(BaseSettings):
     @property
     def telegram_audit(self) -> Path:
         return self.resolved_data_dir / "telegram_audit.log"
+
+    @property
+    def resolved_bot_token_file(self) -> Path | None:
+        if self.bot_token_file is None:
+            return None
+        path = self.bot_token_file.expanduser()
+        return (path if path.is_absolute() else self.root / path).resolve()
 
     # ── Validators ──
 

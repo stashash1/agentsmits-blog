@@ -14,10 +14,10 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="site-logo">
-        <div class="logo-icon">&#129302;</div>
+        <div class="logo-icon">С</div>
         <div>
           <div class="logo-text">{{ site_title }}</div>
-          <div class="logo-sub">AGI Countdown</div>
+          <div class="logo-sub">Отбор · Механика · Практика</div>
         </div>
       </a>
       <nav class="main-nav">
@@ -34,19 +34,16 @@
   <div class="page-wrapper">
     {% block content %}{% endblock %}
 
-    <aside class="agi-bar">
-      <div class="agi-icon">&#9200;</div>
-      <div class="agi-info">
-        <div class="agi-label">ДО AGI: <strong>~{{ agi_days }} дней</strong></div>
-        <div class="agi-track"><div class="agi-fill" style="width: {{ agi_percent }}%"></div></div>
-      </div>
-      <div class="agi-pct">{{ agi_percent }}%</div>
+    <aside class="editorial-note">
+      <strong>Сначала понять. Потом применять.</strong>
+      <p>В каждом разборе — источник, механизм, практический смысл и ограничения.
+      Выводы отделены от заявлений разработчиков. У технологий нет обещанной даты, когда они решат всё.</p>
     </aside>
   </div>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">&#129302; {{ site_title }}</div>
+      <div class="footer-brand">{{ site_title }}</div>
       <div class="footer-meta">
         Новости и аналитика искусственного интеллекта · Обновлено {{ updated }}<br>
         <a href="https://t.me/agentsSmits" target="_blank">@agentsSmits</a> ·

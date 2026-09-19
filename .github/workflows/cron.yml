@@ -1,69 +1,22 @@
-name: Cron — scan / publish / deploy
+name: Verify blogger
 
 on:
-  schedule:
-    # Every 30 minutes: scan + publish (cron trigger even when no commits)
-    - cron: "*/30 * * * *"
+  push:
+  pull_request:
   workflow_dispatch:
-    inputs:
-      command:
-        description: "Manual run: scan | publish | build-site | all"
-        required: false
-        default: "all"
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 jobs:
-  pipeline:
+  tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install agentsblog package
-        run: |
-          python3 -m pip install -e .
-
-      - name: Init DB (idempotent)
-        run: python3 -m agentsblog init-db
-
-      - name: Migrate legacy JSON (idempotent)
-        run: python3 -m agentsblog migrate
-        continue-on-error: true  # legacy data may not exist on first run
-
-      - name: Scan sources
-        run: python3 -m agentsblog scan
-
-      - name: Publish to Telegram
-        env:
-          AGENTSBLOG_TELEGRAM_ACCOUNT: ${{ secrets.TELEGRAM_ACCOUNT }}
-          AGENTSBLOG_TELEGRAM_TARGET: ${{ secrets.TELEGRAM_TARGET }}
-        run: python3 -m agentsblog publish --allow-during-quiet --limit 5
-        continue-on-error: true  # auth may not be configured
-
-      - name: Build site
-        run: python3 -m agentsblog build-site
-
-      - name: Deploy to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-
-  deploy:
-    needs: pipeline
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Install package and test dependencies
+        run: python -m pip install -e '.[test,api]'
+      - name: Test without external publication
+        run: python -m pytest -q

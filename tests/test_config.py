@@ -62,3 +62,9 @@ def test_settings_do_not_touch_disk_on_import(tmp_path, monkeypatch):
     # resolved_data_dir returns a Path, but does NOT mkdir
     s.resolved_data_dir  # accessing the property
     assert not (tmp_path / "data").exists()
+
+
+def test_bot_token_file_resolves_from_project_root(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path.parent)
+    settings = Settings(root=tmp_path, bot_token_file=Path("data/token.txt"))
+    assert settings.resolved_bot_token_file == (tmp_path / "data/token.txt").resolve()

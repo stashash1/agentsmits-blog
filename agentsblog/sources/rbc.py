@@ -24,6 +24,7 @@ class RbcSource:
 
     def scan(self):
         result = _b.fetch(self.page_url)
+        self.last_fetch = result
         if not result.body:
             return []
         pattern = re.compile(

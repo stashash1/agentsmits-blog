@@ -181,6 +181,7 @@ class SourceBase(ABC):
 
     def __init__(self, source: Source):
         self.source = source
+        self.last_fetch: FetchResult | None = None
 
     @abstractmethod
     def scan(self) -> list[Article]:
@@ -229,6 +230,7 @@ class RssSource(SourceBase):
 
     def scan(self) -> list[Article]:
         result = fetch(self.feed_url)
+        self.last_fetch = result
         if not result.body:
             return []
         articles: list[Article] = []
@@ -262,6 +264,7 @@ class HtmlSource(SourceBase):
 
     def scan(self) -> list[Article]:
         result = fetch(self.page_url, timeout=self.timeout)
+        self.last_fetch = result
         if not result.body:
             return []
         return self.extract_articles(result.body)
@@ -280,6 +283,7 @@ class ChangelogMdSource(SourceBase):
 
     def scan(self) -> list[Article]:
         result = fetch(self.raw_url)
+        self.last_fetch = result
         if not result.body:
             return []
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")

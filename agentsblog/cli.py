@@ -79,6 +79,19 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("status", help="Show pipeline status")
     sub.add_parser("health", help="Show source health")
 
+    analyze = sub.add_parser("analyze", help="Read sources, draft and review articles")
+    analyze.add_argument("--limit", type=int, default=8)
+    analyze.add_argument("--id", default=None)
+    analyze.add_argument("--retry-rejected", action="store_true")
+    sub.add_parser("editorial-status", help="Editorial decisions and delivery problems")
+    preview = sub.add_parser("preview-post", help="Preview one post without sending")
+    preview.add_argument("--id", required=True)
+    resolve = sub.add_parser("resolve-delivery", help="Reconcile an ambiguous Telegram send")
+    resolve.add_argument("--id", required=True)
+    decision = resolve.add_mutually_exclusive_group(required=True)
+    decision.add_argument("--message-id", type=int)
+    decision.add_argument("--not-sent", action="store_true")
+
     # ── HTTP API ────────────────────────────────────────────────
     serve = sub.add_parser("serve", help="Run HTTP API (FastAPI; needs [api] extra)")
     serve.add_argument("--host", default=None)
@@ -117,6 +130,9 @@ def main(argv: list[str] | None = None) -> int:
 def _dispatch(args: argparse.Namespace, settings: Settings) -> int:
     """Route subcommand → handler."""
     cmd = args.command
+    if cmd in {"analyze", "editorial-status", "preview-post", "resolve-delivery"}:
+        from agentsblog.cli_editorial import dispatch
+        return dispatch(args, settings)
     if cmd == "init-db":
         from agentsblog.cli_lifecycle import init_db_cmd
         return init_db_cmd(settings)

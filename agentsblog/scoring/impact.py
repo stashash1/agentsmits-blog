@@ -323,7 +323,7 @@ def compute_impact(
         matched_keywords = matched_keywords + ("release:1",)
 
     return ImpactResult(
-        base=int(round(adjusted_base)),
+        base=base,
         tier=tier,
         keyword_bonus=keyword_bonus,
         version_bonus=version_bonus,

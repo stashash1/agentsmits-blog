@@ -34,7 +34,7 @@ from agentsblog.db import (
     mark_published,
 )
 from agentsblog.models import Article, ArticleStatus
-from agentsblog.publishing.dedup import was_recently_sent
+from agentsblog.publishing.dedup import record_sent, was_recently_sent
 from agentsblog.publishing.decay import apply_decay_to_pending
 from agentsblog.publishing.formatter import (
     compute_agi,
@@ -44,6 +44,10 @@ from agentsblog.publishing.formatter import (
     format_standard,
 )
 from agentsblog.publishing.telegram import send as tg_send
+from agentsblog.publishing.telegram import SendResult
+from agentsblog.editorial import eligibility
+from agentsblog.publishing import delivery
+from agentsblog.publishing.editorial_format import format_editorial
 from agentsblog.scoring.breakthrough import detect_breakthrough
 from agentsblog.scoring.impact import is_release_item
 
@@ -92,6 +96,7 @@ def _trigger_site_rebuild(settings: Settings) -> tuple[int, str]:
         result = subprocess.run(
             [python, "-m", "agentsblog", "--root", str(settings.root), "build-site"],
             capture_output=True, text=True, timeout=300,
+            creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0),
         )
         return result.returncode, (result.stderr or "")[-200:]
     except subprocess.TimeoutExpired:
@@ -104,28 +109,57 @@ def publish_one(
     article: Article, settings: Settings, *,
     agi_days: int, agi_percent: int,
     force_breakthrough: bool = False,
+    allow_during_quiet: bool = False,
+    dry_run: bool = False,
 ) -> dict:
     """Format + send one article. Returns a result dict for tests / observability."""
+    reasons = eligibility(article, settings)
+    if reasons:
+        return {"ok": False, "reason": "editorial_gate", "issues": reasons, "article_id": article.id}
     breakthrough = detect_breakthrough(article)
     fmt = format_breakthrough if (force_breakthrough or breakthrough.is_breakthrough) else format_standard
     text = fmt(article, agi_days=agi_days, agi_percent=agi_percent)
+    if settings.editorial_required:
+        text = format_editorial(article)
+        settings = settings.model_copy(update={"telegram_parse_mode": "HTML"})
     if text is None:
         return {"ok": False, "reason": "no_analysis", "article_id": article.id}
+    import html
+    import re
+    visible = html.unescape(re.sub(r'<[^>]*>', '', text))
+    if len(visible.encode('utf-16-le')) // 2 > settings.telegram_max_len:
+        return {"ok": False, "reason": "post_too_long", "article_id": article.id}
 
     # Quiet hours check
-    if _is_quiet_now(settings):
+    if not allow_during_quiet and _is_quiet_now(settings):
         return {"ok": False, "reason": "quiet_hours", "article_id": article.id}
 
     # Text-level dedup
-    prev = was_recently_sent(text, settings)
+    prev = was_recently_sent(text, settings) if not settings.editorial_required else False
     if prev is not False:
         return {"ok": True, "reason": "dedup", "msg_id": prev if isinstance(prev, int) else 0,
                 "article_id": article.id}
 
-    result = tg_send(text, settings)
+    if dry_run:
+        blocked = delivery.reserve(article, settings, dry_run=True)
+        if blocked is not None:
+            return {**blocked, 'article_id': article.id}
+        return {"ok": True, "reason": "dry_run", "msg_id": 0,
+                "article_id": article.id}
+
+    reserved = delivery.reserve(article, settings)
+    if reserved is not None:
+        return {**reserved, "article_id": article.id}
+    try:
+        result = tg_send(text, settings)
+    except Exception as exc:
+        result = SendResult(ok=False, reason="unknown", error=type(exc).__name__)
+    delivery_state = delivery.finish(article, settings, result)
+    if delivery_state == "sent":
+        record_sent(text, result.msg_id, settings)
     return {
-        "ok": result.ok,
-        "reason": result.reason,
+        "ok": delivery_state == "sent",
+        "reason": "delivery_needs_review" if delivery_state == "unknown" else result.reason,
         "msg_id": result.msg_id,
         "duration_ms": result.duration_ms,
         "error": result.error,
@@ -148,16 +182,21 @@ def run_publish(settings: Settings, *,
     # Pick candidates: pending, importance >= settings.min_publish_importance
     min_imp = settings.min_publish_importance
     candidates = list_pending(conn, min_importance=min_imp, limit=None)
-    apply_decay_to_pending(candidates)
+    candidates = apply_decay_to_pending(candidates)
 
     # Drop anything we can already see in DB-published
     # (defensive: in case list_pending returned a stale status row)
     pending = []
+    blocked = {}
     for art in candidates:
         if art.status is not ArticleStatus.PENDING:
             continue
         if not art.is_publishable:
             log.info("skipping %s (no analysis)", art.id)
+            continue
+        reasons = eligibility(art, settings)
+        if reasons:
+            blocked[art.id] = reasons
             continue
         pending.append(art)
 
@@ -174,6 +213,8 @@ def run_publish(settings: Settings, *,
 
     # Sort: breakthrough first, then by decayed importance desc
     def _sort_key(a: Article):
+        if settings.editorial_required:
+            return (-a.ai_impact['editorial']['score'], -a.decayed_importance)
         bt = detect_breakthrough(a)
         return (
             0 if bt.is_breakthrough else 1,
@@ -182,12 +223,21 @@ def run_publish(settings: Settings, *,
             a.date,
         )
     pending.sort(key=_sort_key)
-    pending = pending[: (limit or settings.max_publish_per_run)]
+    if settings.editorial_required:
+        counts = {}
+        diverse = []
+        for article in pending:
+            count = counts.get(article.source_id, 0)
+            if count < settings.max_per_source_per_run:
+                diverse.append(article)
+                counts[article.source_id] = count + 1
+        pending = diverse
+    pending = pending[: (limit if limit is not None else settings.max_publish_per_run)]
 
     # ---- Group release-type items by source into digest posts ----
     release_groups = _group_releases_by_source(
         pending, settings.release_group_window_days
-    )
+    ) if not settings.editorial_required else {}
     # Track which items got absorbed into a digest (skip in standalone loop)
     digested_ids: set[str] = set()
 
@@ -196,10 +246,12 @@ def run_publish(settings: Settings, *,
         "published": 0, "failed": 0, "skipped": 0,
         "published_ids": [],
         "agi_days": agi_days, "agi_percent": agi_percent,
+        "editorial_blocked": blocked,
     }
 
     # Emit digests first (one per source with 2+ releases)
     for src_id, group in release_groups.items():
+        group = group[:5]  # formatter lists at most five releases
         if len(group) < 2:
             continue  # single release → publish as standalone below
         text = format_release_digest(
@@ -207,6 +259,11 @@ def run_publish(settings: Settings, *,
             agi_days=agi_days, agi_percent=agi_percent,
         )
         if text is None:
+            continue
+        if dry_run:
+            digested_ids.update(it.id for it in group)
+            summary["would_publish"] = summary.get("would_publish", 0) + 1
+            summary.setdefault("would_publish_ids", []).extend(it.id for it in group)
             continue
         # Dedup against recently-sent
         prev = was_recently_sent(text, settings)
@@ -222,6 +279,7 @@ def run_publish(settings: Settings, *,
             continue
         result = tg_send(text, settings)
         if result.ok:
+            record_sent(text, result.msg_id, settings)
             for it in group:
                 digested_ids.add(it.id)
                 if not dry_run:
@@ -245,7 +303,25 @@ def run_publish(settings: Settings, *,
             log.info("per-source cap reached for %s, skipping %s", sid, art.id)
             summary["skipped"] += 1
             continue
-        result = publish_one(art, settings, agi_days=agi_days, agi_percent=agi_percent)
+        result = publish_one(
+            art, settings, agi_days=agi_days, agi_percent=agi_percent,
+            allow_during_quiet=allow_during_quiet, dry_run=dry_run,
+        )
+        if result["reason"] == "dry_run":
+            summary["would_publish"] = summary.get("would_publish", 0) + 1
+            summary.setdefault("would_publish_ids", []).append(art.id)
+            per_source_count[sid] = per_source_count.get(sid, 0) + 1
+            if settings.editorial_required and settings.editorial_min_interval_minutes > 0:
+                break
+            continue
+        if result["reason"] in {"daily_limit", "minimum_interval", "delivery_backoff", "delivery_needs_review", "editorial_gate", "post_too_long", "recent_topic"}:
+            summary["skipped"] += 1
+            summary.setdefault("deferred_reasons", {})[art.id] = result["reason"]
+            if result['reason'] == 'delivery_needs_review':
+                summary['needs_review'] = summary.get('needs_review', 0) + 1
+            if result["reason"] in {"daily_limit", "minimum_interval"}:
+                break
+            continue
         if result["reason"] == "quiet_hours":
             summary["skipped"] += 1
             continue
@@ -254,6 +330,9 @@ def run_publish(settings: Settings, *,
             summary["failed"] += 1
             continue
         msg_id = result.get("msg_id") or 0
+        if dry_run:
+            summary["skipped"] += 1
+            continue
         if not dry_run:
             mark_published(conn, art.id, msg_id)
             append_event(conn, run_id=run_id, script="publish",
@@ -261,6 +340,7 @@ def run_publish(settings: Settings, *,
                          details={"article_id": art.id, "msg_id": msg_id,
                                  "reason": result["reason"]})
         summary["published"] += 1
+        per_source_count[sid] = per_source_count.get(sid, 0) + 1
         summary["published_ids"].append(art.id)
 
     # Rebuild site if anything was published
@@ -278,8 +358,10 @@ def run_publish(settings: Settings, *,
 def print_summary(summary: dict) -> None:
     print(f"Publish {summary['run_id']} complete:")
     print(f"  published: {summary['published']}")
+    if "would_publish" in summary:
+        print(f"  would publish: {summary['would_publish']}")
     print(f"  failed:    {summary['failed']}")
     print(f"  skipped:   {summary.get('skipped', 0)}")
     if "quiet_deferred" in summary:
         print(f"  quiet deferred: {summary['quiet_deferred']}")
-    print(f"  AGI: {summary['agi_days']} days ({summary['agi_percent']}%)")
+    print(f"  editorial blocked: {len(summary.get('editorial_blocked', {}))}")

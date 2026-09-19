@@ -47,6 +47,7 @@ class ArxivSource:
 
     def scan(self):
         result = _b.fetch(self.api_url, timeout=20)
+        self.last_fetch = result
         if not result.body:
             return []
         today = datetime.now(timezone.utc)

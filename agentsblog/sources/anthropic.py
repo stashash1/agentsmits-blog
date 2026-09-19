@@ -47,6 +47,7 @@ class AnthropicSource:
 
     def scan(self):
         result = _b.fetch(self.sitemap_url)
+        self.last_fetch = result
         if not result.body:
             return []
         today = datetime.now(timezone.utc)

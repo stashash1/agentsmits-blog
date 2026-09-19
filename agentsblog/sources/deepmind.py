@@ -24,6 +24,7 @@ class DeepMindSource:
 
     def scan(self):
         result = _b.fetch(self.sitemap_url)
+        self.last_fetch = result
         if not result.body:
             return []
         urls = re.findall(r"<loc>(https://deepmind\.google/blog/[^<]+)</loc>", result.body)

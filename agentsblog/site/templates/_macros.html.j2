@@ -1,16 +1,26 @@
 {% macro post_card(post, dense=False) %}
-  {% set bt = post.is_breakthrough %}
+  {% set bt = False %}
   <article class="hero-card{% if bt %} hero-card-bt{% endif %}{% if dense %} hero-card-dense{% endif %}">
     <header class="card-header">
       <span class="card-source">{{ post.source_id }}</span>
       <span class="card-date">{{ post.date }}</span>
-      {% if bt %}<span class="bt-badge">&#128293; ПРОРЫВ</span>{% endif %}
+      {% if post.editorial %}<span class="editorial-badge">Технический разбор</span>{% endif %}
     </header>
     <h2 class="card-title">
       <a href="{{ post.url }}" target="_blank" rel="noopener">
         {{ post.translated_title or post.title }}
       </a>
     </h2>
+    {% if post.editorial %}
+      {% set draft = post.editorial %}
+      <p class="card-summary">{{ draft.lead }}</p>
+      <ul class="fact-list">{% for fact in draft.facts %}<li>{{ fact.claim }}</li>{% endfor %}</ul>
+      {% for label, key in [('Как это работает', 'technical_detail'), ('Зачем это нужно', 'why_it_matters'), ('Мой вывод', 'take'), ('Где границы', 'caveat'), ('Что проверить', 'practical_step')] %}
+      <section class="card-impact{% if key == 'take' %} author-take{% endif %}">
+        <h3 class="impact-label">{{ label }}</h3><p class="impact-text">{{ draft[key] }}</p>
+      </section>
+      {% endfor %}
+    {% else %}
     {% if post.summary %}
       <p class="card-summary">{{ post.summary }}</p>
     {% endif %}
@@ -31,6 +41,7 @@
         <div class="impact-label">Влияние на IT-индустрию</div>
         <div class="impact-text">{{ post.it_impact }}</div>
       </div>
+    {% endif %}
     {% endif %}
     <footer class="card-footer">
       {% if post.tags %}

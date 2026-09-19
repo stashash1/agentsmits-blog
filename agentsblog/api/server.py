@@ -144,6 +144,8 @@ def create_app(settings: Settings) -> FastAPI:
               status_code=201, dependencies=[Depends(auth)])
     def add_article(body: ArticleIn) -> ArticleOut:
         """Add a news article manually. THE missing API endpoint."""
+        if body.publish and not body.agent_impact.strip():
+            raise HTTPException(status_code=422, detail="agent_impact is required to publish")
         conn = _conn()
         # Auto-register source if missing
         existing = conn.execute(
@@ -160,6 +162,9 @@ def create_app(settings: Settings) -> FastAPI:
 
         import hashlib
         aid = f"{body.source}-{hashlib.md5(str(body.url).encode()).hexdigest()[:12]}"
+        existing_article = get_article(conn, aid)
+        if existing_article and existing_article.status is not ArticleStatus.PENDING:
+            raise HTTPException(status_code=409, detail="article already processed")
         article = Article(
             id=aid,
             source_id=body.source,
@@ -182,15 +187,12 @@ def create_app(settings: Settings) -> FastAPI:
 
         # Optionally publish immediately
         if body.publish:
-            if not article.is_publishable:
-                raise HTTPException(
-                    status_code=422,
-                    detail="article has no analysis (agent_impact); "
-                           "fill it before publishing",
-                )
             agi_days, agi_percent = compute_agi(settings)
             result = publish_one(article, settings,
                                  agi_days=agi_days, agi_percent=agi_percent)
+            if not result["ok"]:
+                raise HTTPException(status_code=429 if result["reason"] == "quiet_hours" else 502,
+                                    detail=f"publish failed: {result['reason']}")
             if result["ok"] and result["reason"] != "dedup":
                 mark_published(conn, aid, result.get("msg_id") or 0)
                 article = get_article(conn, aid)
@@ -213,6 +215,8 @@ def create_app(settings: Settings) -> FastAPI:
         article = get_article(conn, article_id)
         if article is None:
             raise HTTPException(status_code=404, detail="article not found")
+        if article.status is not ArticleStatus.PENDING:
+            raise HTTPException(status_code=409, detail="article is not pending")
         if not article.is_publishable:
             raise HTTPException(
                 status_code=422,
@@ -227,7 +231,10 @@ def create_app(settings: Settings) -> FastAPI:
             raise HTTPException(status_code=429, detail="quiet hours; try later")
         agi_days, agi_percent = compute_agi(settings)
         result = publish_one(article, settings,
-                             agi_days=agi_days, agi_percent=agi_percent)
+                             agi_days=agi_days, agi_percent=agi_percent,
+                             allow_during_quiet=allow_during_quiet)
+        if not result["ok"]:
+            raise HTTPException(status_code=502, detail=f"publish failed: {result['reason']}")
         if result["ok"] and result["reason"] != "dedup":
             mark_published(conn, article_id, result.get("msg_id") or 0)
         updated = get_article(conn, article_id)

@@ -584,3 +584,41 @@ Publish publish:20260910T170508 complete:
   failed:    0
   skipped:   0
   AGI: 1208 days (17%)
+2026-09-10 22:41:43,974 [INFO] agentsblog.publishing.publisher: skipping anthropic-anthropic-education-report-how-educat-ed47e5717e15 (no analysis)
+2026-09-10 22:41:43,976 [INFO] agentsblog.publishing.publisher: skipping anthropic-updates-to-our-consumer-terms (no analysis)
+2026-09-10 22:41:43,976 [INFO] agentsblog.publishing.publisher: skipping anthropic-anthropic-raises-series-f-at-usd183b--ec6a2e1485e9 (no analysis)
+2026-09-10 22:41:43,976 [INFO] agentsblog.publishing.publisher: skipping anthropic-updating-restrictions-of-sales-to-uns-ce0eda2f2582 (no analysis)
+2026-09-10 22:41:43,976 [INFO] agentsblog.publishing.publisher: skipping openai-introducing-chatgpt-financial-services (no analysis)
+2026-09-10 22:41:43,976 [INFO] agentsblog.publishing.publisher: skipping openai-introducing-gpt-live-1-in-the-api (no analysis)
+2026-09-10 22:41:43,976 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260910T194143 complete:
+  published: 0
+  failed:    0
+  skipped:   0
+  AGI: 1208 days (17%)
+2026-09-12 00:50:50,409 [INFO] agentsblog.publishing.publisher: skipping openai-scaling-storage-one-billion-users-part-one (no analysis)
+2026-09-12 00:50:50,411 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260911T215050 complete:
+  published: 0
+  failed:    0
+  skipped:   5
+  AGI: 1206 days (17%)
+2026-09-12 01:45:37,894 [INFO] agentsblog.publishing.publisher: skipping techcrunch-mark-wahlberg-is-coming-to-techcrunc-96e78022ceca (no analysis)
+2026-09-12 01:45:37,894 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.11916 (no analysis)
+2026-09-12 01:45:37,894 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.11900 (no analysis)
+2026-09-12 01:45:37,894 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260911T224537 complete:
+  published: 0
+  failed:    0
+  skipped:   5
+  AGI: 1206 days (17%)
+2026-09-12 02:15:00,807 [INFO] agentsblog.publishing.publisher: skipping techcrunch-mecka-ai-nears-500m-valuation-in-seq-c923ead07513 (no analysis)
+2026-09-12 02:15:00,807 [INFO] agentsblog.publishing.publisher: skipping techcrunch-mark-wahlberg-is-coming-to-techcrunc-96e78022ceca (no analysis)
+2026-09-12 02:15:00,807 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.11916 (no analysis)
+2026-09-12 02:15:00,807 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.11900 (no analysis)
+2026-09-12 02:15:00,807 [INFO] agentsblog.publishing.publisher: skipping arxiv-2609.10364 (no analysis)
+Publish publish:20260911T231500 complete:
+  published: 0
+  failed:    0
+  skipped:   5
+  AGI: 1206 days (17%)

@@ -50,7 +50,7 @@ def test_run_scan_dry_run_does_not_persist(tmp_settings, monkeypatch):
     register_all()
     # Stub fetch() to return empty bodies — so no items are produced
     from agentsblog.sources import base as b
-    b.fetch = lambda url, **kw: type("R", (), {"body": None, "fetch_ms": 1, "status": 200, "error": "stub"})()
+    b.fetch = lambda url, **kw: type("R", (), {"body": None, "fetch_ms": 1, "status": 200, "error": ""})()
     try:
         summary = run_scan(tmp_settings, dry_run=True)
         # Sources got registered (NOT dry-run controlled), but no articles added
@@ -142,3 +142,26 @@ def test_source_health_records_per_source(tmp_settings):
         assert h_deepseek.items_found_last_run == 0
     finally:
         b.fetch = lambda url, **kw: type("R", (), {"body": None, "fetch_ms": 1, "status": 200})()
+
+
+def test_disabled_source_stays_disabled_after_scan(tmp_settings, db, monkeypatch):
+    from agentsblog.sources import base as b
+    from agentsblog.sources import register_all
+    register_all()
+    monkeypatch.setattr(b, "fetch", lambda url, **kw: b.FetchResult(body=None, status=200))
+    run_scan(tmp_settings, limit_sources=["openai"])
+    db.execute("UPDATE sources SET enabled = 0 WHERE id = 'openai'")
+    summary = run_scan(tmp_settings, limit_sources=["openai"])
+    assert summary["sources_scanned"] == 0
+    assert db.execute("SELECT enabled FROM sources WHERE id = 'openai'").fetchone()[0] == 0
+
+
+def test_fetch_error_records_failed_health(tmp_settings, db, monkeypatch):
+    from agentsblog.sources import base as b
+    monkeypatch.setattr(b, "fetch", lambda url, **kw: b.FetchResult(
+        body=None, status=403, fetch_ms=12, error="HTTP 403"))
+    summary = run_scan(tmp_settings, limit_sources=["openai"])
+    health = get_source_health(db, "openai")
+    assert summary["sources_failed"] == 1
+    assert health.fail_streak == 1
+    assert health.last_error == "HTTP 403"

@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-09-16T10:06:00.000Z",
+  "window_end": "2026-09-16T16:06:00.000Z",
+  "plan": [
+    {
+      "tier": 1,
+      "slot": "14:00",
+      "id": "openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e",
+      "source": "OpenAI",
+      "decayed_importance": 2.043,
+      "age_days": 9.04,
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "title_ru": "Наше решение относительно Cursor после его приобретения SpaceX",
+      "tags": [
+        "openai",
+        "cursor",
+        "spacex"
+      ],
+      "reason": "strong"
+    },
+    {
+      "tier": 2,
+      "slot": "15:00",
+      "id": "huggingface-open-asr-leaderboard-global-south",
+      "source": "HuggingFace",
+      "decayed_importance": 0.9,
+      "age_days": 9.04,
+      "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+      "title_ru": "Открытый лидерборд ASR добавил первый язык из стран Глобального Юга",
+      "tags": [
+        "asr",
+        "speech-recognition",
+        "global-south"
+      ],
+      "reason": "filler"
+    },
+    {
+      "tier": 3,
+      "slot": "14:30",
+      "id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "source": "TechCrunch AI",
+      "decayed_importance": 0.6,
+      "age_days": 7.04,
+      "title": "Musk&#8217;s faster path to more gas turbines comes with pollution problem",
+      "title_ru": "Ускоренный путь Маска к увеличению числа газовых турбин сопряжён с проблемой загрязнения окружающей среды",
+      "tags": [
+        "energy-infrastructure",
+        "ai-compute",
+        "environmental-impact"
+      ],
+      "reason": "filler"
+    },
+    {
+      "tier": 3,
+      "slot": "15:30",
+      "id": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+      "source": "TechCrunch AI",
+      "decayed_importance": 0.6,
+      "age_days": 7.04,
+      "title": "Caterpillar is bringing to AI deployment what it learned from automating mining",
+      "title_ru": "Caterpillar применяет опыт автоматизации горнодобывающей отрасли к развёртыванию ИИ",
+      "tags": [
+        "ai-agents",
+        "industrial-automation",
+        "autonomous-systems"
+      ],
+      "reason": "filler"
+    },
+    {
+      "tier": 3,
+      "slot": "16:30",
+      "id": "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+      "source": "TechCrunch AI",
+      "decayed_importance": 0.6,
+      "age_days": 6.04,
+      "title": "The U.S. is building barriers around drones and robots, but China has scale to get around them",
+      "title_ru": "США строят барьеры вокруг дронов и роботов, но у Китая есть масштаб, чтобы их обойти",
+      "tags": [
+        "drones",
+        "robotics",
+        "us-china-tech"
+      ],
+      "reason": "filler"
+    },
+    {
+      "tier": 3,
+      "slot": "17:30",
+      "id": "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0",
+      "source": "TechCrunch AI",
+      "decayed_importance": 0.6,
+      "age_days": 6.04,
+      "title": "Meeting notetaker Circleback adds a free tier to attract more customers",
+      "title_ru": "Meeting notetaker Circleback adds a free tier to attract more customers",
+      "tags": [],
+      "reason": "filler"
+    }
+  ]
+}
