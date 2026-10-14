@@ -1,0 +1,358 @@
+{
+  "cycle_id": "2026-10-08-0015",
+  "clustered_at": "2026-10-07T21:15:00Z",
+  "clustered_at_msk": "2026-10-08T00:15:00+03:00",
+  "window_msk": "2026-10-08T00:15:00+03:00 to 2026-10-08T06:15:00+03:00",
+  "quiet_hours_applied": "FULL overlap. Cycle 00:15-06:15 MSK = 360 quiet minutes (0 ACTIVE minutes). publish-cron sleeps entire cycle. No Telegram publish slots available.",
+  "previous_cycle_id": "2026-10-07-1815",
+  "previous_cycle_outcome": "Daily limit 3/3 already exhausted in MSK 2026-10-07 (msg 1667 08:05, msg 1668 11:35, msg 1669 15:05). Both in-cycle slots (T1 20:30, T2 22:30) within MSK Oct 7 → BLOCKED by editorial daily cap (EDITORIAL.md §4). T3 slot 00:30 MSK 2026-10-08 belongs to THIS cycle (2026-10-08-0015) but falls inside quiet hours → structurally unavailable. 86 fresh Tier-2 candidates in blog.db queued but cannot publish until daily cap resets at 00:00:01 MSK Oct 8 AND active window begins at 08:00 MSK Oct 8.",
+  "pending_total": 6,
+  "pending_analyzed_with_t2_or_higher": 1,
+  "fresh_t2_quality": 0,
+  "publishable_pending": 0,
+  "scheduled_count": 0,
+  "deferred_count": 6,
+  "primary_blocker": "FULL QUIET CYCLE — window 00:15-06:15 MSK is 100% inside quiet gate (23:00-08:00 MSK). publish-cron sleeps entire cycle. Zero ACTIVE minutes, 360 quiet minutes. No Telegram publish slots structurally available regardless of queue content.",
+  "secondary_blocker": "TERMINAL DECAY — все 6 items ACTUAL decayed 0.000260-0.0875 (orders of magnitude below tier cutoffs 1.0/1.5). All items 37.9-40.9 days old, well outside 5-day freshness gate. Even in ACTIVE cycle, no auto-publish candidates in pending_queue.json. Workaround territory requires explicit user override.",
+  "tertiary_blocker": "STALE SCAN — last_checked 2026-08-31 (~37.1d ago). pending_queue.json is terminal-stale snapshot from pre-freshness-gate era. blog.db (publish-cron domain) holds the live 575 items / 164 fresh-7d / 376 publishable — but cluster-cron domain is pending_queue.json only.",
+  "tier_legend": {
+    "1": "Premier: importance 5 (4+ rarely), strategic/business critical. Single post per cycle. Reserved slot.",
+    "2": "Notable: importance 3, niche but worth a post. Standard slot.",
+    "3": "Filler: importance 1-2, contextual. Last slot; one item only per cycle."
+  },
+  "slot_map": {
+    "t1_msk": "08:30 (next cycle)",
+    "t1_status": "OUT of scope — belongs to next-next cycle 2026-10-08-0615 (within ACTIVE tail 08:00-12:15).",
+    "t2_msk": "10:30 (next cycle)",
+    "t2_status": "OUT of scope — same as T1.",
+    "t3_msk": "12:00 (next cycle)",
+    "t3_status": "OUT of scope — same as T1.",
+    "current_cycle_slots": "NONE — 00:15-06:15 MSK is fully inside quiet hours (23:00-08:00 MSK). publish-cron sleeps entire window."
+  },
+  "schedule": [],
+  "deferred": [
+    {
+      "article_id": "openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e",
+      "source": "OpenAI",
+      "title": "Наше решение относительно Cursor после его приобретения SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "importance": 5,
+      "stored_decayed_importance": 2.043,
+      "actual_decayed_importance": 0.0875,
+      "actual_decayed_formula": "5 * exp(-0.693/7 * 40.8854) = 0.0875",
+      "age_days_at_now": 40.8854,
+      "tier": 1,
+      "tags": ["openai", "cursor", "spacex", "acquisition", "agent-strategy", "competitive-landscape"],
+      "publish_template": "standard",
+      "narrative_id": "n-00008",
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 5 — высшая стратегическая позиция, единственный Tier-1 candidate в queue.",
+        "Stored decayed 2.043 (computed 2026-08-30 baseline). ACTUAL now: 0.0875 (delta=40.8854d, half_life=7d).",
+        "ACTUAL 0.0875 << Tier-1 threshold 1.0. Workaround territory — 8.75% of threshold.",
+        "Cluster-cron convention holds workaround items до explicit user override (`agentsblog publish --id …`) или cache-evict.",
+        "Deferred across: 19 cycles stale (с 2026-10-02-1815).",
+        "Anchored to narrative n-00008 (OpenAI acquisitions / competitive landscape).",
+        "NOT a breakthrough (acquisition / competitive strategy, no architecture / SOTA / open-source frontier signal).",
+        "Despite terminal decay, highest-leverage item в queue: importance 5, narrative weight, business-critical."
+      ],
+      "analyst_notes": [
+        "Tier 1 — business-critical: SpaceX acquires Cursor, OpenAI winds down its model contract on the platform. Power shift в AI-coding.",
+        "Три sub-stories: (1) SpaceX enters software-IDE agent stack; (2) OpenAI draws line on IDE vendor capture; (3) cost to Cursor's OpenAI-model customers.",
+        "Terminal decay flag: ACTUAL decayed 0.0875 << Tier-1 threshold 1.0. Cluster-cron emits advisory but does NOT auto-publish workaround territory without explicit user override.",
+        "CYCLE: this cycle = FULL quiet (00:15-06:15 MSK). No slots available. Next ACTIVE slot = Tier-1 08:30 MSK 2026-10-08 in cycle 2026-10-08-0615 (ACTIVE tail 08:00-12:15 MSK, 4h15m window).",
+        "If published at T1 08:30 MSK 2026-10-08: importance 5 → -2 days AGI (1212 → 1210).",
+        "Age 40.9d в pending — well outside 5-day freshness gate (EDITORIAL.md §4).",
+        "Cluster-cron recommendation: explicit override OR cache-evict. ESCALATION: 19 cycles stale; if user wants it published, this is the strongest workaround candidate. Tier-1 slot 08:30 MSK 2026-10-08 IS ACTIVE in next cycle.",
+        "Cycle timing change: current cycle is 100% quiet, so cursor-spacex override has no window this cycle. Next cycle 2026-10-08-0615 has full ACTIVE tail (4h15m).",
+        "Daily limit state at next cycle start (08:00 MSK Oct 8): if no publications between 00:00-08:00 (none possible — quiet), daily limit resets to 0/3 used → T1 08:30 MSK eligible IF override issued."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": true,
+        "template": "standard",
+        "blocked_reasons": ["full_quiet_cycle_no_slots", "below_tier1_threshold_actual", "workaround_territory", "needs_explicit_override", "freshness_gate_breach"]
+      },
+      "defer_reason": "FULL QUIET CYCLE: 00:15-06:15 MSK is 100% quiet, no slots this cycle. ACTUAL decayed 0.0875 << tier-1 cutoff 1.0 + freshness gate breach (40.9d). Workaround territory — requires explicit override. Tier-1 slot 08:30 MSK IS available next cycle (2026-10-08-0615, ACTIVE tail 08:00-12:15 MSK). Daily limit resets 00:00:01 MSK Oct 8 → eligible at T1 08:30 MSK if override issued."
+    },
+    {
+      "article_id": "huggingface-open-asr-leaderboard-global-south",
+      "source": "HuggingFace",
+      "title": "Открытый лидерборд ASR добавил первый язык из стран Глобального Юга",
+      "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "importance": 3,
+      "stored_decayed_importance": 0.9,
+      "actual_decayed_importance": 0.01040,
+      "actual_decayed_formula": "3 * exp(-0.693/5 * 40.8854) = 0.01040",
+      "age_days_at_now": 40.8854,
+      "tier": 2,
+      "tags": ["asr", "speech-recognition", "global-south", "open-benchmark", "inclusivity"],
+      "publish_template": "standard",
+      "narrative_id": "n-00015",
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 3 — niche but worth a post. Tier-2 candidate by base importance.",
+        "Stored decayed 0.9 (computed 2026-08-28 baseline). ACTUAL now: 0.01040 (delta=40.8854d, half_life=5d).",
+        "ACTUAL 0.01040 << Tier-2 threshold 1.5. Workaround territory — 0.69% of threshold.",
+        "Deferred across: 19 cycles stale.",
+        "Anchored to narrative n-00015 (HuggingFace open-source / agent tooling).",
+        "CYCLE: Tier-2 slot 10:30 MSK OUT of scope (belongs to next cycle 2026-10-08-0615, ACTIVE tail 08:00-12:15)."
+      ],
+      "analyst_notes": [
+        "Tier 2 — niche inclusivity в ASR: Hugging Face adds first Global South language to Open ASR Leaderboard.",
+        "Terminal decay flag: ACTUAL 0.01040 << Tier-2 threshold 1.5. Cluster-cron does NOT auto-publish.",
+        "CYCLE: this cycle FULL quiet — Tier-2 slot 10:30 MSK belongs to next cycle 2026-10-08-0615 (ACTIVE tail 4h15m, 08:00-12:15 MSK).",
+        "If published at T2 10:30 MSK 2026-10-08: importance 3 → -0.5 days AGI (1212 → 1211.5).",
+        "Age 40.9d в pending — well outside 5-day freshness gate.",
+        "Cluster-cron recommendation: cache-evict OR keep as narrative anchor. Tier-2 slot 10:30 MSK 2026-10-08 IS ACTIVE with comfortable override window.",
+        "Telegram risk: 08:00-10:00 MSK is morning peak. Tier-2 slot 10:30 MSK just outside morning peak. Safe."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["full_quiet_cycle_no_slots", "below_tier2_threshold_actual", "workaround_territory", "freshness_gate_breach"]
+      },
+      "defer_reason": "FULL QUIET CYCLE: 00:15-06:15 MSK is 100% quiet. ACTUAL decayed 0.01040 << tier-2 cutoff 1.5 + freshness gate breach. Workaround territory. Tier-2 slot 10:30 MSK 2026-10-08 IS ACTIVE next cycle with comfortable override window."
+    },
+    {
+      "article_id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "source": "TechCrunch AI",
+      "title": "Ускоренный путь Маска к увеличению числа газовых турбин сопряжён с проблемой загрязнения окружающей среды",
+      "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+      "importance": 2,
+      "stored_decayed_importance": 0.6,
+      "actual_decayed_importance": 0.000250,
+      "actual_decayed_formula": "2 * exp(-0.693/3 * 38.8854) = 0.000250",
+      "age_days_at_now": 38.8854,
+      "tier": 3,
+      "tags": ["energy-infrastructure", "ai-compute", "environmental-impact"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 2 — niche industrial. ACTUAL 0.000250 << Tier-3 threshold 1.0.",
+        "Deferred across: 19 cycles stale.",
+        "Cache-evict candidate (terminal decay)."
+      ],
+      "analyst_notes": [
+        "Tier 3 backup — environmental impact of AI-compute energy.",
+        "If published: importance 2 → no AGI change.",
+        "Stored decay exceeds freshness gate (age ~38.9d, ACTUAL 0.000250) — cache-evict candidate.",
+        "Recommended action: `agentsblog cache-evict --pending-stale` для cleanup pending_queue.json.",
+        "CYCLE: Tier-3 slot 12:00 MSK 2026-10-08 belongs to next cycle 2026-10-08-0615 (ACTIVE tail 08:00-12:15, 15m override window at cycle boundary)."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["full_quiet_cycle_no_slots", "below_tier3_threshold_actual", "cache_evict_recommended", "freshness_gate_breach"]
+      },
+      "defer_reason": "FULL QUIET CYCLE + ACTUAL decayed 0.000250 << tier-3 threshold 1.0 + freshness gate breach. Cache-evict candidate."
+    },
+    {
+      "article_id": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+      "source": "TechCrunch AI",
+      "title": "Caterpillar применяет опыт автоматизации горнодобывающей отрасли к развёртыванию ИИ",
+      "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
+      "importance": 2,
+      "stored_decayed_importance": 0.6,
+      "actual_decayed_importance": 0.000250,
+      "actual_decayed_formula": "2 * exp(-0.693/3 * 38.8854) = 0.000250",
+      "age_days_at_now": 38.8854,
+      "tier": 3,
+      "tags": ["ai-agents", "industrial-automation", "autonomous-systems"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 2 — industrial AI agent deployment. ACTUAL 0.000250 << Tier-3 threshold 1.0.",
+        "Deferred across: 19 cycles stale.",
+        "Cache-evict candidate (terminal decay)."
+      ],
+      "analyst_notes": [
+        "Tier 3 — industrial AI deployment (mining → factory). Niche but agent-relevant.",
+        "If published: importance 2 → no AGI change.",
+        "Stored decay exceeds freshness gate (age ~38.9d). Cache-evict candidate.",
+        "Cross-link с Musk turbines (compute), US-China drones (industry/policy) — все Tier-3 кандидаты в terminal decay, могут быть эвикнуты пакетом."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["full_quiet_cycle_no_slots", "below_tier3_threshold_actual", "cache_evict_recommended", "freshness_gate_breach"]
+      },
+      "defer_reason": "FULL QUIET CYCLE + ACTUAL decayed 0.000250 << tier-3 threshold 1.0 + freshness gate breach. Cache-evict candidate."
+    },
+    {
+      "article_id": "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+      "source": "TechCrunch AI",
+      "title": "США строят барьеры вокруг дронов и роботов, но у Китая есть масштаб, чтобы их обойти",
+      "url": "https://techcrunch.com/2026/08/31/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
+      "importance": 2,
+      "stored_decayed_importance": 0.6,
+      "actual_decayed_importance": 0.000313,
+      "actual_decayed_formula": "2 * exp(-0.693/3 * 37.8854) = 0.000313",
+      "age_days_at_now": 37.8854,
+      "tier": 3,
+      "tags": ["drones", "robotics", "us-china-tech"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 2 — geopolitical tech competition. ACTUAL 0.000313 << Tier-3 threshold 1.0.",
+        "Cross-link с Musk turbines (compute), Caterpillar (industrial AI) — все в terminal decay.",
+        "Cache-evict candidate."
+      ],
+      "analyst_notes": [
+        "Tier 3 — low priority. The news aged out of AI-agent relevance window.",
+        "If published: importance 2 → no AGI change.",
+        "Stored decay exceeds freshness gate (age ~37.9d). Cache-evict candidate.",
+        "Low cross-narrative weight — pure industry / policy beat."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["full_quiet_cycle_no_slots", "below_tier3_threshold_actual", "low_priority", "cache_evict_recommended", "freshness_gate_breach"]
+      },
+      "defer_reason": "FULL QUIET CYCLE + ACTUAL decayed 0.000313 << tier-3 threshold 1.0 + freshness gate breach. Low priority — cache-evict recommended."
+    },
+    {
+      "article_id": "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0",
+      "source": "TechCrunch AI",
+      "title": "Meeting notetaker Circleback добавляет бесплатный тариф для привлечения клиентов",
+      "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
+      "importance": 2,
+      "stored_decayed_importance": 0.6,
+      "actual_decayed_importance": 0.000313,
+      "actual_decayed_formula": "2 * exp(-0.693/3 * 37.8854) = 0.000313",
+      "age_days_at_now": 37.8854,
+      "tier": 3,
+      "tags": ["saas", "meeting-tools", "freemium", "product-update"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": false,
+      "tier_rationale": [
+        "Importance 2 — minor SaaS-product update. Below Tier-3 threshold.",
+        "BLOCKER: missing analysis (analyzed=false, no translated_title / agent_impact / business_impact / it_impact). Won't pass skipped_no_analysis filter at cron_publish.ps1."
+      ],
+      "analyst_notes": [
+        "BLOCKER: missing analysis. Even if override issued, fallback path publishes via skipped_no_analysis и posts without translated impact fields.",
+        "Workarounds: (1) run _llm_analyze.py --limit 1 (Ollama qwen3:8b); (2) heuristic_analyze.py as drain.",
+        "Tier 3 — low priority. Niche SaaS.",
+        "If published: importance 2 → no AGI change.",
+        "ACTUAL 0.000313 << Tier-3 threshold 1.0 + missing_analysis. Cache-evict OR re-analyze.",
+        "Recommended action: cache-evict (low priority, ~37.9d stale)."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["full_quiet_cycle_no_slots", "missing_analysis", "below_tier3_threshold_actual", "cache_evict_recommended", "freshness_gate_breach"]
+      },
+      "defer_reason": "FULL QUIET CYCLE + missing_analysis + ACTUAL decayed 0.000313 << tier-3 threshold 1.0 + freshness gate breach. Cache-evict OR re-analyze."
+    }
+  ],
+  "deferred_summary": {
+    "tier_1_candidates": 1,
+    "tier_1_blocked_by": ["full_quiet_cycle_no_slots", "below_tier1_threshold_actual_0.0875", "freshness_gate_breach"],
+    "tier_2_candidates": 1,
+    "tier_2_blocked_by": ["full_quiet_cycle_no_slots", "below_tier2_threshold_actual_0.01040", "freshness_gate_breach"],
+    "tier_3_candidates": 4,
+    "tier_3_blocked_by": ["full_quiet_cycle_no_slots", "below_tier3_threshold_actual", "freshness_gate_breach"],
+    "freshness_distribution": {
+      "lt_2d": 0,
+      "2d_to_5d": 0,
+      "gt_5d": 6
+    },
+    "stale_distribution": {
+      "37d_to_40d": 6
+    }
+  },
+  "next_viable_publish_window": {
+    "earliest_t1_msk": "2026-10-08T08:30:00+03:00",
+    "cycle_id": "2026-10-08-0615",
+    "rationale": "Next MSK day starts 00:00 2026-10-08. First ACTIVE T1 slot = 08:30 MSK (cycle 2026-10-08-0615, ACTIVE 08:00-12:15). Daily limit resets 00:00:01 MSK Oct 8 → if no publications 00:00-08:00 (none possible — quiet), daily limit = 0/3 used at T1 08:30. All pending_queue.json items remain in terminal decay + freshness breach; auto-publish still blocked but Tier-1/6 slots available for override.",
+    "telegram_risk_window_next_cycle": "Morning peak 08:00-10:00 MSK — Tier-1 08:30 MSK fires inside peak window. Per MEMORY.md, residual flake reported in 18:00-20:00 MSK window; morning is well outside that. Tier-1 risk LOW (morning peak = volume, not flake)."
+  },
+  "operational_notes": [
+    "FULL QUIET CYCLE — entire 6h window 00:15-06:15 MSK falls inside quiet gate (23:00-08:00 MSK). publish-cron sleeps entire cycle. Schedule is structurally empty regardless of queue content.",
+    "TERMINAL DECAY — all 6 items ACTUAL decayed 0.000250-0.0875 (orders of magnitude below tier cutoffs 1.0/1.5). 19-cycle stale streak. Workaround items require explicit override; cluster-cron does NOT auto-publish.",
+    "DATA SOURCE DUALITY — pending_queue.json (6 stale, terminal) vs blog.db (575 live, 164 fresh within 7d, 376 publishable per cycle-1215 estimate). Cluster-cron advisory plan operates on pending_queue.json. Publish-cron reads from blog.db and operates normally in next cycle's ACTIVE tail (08:00-12:15 MSK).",
+    "PUBLISH-CRON IDLE THIS CYCLE — sleeps 00:15-06:15 MSK. Resumes at 06:15 MSK 2026-10-08 (still quiet head, 1h45m). First ACTIVE minute = 08:00 MSK 2026-10-08.",
+    "DAILY LIMIT TRANSITION — limit resets at 00:00:01 MSK Oct 8. No publications possible between reset and 08:00 MSK (quiet gate). By 08:30 MSK T1 slot, daily limit = 0/3 used (fresh day).",
+    "STREAK COUNTERS — pending_queue.json auto-publish streak = 19 cycles (since 2026-10-02-1815). All cycles had 0 auto-publications from cluster-cron domain. Reason: items в queue are 37.9-40.9 days old, terminal decay below all tier thresholds.",
+    "FRESHNESS GATE BREACH — All 6 items > 5-day freshness gate (EDITORIAL.md §4). Cluster-cron convention holds workaround territory до explicit user override.",
+    "MISSING ANALYSIS (Circleback) — analyzed=false → даже если override был бы выпущен, fallback path publishes via skipped_no_analysis. Re-analyze через heuristic_analyze.py ИЛИ cache-evict.",
+    "CACHE-EVICT CANDIDATES — 4 Tier-3 items (Musk turbines, Caterpillar, US-China drones, Circleback) — все terminal decay, не pass priority gate. Recommend `agentsblog cache-evict --pending-stale` для cleanup pending_queue.json (6 → 2, оставить cursor-spacex + ASR as workaround territory).",
+    "SCANNER STALENESS — last_checked 2026-08-31 (~37.9d). Pending queue split: pending_queue.json (6 stale, terminal) + blog.db (575 live, 164 fresh 7d, 319 unanalyzed per prior estimates). Manual `agentsblog scan` would re-populate pending_queue.json с fresh items when shell access restored.",
+    "TELEGRAM RISK — chat_id @agentsSmits_bot intermittent getChat 404 reported 2026-09-06, fixed 2026-09-15. Residual flake during 18:00-20:00 MSK peak hours. This cycle is FULL quiet (00:15-06:15 MSK) — Telegram risk = NONE (no publish attempts).",
+    "NO LIVE EXEC ACCESS — Cycle ran unattended без approved executables. blog.db state carried from cycle 2026-10-07-1815 estimate.",
+    "OVERRIDE PATH FOR CURSOR-SPACEX — current cycle FULL quiet, no window. Next ACTIVE Tier-1 slot = 08:30 MSK 2026-10-08 (cycle 2026-10-08-0615, ACTIVE tail 08:00-12:15 MSK, 4h15m override window). Daily limit = 0/3 fresh at slot start.",
+    "BLOG.DB LIVE QUEUE — 86 fresh Tier-2 candidates in blog.db per cycle-1815 estimate (age 0.64d, ACTUAL ~3.755). These compete for T1 08:30 MSK 2026-10-08 slot. 4-way tie at top: Google Playground / Nemotron IOI-IMO / Falcon ASR / Google SynthID. publish-cron owns these decisions.",
+    "AGI COUNTER STATE — current_days_estimate = 1212 (last publish-run entry 2026-09-06T01:05:12 agi_days=1212). NOTE: publications from 2026-10-01..2026-10-04 not reflected in metrics.json agi_days. Counter may be updated in separate events log. Cluster-cron has no authority over AGI counter — advisory only. Schedule пустой → counter не меняется в этом cycle."
+  ],
+  "publish_windows_in_cycle": [
+    {"slot_msk": "2026-10-08T01:30:00+03:00", "tier": 1, "availability": "QUIET", "candidate": null, "blocker": "inside quiet hours 23:00-08:00 MSK; publish-cron sleeps."},
+    {"slot_msk": "2026-10-08T03:30:00+03:00", "tier": 2, "availability": "QUIET", "candidate": null, "blocker": "inside quiet hours 23:00-08:00 MSK; publish-cron sleeps."},
+    {"slot_msk": "2026-10-08T05:30:00+03:00", "tier": 3, "availability": "QUIET", "candidate": null, "blocker": "inside quiet hours 23:00-08:00 MSK; publish-cron sleeps."}
+  ],
+  "publish_windows_blocked_by_quiet": [
+    {"slot_msk": "2026-10-08T01:30:00+03:00", "tier": 1, "blocker": "quiet_hours_23_08_msk"},
+    {"slot_msk": "2026-10-08T03:30:00+03:00", "tier": 2, "blocker": "quiet_hours_23_08_msk"},
+    {"slot_msk": "2026-10-08T05:30:00+03:00", "tier": 3, "blocker": "quiet_hours_23_08_msk"}
+  ],
+  "warnings": [
+    "FULL QUIET CYCLE: 100% of window 00:15-06:15 MSK is inside quiet gate (23:00-08:00 MSK). publish-cron sleeps entire 6h. Schedule empty by design.",
+    "TERMINAL DECAY: ALL 6 items ACTUAL decayed below Tier-3 threshold 1.0 (cursor-spacex 0.0875, asr 0.01040, techcrunch items 0.000250-0.000313). 19-cycle stale streak. Workaround items require explicit override; cluster-cron does NOT auto-publish.",
+    "DATA SOURCE DUALITY: pending_queue.json (6 stale, terminal) vs blog.db (575 live, 164 fresh within 7d, 376 publishable per cycle-1815 estimate). Cluster-cron advisory plan operates on pending_queue.json. Publish-cron reads from blog.db and operates normally in next cycle's ACTIVE tail (08:00-12:15 MSK 2026-10-08).",
+    "DAILY LIMIT TRANSITION: limit resets at 00:00:01 MSK 2026-10-08. No publications possible between reset and 08:00 MSK (quiet gate). By 08:30 MSK T1 slot 2026-10-08, daily limit = 0/3 used (fresh day). T1/T2/T3 all eligible if queue has publishable candidates.",
+    "FRESHNESS GATE BREACH: All 6 items > 5-day freshness gate (EDITORIAL.md §4). Cluster-cron convention holds workaround territory до explicit user override.",
+    "MISSING ANALYSIS (Circleback): analyzed=false → даже если override был бы выпущен, fallback path publishes via skipped_no_analysis. Re-analyze через heuristic_analyze.py ИЛИ cache-evict.",
+    "SCANNER STALENESS: last_checked 2026-08-31 (~37.9d). Pending queue split: pending_queue.json (6 stale, terminal) + blog.db (575 live, 164 fresh 7d, 319 unanalyzed per prior estimates). Manual `agentsblog scan` would re-populate pending_queue.json с fresh items when shell access restored.",
+    "19-CYCLE STREAK: pending_queue.json auto-publish streak now 19 cycles (since 2026-10-02-1815). All cycles had 0 auto-publications from cluster-cron domain. Reason: items в queue are 37.9-40.9 days old, terminal decay below all tier thresholds.",
+    "NO LIVE EXEC ACCESS: Cycle ran unattended без approved executables — blog.db state carried from cycle 2026-10-07-1815 estimate. Recommend re-query when shell access is restored."
+  ],
+  "next_cycle_projection": {
+    "next_cycle_id": "2026-10-08-0615",
+    "next_window_start_msk": "2026-10-08T06:15:00+03:00",
+    "next_window_end_msk": "2026-10-08T12:15:00+03:00",
+    "quiet_hours_overlap_in_next_cycle": "HEAD overlap (partial). Cycle 06:15-12:15 MSK = quiet head 1h45m (06:15-08:00, 105 min) + ACTIVE tail 4h15m (08:00-12:15, 255 min). publish-cron operates 08:00-12:15 MSK only; sleeps 06:15-08:00.",
+    "daily_limit_state_at_next_cycle_start": "Resets at 00:00:01 MSK 2026-10-08. No publications possible 00:00-08:00 (quiet gate). At 08:30 MSK T1 slot = 0/3 used (fresh day). Daily limit FRESH.",
+    "candidate_tier1_for_next_cycle": "No fresh Tier-1 в pending_queue.json. cursor-spacex в workaround territory (ACTUAL 0.0875, requires override). Tier-1 slot 08:30 MSK ACTIVE.",
+    "candidate_tier2_for_next_cycle": "No fresh Tier-2 в pending_queue.json. ASR в workaround territory (ACTUAL 0.01040, requires override). Tier-2 slot 10:30 MSK ACTIVE. blog.db has 86 fresh Tier-2 candidates competing for T1/T2 slots in next cycle.",
+    "candidate_tier3_for_next_cycle": "No fresh Tier-3 в pending_queue.json (all 4 terminal, all 4 cache-evict candidates). Tier-3 slot 12:00 MSK ACTIVE but no viable candidate in pending_queue.json.",
+    "cache_evict_recommended_for_next_cycle": [
+      "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+      "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+      "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0"
+    ],
+    "preflight_for_next_cycle": [
+      "Next cycle 2026-10-08-0615 = HEAD quiet (1h45m 06:15-08:00) + ACTIVE tail (4h15m 08:00-12:15). All 3 slots ACTIVE: T1 08:30, T2 10:30, T3 12:00 MSK.",
+      "Daily limit FRESH at T1 08:30 MSK = 0/3 used.",
+      "Tier-1 slot 08:30 MSK inside morning peak (08:00-10:00). Telegram risk LOW (morning peak = volume, not flake).",
+      "Run `agentsblog scan` для re-populate pending_queue.json с fresh items (last_checked stale 37.9d).",
+      "Run `agentsblog cache-evict --pending-stale` для 4 Tier-3 items recommended above.",
+      "Run `agentsblog analyze --limit 4` чтобы drain 319-item blog.db unanalyzed backlog.",
+      "Verify Telegram chat_id @agentsSmits_bot alive — `openclaw channels list` перед publish-cron resumes at next cycle ACTIVE tail.",
+      "Override path для cursor-spacex: best window next cycle 08:30 MSK T1 ACTIVE (full 4h15m ACTIVE tail). Daily limit FRESH.",
+      "blog.db publication continues normally via publish-cron throughout next cycle's ACTIVE tail (08:00-12:15 MSK 2026-10-08) — 86 fresh Tier-2 candidates ready for triage."
+  ],
+  "meta": {
+    "delivered_by": "agentsmits-blog cluster cron (unattended run, cycle 2026-10-08-0015)",
+    "reason_for_empty_schedule": "FULL QUIET CYCLE — 100% of window 00:15-06:15 MSK is inside quiet gate (23:00-08:00 MSK). publish-cron sleeps entire cycle. Schedule empty by structural design (no ACTIVE minutes, no slots to schedule).",
+    "secondary_reason": "TERMINAL DECAY — even in ACTIVE cycle, no auto-publish candidates in pending_queue.json (all 6 items ACTUAL 0.000250-0.0875, orders of magnitude below tier cutoffs 1.0/1.5). 19-cycle stale streak. Workaround items require explicit override.",
+    "data_source_clarification": "Cluster-cron domain = pending_queue.json (snapshot from scanner, 6 items, terminal). Publish-cron domain = blog.db (live, 575 items, 164 fresh-7d, 376 publishable per cycle-1815 estimate). Cluster plan covers pending_queue.json only. blog.db publications continue normally via publish-cron in next cycle's ACTIVE tail (08:00-12:15 MSK 2026-10-08).",
+    "items_tier_assigned": 6,
+    "items_actually_publishing_this_cycle": 0,
+    "items_with_complete_analysis": 5,
+    "items_blocked_by_analysis": 1,
+    "items_blocked_by_quiet_hours": 6,
+    "items_blocked_by_below_threshold_actual": 6,
+    "items_in_workaround_territory": 2,
+    "items_recommended_for_cache_evict": 4,
+    "cycle_total_actual_publications_expected_from_pending_queue": "0 (FULL quiet cycle, no ACTIVE minutes, no slots available; terminal decay means even ACTIVE cycle would yield 0 auto-publications from pending_queue.json; workaround items require explicit override)."
+  }
+}

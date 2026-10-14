@@ -1,0 +1,140 @@
+{
+  "cycle_id": "2026-10-01-0615",
+  "clustered_at": "2026-10-01T03:15:00Z",
+  "clustered_at_msk": "2026-10-01T06:15:00+03:00",
+  "window_msk": "2026-10-01T08:00:00+03:00 to 2026-10-01T12:15:00+03:00",
+  "quiet_hours_applied": "23:00-08:00 MSK",
+  "pending_total": 6,
+  "scheduled_count": 3,
+  "deferred_count": 3,
+  "tier_legend": {
+    "1": "Premier: importance 5, strategic/business critical. Single post per cycle. Reserved slot.",
+    "2": "Notable: importance 3-4, niche but worth a post. Standard slot.",
+    "3": "Filler: importance 1-2, contextual. Last slot; one item only per cycle."
+  },
+  "schedule": [
+    {
+      "slot_msk": "2026-10-01T08:30:00+03:00",
+      "tier": 1,
+      "article_id": "openai-our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "source": "OpenAI",
+      "title": "Наше решение относительно Cursor после его приобретения SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "importance": 5,
+      "decayed_importance": 2.043,
+      "tags": ["openai", "cursor", "spacex", "acquisition", "agent-strategy"],
+      "publish_template": "standard",
+      "analyst_notes": [
+        "Tier 1 — крупнейший стратегический сигнал цикла: SpaceX покупает Cursor, OpenAI сворачивает контракт.",
+        "Прежняя попытка публикации провалилась (Telegram getChat 404 на @agentssmits) — повторная отправка через аккаунт agentssmits_bot обязательна.",
+        "Использовать стандартный шаблон, НЕ breakthrough (нет новой архитектуры/SOTA — это бизнес-новость).",
+        "Триггеры для комментария: (1) перераспределение power в AI-coding; (2) SpaceX выходит в software; (3) риск для разработчиков на Cursor.",
+        "Рекомендация: после публикации — добавить в narrative n-00008 (OpenAI acquisitions).",
+        "Декремент AGI: importance 5 → -2 дня (current_days -= 2)."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    },
+    {
+      "slot_msk": "2026-10-01T10:30:00+03:00",
+      "tier": 2,
+      "article_id": "huggingface-open-asr-leaderboard-global-south",
+      "source": "HuggingFace",
+      "title": "Открытый лидерборд ASR добавил первый язык из стран Глобального Юга",
+      "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "importance": 3,
+      "decayed_importance": 0.9,
+      "tags": ["asr", "speech-recognition", "global-south", "open-benchmark"],
+      "publish_template": "standard",
+      "analyst_notes": [
+        "Tier 2 — нишевая, но сигнальная: HuggingFace расширяет лидерборд ASR языком Глобального Юга.",
+        "Стандартный шаблон, без breakthrough-бейджа.",
+        "Повторная публикация — прежняя попытка провалилась по той же Telegram-ошибке (404 getChat). Проверить chat_id перед отправкой.",
+        "Анализ уже есть в pending (translated_title, agent_impact, business_impact, it_impact) — повторно прогонять через LLM НЕ нужно.",
+        "Декремент AGI: importance 3 → -0.5 дня (current_days -= 0.5)."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    },
+    {
+      "slot_msk": "2026-10-01T12:00:00+03:00",
+      "tier": 3,
+      "article_id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "source": "TechCrunch AI",
+      "title": "Ускоренный путь Маска к увеличению числа газовых турбин сопряжён с проблемой загрязнения окружающей среды",
+      "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tags": ["energy-infrastructure", "ai-compute", "environmental-impact"],
+      "publish_template": "standard",
+      "analyst_notes": [
+        "Tier 3 — выбран как наиболее релевантный для агентской повестки из 4 кандидатов Tier 3 (связь с AI-compute).",
+        "Стандартный шаблон, без breakthrough-бейджа.",
+        "Декремент AGI: importance 2 → без изменений.",
+        "Тема — узкая (энергетика), но даёт контекст 'compute growth vs ESG'."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    }
+  ],
+  "deferred": [
+    {
+      "article_id": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+      "title": "Caterpillar применяет опыт автоматизации горнодобывающей отрасли к развёртыванию ИИ",
+      "tier": 3,
+      "reason": "Tier-3 переполнение: 4 кандидата, 1 слот. Caterpillar — niche industrial automation, нишевее чем Musk turbines (которые напрямую про AI compute). Сдвигаем на следующий цикл.",
+      "decayed_importance": 0.6
+    },
+    {
+      "article_id": "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+      "title": "США строят барьеры вокруг дронов и роботов, но у Китая есть масштаб, чтобы их обойти",
+      "tier": 3,
+      "reason": "Tier-3 переполнение. Геополитика дронов — менее актуальна для AI-agent канала, чем compute/infrastructure.",
+      "decayed_importance": 0.6
+    },
+    {
+      "article_id": "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0",
+      "title": "Meeting notetaker Circleback adds a free tier to attract more customers",
+      "tier": 3,
+      "reason": "Без analysis-поля (analyzed_at отсутствует, нет translated_title/agent_impact/business_impact/it_impact). Перед публикацией требуется прогнать через _llm_analyze.py — иначе шаблон поста не соберётся. Либо перенести в следующий цикл после анализа, либо списать.",
+      "decayed_importance": 0.6,
+      "blocker": "missing analysis fields"
+    }
+  ],
+  "narrative_links": {
+    "n-00008": "OpenAI acquisitions (Cursor+SpaceX присоединяется к NextSlide и др.)",
+    "n-00015": "HuggingFace open-source/agent tooling (сюда же ASR leaderboard)"
+  },
+  "agi_counter_projection": {
+    "current_days_estimate": 1212,
+    "post_cycle_current_days": 1209.5,
+    "deltas": {
+      "tier1_importance5": -2,
+      "tier2_importance3": -0.5,
+      "tier3_importance2": 0
+    }
+  },
+  "publish_windows_remaining_in_cycle": [
+    "2026-10-01T08:30:00+03:00 — Tier 1",
+    "2026-10-01T10:30:00+03:00 — Tier 2",
+    "2026-10-01T12:00:00+03:00 — Tier 3",
+    "2026-10-01T13:30:00+03:00 — следующий цикл (14:00+)"
+  ],
+  "warnings": [
+    "Telegram-аккаунт @agentssmits ранее давал getChat 404 на этом cron. Перед первой отправкой рекомендую проверить chat_id resolution.",
+    "blog_sync на предыдущей итерации упал (Python alias from MS Store). Если повторится — посты останутся в Telegram, но НЕ попадут на сайт data/current.json.",
+    "Circleback (Tier-3 deferred) висит в pending без анализа — нужна явная команда либо прогнать _llm_analyze, либо удалить."
+  ]
+}

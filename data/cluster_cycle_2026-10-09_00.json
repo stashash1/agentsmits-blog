@@ -1,0 +1,189 @@
+{
+  "cycle_id": "cluster-2026-10-09-00",
+  "run_at_utc": "2026-10-08T21:16:00Z",
+  "run_at_msk": "2026-10-09 00:16 MSK",
+  "prior_cycle": "cluster-2026-10-08-23 (2026-10-08 23:01 MSK)",
+  "cycle_window": {
+    "start": "2026-10-09T00:15:00+03:00",
+    "end": "2026-10-09T06:15:00+03:00",
+    "label": "00:15-06:15 MSK (6h)",
+    "quiet_hours_active": true,
+    "quiet_hours_range": "23:00-08:00 MSK (AGENTSBLOG_QUIET_HOURS_START=23 / END=8)",
+    "next_available_publish": "2026-10-09T08:05:00+03:00"
+  },
+  "data_source": "data/pending_queue.json (read-only, head parsed)",
+  "pending_items_parsed": 6,
+  "scanners_last_run": "2026-08-31T13:06:07Z",
+  "staleness_days": 38,
+  "delta_from_prior_cycle": {
+    "new_items": 0,
+    "removed_items": 0,
+    "publishes_since_prior": 0,
+    "data_unchanged": true,
+    "reason": "Both cycles fall inside the same quiet-hours window; previous 23:01 cycle already produced a cluster plan with 08:05+ scheduling. This cycle re-emits the same tiering as a refresh + records the run."
+  },
+  "clusters": [
+    {
+      "cluster_id": "C1-openai-cursor-spacex",
+      "narrative_theme": "OpenAI / Cursor / SpaceX acquisition",
+      "tier": 1,
+      "importance": 5,
+      "is_breakthrough": false,
+      "items": [
+        {
+          "id": "openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e",
+          "source": "OpenAI",
+          "title": "Our decision on Cursor following its acquisition by SpaceX",
+          "date": "2026-08-28",
+          "tags": [
+            "openai",
+            "cursor",
+            "spacex"
+          ],
+          "publish_eligible": true
+        }
+      ],
+      "scheduling": {
+        "slot": "2026-10-09T08:05:00+03:00",
+        "reason": "Highest importance (5); first post-quiet-hours slot. CRITICALLY OVERDUE — 38 days stale.",
+        "format": "standard"
+      }
+    },
+    {
+      "cluster_id": "C2-hf-asr-global-south",
+      "narrative_theme": "ASR / Speech recognition expansion",
+      "tier": 2,
+      "importance": 3,
+      "is_breakthrough": false,
+      "items": [
+        {
+          "id": "huggingface-open-asr-leaderboard-global-south",
+          "source": "HuggingFace",
+          "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+          "date": "2026-08-28",
+          "tags": [
+            "asr",
+            "speech-recognition",
+            "global-south"
+          ],
+          "publish_eligible": true
+        }
+      ],
+      "scheduling": {
+        "slot": "2026-10-09T08:35:00+03:00",
+        "reason": "Tier 2; second post-quiet-hours slot. Stale but relevant for multilingual agent development.",
+        "format": "standard"
+      }
+    },
+    {
+      "cluster_id": "C3-tc-industrial-ai",
+      "narrative_theme": "Industrial AI / autonomous systems",
+      "tier": 3,
+      "importance": 2,
+      "is_breakthrough": false,
+      "items": [
+        {
+          "id": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+          "source": "TechCrunch AI",
+          "title": "Caterpillar is bringing to AI deployment what it learned from automating mining",
+          "date": "2026-08-30",
+          "tags": [
+            "ai-agents",
+            "industrial-automation",
+            "autonomous-systems"
+          ],
+          "publish_eligible": true
+        },
+        {
+          "id": "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+          "source": "TechCrunch AI",
+          "title": "The U.S. is building barriers around drones and robots, but China has scale to get around them",
+          "date": "2026-08-31",
+          "tags": [
+            "drones",
+            "robotics",
+            "us-china-tech"
+          ],
+          "publish_eligible": true
+        }
+      ],
+      "scheduling": {
+        "slot": "2026-10-09T09:05:00+03:00",
+        "reason": "Tier 3 digest — group industrial AI / robotics items",
+        "format": "digest"
+      }
+    },
+    {
+      "cluster_id": "C4-tc-ai-compute-energy",
+      "narrative_theme": "AI compute infrastructure / energy",
+      "tier": 3,
+      "importance": 2,
+      "is_breakthrough": false,
+      "items": [
+        {
+          "id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+          "source": "TechCrunch AI",
+          "title": "Musk's faster path to more gas turbines comes with pollution problem",
+          "date": "2026-08-30",
+          "tags": [
+            "energy-infrastructure",
+            "ai-compute",
+            "environmental-impact"
+          ],
+          "publish_eligible": true
+        }
+      ],
+      "scheduling": {
+        "slot": "2026-10-09T09:35:00+03:00",
+        "reason": "Tier 3 standalone",
+        "format": "standard"
+      }
+    },
+    {
+      "cluster_id": "C5-tc-circleback",
+      "narrative_theme": "Meeting notetaker / SaaS",
+      "tier": 3,
+      "importance": 2,
+      "is_breakthrough": false,
+      "items": [
+        {
+          "id": "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0",
+          "source": "TechCrunch AI",
+          "title": "Meeting notetaker Circleback adds a free tier to attract more customers",
+          "date": "2026-08-31",
+          "tags": [],
+          "publish_eligible": false,
+          "block_reason": "no agent_impact analysis — publisher will block per models.py:131-134"
+        }
+      ],
+      "scheduling": {
+        "slot": null,
+        "reason": "BLOCKED — missing agent_impact analysis",
+        "format": null
+      }
+    }
+  ],
+  "tier_summary": {
+    "tier_1": 1,
+    "tier_2": 1,
+    "tier_3": 4,
+    "blocked": 1
+  },
+  "publish_order": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "total_publishable": 4,
+  "total_blocked": 1,
+  "cycle_status": "quiet_hours_hold",
+  "notes": [
+    "All publishing deferred to 2026-10-09 08:05+ MSK due to quiet hours (23:00-08:00).",
+    "This 6h cycle (00:15-06:15 MSK) is entirely inside the prior 23:00-05:00 cycle's quiet-hours window — same data, same plan, refreshed as a delta.",
+    "All 6 pending items remain 38 days stale (last scanner run 2026-08-31).",
+    "C1 (OpenAI/Cursor/SpaceX) is importance-5 acquisition news and critically overdue.",
+    "C5 (Circleback) still blocked: no agent_impact analysis. Needs _llm_analyze.py or heuristic_analyze.",
+    "Scanners have not produced fresh news since 2026-08-31 — flagging again for human attention."
+  ]
+}

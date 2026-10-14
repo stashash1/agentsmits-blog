@@ -71,7 +71,10 @@ class Settings(BaseSettings):
     editorial_min_interval_minutes: int = Field(default=180, ge=0)
     editorial_analysis_batch: int = Field(default=4, ge=1, le=20)
     editorial_model: str = "qwen3:14b"
-    editorial_review_model: str = "qwen3:14b"
+    # 2026-09-19 (brent, variant C week-1): рецензент разведён на другую модель —
+    # автор qwen3:14b, рецензент qwen3.8:27b. Требует: модель должна быть в ollama list.
+    # Откат: вернуть "qwen3:14b".
+    editorial_review_model: str = "qwen3.8:27b"
     editorial_ollama_url: str = "http://127.0.0.1:11434"
     editorial_author_style: str = "Технический разбор: объясни механизм, ограничения и конкретный пример применения. Точно, глубоко, без хайпа."
 

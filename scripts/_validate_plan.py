@@ -1,0 +1,12 @@
+import json
+d = json.load(open('data/cluster_plan_2026-10-07-1815.json', encoding='utf-8'))
+print('VALID_JSON')
+print(f'cycle_id={d["cycle_id"]}')
+print(f'scheduled_count={d["scheduled_count"]}')
+print(f'deferred_count={d["deferred_count"]}')
+print(f'pending_total={d["pending_total"]}')
+print(f'fresh_t2_quality={d["fresh_t2_quality"]}')
+print(f'primary_blocker={d["primary_blocker"][:120]}...')
+print(f'schedule_list={len(d["schedule"])}')
+print(f'deferred_items={len(d["deferred"])}')
+print(f'next_viable_t1={d["next_viable_publish_window"]["earliest_t1_msk"]}')

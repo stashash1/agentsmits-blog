@@ -1,0 +1,279 @@
+{
+  "cycle_id": "2026-10-02-0615",
+  "clustered_at": "2026-10-02T03:17:46Z",
+  "clustered_at_msk": "2026-10-02T06:17:46+03:00",
+  "window_msk": "2026-10-02T06:15:00+03:00 to 2026-10-02T12:15:00+03:00",
+  "quiet_hours_applied": "23:00-08:00 MSK — head of cycle (06:15-08:00) is blocked; tail (08:00-12:15) is publishable",
+  "previous_cycle_id": "2026-10-02-0015",
+  "previous_cycle_outcome": "Quiet-cycle: 6 items deferred with tier pre-assignments; predicted first active publish-slot at 08:00 MSK 02.10 (slot попадает в окно cycle 2026-10-02-0615). Confirmed.",
+  "pending_total": 6,
+  "publishable_pending": 5,
+  "scheduled_count": 3,
+  "deferred_count": 3,
+  "primary_blocker_for_head": "Quiet hours 23:00-08:00 MSK — only 1h45min of cycle window head (06:15-08:00) is blocked. 4h15min tail (08:00-12:15) is publishable.",
+  "tier_legend": {
+    "1": "Premier: importance 5, strategic/business critical. Single post per cycle. Reserved slot.",
+    "2": "Notable: importance 3-4, niche but worth a post. Standard slot.",
+    "3": "Filler: importance 1-2, contextual. Last slot; one item only per cycle."
+  },
+  "schedule": [
+    {
+      "slot_msk": "2026-10-02T08:30:00+03:00",
+      "tier": 1,
+      "article_id": "openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e",
+      "source": "OpenAI",
+      "title": "Наше решение относительно Cursor после его приобретения SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "importance": 5,
+      "decayed_importance": 2.043,
+      "tags": ["openai", "cursor", "spacex", "acquisition", "agent-strategy", "competitive-landscape"],
+      "publish_template": "standard",
+      "narrative_id": "n-00008",
+      "tier_rationale": [
+        "Importance 5 — высшая стратегическая позиция в очереди, единственный candidate для Tier 1.",
+        "Decayed 2.043 (≈ 4 прогона после 2016-08-28 base 4 + acquisition keyword +1) — выше Tier-1 cutoff даже в 06:15-цикле.",
+        "Связан с narrative n-00008 (OpenAI acquisitions / competitive landscape) — то же гнездо, что у Manus/Meta и NextSlide.",
+        "Уже планировался как Tier 1 в циклах 2026-10-01-0615 (08:30) и 2026-10-02-0015 (deferred). Третий шанс — slot 08:30 MSK 2026-10-02.",
+        "Стандартный шаблон, НЕ breakthrough (бизнес-новость, не новая архитектура/SOTA)."
+      ],
+      "analyst_notes": [
+        "Tier 1 — крупнейший стратегический сигнал цикла: SpaceX покупает Cursor, OpenAI сворачивает контракт на поставку моделей.",
+        "Power shift в AI-coding: SpaceX выходит в software-агентскую территорию, OpenAI теряет дистрибуцию в IDE-сегменте.",
+        "Триггеры для комментария: (1) перераспределение power в agent-coding; (2) SpaceX как новый software-плеер; (3) риск для разработчиков на Cursor/OpenAI-моделях.",
+        "⚠️ Предупреждение из предыдущих циклов: Telegram getChat @agentssmits_bot исторически давал 404 на cron-отправках (см. metrics.json 2026-09-06). Перед отправкой — проверить chat_id resolution.",
+        "Декремент AGI: importance 5 → -2 дня (current_days -= 2). Применится после успешной публикации.",
+        "Приоритет — самый высокий из 6 items, slot 08:30 — первый валидный Telegram-слот после quiet hours."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    },
+    {
+      "slot_msk": "2026-10-02T10:30:00+03:00",
+      "tier": 2,
+      "article_id": "huggingface-open-asr-leaderboard-global-south",
+      "source": "HuggingFace",
+      "title": "Открытый лидерборд ASR добавил первый язык из стран Глобального Юга",
+      "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "importance": 3,
+      "decayed_importance": 0.9,
+      "tags": ["asr", "speech-recognition", "global-south", "open-benchmark", "inclusivity"],
+      "publish_template": "standard",
+      "narrative_id": "n-00015",
+      "tier_rationale": [
+        "Importance 3 — единственный валидный Tier-2 candidate (decayed 0.9, выше Tier-3 cutoff).",
+        "Уже планировался как Tier 2 в циклах 2026-10-01-0615 (10:30) и 2026-10-02-0015 (deferred). Третий шанс — slot 10:30 MSK 2026-10-02.",
+        "Связан с narrative n-00015 (HuggingFace open-source / agent tooling).",
+        "Анализ уже есть в pending (translated_title, agent_impact, business_impact, it_impact) — повторно через LLM гонять НЕ нужно.",
+        "Стандартный шаблон, без breakthrough-бейджа."
+      ],
+      "analyst_notes": [
+        "Tier 2 — единичный сигнал inclusivity в ASR: HuggingFace расширяет лидерборд языком Глобального Юга.",
+        "Сюжетная связка с Tier 1 OpenAI/Cursor не нужна — разные narratives (n-00015 open-source ecosystem vs n-00008 competitive landscape).",
+        "Декремент AGI: importance 3 → -0.5 дня (current_days -= 0.5) — применится после успешной публикации.",
+        "Decayed 0.9 (≈ 9 прогона после 2026-08-28) — около QW4-фильтра cutoff (1.0). Если этот цикл снова провалится, в следующем активном цикле может упасть ниже фильтра и автоматически спишется. Приоритет средний, но если 06:15-cycle активный — публиковать сейчас."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    },
+    {
+      "slot_msk": "2026-10-02T12:00:00+03:00",
+      "tier": 3,
+      "article_id": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+      "source": "TechCrunch AI",
+      "title": "Caterpillar применяет опыт автоматизации горнодобывающей отрасли к развёртыванию ИИ",
+      "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tags": ["industrial-automation", "ai-deployment", "mining", "enterprise-ai"],
+      "publish_template": "standard",
+      "tier_rationale": [
+        "Importance 2 — niche industrial, но даёт свежий ракурс (mining → AI deployment transfer).",
+        "Выбран из 3 валидных Tier-3 кандидатов с полным analysis (Caterpillar / Musk turbines / US-China drones).",
+        "Свежий угол для канала: industrial AI deployment даёт разнообразие после двух Tier-3 Musk turbines (которые два цикла подряд были deferred).",
+        "Уже был primary в цикле 2026-10-01-0615 (deferred как overflow), и 2026-10-02-0015 (deferred, quiet). Третий шанс — slot 12:00 MSK 2026-10-02.",
+        "Стандартный шаблон, без breakthrough-бейджа."
+      ],
+      "analyst_notes": [
+        "Tier 3 — единичный слот в конце цикла. Caterpillar — niche industrial AI, более agent-relevant чем Musk turbines (compute angle уже был) и US/China drones (геополитика).",
+        "Mining-automation → AI-deployment transfer — это pattern enterprise AI, который в канале давно не подсвечивался.",
+        "Декремент AGI: importance 2 → без изменений (current_days не двигается).",
+        "Тема не блокер для тематики канала, но даёт разнообразие после двух Tier-3 Musk turbines.",
+        "Slot 12:00 — последний валидный перед cycle boundary 12:15. Если отправка задержится > 15 мин, slot переносится в следующий cycle."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    }
+  ],
+  "deferred": [
+    {
+      "article_id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "source": "TechCrunch AI",
+      "title": "Ускоренный путь Маска к увеличению числа газовых турбин сопряжён с проблемой загрязнения окружающей среды",
+      "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tier": 3,
+      "tags": ["energy-infrastructure", "ai-compute", "environmental-impact"],
+      "publish_template": "standard",
+      "tier_rationale": [
+        "Importance 2 — niche, но всё ещё даёт AI-compute/ESG ракурс.",
+        "Был в Tier 3 в циклах 2026-10-01-0615 (slot 12:00) и 2026-10-01-1815 (slot 22:00) и deferred в 2026-10-02-0015 — все три раза не опубликовался.",
+        "В этом цикле не выбран как primary Tier 3 (Caterpillar приоритетнее для разнообразия), но остаётся Tier-3 backup для следующего цикла (2026-10-02-1215)."
+      ],
+      "analyst_notes": [
+        "Tier 3 backup — три предыдущие попытки публикации провалились; если Caterpillar тоже не опубликуется в 12:00, Musk turbines остаётся валидным Tier-3 на следующий cycle.",
+        "Декремент AGI: importance 2 → без изменений.",
+        "Тематически устаревает (age ~33d, decayed 0.6) — при следующем decay-цикле может упасть ниже QW4-фильтра (<1.0). Рекомендация: либо опубликовать в cycle 2026-10-02-1215, либо списать."
+      ],
+      "defer_reason": "Tier-3 slot занят Caterpillar (rotation для разнообразия). Musk turbines — Tier-3 backup для cycle 2026-10-02-1215.",
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["tier3_slot_taken"]
+      }
+    },
+    {
+      "article_id": "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+      "source": "TechCrunch AI",
+      "title": "США строят барьеры вокруг дронов и роботов, но у Китая есть масштаб, чтобы их обойти",
+      "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tier": 3,
+      "tags": ["geopolitics", "drones", "robots", "us-china", "regulation"],
+      "publish_template": "standard",
+      "tier_rationale": [
+        "Importance 2 — геополитика дронов, менее agent-relevant, чем Caterpillar (industrial) или Musk turbines (compute).",
+        "Уже deferred в 2026-10-01-0615 как 'геополитика менее актуальна для AI-agent канала'.",
+        "Остаётся Tier-3 кандидатом, но низкий приоритет — niche для нашей аудитории."
+      ],
+      "analyst_notes": [
+        "Tier 3 — low priority. Геополитика дронов/роботов между США и Китаем — скорее оборонный/промышленный контекст, чем AI-agent narrative.",
+        "Декремент AGI: importance 2 → без изменений.",
+        "Может быть полностью списан, если Caterpillar / Musk turbines опубликуются. Тема не критична для канала."
+      ],
+      "defer_reason": "Tier-3 slot занят; низкий приоритет среди Tier-3 — геополитика менее релевантна, чем industrial AI или energy/compute.",
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["tier3_slot_taken", "low_priority"]
+      }
+    },
+    {
+      "article_id": "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0",
+      "source": "TechCrunch AI",
+      "title": "Meeting notetaker Circleback adds a free tier to attract more customers",
+      "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
+      "importance": 2,
+      "decayed_importance": 0.6,
+      "tier": 3,
+      "tags": ["saas", "meeting-tools", "freemium", "product-update"],
+      "publish_template": "standard",
+      "tier_rationale": [
+        "Importance 2 — minor SaaS-продуктовая новость, без analysis-полей.",
+        "analyzed=false: нет translated_title / agent_impact / business_impact / it_impact — блокирует публикацию.",
+        "Нужен прогон через _llm_analyze.py (Ollama) перед публикацией, либо heuristic_analyze.py как drain.",
+        "Tier 3 с условием: опубликуется ТОЛЬКО после появления analysis-полей."
+      ],
+      "analyst_notes": [
+        "BLOCKER: нет analysis (analyzed_at отсутствует). Без translated_title / agent_impact / business_impact / it_impact шаблон поста не соберётся — cron_publish.ps1 пропустит с skipped_no_analysis.",
+        "Два варианта: (1) запустить _llm_analyze.py --limit 1 (Ollama qwen3:8b) — добавит поля за 1-3 мин; (2) запустить heuristic_analyze.py как fallback — даст шаблонный RU impact без LLM.",
+        "Tier 3 — низкий приоритет. Даже после анализа — niche SaaS, низкая agent-impact (notetaker ≠ agent).",
+        "Декремент AGI: importance 2 → без изменений.",
+        "Рекомендация: heuristic_analyze (дёшево) → публикация; либо списать."
+      ],
+      "defer_reason": "missing_analysis с полями translated_title / agent_impact / business_impact / it_impact. Не может идти в slot, пока analyze step не выполнен.",
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["missing_analysis"]
+      }
+    }
+  ],
+  "narrative_links": {
+    "n-00008": "OpenAI acquisitions / competitive landscape — Cursor/SpaceX (Tier 1 этого cycle) продолжает narrative; в гнезде также Manus/Meta, NextSlide.",
+    "n-00015": "HuggingFace open-source / agent tooling — ASR leaderboard (Global South) (Tier 2 этого cycle) расширяет cluster. Ранее: agent plugins co-evolution, MosaicLeaks, eval tools.",
+    "tier3_rotation_note": "Caterpillar (industrial AI) — новый narrative, не привязан к существующим. Musk turbines / US-China drones / Circleback — continuation в energy / geopolitics / SaaS."
+  },
+  "agi_counter_projection": {
+    "current_days_estimate": 1212,
+    "source_of_truth": "data/metrics.json (последняя запись 2026-09-06T01:05:12 agi_days=1212); между 2026-09-06 и 2026-10-02 не было успешных публикаций.",
+    "post_cycle_current_days": 1209.5,
+    "deltas": {
+      "tier1_importance5": -2,
+      "tier2_importance3": -0.5,
+      "tier3_importance2": 0
+    },
+    "note": "Если cycle 2026-10-02-0615 реально опубликует все 3 items, current_days уйдёт с 1212 → 1209.5 (−2.5). При условии Telegram-доставки и успешного publish_post (chat_id resolution)."
+  },
+  "publish_windows_in_cycle": [
+    {
+      "slot_msk": "2026-10-02T08:30:00+03:00",
+      "tier": 1,
+      "item": "openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e"
+    },
+    {
+      "slot_msk": "2026-10-02T10:30:00+03:00",
+      "tier": 2,
+      "item": "huggingface-open-asr-leaderboard-global-south"
+    },
+    {
+      "slot_msk": "2026-10-02T12:00:00+03:00",
+      "tier": 3,
+      "item": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651"
+    }
+  ],
+  "publish_windows_blocked_by_quiet": [
+    "2026-10-02T06:15:00+03:00 - 07:59:59.999+03:00 — head of cycle, в quiet hours 23:00-08:00 MSK"
+  ],
+  "warnings": [
+    "PARTIAL-QUIET CYCLE: cycle window 06:15-12:15 MSK частично в quiet hours (06:15-08:00). Publish-слоты доступны только с 08:00+. Schedule использует 08:30 / 10:30 / 12:00 — все в publishable части окна.",
+    "Telegram: chat_id @agentssmits_bot исторически давал getChat 404 на cron-отправках (см. metrics.json telegram_audit 2026-09-06). 6 items висят в pending без реальной публикации уже 2 цикла. Перед первой отправкой в этом цикле — проверить chat_id resolution.",
+    "Blog sync: при последней успешной публикации 2026-09-06 blog_sync падал на 'Python was not found; run without arguments to install from the Microsoft Store'. Если python alias не починен — посты останутся в Telegram, но НЕ попадут на сайт data/current.json.",
+    "Pending backlog: 6 items в pending_queue.json. Из них 1 importance 5 (Cursor/SpaceX) и 1 importance 3 (ASR) — это валидные Tier 1/Tier 2 кандидаты. Decayed importance у обоих снижается (≈ 9-10 дней калибровки). Если cycle 2026-10-02-0615 не разгрузит — придётся либо heuristic-analyze + drain (для Circleback), либо списать stale items.",
+    "Item Circleback (techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0): analyzed=false. Для публикации нужен _llm_analyze.py (Ollama) или heuristic_analyze.py fallback. Без analysis — skipped_no_analysis.",
+    "AGI counter: data/metrics.json последний раз обновлялся 2026-09-06T01:05:12 (agi_days=1212). С тех пор ни одной успешной публикации не было — counter заморожен на 1212.",
+    "Schedule slot times (08:30 / 10:30 / 12:00) — следуют паттерну cycle 2026-10-01-0615; выдерживают gap ≥2h между постами. 12:00 — последний валидный slot до cycle boundary 12:15."
+  ],
+  "next_cycle_projection": {
+    "next_cycle_id": "2026-10-02-1215",
+    "next_window_start_msk": "2026-10-02T12:15:00+03:00",
+    "next_window_end_msk": "2026-10-02T18:15:00+03:00",
+    "expected_first_active_cycle_after_now": "2026-10-02-1215 (full publishable window 12:15-18:15, no quiet hours overlap)",
+    "candidate_tier1_for_next_cycle": "если current cycle опубликует OpenAI/Cursor — Tier 1 в следующем цикле свободен. Backup-кандидаты importance 4+ не обнаружены в текущем pending; новые сканы могут дать свежие Tier-1 candidates.",
+    "candidate_tier2_for_next_cycle": "если current cycle опубликует HuggingFace ASR — Tier 2 в следующем цикле свободен. Backup-кандидаты importance 3 не обнаружены в текущем pending.",
+    "candidate_tier3_for_next_cycle": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6 (Tier-3 backup этого cycle, переходит 1-в-1).",
+    "preflight_for_next_cycle": [
+      "Проверить chat_id @agentsSmits через openclaw channels list (resolve → numeric ID) перед первой отправкой.",
+      "Проверить python alias для blog_sync (если падает — посты только в Telegram, не попадают на сайт).",
+      "Прогнать _llm_analyze.py или heuristic_analyze.py для Circleback, если хотим его опубликовать в Tier-3 slot следующего цикла.",
+      "Если Tier-1 Cursor/SpaceX не опубликуется в этом цикле (06:15) — следующая попытка в cycle 2026-10-02-1215, slot 13:30."
+    ]
+  },
+  "meta": {
+    "delivered_by": "agentsmits-blog cluster cron (unattended run)",
+    "reason_for_partial_quiet_cycle": "head of cycle (06:15-08:00 MSK) в quiet hours 23:00-08:00 MSK; tail (08:00-12:15) publishable",
+    "items_tier_assigned": 6,
+    "items_actually_scheduled_in_cycle": 3,
+    "items_with_complete_analysis": 5,
+    "items_blocked_by_analysis": 1,
+    "items_blocked_by_quiet_hours": 0,
+    "items_blocked_by_tier3_slot_taken": 2,
+    "items_blocked_by_low_priority": 1
+  }
+}

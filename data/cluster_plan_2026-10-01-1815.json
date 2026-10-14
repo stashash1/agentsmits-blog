@@ -1,0 +1,174 @@
+{
+  "cycle_id": "2026-10-01-1815",
+  "clustered_at": "2026-10-01T15:15:00Z",
+  "clustered_at_msk": "2026-10-01T18:15:00+03:00",
+  "window_msk": "2026-10-01T18:15:00+03:00 to 2026-10-01T23:00:00+03:00 (last slot 22:00, quiet 23:00-08:00)",
+  "quiet_hours_applied": "23:00-08:00 MSK",
+  "previous_cycle_id": "2026-10-01-0615",
+  "previous_cycle_outcome": "Шаут в Telegram частично провалился: OpenAI/Cursor (Tier 1, 08:30) и HuggingFace ASR (Tier 2, 10:30) фактически не опубликовались — последний 24h-поток это Open TTS Leaderboard / Destro AI / ugly economics (видимо, более ранние cron-циклы или другой канал). Musk turbines (Tier 3, 12:00) тоже не прошёл, остался в pending.",
+  "pending_total": 532,
+  "publishable_pending": 333,
+  "scheduled_count": 3,
+  "deferred_count": 6,
+  "tier_legend": {
+    "1": "Premier: importance 5, strategic/business critical. Single post per cycle. Reserved slot.",
+    "2": "Notable: importance 3-4, niche but worth a post. Standard slot.",
+    "3": "Filler: importance 1-2, contextual. Last slot; one item only per cycle."
+  },
+  "schedule": [
+    {
+      "slot_msk": "2026-10-01T19:00:00+03:00",
+      "tier": 1,
+      "article_id": "techcrunch-manus-seeks-4b-valuation-in-new-500m-ecfc994dbcab",
+      "source": "TechCrunch",
+      "title": "Manus ищет оценку $4 млрд в новом раунде $500 млн на фоне возврата к независимой работе",
+      "url": "https://techcrunch.com/2026/09/30/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-operations/",
+      "importance": 5,
+      "decayed_importance": 5.0,
+      "tags": ["funding", "agent-platforms", "competitive-landscape", "manus"],
+      "publish_template": "standard",
+      "analyst_notes": [
+        "Tier 1 — крупнейший стратегический сигнал цикла: Manus, отменивший сделку с Meta, возвращается как независимая компания с целевой оценкой $4 млрд и раундом $500 млн.",
+        "Сюжет явно сильнее деградировавшей позиции Cursor/SpaceX из предыдущего цикла — Manus восстанавливается, а не закрывается. Это позитивный narrative против Meta.",
+        "Стандартный шаблон, НЕ breakthrough (бизнес-новость, а не архитектура/SOTA).",
+        "Триггеры для комментария: (1) power shift в agent-platform сегменте после провала сделки с Meta; (2) инвесторы продолжают ставить на независимые agent-стартапы; (3) раунд — косвенный индикатор рыночной оценки agentic AI.",
+        "Рекомендация: связать с narrative n-00008 / competitive landscape tracker; проставить importance 5 на декремент AGI.",
+        "Декремент AGI: importance 5 → -2 дня (current_days -= 2).",
+        "⚠️ Предупреждение из предыдущего цикла: chat_id @agentsSmits исторически отдавал 404. Перед отправкой рекомендую проверить chat_id через openclaw channels list."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    },
+    {
+      "slot_msk": "2026-10-01T20:30:00+03:00",
+      "tier": 2,
+      "article_id": "techcrunch-google-deepmind-launches-institute-t-456afd7f4d6d",
+      "source": "TechCrunch",
+      "title": "Google DeepMind запускает институт для расширения дискуссии об AGI",
+      "url": "https://techcrunch.com/2026/09/30/google-deepmind-launches-institute-to-widen-the-agi-debate/",
+      "importance": 4,
+      "decayed_importance": 4.0,
+      "tags": ["agi", "deepmind", "governance", "alignment"],
+      "publish_template": "standard",
+      "analyst_notes": [
+        "Tier 2 — высокая стратегическая значимость, напрямую связана со счётчиком AGI.",
+        "DeepMind формализует дискуссию об AGI в виде института — это сигнал того, что Google выводит AGI-debate из лабораторного формата в публично-институциональный. Следует за релизом GPT-6 Astra, Opus 5.5 и Sonnet 5.5 — фронтир-гонка догнала момент, когда даже вендоры начинают обсуждать AGI governance.",
+        "Стандартный шаблон, без breakthrough-бейджа.",
+        "Анализ уже есть в pending (translated_title, agent_impact, business_impact, it_impact) — повторно прогонять через LLM НЕ нужно.",
+        "Декремент AGI: importance 4 → -1 день (current_days -= 1).",
+        "Слабая сторона: без 'новой архитектуры / SOTA' — пост скорее про governance, чем про прогресс. Поэтому Tier 2, а не Tier 1."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    },
+    {
+      "slot_msk": "2026-10-01T22:00:00+03:00",
+      "tier": 3,
+      "article_id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "source": "TechCrunch AI",
+      "title": "Ускоренный путь Маска к увеличению числа газовых турбин сопряжён с проблемой загрязнения окружающей среды",
+      "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+      "importance": 1,
+      "decayed_importance": 1.0,
+      "tags": ["energy-infrastructure", "ai-compute", "environmental-impact"],
+      "publish_template": "standard",
+      "analyst_notes": [
+        "Tier 3 — повторный выбор из предыдущего цикла (2026-10-01-0615), где Musk turbines уже был выбран, но не опубликовался (item остался в pending).",
+        "Выбран как наиболее релевантный для агентской повестки: связывает рост AI-compute с энергетической инфраструктурой и экологическим следом.",
+        "Стандартный шаблон, без breakthrough-бейджа.",
+        "Декремент AGI: importance 1 → без изменений.",
+        "Тема — узкая (энергетика), но даёт контекст 'compute growth vs ESG' — в канале давно не было этого ракурса."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": []
+      }
+    }
+  ],
+  "deferred": [
+    {
+      "article_id": "openai-astra-for-law",
+      "title": "Introducing Astra for Law",
+      "tier": 1,
+      "decayed_importance": 5.0,
+      "reason": "Tier-1 переполнение: 10 кандидатов importance 5, 1 слот. Manus выбран как более 'горячий' (восстановление после сделки с Meta). Astra for Law — отложен в следующий цикл."
+    },
+    {
+      "article_id": "openai-cooley-gopublic",
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "tier": 1,
+      "decayed_importance": 5.0,
+      "reason": "Tier-1 переполнение. Сильный enterprise-сигнал, но Astra for Law и Manus дают более широкий narrative."
+    },
+    {
+      "article_id": "openai-reimagining-advertising-with-ai",
+      "title": "Reimagining advertising with AI",
+      "tier": 1,
+      "decayed_importance": 5.0,
+      "reason": "Tier-1 переполнение. OpenAI Sponsored Agents — сильный сигнал, но Manus/cooley — лучшие кандидаты на этот цикл."
+    },
+    {
+      "article_id": "arxiv-2609.20754",
+      "title": "RAFT: A Stateful Retrieval-Augmented Framework for Troubleshooting Agents",
+      "tier": 1,
+      "decayed_importance": 5.0,
+      "reason": "Tier-1 переполнение. Сильная arxiv-работа, но это Tier-2 territory (research) — отложен."
+    },
+    {
+      "article_id": "techcrunch-amd-will-acquire-fei-fei-lis-world-l-6004394fcd29",
+      "title": "AMD will acquire Fei-Fei Li's World Labs for $8.2 billion",
+      "tier": 2,
+      "decayed_importance": 0.0,
+      "reason": "decayed_importance=0 (свежий, но decay-фактор съел). Сильный M&A-сигнал, но DeepMind institute выбран как Tier 2 — приоритет у governance/AGI, а не у M&A. Если Manus не опубликуется в 19:00 — это первый кандидат на апгрейд до Tier 1."
+    },
+    {
+      "article_id": "techcrunch-un-turns-to-google-to-make-its-globa-22b6bd9b8747",
+      "title": "UN turns to Google to make its global data ready for AI agents",
+      "tier": 2,
+      "decayed_importance": 2.0,
+      "reason": "decayed_importance уже 2.0 (опубликовано частично?). Аналитика подходящая, но DeepMind institute даёт более широкую картину. Отложен в следующий цикл."
+    }
+  ],
+  "narrative_links": {
+    "n-00008": "OpenAI / Manus / Cursor acquisitions & competitive landscape",
+    "n-00015": "HuggingFace + DeepMind — open-source/agent tooling ecosystem",
+    "n-agi-counter": "AGI discourse formalisation — DeepMind institute, GPT-6 Astra, OpenAI math advisory group"
+  },
+  "agi_counter_projection": {
+    "current_days_estimate": 729,
+    "post_cycle_current_days": 726,
+    "deltas": {
+      "tier1_importance5": -2,
+      "tier2_importance4": -1,
+      "tier3_importance1": 0
+    },
+    "note": "base_days=1460 (target), current_days=729 — рост на 731 день за 9 месяцев (янв–окт 2026). Темпы AGI-counter хорошо ускоряются."
+  },
+  "publish_windows_remaining_in_cycle": [
+    "2026-10-01T19:00:00+03:00 — Tier 1 (Manus $4B)",
+    "2026-10-01T20:30:00+03:00 — Tier 2 (DeepMind institute)",
+    "2026-10-01T22:00:00+03:00 — Tier 3 (Musk turbines)",
+    "2026-10-01T23:00:00+03:00 — quiet hours (next cron после 08:00 02.10)"
+  ],
+  "warnings": [
+    "Telegram chat_id @agentsSmits исторически отдавал getChat 404 на прошлых cron-попытках. Перед первой отправкой рекомендую проверить chat_id через `openclaw channels list` или `--allow-during-quiet` проверить.",
+    "blog_sync на предыдущей итерации падал (Python alias from MS Store). Если повторится — посты останутся в Telegram, но НЕ попадут на сайт (data/current.json).",
+    "532 pending при публикации 3 per cycle = огромный backlog. Pipeline не успевает даже на скопом важных importance 5+ историй. Рекомендация: добавить слот Tier-2 между 19:00 и 20:30 или раскрыть Tier 1 параллельно — если Telegram-релиз не подвисает.",
+    "Manus $4B и AMD/World Labs — два 'горячих' сигнала из одного источника (TechCrunch). Если бэкап Manus провалится — AMD/World Labs (decayed=0) готов как Tier-1 backup."
+  ],
+  "next_cycle_projection": {
+    "next_window_start_msk": "2026-10-02T08:00:00+03:00",
+    "expected_next_run": "06:00 UTC / 09:00 MSK (cluster cron) и публикация с 08:00 MSK",
+    "candidate_tier1_for_next_cycle": "openai-astra-for-law или openai-cooley-gopublic (если не устареют)"
+  }
+}

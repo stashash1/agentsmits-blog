@@ -71,6 +71,8 @@ SYSTEM = """Ты редактор авторского блога об ИИ-аг
 Результаты компании называй её заявлениями, исследовательские результаты — результатами
 авторов работы. Не выдавай препринт или маркетинг за независимую проверку.
 Для каждого факта дай точную короткую evidence_quote из исходного текста, без перевода.
+Цитата обязана быть дословным непрерывным фрагментом исходника: без пропусков, без [...], без троеточий.
+Выбирай цитату, которая содержит само проверяемое значение (имя, число, дату), а не общую фразу рядом.
 Не копируй исходник в публикацию: переформулируй факты своими словами.
 why_it_matters объясняет конкретный сценарий; caveat — ограничение или что ещё неизвестно;
 technical_detail объясняет механизм из исходника и конкретный пример, без придумывания деталей;
@@ -97,6 +99,8 @@ novelty=3 достаточно для нового практического п
 REVIEW_SYSTEM = """Ты строгий выпускающий редактор. Проверь черновик по исходному тексту.
 Проверяй каждое число, имя, обещание доступности, вывод, заголовок и формулировку фактов.
 Цитата должна действительно подтверждать claim, а не просто присутствовать в источнике.
+Цитата может содержать пропуски ([...]) — тогда проверяй claim по полному исходному тексту:
+если факт подтверждён исходным текстом, claim поддержан, даже если цитата обрезана.
 Сохраняй условия утверждений: размер rank-1 адаптера нельзя обобщать на любой LoRA.
 Если выигрыш получен после нескольких оптимизаций, запрещено приписывать его одному
 компоненту. Требуй формулировку «в эксперименте авторов после серии оптимизаций».
@@ -268,11 +272,13 @@ def call_model(system: str, data: dict, schema, settings):
         model = os.environ.get("OLLAMA_REVIEW_MODEL") or settings.editorial_review_model
     base = os.environ.get("OLLAMA_URL") or settings.editorial_ollama_url
     errors = []
-    for attempt in range(2):
+    for attempt in range(3):
         payload = {"model": model, "system": system,
                    "prompt": json.dumps(data, ensure_ascii=False), "stream": False,
-                   "think": schema is Review, "format": schema.model_json_schema(),
-                   "options": {"temperature": 0.1, "num_ctx": 16384,
+                   "think": schema is Review and attempt < 2,  # fallback: retry without think if thinking-only empty response
+                   "format": schema.model_json_schema(),
+                   "options": {"temperature": 0.1,
+                               "num_ctx": int(os.environ.get("AGENTSBLOG_EDITORIAL_NUM_CTX", "32768")),
                                "num_predict": (6000 if schema is Review else 3000) + attempt * 1200}}
         request = urllib.request.Request(base.rstrip("/") + "/api/generate",
                                          data=json.dumps(payload).encode(),

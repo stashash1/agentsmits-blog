@@ -1,0 +1,423 @@
+{
+  "cycle_id": "2026-10-03-1215",
+  "clustered_at": "2026-10-03T09:15:00Z",
+  "clustered_at_msk": "2026-10-03T12:15:00+03:00",
+  "window_msk": "2026-10-03T12:15:00+03:00 to 2026-10-03T18:15:00+03:00",
+  "quiet_hours_applied": "23:00-08:00 MSK — NO overlap. Cycle 12:15-18:15 fully active (6h).",
+  "previous_cycle_id": "2026-10-03-0615",
+  "previous_cycle_outcome": "0 publications from pending_queue.json (1h45m quiet head + 4h15m active tail, all terminal). Schedule empty.",
+  "pending_total": 6,
+  "publishable_pending": 0,
+  "scheduled_count": 0,
+  "deferred_count": 6,
+  "primary_blocker": "ALL 6 items в terminal decay (ACTUAL decayed 0.000795-0.133 << tier thresholds 1.0/1.5). Workaround territory — cluster-cron не auto-publishes.",
+  "secondary_blocker": "Cycle window 12:15-18:15 MSK = 6h fully active, 4 potential slots (12:30/14:30/16:30/18:00). Daily limit 3/3 fresh available, but no candidates. Scanner stale 33d.",
+  "tier_legend": {
+    "1": "Premier: importance 5 (4+ rarely), strategic/business critical. Single post per cycle. Reserved slot.",
+    "2": "Notable: importance 3, niche but worth a post. Standard slot.",
+    "3": "Filler: importance 1-2, contextual. Last slot; one item only per cycle."
+  },
+  "schedule": [],
+  "deferred": [
+    {
+      "article_id": "openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e",
+      "source": "OpenAI",
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "importance": 5,
+      "stored_decayed_importance": null,
+      "actual_decayed_importance": 0.133040,
+      "actual_decayed_formula": "5 * exp(-0.693/7 * 36.635) = 0.133040",
+      "age_days_at_now": 36.635,
+      "tier": 1,
+      "tags": [
+        "openai",
+        "cursor",
+        "spacex",
+        "acquisition",
+        "agent-strategy",
+        "competitive-landscape"
+      ],
+      "publish_template": "standard",
+      "narrative_id": "n-00008",
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 5 — высшая стратегическая позиция, единственный candidate для Tier 1.",
+        "Stored decayed None (per _llm_analyze.py baseline). ACTUAL now: 0.133040 (delta=36.635d, half_life=7d).",
+        "ACTUAL 0.133040 << Tier-1 threshold 1.0. Workaround territory.",
+        "Cluster-cron convention: workaround items sit in forbidden territory; require explicit user override (`agentsblog publish --id …`) or cache-evict.",
+        "Deferred across: cycles 2026-10-03-0015 (100% quiet), 2026-10-03-0615 (1h45m quiet head). 6+ cycles stale.",
+        "Anchored to prior narrative mapping (cluster_narratives.log 2026-09-06 03:24 — narrative n-00008 «OpenAI acquires presentation startup NextSlide»).",
+        "Cycle delta vs prev: decayed 0.1363 → 0.133040 (−2.4% per 6h, expected exp-decay)."
+      ],
+      "analyst_notes": [
+        "Tier 1 — business-critical: SpaceX acquires Cursor, OpenAI winds down its model contract on the platform. Power shift в AI-coding.",
+        "Три sub-stories: (1) SpaceX enters software-IDE agent stack; (2) OpenAI draws line on IDE vendor capture; (3) cost to Cursor's OpenAI-model customers.",
+        "Terminal decay flag: ACTUAL decayed 0.133040 — orders of magnitude below Tier-1 threshold. Cluster-cron emits this advisory but does NOT auto-publish workaround territory without explicit user override.",
+        "If published: importance 5 → -2 days AGI.",
+        "Slot math — cycle 12:15-18:15 MSK = 6h fully active, 4 potential slots. Первый eligible slot для override: 12:30 MSK 2026-10-03.",
+        "Age 36.6d в pending — well outside 5-day freshness gate (EDITORIAL.md §4).",
+        "Cluster-cron recommendation: cache-evict OR keep as future-freshness anchor для narrative (but news действительно проавгустовская).",
+        "ESCALATION TRIGGER: this item has lingered 6+ cycles. If user wants it published, it's the strongest workaround candidate in queue. Otherwise recommend manual cache-evict."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": true,
+        "template": "standard",
+        "blocked_reasons": [
+          "below_tier1_threshold_actual",
+          "workaround_territory",
+          "needs_explicit_override",
+          "freshness_gate_breach"
+        ]
+      },
+      "defer_reason": "ACTUAL decayed below tier-1 threshold + workaround territory. Requires explicit override."
+    },
+    {
+      "article_id": "huggingface-open-asr-leaderboard-global-south",
+      "source": "HuggingFace",
+      "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+      "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "importance": 3,
+      "stored_decayed_importance": null,
+      "actual_decayed_importance": 0.018050,
+      "actual_decayed_formula": "3 * exp(-0.693/5 * 36.885) = 0.018050",
+      "age_days_at_now": 36.885,
+      "tier": 2,
+      "tags": [
+        "asr",
+        "speech-recognition",
+        "global-south",
+        "open-benchmark",
+        "inclusivity"
+      ],
+      "publish_template": "standard",
+      "narrative_id": "n-00015",
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 3 — нишевая but worth-a-post позиция, candidate для Tier 2.",
+        "Stored decayed None (per _llm_analyze.py baseline). ACTUAL now: 0.018050 (delta=36.885d, half_life=5d).",
+        "ACTUAL 0.018050 << Tier-2 threshold 1.5. Workaround territory.",
+        "Cluster-cron convention: workaround items sit in forbidden territory; require explicit user override.",
+        "Deferred across: 6+ cycles stale (2026-10-02-1815, 2026-10-03-0015 quiet, 2026-10-03-0615 1h45m quiet head).",
+        "Anchored to narrative n-00015 «Baseten on Hugging Face Inference Providers» (cluster_narratives.log 2026-09-06 03:24)."
+      ],
+      "analyst_notes": [
+        "Tier 2 — niche inclusivity в ASR: Hugging Face adds first Global South language to Open ASR Leaderboard.",
+        "Cross-link с Tier-1 OpenAI/Cursor не нужен — разные narratives.",
+        "Terminal decay flag: ACTUAL decayed 0.018050 — orders of magnitude below Tier-2 threshold. Cluster-cron emits this advisory but does NOT auto-publish workaround territory without explicit user override.",
+        "If published: importance 3 → -0.5 days AGI.",
+        "Slot math — cycle 12:15-18:15 MSK = 6h fully active. Первый eligible slot для override: 14:30 MSK 2026-10-03.",
+        "Age 36.9d в pending — well outside 5-day freshness gate (EDITORIAL.md §4).",
+        "Cluster-cron recommendation: cache-evict OR keep as narrative anchor."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": [
+          "below_tier2_threshold_actual",
+          "workaround_territory",
+          "freshness_gate_breach"
+        ]
+      },
+      "defer_reason": "ACTUAL decayed below tier-2 threshold — workaround territory."
+    },
+    {
+      "article_id": "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0",
+      "source": "TechCrunch AI",
+      "title": "Meeting notetaker Circleback adds a free tier to attract more customers",
+      "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
+      "importance": 2,
+      "stored_decayed_importance": null,
+      "actual_decayed_importance": 0.001002,
+      "actual_decayed_formula": "2 * exp(-0.693/3 * 32.896) = 0.001002",
+      "age_days_at_now": 32.896,
+      "tier": 3,
+      "tags": [
+        "saas",
+        "meeting-tools",
+        "freemium",
+        "product-update"
+      ],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": false,
+      "tier_rationale": [
+        "Importance 2 — niche industrial позиция, candidate для Tier 3.",
+        "Stored decayed None. ACTUAL now: 0.001002 (delta=32.896d, half_life=3d).",
+        "ACTUAL 0.001002 << Tier-3 threshold 1.0. Cache-evict candidate.",
+        "Cluster-cron convention: workaround items require explicit override.",
+        "Deferred across: 6+ cycles stale.",
+        "Anchored to no narrative (none in cluster_narratives.log)."
+      ],
+      "analyst_notes": [
+        "Tier 3 — SaaS product update. Niche but workflow-relevant.",
+        "BLOCKER: missing analysis (analyzed=false). Won't pass skipped_no_analysis filter at cron_publish.ps1.",
+        "Terminal decay flag: ACTUAL decayed 0.001002 — orders of magnitude below Tier-3 threshold.",
+        "If published: importance 2 → no change AGI.",
+        "Slot math — cycle 12:15-18:15 MSK = 6h fully active. Первый eligible slot для override: 16:30 MSK 2026-10-03.",
+        "Age 32.9d в pending — well outside 5-day freshness gate (EDITORIAL.md §4).",
+        "Recommended action: heuristic_analyze (low priority, ~33d stale) OR cache-evict. Cache-evict preferred — niche SaaS update, not critical to preserve."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": [
+          "below_tier3_threshold_actual",
+          "missing_analysis",
+          "cache_evict_recommended",
+          "freshness_gate_breach"
+        ]
+      },
+      "defer_reason": "ACTUAL decayed below tier-3 threshold + missing analysis. Cache-evict candidate."
+    },
+    {
+      "article_id": "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "source": "TechCrunch AI",
+      "title": "Musk's faster path to more gas turbines comes with pollution problem",
+      "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+      "importance": 2,
+      "stored_decayed_importance": null,
+      "actual_decayed_importance": 0.000795,
+      "actual_decayed_formula": "2 * exp(-0.693/3 * 33.896) = 0.000795",
+      "age_days_at_now": 33.896,
+      "tier": 3,
+      "tags": [
+        "energy-infrastructure",
+        "ai-compute",
+        "environmental-impact"
+      ],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 2 — niche industrial позиция, candidate для Tier 3.",
+        "ACTUAL now: 0.000795 (delta=33.896d, half_life=3d).",
+        "ACTUAL 0.000795 << Tier-3 threshold 1.0. Cache-evict candidate.",
+        "Deferred across: 6+ cycles stale.",
+        "Anchored to no narrative."
+      ],
+      "analyst_notes": [
+        "Tier 3 backup — environmental impact of AI-compute energy.",
+        "Cross-link с US-China drones (geopolitics) и Caterpillar (industrial AI) — все Tier-3 в terminal decay.",
+        "Terminal decay flag: ACTUAL decayed 0.000795 — orders of magnitude below Tier-3 threshold.",
+        "If published: importance 2 → no change AGI.",
+        "Slot math — cycle 12:15-18:15 MSK = 6h fully active. Override slot: 16:30 MSK 2026-10-03.",
+        "Age 33.9d в pending — well outside 5-day freshness gate (EDITORIAL.md §4).",
+        "Cluster-cron recommendation: cache-evict OR keep as narrative anchor (but news проавгустовская)."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": [
+          "below_tier3_threshold_actual",
+          "cache_evict_recommended",
+          "freshness_gate_breach"
+        ]
+      },
+      "defer_reason": "ACTUAL decayed below tier-3 threshold. Cache-evict candidate."
+    },
+    {
+      "article_id": "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+      "source": "TechCrunch AI",
+      "title": "Caterpillar is bringing to AI deployment what it learned from automating mining",
+      "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
+      "importance": 2,
+      "stored_decayed_importance": null,
+      "actual_decayed_importance": 0.000795,
+      "actual_decayed_formula": "2 * exp(-0.693/3 * 33.896) = 0.000795",
+      "age_days_at_now": 33.896,
+      "tier": 3,
+      "tags": [
+        "ai-agents",
+        "industrial-automation",
+        "autonomous-systems"
+      ],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 2 — niche industrial позиция, candidate для Tier 3.",
+        "ACTUAL now: 0.000795 (delta=33.896d, half_life=3d).",
+        "ACTUAL 0.000795 << Tier-3 threshold 1.0. Cache-evict candidate.",
+        "Deferred across: 6+ cycles stale.",
+        "Anchored to no narrative."
+      ],
+      "analyst_notes": [
+        "Tier 3 — industrial AI deployment (mining → factory). Niche but agent-relevant.",
+        "Terminal decay flag: ACTUAL decayed 0.000795 — orders of magnitude below Tier-3 threshold.",
+        "If published: importance 2 → no change AGI.",
+        "Slot math — cycle 12:15-18:15 MSK = 6h fully active. Override slot: 16:30 MSK 2026-10-03.",
+        "Age 33.9d в pending — well outside 5-day freshness gate (EDITORIAL.md §4).",
+        "Cluster-cron recommendation: cache-evict OR keep as narrative anchor (but news проавгустовская).",
+        "Slightly more agent-relevant than Musk turbines — but still terminal decay, no auto-publish path."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": [
+          "below_tier3_threshold_actual",
+          "cache_evict_recommended",
+          "freshness_gate_breach"
+        ]
+      },
+      "defer_reason": "ACTUAL decayed below tier-3 threshold. Cache-evict candidate."
+    },
+    {
+      "article_id": "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+      "source": "TechCrunch AI",
+      "title": "The U.S. is building barriers around drones and robots, but China has scale to get around them",
+      "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
+      "importance": 2,
+      "stored_decayed_importance": null,
+      "actual_decayed_importance": 0.000795,
+      "actual_decayed_formula": "2 * exp(-0.693/3 * 33.896) = 0.000795",
+      "age_days_at_now": 33.896,
+      "tier": 3,
+      "tags": [
+        "drones",
+        "robotics",
+        "us-china-tech"
+      ],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 2 — niche industrial позиция, candidate для Tier 3.",
+        "ACTUAL now: 0.000795 (delta=33.896d, half_life=3d).",
+        "ACTUAL 0.000795 << Tier-3 threshold 1.0. Cache-evict candidate.",
+        "Deferred across: 6+ cycles stale.",
+        "Anchored to no narrative."
+      ],
+      "analyst_notes": [
+        "Tier 3 — low priority. Geopolitical tech competition. The news aged out of AI-agent relevance window.",
+        "Terminal decay flag: ACTUAL decayed 0.000795 — orders of magnitude below Tier-3 threshold.",
+        "If published: importance 2 → no change AGI.",
+        "Slot math — cycle 12:15-18:15 MSK = 6h fully active. Override slot: 16:30 MSK 2026-10-03.",
+        "Age 33.9d в pending — well outside 5-day freshness gate (EDITORIAL.md §4).",
+        "Cluster-cron recommendation: cache-evict OR keep as narrative anchor (but news проавгустовская)."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": [
+          "below_tier3_threshold_actual",
+          "cache_evict_recommended",
+          "freshness_gate_breach"
+        ]
+      },
+      "defer_reason": "ACTUAL decayed below tier-3 threshold. Cache-evict candidate."
+    }
+  ],
+  "narrative_links": {
+    "n-00008": "OpenAI acquisitions / competitive landscape — Cursor/SpaceX (Tier 1 deferred, workaround territory, requires override). Highest narrative weight в queue.",
+    "n-00015": "HuggingFace open-source / agent tooling — ASR leaderboard (Global South) (Tier 2 deferred, workaround territory).",
+    "tier3_rotation_note": "Caterpillar (industrial AI), Musk turbines (compute/ESG), US-China drones (geopolitics), Circleback (SaaS) — все 4 Tier-3 items в terminal decay. Cache-evict в cycle 2026-10-03-1815 cleanup при отсутствии override."
+  },
+  "agi_counter_projection": {
+    "current_days_estimate": 1212,
+    "source_of_truth": "data/metrics.json (последняя запись 2026-09-06T01:05:12 agi_days=1212). NOTE: msg 1653/1654/1655 (2026-10-02) не обновляли counter.",
+    "post_cycle_current_days": 1212,
+    "deltas": {
+      "tier1_importance5": 0,
+      "tier2_importance3": 0,
+      "tier3_importance2": 0
+    },
+    "note": "Cycle 12:15-18:15 = 6h fully active, 4 potential slots. Все 6 items в terminal decay → 0 publications. AGI counter не меняется."
+  },
+  "publish_windows_remaining_in_cycle": [
+    {
+      "slot_msk": "2026-10-03T12:30:00+03:00",
+      "tier": 1,
+      "eligible": false,
+      "reason": "no fresh Tier-1 (cursor-spacex workaround territory, ~37d old, below threshold)"
+    },
+    {
+      "slot_msk": "2026-10-03T14:30:00+03:00",
+      "tier": 2,
+      "eligible": false,
+      "reason": "no fresh Tier-2 (ASR workaround territory, ~37d old, below threshold)"
+    },
+    {
+      "slot_msk": "2026-10-03T16:30:00+03:00",
+      "tier": 3,
+      "eligible": false,
+      "reason": "no fresh Tier-3 (all terminal decay, importance 2 items decayed 0.000795-0.001002 << 1.0)"
+    },
+    {
+      "slot_msk": "2026-10-03T18:00:00+03:00",
+      "tier": 3,
+      "eligible": false,
+      "reason": "no fresh Tier-3 (overflow slot if 16:30 not used; same eligibility issue)"
+    }
+  ],
+  "windows_after_quiet": [
+    "2026-10-03T12:15:00+03:00 — cycle start, no quiet overlap (fully active)",
+    "2026-10-03T12:30:00+03:00 — Tier-1 slot если override одобрен для cursor-spacex",
+    "2026-10-03T14:30:00+03:00 — Tier-2 slot если ASR override",
+    "2026-10-03T16:30:00+03:00 — Tier-3 slot (Caterpillar primary если override)",
+    "2026-10-03T18:00:00+03:00 — Tier-3 overflow slot"
+  ],
+  "warnings": [
+    "PRIMARY: Cycle 2026-10-03-1215 = 6h fully active (12:15-18:15). 4 potential publish slots (12:30/14:30/16:30/18:00 MSK) доступны, но 0 items eligible.",
+    "TERMINAL DECAY: ALL 6 items ACTUAL decayed well below thresholds (cursor-spacex 0.133, asr 0.0181, techcrunch items 0.000795-0.001002). Cluster-cron convention: workaround items require explicit override.",
+    "WORKAROUND TERRITORY (Tier-1 cursor-spacex): now +37 days old — far outside any workaround approval zone (>30d convention per cluster-cron).",
+    "WORKAROUND TERRITORY (Tier-2 ASR): now +37 days old — same blocker.",
+    "DAILY LIMIT: 3/3 fresh (00:00:01 reset at 2026-10-03 00:00:01). Slots available but no candidates.",
+    "PUBLISH-CRON vs CLUSTER-CRON: msg 1653/1654/1655 (Barclays/Nvidia/AutoSynthData) от 2026-10-02 НЕ из pending_queue.json. Publish-cron от blog.db live queue.",
+    "TELEGRAM RISK: chat_id @agentsSmits_bot intermittent getChat 404 reported 2026-09-06. Manual audit fixed 2026-09-15. Soft risk only.",
+    "ANALYZER BACKLOG: blog.db live queue имеет 231+ unanalyzed items (per 12.09 cluster cycles). Cluster-cron не drain — `agentsblog analyze --limit 4` would clear backlog.",
+    "CACHE-EVICT CANDIDATES: 4 Tier-3 (Musk turbines, Caterpillar, US-China drones, Circleback) — все terminal decay, не pass priority gate. Cache eviction recommended to reduce pending from 6 → 2.",
+    "SLOT-DENSITY: 4 potential slots (12:30/14:30/16:30/18:00 MSK) = 100% slot availability. Density 100% but 0% utilization.",
+    "STREAK: cycle 2026-10-03-0615 (1h45m quiet head) = 0 publications. Cycle 2026-10-03-0015 (100% quiet) = 0 publications. Cycle 2026-10-02-1815 = 0 publications from pending_queue.json. ACTUAL 0 publications from pending_queue.json уже 6+ cycle подряд (включая 2026-09-30-1815 / 2026-09-30-1215 / 2026-09-30-0615 / 2026-09-30-0015).",
+    "LAST SUCCESSFUL PUBLISH FROM PENDING_QUEUE: 2026-09-06 (msg 1526-1530, 4 articles via arxiv-2608.28511 / digest-github-copilot-2026-08-28 / openai-supporting-thailand / google-book-travel-ai-mode). 27+ дней без новых публикаций из pending.",
+    "SCANNER STALENESS: last_checked 2026-08-31 (~33d). Pending queue split: pending_queue.json (6 stale, terminal) + blog.db live queue. Manual `agentsblog scan` would re-populate pending_queue.json.",
+    "MISSING ANALYSIS (Circleback): analyzed=false → даже если override будет выпущен, fallback path publishes via skipped_no_analysis и публикует без translated impact fields. Re-analyze через heuristic_analyze.py ИЛИ cache-evict.",
+    "FRESHNESS GATE BREACH: All 6 items > 5-day freshness gate (EDITORIAL.md §4). Cluster-cron convention holds workaround territory до explicit user override.",
+    "QUIET HOURS CYCLE ADVANCE: cycle 2026-10-03-1815 (18:15-00:15) crosses quiet hours boundary 23:00-08:00. Tail (23:00-00:15) = 1h15m quiet. Если user override на этой неделе, slot density будет ниже чем в текущем цикле."
+  ],
+  "next_cycle_projection": {
+    "next_cycle_id": "2026-10-03-1815",
+    "next_window_start_msk": "2026-10-03T18:15:00+03:00",
+    "next_window_end_msk": "2026-10-04T00:15:00+03:00",
+    "quiet_hours_overlap_in_next_cycle": "yes — tail 23:00-00:15 = 1h15m quiet. Active portion 18:15-23:00 = 4h45m.",
+    "daily_limit_state_at_next_cycle_start": "depends on publish-cron activity 12:15-18:15 MSK. Max 3/3 fresh.",
+    "candidate_tier1_for_next_cycle": "No fresh Tier-1 в pending_queue.json (only cursor-spacex в workaround territory ~37d old).",
+    "candidate_tier2_for_next_cycle": "No fresh Tier-2 в pending_queue.json (ASR в workaround ~37d old).",
+    "candidate_tier3_for_next_cycle": "No fresh Tier-3 в pending_queue.json (all terminal).",
+    "cache_evict_recommended_for_next_cycle": [
+      "techcrunch-musks-faster-path-to-more-gas-turbines-comes-wit-d5dafdd78fb6",
+      "techcrunch-caterpillar-is-bringing-to-ai-deployment-what-it-e4de3653e651",
+      "techcrunch-the-u-s-is-building-barriers-around-drones-and-r-c053743dc5a1",
+      "techcrunch-meeting-notetaker-circleback-adds-a-free-tier-to-2b7c320d3fa0"
+    ],
+    "preflight_for_next_cycle": [
+      "Verify Telegram chat_id @agentsSmits_bot alive — `openclaw channels list` перед publish-cron 18:15.",
+      "If override IS issued for cursor-spacex: `python -m agentsblog publish --id openai-our-decision-on-cursor-following-its-acquisition-by--57a3b900535e` slot 18:30 MSK (first eligible slot в cycle 2026-10-03-1815).",
+      "Run `agentsblog analyze --limit 4` чтобы drain 231+ item blog.db backlog.",
+      "Run `agentsblog cache-evict --pending-stale` для 4 Tier-3 items recommended выше.",
+      "Scanner stale — last_checked 2026-08-31 (~33d). Manual `agentsblog scan` would re-populate pending_queue.json с fresh items.",
+      "Quiet hours tail 23:00-00:15 in next cycle — earliest override slot in next cycle after quiet: 08:00 MSK 2026-10-04 (cycle 2026-10-04-0015)."
+    ]
+  },
+  "meta": {
+    "delivered_by": "agentsmits-blog cluster cron (unattended run)",
+    "reason_for_no_quiet_overlap": "Cycle 12:15-18:15 MSK fully active (6h, 4 potential slots).",
+    "reason_for_terminal_decay": "ALL 6 items в pending_queue.json — 33-37d stale. ACTUAL decayed 0.000795-0.133 — orders of magnitude below tier-cutoff (1.0/1.5).",
+    "items_tier_assigned": 6,
+    "items_actually_publishing_this_cycle": 0,
+    "items_with_complete_analysis": 5,
+    "items_blocked_by_analysis": 1,
+    "items_blocked_by_quiet_hours": 0,
+    "items_blocked_by_daily_limit": 0,
+    "items_blocked_by_below_threshold_actual": 6,
+    "items_in_workaround_territory": 2,
+    "items_recommended_for_cache_evict": 4,
+    "cycle_total_actual_publications_expected_from_pending": "0 (no auto-publish candidates; cursor-spacex requires explicit override >37d old)"
+  }
+}

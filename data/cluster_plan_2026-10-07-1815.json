@@ -1,0 +1,278 @@
+{
+  "cycle_id": "2026-10-07-1815",
+  "clustered_at": "2026-10-07T15:15:00Z",
+  "clustered_at_msk": "2026-10-07T18:15:00+03:00",
+  "window_msk": "2026-10-07T18:15:00+03:00 to 2026-10-08T00:15:00+03:00",
+  "quiet_hours_applied": "TAIL overlap. Cycle 18:15-00:15 MSK = ACTIVE head 4h45m (18:15-23:00, 285 min) + quiet tail 1h15m (23:00-00:15, 75 min). publish-cron operates 18:15-23:00 MSK only; sleeps 23:00-00:15. T1 slot 20:30 MSK + T2 slot 22:30 MSK are within ACTIVE window; T3 slot 00:30 MSK belongs to NEXT cycle 2026-10-08-0015 (out of scope for this 6h window).",
+  "previous_cycle_id": "2026-10-07-1215",
+  "previous_cycle_outcome": "Prior cycle context — 3 publications fired during the ACTIVE 06:15-12:15 MSK window (msg 1667 @ 05:05 UTC=08:05 MSK, msg 1668 @ 08:35 UTC=11:35 MSK, msg 1669 @ 12:05 UTC=15:05 MSK). Daily MSK cap (3/3) exhausted BEFORE this cycle starts.",
+  "pending_total": 660,
+  "pending_analyzed_with_t2_or_higher": 461,
+  "fresh_t2_quality": 86,
+  "publishable_pending": 86,
+  "scheduled_count": 0,
+  "deferred_count": 86,
+  "primary_blocker": "DAILY LIMIT HIT — 3/3 publications already fired today (MSK 2026-10-07): msg 1667 (08:05 MSK), msg 1668 (11:35 MSK), msg 1669 (15:05 MSK). Both in-cycle slots (T1 20:30 MSK, T2 22:30 MSK) fall within MSK day 2026-10-07 → BLOCKED by editorial daily cap (EDITORIAL.md §4). Cluster-cron does NOT auto-override the 3/3 limit.",
+  "secondary_blocker": "TAIL QUIET — even without daily cap, T3 slot 00:30 MSK 2026-10-08 belongs to NEXT cycle (2026-10-08-0015) and is OUT of scope for this 6h window. NEXT viable T3 publication slot = 00:30 MSK 2026-10-08 (cycle 2026-10-08-0015), but that entire window is inside quiet hours (00:30 within 23:00-08:00) — actually published at T1 of next ACTIVE cycle 2026-10-08-0615 (T1 08:30 MSK 2026-10-08).",
+  "tier_legend": {
+    "1": "Premier: importance 5 (4+ rarely), strategic/business critical. Single post per cycle. Reserved slot.",
+    "2": "Notable: importance 3, niche but worth a post. Standard slot.",
+    "3": "Filler: importance 1-2, contextual. Last slot; one item only per cycle."
+  },
+  "slot_map": {
+    "t1_msk": "20:30",
+    "t1_status": "ACTIVE (within 18:15-23:00) but BLOCKED by daily_limit (3/3 already in MSK Oct 7)",
+    "t2_msk": "22:30",
+    "t2_status": "ACTIVE (within 18:15-23:00) but BLOCKED by daily_limit (3/3 already in MSK Oct 7)",
+    "t3_msk": "00:30 next day",
+    "t3_status": "OUT of scope — belongs to next cycle 2026-10-08-0015 (within quiet hours 23:00-08:00 anyway)"
+  },
+  "schedule": [],
+  "deferred": [
+    {
+      "article_id": "google_ai_introducing-playground-create-and-play-custom-games",
+      "source": "Google AI",
+      "title": "Introducing Playground: Create and play custom games",
+      "url": "https://blog.google/technology/google-labs/google-playground/",
+      "importance": 4,
+      "stored_decayed_importance": 0.0,
+      "actual_decayed_importance": 3.755,
+      "actual_decayed_formula": "4 * exp(-0.693/7 * 0.6444) = 3.755",
+      "age_days_at_now": 0.6444,
+      "tier": 2,
+      "tags": ["google", "playground", "gaming", "ai-platform"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": false,
+      "tier_rationale": [
+        "Importance 4 — borderline Tier-1/Tier-2. Stored decayed 0.0 (not yet processed by decay pass). ACTUAL now: 3.755 (delta=0.6444d, half_life=7d).",
+        "ACTUAL 3.755 > Tier-2 threshold 1.5. PUBLISHABLE by decay + freshness gates.",
+        "FRESH (0.64d) — well inside 5-day freshness gate (EDITORIAL.md §4).",
+        "NOT analyzed yet (no agent_impact field). Will be processed by next analyze pass.",
+        "Tier-2 slot 22:30 MSK is ACTIVE in this cycle BUT BLOCKED by daily_limit (3/3)."
+      ],
+      "analyst_notes": [
+        "Tier 2 candidate by importance 4 + ACTUAL decay 3.755 (above 1.5 threshold).",
+        "Google Playground — AI-powered gaming platform: lets users create and play browser-based games via simple text prompts (Google Labs experiment).",
+        "Fresh 0.64d old — prime slot material if daily cap were lifted.",
+        "CYCLE: Tier-2 slot 22:30 MSK = ACTIVE within 18:15-23:00 window, but BLOCKED by daily_limit (3/3).",
+        "If published (next viable = T1 08:30 MSK 2026-10-08 cycle 2026-10-08-0615): importance 4 → -1 day AGI.",
+        "Cluster-cron recommendation: defer to cycle 2026-10-08-0615. Natural publication target: T1 08:30 MSK 2026-10-08 (Slot 1 of new MSK day)."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["daily_limit_hit_3_of_3", "in_cycle_t2_slot_within_daily_cap_window", "not_yet_analyzed"]
+      },
+      "defer_reason": "Daily limit 3/3 hit before 18:00 MSK; T2 slot 22:30 MSK within MSK Oct 7 day → BLOCKED. ACTUAL decay 3.755 + fresh (0.64d) make this the strongest Tier-2 candidate for next cycle (2026-10-08-0615, T1 08:30 MSK)."
+    },
+    {
+      "article_id": "huggingface_one-model-family-two-gold-level-results-fine-tuning-nemotron",
+      "source": "HuggingFace",
+      "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+      "url": "https://huggingface.co/blog/nemotron-ioi-imo",
+      "importance": 4,
+      "stored_decayed_importance": 0.0,
+      "actual_decayed_importance": 3.755,
+      "actual_decayed_formula": "4 * exp(-0.693/7 * 0.6444) = 3.755",
+      "age_days_at_now": 0.6444,
+      "tier": 2,
+      "tags": ["nemotron", "nvidia", "fine-tuning", "ioi", "imo", "math", "olympiad"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": false,
+      "tier_rationale": [
+        "Importance 4 — strong Tier-2 candidate. ACTUAL now: 3.755 (delta=0.6444d, half_life=7d).",
+        "ACTUAL 3.755 > Tier-2 threshold 1.5. PUBLISHABLE.",
+        "FRESH (0.64d) — well inside 5-day freshness gate.",
+        "NOT analyzed yet — next analyze pass will produce editorial draft.",
+        "Tier-2 slot 22:30 MSK ACTIVE but BLOCKED by daily_limit."
+      ],
+      "analyst_notes": [
+        "Tier 2 — Nvidia Nemotron fine-tunes achieve gold-medal results at IOI and IMO (formal olympiad benchmarks).",
+        "Fresh 0.64d — competes with other 0.64d items for the deferred Tier-2 publish slot in next cycle.",
+        "CYCLE: T2 22:30 MSK = BLOCKED by 3/3 daily cap.",
+        "If published next viable cycle: importance 4 → -1 day AGI.",
+        "Cluster-cron recommendation: defer to cycle 2026-10-08-0615. Should compete with Playground + Falcon ASR + SynthID for the single T1 08:30 MSK 2026-10-08 slot — all four are 0.64d, ACTUAL 3.755."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["daily_limit_hit_3_of_3", "in_cycle_t2_slot_within_daily_cap_window", "not_yet_analyzed"]
+      },
+      "defer_reason": "Daily limit 3/3 hit; T2 slot 22:30 MSK within MSK Oct 7 → BLOCKED. Best Tier-2 candidate (ACTUAL 3.755, 0.64d) — competes for T1 08:30 MSK 2026-10-08."
+    },
+    {
+      "article_id": "huggingface_introducing-falcon-asr",
+      "source": "HuggingFace",
+      "title": "Introducing Falcon ASR",
+      "url": "https://huggingface.co/blog/falcon-asr",
+      "importance": 4,
+      "stored_decayed_importance": 0.0,
+      "actual_decayed_importance": 3.755,
+      "actual_decayed_formula": "4 * exp(-0.693/7 * 0.6444) = 3.755",
+      "age_days_at_now": 0.6444,
+      "tier": 2,
+      "tags": ["falcon", "asr", "speech-recognition", "open-weights", "uae"],
+      "publish_template": "standard",
+      "narrative_id": "n-00015",
+      "has_analysis": false,
+      "tier_rationale": [
+        "Importance 4 — strong Tier-2. ACTUAL 3.755.",
+        "FRESH (0.64d) — inside freshness gate.",
+        "NOT analyzed yet.",
+        "Anchored to narrative n-00015 (HuggingFace open-source / agent tooling).",
+        "Tier-2 slot 22:30 MSK ACTIVE but BLOCKED by daily_limit."
+      ],
+      "analyst_notes": [
+        "Tier 2 — Falcon ASR: open-weights speech recognition model from UAE/TII. Continues narrative n-00015 (HF open-weights thread).",
+        "Fresh 0.64d — 4-way deadlock at top of deferred list with Playground/Nemotron/SynthID.",
+        "CYCLE: T2 22:30 MSK BLOCKED by 3/3 daily cap.",
+        "If published next viable cycle: importance 4 → -1 day AGI.",
+        "Cluster-cron recommendation: defer to 2026-10-08-0615. Manual triage needed — 4 candidates competing for T1 08:30 MSK 2026-10-08 (Playground, Nemotron, Falcon ASR, SynthID) — all at 0.64d / ACTUAL 3.755."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["daily_limit_hit_3_of_3", "in_cycle_t2_slot_within_daily_cap_window", "not_yet_analyzed"]
+      },
+      "defer_reason": "Daily limit 3/3 hit; T2 22:30 MSK within MSK Oct 7 → BLOCKED. Top Tier-2 candidate tied with Playground/Nemotron/SynthID."
+    },
+    {
+      "article_id": "techcrunch_googles-new-synthid-website-can-identify-ai-generated-media",
+      "source": "TechCrunch",
+      "title": "Google's new SynthID website can identify AI-generated media",
+      "url": "https://techcrunch.com/2026/10/06/googles-new-synthid-website-can-identify-ai-generated-media/",
+      "importance": 4,
+      "stored_decayed_importance": 0.0,
+      "actual_decayed_importance": 3.755,
+      "actual_decayed_formula": "4 * exp(-0.693/7 * 0.6444) = 3.755",
+      "age_days_at_now": 0.6444,
+      "tier": 2,
+      "tags": ["google", "synthid", "watermark", "ai-detection", "media-provenance"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": false,
+      "tier_rationale": [
+        "Importance 4 — strong Tier-2. ACTUAL 3.755.",
+        "FRESH (0.64d) — inside freshness gate.",
+        "NOT analyzed yet.",
+        "Tier-2 slot 22:30 MSK ACTIVE but BLOCKED by daily_limit."
+      ],
+      "analyst_notes": [
+        "Tier 2 — Google launches public SynthID website: anyone can verify whether image/video/audio is AI-generated.",
+        "Fresh 0.64d — ties with Playground/Nemotron/Falcon ASR at top of deferred list.",
+        "CYCLE: T2 22:30 MSK BLOCKED by 3/3 daily cap.",
+        "If published next viable cycle: importance 4 → -1 day AGI.",
+        "Cluster-cron recommendation: defer to 2026-10-08-0615. Manual triage needed — 4-way tie for T1 08:30 MSK 2026-10-08 slot."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["daily_limit_hit_3_of_3", "in_cycle_t2_slot_within_daily_cap_window", "not_yet_analyzed"]
+      },
+      "defer_reason": "Daily limit 3/3 hit; T2 22:30 MSK within MSK Oct 7 → BLOCKED. Top Tier-2 candidate tied with Playground/Nemotron/Falcon ASR."
+    },
+    {
+      "article_id": "arxiv_test-time-agent-evolution-for-long-horizon-legal-reasoning",
+      "source": "arXiv",
+      "title": "Test-Time Agent Evolution for Long-Horizon Legal Reasoning",
+      "url": "https://arxiv.org/abs/2609.20754",
+      "importance": 3,
+      "stored_decayed_importance": 0.0,
+      "actual_decayed_importance": 2.391,
+      "actual_decayed_formula": "3 * exp(-0.693/5 * 1.6444) = 2.391",
+      "age_days_at_now": 1.6444,
+      "tier": 2,
+      "tags": ["agent-evolution", "legal-reasoning", "long-horizon", "test-time-training"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": false,
+      "tier_rationale": [
+        "Importance 3 — standard Tier-2. ACTUAL 2.391 (above 1.5 threshold).",
+        "FRESH (1.64d) — inside freshness gate.",
+        "NOT analyzed yet.",
+        "Tier-2 slot 22:30 MSK ACTIVE but BLOCKED by daily_limit."
+      ],
+      "analyst_notes": [
+        "Tier 2 — arXiv paper on test-time agent evolution for legal reasoning. Echoes broader trend of self-improving agents.",
+        "Fresh 1.64d — second-tier candidate (behind 0.64d items).",
+        "CYCLE: T2 22:30 MSK BLOCKED by 3/3 daily cap.",
+        "If published next viable cycle: importance 3 → -0.5 days AGI.",
+        "Cluster-cron recommendation: defer to 2026-10-08-0615. Natural slot: T2 10:30 MSK 2026-10-08 if T1 taken by 0.64d tier (Playground/Nemotron/ASR/SynthID)."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": false,
+        "template": "standard",
+        "blocked_reasons": ["daily_limit_hit_3_of_3", "in_cycle_t2_slot_within_daily_cap_window", "not_yet_analyzed"]
+      },
+      "defer_reason": "Daily limit 3/3 hit; T2 22:30 MSK within MSK Oct 7 → BLOCKED. Second-tier Tier-2 (1.64d) — competes for T2 10:30 MSK 2026-10-08."
+    },
+    {
+      "article_id": "cursor_rollouts-and-security-review",
+      "source": "Cursor",
+      "title": "Rollouts and Security Review",
+      "url": "https://cursor.com/changelog/rollouts-and-security-reviewer",
+      "importance": 5,
+      "stored_decayed_importance": 0.0,
+      "actual_decayed_importance": 1.360,
+      "actual_decayed_formula": "5 * exp(-0.693/7 * 12.6444) = 1.360",
+      "age_days_at_now": 12.6444,
+      "tier": 1,
+      "tags": ["cursor", "agent-monitoring", "security", "deployment"],
+      "publish_template": "standard",
+      "narrative_id": null,
+      "has_analysis": true,
+      "tier_rationale": [
+        "Importance 5 — высшая стратегическая позиция, единственный свежий-by-decay Tier-1 candidate.",
+        "ACTUAL decayed 1.360 (12.6444d, half_life=7d) — ABOVE Tier-1 threshold 1.0 by a thin margin (1.36×).",
+        "FRESH by decay but outside 5-day freshness gate (EDITORIAL.md §4) — age 12.64d.",
+        "Tier-1 slot 20:30 MSK ACTIVE but BLOCKED by daily_limit."
+      ],
+      "analyst_notes": [
+        "Tier 1 — Cursor ships two new bots (Rollouts + Security Review) for automated deployment monitoring and security scanning.",
+        "ACTUAL decayed 1.360 — единственный свежий-by-decay Tier-1 candidate. Workaround territory risk: if cycle is delayed by 1 day, decay drops to 1.0× — exactly threshold. Cluster-cron does NOT auto-publish workaround territory, but this is in BORDER zone (1.36 > 1.0).",
+        "FRESHNESS GATE BREACH — age 12.64d >> 5d gate. Cluster-cron convention holds workaround territory до explicit user override.",
+        "CYCLE: Tier-1 slot 20:30 MSK = ACTIVE within 18:15-23:00, but BLOCKED by daily_limit (3/3 in MSK Oct 7).",
+        "If published (next viable = T1 08:30 MSK 2026-10-08 cycle 2026-10-08-0615): importance 5 → -2 days AGI.",
+        "Cluster-cron recommendation: defer to cycle 2026-10-08-0615. ACTUAL decay will drop ~0.793 (at age 13.64d) — still above 1.0 threshold. Freshness gate remains breached — flag for user review."
+      ],
+      "format_check": {
+        "is_breakthrough": false,
+        "needs_approval": true,
+        "template": "standard",
+        "blocked_reasons": ["daily_limit_hit_3_of_3", "in_cycle_t1_slot_within_daily_cap_window", "freshness_gate_breach_age_12.6d", "border_zone_decay_1.36"]
+      },
+      "defer_reason": "Daily limit 3/3 hit; T1 20:30 MSK within MSK Oct 7 → BLOCKED. ACTUAL decay 1.360 (above 1.0 Tier-1 threshold) makes this publishable-by-rule BUT freshness gate breached (12.6d > 5d). Defer to cycle 2026-10-08-0615 with freshness override flag for user."
+    }
+  ],
+  "deferred_summary": {
+    "tier_1_candidates": 1,
+    "tier_1_blocked_by": ["daily_limit_hit_3_of_3", "freshness_gate_breach"],
+    "tier_2_candidates": 85,
+    "tier_2_blocked_by": ["daily_limit_hit_3_of_3"],
+    "tier_3_candidates": 0,
+    "freshness_distribution": {
+      "lt_2d": 26,
+      "2d_to_5d": 60,
+      "gt_5d": 0
+    }
+  },
+  "next_viable_publish_window": {
+    "earliest_t1_msk": "2026-10-08T08:30:00+03:00",
+    "cycle_id": "2026-10-08-0615",
+    "rationale": "Next MSK day starts 00:00 2026-10-08. First ACTIVE T1 slot = 08:30 MSK (cycle 2026-10-08-0615, ACTIVE 06:15-12:15). All 86 fresh Tier-2 candidates remain inside 5d freshness gate if cycle delays by 16h (0.64d → 1.31d; 1.64d → 2.31d). cursor-rollouts Tier-1 (currently 12.6d) crosses to 13.3d — still in 5d breach, remains flag for user."
+  },
+  "operational_notes": [
+    "DAILY LIMIT MECHANICS — the 3/3 cap (EDITORIAL.md §4) is enforced by editorial.py BEFORE any quiet-hours/decay gating. Even with all gates green and a Tier-1 publish-ready item, editorial refuses after 3 publications in current MSK day.",
+    "Cluster-cron does NOT auto-override the daily cap. Override requires explicit user command.",
+    "PUBLISH-CRON IDLE — cycle 18:15-00:15 MSK = publish-cron fully awake 18:15-23:00 (4h45m), sleeping 23:00-00:15 (1h15m). On a normal day, this cycle would publish T1 20:30 + T2 22:30 = 2 slots. Today, both blocked by daily cap.",
+    "WORKAROUND TERRITORY — cursor-rollouts (Tier-1, ACTUAL 1.360) is technically publishable by decay threshold (1.36 > 1.0) BUT freshness gate breach (12.6d > 5d) + daily cap (3/3) → triple-blocked. Cluster-cron emits advisory, defers to user override path.",
+    "FRESH ITEM FLOOD — 86 fresh (age≤5d) Tier-2 items accumulated since 2026-10-02. Next cycle 2026-10-08-0615 will see ~3× normal T1 competition (26 items at <2d)."
+  ]
+}
