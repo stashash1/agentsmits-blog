@@ -1,0 +1,2482 @@
+{
+  "events": [
+    {
+      "event_id": "evt-4b15c67e0a2678a704662f74",
+      "revision": "672a1ad69f1939ef6a99f412fc51586627587b47faaa2933c80eda8a9c2c3716",
+      "first_seen": "2026-10-27T20:30:34.131719+00:00",
+      "updated_at": "2026-11-03T22:50:00.898839+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "Claude Code 2.1.312: OIDC-claim для шлюза приложений и сокращённый системный промпт для кастомных имён моделей",
+        "summary": "Релиз Claude Code 2.1.312 — сборка исправлений и изменений поведения. В шлюзе Claude apps добавлен параметр oidc.user_id_claim для идентификации пользователя по id_token-claim, отличному от sub, например по Microsoft Entra ID oid. Для Bedrock, Vertex, Foundry и Mantle изменён системный промпт: для имён моделей, которые Claude Code не распознаёт, включая пользовательские имена развёртываний и ARN inference-профилей, используется короткая версия промпта даже если они стоят в основе Sonnet или Haiku; полный промпт сохраняется через CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT=0. Также автоматическое переключение модели после отмеченного сообщения теперь распространяется и на нераспознанные имена моделей, отключается переменной CLAUDE_CODE_DISABLE_REFUSAL_FALLBACK=1.",
+        "impact": {
+          "assumptions": [
+            "Релиз доступен пользователям Claude Code в том виде, как описан в CHANGELOG",
+            "Изменения OIDC и системного промпта применимы только к шлюзу приложений и перечисленным облачным провайдерам"
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: чейлоглист описывает изменения, но не состояние до релиза по каждому пункту.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 2,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Ближайшие недели после релиза; наблюдаемых данных о влиянии нет.",
+          "lower": 2,
+          "lower_anchor_reason": "Нижняя граница 2: изменения локальны для конфигурации шлюза и выбора промпта, измеримого отраслевого эффекта в документе нет.",
+          "mechanism": "Новая опция oidc.user_id_claim меняет, какой claim из id_token используется как идентификатор человека в шлюзе приложений, что снимает зависимость от sub в корпоративных IdP. Короткий системный промпт для нераспознанных имён моделей на Bedrock/Vertex/Foundry/Mantle меняет набор инструкций при вызове кастомных развёртываний, влияя на стоимость и поведение агента.",
+          "observed_impact": null,
+          "projected_impact": 3,
+          "rationale": "Релиз состоит в основном из исправлений: клики для отправки, поддержка OIDC-claim в шлюзе, короткий системный промпт для кастомных имён моделей, лимит хуков, правки телеметрии. Ширина — 2, так как изменения касаются профессионального контура Claude Code и корпоративных интеграций (OIDC, Bedrock/Vertex/Foundry/Mantle), но не нескольких независимых продуктов. Глубина — 2: локально измеримая польза (корректная идентификация по OIDC, стабильнее работа с кастомными именами моделей), без смены класса задач или прав. По матрице ячейка (2,2) даёт 3 как верхнюю границу и 2 как нижнюю.",
+          "scope": "Пользователи Claude Code: администраторы шлюза приложений с корпоративным OIDC и пользователи кастомных развёртываний на Bedrock, Vertex, Foundry и Mantle.",
+          "score": 3,
+          "systemic_quarter": false,
+          "upper": 5
+        },
+        "evidence_level": 2,
+        "topics": [
+          "Claude Code",
+          "релиз",
+          "OIDC",
+          "system prompt",
+          "Bedrock",
+          "Vertex"
+        ],
+        "entities": [
+          "Anthropic",
+          "Claude Code",
+          "Claude apps gateway",
+          "Microsoft Entra ID",
+          "Amazon Bedrock",
+          "Google Vertex AI",
+          "Microsoft Foundry"
+        ],
+        "implications": "Интерпретация: командам с корпоративным OIDC и кастомными моделями на Bedrock/Vertex/Foundry/Mantle релиз даёт более предсказуемое поведение — идентификацию по нужному claim и короткий промпт вместо полного. Это локальная настройка рабочего контура, а не изменение отрасли; отдельного подтверждённого механизма влияния на отраслевые показатели в документе нет.",
+        "caveat": "Документ — официальный чейлоглист вендора, он подтверждает сами изменения, но не их эффективность. Данных об измерении результата нет; почти все пункты — точечные исправления. Сопоставимый baseline по версиям в тексте не приведён, поэтому прежнее состояние по каждому пункту остаётся неявным.",
+        "urgent": false,
+        "urgency_reason": "",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "В шлюзе приложений Claude apps добавлен параметр oidc.user_id_claim для идентификации по id_token-claim, отличному от sub, например Microsoft Entra ID oid.",
+            "source_id": "claude_code",
+            "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21312",
+            "quote_excerpt": "- Added `oidc.user_id_claim` to the Claude apps gateway, to identify people by an id_token claim other than `sub`, such as Microsoft Entra ID's `oid` -…"
+          },
+          {
+            "id": "f2",
+            "claim": "Bedrock, Vertex, Foundry и Mantle используют короткий системный промпт для нераспознанных имён моделей, включая кастомные развёртывания и ARN inference-профилей.",
+            "source_id": "claude_code",
+            "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21312",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "Claude Code 2.1.312",
+            "source_id": "claude_code",
+            "published_at": "",
+            "origin_family": "anthropic",
+            "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21312"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
+      "event_id": "evt-33107d1b7b806d3b4b83d0a9",
+      "revision": "3866a2a0099d1dc07bd1852cf9d69a34846dcb9c53079d2347b50fa63ef9dc75",
+      "first_seen": "2026-11-03T22:00:03.125323+00:00",
+      "updated_at": "2026-11-03T22:48:53.048396+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "Anthropic расширила соглашение с GSA скидкой 40% на Claude",
+        "summary": "Anthropic расширила партнёрство с GSA: государственные партнёры получают 40-процентную скидку на Claude Enterprise, Claude for Government и Claude API. Скидка распространяется на все продуктовые поверхности, включая будущие закупки через облачных провайдеров, а также на штатные, местные, племенные и территориальные органы власти. Компания также запускает программу поддержки внедрения Claude.",
+        "impact": {
+          "assumptions": [
+            "Агентства смогут использовать скидку при закупке через GSA",
+            "Поставка через облачных провайдеров начнётся в заявленные сроки",
+            "Оценка масштаба и эффекта зависит от числа ведомств, переходящих на Claude"
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён. До соглашения скидка 40% на перечисленные продукты и её полный охват не описаны.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 3,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "В ближайшие месяцы для облачных каналов и ближайшие недели для программ поддержки внедрения.",
+          "lower": 4,
+          "lower_anchor_reason": "Нижняя оценка 4 исходит из ширины 2 и глубины 2: событие снижает стоимость в нише, но подтверждения изменения процессов или отраслевого выбора в источнике недостаточно.",
+          "mechanism": "Единая скидка 40% через GSA снижает цену закупки во всех продуктовых поверхностях, включая будущие облачные каналы. Сопутствующая программа помогает агентствам внедрять Claude; при отсутствии минимального обязательства расходов снижается потребность в крупной предварительной закупке.",
+          "observed_impact": null,
+          "projected_impact": 5,
+          "rationale": "Событие затрагивает профессиональную нишу госсектора и меняет стоимость закупки Claude для государственных агентств. Вместе с расширением охвата продуктов и запуском программы внедрения оно снижает барьер использования, но источник не показывает системного эффекта за квартал; оценка 5 следует из ячейки «ширина 2, глубина 3».",
+          "scope": "Государственные организации США: федеральные, штатные, местные, племенные и территориальные органы; продукты Claude Enterprise, Claude for Government и Claude API.",
+          "score": 5,
+          "systemic_quarter": false,
+          "upper": 6
+        },
+        "evidence_level": 2,
+        "topics": [
+          "ИИ",
+          "агентные системы",
+          "государственный сектор",
+          "закупки ИИ",
+          "Anthropic",
+          "Claude"
+        ],
+        "entities": [
+          "Anthropic",
+          "Claude",
+          "Claude Enterprise",
+          "Claude for Government",
+          "Claude API",
+          "General Services Administration",
+          "Amazon Bedrock",
+          "Google Cloud Vertex AI"
+        ],
+        "implications": "Интерпретация: государственные ведомства получают более широкий и единый канал закупки Claude, что может упростить переход к ИИ-инструментам. Однако источник не доказывает изменение отраслевых процессов, результативность внедрения или наличие системного эффекта.",
+        "caveat": "Официальный пресс-релиз Anthropic подтверждает условия соглашения и заявленные показатели, но независимого измерения скидки, внедрения или влияния на расходы государства в источнике нет. Числа использования и потенциальной экономии остаются заявлениями компании.",
+        "urgent": false,
+        "urgency_reason": "",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "Новое соглашение Anthropic с GSA даёт государственным партнёрам 40% скидку на Claude Enterprise, Claude for Government и Claude API.",
+            "source_id": "anthropic",
+            "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+            "quote_excerpt": "We are expanding our partnership with the General Services Administration (GSA) through a new agreement that gives government partners a 40% discount on Claude Enterprise,…"
+          },
+          {
+            "id": "f2",
+            "claim": "Скидка распространяется на все продуктовые поверхности, включая прямые закупки сейчас и закупки через облачных провайдеров в будущем.",
+            "source_id": "anthropic",
+            "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+            "source_id": "anthropic",
+            "published_at": "2026-10-27",
+            "origin_family": "anthropic",
+            "url": "https://www.anthropic.com/news/expanding-partnership-gsa"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
+      "event_id": "evt-33931a747d86f86714429bf6",
+      "revision": "9aad9a368d928df0f73c321f54d0ccdd80e6b77bad690075e76e848697a6e1d2",
+      "first_seen": "2026-11-03T22:00:03.125323+00:00",
+      "updated_at": "2026-11-03T22:47:36.391558+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "Anthropic расширила AI for Science на 20 фондов, институтов и исследовательских групп",
+        "summary": "Anthropic объявила о расширении программы AI for Science: на этот раз бесплатные кредиты Claude получают 20 научных фондов, институтов и исследовательских групп по всему миру, а не только отдельные учёные. В перечень входят Alfred P. Sloan Foundation, Simons Foundation, Schmidt Sciences, Open Source for Science Fund, US National Science Foundation и CAS. Институциональные партнёры — Space Telescope Science Institute, Wellcome Sanger Institute, Francis Crick Institute, Imperial College London, EMBL и Gladstone Institutes. Кроме того, кредиты напрямую получают новые исследовательские инициативы: FlyWire, LEAP, AstroPath, gnomAD, Tau Ceti и Centre for Population Genomics.",
+        "impact": {
+          "assumptions": [
+            "Партнёры реально распределяют полученные кредиты исследователям",
+            "Объём кредитов и длительность поддержки не раскрыты",
+            "Заявленный выигрыш в анализе данных подтверждается самим институтом"
+          ],
+          "baseline": "Программа стартовала в мае 2025 года на индивидуальных учёных; прежнее состояние по числу институциональных партнёров прямо не описано — сопоставимый baseline в документе не приведён.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 2,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "6–12 месяцев после28 октября 2026",
+          "lower": 2,
+          "lower_anchor_reason": "Нижняя граница 2: без подтверждённых измерений и при полном перечне партнёров это расширение грантовой программы одного вендора, а не изменение отрасли.",
+          "mechanism": "Бесплатные кредиты Claude снижают барьер входа для исследовательских групп; в заявленном примере агенты анализируют открытые данные института, что сокращает ручную обработку. Проверяемый эффект — доступность инструмента и ускорение анализа внутри партнёрских организаций.",
+          "observed_impact": null,
+          "projected_impact": 3,
+          "rationale": "Событие — расширение грантовой программы одного вендора: 20 партнёров из мира науки получают бесплатные кредиты Claude. Ширина 2 (профессиональная ниша — научные организации и исследовательские проекты), глубина 2 (локальная измеримая польза: ускорение анализа данных и отдельных исследовательских задач). По матрице ширина 2 / глубина 2 даёт 3. Наблюдаемых данных об изменении отрасли нет: документ содержит только заявления компании, в том числе неподтверждённое обещание сократить анализ с месяцев до часов.",
+          "scope": "Научные фонды, исследовательские институты и университетские исследовательские проекты; механика — бесплатные кредиты Claude и коллаборации, а не новый продукт или изменение цен.",
+          "score": 3,
+          "systemic_quarter": false,
+          "upper": 5
+        },
+        "evidence_level": 2,
+        "topics": [
+          "AI for Science",
+          "гранты на вычисления",
+          "Claude",
+          "агенты для научных исследований",
+          "научная инфраструктура"
+        ],
+        "entities": [
+          "Anthropic",
+          "Claude",
+          "AI for Science",
+          "HHMI Janelia Research Campus",
+          "Allen Institute",
+          "Model Hardware Standard",
+          "Alfred P. Sloan Foundation",
+          "Simons Foundation"
+        ],
+        "implications": "Расширение до фондов и институтов смещает доступ к Claude в науке от индивидуальных грантополучателей к каналам распределения ресурсов через организации. Заявленные публичные блага — открытые наборы данных, опенсорс, открытые стандарты — могут дать эффект вне контура одного вендора, но только если проекты действительно их выпустят.",
+        "caveat": "Источник — пресс-релиз компании: он подтверждает факт и объём самой программы, но не эффективность. Обещание сократить анализ с месяцев до часов приведено как заявление Anthropic, независимых измерений нет. Размер кредитов, сроки и число реально подключённых исследователей не раскрыты; большинство коллабораций, по словам компании, на ранней стадии.",
+        "urgent": false,
+        "urgency_reason": "Событие не связано с потерей окна для действий: партнёры объявлены, а условия использования кредитов и способы подачи заявок в документе не описаны.",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "Anthropic расширила программу AI for Science до 20 партнёров — фондов, институтов и исследовательских групп — с бесплатными кредитами Claude для учёных.",
+            "source_id": "anthropic",
+            "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+            "quote_excerpt": "We’re highlighting 20 scientific foundations, institutions, and research groups from around the world that we’ve partnered with in an expansion of our AI for Science…"
+          },
+          {
+            "id": "f2",
+            "claim": "Allen Institute строит команды ИИ-агентов для анализа своих данных, сокращая ручной анализ с месяцев до часов.",
+            "source_id": "anthropic",
+            "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "AI for Science expands to foundations and research institutions",
+            "source_id": "anthropic",
+            "published_at": "2026-10-28",
+            "origin_family": "anthropic",
+            "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
+      "event_id": "evt-e6d36502c8b0799eba57e5bd",
+      "revision": "8c370f2349607b03fca45139f445f48ad9b63e67d9ad90dde2a3d06c9399eb06",
+      "first_seen": "2026-10-28T16:30:24.514294+00:00",
+      "updated_at": "2026-11-03T22:45:52.689781+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "GitHub Copilot получил расширение безопасности",
+        "summary": "GitHub открыла публичное превью расширения безопасности для приложения Copilot. Оно показывает оповещения code scanning, позволяет запрашивать объяснение или исправление, а также запускать /security-review для текущих изменений. Исправления применяются только к локальной копии кода: GitHub не фиксирует и не отправляет их автоматически. Расширение доступно на github.com и GitHub Enterprise Cloud с размещением данных, но не поддерживается в GitHub Enterprise Server.",
+        "impact": {
+          "assumptions": [
+            "Оценка относится к заявленным GitHub возможностям публичного превью.",
+            "Частоту, точность и влияние на сроки устранения оповещений документ не измеряет."
+          ],
+          "baseline": "До расширения исправление оповещения требовало переключения между github.com и кодом в редакторе; сопоставимый baseline в документе не приведён.",
+          "basis": "observed",
+          "breadth": 2,
+          "confidence": "high",
+          "depth": 2,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Публичное превью с 28 октября 2026 года; долгосрочный эффект не измерен.",
+          "lower": 3,
+          "lower_anchor_reason": "Нижний якорь равен 3: ширина ограничена нишей Copilot и code scanning, а глубина — локальным сокращением переключений без подтверждённого изменения отраслевого процесса.",
+          "mechanism": "Расширение связывает оповещения code scanning с Copilot: пользователь может выбрать одно или несколько оповещений, получить объяснение или исправление, проверить результат в локальной копии и затем самостоятельно зафиксировать изменения.",
+          "observed_impact": 3,
+          "projected_impact": null,
+          "rationale": "Событие охватывает профессиональную нишу разработчиков, использующих Copilot и GitHub Code Scanning. Локально сокращается переключение между оповещением и редактором, но качество исправлений, частота использования и влияние на сроки устранения уязвимостей в документе не измерены.",
+          "scope": "Пользователи Copilot с включённым code scanning и правами просмотра соответствующих оповещений; доступно на github.com и GitHub Enterprise Cloud с data residency.",
+          "score": 3,
+          "systemic_quarter": false,
+          "upper": 3
+        },
+        "evidence_level": 2,
+        "topics": [
+          "GitHub Copilot",
+          "code scanning",
+          "безопасность кода",
+          "публичное превью"
+        ],
+        "entities": [
+          "GitHub",
+          "GitHub Copilot",
+          "GitHub Code Security"
+        ],
+        "implications": "Интерпретация: расширение может сократить ручные переключения между оповещениями и редактором для пользователей Copilot. Однако заявленная экономия времени не подтверждена измерениями, а исправления остаются локальными и требуют проверки перед отправкой.",
+        "caveat": "GitHub не публикует в документе измерений точности, безопасности или скорости исправлений. Расширение не поддерживается в GitHub Enterprise Server, а для просмотра оповещений требуются соответствующие права.",
+        "urgent": false,
+        "urgency_reason": "Публичное превью не создаёт срочной потери возможности действовать до следующего выпуска.",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "GitHub открыла публичное превью расширения безопасности, которое позволяет находить важные оповещения code scanning и просить Copilot объяснить или исправить их.",
+            "source_id": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app",
+            "quote_excerpt": "The new GitHub security extension, now in public preview, lets you find the alerts that matter most and ask Copilot to explain or help fix…"
+          },
+          {
+            "id": "f2",
+            "claim": "При исправлении оповещения Copilot вносит изменения только в локальную рабочую копию и не выполняет commit или push.",
+            "source_id": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "Security extension for the GitHub Copilot app",
+            "source_id": "github_copilot",
+            "published_at": "2026-10-28",
+            "origin_family": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    }
+  ],
+  "insights": [],
+  "source_health": [
+    {
+      "source_id": "anthropic",
+      "fail_streak": 0,
+      "items_found_last_run": 19,
+      "last_ok": "2026-11-03T23:00:03.509130+00:00",
+      "last_check": "2026-11-03T23:00:03.509130+00:00"
+    },
+    {
+      "source_id": "arxiv",
+      "fail_streak": 0,
+      "items_found_last_run": 10,
+      "last_ok": "2026-11-03T23:00:52.910947+00:00",
+      "last_check": "2026-11-03T23:00:52.910947+00:00"
+    },
+    {
+      "source_id": "claude_code",
+      "fail_streak": 0,
+      "items_found_last_run": 5,
+      "last_ok": "2026-11-03T23:00:33.551285+00:00",
+      "last_check": "2026-11-03T23:00:33.551285+00:00"
+    },
+    {
+      "source_id": "cohere",
+      "fail_streak": 4,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-03T21:30:34.413537+00:00",
+      "last_check": "2026-11-03T23:00:33.324576+00:00"
+    },
+    {
+      "source_id": "cursor",
+      "fail_streak": 0,
+      "items_found_last_run": 5,
+      "last_ok": "2026-11-03T23:00:34.056753+00:00",
+      "last_check": "2026-11-03T23:00:34.056753+00:00"
+    },
+    {
+      "source_id": "deepmind",
+      "fail_streak": 0,
+      "items_found_last_run": 5,
+      "last_ok": "2026-11-03T23:00:13.476165+00:00",
+      "last_check": "2026-11-03T23:00:13.476165+00:00"
+    },
+    {
+      "source_id": "deepseek",
+      "fail_streak": 0,
+      "items_found_last_run": 24,
+      "last_ok": "2026-11-03T23:00:31.322271+00:00",
+      "last_check": "2026-11-03T23:00:31.322271+00:00"
+    },
+    {
+      "source_id": "github_copilot",
+      "fail_streak": 0,
+      "items_found_last_run": 10,
+      "last_ok": "2026-11-03T23:00:33.791526+00:00",
+      "last_check": "2026-11-03T23:00:33.791526+00:00"
+    },
+    {
+      "source_id": "google_ai",
+      "fail_streak": 0,
+      "items_found_last_run": 3,
+      "last_ok": "2026-11-03T23:00:52.545453+00:00",
+      "last_check": "2026-11-03T23:00:52.545453+00:00"
+    },
+    {
+      "source_id": "huggingface",
+      "fail_streak": 0,
+      "items_found_last_run": 17,
+      "last_ok": "2026-11-03T23:00:32.110784+00:00",
+      "last_check": "2026-11-03T23:00:32.110784+00:00"
+    },
+    {
+      "source_id": "justai",
+      "fail_streak": 132,
+      "items_found_last_run": 0,
+      "last_ok": "2026-10-27T19:00:37.400528+00:00",
+      "last_check": "2026-11-03T23:00:35.437729+00:00"
+    },
+    {
+      "source_id": "langgraph",
+      "fail_streak": 0,
+      "items_found_last_run": 10,
+      "last_ok": "2026-11-03T23:00:06.711047+00:00",
+      "last_check": "2026-11-03T23:00:06.711047+00:00"
+    },
+    {
+      "source_id": "mcp_sdk",
+      "fail_streak": 0,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-03T23:00:05.916926+00:00",
+      "last_check": "2026-11-03T23:00:05.916926+00:00"
+    },
+    {
+      "source_id": "meta_ai",
+      "fail_streak": 1341,
+      "items_found_last_run": 0,
+      "last_ok": "2026-09-18T20:01:24.187110+00:00",
+      "last_check": "2026-11-03T23:00:29.272274+00:00"
+    },
+    {
+      "source_id": "microsoft_ai",
+      "fail_streak": 1341,
+      "items_found_last_run": 0,
+      "last_ok": "2026-09-18T20:01:24.187110+00:00",
+      "last_check": "2026-11-03T23:00:30.234720+00:00"
+    },
+    {
+      "source_id": "mistral",
+      "fail_streak": 63,
+      "items_found_last_run": 0,
+      "last_ok": "2026-10-31T14:30:08.631881+00:00",
+      "last_check": "2026-11-03T23:00:28.747471+00:00"
+    },
+    {
+      "source_id": "neural_digest",
+      "fail_streak": 18,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-01T22:00:29.193818+00:00",
+      "last_check": "2026-11-03T23:00:51.826383+00:00"
+    },
+    {
+      "source_id": "ollama",
+      "fail_streak": 0,
+      "items_found_last_run": 10,
+      "last_ok": "2026-11-03T23:00:07.385968+00:00",
+      "last_check": "2026-11-03T23:00:07.385968+00:00"
+    },
+    {
+      "source_id": "openai",
+      "fail_streak": 0,
+      "items_found_last_run": 50,
+      "last_ok": "2026-11-03T23:00:08.133081+00:00",
+      "last_check": "2026-11-03T23:00:08.133081+00:00"
+    },
+    {
+      "source_id": "openai_agents",
+      "fail_streak": 0,
+      "items_found_last_run": 2,
+      "last_ok": "2026-11-03T23:00:04.874697+00:00",
+      "last_check": "2026-11-03T23:00:04.874697+00:00"
+    },
+    {
+      "source_id": "perplexity",
+      "fail_streak": 4,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-03T21:30:34.414354+00:00",
+      "last_check": "2026-11-03T23:00:33.331776+00:00"
+    },
+    {
+      "source_id": "qwen_zh",
+      "fail_streak": 0,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-03T23:00:31.633152+00:00",
+      "last_check": "2026-11-03T23:00:31.633152+00:00"
+    },
+    {
+      "source_id": "rbc",
+      "fail_streak": 4,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-03T21:30:36.242258+00:00",
+      "last_check": "2026-11-03T23:00:34.980622+00:00"
+    },
+    {
+      "source_id": "stanford_hai",
+      "fail_streak": 4,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-03T21:30:53.372306+00:00",
+      "last_check": "2026-11-03T23:00:52.935937+00:00"
+    },
+    {
+      "source_id": "techcrunch",
+      "fail_streak": 0,
+      "items_found_last_run": 20,
+      "last_ok": "2026-11-03T23:00:35.058147+00:00",
+      "last_check": "2026-11-03T23:00:35.058147+00:00"
+    },
+    {
+      "source_id": "vc_ru",
+      "fail_streak": 4,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-03T21:30:53.372306+00:00",
+      "last_check": "2026-11-03T23:00:52.935937+00:00"
+    },
+    {
+      "source_id": "xai",
+      "fail_streak": 4,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-03T21:30:32.780673+00:00",
+      "last_check": "2026-11-03T23:00:31.633152+00:00"
+    }
+  ],
+  "processing": {
+    "news_document_jobs": {
+      "failed": 4,
+      "not_article_listing": 5,
+      "outside_window": 2252,
+      "pending": 173,
+      "reviewed": 4
+    },
+    "news_research_jobs": {
+      "complete": 3,
+      "pending": 1
+    }
+  },
+  "document_status": [
+    {
+      "title": "Data centers are turning to old jet engines as the wait for power grows",
+      "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "42AI comes out of stealth with $62.5M and a world model that can ‘predict human behavior’",
+      "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior/",
+      "source_id": "techcrunch",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Elon Musk throttles Grok Bot limits due to ‘unsustainably high’ costs",
+      "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs/",
+      "source_id": "techcrunch",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Omen AI adds liquid know-how in $16 million Aquatic Labs acquisition",
+      "url": "https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition/",
+      "source_id": "techcrunch",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "New York Times and other outlets sue web browser Brave over alleged content scraping",
+      "url": "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/",
+      "source_id": "techcrunch",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Web host Squarespace lays off 19% of its employees",
+      "url": "https://techcrunch.com/2026/11/02/web-host-squarespace-lays-off-19-of-its-employees/",
+      "source_id": "techcrunch",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
+      "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "failed",
+      "error": "source_timeout",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-03T23:02:11.237456+00:00"
+    },
+    {
+      "title": "Evernote turns AI-driven discovery into paid subscriptions",
+      "url": "https://openai.com/ads/customers/evernote",
+      "source_id": "openai",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollama: v0.40.12",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.12",
+      "source_id": "ollama",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollama: v0.40.12-rc1",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.12-rc1",
+      "source_id": "ollama",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollama: v0.40.13",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.13",
+      "source_id": "ollama",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollama: v0.40.13-rc0",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.13-rc0",
+      "source_id": "ollama",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollama: v0.40.13-rc1: llama.cpp: workaround Metal unary crash (#19372)",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.13-rc1",
+      "source_id": "ollama",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollama: v0.40.14",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.14",
+      "source_id": "ollama",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollama: v0.40.14-rc0",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.14-rc0",
+      "source_id": "ollama",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollama: v0.40.15",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.15-rc0",
+      "source_id": "ollama",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "LangGraph: langgraph==1.2.19",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.19",
+      "source_id": "langgraph",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "LangGraph: langgraph-checkpoint-sqlite==3.1.3",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/checkpointsqlite%3D%3D3.1.3",
+      "source_id": "langgraph",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "LangGraph: langgraph-sdk==0.4.11",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.11",
+      "source_id": "langgraph",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "LangGraph: langgraph-sdk==0.4.12",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.12",
+      "source_id": "langgraph",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "OpenAI Agents SDK: Agents SDK v0.24.0-alpha.6",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.6",
+      "source_id": "openai_agents",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "AI for Science expands to foundations and research institutions",
+      "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "source_id": "anthropic",
+      "date": "2026-10-28",
+      "state": "reviewed",
+      "error": "",
+      "attempts": 1,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+      "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "source_id": "anthropic",
+      "date": "2026-10-27",
+      "state": "reviewed",
+      "error": "",
+      "attempts": 1,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Hiding inside Palantir’s skyrocketing quarter is a foreboding signal",
+      "url": "https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "How Cisco defends at machine speed with OpenAI",
+      "url": "https://openai.com/index/cisco-cyber",
+      "source_id": "openai",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+      "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer",
+      "source_id": "openai",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "AI inference startup Fal doubles its valuation to $16B as demand surges",
+      "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Netflix’s new AI Discover tab helps you find something to watch based on your mood",
+      "url": "https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Accelerating engineering for the physical world",
+      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+      "source_id": "openai",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Anthropic is still grappling with the economics of compute",
+      "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "CWE-bench v2: More coverage, quality, and transparency",
+      "url": "https://huggingface.co/blog/cwe-bench",
+      "source_id": "huggingface",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "StateBench: Testing how language models track state changes over long documents",
+      "url": "https://huggingface.co/blog/allenai/statebench",
+      "source_id": "huggingface",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "PlantVLM-Edge: Quantized Vision-Language Models for On-Device Crop Health Diagnosis",
+      "url": "https://arxiv.org/abs/2611.03557",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Sonar-MoE: In-Backward Expert Updates for Memory-Efficient Mixture-of-Experts Training",
+      "url": "https://arxiv.org/abs/2611.03577",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "FedReady: Bounded Agents for Federation Formation",
+      "url": "https://arxiv.org/abs/2611.03586",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Spacetime Emergence in the Memory of a Learning Agent",
+      "url": "https://arxiv.org/abs/2611.03596",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Four Bridges: Measuring Deception Propensity in a Multi-Agent Game",
+      "url": "https://arxiv.org/abs/2611.03600",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "DiabAgent: Toward Agentic Physiological Control",
+      "url": "https://arxiv.org/abs/2611.03601",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Strategist: Evolving Reasoning with Agents",
+      "url": "https://arxiv.org/abs/2611.03618",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "D&amp;A: Decoupling Description and Assessment Enables VLMs as Zero-Shot Robotic Reward Models",
+      "url": "https://arxiv.org/abs/2611.03622",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "WebHarbor: Docking Real Websites for Evolving GUI Agent Environments",
+      "url": "https://arxiv.org/abs/2611.03634",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "From Natural Language to Exact Cover: A Neuro-Symbolic Approach to Zebra Puzzles",
+      "url": "https://arxiv.org/abs/2611.03641",
+      "source_id": "arxiv",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "The latest AI news we announced in October 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+      "source_id": "google_ai",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Anthropic warns that it’s very close to RSI capability, aka self-building AI",
+      "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/",
+      "source_id": "techcrunch",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Apple may try to increase revenue by doing…something with third-party AI apps",
+      "url": "https://techcrunch.com/2026/11/02/apple-may-try-to-increase-revenue-by-doing-something-with-third-party-ai-apps/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Apple restricts dating apps and AI companions to users 18 and up",
+      "url": "https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Apple Watch’s AI features for rewinding and recapping conversations begin beta testing",
+      "url": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+      "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Google will let schools disable its AI tools, but not without sacrificing Search",
+      "url": "https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "The TechCrunch Founder Summit agenda is only half the reason to be in Boston on Nov. 4",
+      "url": "https://techcrunch.com/2026/11/03/the-techcrunch-founder-summit-agenda-is-only-half-the-reason-to-be-in-boston-on-nov-4/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Tomorrow: TechCrunch Founder Summit takes over Boston and when pass rates increase",
+      "url": "https://techcrunch.com/2026/11/03/tomorrow-techcrunch-founder-summit-takes-over-boston-and-when-pass-rates-increase/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Trajectory raises $45M to make AI model training accessible to nontechnical experts",
+      "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/",
+      "source_id": "techcrunch",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+      "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub Copilot is now available in JetBrains Air",
+      "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+      "source_id": "github_copilot",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Claude Code 2.1.317",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21317",
+      "source_id": "claude_code",
+      "date": "",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Transformers Model Integration Contracts",
+      "url": "https://huggingface.co/blog/transformers-mic",
+      "source_id": "huggingface",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Palette: teaching a small model to build decks in your design language",
+      "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+      "source_id": "huggingface",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+      "url": "https://openai.com/index/dan-driscoll-joins-openai",
+      "source_id": "openai",
+      "date": "2026-11-02",
+      "state": "failed",
+      "error": "source_http_403",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-03T23:01:44.309990+00:00"
+    },
+    {
+      "title": "Heimstaden is changing residential real estate management with AI",
+      "url": "https://openai.com/index/heimstaden",
+      "source_id": "openai",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Preparing our next security sprint to harden OpenAI",
+      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+      "source_id": "openai",
+      "date": "2026-11-02",
+      "state": "failed",
+      "error": "source_http_403",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-03T23:01:45.532117+00:00"
+    },
+    {
+      "title": "Qodo builds context into AI code review with Codex",
+      "url": "https://openai.com/index/qodo-codex-plugin",
+      "source_id": "openai",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Rewarding defenders with bigger bug bounties",
+      "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+      "source_id": "openai",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Scaling Git at OpenAI",
+      "url": "https://openai.com/index/scaling-git-at-openai",
+      "source_id": "openai",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Introducing the Grid Protectors Program",
+      "url": "https://openai.com/index/grid-protectors-program",
+      "source_id": "openai",
+      "date": "2026-11-02",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "TradeWar: A Benchmark for Execution-Grounded Trade Negotiation with Adaptive LLM Agents",
+      "url": "https://arxiv.org/abs/2610.42004",
+      "source_id": "arxiv",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "There Is No Free Loop: When Does Looping a Trained Model Pay for Its Inference Compute?",
+      "url": "https://arxiv.org/abs/2610.42030",
+      "source_id": "arxiv",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Learning Clean Generative Processes from Noisy Measurements",
+      "url": "https://arxiv.org/abs/2610.42036",
+      "source_id": "arxiv",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "CRoS: Causality Reward on Scrambled CoTs Improves Accuracy and Reasoning Faithfulness",
+      "url": "https://arxiv.org/abs/2610.42054",
+      "source_id": "arxiv",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
+      "url": "https://arxiv.org/abs/2610.42141",
+      "source_id": "arxiv",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Hierarchical World Models with Implicit Dynamics",
+      "url": "https://arxiv.org/abs/2610.42146",
+      "source_id": "arxiv",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "url": "https://arxiv.org/abs/2610.42147",
+      "source_id": "arxiv",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+      "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+      "source_id": "techcrunch",
+      "date": "2026-11-01",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
+      "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+      "source_id": "techcrunch",
+      "date": "2026-11-01",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
+      "url": "https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/",
+      "source_id": "techcrunch",
+      "date": "2026-10-31",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’",
+      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+      "source_id": "techcrunch",
+      "date": "2026-10-31",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+      "url": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
+      "source_id": "techcrunch",
+      "date": "2026-10-31",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "OpenAI reportedly lowers funding target for new round",
+      "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
+      "source_id": "techcrunch",
+      "date": "2026-10-31",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Fair use benefits everyone",
+      "url": "https://openai.com/index/fair-use-benefits-everyone",
+      "source_id": "openai",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Anthropic expected to receive high &#8216;junk&#8217; rating from credit agencies following IPO, FT report says",
+      "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Intel&#8217;s stock crashes, knocking $12B from government&#8217;s stake",
+      "url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+      "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+      "source_id": "techcrunch",
+      "date": "2026-10-31",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ollie, a privacy-focused AI assistant, is shutting down",
+      "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Claude Code 2.1.316",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21316",
+      "source_id": "claude_code",
+      "date": "",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Cracks are emerging in the AI spending boom",
+      "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Last-minute Halloween costumes for tech nerds",
+      "url": "https://techcrunch.com/2026/10/30/last-minute-halloween-costumes-for-tech-nerds/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "DoorDash said it&#8217;s only received &#8216;several hundred&#8217; orders from AI agents",
+      "url": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Google&#8217;s first data center satellite is online and writing poetry",
+      "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Skip the small talk: Make game-changing connections at TechCrunch Founder Summit with Braindate",
+      "url": "https://techcrunch.com/2026/10/30/skip-the-small-talk-make-game-changing-connections-at-techcrunch-founder-summit-with-braindate/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Theranos whistleblower Tyler Shultz warns that the AI boom is &#8216;a great opportunity to go deceive people&#8217;",
+      "url": "https://techcrunch.com/2026/10/30/theranos-whistleblower-tyler-shultz-warns-that-the-ai-boom-is-a-great-opportunity-to-go-deceive-people/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Zest&#8217;s new AI agent finds restaurants and books reservations over text",
+      "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "nemotron-halloween",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+      "source_id": "huggingface",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
+      "url": "https://openai.com/index/credit-saison",
+      "source_id": "openai",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Community safety report and new protections for teens",
+      "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "source_id": "openai",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Making it easier for websites to express AI training preferences",
+      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+      "source_id": "openai",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "5 days left: Your last chance to connect, scale, and save at TechCrunch Founder Summit 2026",
+      "url": "https://techcrunch.com/2026/10/30/5-days-left-your-last-chance-to-connect-scale-and-save-at-techcrunch-founder-summit-2026/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Can AI data centers be mass-produced like cars? This startup aims to find out",
+      "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Advancing Clinical Genomic Analysis with a Skill-Centred Agent",
+      "url": "https://arxiv.org/abs/2610.40556",
+      "source_id": "arxiv",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Gym-Anything for Robotics: Scaling physical simulations with digital agents",
+      "url": "https://arxiv.org/abs/2610.40565",
+      "source_id": "arxiv",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "VeriCUA: Verification as Agentic Exploration for Computer-Using Agents",
+      "url": "https://arxiv.org/abs/2610.40578",
+      "source_id": "arxiv",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In",
+      "url": "https://arxiv.org/abs/2610.40588",
+      "source_id": "arxiv",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
+      "url": "https://arxiv.org/abs/2610.40589",
+      "source_id": "arxiv",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "From extreme weather to agricultural consequences with agentic AI",
+      "url": "https://arxiv.org/abs/2610.40641",
+      "source_id": "arxiv",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "url": "https://arxiv.org/abs/2610.40647",
+      "source_id": "arxiv",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "As search traffic dries up, Reddit announces it&#8217;s shifting to a logged-in experience",
+      "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "AWS will be a $1T business, Jassy says — but first, it will spend big",
+      "url": "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "OpenAI-backed Thrive Holdings acquires ADT",
+      "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Rivian expands joint venture with VW to include AI assistant",
+      "url": "https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "You don&#8217;t need to believe in a god to get a religious exemption from using AI at work",
+      "url": "https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/",
+      "source_id": "techcrunch",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Claude Code 2.1.314",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21314",
+      "source_id": "claude_code",
+      "date": "",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Meta quietly launches an AI fashion app called Style Sketch",
+      "url": "https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Repository plugin defaults and enterprise plugin controls generally available",
+      "url": "https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Granola crunches up a dictation feature to compete with Wispr",
+      "url": "https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "How Ropes & Gray is developing AI for transactional diligence",
+      "url": "https://openai.com/index/ropes-gray-ai-diligence",
+      "source_id": "openai",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "An updated Model Spec for more capable and beneficial AI",
+      "url": "https://openai.com/index/updated-model-spec",
+      "source_id": "openai",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity",
+      "url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "failed",
+      "error": "source_timeout",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-03T23:01:46.028993+00:00"
+    },
+    {
+      "title": "U.S. investigated Chinese spy plot aimed at Nvidia CEO",
+      "url": "https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "How we detect frontier model misalignment",
+      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "source_id": "openai",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Amazon updates Alexa to help you manage shopping lists and subscriptions and update delivery instructions",
+      "url": "https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-and-subscriptions-and-update-delivery-instructions/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Ex-Palantir execs launch Dream with $17M from a16z to build AI world models for construction",
+      "url": "https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
+      "url": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Announcing Project ProtoStar: Making Publicly Funded Science AI-Ready",
+      "url": "https://huggingface.co/blog/announcing-project-protostar",
+      "source_id": "huggingface",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+      "url": "https://huggingface.co/blog/mistral-large4",
+      "source_id": "huggingface",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Granite Switch 4.1.1 — Update models like you update software",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "source_id": "huggingface",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Amazon updates Alexa to help you manage shopping lists, subscriptions, and update delivery instructions",
+      "url": "https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-subscriptions-and-update-delivery-instructions/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Deepgram acquires Pipecat-maker Daily to bolster its voice AI infrastructure",
+      "url": "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/",
+      "source_id": "techcrunch",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+      "url": "https://huggingface.co/blog/anydecisionmodel",
+      "source_id": "huggingface",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Microsoft recorded $10 billion in revenue from OpenAI",
+      "url": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Google expands AI Search ads globally as core ad growth slows",
+      "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Microsoft just shared Azure&#8217;s actual revenue in dollars: $33.2 billion",
+      "url": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Microsoft hits 10 quarters of record- breaking revenue in a row",
+      "url": "https://techcrunch.com/2026/10/28/microsoft-hits-10-quarters-of-record-breaking-revenue-in-a-row/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+      "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+      "source_id": "openai",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Anthropic just launched tools to show companies what their AI spending is buying",
+      "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Wiz’s CTO on PHP2Shell and the coming &#8216;vulnpocalypse&#8217;",
+      "url": "https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "The &#8216;Vulnpocalypse&#8217; is coming for the internet’s aging code, says Wiz’s CTO",
+      "url": "https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub Copilot in VS Code, Universe releases",
+      "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "The future of the firm",
+      "url": "https://openai.com/index/the-future-of-the-firm",
+      "source_id": "openai",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+      "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Chrome&#8217;s AI-powered Autofill can now dig through your Gmail to fill out forms",
+      "url": "https://techcrunch.com/2026/10/28/chromes-ai-powered-autofill-can-now-dig-through-your-gmail-to-fill-out-forms/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub Agentic Workflows generally available",
+      "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub Copilot in JetBrains Universe releases",
+      "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-jetbrains-universe-releases",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Build shared workflows for your team with Copilot Automations",
+      "url": "https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Generate and edit images directly in Copilot",
+      "url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub Copilot app, Universe releases",
+      "url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub Copilot Fusion now supports selection of local models",
+      "url": "https://github.blog/changelog/2026-10-28-github-copilot-fusion-now-supports-selection-of-local-models",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub Enterprise now includes access to GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub intelligence puts your code, context, and history to work",
+      "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Route and orchestrate models with GitHub Copilot Fusion",
+      "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Security extension for the GitHub Copilot app",
+      "url": "https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app",
+      "source_id": "github_copilot",
+      "date": "2026-10-28",
+      "state": "reviewed",
+      "error": "",
+      "attempts": 1,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Legora is building the agentic operating system for legal work",
+      "url": "https://openai.com/index/legora",
+      "source_id": "openai",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "AI execs may be too out of touch to build for the general public",
+      "url": "https://techcrunch.com/2026/10/28/ai-execs-may-be-too-out-of-touch-to-build-for-the-general-public/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "South Korea&#8217;s financial industry hit by fresh wave of cyberattacks",
+      "url": "https://techcrunch.com/2026/10/28/south-koreas-financial-industry-hit-by-fresh-wave-of-cyberattacks/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Voice AI in vogue: Nvidia releases new open transcription model",
+      "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+      "source_id": "huggingface",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "7 days until TechCrunch Founder Summit: Save up to $100 on your pass before doors open",
+      "url": "https://techcrunch.com/2026/10/28/7-days-until-techcrunch-founder-summit-save-up-to-100-before-doors-open/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Understanding the limits of latent world models",
+      "url": "https://arxiv.org/abs/2610.37588",
+      "source_id": "arxiv",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "MoI-Bench: A Benchmark for Image Generation and Editing on Mobile Devices",
+      "url": "https://arxiv.org/abs/2610.37599",
+      "source_id": "arxiv",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "VideoLVR: Latent Visual Reasoning over Grounded Video Evidence",
+      "url": "https://arxiv.org/abs/2610.37613",
+      "source_id": "arxiv",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
+      "url": "https://arxiv.org/abs/2610.37666",
+      "source_id": "arxiv",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure medication",
+      "url": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "VCs will make billions on Anthropic&#8217;s IPO, but Amazon is set to make much (much) more",
+      "url": "https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/",
+      "source_id": "techcrunch",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Legora is building the agentic operating system for legal work",
+      "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
+      "source_id": "openai",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "The data center boom has an upside: innovation for the US grid",
+      "url": "https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "url": "https://openai.com/index/retell-ai",
+      "source_id": "openai",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Bank of America kindly asks that you don&#8217;t share your banking password with your AI assistant",
+      "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Who&#8217;s really in charge at Anthropic after the IPO?",
+      "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "GitHub Copilot supports server-to-server authentication",
+      "url": "https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication",
+      "source_id": "github_copilot",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Claude Code 2.1.312",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21312",
+      "source_id": "claude_code",
+      "date": "",
+      "state": "reviewed",
+      "error": "",
+      "attempts": 1,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Disruptive raises $10B fund to make big bets on at least 10 companies",
+      "url": "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "How Check Point accelerates vulnerability research with Daybreak",
+      "url": "https://openai.com/index/check-point-daybreak",
+      "source_id": "openai",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean?",
+      "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+      "source_id": "huggingface",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+      "source_id": "openai",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
+      "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Can we trust LLMs to judge whether a research idea is novel?",
+      "url": "https://huggingface.co/blog/allenai/novelty-bench",
+      "source_id": "huggingface",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
+      "url": "https://techcrunch.com/2026/10/27/meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-office-and-google-workspace/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Cohere says Alibaba’s Qwen model tried to send a file to Beijing",
+      "url": "https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "General Compute raises $100 million Series A, countering the neocloud disaster narrative",
+      "url": "https://techcrunch.com/2026/10/27/general-compute-raises-100-million-series-a-countering-the-neocloud-disaster-narrative/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "How OpenAI turned its coding tools into dots, an always-on personal assistant",
+      "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Nvidia backs Indian startup helping companies run AI models with fewer GPUs",
+      "url": "https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Opera introduces a new web standard to let users deploy AI locally in their browser",
+      "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Japan internet giant GMO says hackers posted stolen customer data",
+      "url": "https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data/",
+      "source_id": "techcrunch",
+      "date": "2026-10-27",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "source_id": "cohere",
+      "health": "parser_empty",
+      "gaps": [
+        "parser_empty"
+      ]
+    },
+    {
+      "source_id": "justai",
+      "health": "fetch_error",
+      "gaps": [
+        "fetch_error"
+      ]
+    },
+    {
+      "source_id": "meta_ai",
+      "health": "fetch_error",
+      "gaps": [
+        "fetch_error"
+      ]
+    },
+    {
+      "source_id": "microsoft_ai",
+      "health": "fetch_error",
+      "gaps": [
+        "fetch_error"
+      ]
+    },
+    {
+      "source_id": "mistral",
+      "health": "fetch_error",
+      "gaps": [
+        "fetch_error"
+      ]
+    },
+    {
+      "source_id": "neural_digest",
+      "health": "fetch_error",
+      "gaps": [
+        "fetch_error"
+      ]
+    },
+    {
+      "source_id": "perplexity",
+      "health": "adapter_stub",
+      "gaps": [
+        "adapter_stub"
+      ]
+    },
+    {
+      "source_id": "qwen_zh",
+      "health": "filtered_empty",
+      "gaps": [
+        "publisher_migrated_current_research_not_covered"
+      ]
+    },
+    {
+      "source_id": "rbc",
+      "health": "parser_empty",
+      "gaps": [
+        "parser_empty"
+      ]
+    },
+    {
+      "source_id": "stanford_hai",
+      "health": "adapter_stub",
+      "gaps": [
+        "adapter_stub"
+      ]
+    },
+    {
+      "source_id": "vc_ru",
+      "health": "adapter_stub",
+      "gaps": [
+        "adapter_stub"
+      ]
+    },
+    {
+      "source_id": "xai",
+      "health": "adapter_stub",
+      "gaps": [
+        "adapter_stub"
+      ]
+    }
+  ],
+  "gap_labels": {
+    "publisher_migrated_current_research_not_covered": "Архивная лента; актуальный раздел издателя пока не подключён",
+    "adapter_stub": "Адаптер пока не реализован",
+    "parser_empty": "Новости не удалось распознать",
+    "fetch_error": "Последняя попытка получения не удалась",
+    "page_budget": "Достигнут предел страниц; часть выдачи ещё не получена",
+    "item_budget": "Достигнут предел записей; требуется продолжение"
+  },
+  "event_titles": {
+    "evt-4b15c67e0a2678a704662f74": "Claude Code 2.1.312: OIDC-claim для шлюза приложений и сокращённый системный промпт для кастомных имён моделей",
+    "evt-33107d1b7b806d3b4b83d0a9": "Anthropic расширила соглашение с GSA скидкой 40% на Claude",
+    "evt-33931a747d86f86714429bf6": "Anthropic расширила AI for Science на 20 фондов, институтов и исследовательских групп",
+    "evt-e6d36502c8b0799eba57e5bd": "GitHub Copilot получил расширение безопасности"
+  },
+  "state_labels": {
+    "reviewed": "Проверен",
+    "unreviewed": "Ожидает редакционной проверки",
+    "stale": "Нужна повторная проверка",
+    "pending": "Ожидает чтения",
+    "processing": "Обрабатывается",
+    "failed": "Обработка не завершена",
+    "unchanged": "Изменений нет",
+    "excluded": "Исключён из подборки"
+  },
+  "reviewed_count": 4,
+  "coverage_note": "Охват ограничен подключёнными источниками. Недоступные страницы и незавершённые проверки не считаются прочитанными."
+}
