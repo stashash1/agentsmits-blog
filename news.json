@@ -548,6 +548,7 @@
       "not_article_listing": 5,
       "outside_window": 2252,
       "pending": 173,
+      "processing": 1,
       "reviewed": 4
     },
     "news_research_jobs": {
@@ -556,6 +557,16 @@
     }
   },
   "document_status": [
+    {
+      "title": "Anthropic is working on a system to prove AI models’ identity",
+      "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+      "source_id": "techcrunch",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
     {
       "title": "Data centers are turning to old jet engines as the wait for power grows",
       "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/",
@@ -1641,9 +1652,9 @@
       "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21314",
       "source_id": "claude_code",
       "date": "",
-      "state": "pending",
+      "state": "processing",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
