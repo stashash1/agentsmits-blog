@@ -531,204 +531,204 @@
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-04T08:23:43.455814+00:00",
-      "last_check": "2026-11-04T08:23:43.455814+00:00"
+      "last_ok": "2026-11-04T08:28:42.921622+00:00",
+      "last_check": "2026-11-04T08:28:42.921622+00:00"
     },
     {
       "source_id": "arxiv",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:24:35.605176+00:00",
-      "last_check": "2026-11-04T08:24:35.605176+00:00"
+      "last_ok": "2026-11-04T08:29:30.776160+00:00",
+      "last_check": "2026-11-04T08:29:30.776160+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:24:18.490184+00:00",
-      "last_check": "2026-11-04T08:24:18.490184+00:00"
+      "last_ok": "2026-11-04T08:29:13.716674+00:00",
+      "last_check": "2026-11-04T08:29:13.716674+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 13,
+      "fail_streak": 14,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-04T08:24:17.884506+00:00"
+      "last_check": "2026-11-04T08:29:13.348074+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:24:18.975782+00:00",
-      "last_check": "2026-11-04T08:24:18.975782+00:00"
+      "last_ok": "2026-11-04T08:29:14.205055+00:00",
+      "last_check": "2026-11-04T08:29:14.205055+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:23:56.380365+00:00",
-      "last_check": "2026-11-04T08:23:56.380365+00:00"
+      "last_ok": "2026-11-04T08:28:51.214008+00:00",
+      "last_check": "2026-11-04T08:28:51.214008+00:00"
     },
     {
       "source_id": "deepseek",
       "fail_streak": 0,
       "items_found_last_run": 24,
-      "last_ok": "2026-11-04T08:24:16.075671+00:00",
-      "last_check": "2026-11-04T08:24:16.075671+00:00"
+      "last_ok": "2026-11-04T08:29:11.490644+00:00",
+      "last_check": "2026-11-04T08:29:11.490644+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:24:18.738453+00:00",
-      "last_check": "2026-11-04T08:24:18.738453+00:00"
+      "last_ok": "2026-11-04T08:29:13.992595+00:00",
+      "last_check": "2026-11-04T08:29:13.992595+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:24:35.485643+00:00",
-      "last_check": "2026-11-04T08:24:35.485643+00:00"
+      "last_ok": "2026-11-04T08:29:30.674695+00:00",
+      "last_check": "2026-11-04T08:29:30.674695+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
       "items_found_last_run": 14,
-      "last_ok": "2026-11-04T08:24:16.737943+00:00",
-      "last_check": "2026-11-04T08:24:16.737943+00:00"
+      "last_ok": "2026-11-04T08:29:12.291623+00:00",
+      "last_check": "2026-11-04T08:29:12.291623+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 141,
+      "fail_streak": 142,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-04T08:24:19.961887+00:00"
+      "last_check": "2026-11-04T08:29:15.157725+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:23:47.248706+00:00",
-      "last_check": "2026-11-04T08:23:47.248706+00:00"
+      "last_ok": "2026-11-04T08:28:46.135160+00:00",
+      "last_check": "2026-11-04T08:28:46.135160+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:23:46.221344+00:00",
-      "last_check": "2026-11-04T08:23:46.221344+00:00"
+      "last_ok": "2026-11-04T08:28:45.338374+00:00",
+      "last_check": "2026-11-04T08:28:45.338374+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1350,
+      "fail_streak": 1351,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-04T08:24:12.518898+00:00"
+      "last_check": "2026-11-04T08:29:07.408430+00:00"
     },
     {
       "source_id": "microsoft_ai",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:24:12.848210+00:00",
-      "last_check": "2026-11-04T08:24:12.848210+00:00"
+      "last_ok": "2026-11-04T08:29:07.757861+00:00",
+      "last_check": "2026-11-04T08:29:07.757861+00:00"
     },
     {
       "source_id": "microsoft_research",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:24:14.911959+00:00",
-      "last_check": "2026-11-04T08:24:14.911959+00:00"
+      "last_ok": "2026-11-04T08:29:09.712547+00:00",
+      "last_check": "2026-11-04T08:29:09.712547+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 72,
+      "fail_streak": 73,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-04T08:24:11.582046+00:00"
+      "last_check": "2026-11-04T08:29:06.423651+00:00"
     },
     {
       "source_id": "mistral_sdk",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:24:12.188772+00:00",
-      "last_check": "2026-11-04T08:24:12.188772+00:00"
+      "last_ok": "2026-11-04T08:29:07.057077+00:00",
+      "last_check": "2026-11-04T08:29:07.057077+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 27,
+      "fail_streak": 28,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-04T08:24:34.981926+00:00"
+      "last_check": "2026-11-04T08:29:30.179727+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:23:47.998575+00:00",
-      "last_check": "2026-11-04T08:23:47.998575+00:00"
+      "last_ok": "2026-11-04T08:28:46.794741+00:00",
+      "last_check": "2026-11-04T08:28:46.794741+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
       "items_found_last_run": 48,
-      "last_ok": "2026-11-04T08:23:51.927631+00:00",
-      "last_check": "2026-11-04T08:23:51.927631+00:00"
+      "last_ok": "2026-11-04T08:28:47.635109+00:00",
+      "last_check": "2026-11-04T08:28:47.635109+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-04T08:23:45.157157+00:00",
-      "last_check": "2026-11-04T08:23:45.157157+00:00"
+      "last_ok": "2026-11-04T08:28:44.326928+00:00",
+      "last_check": "2026-11-04T08:28:44.326928+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 13,
+      "fail_streak": 14,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-04T08:24:17.885940+00:00"
+      "last_check": "2026-11-04T08:29:13.348074+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:24:16.349183+00:00",
-      "last_check": "2026-11-04T08:24:16.349183+00:00"
+      "last_ok": "2026-11-04T08:29:11.758074+00:00",
+      "last_check": "2026-11-04T08:29:11.758074+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 13,
+      "fail_streak": 14,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-04T08:24:19.766332+00:00"
+      "last_check": "2026-11-04T08:29:14.974968+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 13,
+      "fail_streak": 14,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:24:35.606220+00:00"
+      "last_check": "2026-11-04T08:29:30.776160+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-04T08:24:19.826596+00:00",
-      "last_check": "2026-11-04T08:24:19.826596+00:00"
+      "last_ok": "2026-11-04T08:29:15.054080+00:00",
+      "last_check": "2026-11-04T08:29:15.054080+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 13,
+      "fail_streak": 14,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:24:35.606220+00:00"
+      "last_check": "2026-11-04T08:29:30.776160+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 13,
+      "fail_streak": 14,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-04T08:24:16.349183+00:00"
+      "last_check": "2026-11-04T08:29:11.758074+00:00"
     }
   ],
   "processing": {
