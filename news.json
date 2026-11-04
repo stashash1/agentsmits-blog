@@ -1124,8 +1124,8 @@
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-04T09:13:43.072229+00:00",
-      "last_check": "2026-11-04T09:13:43.072229+00:00"
+      "last_ok": "2026-11-04T09:18:43.863190+00:00",
+      "last_check": "2026-11-04T09:18:43.863190+00:00"
     },
     {
       "source_id": "arxiv",
@@ -1326,19 +1326,18 @@
   ],
   "processing": {
     "news_document_jobs": {
-      "failed": 15,
+      "failed": 16,
       "not_article_listing": 5,
       "outside_window": 2293,
       "pending": 142,
-      "processing": 3,
+      "processing": 2,
       "reviewed": 10
     },
     "news_research_jobs": {
       "awaiting_events": 1,
-      "complete": 1,
+      "complete": 2,
       "failed": 3,
-      "pending": 6,
-      "processing": 1
+      "pending": 6
     }
   },
   "document_status": [
@@ -2377,10 +2376,10 @@
       "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
       "source_id": "huggingface",
       "date": "2026-10-30",
-      "state": "processing",
-      "error": "",
+      "state": "failed",
+      "error": "repair_changed_identity_requires_resolution",
       "attempts": 1,
-      "next_attempt_at": null
+      "next_attempt_at": "2026-11-04T09:27:29.132206+00:00"
     },
     {
       "title": "Credit Saison achieves 954% ROI in a ChatGPT Enterprise pilot",
