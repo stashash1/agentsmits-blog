@@ -1,6 +1,94 @@
 {
   "events": [
     {
+      "event_id": "evt-6e73d07dd638e0d9301274a8",
+      "revision": "bc6b4bc1014aaa8f226e388f8662961cfe63c46e3d16022f68dd907161cb2516",
+      "first_seen": "2026-11-03T21:49:57.561067+00:00",
+      "updated_at": "2026-11-03T23:09:31.303771+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "OpenAI Agents SDK 0.24.0-alpha.6: расширены управление диалогами, восстановление состояния и политики инструментов",
+        "summary": "OpenAI выпустила превью Agents SDK версии 0.24.0-alpha.6. Релиз расширяет управление диалогами, восстановление состояния и политики инструментов и включает изменения публичного API. Появились управление отправленной работой через объект Turn, локальное хранение диалогов (LocalStorage), выбор инструментов в пределах прав сессии, NetworkPolicy для нативных команд, нативные веб-поиск и цели, а также тестовый инструмент ScriptedResponses. Превью распространяется через GitHub Releases, а не через PyPI.",
+        "impact": {
+          "assumptions": [
+            "Реальный пользовательский эффект измеряется только в связке с приложениями, уже построенными на этом SDK",
+            "Превью-версия нестабильна и может измениться до стабильного релиза",
+            "Оценка ширины опирается на единственный продуктовый контур, названный в документе"
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: релиз описан как изменения с 0.24.0-alpha.5, но прежнее состояние возможностей детально не описано, поэтому прежнее отсутствие функций не доказывается.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 2,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Ближайшие недели-месяцы после 2026-11-03: ускорение миграции на новый API превью; отраслевой эффект за квартал не измерен.",
+          "lower": 2,
+          "lower_anchor_reason": "Нижний якорь 2: изменение касается одного SDK-контура, нишевой аудитории и не содержит измеренных отраслевых последствий; при полном отсутствии внедрения эффект ограничивается локальным удобством команды.",
+          "mechanism": "Механизм — изменение поверхности управления в SDK: отправленная работа оборачивается в объект Turn, который отдаёт результат через get_result(), принимает steering, ручные ответы и отмену; выбор инструментов ограничен правами, зафиксированными при открытии сессии; LocalStorage и checkpoints дают восстановление состояния. Для команд это меняет порядок работы с очередью запросов, отменой и восстановлением диалогов.",
+          "observed_impact": null,
+          "projected_impact": 3,
+          "rationale": "Событие затрагивает один SDK-контур и нишу разработчиков агентных систем, а не базовую инфраструктуру отрасли: ни один независимый продукт, экосистема или цепочка поставок в документе не названа. При этом заявлены конкретные локально измеримые улучшения — управление Turn, восстановление состояния, выбор инструментов в пределах прав сессии, нативные веб-поиск и цели, тестирование без живой модели и API-ключа, — то есть локальная измеримая польза для команд, уже использующих SDK. Оценка 3 соответствует ячейке «ширина 2 / глубина 2». Никаких измеренных отраслевых последствий документ не приводит, поэтому наблюдаемое влияние остаётся неизвестным, а диапазон 2–5 отражает неопределённость внедрения превью.",
+          "scope": "Разработчики, применяющие OpenAI Agents SDK для агентных сценариев на Python; тема — превью-релиз SDK, а не изменение отраслевых правил или рынка моделей.",
+          "score": 3,
+          "systemic_quarter": false,
+          "upper": 5
+        },
+        "evidence_level": 1,
+        "topics": [
+          "agent frameworks",
+          "SDK releases",
+          "agent session control",
+          "state recovery",
+          "tool policies"
+        ],
+        "entities": [
+          "OpenAI Agents SDK",
+          "GitHub Releases",
+          "PyPI",
+          "LocalStorage",
+          "Turn",
+          "NetworkPolicy",
+          "ScriptedResponses"
+        ],
+        "implications": "Интерпретация: релиз смещает фокус SDK от «запуска агента» к управлению его жизненным циклом — очередью, отменой, ручными согласованиями и восстановлением состояния. Команды, уже работающие с этим SDK, получат более управляемый контур исполнения и тестирование без живого模型 и ключа; переход потребует миграции вызовов, поскольку старые Runner-алиасы и методы ожидания удалены.",
+        "caveat": "Версия помечена как pre-release и распространяется через GitHub Releases, а не PyPI; колеса доступны не для всех платформ (нет Intel Mac, ARM Linux, ARM Windows, Alpine/musl, PyPy). Это заявления команды OpenAI о собственном релизе: независимого измерения эффекта не приводится, а часть возможностей помечена экспериментальной.",
+        "urgent": false,
+        "urgency_reason": "Превью не создаёт срочной потери возможности действовать: событие развивает инструментарий, а не блокирует или меняет обязательные правила.",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "Релиз Agents SDK v0.24.0-alpha.6 расширяет управление диалогами, восстановление состояния и политики инструментов и включает изменения публичного API.",
+            "source_id": "openai_agents",
+            "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.6",
+            "quote_excerpt": "This preview expands conversation control, state recovery, and tool policies, and includes public API changes."
+          },
+          {
+            "id": "f2",
+            "claim": "В релизе добавлена возможность управлять отправленной работой через захваченный объект Turn с get_result(), пассивными events(), ручной обработкой запросов, steering и отменой.",
+            "source_id": "openai_agents",
+            "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.6",
+            "quote_excerpt": "Added - Control submitted work through a captured Turn ,…"
+          }
+        ],
+        "sources": [
+          {
+            "title": "OpenAI Agents SDK: Agents SDK v0.24.0-alpha.6",
+            "source_id": "openai_agents",
+            "published_at": "2026-11-03",
+            "origin_family": "openai_agents",
+            "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.6"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
       "event_id": "evt-4b15c67e0a2678a704662f74",
       "revision": "672a1ad69f1939ef6a99f412fc51586627587b47faaa2933c80eda8a9c2c3716",
       "first_seen": "2026-10-27T20:30:34.131719+00:00",
@@ -356,204 +444,204 @@
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-03T23:00:03.509130+00:00",
-      "last_check": "2026-11-03T23:00:03.509130+00:00"
+      "last_ok": "2026-11-04T07:59:30.670689+00:00",
+      "last_check": "2026-11-04T07:59:30.670689+00:00"
     },
     {
       "source_id": "arxiv",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-03T23:00:52.910947+00:00",
-      "last_check": "2026-11-03T23:00:52.910947+00:00"
+      "last_ok": "2026-11-03T23:14:32.644510+00:00",
+      "last_check": "2026-11-03T23:14:32.644510+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-03T23:00:33.551285+00:00",
-      "last_check": "2026-11-03T23:00:33.551285+00:00"
+      "last_ok": "2026-11-03T23:14:15.164589+00:00",
+      "last_check": "2026-11-03T23:14:15.164589+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 4,
+      "fail_streak": 7,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-03T23:00:33.324576+00:00"
+      "last_check": "2026-11-03T23:14:14.964095+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-03T23:00:34.056753+00:00",
-      "last_check": "2026-11-03T23:00:34.056753+00:00"
+      "last_ok": "2026-11-03T23:14:15.857977+00:00",
+      "last_check": "2026-11-03T23:14:15.857977+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-03T23:00:13.476165+00:00",
-      "last_check": "2026-11-03T23:00:13.476165+00:00"
+      "last_ok": "2026-11-03T23:13:53.653969+00:00",
+      "last_check": "2026-11-03T23:13:53.653969+00:00"
     },
     {
       "source_id": "deepseek",
       "fail_streak": 0,
       "items_found_last_run": 24,
-      "last_ok": "2026-11-03T23:00:31.322271+00:00",
-      "last_check": "2026-11-03T23:00:31.322271+00:00"
+      "last_ok": "2026-11-03T23:14:11.760510+00:00",
+      "last_check": "2026-11-03T23:14:11.760510+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-03T23:00:33.791526+00:00",
-      "last_check": "2026-11-03T23:00:33.791526+00:00"
+      "last_ok": "2026-11-03T23:14:15.668756+00:00",
+      "last_check": "2026-11-03T23:14:15.668756+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-03T23:00:52.545453+00:00",
-      "last_check": "2026-11-03T23:00:52.545453+00:00"
+      "last_ok": "2026-11-03T23:14:32.508323+00:00",
+      "last_check": "2026-11-03T23:14:32.508323+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
       "items_found_last_run": 17,
-      "last_ok": "2026-11-03T23:00:32.110784+00:00",
-      "last_check": "2026-11-03T23:00:32.110784+00:00"
+      "last_ok": "2026-11-03T23:14:13.641312+00:00",
+      "last_check": "2026-11-03T23:14:13.641312+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 132,
+      "fail_streak": 135,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-03T23:00:35.437729+00:00"
+      "last_check": "2026-11-03T23:14:16.790782+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-03T23:00:06.711047+00:00",
-      "last_check": "2026-11-03T23:00:06.711047+00:00"
+      "last_ok": "2026-11-03T23:13:46.454186+00:00",
+      "last_check": "2026-11-03T23:13:46.454186+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-03T23:00:05.916926+00:00",
-      "last_check": "2026-11-03T23:00:05.916926+00:00"
+      "last_ok": "2026-11-03T23:13:45.574301+00:00",
+      "last_check": "2026-11-03T23:13:45.574301+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1341,
+      "fail_streak": 1344,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-03T23:00:29.272274+00:00"
+      "last_check": "2026-11-03T23:14:09.188387+00:00"
     },
     {
       "source_id": "microsoft_ai",
-      "fail_streak": 1341,
+      "fail_streak": 1344,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-03T23:00:30.234720+00:00"
+      "last_check": "2026-11-03T23:14:10.501569+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 63,
+      "fail_streak": 66,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-03T23:00:28.747471+00:00"
+      "last_check": "2026-11-03T23:14:08.806494+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 18,
+      "fail_streak": 21,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-03T23:00:51.826383+00:00"
+      "last_check": "2026-11-03T23:14:31.974670+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-03T23:00:07.385968+00:00",
-      "last_check": "2026-11-03T23:00:07.385968+00:00"
+      "last_ok": "2026-11-03T23:13:47.159765+00:00",
+      "last_check": "2026-11-03T23:13:47.159765+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
       "items_found_last_run": 50,
-      "last_ok": "2026-11-03T23:00:08.133081+00:00",
-      "last_check": "2026-11-03T23:00:08.133081+00:00"
+      "last_ok": "2026-11-03T23:13:48.050459+00:00",
+      "last_check": "2026-11-03T23:13:48.050459+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-03T23:00:04.874697+00:00",
-      "last_check": "2026-11-03T23:00:04.874697+00:00"
+      "last_ok": "2026-11-03T23:13:44.718605+00:00",
+      "last_check": "2026-11-03T23:13:44.718605+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 4,
+      "fail_streak": 7,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-03T23:00:33.331776+00:00"
+      "last_check": "2026-11-03T23:14:14.964095+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-03T23:00:31.633152+00:00",
-      "last_check": "2026-11-03T23:00:31.633152+00:00"
+      "last_ok": "2026-11-03T23:14:12.762167+00:00",
+      "last_check": "2026-11-03T23:14:12.762167+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 4,
+      "fail_streak": 7,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-03T23:00:34.980622+00:00"
+      "last_check": "2026-11-03T23:14:16.395438+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 4,
+      "fail_streak": 7,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-03T23:00:52.935937+00:00"
+      "last_check": "2026-11-03T23:14:32.652973+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-03T23:00:35.058147+00:00",
-      "last_check": "2026-11-03T23:00:35.058147+00:00"
+      "last_ok": "2026-11-03T23:14:16.625792+00:00",
+      "last_check": "2026-11-03T23:14:16.625792+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 4,
+      "fail_streak": 7,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-03T23:00:52.935937+00:00"
+      "last_check": "2026-11-03T23:14:32.652973+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 4,
+      "fail_streak": 7,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-03T23:00:31.633152+00:00"
+      "last_check": "2026-11-03T23:14:12.762167+00:00"
     }
   ],
   "processing": {
     "news_document_jobs": {
-      "failed": 4,
+      "failed": 5,
       "not_article_listing": 5,
       "outside_window": 2252,
-      "pending": 173,
+      "pending": 171,
       "processing": 1,
-      "reviewed": 4
+      "reviewed": 5
     },
     "news_research_jobs": {
       "complete": 3,
-      "pending": 1
+      "pending": 2
     }
   },
   "document_status": [
@@ -772,7 +860,7 @@
       "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.6",
       "source_id": "openai_agents",
       "date": "2026-11-03",
-      "state": "pending",
+      "state": "reviewed",
       "error": "",
       "attempts": 0,
       "next_attempt_at": null
@@ -1392,9 +1480,9 @@
       "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21316",
       "source_id": "claude_code",
       "date": "",
-      "state": "pending",
+      "state": "processing",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -1652,10 +1740,10 @@
       "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21314",
       "source_id": "claude_code",
       "date": "",
-      "state": "processing",
-      "error": "",
+      "state": "failed",
+      "error": "ValidationError",
       "attempts": 1,
-      "next_attempt_at": null
+      "next_attempt_at": "2026-11-03T23:18:41.242027+00:00"
     },
     {
       "title": "Meta quietly launches an AI fashion app called Style Sketch",
@@ -2473,6 +2561,7 @@
     "item_budget": "Достигнут предел записей; требуется продолжение"
   },
   "event_titles": {
+    "evt-6e73d07dd638e0d9301274a8": "OpenAI Agents SDK 0.24.0-alpha.6: расширены управление диалогами, восстановление состояния и политики инструментов",
     "evt-4b15c67e0a2678a704662f74": "Claude Code 2.1.312: OIDC-claim для шлюза приложений и сокращённый системный промпт для кастомных имён моделей",
     "evt-33107d1b7b806d3b4b83d0a9": "Anthropic расширила соглашение с GSA скидкой 40% на Claude",
     "evt-33931a747d86f86714429bf6": "Anthropic расширила AI for Science на 20 фондов, институтов и исследовательских групп",
@@ -2488,6 +2577,6 @@
     "unchanged": "Изменений нет",
     "excluded": "Исключён из подборки"
   },
-  "reviewed_count": 4,
+  "reviewed_count": 5,
   "coverage_note": "Охват ограничен подключёнными источниками. Недоступные страницы и незавершённые проверки не считаются прочитанными."
 }
