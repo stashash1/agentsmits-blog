@@ -1,6 +1,92 @@
 {
   "events": [
     {
+      "event_id": "evt-fa82d1bc87f6e944f5c9d552",
+      "revision": "6ff2ff762e9099b68b4371c94623d216006f34f38cde6482a13fe890b20c6231",
+      "first_seen": "2026-10-29T19:00:17.257656+00:00",
+      "updated_at": "2026-11-04T08:38:42.503708+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "GitHub Copilot: GA плагинов по умолчанию для репозиториев и enterprise-контроля",
+        "summary": "28 октября 2026 года GitHub объявила о generally available для repository plugin defaults и enterprise-managed plugin controls в VS Code, Copilot CLI и приложении GitHub Copilot. Доверенные репозитории могут устанавливать плагины по умолчанию для участников, а предприятия — требовать, блокировать плагины и ограничивать установку одобренными маркетплейсами. Managed settings имеют приоритет над репозиторными и личными настройками.",
+        "impact": {
+          "assumptions": [
+            "Оценка исходит из формулировок официального changelog GitHub как заявления компании о составе релиза",
+            "Распространение ограничено контурами Copilot Business/Enterprise и GitHub Enterprise Cloud",
+            "Обязательные плагины действительно недоступны для отключения пользователем, как сказано в документе"
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: прежнее состояние доступности репозиторных дефолтов и enterprise-контроля плагинов явно не описано, заявлено лишь переход в generally available.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 3,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Несколько месяцев после 28 октября 2026 года; горизонт подтверждения эффекта в документе не задан.",
+          "lower": 4,
+          "lower_anchor_reason": "Нижняя граница 4: событие узкое по ширине — один продуктовый контур плагинов Copilot с корпоративными лицензиями; заявленный эффект — организация настройки, а не изменение отрасли или модели.",
+          "mechanism": "Managed settings с приоритетом над репозиторными и личными выборами позволяют администратору задать одобренные маркетплейсы, обязательные плагины и запреты; обязательные плагины ставятся и включаются автоматически, а пользователь не может их отключить. Так централизованная конфигурация заменяет индивидуальную настройку каждого участника.",
+          "observed_impact": null,
+          "projected_impact": 5,
+          "rationale": "Релиз расширяет управление плагинами Copilot на уровень enterprise: появляется обязательный список допустимых плагинов, блокировка и ограничение маркетплейсов, что меняет выбор и процесс настройки команд в организациях. При этом охват ограничен лицензиями Copilot Business/Enterprise и GitHub Enterprise Cloud, а измеримых данных об эффекте в документе нет, поэтому глубина заявлена как локально измеримое изменение процесса, а не отраслевой сдвиг.",
+          "scope": "Пользователи Copilot в VS Code, Copilot CLI и приложении GitHub Copilot; managed controls доступны на GitHub Enterprise Cloud для пользователей с лицензиями Copilot Business или Copilot Enterprise, выданными предприятием или его организацией.",
+          "score": 5,
+          "systemic_quarter": false,
+          "upper": 6
+        },
+        "evidence_level": 2,
+        "topics": [
+          "GitHub Copilot",
+          "плагины",
+          "enterprise-политики",
+          "VS Code",
+          "GitHub Enterprise Cloud"
+        ],
+        "entities": [
+          "GitHub",
+          "GitHub Copilot",
+          "VS Code",
+          "Copilot CLI",
+          "GitHub Enterprise Cloud"
+        ],
+        "implications": "Интерпретация: enterprises получают управляемый контур установки плагинов Copilot, где обязательные компоненты нельзя отключить, а неодобренные источники ограничены. Для команд это означает перенос части настройки инструментов с участников на корпоративную политику; практический эффект на продуктивность в документе не измерен.",
+        "caveat": "Источник — официальный changelog GitHub, то есть заявление вендора о составе релиза; независимых измерений последствий здесь нет. Условия доступности ограничены лицензиями Copilot Business/Enterprise и GitHub Enterprise Cloud, а требования к плагинам могут дублировать уже действующие внутренние практики команд.",
+        "urgent": false,
+        "urgency_reason": "Релиз не создаёт срочной потери возможности: событие уже объявлено, документ не указывает срок отключения прежних способов настройки.",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "Repository plugin defaults и enterprise-managed plugin controls стали generally available в VS Code, Copilot CLI и приложении GitHub Copilot.",
+            "source_id": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available",
+            "quote_excerpt": "Repository plugin defaults and enterprise plugin controls generally available Repository plugin defaults and enterprise-managed plugin controls are now generally available in VS Code, Copilot CLI,…"
+          },
+          {
+            "id": "f2",
+            "claim": "Предприятия могут требовать плагины, блокировать их и ограничивать установку одобренными маркетплейсами.",
+            "source_id": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "Repository plugin defaults and enterprise plugin controls generally available",
+            "source_id": "github_copilot",
+            "published_at": "2026-10-28",
+            "origin_family": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
       "event_id": "evt-597859498327e092436600bd",
       "revision": "5773fb21053427c3e1cf8c62b038b841d45bc8752f081f8bd05c8f5ef8b609f8",
       "first_seen": "2026-10-28T18:30:23.238615+00:00",
@@ -561,223 +647,274 @@
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-04T08:33:43.212319+00:00",
-      "last_check": "2026-11-04T08:33:43.212319+00:00"
+      "last_ok": "2026-11-04T08:38:43.011055+00:00",
+      "last_check": "2026-11-04T08:38:43.011055+00:00"
     },
     {
       "source_id": "arxiv",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:34:29.789813+00:00",
-      "last_check": "2026-11-04T08:34:29.789813+00:00"
+      "last_ok": "2026-11-04T08:39:34.469081+00:00",
+      "last_check": "2026-11-04T08:39:34.469081+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:34:12.600018+00:00",
-      "last_check": "2026-11-04T08:34:12.600018+00:00"
+      "last_ok": "2026-11-04T08:39:16.513164+00:00",
+      "last_check": "2026-11-04T08:39:16.513164+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 15,
+      "fail_streak": 16,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-04T08:34:12.341207+00:00"
+      "last_check": "2026-11-04T08:39:16.152225+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:34:13.141691+00:00",
-      "last_check": "2026-11-04T08:34:13.141691+00:00"
+      "last_ok": "2026-11-04T08:39:16.948415+00:00",
+      "last_check": "2026-11-04T08:39:16.948415+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:33:51.149800+00:00",
-      "last_check": "2026-11-04T08:33:51.149800+00:00"
+      "last_ok": "2026-11-04T08:38:52.418323+00:00",
+      "last_check": "2026-11-04T08:38:52.418323+00:00"
     },
     {
       "source_id": "deepseek",
       "fail_streak": 0,
       "items_found_last_run": 24,
-      "last_ok": "2026-11-04T08:34:10.699059+00:00",
-      "last_check": "2026-11-04T08:34:10.699059+00:00"
+      "last_ok": "2026-11-04T08:39:13.727566+00:00",
+      "last_check": "2026-11-04T08:39:13.727566+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:34:12.842757+00:00",
-      "last_check": "2026-11-04T08:34:12.842757+00:00"
+      "last_ok": "2026-11-04T08:39:16.773070+00:00",
+      "last_check": "2026-11-04T08:39:16.773070+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:34:29.670413+00:00",
-      "last_check": "2026-11-04T08:34:29.670413+00:00"
+      "last_ok": "2026-11-04T08:39:34.184819+00:00",
+      "last_check": "2026-11-04T08:39:34.184819+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
       "items_found_last_run": 14,
-      "last_ok": "2026-11-04T08:34:11.215351+00:00",
-      "last_check": "2026-11-04T08:34:11.215351+00:00"
+      "last_ok": "2026-11-04T08:39:14.373198+00:00",
+      "last_check": "2026-11-04T08:39:14.373198+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 143,
+      "fail_streak": 144,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-04T08:34:14.127925+00:00"
+      "last_check": "2026-11-04T08:39:18.281807+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:33:46.337986+00:00",
-      "last_check": "2026-11-04T08:33:46.337986+00:00"
+      "last_ok": "2026-11-04T08:38:46.155478+00:00",
+      "last_check": "2026-11-04T08:38:46.155478+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:33:45.599391+00:00",
-      "last_check": "2026-11-04T08:33:45.599391+00:00"
+      "last_ok": "2026-11-04T08:38:45.268799+00:00",
+      "last_check": "2026-11-04T08:38:45.268799+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1352,
+      "fail_streak": 1353,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-04T08:34:07.336463+00:00"
+      "last_check": "2026-11-04T08:39:09.100490+00:00"
     },
     {
       "source_id": "microsoft_ai",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:34:07.658400+00:00",
-      "last_check": "2026-11-04T08:34:07.658400+00:00"
+      "last_ok": "2026-11-04T08:39:09.433177+00:00",
+      "last_check": "2026-11-04T08:39:09.433177+00:00"
     },
     {
       "source_id": "microsoft_research",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:34:09.645146+00:00",
-      "last_check": "2026-11-04T08:34:09.645146+00:00"
+      "last_ok": "2026-11-04T08:39:12.427455+00:00",
+      "last_check": "2026-11-04T08:39:12.427455+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 74,
+      "fail_streak": 75,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-04T08:34:06.308440+00:00"
+      "last_check": "2026-11-04T08:39:07.947692+00:00"
     },
     {
       "source_id": "mistral_sdk",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:34:07.034769+00:00",
-      "last_check": "2026-11-04T08:34:07.034769+00:00"
+      "last_ok": "2026-11-04T08:39:08.581525+00:00",
+      "last_check": "2026-11-04T08:39:08.581525+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 29,
+      "fail_streak": 30,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-04T08:34:29.147643+00:00"
+      "last_check": "2026-11-04T08:39:33.498794+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:33:46.970908+00:00",
-      "last_check": "2026-11-04T08:33:46.970908+00:00"
+      "last_ok": "2026-11-04T08:38:46.772945+00:00",
+      "last_check": "2026-11-04T08:38:46.772945+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
       "items_found_last_run": 48,
-      "last_ok": "2026-11-04T08:33:47.680399+00:00",
-      "last_check": "2026-11-04T08:33:47.680399+00:00"
+      "last_ok": "2026-11-04T08:38:47.498928+00:00",
+      "last_check": "2026-11-04T08:38:47.498928+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-04T08:33:44.750555+00:00",
-      "last_check": "2026-11-04T08:33:44.750555+00:00"
+      "last_ok": "2026-11-04T08:38:44.270374+00:00",
+      "last_check": "2026-11-04T08:38:44.270374+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 15,
+      "fail_streak": 16,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-04T08:34:12.341636+00:00"
+      "last_check": "2026-11-04T08:39:16.152720+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:34:10.832637+00:00",
-      "last_check": "2026-11-04T08:34:10.832637+00:00"
+      "last_ok": "2026-11-04T08:39:13.943668+00:00",
+      "last_check": "2026-11-04T08:39:13.943668+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 15,
+      "fail_streak": 16,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-04T08:34:13.925109+00:00"
+      "last_check": "2026-11-04T08:39:17.935618+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 15,
+      "fail_streak": 16,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:34:29.789813+00:00"
+      "last_check": "2026-11-04T08:39:34.469081+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-04T08:34:13.997589+00:00",
-      "last_check": "2026-11-04T08:34:13.997589+00:00"
+      "last_ok": "2026-11-04T08:39:18.174094+00:00",
+      "last_check": "2026-11-04T08:39:18.174094+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 15,
+      "fail_streak": 16,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:34:29.789813+00:00"
+      "last_check": "2026-11-04T08:39:34.469081+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 15,
+      "fail_streak": 16,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-04T08:34:10.832637+00:00"
+      "last_check": "2026-11-04T08:39:13.943668+00:00"
     }
   ],
   "processing": {
     "news_document_jobs": {
       "failed": 12,
       "not_article_listing": 5,
-      "outside_window": 2280,
-      "pending": 145,
-      "processing": 2,
-      "reviewed": 4
+      "outside_window": 2293,
+      "pending": 150,
+      "processing": 3,
+      "reviewed": 5
     },
     "news_research_jobs": {
       "awaiting_events": 1,
       "complete": 1,
-      "failed": 2,
-      "pending": 2
+      "failed": 1,
+      "pending": 3,
+      "processing": 1
     }
   },
   "document_status": [
+    {
+      "title": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
+      "url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+      "source_id": "microsoft_research",
+      "date": "2026-10-30",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Learn the rules: The hacker mindset",
+      "url": "https://www.microsoft.com/en-us/research/podcast/learn-the-rules-the-hacker-mindset/",
+      "source_id": "microsoft_research",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Microsoft Research Focus – Edition #97",
+      "url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-97/",
+      "source_id": "microsoft_research",
+      "date": "2026-10-29",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Introducing the Microsoft Copilot harness in Foundry Agent Service",
+      "url": "https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/",
+      "source_id": "microsoft_ai",
+      "date": "2026-10-28",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Mistral Python SDK: python - v3.7.0 - 2026-11-01 20:09:31",
+      "url": "https://github.com/mistralai/client-python/releases/tag/v3.7.0",
+      "source_id": "mistral_sdk",
+      "date": "2026-11-01",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
     {
       "title": "Knowingly Wrong: Training LLMs Against Their Own Beliefs can Induce Misalignment",
       "url": "https://arxiv.org/abs/2611.05287",
@@ -1074,6 +1211,16 @@
       "source_id": "anthropic",
       "date": "2026-10-28",
       "state": "reviewed",
+      "error": "",
+      "attempts": 1,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+      "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+      "source_id": "anthropic",
+      "date": "2026-10-27",
+      "state": "pending",
       "error": "",
       "attempts": 1,
       "next_attempt_at": null
@@ -1953,9 +2100,9 @@
       "url": "https://github.blog/changelog/2026-10-28-repository-plugin-defaults-and-enterprise-plugin-controls-generally-available",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
+      "state": "reviewed",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2313,9 +2460,9 @@
       "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
+      "state": "processing",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2407,6 +2554,16 @@
       "error": "",
       "attempts": 0,
       "next_attempt_at": null
+    },
+    {
+      "title": "Claude Code 2.1.312",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21312",
+      "source_id": "claude_code",
+      "date": "",
+      "state": "pending",
+      "error": "",
+      "attempts": 1,
+      "next_attempt_at": null
     }
   ],
   "coverage_gaps": [
@@ -2495,7 +2652,13 @@
       ]
     }
   ],
-  "publication_receipts": [],
+  "publication_receipts": [
+    {
+      "kind": "digest",
+      "url": "https://t.me/c/3953773943/1694",
+      "sent_at": "2026-11-04T08:38:35.873488+00:00"
+    }
+  ],
   "gap_labels": {
     "publisher_migrated_current_research_not_covered": "Архивная лента; актуальный раздел издателя пока не подключён",
     "adapter_stub": "Адаптер пока не реализован",
@@ -2505,6 +2668,7 @@
     "item_budget": "Достигнут предел записей; требуется продолжение"
   },
   "event_titles": {
+    "evt-fa82d1bc87f6e944f5c9d552": "GitHub Copilot: GA плагинов по умолчанию для репозиториев и enterprise-контроля",
     "evt-597859498327e092436600bd": "GitHub Copilot в VS Code: Agent Host изолирует сессии агентов от окон редактора",
     "evt-6e73d07dd638e0d9301274a8": "OpenAI Agents SDK 0.24.0-alpha.6: расширены управление диалогами, восстановление состояния и политики инструментов",
     "evt-4b15c67e0a2678a704662f74": "Claude Code 2.1.312: OIDC-claim для шлюза приложений и сокращённый системный промпт для кастомных имён моделей",
@@ -2522,6 +2686,6 @@
     "unchanged": "Изменений нет",
     "excluded": "Исключён из подборки"
   },
-  "reviewed_count": 6,
+  "reviewed_count": 7,
   "coverage_note": "Охват ограничен подключёнными источниками. Недоступные страницы и незавершённые проверки не считаются прочитанными."
 }
