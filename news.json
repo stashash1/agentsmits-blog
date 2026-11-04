@@ -1,6 +1,92 @@
 {
   "events": [
     {
+      "event_id": "evt-787196c302b9c479040bfabb",
+      "revision": "991cc7b1d8bdd9307c1f9fb2586fa3282d48c00cd6541252143279dbbe17e080",
+      "first_seen": "2026-10-29T14:00:14.920881+00:00",
+      "updated_at": "2026-11-04T09:08:42.493758+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "IBM выпустила патч Granite Switch 4.1.1 с новой ASR-моделью и адаптером Decision",
+        "summary": "IBM анонсировала Granite Switch 4.1.1 — патч-релиз модульной архитектуры Switch с адаптерами. Релиз полностью обратно совместим с 4.1 и не требует миграции. В состав вошли обновлённая модель Granite Speech ASR: многоязычный распознаватель речи на 10 языках с нативными знаками препинания и заглавными буквами, — и обновлённый адаптер Decision в granitelib-core с улучшенными показателями на тест-наборе Jev Decision Index. По заявлению IBM, при подготовке обновления не пересчитывалась базовая модель: обучались только новые ASR-модель и адаптер Decision, после чего адаптеры собираются и разворачиваются по желанию пользователя.",
+        "impact": {
+          "assumptions": [
+            "Число языков в 10 относится к обновлённой Granite Speech ASR модели, а не ко всему набору продуктов Switch.",
+            "Прирост на Jev Decision Index невелик по заявлению самой компании и не подтверждён независимым измерением.",
+            "Обратная совместимость с 4.1 означает отсутствие миграции для существующих пользователей."
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: описан только сам патч-релиз и его обратная совместимость с 4.1; прежние показатели ASR и Decision не указаны.",
+          "basis": "observed",
+          "breadth": 1,
+          "confidence": "medium",
+          "depth": 2,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Краткосрочно: эффект проявляется у пользователей, обновляющихся до 4.1.1 и применяющих обновлённую ASR-модель или адаптер Decision.",
+          "lower": 2,
+          "lower_anchor_reason": "Нижняя граница 2 опирается на ячейку матрицы «ширина 1 / глубина 2»: улучшение локально измеримое (набор тестов и языковая функция), но не меняет ни стоимость, ни доступ, ни архитектуру вне одного продукта IBM.",
+          "mechanism": "Модульная Switch-архитектура позволяет обновлять специализированные адаптеры без пересчёта базовой модели: по заявлению IBM, при подготовке релиза обучались только новые ASR-модель и адаптер Decision, а база осталась нетронутой. Пользователь собирает нужные адаптеры и разворачивает их на одной конечной точке, получая мультиязычную речь с готовым форматированием без отдельного прохода.",
+          "observed_impact": 2,
+          "projected_impact": null,
+          "rationale": "Событие узкое по ширине: один продуктовый контур IBM (Granite Switch) с двумя точечными обновлениями моделей внутри него. По глубине это локальная измеримая польза: обновлённая ASR-модель снимает ручной этап форматирования транскриптов для 10 языков, а адаптер Decision показывает прирост на тест-наборе Jev Decision Index — улучшение процесса без изменения архитектуры и без миграции. Ячейка матрицы для ширины 1 и глубины 2 даёт 2. Отдельного подтверждённого системного эффекта на квартал в документе нет, поэтому systemic_quarter=false, а верхняя граница поднимается лишь до 3 из-за заявленного улучшения качества адаптера.",
+          "scope": "Аудитория — разработчики, применяющие Granite Switch: обновление распознавания речи на 10 языках и адаптера Decision в granitelib-core. Документ не содержит данных о стоимости, лицензиях, доступности для клиентов или независимых замерах эффекта.",
+          "score": 2,
+          "systemic_quarter": false,
+          "upper": 3
+        },
+        "evidence_level": 2,
+        "topics": [
+          "release",
+          "open-weights models",
+          "speech-to-text",
+          "modular adapters"
+        ],
+        "entities": [
+          "IBM",
+          "Granite Switch",
+          "Granite Speech ASR",
+          "granitelib-core",
+          "Decision adapter",
+          "Hugging Face"
+        ],
+        "implications": "Интерпретация: практический смысл релиза — сокращение отдельного этапа постобработки транскриптов для мультиязычного распознавания речи и обновление одного из готовых адаптеров без миграции с 4.1. Для команд, работающих с Granite Switch через единую конечную точку, обновление низкорисковое: базовая модель не пересчитывается, состав адаптера задаёт пользователь.",
+        "caveat": "Документ — корпоративный анонс IBM: все оценки качества (например, улучшение на Jev Decision Index) приведены поставщиком, независимых замеров эффекта здесь нет. Величина прироста, стоимость, условия лицензирования и доступность обновлений для конечных пользователей не раскрыты. Упомянутый Adapter SDK и туториалы заявлены как будущая работа, а не как выпущенный продукт.",
+        "urgent": false,
+        "urgency_reason": "",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "Granite Switch 4.1.1 — патч-релиз, полностью обратно совместимый с 4.1, не требующий миграции, с инкрементальными улучшениями под капотом.",
+            "source_id": "huggingface",
+            "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+            "quote_excerpt": "The version number means what it means in software: fully backwards compatible with 4.1, no migration, incremental improvements under the hood."
+          },
+          {
+            "id": "f2",
+            "claim": "В Granite Switch 4.1.1 обновлена модель Granite Speech ASR: многоязычный распознаватель речи на 10 языках с нативными знаками препинания и заглавными буквами.",
+            "source_id": "huggingface",
+            "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+            "quote_excerpt": "- Updated Granite Speech…"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Granite Switch 4.1.1 — Update models like you update software",
+            "source_id": "huggingface",
+            "published_at": "2026-10-29",
+            "origin_family": "huggingface",
+            "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
       "event_id": "evt-d9f88131e8bf911f9f96eaee",
       "revision": "4bf9eafc05faf7af93a5811d678428fd07a79e20fe0c1bba1b09ad81b0b6477b",
       "first_seen": "2026-11-03T17:30:44.278786+00:00",
@@ -989,6 +1075,48 @@
         }
       ],
       "research_facts": []
+    },
+    {
+      "package_id": "e1441b480c058060b78d1c181f2b3eba82b276eb26d6ab865285e2cfb6c7f0ea",
+      "created_at": "2026-11-04T09:13:04.378047+00:00",
+      "kind": "same_constraint",
+      "text": "Аналитическое сравнение Granite Switch 4.1.1 и AnySpeechRecognizer: оба позволяют проверить обновление ASR без переделки окружающего кода, но на разных границах. Эксперимент: зафиксировать код потребителя, выполнить замену и отдельно измерить необходимые правки и ошибки транскрипции.",
+      "mechanism": "IBM заявляет совместимость патча с 4.1 и сохраняет базовую модель, обучая новые ASR и Decision. AnySpeechRecognizer при переходе на Parakeet меняет создание транскриптора, сохраняя установку ресурсов, запуск анализатора и чтение результатов. Это разные способы ограничить интеграционные изменения.",
+      "alternative": "Экономия может оказаться узкой: совместимость конкретного патча и общего API не гарантирует прежнего поведения транскрипции; адаптация потребителя может поглотить выигрыш.",
+      "falsifier": "В поддержанном сценарии переход 4.1→4.1.1 или Apple→Parakeet требует переписать код потребителя, помимо выбора компонента.",
+      "horizon": "Первый интеграционный пилот, 1–2 недели.",
+      "evidence_refs": [
+        "evt-787196c302b9c479040bfabb/f1",
+        "evt-787196c302b9c479040bfabb/rf1",
+        "evt-1dc64361b6ca11fb99625c43/f1",
+        "evt-1dc64361b6ca11fb99625c43/rf2"
+      ],
+      "dependencies": [
+        {
+          "event_id": "evt-787196c302b9c479040bfabb",
+          "revision": "991cc7b1d8bdd9307c1f9fb2586fa3282d48c00cd6541252143279dbbe17e080",
+          "payload_hash": "24abaccf5e8f0d299fdbe94499bee719c384bee0c548aff5151d7785d42b1b9d"
+        },
+        {
+          "event_id": "evt-1dc64361b6ca11fb99625c43",
+          "revision": "87a31dc0623caffcdeb89dbad11728b72082e573fa00233f073386626fce7c72",
+          "payload_hash": "a138afe612147c0cb7620f54e6d365f04b92ae2322a8e88262b524715dafd917"
+        }
+      ],
+      "research_facts": [
+        {
+          "id": "rf1",
+          "event_id": "evt-787196c302b9c479040bfabb",
+          "claim": "По заявлению IBM, при подготовке обновления обучали новую ASR-модель и адаптер Decision; остальное не пересчитывали, базовая модель осталась нетронутой.",
+          "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1"
+        },
+        {
+          "id": "rf2",
+          "event_id": "evt-1dc64361b6ca11fb99625c43",
+          "claim": "Для перехода на Parakeet меняется создание транскриптора; шаги установки ресурсов, запуска анализатора и чтения результатов остаются прежними.",
+          "url": "https://huggingface.co/blog/anydecisionmodel"
+        }
+      ]
     }
   ],
   "source_health": [
@@ -996,217 +1124,218 @@
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-04T09:03:43.216057+00:00",
-      "last_check": "2026-11-04T09:03:43.216057+00:00"
+      "last_ok": "2026-11-04T09:13:43.072229+00:00",
+      "last_check": "2026-11-04T09:13:43.072229+00:00"
     },
     {
       "source_id": "arxiv",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:59:48.323414+00:00",
-      "last_check": "2026-11-04T08:59:48.323414+00:00"
+      "last_ok": "2026-11-04T09:14:38.047683+00:00",
+      "last_check": "2026-11-04T09:14:38.047683+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:59:31.111679+00:00",
-      "last_check": "2026-11-04T08:59:31.111679+00:00"
+      "last_ok": "2026-11-04T09:14:20.410121+00:00",
+      "last_check": "2026-11-04T09:14:20.410121+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 20,
+      "fail_streak": 23,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-04T08:59:28.848343+00:00"
+      "last_check": "2026-11-04T09:14:19.997920+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:59:31.594216+00:00",
-      "last_check": "2026-11-04T08:59:31.594216+00:00"
+      "last_ok": "2026-11-04T09:14:21.172406+00:00",
+      "last_check": "2026-11-04T09:14:21.172406+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:58:51.910340+00:00",
-      "last_check": "2026-11-04T08:58:51.910340+00:00"
+      "last_ok": "2026-11-04T09:13:55.021438+00:00",
+      "last_check": "2026-11-04T09:13:55.021438+00:00"
     },
     {
       "source_id": "deepseek",
-      "fail_streak": 1,
-      "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:54:14.322635+00:00",
-      "last_check": "2026-11-04T08:59:26.819786+00:00"
+      "fail_streak": 0,
+      "items_found_last_run": 24,
+      "last_ok": "2026-11-04T09:14:18.059363+00:00",
+      "last_check": "2026-11-04T09:14:18.059363+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:59:31.376108+00:00",
-      "last_check": "2026-11-04T08:59:31.376108+00:00"
+      "last_ok": "2026-11-04T09:14:20.868252+00:00",
+      "last_check": "2026-11-04T09:14:20.868252+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:59:48.210259+00:00",
-      "last_check": "2026-11-04T08:59:48.210259+00:00"
+      "last_ok": "2026-11-04T09:14:37.804389+00:00",
+      "last_check": "2026-11-04T09:14:37.804389+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
       "items_found_last_run": 14,
-      "last_ok": "2026-11-04T08:59:27.693553+00:00",
-      "last_check": "2026-11-04T08:59:27.693553+00:00"
+      "last_ok": "2026-11-04T09:14:18.827905+00:00",
+      "last_check": "2026-11-04T09:14:18.827905+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 148,
+      "fail_streak": 151,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-04T08:59:32.676575+00:00"
+      "last_check": "2026-11-04T09:14:22.099109+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:58:46.240281+00:00",
-      "last_check": "2026-11-04T08:58:46.240281+00:00"
+      "last_ok": "2026-11-04T09:13:47.331214+00:00",
+      "last_check": "2026-11-04T09:13:47.331214+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:58:45.420316+00:00",
-      "last_check": "2026-11-04T08:58:45.420316+00:00"
+      "last_ok": "2026-11-04T09:13:46.387949+00:00",
+      "last_check": "2026-11-04T09:13:46.387949+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1357,
+      "fail_streak": 1360,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-04T08:59:08.291437+00:00"
+      "last_check": "2026-11-04T09:14:12.082545+00:00"
     },
     {
       "source_id": "microsoft_ai",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:59:08.615337+00:00",
-      "last_check": "2026-11-04T08:59:08.615337+00:00"
+      "last_ok": "2026-11-04T09:14:12.606220+00:00",
+      "last_check": "2026-11-04T09:14:12.606220+00:00"
     },
     {
       "source_id": "microsoft_research",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:59:11.648148+00:00",
-      "last_check": "2026-11-04T08:59:11.648148+00:00"
+      "last_ok": "2026-11-04T09:14:16.702876+00:00",
+      "last_check": "2026-11-04T09:14:16.702876+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 79,
+      "fail_streak": 82,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-04T08:59:07.307378+00:00"
+      "last_check": "2026-11-04T09:14:10.687168+00:00"
     },
     {
       "source_id": "mistral_sdk",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:59:07.893488+00:00",
-      "last_check": "2026-11-04T08:59:07.893488+00:00"
+      "last_ok": "2026-11-04T09:14:11.528177+00:00",
+      "last_check": "2026-11-04T09:14:11.528177+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 34,
+      "fail_streak": 37,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-04T08:59:47.692734+00:00"
+      "last_check": "2026-11-04T09:14:37.126813+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:58:46.941739+00:00",
-      "last_check": "2026-11-04T08:58:46.941739+00:00"
+      "last_ok": "2026-11-04T09:13:48.278625+00:00",
+      "last_check": "2026-11-04T09:13:48.278625+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
       "items_found_last_run": 48,
-      "last_ok": "2026-11-04T08:58:47.649234+00:00",
-      "last_check": "2026-11-04T08:58:47.649234+00:00"
+      "last_ok": "2026-11-04T09:13:49.242372+00:00",
+      "last_check": "2026-11-04T09:13:49.242372+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-04T08:58:44.457619+00:00",
-      "last_check": "2026-11-04T08:58:44.457619+00:00"
+      "last_ok": "2026-11-04T09:13:45.038139+00:00",
+      "last_check": "2026-11-04T09:13:45.038139+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 20,
+      "fail_streak": 23,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-04T08:59:28.848343+00:00"
+      "last_check": "2026-11-04T09:14:19.997920+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:59:27.116555+00:00",
-      "last_check": "2026-11-04T08:59:27.116555+00:00"
+      "last_ok": "2026-11-04T09:14:18.425436+00:00",
+      "last_check": "2026-11-04T09:14:18.425436+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 20,
+      "fail_streak": 23,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-04T08:59:32.486134+00:00"
+      "last_check": "2026-11-04T09:14:21.745849+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 20,
+      "fail_streak": 23,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:59:48.327026+00:00"
+      "last_check": "2026-11-04T09:14:38.053285+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-04T08:59:32.569479+00:00",
-      "last_check": "2026-11-04T08:59:32.569479+00:00"
+      "last_ok": "2026-11-04T09:14:21.953034+00:00",
+      "last_check": "2026-11-04T09:14:21.953034+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 20,
+      "fail_streak": 23,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:59:48.327026+00:00"
+      "last_check": "2026-11-04T09:14:38.053285+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 20,
+      "fail_streak": 23,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-04T08:59:27.116555+00:00"
+      "last_check": "2026-11-04T09:14:18.434418+00:00"
     }
   ],
   "processing": {
     "news_document_jobs": {
-      "failed": 14,
+      "failed": 15,
       "not_article_listing": 5,
       "outside_window": 2293,
-      "pending": 145,
-      "processing": 2,
-      "reviewed": 9
+      "pending": 142,
+      "processing": 3,
+      "reviewed": 10
     },
     "news_research_jobs": {
       "awaiting_events": 1,
+      "complete": 1,
       "failed": 3,
       "pending": 6,
       "processing": 1
@@ -2248,9 +2377,9 @@
       "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
       "source_id": "huggingface",
       "date": "2026-10-30",
-      "state": "pending",
+      "state": "processing",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2558,19 +2687,19 @@
       "url": "https://huggingface.co/blog/mistral-large4",
       "source_id": "huggingface",
       "date": "2026-10-29",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
+      "state": "failed",
+      "error": "quote_support_rejected_after_repair",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-04T09:25:10.435277+00:00"
     },
     {
       "title": "Granite Switch 4.1.1 — Update models like you update software",
       "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
       "source_id": "huggingface",
       "date": "2026-10-29",
-      "state": "pending",
+      "state": "reviewed",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2923,13 +3052,6 @@
       ]
     },
     {
-      "source_id": "deepseek",
-      "health": "fetch_error",
-      "gaps": [
-        "fetch_error"
-      ]
-    },
-    {
       "source_id": "justai",
       "health": "fetch_error",
       "gaps": [
@@ -3010,6 +3132,11 @@
   "publication_receipts": [
     {
       "kind": "digest",
+      "url": "https://t.me/c/3953773943/1695",
+      "sent_at": "2026-11-04T09:15:18.596743+00:00"
+    },
+    {
+      "kind": "digest",
       "url": "https://t.me/c/3953773943/1694",
       "sent_at": "2026-11-04T08:38:35.873488+00:00"
     }
@@ -3023,6 +3150,7 @@
     "item_budget": "Достигнут предел записей; требуется продолжение"
   },
   "event_titles": {
+    "evt-787196c302b9c479040bfabb": "IBM выпустила патч Granite Switch 4.1.1 с новой ASR-моделью и адаптером Decision",
     "evt-d9f88131e8bf911f9f96eaee": "CWE-bench v2: открытый набор из 100 задач для оценки кибер-агентов",
     "evt-1dc64361b6ca11fb99625c43": "Hugging Face представила AnySpeechRecognizer и AnyDecisionModel для Apple-платформ",
     "evt-c67ba2bef7499484fb5f9450": "Google выпустила Gemini 4 Argon глобально, Gemini 4 Carbon — в пре-релизе",
@@ -3045,6 +3173,6 @@
     "unchanged": "Изменений нет",
     "excluded": "Исключён из подборки"
   },
-  "reviewed_count": 11,
+  "reviewed_count": 12,
   "coverage_note": "Охват ограничен подключёнными источниками. Недоступные страницы и незавершённые проверки не считаются прочитанными."
 }
