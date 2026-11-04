@@ -450,184 +450,184 @@
     {
       "source_id": "arxiv",
       "fail_streak": 0,
-      "items_found_last_run": 10,
-      "last_ok": "2026-11-03T23:14:32.644510+00:00",
-      "last_check": "2026-11-03T23:14:32.644510+00:00"
+      "items_found_last_run": 7,
+      "last_ok": "2026-11-04T08:00:48.729116+00:00",
+      "last_check": "2026-11-04T08:00:48.729116+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-03T23:14:15.164589+00:00",
-      "last_check": "2026-11-03T23:14:15.164589+00:00"
+      "last_ok": "2026-11-04T08:00:30.879975+00:00",
+      "last_check": "2026-11-04T08:00:30.879975+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 7,
+      "fail_streak": 8,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-03T23:14:14.964095+00:00"
+      "last_check": "2026-11-04T08:00:30.511627+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-03T23:14:15.857977+00:00",
-      "last_check": "2026-11-03T23:14:15.857977+00:00"
+      "last_ok": "2026-11-04T08:00:31.466986+00:00",
+      "last_check": "2026-11-04T08:00:31.466986+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-03T23:13:53.653969+00:00",
-      "last_check": "2026-11-03T23:13:53.653969+00:00"
+      "last_ok": "2026-11-04T07:59:47.149353+00:00",
+      "last_check": "2026-11-04T07:59:47.149353+00:00"
     },
     {
       "source_id": "deepseek",
       "fail_streak": 0,
       "items_found_last_run": 24,
-      "last_ok": "2026-11-03T23:14:11.760510+00:00",
-      "last_check": "2026-11-03T23:14:11.760510+00:00"
+      "last_ok": "2026-11-04T08:00:27.188059+00:00",
+      "last_check": "2026-11-04T08:00:27.188059+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-03T23:14:15.668756+00:00",
-      "last_check": "2026-11-03T23:14:15.668756+00:00"
+      "last_ok": "2026-11-04T08:00:31.231822+00:00",
+      "last_check": "2026-11-04T08:00:31.231822+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-03T23:14:32.508323+00:00",
-      "last_check": "2026-11-03T23:14:32.508323+00:00"
+      "last_ok": "2026-11-04T08:00:48.425708+00:00",
+      "last_check": "2026-11-04T08:00:48.425708+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
-      "items_found_last_run": 17,
-      "last_ok": "2026-11-03T23:14:13.641312+00:00",
-      "last_check": "2026-11-03T23:14:13.641312+00:00"
+      "items_found_last_run": 14,
+      "last_ok": "2026-11-04T08:00:29.337951+00:00",
+      "last_check": "2026-11-04T08:00:29.337951+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 135,
+      "fail_streak": 136,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-03T23:14:16.790782+00:00"
+      "last_check": "2026-11-04T08:00:32.628611+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-03T23:13:46.454186+00:00",
-      "last_check": "2026-11-03T23:13:46.454186+00:00"
+      "last_ok": "2026-11-04T07:59:34.457236+00:00",
+      "last_check": "2026-11-04T07:59:34.457236+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-03T23:13:45.574301+00:00",
-      "last_check": "2026-11-03T23:13:45.574301+00:00"
+      "last_ok": "2026-11-04T07:59:33.498142+00:00",
+      "last_check": "2026-11-04T07:59:33.498142+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1344,
+      "fail_streak": 1345,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-03T23:14:09.188387+00:00"
+      "last_check": "2026-11-04T08:00:14.032911+00:00"
     },
     {
       "source_id": "microsoft_ai",
-      "fail_streak": 1344,
+      "fail_streak": 1345,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-03T23:14:10.501569+00:00"
+      "last_check": "2026-11-04T08:00:20.074843+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 66,
+      "fail_streak": 67,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-03T23:14:08.806494+00:00"
+      "last_check": "2026-11-04T08:00:02.405792+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 21,
+      "fail_streak": 22,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-03T23:14:31.974670+00:00"
+      "last_check": "2026-11-04T08:00:47.800833+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-03T23:13:47.159765+00:00",
-      "last_check": "2026-11-03T23:13:47.159765+00:00"
+      "last_ok": "2026-11-04T07:59:37.373015+00:00",
+      "last_check": "2026-11-04T07:59:37.373015+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
-      "items_found_last_run": 50,
-      "last_ok": "2026-11-03T23:13:48.050459+00:00",
-      "last_check": "2026-11-03T23:13:48.050459+00:00"
+      "items_found_last_run": 48,
+      "last_ok": "2026-11-04T07:59:38.955800+00:00",
+      "last_check": "2026-11-04T07:59:38.955800+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-03T23:13:44.718605+00:00",
-      "last_check": "2026-11-03T23:13:44.718605+00:00"
+      "last_ok": "2026-11-04T07:59:32.352362+00:00",
+      "last_check": "2026-11-04T07:59:32.352362+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 7,
+      "fail_streak": 8,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-03T23:14:14.964095+00:00"
+      "last_check": "2026-11-04T08:00:30.512615+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-03T23:14:12.762167+00:00",
-      "last_check": "2026-11-03T23:14:12.762167+00:00"
+      "last_ok": "2026-11-04T08:00:28.162817+00:00",
+      "last_check": "2026-11-04T08:00:28.162817+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 7,
+      "fail_streak": 8,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-03T23:14:16.395438+00:00"
+      "last_check": "2026-11-04T08:00:32.216854+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 7,
+      "fail_streak": 8,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-03T23:14:32.652973+00:00"
+      "last_check": "2026-11-04T08:00:48.733030+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-03T23:14:16.625792+00:00",
-      "last_check": "2026-11-03T23:14:16.625792+00:00"
+      "last_ok": "2026-11-04T08:00:32.385175+00:00",
+      "last_check": "2026-11-04T08:00:32.385175+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 7,
+      "fail_streak": 8,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-03T23:14:32.652973+00:00"
+      "last_check": "2026-11-04T08:00:48.733030+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 7,
+      "fail_streak": 8,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-03T23:14:12.762167+00:00"
+      "last_check": "2026-11-04T08:00:28.162817+00:00"
     }
   ],
   "processing": {
@@ -1146,7 +1146,7 @@
       "next_attempt_at": null
     },
     {
-      "title": "The TechCrunch Founder Summit agenda is only half the reason to be in Boston on Nov. 4",
+      "title": "The TechCrunch Founder Summit agenda is only half the reason to be in Boston on November 4",
       "url": "https://techcrunch.com/2026/11/03/the-techcrunch-founder-summit-agenda-is-only-half-the-reason-to-be-in-boston-on-nov-4/",
       "source_id": "techcrunch",
       "date": "2026-11-03",
