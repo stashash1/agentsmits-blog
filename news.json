@@ -1,6 +1,181 @@
 {
   "events": [
     {
+      "event_id": "evt-d9f88131e8bf911f9f96eaee",
+      "revision": "4bf9eafc05faf7af93a5811d678428fd07a79e20fe0c1bba1b09ad81b0b6477b",
+      "first_seen": "2026-11-03T17:30:44.278786+00:00",
+      "updated_at": "2026-11-04T08:52:08.434326+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "CWE-bench v2: открытый набор из 100 задач для оценки кибер-агентов",
+        "summary": "Collinear AI открыла CWE-bench v2 — публичный набор из 100 задач, где агент получает чекаут реального open-source репозитория и инструкцию, чтобы найти и исправить уязвимость, не сломав функциональность. Проверка полностью программная, поэтому результаты детерминированы и воспроизводимы. Задачи покрывают 91 разных CWE. Авторы сообщают, что из 11 оценённых моделей лидирует Gemini 4 Argon с 67.8% pass@1, а Claude Opus 5.5 следует с 67.3%; при этом лидер не решает 19% набора при каждой попытке.",
+        "impact": {
+          "assumptions": [
+            "Оценка влияния опирается на заявления авторов бенчмарка, а не на независимые измерения.",
+            "Задачи остаются доступными и воспроизводимыми после снятия гейта доступа.",
+            "Числа лидерборда отражают корректную работу верификаторов."
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: описан лишь текущий релиз, а предыдущее состояние набора прямо не охарактеризовано.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 2,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Ближайшие недели после публикации: независимые прогоны и обновление лидербордов; квартальный системный эффект не заявлен.",
+          "lower": 2,
+          "lower_anchor_reason": "Нижняя граница 2: сет из 100 задач даёт лишь локальную измеримую пользу внутри ниши кибер-агентов и не затрагивает базовую инфраструктуру отрасли.",
+          "mechanism": "Открытый набор задач с детерминированными верификаторами позволяет воспроизвести оценку моделей и использовать те же окружения как источник наград для обучения оборонных агентов, что снижает барьер для независимых проверок.",
+          "observed_impact": null,
+          "projected_impact": 3,
+          "rationale": "Ширина 2: событие относится к профессиональной нише — оценка кибер-агентов, а не к общей индустрии; затрагиваются разработчики защитных агентов и исследователи. Глубина 2: локальная измеримая польза — открытый воспроизводимый набор для оценки моделей. По матрице ширина 2 / глубина 2 даёт 3. Наблюдаемого влияния на отрасль событие не доказывает: числа лидерборда касаются 11 моделей на 100 задачах и поступают от самих авторов бенчмарка.",
+          "scope": "100 задач, 91 CWE, программная проверка, 11 оценённых моделей в лидерборде, запуск через Harbor из репозитория Hugging Face; набор закрыт по условиям доступа.",
+          "score": 3,
+          "systemic_quarter": false,
+          "upper": 5
+        },
+        "evidence_level": 2,
+        "topics": [
+          "бенчмарки ИИ",
+          "кибербезопасность",
+          "агентные системы",
+          "открытые наборы данных"
+        ],
+        "entities": [
+          "Collinear AI",
+          "Hugging Face",
+          "CWE-bench",
+          "Harbor",
+          "Gemini 4 Argon",
+          "Claude Opus 5.5",
+          "DeepSeek V4.1 Flash"
+        ],
+        "implications": "Интерпретация: открытость набора, грейдера и обвязки даёт независимым командам способ проверять заявления о кибер-способностях моделей вместо reliance на маркетинговые метрики. На практике это снижает стоимость проверки для оценщиков защитных систем.",
+        "caveat": "Все числа лидерборда приведены самими авторами бенчмарка и отражают 11 моделей на 100 задачах; независимых измерений последствий нет. Набор закрыт: требуется принять условия доступа, что ограничивает воспроизводимость для части пользователей. Утверждение о лидерстве — заявление поставщика.",
+        "urgent": false,
+        "urgency_reason": "Событие не лишает возможности действовать: набор, грейдер и обвязка опубликованы и доступны для запуска.",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "CWE-bench v2 открывает публичный набор из 100 задач, которые может запустить и оценить любой желающий.",
+            "source_id": "huggingface",
+            "url": "https://huggingface.co/blog/cwe-bench",
+            "quote_excerpt": "In our continued pursuit to push the horizon at Collinear AI, CWE-bench v2 opens up a public set of 100 tasks that anyone can run…"
+          },
+          {
+            "id": "f2",
+            "claim": "Эти 100 задач покрывают 91 разных CWE, охватывая широкий спектр классов уязвимостей.",
+            "source_id": "huggingface",
+            "url": "https://huggingface.co/blog/cwe-bench",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "CWE-bench v2: More coverage, quality, and transparency",
+            "source_id": "huggingface",
+            "published_at": "2026-11-03",
+            "origin_family": "huggingface",
+            "url": "https://huggingface.co/blog/cwe-bench"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
+      "event_id": "evt-1dc64361b6ca11fb99625c43",
+      "revision": "87a31dc0623caffcdeb89dbad11728b72082e573fa00233f073386626fce7c72",
+      "first_seen": "2026-10-29T12:30:20.577137+00:00",
+      "updated_at": "2026-11-04T08:50:44.740734+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "Hugging Face представила AnySpeechRecognizer и AnyDecisionModel для Apple-платформ",
+        "summary": "Hugging Face анонсировала два Swift-пакета: AnySpeechRecognizer (выбор движка распознавания речи — NVIDIA Parakeet, Alibaba Qwen3-ASR — плюс диаризация спикеров на Core ML) и AnyDecisionModel (типизированные ответы да/нет, множественный выбор и шкалы с вероятностями). Оба пакета качают открытые модели с Hugging Face Hub и работают на устройстве; AnyDecisionModel поддерживает шесть бэкендов, включая MLX, Core AI, llama.cpp, Jev и Ollama. Замеры WER на LibriSpeech приведены автором на одной машине M4 Max с macOS 27.0.1.",
+        "impact": {
+          "assumptions": [
+            "Оценки WER автора переносимы на другие данные лишь частично",
+            "Требуются свежие версии macOS/iOS и Apple silicon",
+            "Пакеты реально подключаются в приложениях, а не только демонстрируются"
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: до анонса приложения использовали только встроенный движок Apple Speech и разбор текста языковой модели.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 2,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Квартал после анонса; устойчивых данных о внедрении в документе нет.",
+          "lower": 2,
+          "lower_anchor_reason": "Нижний якорь 2: это добавление локального удобства в нише Swift-разработки без смены отрасли; при сборе статистики об использовании или сбоях интеграции оценка была бы выше.",
+          "mechanism": "Пакеты дают типизированный Swift-слой: транскриптор выбирается на уровне создания объекта, а решение получает вероятности и confidence из одного прямого прохода, поэтому приложение не разбирает сгенерированный текст и не отправляет аудио в облако.",
+          "observed_impact": null,
+          "projected_impact": 3,
+          "rationale": "Событие локальное и нишевое: два Swift-пакета для приложений под macOS/iOS. Ширина 2 — профессиональная ниша разработчиков под Apple; глубина 2 — измеримая локальная польза: смена движка распознавания, получение вероятностей вместо разбора текста и диаризация спикеров, которой нет в API Apple. Матрица по строке ширины 2 и столбцу глубины 2 даёт 3. Никакого доказанного отраслевого эффекта в документе нет.",
+          "scope": "Разработчики приложений под macOS 26+/iOS 26+ на Apple silicon; требуются Swift 6.2+, для MLX — Xcode 6.4+ и Metal, для Core AI — Xcode 27.",
+          "score": 3,
+          "systemic_quarter": false,
+          "upper": 4
+        },
+        "evidence_level": 2,
+        "topics": [
+          "open-source models",
+          "speech recognition",
+          "decision models",
+          "Swift",
+          "Apple platforms"
+        ],
+        "entities": [
+          "Hugging Face",
+          "AnySpeechRecognizer",
+          "AnyDecisionModel",
+          "NVIDIA Parakeet",
+          "Alibaba Qwen3-ASR",
+          "Cloudflare Clef",
+          "Apple SpeechAnalyzer"
+        ],
+        "implications": "Интерпретация: для приложений под Apple появляется Swift-слой над локальными открытыми моделями без облачного распознавания и без парсинга текста вместо вероятностей. Это снижает стоимость и упрощает контроль поведения, но выбор движка идёт на стороне разработчика приложения, и заявленные метрики точности остаются измерениями автора.",
+        "caveat": "Метрики WER получены автором на одной машине M4 Max с macOS 27.0.1 и ограниченном наборе LibriSpeech; на записи с перекрывающейся речью все движки дали WER выше 23%. Тесты шли только на macOS, не на iPhone; iOS-версии ещё нет.",
+        "urgent": false,
+        "urgency_reason": "Событие не связано с потерей возможности действовать до ближайшего выпуска: это новый инструмент, а не изменение требований или отключение сервиса.",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "AnySpeechRecognizer сохраняет API Apple и позволяет выбрать движка распознавания речи.",
+            "source_id": "huggingface",
+            "url": "https://huggingface.co/blog/anydecisionmodel",
+            "quote_excerpt": "AnySpeechRecognizer keeps the API and lets you choose the engine: - import Speech + import AnySpeechRecognizer The package mirrors SpeechAnalyzer , SpeechTranscriber , DictationTranscriber ,…"
+          },
+          {
+            "id": "f2",
+            "claim": "AnyDecisionModel отвечает на вопросы да/нет, множественного выбора и шкалы типизированными результатами с вероятностями.",
+            "source_id": "huggingface",
+            "url": "https://huggingface.co/blog/anydecisionmodel",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+            "source_id": "huggingface",
+            "published_at": "2026-10-29",
+            "origin_family": "huggingface",
+            "url": "https://huggingface.co/blog/anydecisionmodel"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
       "event_id": "evt-c67ba2bef7499484fb5f9450",
       "revision": "207378d82ad41f9e78f3b58feee20cf77a2ed61634d7b58d1c6968e052b981ff",
       "first_seen": "2026-11-03T16:47:33.877712+00:00",
@@ -821,220 +996,220 @@
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-04T08:48:42.829980+00:00",
-      "last_check": "2026-11-04T08:48:42.829980+00:00"
+      "last_ok": "2026-11-04T09:03:43.216057+00:00",
+      "last_check": "2026-11-04T09:03:43.216057+00:00"
     },
     {
       "source_id": "arxiv",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:44:38.676644+00:00",
-      "last_check": "2026-11-04T08:44:38.676644+00:00"
+      "last_ok": "2026-11-04T08:59:48.323414+00:00",
+      "last_check": "2026-11-04T08:59:48.323414+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:44:20.902221+00:00",
-      "last_check": "2026-11-04T08:44:20.902221+00:00"
+      "last_ok": "2026-11-04T08:59:31.111679+00:00",
+      "last_check": "2026-11-04T08:59:31.111679+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 17,
+      "fail_streak": 20,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-04T08:44:20.378045+00:00"
+      "last_check": "2026-11-04T08:59:28.848343+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:44:21.406391+00:00",
-      "last_check": "2026-11-04T08:44:21.406391+00:00"
+      "last_ok": "2026-11-04T08:59:31.594216+00:00",
+      "last_check": "2026-11-04T08:59:31.594216+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:43:51.065523+00:00",
-      "last_check": "2026-11-04T08:43:51.065523+00:00"
+      "last_ok": "2026-11-04T08:58:51.910340+00:00",
+      "last_check": "2026-11-04T08:58:51.910340+00:00"
     },
     {
       "source_id": "deepseek",
-      "fail_streak": 0,
-      "items_found_last_run": 24,
-      "last_ok": "2026-11-04T08:44:14.972845+00:00",
-      "last_check": "2026-11-04T08:44:14.972845+00:00"
+      "fail_streak": 1,
+      "items_found_last_run": 0,
+      "last_ok": "2026-11-04T08:54:14.322635+00:00",
+      "last_check": "2026-11-04T08:59:26.819786+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:44:21.172764+00:00",
-      "last_check": "2026-11-04T08:44:21.172764+00:00"
+      "last_ok": "2026-11-04T08:59:31.376108+00:00",
+      "last_check": "2026-11-04T08:59:31.376108+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:44:38.393271+00:00",
-      "last_check": "2026-11-04T08:44:38.393271+00:00"
+      "last_ok": "2026-11-04T08:59:48.210259+00:00",
+      "last_check": "2026-11-04T08:59:48.210259+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
       "items_found_last_run": 14,
-      "last_ok": "2026-11-04T08:44:16.281171+00:00",
-      "last_check": "2026-11-04T08:44:16.281171+00:00"
+      "last_ok": "2026-11-04T08:59:27.693553+00:00",
+      "last_check": "2026-11-04T08:59:27.693553+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 145,
+      "fail_streak": 148,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-04T08:44:22.831841+00:00"
+      "last_check": "2026-11-04T08:59:32.676575+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:43:46.073201+00:00",
-      "last_check": "2026-11-04T08:43:46.073201+00:00"
+      "last_ok": "2026-11-04T08:58:46.240281+00:00",
+      "last_check": "2026-11-04T08:58:46.240281+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:43:45.348203+00:00",
-      "last_check": "2026-11-04T08:43:45.348203+00:00"
+      "last_ok": "2026-11-04T08:58:45.420316+00:00",
+      "last_check": "2026-11-04T08:58:45.420316+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1354,
+      "fail_streak": 1357,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-04T08:44:07.548286+00:00"
+      "last_check": "2026-11-04T08:59:08.291437+00:00"
     },
     {
       "source_id": "microsoft_ai",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:44:08.039569+00:00",
-      "last_check": "2026-11-04T08:44:08.039569+00:00"
+      "last_ok": "2026-11-04T08:59:08.615337+00:00",
+      "last_check": "2026-11-04T08:59:08.615337+00:00"
     },
     {
       "source_id": "microsoft_research",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:44:12.921534+00:00",
-      "last_check": "2026-11-04T08:44:12.921534+00:00"
+      "last_ok": "2026-11-04T08:59:11.648148+00:00",
+      "last_check": "2026-11-04T08:59:11.648148+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 76,
+      "fail_streak": 79,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-04T08:44:06.268879+00:00"
+      "last_check": "2026-11-04T08:59:07.307378+00:00"
     },
     {
       "source_id": "mistral_sdk",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:44:07.227312+00:00",
-      "last_check": "2026-11-04T08:44:07.227312+00:00"
+      "last_ok": "2026-11-04T08:59:07.893488+00:00",
+      "last_check": "2026-11-04T08:59:07.893488+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 31,
+      "fail_streak": 34,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-04T08:44:37.870595+00:00"
+      "last_check": "2026-11-04T08:59:47.692734+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:43:46.681859+00:00",
-      "last_check": "2026-11-04T08:43:46.681859+00:00"
+      "last_ok": "2026-11-04T08:58:46.941739+00:00",
+      "last_check": "2026-11-04T08:58:46.941739+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
       "items_found_last_run": 48,
-      "last_ok": "2026-11-04T08:43:47.389940+00:00",
-      "last_check": "2026-11-04T08:43:47.389940+00:00"
+      "last_ok": "2026-11-04T08:58:47.649234+00:00",
+      "last_check": "2026-11-04T08:58:47.649234+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-04T08:43:44.422402+00:00",
-      "last_check": "2026-11-04T08:43:44.422402+00:00"
+      "last_ok": "2026-11-04T08:58:44.457619+00:00",
+      "last_check": "2026-11-04T08:58:44.457619+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 17,
+      "fail_streak": 20,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-04T08:44:20.379740+00:00"
+      "last_check": "2026-11-04T08:59:28.848343+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:44:15.575501+00:00",
-      "last_check": "2026-11-04T08:44:15.575501+00:00"
+      "last_ok": "2026-11-04T08:59:27.116555+00:00",
+      "last_check": "2026-11-04T08:59:27.116555+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 17,
+      "fail_streak": 20,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-04T08:44:22.455975+00:00"
+      "last_check": "2026-11-04T08:59:32.486134+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 17,
+      "fail_streak": 20,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:44:38.676644+00:00"
+      "last_check": "2026-11-04T08:59:48.327026+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-04T08:44:22.672886+00:00",
-      "last_check": "2026-11-04T08:44:22.672886+00:00"
+      "last_ok": "2026-11-04T08:59:32.569479+00:00",
+      "last_check": "2026-11-04T08:59:32.569479+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 17,
+      "fail_streak": 20,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:44:38.676644+00:00"
+      "last_check": "2026-11-04T08:59:48.327026+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 17,
+      "fail_streak": 20,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-04T08:44:15.575501+00:00"
+      "last_check": "2026-11-04T08:59:27.116555+00:00"
     }
   ],
   "processing": {
     "news_document_jobs": {
-      "failed": 13,
+      "failed": 14,
       "not_article_listing": 5,
       "outside_window": 2293,
-      "pending": 147,
-      "processing": 3,
-      "reviewed": 7
+      "pending": 145,
+      "processing": 2,
+      "reviewed": 9
     },
     "news_research_jobs": {
       "awaiting_events": 1,
-      "complete": 2,
       "failed": 3,
-      "pending": 3
+      "pending": 6,
+      "processing": 1
     }
   },
   "document_status": [
@@ -1473,9 +1648,9 @@
       "url": "https://huggingface.co/blog/cwe-bench",
       "source_id": "huggingface",
       "date": "2026-11-03",
-      "state": "pending",
+      "state": "reviewed",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2373,10 +2548,10 @@
       "url": "https://huggingface.co/blog/announcing-project-protostar",
       "source_id": "huggingface",
       "date": "2026-10-29",
-      "state": "processing",
-      "error": "",
+      "state": "failed",
+      "error": "repair_changed_identity_requires_resolution",
       "attempts": 1,
-      "next_attempt_at": null
+      "next_attempt_at": "2026-11-04T09:03:42.560923+00:00"
     },
     {
       "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
@@ -2423,9 +2598,9 @@
       "url": "https://huggingface.co/blog/anydecisionmodel",
       "source_id": "huggingface",
       "date": "2026-10-29",
-      "state": "pending",
+      "state": "reviewed",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2748,6 +2923,13 @@
       ]
     },
     {
+      "source_id": "deepseek",
+      "health": "fetch_error",
+      "gaps": [
+        "fetch_error"
+      ]
+    },
+    {
       "source_id": "justai",
       "health": "fetch_error",
       "gaps": [
@@ -2841,6 +3023,8 @@
     "item_budget": "Достигнут предел записей; требуется продолжение"
   },
   "event_titles": {
+    "evt-d9f88131e8bf911f9f96eaee": "CWE-bench v2: открытый набор из 100 задач для оценки кибер-агентов",
+    "evt-1dc64361b6ca11fb99625c43": "Hugging Face представила AnySpeechRecognizer и AnyDecisionModel для Apple-платформ",
     "evt-c67ba2bef7499484fb5f9450": "Google выпустила Gemini 4 Argon глобально, Gemini 4 Carbon — в пре-релизе",
     "evt-43302e3de5a73d2497674ff1": "GitHub Copilot стал доступен в JetBrains Air",
     "evt-fa82d1bc87f6e944f5c9d552": "GitHub Copilot: GA плагинов по умолчанию для репозиториев и enterprise-контроля",
@@ -2861,6 +3045,6 @@
     "unchanged": "Изменений нет",
     "excluded": "Исключён из подборки"
   },
-  "reviewed_count": 9,
+  "reviewed_count": 11,
   "coverage_note": "Охват ограничен подключёнными источниками. Недоступные страницы и незавершённые проверки не считаются прочитанными."
 }
