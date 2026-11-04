@@ -1,6 +1,180 @@
 {
   "events": [
     {
+      "event_id": "evt-c67ba2bef7499484fb5f9450",
+      "revision": "207378d82ad41f9e78f3b58feee20cf77a2ed61634d7b58d1c6968e052b981ff",
+      "first_seen": "2026-11-03T16:47:33.877712+00:00",
+      "updated_at": "2026-11-04T08:42:24.884976+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "Google выпустила Gemini 4 Argon глобально, Gemini 4 Carbon — в пре-релизе",
+        "summary": "В октябрьском дайджесте Google сообщила о двух связанных событиях фронтирной линейки Gemini 4. После раннего тестирования безопасности Gemini 4 Argon развёрнута глобально для сложного кодинга, финансового анализа и юридических задач в Google AI Studio, Gemini API, Google Cloud, Search и приложении Gemini, а также питает Gemini 4 Argon for Robotics. Спустя две недели анонсирована Gemini 4 Carbon: по заявлению компании, её самая сильная модель с передовыми возможностями в кибербезопасности и на длинных горизонтах, сейчас проходящая пре-релизное тестирование с правительством США и ограниченным кругом доверенных киберзащитников по программе Fairwind.",
+        "impact": {
+          "assumptions": [
+            "Оценки основаны на заявлениях компании.",
+            "Ширина и глубина оценены по перечню поверхностей из документа.",
+            "Независимых измерений эффекта нет."
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: предыдущее состояние доступности моделей до октября явно не описано.",
+          "basis": "projected",
+          "breadth": 3,
+          "confidence": "medium",
+          "depth": 3,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Ближайшие месяцы после октября 2026 для оценки фактического использования Argon и хода пре-релиза Carbon.",
+          "lower": 4,
+          "lower_anchor_reason": "Если глобальная доступность Argon фактически не даст измеримого выигрыша в задачах кодинга и анализа, а Carbon задержится в пре-релизе, влияние ограничится обновлением продуктового каталога — это уровень 4.",
+          "mechanism": "Вывод модели в широкий набор поверхностей Google делает её доступной без отдельного лицензионного барьера, а пре-релизный режим Carbon с узким кругом партнёров ограничивает немедленный доступ и переносит риски в область safety guardrails.",
+          "observed_impact": null,
+          "projected_impact": 6,
+          "rationale": "Ширина 3: событие охватывает несколько независимых продуктовых контуров — AI Studio, Gemini API, Google Cloud, Search, приложение Gemini и робототехнику, плюс отдельный контур кибербезопасности. Глубина 3: глобальная доступность модели рассуждения меняет стоимость и выбор для инженерных, финансовых и юридических задач. Матрица 3/3 даёт 6. Материала для 9 нет: нет данных о миграции, обязательности, правах доступа или квартальном системном эффекте.",
+          "scope": "Разработчики, предприятия, учёные и потребители в глобальных пользователях Google AI Studio, Gemini API, Google Cloud, Search и Gemini; ограниченный круг киберзащитников программы Fairwind.",
+          "score": 6,
+          "systemic_quarter": false,
+          "upper": 8
+        },
+        "evidence_level": 2,
+        "topics": [
+          "frontier models",
+          "model rollout",
+          "AI Studio",
+          "cybersecurity"
+        ],
+        "entities": [
+          "Google",
+          "Gemini 4 Argon",
+          "Gemini 4 Carbon",
+          "Google AI Studio",
+          "Gemini API",
+          "Google Cloud",
+          "Google Search",
+          "Gemini app"
+        ],
+        "implications": "Интерпретация: переход Argon в глобальную развёртку делает фронтирное рассуждение частью базового продуктового набора Google во всех каналах, включая Cloud и поиск, а поэтапный пре-релиз Carbon показывает, что для чувствительного кибербезопаснического сценария доступ остаётся закрытым для внешних пользователей.",
+        "caveat": "Источник — сводный дайджест компании: заявления о «самой сильной модели» и оценочные числа исходят от Google и не подтверждены независимыми измерениями. Carbon недоступна широкой публике, а Argon описана без сравнения с альтернативами по качеству и стоимости.",
+        "urgent": false,
+        "urgency_reason": "",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "После ранних тестов безопасности Gemini 4 Argon развёрнута глобально для кодинга, финансового анализа и юридических задач в AI Studio, Gemini API, Cloud, Search и приложении Gemini.",
+            "source_id": "google_ai",
+            "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+            "quote_excerpt": "Following early safety testing, Gemini 4 Argon rolled out globally for complex coding, financial analysis, and legal workflows across Google AI Studio, the Gemini API,…"
+          },
+          {
+            "id": "f2",
+            "claim": "Google заявила, что Gemini 4 Carbon — её самая сильная модель с передовыми возможностями в кибербезопасности и на длинных горизонтах.",
+            "source_id": "google_ai",
+            "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "The latest AI news we announced in October 2026",
+            "source_id": "google_ai",
+            "published_at": "2026-11-02",
+            "origin_family": "google",
+            "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
+      "event_id": "evt-43302e3de5a73d2497674ff1",
+      "revision": "62dfdfb0cd02a44a17e825faefd0f47b141627d9f070dbdff9a1d4617884acce",
+      "first_seen": "2026-11-03T16:47:17.142940+00:00",
+      "updated_at": "2026-11-04T08:41:15.357103+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "GitHub Copilot стал доступен в JetBrains Air",
+        "summary": "GitHub объявила 3 ноября 2026 года доступность GitHub Copilot в JetBrains Air: задачи по кодингу можно делегировать агенту, управлять выполнением и проверять результаты. Интеграция работает через Agent Client Protocol (ACP) и поддерживает задачи в JetBrains IDE и в облаке. Облачные задачи запускаются в изолированных средах через Air Teams — из IDE или браузера, — и расходуют план GitHub Copilot, а не кредиты JetBrains AI. Для них нужна подписка Copilot, JetBrains-аккаунт в организации с Air Teams и включение Copilot администратором Air.",
+        "impact": {
+          "assumptions": [
+            "Документ — официальный changelog GitHub, полный и первичный по продукту",
+            "Описанные ограничения и требования действительны на дату публикации",
+            "Доля реального использования интеграции не измерялась"
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: прежнее состояние функций JetBrains Air и условия использования Copilot до3 ноября 2026 года детально не описаны.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 3,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Горизонт 1–2 квартала: событие — новая интеграция агента в IDE; отслеживать долю задач Copilot в Air и стабильность изоляции облачных сред.",
+          "lower": 3,
+          "lower_anchor_reason": "Нижняя граница 3: если интеграция окажется нишевой для JetBrains Air, а облачный режим — лишь сменой способа запуска задач, ширина останется 2, а глубина опустится до 2, что даёт 3 по матрице.",
+          "mechanism": "ACP связывает JetBrains Air с GitHub Copilot: агент выбирается в пикере Air, задачи запускаются локально в IDE либо в изолированном облачном окружении через Air Teams; для облака требуются подписка Copilot, JetBrains-аккаунт в организации с Air Teams и включение Copilot администратором Air.",
+          "observed_impact": null,
+          "projected_impact": 5,
+          "rationale": "Ширина 2: событие затрагивает одну профессиональную нишу — агентный кодинг в IDE JetBrains через конкретный продукт Air; нескольких независимых продуктов или цепочки поставок в документе нет. Глубина 3: интеграция меняет процесс выбора агента и способ исполнения задач — ACP-протокол связывает Air с Copilot, а задачи выполняются либо локально в IDE, либо в облаке. По матрице 2×3 это 5. Наблюдаемого эффекта документ не содержит: ни измерений, ни данных об использовании, поэтому observed_impact=null, а верхняя граница 7 остаётся проектом.",
+          "scope": "Пользователи JetBrains Air в IDE и браузере с действующей подпиской GitHub Copilot; для облачных задач дополнительно нужны JetBrains-аккаунт в бизнес-организации с Air Teams и включение Copilot администратором Air.",
+          "score": 5,
+          "systemic_quarter": false,
+          "upper": 7
+        },
+        "evidence_level": 2,
+        "topics": [
+          "агентные системы",
+          "кодинг-агенты",
+          "интеграция IDE",
+          "GitHub Copilot",
+          "JetBrains"
+        ],
+        "entities": [
+          "GitHub",
+          "GitHub Copilot",
+          "JetBrains Air",
+          "JetBrains",
+          "Agent Client Protocol"
+        ],
+        "implications": "Интерпретация: связка через ACP делает Copilot доступным в ещё одном агентном интерфейсе, а перевод облачных задач на подписку Copilot вместо кредитов JetBrains AI создаёт конкуренцию за оплату агентной работы между вендором IDE и вендором модели. Ограниченный административный контроль (Air может отключить Copilot политикой, но не задаёт лимиты расходов Copilot, а аналитика Air не охватывает использование Copilot) означает, что корпоративный контроль затрат на этот канал остаётся неполным.",
+        "caveat": "Источник — маркетинговый changelog вендора: он подтверждает наличие функции и её ограничения, но не качество кода агента и не даёт никаких измерений. Административный контроль ограничен: политика может отключить Copilot, но лимиты расходов Copilot внутри Air недоступны, аналитика использования Copilot не включена. Наблюдаемое влияние на продуктивность неизвестно.",
+        "urgent": false,
+        "urgency_reason": "Не срочно: функция уже доступна, а переход на неё не требует действий до ближайшего выпуска.",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "GitHub Copilot стал доступен в JetBrains Air: задачи по кодингу можно делегировать, управлять выполнением и просматривать результаты.",
+            "source_id": "github_copilot",
+            "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+            "quote_excerpt": "GitHub Copilot is now available in JetBrains Air You can now delegate coding tasks, guide execution, and review results with GitHub Copilot in JetBrains Air."
+          },
+          {
+            "id": "f2",
+            "claim": "Интеграция использует Agent Client Protocol (ACP) и поддерживает задачи в JetBrains IDE или в облаке.",
+            "source_id": "github_copilot",
+            "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "GitHub Copilot is now available in JetBrains Air",
+            "source_id": "github_copilot",
+            "published_at": "2026-11-03",
+            "origin_family": "github_copilot",
+            "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
       "event_id": "evt-fa82d1bc87f6e944f5c9d552",
       "revision": "6ff2ff762e9099b68b4371c94623d216006f34f38cde6482a13fe890b20c6231",
       "first_seen": "2026-10-29T19:00:17.257656+00:00",
@@ -647,221 +821,220 @@
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-04T08:38:43.011055+00:00",
-      "last_check": "2026-11-04T08:38:43.011055+00:00"
+      "last_ok": "2026-11-04T08:48:42.829980+00:00",
+      "last_check": "2026-11-04T08:48:42.829980+00:00"
     },
     {
       "source_id": "arxiv",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:39:34.469081+00:00",
-      "last_check": "2026-11-04T08:39:34.469081+00:00"
+      "last_ok": "2026-11-04T08:44:38.676644+00:00",
+      "last_check": "2026-11-04T08:44:38.676644+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:39:16.513164+00:00",
-      "last_check": "2026-11-04T08:39:16.513164+00:00"
+      "last_ok": "2026-11-04T08:44:20.902221+00:00",
+      "last_check": "2026-11-04T08:44:20.902221+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 16,
+      "fail_streak": 17,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-04T08:39:16.152225+00:00"
+      "last_check": "2026-11-04T08:44:20.378045+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:39:16.948415+00:00",
-      "last_check": "2026-11-04T08:39:16.948415+00:00"
+      "last_ok": "2026-11-04T08:44:21.406391+00:00",
+      "last_check": "2026-11-04T08:44:21.406391+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:38:52.418323+00:00",
-      "last_check": "2026-11-04T08:38:52.418323+00:00"
+      "last_ok": "2026-11-04T08:43:51.065523+00:00",
+      "last_check": "2026-11-04T08:43:51.065523+00:00"
     },
     {
       "source_id": "deepseek",
       "fail_streak": 0,
       "items_found_last_run": 24,
-      "last_ok": "2026-11-04T08:39:13.727566+00:00",
-      "last_check": "2026-11-04T08:39:13.727566+00:00"
+      "last_ok": "2026-11-04T08:44:14.972845+00:00",
+      "last_check": "2026-11-04T08:44:14.972845+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:39:16.773070+00:00",
-      "last_check": "2026-11-04T08:39:16.773070+00:00"
+      "last_ok": "2026-11-04T08:44:21.172764+00:00",
+      "last_check": "2026-11-04T08:44:21.172764+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:39:34.184819+00:00",
-      "last_check": "2026-11-04T08:39:34.184819+00:00"
+      "last_ok": "2026-11-04T08:44:38.393271+00:00",
+      "last_check": "2026-11-04T08:44:38.393271+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
       "items_found_last_run": 14,
-      "last_ok": "2026-11-04T08:39:14.373198+00:00",
-      "last_check": "2026-11-04T08:39:14.373198+00:00"
+      "last_ok": "2026-11-04T08:44:16.281171+00:00",
+      "last_check": "2026-11-04T08:44:16.281171+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 144,
+      "fail_streak": 145,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-04T08:39:18.281807+00:00"
+      "last_check": "2026-11-04T08:44:22.831841+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:38:46.155478+00:00",
-      "last_check": "2026-11-04T08:38:46.155478+00:00"
+      "last_ok": "2026-11-04T08:43:46.073201+00:00",
+      "last_check": "2026-11-04T08:43:46.073201+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:38:45.268799+00:00",
-      "last_check": "2026-11-04T08:38:45.268799+00:00"
+      "last_ok": "2026-11-04T08:43:45.348203+00:00",
+      "last_check": "2026-11-04T08:43:45.348203+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1353,
+      "fail_streak": 1354,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-04T08:39:09.100490+00:00"
+      "last_check": "2026-11-04T08:44:07.548286+00:00"
     },
     {
       "source_id": "microsoft_ai",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:39:09.433177+00:00",
-      "last_check": "2026-11-04T08:39:09.433177+00:00"
+      "last_ok": "2026-11-04T08:44:08.039569+00:00",
+      "last_check": "2026-11-04T08:44:08.039569+00:00"
     },
     {
       "source_id": "microsoft_research",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:39:12.427455+00:00",
-      "last_check": "2026-11-04T08:39:12.427455+00:00"
+      "last_ok": "2026-11-04T08:44:12.921534+00:00",
+      "last_check": "2026-11-04T08:44:12.921534+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 75,
+      "fail_streak": 76,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-04T08:39:07.947692+00:00"
+      "last_check": "2026-11-04T08:44:06.268879+00:00"
     },
     {
       "source_id": "mistral_sdk",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:39:08.581525+00:00",
-      "last_check": "2026-11-04T08:39:08.581525+00:00"
+      "last_ok": "2026-11-04T08:44:07.227312+00:00",
+      "last_check": "2026-11-04T08:44:07.227312+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 30,
+      "fail_streak": 31,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-04T08:39:33.498794+00:00"
+      "last_check": "2026-11-04T08:44:37.870595+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:38:46.772945+00:00",
-      "last_check": "2026-11-04T08:38:46.772945+00:00"
+      "last_ok": "2026-11-04T08:43:46.681859+00:00",
+      "last_check": "2026-11-04T08:43:46.681859+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
       "items_found_last_run": 48,
-      "last_ok": "2026-11-04T08:38:47.498928+00:00",
-      "last_check": "2026-11-04T08:38:47.498928+00:00"
+      "last_ok": "2026-11-04T08:43:47.389940+00:00",
+      "last_check": "2026-11-04T08:43:47.389940+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-04T08:38:44.270374+00:00",
-      "last_check": "2026-11-04T08:38:44.270374+00:00"
+      "last_ok": "2026-11-04T08:43:44.422402+00:00",
+      "last_check": "2026-11-04T08:43:44.422402+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 16,
+      "fail_streak": 17,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-04T08:39:16.152720+00:00"
+      "last_check": "2026-11-04T08:44:20.379740+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:39:13.943668+00:00",
-      "last_check": "2026-11-04T08:39:13.943668+00:00"
+      "last_ok": "2026-11-04T08:44:15.575501+00:00",
+      "last_check": "2026-11-04T08:44:15.575501+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 16,
+      "fail_streak": 17,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-04T08:39:17.935618+00:00"
+      "last_check": "2026-11-04T08:44:22.455975+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 16,
+      "fail_streak": 17,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:39:34.469081+00:00"
+      "last_check": "2026-11-04T08:44:38.676644+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-04T08:39:18.174094+00:00",
-      "last_check": "2026-11-04T08:39:18.174094+00:00"
+      "last_ok": "2026-11-04T08:44:22.672886+00:00",
+      "last_check": "2026-11-04T08:44:22.672886+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 16,
+      "fail_streak": 17,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:39:34.469081+00:00"
+      "last_check": "2026-11-04T08:44:38.676644+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 16,
+      "fail_streak": 17,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-04T08:39:13.943668+00:00"
+      "last_check": "2026-11-04T08:44:15.575501+00:00"
     }
   ],
   "processing": {
     "news_document_jobs": {
-      "failed": 12,
+      "failed": 13,
       "not_article_listing": 5,
       "outside_window": 2293,
-      "pending": 150,
+      "pending": 147,
       "processing": 3,
-      "reviewed": 5
+      "reviewed": 7
     },
     "news_research_jobs": {
       "awaiting_events": 1,
-      "complete": 1,
-      "failed": 1,
-      "pending": 3,
-      "processing": 1
+      "complete": 2,
+      "failed": 3,
+      "pending": 3
     }
   },
   "document_status": [
@@ -1420,9 +1593,9 @@
       "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/",
       "source_id": "google_ai",
       "date": "2026-11-02",
-      "state": "pending",
+      "state": "reviewed",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -1530,9 +1703,9 @@
       "url": "https://github.blog/changelog/2026-11-03-github-copilot-is-now-available-in-jetbrains-air",
       "source_id": "github_copilot",
       "date": "2026-11-03",
-      "state": "pending",
+      "state": "reviewed",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2200,9 +2373,9 @@
       "url": "https://huggingface.co/blog/announcing-project-protostar",
       "source_id": "huggingface",
       "date": "2026-10-29",
-      "state": "pending",
+      "state": "processing",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2460,10 +2633,10 @@
       "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "processing",
-      "error": "",
+      "state": "failed",
+      "error": "quote_support_rejected_after_repair",
       "attempts": 1,
-      "next_attempt_at": null
+      "next_attempt_at": "2026-11-04T08:54:26.806697+00:00"
     },
     {
       "title": "Security extension for the GitHub Copilot app",
@@ -2668,6 +2841,8 @@
     "item_budget": "Достигнут предел записей; требуется продолжение"
   },
   "event_titles": {
+    "evt-c67ba2bef7499484fb5f9450": "Google выпустила Gemini 4 Argon глобально, Gemini 4 Carbon — в пре-релизе",
+    "evt-43302e3de5a73d2497674ff1": "GitHub Copilot стал доступен в JetBrains Air",
     "evt-fa82d1bc87f6e944f5c9d552": "GitHub Copilot: GA плагинов по умолчанию для репозиториев и enterprise-контроля",
     "evt-597859498327e092436600bd": "GitHub Copilot в VS Code: Agent Host изолирует сессии агентов от окон редактора",
     "evt-6e73d07dd638e0d9301274a8": "OpenAI Agents SDK 0.24.0-alpha.6: расширены управление диалогами, восстановление состояния и политики инструментов",
@@ -2686,6 +2861,6 @@
     "unchanged": "Изменений нет",
     "excluded": "Исключён из подборки"
   },
-  "reviewed_count": 7,
+  "reviewed_count": 9,
   "coverage_note": "Охват ограничен подключёнными источниками. Недоступные страницы и незавершённые проверки не считаются прочитанными."
 }
