@@ -1,6 +1,93 @@
 {
   "events": [
     {
+      "event_id": "evt-597859498327e092436600bd",
+      "revision": "5773fb21053427c3e1cf8c62b038b841d45bc8752f081f8bd05c8f5ef8b609f8",
+      "first_seen": "2026-10-28T18:30:23.238615+00:00",
+      "updated_at": "2026-11-04T08:13:42.386564+00:00",
+      "approved": true,
+      "state": "reviewed",
+      "payload": {
+        "title": "GitHub Copilot в VS Code: Agent Host изолирует сессии агентов от окон редактора",
+        "summary": "GitHub описала релиз GitHub Copilot в VS Code, где новый Agent Host изолирует сессии Copilot от отдельных окон VS Code: работа продолжается в фоне после закрытия папки проекта или окна. Также агентов можно запускать на отдельной машине через Remote SSH и dev tunnels, а сессию можно продолжить в других клиентах Copilot — приложении, GitHub Mobile, github.com или Copilot CLI. Copilot harness на базе Microsoft Copilot SDK стал поведением по умолчанию для новых сессий в редакторе и в окне Agents.",
+        "impact": {
+          "assumptions": [
+            "Agent Host и синхронизация сессий работают как описано в changelog",
+            "Часть функций (computer use, connectors, marketplace) остаётся в preview и не влияет на оценку",
+            "Изменение не требует миграции существующих проектов"
+          ],
+          "baseline": "Сопоставимый baseline в документе не приведён: прежнее поведение сессий агентов в VS Code описано только через новые возможности, без прямого сравнения с прошлым релизом.",
+          "basis": "projected",
+          "breadth": 2,
+          "confidence": "medium",
+          "depth": 3,
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ],
+          "horizon": "Ближайшие недели после28 октября 2026 года: первичная обратная связь пользователей VS Code и Copilot.",
+          "lower": 4,
+          "lower_anchor_reason": "Нижняя оценка 4: если новый Agent Host окажется лишь сменой внутреннего механизма без заметного изменения привычного рабочего цикла, влияние останется локальным удобством в одном редакторе.",
+          "mechanism": "Agent Host выносит сессии агентов за пределы окон VS Code и продолжает их в фоне; сессия синхронизируется между редактором, окном Agents и другими клиентами Copilot, поэтому управление задачей не требует держать конкретное окно открытым.",
+          "observed_impact": null,
+          "projected_impact": 5,
+          "rationale": "Релиз меняет контур выполнения агентов: работа переносится с окна редактора на отдельный хост-процесс, который переживает закрытие папки или окна и продолжает задачу. Для профессиональной ниши разработки это меняет процесс: работа с агентом перестаёт быть привязанной к одному открытому редактору и может вестись с телефона или другой машины. Ширина ограничена одним контуром — агент Copilot в VS Code; глубина 3, так как появляется новый способ ведения длительных задач, но миграция не обязательна и автоматизация задач не перестраивает процессы целиком. Независимых измерений последствий в документе нет, поэтому оценка проецируемая.",
+          "scope": "Пользователи GitHub Copilot в Visual Studio Code: облачные сессии, локальные и удалённые агенты, продолжение сессии в нескольких клиентах Copilot; заявлено самим поставщиком.",
+          "score": 5,
+          "systemic_quarter": false,
+          "upper": 6
+        },
+        "evidence_level": 2,
+        "topics": [
+          "GitHub Copilot",
+          "VS Code",
+          "агентные системы",
+          "Agent Host",
+          "облачные агентские сессии"
+        ],
+        "entities": [
+          "GitHub",
+          "Microsoft",
+          "Visual Studio Code",
+          "GitHub Copilot CLI",
+          "GitHub Mobile",
+          "Microsoft Copilot SDK"
+        ],
+        "implications": "Интерпретация: перенос агентских сессий в отдельный хост-процесс сокращает привязку агентной работы к одному открытому редактору и делает возможной передачу задачи между устройствами. Это меняет способ ведения длительных задач у разработчиков, но остаётся локальным изменением в контуре Copilot, а не перестройкой отрасли.",
+        "caveat": "Источник — собственный changelog поставщика: формулировки о непрерывности сессий и фоновой работе ничем не подтверждены извне. Часть функций (computer use, connectors, marketplace, сравнение моделей) прямо помечена как preview или experimental и требует разрешения администраторов.",
+        "urgent": false,
+        "urgency_reason": "Нет срочности: существующий рабочий процесс не блокируется, новые функции можно принять в следующем цикле обновлений.",
+        "novelty": true,
+        "facts": [
+          {
+            "id": "f1",
+            "claim": "Новый Agent Host изолирует сессии Copilot от отдельных окон VS Code, поэтому работа продолжается в фоне после закрытия папки проекта или окна.",
+            "source_id": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases",
+            "quote_excerpt": "The new Agent Host isolates your Copilot sessions from individual VS Code windows, so work continues in the background after you close the project folder…"
+          },
+          {
+            "id": "f2",
+            "claim": "Один и тот же агентский сеанс можно найти и продолжить в VS Code, приложении GitHub Copilot, GitHub Mobile, github.com или Copilot CLI.",
+            "source_id": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases",
+            "quote_excerpt": ""
+          }
+        ],
+        "sources": [
+          {
+            "title": "GitHub Copilot in VS Code, Universe releases",
+            "source_id": "github_copilot",
+            "published_at": "2026-10-28",
+            "origin_family": "github_copilot",
+            "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases"
+          }
+        ],
+        "insights": [],
+        "related_event_ids": []
+      }
+    },
+    {
       "event_id": "evt-6e73d07dd638e0d9301274a8",
       "revision": "bc6b4bc1014aaa8f226e388f8662961cfe63c46e3d16022f68dd907161cb2516",
       "first_seen": "2026-11-03T21:49:57.561067+00:00",
@@ -444,207 +531,299 @@
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-04T07:59:30.670689+00:00",
-      "last_check": "2026-11-04T07:59:30.670689+00:00"
+      "last_ok": "2026-11-04T08:18:42.700722+00:00",
+      "last_check": "2026-11-04T08:18:42.700722+00:00"
     },
     {
       "source_id": "arxiv",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:00:48.729116+00:00",
-      "last_check": "2026-11-04T08:00:48.729116+00:00"
+      "last_ok": "2026-11-04T08:14:30.940520+00:00",
+      "last_check": "2026-11-04T08:14:30.940520+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:00:30.879975+00:00",
-      "last_check": "2026-11-04T08:00:30.879975+00:00"
+      "last_ok": "2026-11-04T08:14:13.349953+00:00",
+      "last_check": "2026-11-04T08:14:13.349953+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 8,
+      "fail_streak": 11,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-04T08:00:30.511627+00:00"
+      "last_check": "2026-11-04T08:14:12.760150+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:00:31.466986+00:00",
-      "last_check": "2026-11-04T08:00:31.466986+00:00"
+      "last_ok": "2026-11-04T08:14:13.916579+00:00",
+      "last_check": "2026-11-04T08:14:13.916579+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T07:59:47.149353+00:00",
-      "last_check": "2026-11-04T07:59:47.149353+00:00"
+      "last_ok": "2026-11-04T08:13:51.929108+00:00",
+      "last_check": "2026-11-04T08:13:51.929108+00:00"
     },
     {
       "source_id": "deepseek",
       "fail_streak": 0,
       "items_found_last_run": 24,
-      "last_ok": "2026-11-04T08:00:27.188059+00:00",
-      "last_check": "2026-11-04T08:00:27.188059+00:00"
+      "last_ok": "2026-11-04T08:14:10.536581+00:00",
+      "last_check": "2026-11-04T08:14:10.536581+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:00:31.231822+00:00",
-      "last_check": "2026-11-04T08:00:31.231822+00:00"
+      "last_ok": "2026-11-04T08:14:13.607411+00:00",
+      "last_check": "2026-11-04T08:14:13.607411+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:00:48.425708+00:00",
-      "last_check": "2026-11-04T08:00:48.425708+00:00"
+      "last_ok": "2026-11-04T08:14:30.811431+00:00",
+      "last_check": "2026-11-04T08:14:30.811431+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
       "items_found_last_run": 14,
-      "last_ok": "2026-11-04T08:00:29.337951+00:00",
-      "last_check": "2026-11-04T08:00:29.337951+00:00"
+      "last_ok": "2026-11-04T08:14:11.382251+00:00",
+      "last_check": "2026-11-04T08:14:11.382251+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 136,
+      "fail_streak": 139,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-04T08:00:32.628611+00:00"
+      "last_check": "2026-11-04T08:14:15.255950+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T07:59:34.457236+00:00",
-      "last_check": "2026-11-04T07:59:34.457236+00:00"
+      "last_ok": "2026-11-04T08:13:46.498477+00:00",
+      "last_check": "2026-11-04T08:13:46.498477+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T07:59:33.498142+00:00",
-      "last_check": "2026-11-04T07:59:33.498142+00:00"
+      "last_ok": "2026-11-04T08:13:45.730993+00:00",
+      "last_check": "2026-11-04T08:13:45.730993+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1345,
+      "fail_streak": 1348,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-04T08:00:14.032911+00:00"
+      "last_check": "2026-11-04T08:14:07.469122+00:00"
     },
     {
       "source_id": "microsoft_ai",
-      "fail_streak": 1345,
+      "fail_streak": 1348,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-04T08:00:20.074843+00:00"
+      "last_check": "2026-11-04T08:14:08.588468+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 67,
+      "fail_streak": 70,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-04T08:00:02.405792+00:00"
+      "last_check": "2026-11-04T08:14:07.138455+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 22,
+      "fail_streak": 25,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-04T08:00:47.800833+00:00"
+      "last_check": "2026-11-04T08:14:30.273896+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T07:59:37.373015+00:00",
-      "last_check": "2026-11-04T07:59:37.373015+00:00"
+      "last_ok": "2026-11-04T08:13:47.169242+00:00",
+      "last_check": "2026-11-04T08:13:47.169242+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
       "items_found_last_run": 48,
-      "last_ok": "2026-11-04T07:59:38.955800+00:00",
-      "last_check": "2026-11-04T07:59:38.955800+00:00"
+      "last_ok": "2026-11-04T08:13:47.953429+00:00",
+      "last_check": "2026-11-04T08:13:47.953429+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-04T07:59:32.352362+00:00",
-      "last_check": "2026-11-04T07:59:32.352362+00:00"
+      "last_ok": "2026-11-04T08:13:44.887761+00:00",
+      "last_check": "2026-11-04T08:13:44.887761+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 8,
+      "fail_streak": 11,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-04T08:00:30.512615+00:00"
+      "last_check": "2026-11-04T08:14:12.761131+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:00:28.162817+00:00",
-      "last_check": "2026-11-04T08:00:28.162817+00:00"
+      "last_ok": "2026-11-04T08:14:10.777160+00:00",
+      "last_check": "2026-11-04T08:14:10.777160+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 8,
+      "fail_streak": 11,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-04T08:00:32.216854+00:00"
+      "last_check": "2026-11-04T08:14:14.617418+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 8,
+      "fail_streak": 11,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:00:48.733030+00:00"
+      "last_check": "2026-11-04T08:14:30.940520+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-04T08:00:32.385175+00:00",
-      "last_check": "2026-11-04T08:00:32.385175+00:00"
+      "last_ok": "2026-11-04T08:14:15.025476+00:00",
+      "last_check": "2026-11-04T08:14:15.025476+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 8,
+      "fail_streak": 11,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:00:48.733030+00:00"
+      "last_check": "2026-11-04T08:14:30.940520+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 8,
+      "fail_streak": 11,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-04T08:00:28.162817+00:00"
+      "last_check": "2026-11-04T08:14:10.777160+00:00"
     }
   ],
   "processing": {
     "news_document_jobs": {
-      "failed": 5,
+      "failed": 11,
       "not_article_listing": 5,
-      "outside_window": 2252,
-      "pending": 171,
-      "processing": 1,
-      "reviewed": 5
+      "outside_window": 2280,
+      "pending": 145,
+      "processing": 3,
+      "reviewed": 4
     },
     "news_research_jobs": {
+      "awaiting_events": 1,
       "complete": 3,
-      "pending": 2
+      "failed": 1,
+      "pending": 1
     }
   },
   "document_status": [
+    {
+      "title": "Knowingly Wrong: Training LLMs Against Their Own Beliefs can Induce Misalignment",
+      "url": "https://arxiv.org/abs/2611.05287",
+      "source_id": "arxiv",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "HARP: Training-Free Dual-Profile Agentic Communication for LLM-Based Recommendation",
+      "url": "https://arxiv.org/abs/2611.05319",
+      "source_id": "arxiv",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data",
+      "url": "https://arxiv.org/abs/2611.05320",
+      "source_id": "arxiv",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "MedPhysBench: A Benchmark for Evaluating Language Models on Medical Physics Calculations and Error Detection",
+      "url": "https://arxiv.org/abs/2611.05340",
+      "source_id": "arxiv",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents",
+      "url": "https://arxiv.org/abs/2611.05345",
+      "source_id": "arxiv",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "From Autonomous Agents to Cognitive Symbionts: Toward AI-Augmented Human Intelligence",
+      "url": "https://arxiv.org/abs/2611.05376",
+      "source_id": "arxiv",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "DreamX: Video Diffusion Model is a Universal Latent Action Learner",
+      "url": "https://arxiv.org/abs/2611.05377",
+      "source_id": "arxiv",
+      "date": "2026-11-03",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "BYOK and enterprise custom models in the Copilot usage API",
+      "url": "https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api",
+      "source_id": "github_copilot",
+      "date": "2026-11-04",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
+    {
+      "title": "Claude Code 2.1.318",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21318",
+      "source_id": "claude_code",
+      "date": "",
+      "state": "pending",
+      "error": "",
+      "attempts": 0,
+      "next_attempt_at": null
+    },
     {
       "title": "Anthropic is working on a system to prove AI models’ identity",
       "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
@@ -720,36 +899,16 @@
       "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
       "source_id": "techcrunch",
       "date": "2026-11-03",
-      "state": "failed",
+      "state": "pending",
       "error": "source_timeout",
       "attempts": 1,
-      "next_attempt_at": "2026-11-03T23:02:11.237456+00:00"
+      "next_attempt_at": null
     },
     {
       "title": "Evernote turns AI-driven discovery into paid subscriptions",
       "url": "https://openai.com/ads/customers/evernote",
       "source_id": "openai",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Ollama: v0.40.12",
-      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.12",
-      "source_id": "ollama",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Ollama: v0.40.12-rc1",
-      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.12-rc1",
-      "source_id": "ollama",
-      "date": "2026-10-27",
       "state": "pending",
       "error": "",
       "attempts": 0,
@@ -870,16 +1029,6 @@
       "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
       "source_id": "anthropic",
       "date": "2026-10-28",
-      "state": "reviewed",
-      "error": "",
-      "attempts": 1,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
-      "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
-      "source_id": "anthropic",
-      "date": "2026-10-27",
       "state": "reviewed",
       "error": "",
       "attempts": 1,
@@ -1200,9 +1349,9 @@
       "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21317",
       "source_id": "claude_code",
       "date": "",
-      "state": "pending",
+      "state": "processing",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2000,9 +2149,9 @@
       "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-vs-code-universe-releases",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
+      "state": "reviewed",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2040,79 +2189,79 @@
       "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
+      "state": "failed",
+      "error": "ValueError",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-04T08:27:39.943230+00:00"
     },
     {
       "title": "GitHub Copilot in JetBrains Universe releases",
       "url": "https://github.blog/changelog/2026-10-28-github-copilot-in-jetbrains-universe-releases",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
+      "state": "failed",
+      "error": "ValueError",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-04T08:27:48.532474+00:00"
     },
     {
       "title": "Build shared workflows for your team with Copilot Automations",
       "url": "https://github.blog/changelog/2026-10-28-build-shared-workflows-for-your-team-with-copilot-automations",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
+      "state": "failed",
+      "error": "ValueError",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-04T08:27:33.819613+00:00"
     },
     {
       "title": "Generate and edit images directly in Copilot",
       "url": "https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
+      "state": "failed",
+      "error": "ValueError",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-04T08:27:36.881204+00:00"
     },
     {
       "title": "GitHub Copilot app, Universe releases",
       "url": "https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
+      "state": "failed",
+      "error": "ValueError",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-04T08:27:42.947403+00:00"
     },
     {
       "title": "GitHub Copilot Fusion now supports selection of local models",
       "url": "https://github.blog/changelog/2026-10-28-github-copilot-fusion-now-supports-selection-of-local-models",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
+      "state": "failed",
+      "error": "ValueError",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-04T08:27:45.492869+00:00"
     },
     {
       "title": "GitHub Enterprise now includes access to GitHub Copilot",
       "url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
+      "state": "failed",
+      "error": "repair_changed_identity_requires_resolution",
+      "attempts": 1,
+      "next_attempt_at": "2026-11-04T08:30:22.362834+00:00"
     },
     {
       "title": "GitHub intelligence puts your code, context, and history to work",
       "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work",
       "source_id": "github_copilot",
       "date": "2026-10-28",
-      "state": "pending",
+      "state": "processing",
       "error": "",
-      "attempts": 0,
+      "attempts": 1,
       "next_attempt_at": null
     },
     {
@@ -2196,56 +2345,6 @@
       "next_attempt_at": null
     },
     {
-      "title": "Understanding the limits of latent world models",
-      "url": "https://arxiv.org/abs/2610.37588",
-      "source_id": "arxiv",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "MoI-Bench: A Benchmark for Image Generation and Editing on Mobile Devices",
-      "url": "https://arxiv.org/abs/2610.37599",
-      "source_id": "arxiv",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "VideoLVR: Latent Visual Reasoning over Grounded Video Evidence",
-      "url": "https://arxiv.org/abs/2610.37613",
-      "source_id": "arxiv",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
-      "url": "https://arxiv.org/abs/2610.37666",
-      "source_id": "arxiv",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure medication",
-      "url": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
       "title": "VCs will make billions on Anthropic&#8217;s IPO, but Amazon is set to make much (much) more",
       "url": "https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/",
       "source_id": "techcrunch",
@@ -2260,206 +2359,6 @@
       "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
       "source_id": "openai",
       "date": "2026-10-28",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "The data center boom has an upside: innovation for the US grid",
-      "url": "https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Retell uses OpenAI models to help power 100M monthly calls",
-      "url": "https://openai.com/index/retell-ai",
-      "source_id": "openai",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Bank of America kindly asks that you don&#8217;t share your banking password with your AI assistant",
-      "url": "https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Who&#8217;s really in charge at Anthropic after the IPO?",
-      "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "GitHub Copilot supports server-to-server authentication",
-      "url": "https://github.blog/changelog/2026-10-27-github-copilot-supports-server-to-server-authentication",
-      "source_id": "github_copilot",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Claude Code 2.1.312",
-      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21312",
-      "source_id": "claude_code",
-      "date": "",
-      "state": "reviewed",
-      "error": "",
-      "attempts": 1,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Disruptive raises $10B fund to make big bets on at least 10 companies",
-      "url": "https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "How Check Point accelerates vulnerability research with Daybreak",
-      "url": "https://openai.com/index/check-point-daybreak",
-      "source_id": "openai",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean?",
-      "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Build specialized multimodal models with LFM3",
-      "url": "https://huggingface.co/blog/LiquidAI/lfm3",
-      "source_id": "huggingface",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
-      "url": "https://openai.com/index/oracle-apps-in-chatgpt",
-      "source_id": "openai",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
-      "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Can we trust LLMs to judge whether a research idea is novel?",
-      "url": "https://huggingface.co/blog/allenai/novelty-bench",
-      "source_id": "huggingface",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
-      "url": "https://techcrunch.com/2026/10/27/meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-office-and-google-workspace/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Cohere says Alibaba’s Qwen model tried to send a file to Beijing",
-      "url": "https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "General Compute raises $100 million Series A, countering the neocloud disaster narrative",
-      "url": "https://techcrunch.com/2026/10/27/general-compute-raises-100-million-series-a-countering-the-neocloud-disaster-narrative/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "How OpenAI turned its coding tools into dots, an always-on personal assistant",
-      "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Nvidia backs Indian startup helping companies run AI models with fewer GPUs",
-      "url": "https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Opera introduces a new web standard to let users deploy AI locally in their browser",
-      "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
-      "state": "pending",
-      "error": "",
-      "attempts": 0,
-      "next_attempt_at": null
-    },
-    {
-      "title": "Japan internet giant GMO says hackers posted stolen customer data",
-      "url": "https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data/",
-      "source_id": "techcrunch",
-      "date": "2026-10-27",
       "state": "pending",
       "error": "",
       "attempts": 0,
@@ -2561,6 +2460,7 @@
     "item_budget": "Достигнут предел записей; требуется продолжение"
   },
   "event_titles": {
+    "evt-597859498327e092436600bd": "GitHub Copilot в VS Code: Agent Host изолирует сессии агентов от окон редактора",
     "evt-6e73d07dd638e0d9301274a8": "OpenAI Agents SDK 0.24.0-alpha.6: расширены управление диалогами, восстановление состояния и политики инструментов",
     "evt-4b15c67e0a2678a704662f74": "Claude Code 2.1.312: OIDC-claim для шлюза приложений и сокращённый системный промпт для кастомных имён моделей",
     "evt-33107d1b7b806d3b4b83d0a9": "Anthropic расширила соглашение с GSA скидкой 40% на Claude",
@@ -2577,6 +2477,6 @@
     "unchanged": "Изменений нет",
     "excluded": "Исключён из подборки"
   },
-  "reviewed_count": 5,
+  "reviewed_count": 6,
   "coverage_note": "Охват ограничен подключёнными источниками. Недоступные страницы и незавершённые проверки не считаются прочитанными."
 }
