@@ -525,210 +525,240 @@
       }
     }
   ],
-  "insights": [],
+  "insights": [
+    {
+      "package_id": "3b2e839a510684ba47454e59f4be7c5fafd93b722882a491e226fae445df9fcd",
+      "created_at": "2026-11-04T08:37:41.120587+00:00",
+      "kind": "same_constraint",
+      "text": "Для приёмки автономного агента проверяйте отдельно отмену, восстановление контрольной точки и остановку исполнителя. Из описанных возможностей Turn и Agent Host не следует гарантия возобновления незавершённой работы после перезапуска исполнителя.",
+      "mechanism": "SDK описывает управление Turn и восстановление состояния. GitHub описывает отделение сессии от окна и переход между клиентами. Закрытие окна или смена клиента проверяют другие границы, чем перезапуск процесса, который выполняет работу.",
+      "alternative": "Эти возможности могли развиваться независимо ради удобства API и интерфейса. Такое объяснение также согласуется с анонсами.",
+      "falsifier": "Вывод о недоказанном восстановлении пересматривается, если для этих версий документирован и воспроизводится рестарт с продолжением того же незавершённого шага.",
+      "horizon": "До допуска выбранной версии к длительной работе без наблюдения.",
+      "evidence_refs": [
+        "evt-6e73d07dd638e0d9301274a8/f1",
+        "evt-6e73d07dd638e0d9301274a8/f2",
+        "evt-597859498327e092436600bd/f1",
+        "evt-597859498327e092436600bd/f2"
+      ],
+      "dependencies": [
+        {
+          "event_id": "evt-6e73d07dd638e0d9301274a8",
+          "revision": "bc6b4bc1014aaa8f226e388f8662961cfe63c46e3d16022f68dd907161cb2516",
+          "payload_hash": "7cd42c77ba48862fe4f600f5ed1a32403dd1f888c0bf2f5698d8ef9b87dd5add"
+        },
+        {
+          "event_id": "evt-597859498327e092436600bd",
+          "revision": "5773fb21053427c3e1cf8c62b038b841d45bc8752f081f8bd05c8f5ef8b609f8",
+          "payload_hash": "5786219bc0b8ed190aa80d84d0f44ac10433f927cae19ec690a52c6e9d47bb96"
+        }
+      ],
+      "research_facts": []
+    }
+  ],
   "source_health": [
     {
       "source_id": "anthropic",
       "fail_streak": 0,
       "items_found_last_run": 19,
-      "last_ok": "2026-11-04T08:28:42.921622+00:00",
-      "last_check": "2026-11-04T08:28:42.921622+00:00"
+      "last_ok": "2026-11-04T08:33:43.212319+00:00",
+      "last_check": "2026-11-04T08:33:43.212319+00:00"
     },
     {
       "source_id": "arxiv",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:29:30.776160+00:00",
-      "last_check": "2026-11-04T08:29:30.776160+00:00"
+      "last_ok": "2026-11-04T08:34:29.789813+00:00",
+      "last_check": "2026-11-04T08:34:29.789813+00:00"
     },
     {
       "source_id": "claude_code",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:29:13.716674+00:00",
-      "last_check": "2026-11-04T08:29:13.716674+00:00"
+      "last_ok": "2026-11-04T08:34:12.600018+00:00",
+      "last_check": "2026-11-04T08:34:12.600018+00:00"
     },
     {
       "source_id": "cohere",
-      "fail_streak": 14,
+      "fail_streak": 15,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.413537+00:00",
-      "last_check": "2026-11-04T08:29:13.348074+00:00"
+      "last_check": "2026-11-04T08:34:12.341207+00:00"
     },
     {
       "source_id": "cursor",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:29:14.205055+00:00",
-      "last_check": "2026-11-04T08:29:14.205055+00:00"
+      "last_ok": "2026-11-04T08:34:13.141691+00:00",
+      "last_check": "2026-11-04T08:34:13.141691+00:00"
     },
     {
       "source_id": "deepmind",
       "fail_streak": 0,
       "items_found_last_run": 5,
-      "last_ok": "2026-11-04T08:28:51.214008+00:00",
-      "last_check": "2026-11-04T08:28:51.214008+00:00"
+      "last_ok": "2026-11-04T08:33:51.149800+00:00",
+      "last_check": "2026-11-04T08:33:51.149800+00:00"
     },
     {
       "source_id": "deepseek",
       "fail_streak": 0,
       "items_found_last_run": 24,
-      "last_ok": "2026-11-04T08:29:11.490644+00:00",
-      "last_check": "2026-11-04T08:29:11.490644+00:00"
+      "last_ok": "2026-11-04T08:34:10.699059+00:00",
+      "last_check": "2026-11-04T08:34:10.699059+00:00"
     },
     {
       "source_id": "github_copilot",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:29:13.992595+00:00",
-      "last_check": "2026-11-04T08:29:13.992595+00:00"
+      "last_ok": "2026-11-04T08:34:12.842757+00:00",
+      "last_check": "2026-11-04T08:34:12.842757+00:00"
     },
     {
       "source_id": "google_ai",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:29:30.674695+00:00",
-      "last_check": "2026-11-04T08:29:30.674695+00:00"
+      "last_ok": "2026-11-04T08:34:29.670413+00:00",
+      "last_check": "2026-11-04T08:34:29.670413+00:00"
     },
     {
       "source_id": "huggingface",
       "fail_streak": 0,
       "items_found_last_run": 14,
-      "last_ok": "2026-11-04T08:29:12.291623+00:00",
-      "last_check": "2026-11-04T08:29:12.291623+00:00"
+      "last_ok": "2026-11-04T08:34:11.215351+00:00",
+      "last_check": "2026-11-04T08:34:11.215351+00:00"
     },
     {
       "source_id": "justai",
-      "fail_streak": 142,
+      "fail_streak": 143,
       "items_found_last_run": 0,
       "last_ok": "2026-10-27T19:00:37.400528+00:00",
-      "last_check": "2026-11-04T08:29:15.157725+00:00"
+      "last_check": "2026-11-04T08:34:14.127925+00:00"
     },
     {
       "source_id": "langgraph",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:28:46.135160+00:00",
-      "last_check": "2026-11-04T08:28:46.135160+00:00"
+      "last_ok": "2026-11-04T08:33:46.337986+00:00",
+      "last_check": "2026-11-04T08:33:46.337986+00:00"
     },
     {
       "source_id": "mcp_sdk",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:28:45.338374+00:00",
-      "last_check": "2026-11-04T08:28:45.338374+00:00"
+      "last_ok": "2026-11-04T08:33:45.599391+00:00",
+      "last_check": "2026-11-04T08:33:45.599391+00:00"
     },
     {
       "source_id": "meta_ai",
-      "fail_streak": 1351,
+      "fail_streak": 1352,
       "items_found_last_run": 0,
       "last_ok": "2026-09-18T20:01:24.187110+00:00",
-      "last_check": "2026-11-04T08:29:07.408430+00:00"
+      "last_check": "2026-11-04T08:34:07.336463+00:00"
     },
     {
       "source_id": "microsoft_ai",
       "fail_streak": 0,
       "items_found_last_run": 7,
-      "last_ok": "2026-11-04T08:29:07.757861+00:00",
-      "last_check": "2026-11-04T08:29:07.757861+00:00"
+      "last_ok": "2026-11-04T08:34:07.658400+00:00",
+      "last_check": "2026-11-04T08:34:07.658400+00:00"
     },
     {
       "source_id": "microsoft_research",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:29:09.712547+00:00",
-      "last_check": "2026-11-04T08:29:09.712547+00:00"
+      "last_ok": "2026-11-04T08:34:09.645146+00:00",
+      "last_check": "2026-11-04T08:34:09.645146+00:00"
     },
     {
       "source_id": "mistral",
-      "fail_streak": 73,
+      "fail_streak": 74,
       "items_found_last_run": 0,
       "last_ok": "2026-10-31T14:30:08.631881+00:00",
-      "last_check": "2026-11-04T08:29:06.423651+00:00"
+      "last_check": "2026-11-04T08:34:06.308440+00:00"
     },
     {
       "source_id": "mistral_sdk",
       "fail_streak": 0,
       "items_found_last_run": 3,
-      "last_ok": "2026-11-04T08:29:07.057077+00:00",
-      "last_check": "2026-11-04T08:29:07.057077+00:00"
+      "last_ok": "2026-11-04T08:34:07.034769+00:00",
+      "last_check": "2026-11-04T08:34:07.034769+00:00"
     },
     {
       "source_id": "neural_digest",
-      "fail_streak": 28,
+      "fail_streak": 29,
       "items_found_last_run": 0,
       "last_ok": "2026-11-01T22:00:29.193818+00:00",
-      "last_check": "2026-11-04T08:29:30.179727+00:00"
+      "last_check": "2026-11-04T08:34:29.147643+00:00"
     },
     {
       "source_id": "ollama",
       "fail_streak": 0,
       "items_found_last_run": 10,
-      "last_ok": "2026-11-04T08:28:46.794741+00:00",
-      "last_check": "2026-11-04T08:28:46.794741+00:00"
+      "last_ok": "2026-11-04T08:33:46.970908+00:00",
+      "last_check": "2026-11-04T08:33:46.970908+00:00"
     },
     {
       "source_id": "openai",
       "fail_streak": 0,
       "items_found_last_run": 48,
-      "last_ok": "2026-11-04T08:28:47.635109+00:00",
-      "last_check": "2026-11-04T08:28:47.635109+00:00"
+      "last_ok": "2026-11-04T08:33:47.680399+00:00",
+      "last_check": "2026-11-04T08:33:47.680399+00:00"
     },
     {
       "source_id": "openai_agents",
       "fail_streak": 0,
       "items_found_last_run": 2,
-      "last_ok": "2026-11-04T08:28:44.326928+00:00",
-      "last_check": "2026-11-04T08:28:44.326928+00:00"
+      "last_ok": "2026-11-04T08:33:44.750555+00:00",
+      "last_check": "2026-11-04T08:33:44.750555+00:00"
     },
     {
       "source_id": "perplexity",
-      "fail_streak": 14,
+      "fail_streak": 15,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:34.414354+00:00",
-      "last_check": "2026-11-04T08:29:13.348074+00:00"
+      "last_check": "2026-11-04T08:34:12.341636+00:00"
     },
     {
       "source_id": "qwen_zh",
       "fail_streak": 0,
       "items_found_last_run": 0,
-      "last_ok": "2026-11-04T08:29:11.758074+00:00",
-      "last_check": "2026-11-04T08:29:11.758074+00:00"
+      "last_ok": "2026-11-04T08:34:10.832637+00:00",
+      "last_check": "2026-11-04T08:34:10.832637+00:00"
     },
     {
       "source_id": "rbc",
-      "fail_streak": 14,
+      "fail_streak": 15,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:36.242258+00:00",
-      "last_check": "2026-11-04T08:29:14.974968+00:00"
+      "last_check": "2026-11-04T08:34:13.925109+00:00"
     },
     {
       "source_id": "stanford_hai",
-      "fail_streak": 14,
+      "fail_streak": 15,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:29:30.776160+00:00"
+      "last_check": "2026-11-04T08:34:29.789813+00:00"
     },
     {
       "source_id": "techcrunch",
       "fail_streak": 0,
       "items_found_last_run": 20,
-      "last_ok": "2026-11-04T08:29:15.054080+00:00",
-      "last_check": "2026-11-04T08:29:15.054080+00:00"
+      "last_ok": "2026-11-04T08:34:13.997589+00:00",
+      "last_check": "2026-11-04T08:34:13.997589+00:00"
     },
     {
       "source_id": "vc_ru",
-      "fail_streak": 14,
+      "fail_streak": 15,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:53.372306+00:00",
-      "last_check": "2026-11-04T08:29:30.776160+00:00"
+      "last_check": "2026-11-04T08:34:29.789813+00:00"
     },
     {
       "source_id": "xai",
-      "fail_streak": 14,
+      "fail_streak": 15,
       "items_found_last_run": 0,
       "last_ok": "2026-11-03T21:30:32.780673+00:00",
-      "last_check": "2026-11-04T08:29:11.758074+00:00"
+      "last_check": "2026-11-04T08:34:10.832637+00:00"
     }
   ],
   "processing": {
